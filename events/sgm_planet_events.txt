@@ -1,0 +1,329 @@
+namespace = sgm_planets
+
+country_event = {						# planet event menu
+	id = sgm_planets.1
+	is_triggered_only = yes
+	title = sgm_planet_1_title
+	desc = sgm_planet_1_desc
+
+	trigger = {
+		exists = event_target:target_planet
+		exists = root
+		event_target:target_planet = {
+			is_scope_type = planet
+		}
+	}
+
+	immediate = { }
+
+	option = {
+		NAME = sgm_crack_planet
+		event_target:target_planet = {
+			destroy_colony = yes
+			change_pc = pc_shattered
+		}
+	}
+
+	option = {
+		NAME = sgm_grow_pop
+		event_target:target_planet = {
+			create_pop = {
+				species = owner
+			}
+		}
+	}
+	
+	option = {
+		NAME = ADD_INDUSTRIAL_DISTRICT
+		event_target:target_planet = {
+			add_district = district_industrial 
+		}
+	}
+
+	after = {
+		clear_global_event_target = target_planet
+	}
+}
+country_event = {							# add districts menu
+	id = sgm_planets.50
+	is_triggered_only = yes
+	title = sgm_planets_50_title
+	desc = sgm_planets_50_desc
+
+	trigger = {
+#		exists = from
+#		exists = root
+		from = {
+			is_scope_type = planet
+		}
+	}
+
+	immediate = {
+		log = "sgm_planets.50 firing"
+	}
+
+	option = {								# add city districts
+		NAME = district_city
+		allow = {
+			from = {
+				OR = {
+					uses_district_set = standard
+					uses_district_set = hive_world
+					uses_district_set = machine_world
+				}
+			}
+		}
+		from = {
+			if = { limit = { from.owner = { is_regular_empire = yes } }
+				add_district = district_city
+			}
+			if = { limit = { from.owner = { is_hive_empire = yes } }
+				add_district = district_hive 
+			}
+			if = { limit = { from.owner = { is_machine_empire = yes } }
+				add_district = district_nexus 
+			}
+		}
+	}
+	
+	option = {								# add industrial districts
+		NAME = district_industrial
+		allow = {
+			from = {
+				uses_district_set = standard
+			}
+		}
+		from = {
+			add_district = district_industrial 
+		}
+	}
+
+	option = {								# add generator districts
+		NAME = district_generator 
+		allow = {
+			from = {
+				OR = {
+					uses_district_set = standard
+					uses_district_set = hive_world
+					uses_district_set = machine_world
+				}
+			}
+		}
+		from = {
+			if = {
+				limit = {
+					uses_district_set = hive_world
+					uses_district_set = machine_world
+				}
+				add_district = district_generator_uncapped
+			}
+			else = {
+				add_district = district_generator  
+			}
+		}
+	}
+
+	option = {								# add mining districts
+		NAME = district_mining 
+		allow = {
+			from = {
+				OR = {
+					uses_district_set = standard
+					uses_district_set = hive_world
+					uses_district_set = machine_world
+				}
+			}
+		} 
+		from = {
+			if = {
+				limit = {
+					uses_district_set = hive_world
+					uses_district_set = machine_world
+				}
+				add_district = district_mining_uncapped
+			}
+			else = {
+				add_district = district_mining  
+			} 
+		}
+	}
+
+	option = {								# add farming districts
+		NAME = district_farming  
+		allow = {
+			from = {
+				OR = {
+					uses_district_set = standard
+					uses_district_set = hive_world
+				}
+			}
+		} 
+		from = {
+			if = {
+				limit = {
+					uses_district_set = hive_world
+				}
+				add_district = district_farming_uncapped
+			}
+			else = {
+				add_district = district_farming  
+			}   
+		}
+	}
+
+	option = {								# add district_arcology_housing 
+		NAME = district_arcology_housing   
+		allow = {
+			from = {
+				uses_district_set = city_world
+			}
+		} 
+		from = {
+			add_district = district_arcology_housing  
+		}   
+	}
+
+	option = {								# add district_arcology_arms_industry  
+		NAME = district_arcology_arms_industry    
+		allow = {
+			from = {
+				uses_district_set = city_world
+			}
+		} 
+		from = {
+			add_district = district_arcology_arms_industry   
+		}   
+	}
+
+	option = {								# add district_arcology_civilian_industry   
+		NAME = district_arcology_civilian_industry     
+		allow = {
+			from = {
+				uses_district_set = city_world
+				owner = {
+					OR = {
+						is_gestalt = no
+						has_valid_civic = civic_machine_servitor
+					}
+				}
+			}
+		} 
+		from = {
+			add_district = district_arcology_civilian_industry    
+		}   
+	}
+
+	option = {								# add district_arcology_leisure   
+		NAME = district_arcology_leisure     
+		allow = {
+			from = {
+				uses_district_set = city_world
+				owner = {
+					is_regular_empire = yes
+				}
+			}
+		} 
+		from = {
+			add_district = district_arcology_leisure    
+		}   
+	}
+
+	option = {								# add district_hab_housing    
+		NAME = district_hab_housing     
+		allow = {
+			from = {
+				uses_district_set = habitat
+			}
+		} 
+		from = {
+			add_district = district_hab_housing     
+		}   
+	}
+
+	option = {								# add district_hab_energy     
+		NAME = district_hab_energy      
+		allow = {
+			from = {
+				uses_district_set = habitat
+				OR = {
+					has_planet_flag = energy_habitat
+					owner = { is_gestalt = yes }
+				}
+			}
+		} 
+		from = {
+			add_district = district_hab_energy      
+		}   
+	}
+	
+	option = {								# add district_hab_industrial     
+		NAME = district_hab_industrial      
+		allow = {
+			from = {
+				uses_district_set = habitat
+			}
+		} 
+		from = {
+			add_district = district_hab_industrial      
+		}   
+	}
+	
+	option = {								# add district_hab_science     
+		NAME = district_hab_science      
+		allow = {
+			from = {
+				uses_district_set = habitat
+				has_planet_flag = research_habitat
+			}
+		} 
+		from = {
+			add_district = district_hab_science      
+		}   
+	}
+
+	option = {								# add district_hab_commercial      
+		NAME = district_hab_commercial       
+		allow = {
+			from = {
+				uses_district_set = habitat
+				owner = {
+					is_gestalt = no
+				}
+			}
+		} 
+		from = {
+			add_district = district_hab_commercial       
+		}   
+	}
+	
+	option = {								# add district_hab_mining      
+		NAME = district_hab_mining       
+		allow = {
+			from = {
+				uses_district_set = habitat
+				has_planet_flag = mining_habitat
+			}
+		} 
+		from = {
+			add_district = district_hab_mining       
+		}   
+	}
+
+	option = {								# add district_hab_cultural       
+		NAME = district_hab_cultural        
+		allow = {
+			from = {
+				uses_district_set = habitat
+				owner = {
+					OR = {
+						is_gestalt = no
+						has_valid_civic = civic_machine_servitor
+					}
+				}
+			}
+		} 
+		from = {
+			add_district = district_hab_cultural       
+		}   
+	}
+}

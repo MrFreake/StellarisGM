@@ -1,0 +1,79 @@
+sgm_game_master = {
+	share_communications = no
+	can_have_their_comms_shared = no
+	share_survey_data = no
+	has_complete_sensor = yes
+	show_in_contacts_list = no
+	has_difficulty_bonuses = no
+	counts_for_victory = no
+	pop_growth = yes
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = no
+	randomize_ethos = no
+	shuffle_pop_ethos = no
+	needs_survey = no
+	diplomatic_wars = no
+	ship_disengagement = no
+	army_disengagement = no
+	relations = no
+	observable = yes
+	can_use_invalid_technology = yes
+	can_receive_envoys = no
+
+	faction = {
+		needs_border_access = no
+		auto_delete = no
+		needs_colony = no
+
+	}
+
+	ai = {
+		enabled = no
+	}
+
+	trade_routes_available = {
+		always = no
+	}
+
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = never
+			can_receive = {}
+			can_send = {
+				action_offer_trade_deal
+				action_cancel_trade_deal
+			}
+		}
+		all_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+
+	resources = {
+		category = country_base
+		produces = {
+			energy = 1000
+			minerals = 1000
+			influence = 1000
+			unity = 1000
+			alloys = 1000
+			food = 1000
+			consumer_goods = 1000
+			sr_dark_matter = 1000
+			sr_living_metal = 1000
+			sr_zro = 1000
+			volatile_motes = 1000
+			exotic_gases = 1000
+			rare_crystals = 1000
+			nanites = 1000
+		}
+	}
+
+	# planet scope
+}

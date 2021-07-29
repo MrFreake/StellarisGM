@@ -1,0 +1,120 @@
+delete_fleet = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+	    delete_fleet = this
+	}
+}
+
+create_corvette = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+        create_ship = {
+			random_existing_design = corvette
+		}
+	}
+}
+
+create_destroyer = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+        create_ship = {
+			random_existing_design = destroyer
+		}
+	}
+}
+
+create_cruiser = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+        create_ship = {
+			random_existing_design = cruiser
+		}
+	}
+}
+
+create_battleship = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+        create_ship = {
+			random_existing_design = battleship
+		}
+	}
+}
+
+sgm_assume_fleet_control = {
+	potential = {
+		is_gm = yes
+		NOR = { 
+			owner = {
+				is_same_value = from
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		owner = {
+			set_country_flag = owner@prev
+		}
+		set_fleet_flag = sgm_assumed_control
+		set_owner = from
+	}
+}
+
+sgm_return_fleet_control = {
+	potential = {
+		is_gm = yes
+		has_fleet_flag = sgm_assumed_control
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		remove_fleet_flag = sgm_assumed_control
+		random_country = {
+			limit = {
+				has_country_flag = owner@prev
+			}
+			remove_country_flag = owner@prev
+			save_event_target_as = fleet_original_owner
+		}
+		set_owner = event_target:fleet_original_owner
+	}
+}
+
+
+
+
+

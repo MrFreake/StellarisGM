@@ -1,0 +1,50 @@
+sgm_play_as_owner = {
+	potential = {
+		exists = owner
+		is_gm = yes
+		NOT = {
+			from = {
+				is_same_value = prev.owner
+			}
+		}
+		owner = {
+			is_ai = yes
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		owner = {
+			set_player = from
+			set_country_flag = sgm_assumed_control
+		}
+	}	
+}
+
+sgm_return_to_gm = {
+	potential = {
+		exists = owner
+		is_gm = yes
+		from = {
+				is_same_value = prev.owner
+		}
+		owner = {
+			has_country_flag = sgm_assumed_control
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		owner = {
+			remove_country_flag = sgm_assumed_control
+		}
+		random_country = {
+			limit = {
+				is_country_type = sgm_game_master
+			}
+			set_player = from
+		}
+	}	
+}

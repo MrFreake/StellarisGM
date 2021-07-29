@@ -1,0 +1,61 @@
+namespace = sgm_fleet
+
+country_event = {								# Opens fleet menu
+	id = sgm_fleet.1
+	is_triggered_only = yes
+	title = sgm_fleet_1_title
+	desc = sgm_fleet_1_desc
+
+	trigger = {
+		exists = root
+		exists = event_target:target_fleet
+		event_target:target_fleet = { is_scope_type = fleet }
+	}
+
+	immediate = { }
+
+	option = {
+		NAME = DELETE_FLEET
+		event_target:target_fleet = { delete_fleet = this }
+	}
+
+	option = {
+		NAME = ADD_CORVETTE
+		event_target:target_fleet = {
+			create_ship = {
+				random_existing_design = corvette
+			}
+		}
+	}
+
+	option = {
+		NAME = ADD_DESTROYER
+		event_target:target_fleet = {
+			create_ship = {
+				random_existing_design = destroyer
+			}
+		}
+	}
+
+	option = {
+		NAME = ADD_CRUISER
+		event_target:target_fleet = {
+			create_ship = {
+				random_existing_design = cruiser
+			}
+		}
+	}
+
+	option = {
+		NAME = ADD_BATTLESHIP
+		event_target:target_fleet = {
+			create_ship = {
+				random_existing_design = battleship
+			}
+		}
+	}
+
+	after = {
+		clear_global_event_target = target_fleet
+	}
+}

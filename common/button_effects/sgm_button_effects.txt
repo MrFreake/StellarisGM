@@ -1,0 +1,35 @@
+sgm_fleet_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		save_global_event_target_as = target_fleet
+		from = {
+			country_event = {
+			id = sgm_fleet.1
+			}
+		}
+	}
+}
+
+sgm_planet_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		save_global_event_target_as = target_planet
+		from = {
+			country_event = {
+				id = sgm_planets.1
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+
+
+# called from the planet/fleet/country UI panels
+
+sgm_set_target = {
+	potential = {
+		from = { is_gm = yes }
+		NOR = {
+			AND = {	exists = event_target:target_planet is_same_value = event_target:target_planet } 
+			AND = {	exists = event_target:target_fleet is_same_value = event_target:target_fleet }
+			AND = {	exists = event_target:target_country is_same_value = event_target:target_country }
+		}
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+	    if = {
+			limit = {
+				is_scope_type = planet
+			}
+			save_global_event_target_as = target_planet
+		}
+		if = {
+			limit = {
+				is_scope_type = country
+			}
+			save_global_event_target_as = target_country
+		}
+		if = {
+			limit = {
+				is_scope_type = fleet
+			}
+			save_global_event_target_as = target_fleet
+		}
+	}
+}
+
+sgm_unset_target = {
+	potential = {
+		from = { is_gm = yes }
+		OR = {
+			AND = {	exists = event_target:target_planet is_same_value = event_target:target_planet } 
+			AND = {	exists = event_target:target_fleet is_same_value = event_target:target_fleet }
+			AND = {	exists = event_target:target_country is_same_value = event_target:target_country }
+		}
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+	    if = {
+			limit = {
+				is_scope_type = planet
+			}
+			clear_global_event_target = target_planet
+		}
+		if = {
+			limit = {
+				is_scope_type = country
+			}
+			clear_global_event_target = target_country
+		}
+		if = {
+			limit = {
+				is_scope_type = fleet
+			}
+			clear_global_event_target = target_fleet
+		}
+	}
+}
+
+# main.gui buttons
+
+target_planet = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_planet
+	}
+	effect = {
+		clear_global_event_target = target_planet
+	}
+}

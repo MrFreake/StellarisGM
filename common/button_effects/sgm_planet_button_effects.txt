@@ -1,0 +1,48 @@
+sgm_crack_planet = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		destroy_colony = yes
+		change_pc = pc_shattered
+	}
+}
+
+sgm_grow_pop = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		create_pop = {
+			species = owner
+		}
+	}
+}
+
+sgm_add_district = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		from = {
+		country_event = {
+			id = sgm_planets.50
+			scopes = {
+				from = prev
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,18 @@
+namespace = sgm_start_events
+
+country_event = {
+    id = sgm_start_events.1
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_origin = origin_game_master
+    }
+
+    immediate = {
+        set_country_type = sgm_game_master
+        every_country = {
+            establish_communications_no_message = root
+            }
+        }
+}
