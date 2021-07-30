@@ -1362,51 +1362,63 @@ guiTypes = {
 						name = "bg"
 						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 					}
-					effectbuttonType = {					# change to planet
-						name = sgm_planet_effects
+					effectbuttonType = {					
+						name = sgm_country_effects
 						quadTextureSprite = "GFX_standard_button_142_34_button"
 						position = { x = 2 y = 2 }
 						scale = 1
 						buttonFont = malgun_goth_24
-						buttonText = sgm_planet_effects
+						buttonText = sgm_country_effects
 						orientation = UPPER_LEFT
-						effect = sgm_planet_effects
+						effect = sgm_country_effects
 			#			shortCut = j
 					}
-		
+
 					effectbuttonType = {					
-						name = sgm_crack_planet
+						name = sgm_positive_relations_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
 						position = { x = 2 y = 39 }
 						scale = 1
 						buttonFont = malgun_goth_24
-						buttonText = sgm_crack_planet
+						buttonText = sgm_positive_relations_with_target
 						orientation = UPPER_LEFT
-						effect = sgm_crack_planet
+						effect = sgm_positive_relations_with_target
 			#			shortCut = j
-					}
-		
+					}					
+
 					effectbuttonType = {					
-						name = sgm_grow_pop
+						name = sgm_negative_relations_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
 						position = { x = 2 y = 76 }
 						scale = 1
 						buttonFont = malgun_goth_24
-						buttonText = sgm_grow_pop
+						buttonText = sgm_negative_relations_with_target
 						orientation = UPPER_LEFT
-						effect = sgm_grow_pop
+						effect = sgm_negative_relations_with_target
 			#			shortCut = j
 					}
 		
 					effectbuttonType = {					
-						name = sgm_add_district
+						name = sgm_declare_war_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
 						position = { x = 2 y = 113 }
 						scale = 1
 						buttonFont = malgun_goth_24
-						buttonText = sgm_add_district
+						buttonText = sgm_declare_war_with_target
 						orientation = UPPER_LEFT
-						effect = sgm_add_district
+						effect = sgm_declare_war_with_target
+			#			shortCut = j
+					}
+		
+					effectbuttonType = {					
+						name = sgm_force_peace_with_target
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 113 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_force_peace_with_target
+						orientation = UPPER_LEFT
+						effect = sgm_force_peace_with_target
 			#			shortCut = j
 					}
 					effectbuttonType = {					

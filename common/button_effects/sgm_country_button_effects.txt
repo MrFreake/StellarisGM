@@ -1,0 +1,119 @@
+sgm_country_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		root = {
+			log = "[This.GetName]"
+		}
+		country_event = {
+			id = sgm_country.1
+		}
+	}
+}
+
+sgm_positive_relations_with_target = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {
+		always = yes
+		
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	effect = {
+		add_opinion_modifier = {
+			who = event_target:target_country
+			modifier = opinion_gm_positive
+		}
+	}
+}
+
+sgm_negative_relations_with_target = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+		exists = event_target:target_country
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+	}
+
+	effect = {
+		add_opinion_modifier = {
+			who = event_target:target_country
+			modifier = opinion_gm_negative
+		}
+	}
+}
+
+sgm_declare_war_with_target = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			root = {
+				is_at_war_with = event_target:target_country
+			}
+		}
+	}
+	allow = {
+		exists = event_target:target_country
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+
+	}
+
+	effect = {
+		declare_war = {
+			target = event_target:target_country
+			attacker_war_goal = wg_conquest 
+		}
+	}
+}
+
+sgm_force_peace_with_target = {
+	potential = {
+		is_gm = yes
+		root = {
+			is_at_war_with = event_target:target_country
+		}
+	}
+	allow = {
+		exists = event_target:target_country
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+
+	}
+
+	effect = {
+		root = {
+		random_war = {
+			limit = {
+				any_war_participant = { is_same_value = event_target:target_country }
+			}
+			#set_truce =  { target = this type = war }
+			end_war_effect = yes
+		}
+	}
+}
+}

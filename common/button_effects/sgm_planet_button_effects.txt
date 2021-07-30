@@ -17,7 +17,7 @@ sgm_grow_pop = {
 		is_gm = yes
 	}
 	allow = {
-		always = yes
+		exists = owner
 	}
 	
 	effect = {
@@ -37,12 +37,111 @@ sgm_add_district = {
 	
 	effect = {
 		from = {
-		country_event = {
-			id = sgm_planets.50
-			scopes = {
-				from = prev
+			country_event = {
+				id = sgm_planets.50
+				scopes = {
+					from = prev
+				}
 			}
 		}
 	}
 }
+
+sgm_add_dig_site = {}
+
+sgm_add_anomaly = {}
+
+sgm_change_planet_class = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		num_pops < 1
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.51
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_create_colony = {
+	potential = {
+		is_gm = yes
+		num_pops < 1
+	}
+	allow = {
+		exists = event_target:target_country
+	}
+	effect = {
+		create_colony = {
+			owner = event_target:target_country
+			species = event_target:target_country.owner_main_species
+		}
+	}
+}
+
+sgm_increase_planet_size = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		planet_size < 25
+	}
+	
+	effect = {
+		change_planet_size = 1
+	}
+}
+
+sgm_decrease_planet_size = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		planet_size > 5
+	}
+	
+	effect = {
+		change_planet_size = -1
+	}
+}
+
+sgm_reroll_modifiers = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		num_pops < 1
+	}
+	effect = {
+		reroll_planet_modifiers = yes
+	}	
+}
+sgm_reroll_deposits = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		num_pops < 1
+	}
+	effect = {
+		reroll_planet = yes
+	}
+}
+sgm_reroll_planet = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		num_pops < 1
+	}
+	effect = {
+		reroll_planet = yes
+	}
 }

@@ -8,54 +8,110 @@ country_event = {								# Opens fleet menu
 
 	trigger = {
 		exists = root
-		exists = event_target:target_fleet
-		event_target:target_fleet = { is_scope_type = fleet }
+		exists = from
+		from = { is_scope_type = fleet }
 	}
 
 	immediate = { }
 
 	option = {
-		NAME = DELETE_FLEET
-		event_target:target_fleet = { delete_fleet = this }
+		NAME = increase_multiplier
+		change_variable = {
+			which = multiplier
+			value = 1
+		}
+		country_event = {
+			id = sgm_fleet.1
+			scopes = {
+				from = from
+			}
+		}
 	}
 
 	option = {
+		NAME = decrease_multiplier
+		allow = {
+			check_variable = {
+				which = multiplier
+				value > 1
+			}
+		}
+		change_variable = {
+			which = multiplier
+			value = -1
+		}
+		country_event = {
+			id = sgm_fleet.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = DELETE_FLEET
+		from = { delete_fleet = this }
+	}
+
+	option = {
+		NAME = set_owner_target_country
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+			set_owner = event_target:target_country 
+	}
+}
+
+	option = {
 		NAME = ADD_CORVETTE
-		event_target:target_fleet = {
-			create_ship = {
-				random_existing_design = corvette
+		while = {
+			count = multiplier
+			from = {
+				create_ship = {
+					random_existing_design = corvette
+				}
 			}
 		}
 	}
 
 	option = {
 		NAME = ADD_DESTROYER
-		event_target:target_fleet = {
-			create_ship = {
-				random_existing_design = destroyer
+		while = {
+			count = multiplier
+			from = {
+				create_ship = {
+					random_existing_design = destroyer
+				}
 			}
 		}
 	}
 
 	option = {
 		NAME = ADD_CRUISER
-		event_target:target_fleet = {
-			create_ship = {
-				random_existing_design = cruiser
+		while = {
+			count = multiplier
+			from = {
+				create_ship = {
+					random_existing_design = cruiser
+				}
 			}
 		}
 	}
 
 	option = {
 		NAME = ADD_BATTLESHIP
-		event_target:target_fleet = {
-			create_ship = {
-				random_existing_design = battleship
+		while = {
+			count = multiplier
+			from = {
+				create_ship = {
+					random_existing_design = battleship
+				}
 			}
 		}
 	}
 
-	after = {
-		clear_global_event_target = target_fleet
+	option = {
+		NAME = Exit
 	}
 }

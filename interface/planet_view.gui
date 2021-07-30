@@ -163,12 +163,12 @@ guiTypes = {
 				}
 				expandedWindow = {
 					name = "expanded_window"
-					position = { x = 50 y = -4 }
+					position = { x = -100 y = -4 }
 					show_position = { x = 230 y = -7 }
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 200
-					size = { width = 200 height = 270 }
+					size = { width = 350 height = 500 }
 					verticalScrollbar = "right_vertical_slider"
 					#priority = 100
 					defaultSelection = yes
@@ -253,7 +253,83 @@ guiTypes = {
 							effect = sgm_return_to_gm
 				#			shortCut = j
 						}
-			
+						effectbuttonType = {					
+							name = sgm_change_planet_class
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 2 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_change_planet_class
+							orientation = UPPER_LEFT
+							effect = sgm_change_planet_class
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_create_colony
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 187 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_create_colony
+							orientation = UPPER_LEFT
+							effect = sgm_create_colony
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_increase_planet_size
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 76 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_increase_planet_size
+							orientation = UPPER_LEFT
+							effect = sgm_increase_planet_size
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_decrease_planet_size
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 113 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_decrease_planet_size
+							orientation = UPPER_LEFT
+							effect = sgm_decrease_planet_size
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_planet
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 150 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_reroll_planet
+							orientation = UPPER_LEFT
+							effect = sgm_reroll_planet
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_deposits
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 187 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_reroll_deposits
+							orientation = UPPER_LEFT
+							effect = sgm_reroll_deposits
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_modifiers
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 224 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_reroll_modifiers
+							orientation = UPPER_LEFT
+							effect = sgm_reroll_modifiers
+				#			shortCut = j
+						}					
 					}
 				}
 			}

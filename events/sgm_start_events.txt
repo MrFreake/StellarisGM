@@ -11,8 +11,33 @@ country_event = {
 
     immediate = {
         set_country_type = sgm_game_master
+        add_modifier = {
+            modifier = gm_country
+            days = -1
+        }
         every_country = {
             establish_communications_no_message = root
-            }
         }
+        
+        add_resource = {
+			energy = 9999999
+			minerals = 9999999
+			influence = 9999999
+			unity = 9999999
+			alloys = 9999999
+			food = 9999999
+			consumer_goods = 9999999
+			sr_dark_matter = 9999999
+			sr_living_metal = 9999999
+			sr_zro = 9999999
+			volatile_motes = 9999999
+			exotic_gases = 9999999
+			rare_crystals = 9999999
+			nanites = 9999999
+        }
+        set_variable = {
+            which = mulitplier
+            value = 1
+        }
+    }
 }

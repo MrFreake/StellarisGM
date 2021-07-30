@@ -60,6 +60,29 @@ guiTypes = {
 				}
 			}
 
+			effectbuttonType = {					# target 
+				name = sgm_set_target
+				quadTextureSprite = "GFX_fleetview_focus"
+				position = { x = 370 y = 3 }
+				scale = 1
+				#buttonFont = malgun_goth_24
+				#buttonText = sgm_target_planet
+				#orientation = UPPER_LEFT
+				effect = sgm_set_target
+	#			shortCut = j
+			}
+			effectbuttonType = {					# remove target 
+				name = sgm_unset_target
+				quadTextureSprite = "GFX_fleetview_destroy_fleet"
+				position = { x = 166 y = 58 }
+				scale = 1
+				#buttonFont = malgun_goth_24
+				#buttonText = sgm_target_planet
+				#orientation = UPPER_LEFT
+				effect = sgm_unset_target
+	#			shortCut = j
+			}
+
 			dropDownBoxType = {								## This controls the SGM Popout
 				name = "sgm_dropdown"
 				position = { x = 402 y = 3 }
@@ -73,7 +96,7 @@ guiTypes = {
 				}
 				expandedWindow = {
 					name = "expanded_window"
-					position = { x = -50 y = 0 }
+					position = { x = -100 y = 0 }
 					show_position = { x = 100 y = 0 }
 					show_animation_type = decelerated
 					hide_animation_type = accelerated

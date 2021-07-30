@@ -7,10 +7,12 @@ sgm_fleet_effects = {
 	}
 	
 	effect = {
-		save_global_event_target_as = target_fleet
 		from = {
 			country_event = {
-			id = sgm_fleet.1
+				id = sgm_fleet.1
+				scopes = {
+					from = prev
+				}
 			}
 		}
 	}
@@ -25,10 +27,12 @@ sgm_planet_effects = {
 	}
 
 	effect = {
-		save_global_event_target_as = target_planet
 		from = {
 			country_event = {
 				id = sgm_planets.1
+				scopes = {
+					from = prev
+				}
 			}
 		}
 	}

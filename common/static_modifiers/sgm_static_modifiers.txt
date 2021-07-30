@@ -1,0 +1,12 @@
+
+gm_country = {
+	megastructure_build_speed_mult = 1000
+	planet_building_build_speed_mult = 1000
+	starbase_shipyard_build_speed_mult = 1000
+	shipsize_mining_station_build_speed_mult = 1000
+	shipclass_starbase_build_speed_mult = 1000
+	shipclass_military_station_build_speed_mult = 1000
+	starbase_upgrade_speed_mult = 1000
+	starbase_buildings_time_cost_mult = 1000
+	starbase_module_build_speed_mult = 1000
+}

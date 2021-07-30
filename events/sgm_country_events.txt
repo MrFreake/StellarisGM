@@ -1,0 +1,12 @@
+namespace = sgm_country
+
+country_event = {
+	id = sgm_country.1
+	is_triggered_only = yes
+
+	immediate = {}
+
+	option ={
+		NAME = Exit
+	}
+}

@@ -730,6 +730,28 @@ guiTypes = {
 				effect = target_planet
 	#			shortCut = j
 			}
+			effectbuttonType = {					
+				name = target_country
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -344 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = target_country
+				orientation = UPPER_LEFT
+				effect = target_country
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = target_fleet
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -488 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = target_fleet
+				orientation = UPPER_LEFT
+				effect = target_fleet
+	#			shortCut = j
+			}
 		}
 		####################
 		# Time stuff

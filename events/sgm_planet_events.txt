@@ -7,9 +7,9 @@ country_event = {						# planet event menu
 	desc = sgm_planet_1_desc
 
 	trigger = {
-		exists = event_target:target_planet
+		exists = from
 		exists = root
-		event_target:target_planet = {
+		from = {
 			is_scope_type = planet
 		}
 	}
@@ -17,33 +17,89 @@ country_event = {						# planet event menu
 	immediate = { }
 
 	option = {
-		NAME = sgm_crack_planet
-		event_target:target_planet = {
-			destroy_colony = yes
-			change_pc = pc_shattered
+		NAME = increase_multiplier
+		change_variable = {
+			which = multiplier
+			value = 1
 		}
+		country_event = {
+			id = sgm_planets.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = decrease_multiplier
+		allow = {
+			check_variable = {
+				which = multiplier
+				value > 1
+			}
+		}
+		change_variable = {
+			which = multiplier
+			value = -1
+		}
+		country_event = {
+			id = sgm_planets.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = create_GM_constructor
+		while = {
+			count = multiplier
+			from = {
+				solar_system = {
+					create_fleet = {
+						effect = {
+							set_owner = root
+							create_ship = {
+								random_existing_design = constructor
+							}
+							set_location = {
+								target = from
+								distance = 5
+								angle = random
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		NAME = set_owner_target_country
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+			set_owner = event_target:target_country }
 	}
 
 	option = {
 		NAME = sgm_grow_pop
-		event_target:target_planet = {
-			create_pop = {
-				species = owner
+		while = {
+			count = multiplier
+			from = {
+				create_pop = {
+					species = owner
+				}
 			}
 		}
 	}
-	
-	option = {
-		NAME = ADD_INDUSTRIAL_DISTRICT
-		event_target:target_planet = {
-			add_district = district_industrial 
-		}
-	}
 
-	after = {
-		clear_global_event_target = target_planet
+	option = {
+		NAME = exit
 	}
 }
+
 country_event = {							# add districts menu
 	id = sgm_planets.50
 	is_triggered_only = yes
@@ -62,6 +118,40 @@ country_event = {							# add districts menu
 		log = "sgm_planets.50 firing"
 	}
 
+	option = {
+		NAME = increase_multiplier
+		change_variable = {
+			which = multiplier
+			value = 1
+		}
+		country_event = {
+			id = sgm_planets.50
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = decrease_multiplier
+		allow = {
+			check_variable = {
+				which = multiplier
+				value > 1
+			}
+		}
+		change_variable = {
+			which = multiplier
+			value = -1
+		}
+		country_event = {
+			id = sgm_planets.50
+			scopes = {
+				from = from
+			}
+		}
+	}
+
 	option = {								# add city districts
 		NAME = district_city
 		allow = {
@@ -73,19 +163,21 @@ country_event = {							# add districts menu
 				}
 			}
 		}
-		from = {
-			if = { limit = { from.owner = { is_regular_empire = yes } }
-				add_district = district_city
-			}
-			if = { limit = { from.owner = { is_hive_empire = yes } }
-				add_district = district_hive 
-			}
-			if = { limit = { from.owner = { is_machine_empire = yes } }
-				add_district = district_nexus 
+		while = {
+			count = multiplier
+			from = {
+				if = { limit = { from.owner = { is_regular_empire = yes } }
+					add_district = district_city
+				}
+				if = { limit = { from.owner = { is_hive_empire = yes } }
+					add_district = district_hive 
+				}
+				if = { limit = { from.owner = { is_machine_empire = yes } }
+					add_district = district_nexus 
+				}
 			}
 		}
-	}
-	
+	}	
 	option = {								# add industrial districts
 		NAME = district_industrial
 		allow = {
@@ -93,8 +185,11 @@ country_event = {							# add districts menu
 				uses_district_set = standard
 			}
 		}
-		from = {
-			add_district = district_industrial 
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_industrial 
+			}
 		}
 	}
 
@@ -109,16 +204,19 @@ country_event = {							# add districts menu
 				}
 			}
 		}
-		from = {
-			if = {
-				limit = {
-					uses_district_set = hive_world
-					uses_district_set = machine_world
+		while = {
+			count = multiplier
+			from = {
+				if = {
+					limit = {
+						uses_district_set = hive_world
+						uses_district_set = machine_world
+					}
+					add_district = district_generator_uncapped
 				}
-				add_district = district_generator_uncapped
-			}
-			else = {
-				add_district = district_generator  
+				else = {
+					add_district = district_generator  
+				}
 			}
 		}
 	}
@@ -134,17 +232,20 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			if = {
-				limit = {
-					uses_district_set = hive_world
-					uses_district_set = machine_world
+		while = {
+			count = multiplier
+			from = {
+				if = {
+					limit = {
+						uses_district_set = hive_world
+						uses_district_set = machine_world
+					}
+					add_district = district_mining_uncapped
 				}
-				add_district = district_mining_uncapped
+				else = {
+					add_district = district_mining  
+				} 
 			}
-			else = {
-				add_district = district_mining  
-			} 
 		}
 	}
 
@@ -158,19 +259,21 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			if = {
-				limit = {
-					uses_district_set = hive_world
+		while = {
+			count = multiplier
+			from = {
+				if = {
+					limit = {
+						uses_district_set = hive_world
+					}
+					add_district = district_farming_uncapped
 				}
-				add_district = district_farming_uncapped
+				else = {
+					add_district = district_farming  
+				}   
 			}
-			else = {
-				add_district = district_farming  
-			}   
 		}
 	}
-
 	option = {								# add district_arcology_housing 
 		NAME = district_arcology_housing   
 		allow = {
@@ -178,8 +281,11 @@ country_event = {							# add districts menu
 				uses_district_set = city_world
 			}
 		} 
-		from = {
-			add_district = district_arcology_housing  
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_arcology_housing  
+			}
 		}   
 	}
 
@@ -189,10 +295,13 @@ country_event = {							# add districts menu
 			from = {
 				uses_district_set = city_world
 			}
-		} 
-		from = {
-			add_district = district_arcology_arms_industry   
-		}   
+		}
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_arcology_arms_industry   
+			}   
+		}
 	}
 
 	option = {								# add district_arcology_civilian_industry   
@@ -208,9 +317,12 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			add_district = district_arcology_civilian_industry    
-		}   
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_arcology_civilian_industry    
+			} 
+		}  
 	}
 
 	option = {								# add district_arcology_leisure   
@@ -223,9 +335,12 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			add_district = district_arcology_leisure    
-		}   
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_arcology_leisure    
+			}
+		}  
 	}
 
 	option = {								# add district_hab_housing    
@@ -235,8 +350,11 @@ country_event = {							# add districts menu
 				uses_district_set = habitat
 			}
 		} 
-		from = {
-			add_district = district_hab_housing     
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_housing     
+			}
 		}   
 	}
 
@@ -251,9 +369,12 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			add_district = district_hab_energy      
-		}   
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_energy      
+			}   
+		}
 	}
 	
 	option = {								# add district_hab_industrial     
@@ -263,9 +384,12 @@ country_event = {							# add districts menu
 				uses_district_set = habitat
 			}
 		} 
-		from = {
-			add_district = district_hab_industrial      
-		}   
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_industrial      
+			}   
+		}
 	}
 	
 	option = {								# add district_hab_science     
@@ -276,8 +400,11 @@ country_event = {							# add districts menu
 				has_planet_flag = research_habitat
 			}
 		} 
-		from = {
-			add_district = district_hab_science      
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_science      
+			}
 		}   
 	}
 
@@ -290,9 +417,12 @@ country_event = {							# add districts menu
 					is_gestalt = no
 				}
 			}
-		} 
-		from = {
-			add_district = district_hab_commercial       
+		}
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_commercial       
+			}
 		}   
 	}
 	
@@ -303,10 +433,13 @@ country_event = {							# add districts menu
 				uses_district_set = habitat
 				has_planet_flag = mining_habitat
 			}
-		} 
-		from = {
-			add_district = district_hab_mining       
-		}   
+		}
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_mining       
+			}   
+		}
 	}
 
 	option = {								# add district_hab_cultural       
@@ -322,8 +455,143 @@ country_event = {							# add districts menu
 				}
 			}
 		} 
-		from = {
-			add_district = district_hab_cultural       
-		}   
+		while = {
+			count = multiplier
+			from = {
+				add_district = district_hab_cultural       
+			}   
+		}
 	}
+
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {								# change planet class menu
+	id = sgm_planets.51
+	is_triggered_only = yes
+	title = sgm_planets_51_title
+	desc = sgm_planets_51_desc
+
+	trigger = {
+		from = {
+			is_scope_type = planet
+		}
+	}
+
+	immediate = { }
+
+	option = {
+		NAME = pc_gaia
+		from = {
+			change_pc = pc_gaia
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_city
+		from = {
+			change_pc = pc_city
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_relic
+		from = {
+			change_pc = pc_city
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_frozen
+		from = {
+			change_pc = pc_frozen
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_alpine
+		from = {
+			change_pc = pc_alpine
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_tundra
+		from = {
+			change_pc = pc_tundra
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_continental
+		from = {
+			change_pc = pc_continental
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_ocean
+		from = {
+			change_pc = pc_ocean
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_tropical
+		from = {
+			change_pc = pc_tropical
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_desert
+		from = {
+			change_pc = pc_desert
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_arid
+		from = {
+			change_pc = pc_arid
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = pc_savannah
+		from = {
+			change_pc = pc_savannah
+			reroll_planet = yes
+			reroll_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = Exit
+	}
+
 }

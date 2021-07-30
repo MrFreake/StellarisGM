@@ -82,6 +82,44 @@ target_planet = {
 		exists = event_target:target_planet
 	}
 	effect = {
-		clear_global_event_target = target_planet
+		from = {
+			country_event = {
+				id = sgm_planets.1
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+target_fleet = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_fleet
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_fleet.1
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+target_country = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_country
+	}
+	effect = {
+
 	}
 }

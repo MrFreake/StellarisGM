@@ -1,0 +1,11 @@
+opinion_gm_positive = {
+	opinion = {
+		base = 50
+	}
+}
+
+opinion_gm_negative = {
+	opinion = {
+		base = -50
+	}
+}
