@@ -145,3 +145,220 @@ sgm_reroll_planet = {
 		reroll_planet = yes
 	}
 }
+
+sgm_generate_early_primitives = {
+	potential = {
+		is_gm = yes
+	}
+	
+	allow = {
+		num_pops < 1
+		is_colonizable = yes
+	}
+	effect = {
+		generate_early_primitives_on_planet = yes
+	}
+}
+
+sgm_generate_late_primitives = {
+	potential = {
+		is_gm = yes
+	}
+	
+	allow = {
+		num_pops < 1
+		is_colonizable = yes
+	}
+	effect = {
+		generate_early_primitives_on_planet = yes
+	}
+}
+
+sgm_unsurvey_system = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		is_surveyed = { status = yes who = event_target:target_country }
+	}
+	
+	allow = {
+
+	}
+	effect = {
+		solar_system = {
+			set_surveyed = { surveyed = no surveyor = event_target:target_country }
+		}
+	}
+}
+
+sgm_survey_system = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		is_surveyed = { status = no who = event_target:target_country }
+	}
+	
+	allow = {
+
+	}
+	effect = {
+		solar_system = {
+			set_surveyed = { surveyed = yes surveyor = event_target:target_country }
+		}
+	}
+}
+
+sgm_create_hostiles = {
+	potential = {
+		is_gm = yes
+	}
+	
+	allow = {}
+
+	effect = {
+		from = {
+			log = "create hostiles scope: [from.GetName]"
+			country_event = {
+				id = sgm_planets.52
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_add_hyperlane = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_planet
+		NOT = {
+			solar_system = { has_hyperlane_to = event_target:target_planet.solar_system }  
+		}
+	}
+	
+	allow = {}
+
+	effect = {
+		solar_system = {
+			add_hyperlane = {
+				from = THIS
+				to = event_target:target_planet.solar_system
+			}
+		}
+	}
+}
+sgm_remove_hyperlane = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_planet
+		solar_system = { has_hyperlane_to = event_target:target_planet.solar_system }  
+	}
+	
+	allow = {}
+
+	effect = {
+		solar_system = {
+			remove_hyperlane = {
+				from = THIS
+				to = event_target:target_planet.solar_system
+			}
+		}
+	}
+}
+
+sgm_remove_all_hyperlanes = {
+	potential = {
+		is_gm = yes
+	}
+	
+	allow = {}
+		
+	effect = {
+		solar_system = {
+			every_neighbor_system = {
+				limit = {
+					has_hyperlane_to = prev
+				}
+				remove_hyperlane = {
+					from = THIS
+					to = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_add_wormhole = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_planet
+	}
+
+	effect = {
+		solar_system = {
+			spawn_natural_wormhole = { bypass_type = wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
+			event_target:target_planet = {
+				solar_system = {
+					spawn_natural_wormhole = { bypass_type = wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
+					link_wormholes = prevprev
+				}
+			}
+		}
+	}
+}
+
+sgm_add_sealed_wormhole = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_planet
+	}
+
+	effect = {
+		solar_system = {
+			spawn_natural_wormhole = { bypass_type = sealed_wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
+			event_target:target_planet = {
+				solar_system = {
+					spawn_natural_wormhole = { bypass_type = sealed_wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
+					link_wormholes = prevprev
+				}
+			}
+		}
+	}
+}
+
+sgm_add_l_gate = {
+	potential = {
+		is_gm = yes
+	}
+
+	effect = {
+		solar_system = {
+			spawn_megastructure = {
+				type = lgate_base
+				orbit_angle = 225
+				orbit_distance = 30
+			}
+		}
+	}
+}
+
+sgm_add_dig_site = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		is_star = no
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.53
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+

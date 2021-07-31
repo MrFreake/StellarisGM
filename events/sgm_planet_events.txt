@@ -595,3 +595,1266 @@ country_event = {								# change planet class menu
 	}
 
 }
+
+country_event = {								# spawn hostiles menu
+	id = sgm_planets.52
+	is_triggered_only = yes
+	title = sgm_planets_52_title
+	desc = sgm_planets_52_desc
+
+	trigger = {}
+
+	immediate = {
+		log = "sgm_planets.52 scope: [This.GetName]"
+	}
+
+	option = {
+		NAME = increase_multiplier
+		change_variable = {
+			which = multiplier
+			value = 1
+		}
+		
+		country_event = {
+			id = sgm_planets.52
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+
+	option = {
+		NAME = decrease_multiplier
+		allow = {
+			check_variable = {
+				which = multiplier
+				value > 1
+			}
+		}
+		change_variable = {
+			which = multiplier
+			value = -1
+		}
+	
+		country_event = {
+			id = sgm_planets.52
+			scopes = {
+				from = from
+
+			}
+		}
+	}
+
+
+	option = {						# large crystals
+		NAME = sgm_large_crystals
+		while = {
+			count = multiplier
+			create_crystal_country = yes
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "NAME_Sapphire_Lurkers"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 7
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Blue"
+							}
+						}
+						while = {
+							count = 9
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Blue"
+							}
+						}
+						while = {
+							count = 20
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Blue"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 5
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 150
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# medium crystals
+		NAME = sgm_med_crystals
+		while = {
+			count = multiplier
+			create_crystal_country = yes
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "NAME_Sapphire_Lurkers"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 3
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Green"
+							}
+						}
+						while = {
+							count = 4
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Green"
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Green"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 5
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 150
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# small crystals
+		NAME = sgm_small_crystals
+		while = {
+			count = multiplier
+			create_crystal_country = yes
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "NAME_Sapphire_Lurkers"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 1
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Red"
+							}
+						}
+						while = {
+							count = 2
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Red"
+							}
+						}
+						while = {
+							count = 5
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Red"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 5
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 150
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# crystals base
+		NAME = sgm_base_crystals
+		while = {
+			count = multiplier
+			create_crystal_country = yes
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "NAME_Crystal_Nidus"
+					effect = {
+						set_owner = event_target:crystal_country
+						create_ship = {
+							name = "NAME_Crystal_Nidus"
+							design = "NAME_Crystal_Nidus"
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						#set_fleet_stance = aggressive
+						#set_aggro_range_measure_from = return_point
+						#set_aggro_range = 500
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_large_ameobas
+		NAME = sgm_large_ameobas
+		while = {
+			count = multiplier
+			create_amoeba_country = yes
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					settings = {
+						garrison = yes
+					}					
+					effect = {
+						set_owner = event_target:amoeba_country
+						while = {
+							count = 20
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Zebra"
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Space_Organism_Zebra"
+							}
+						}
+						set_formation_scale = 3.0
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 100
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_med_ameobas
+		NAME = sgm_med_ameobas
+		while = {
+			count = multiplier
+			create_amoeba_country = yes
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					settings = {
+						garrison = yes
+					}					
+					effect = {
+						set_owner = event_target:amoeba_country
+						while = {
+							count = 15
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Zebra"
+							}
+						}
+						while = {
+							count = 5
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Space_Organism_Zebra"
+							}
+						}
+						set_formation_scale = 3.0
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 100
+					}
+				}
+			}
+		}
+	}	
+
+	option = {					# sgm_small_ameobas
+		NAME = sgm_small_ameobas
+		while = {
+			count = multiplier
+			create_amoeba_country = yes
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					settings = {
+						garrison = yes
+					}					
+					effect = {
+						set_owner = event_target:amoeba_country
+						while = {
+							count = 10
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Zebra"
+							}
+						}
+						while = {
+							count = 1
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Space_Organism_Zebra"
+							}
+						}
+						set_formation_scale = 3.0
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 100
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_roamer_ameobas
+		NAME = sgm_small_ameobas
+		while = {
+			count = multiplier
+			create_amoeba_country = yes
+			save_event_target_as = grazing_grounds
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba_Hunters"
+					effect = {
+						set_owner = event_target:amoeba_country
+						random_list = {
+							20 = {
+								set_fleet_flag = tiyanki_hunter
+							}
+							70 = {
+								set_fleet_flag = empty_system
+							}
+						}
+						while = {
+							count = 4
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Orange"
+							}
+						}
+						while = {
+							count = 1
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Space_Organism_Orange"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 20
+
+						if = {
+							limit = { has_fleet_flag = tiyanki_hunter }
+							save_event_target_as = hunting_amoeba
+							queue_actions = {
+								wait = { # Cooldown until they start moving
+									duration = 5000
+									random = 1000
+								}
+							}
+						}
+						else = {
+							queue_actions = {
+								wait = { # Cooldown until they start moving
+									duration = 5000
+									random = 1000
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_mother_ameoba
+		NAME = sgm_mother_ameoba
+		while = {
+			count = multiplier
+				create_amoeba_country = yes
+				event_target:amoeba_country = {
+					create_fleet = {
+						name = "NAME_Space_Amoeba"
+						settings = {
+							spawn_debris = no
+							is_boss = yes
+						}
+						effect = {
+							set_owner = event_target:amoeba_country
+							create_ship = {
+								name = "NAME_Ortus"
+								design = "NAME_Great_Space_Organism"
+							}
+							set_location = {
+								target = from
+								distance = 40
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_aggro_range_measure_from = self
+							set_aggro_range = 50
+						}
+					}
+				}
+				
+
+			}
+	}
+	
+	
+	option = {					# sgm_large_tiyanki
+		NAME = sgm_large_tiyanki
+		while = {
+			count = multiplier
+			create_tiyanki_country = yes
+			event_target:tiyanki_garrison_country = {
+				create_fleet = {
+					name = "NAME_Tiyanki_Space_Whale"
+					effect = {
+						set_owner = event_target:tiyanki_garrison_country
+						while = {
+							count = 4
+							create_ship = {
+								design = "NAME_Tiyanki_Cow"
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								design = "NAME_Tiyanki_Bull"
+							}
+						}
+						while = {
+							count = 20
+							create_ship = {
+								design = "NAME_Tiyanki_Hatchling"
+							}
+						}
+						while = {
+							count = 5
+							create_ship = {
+								design = "NAME_Tiyanki_Calf"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 0
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_med_tiyanki
+		NAME = sgm_med_tiyanki
+		while = {
+			count = multiplier
+			create_tiyanki_country = yes
+			event_target:tiyanki_garrison_country = {
+				create_fleet = {
+					name = "NAME_Tiyanki_Space_Whale"
+					effect = {
+						set_owner = event_target:tiyanki_garrison_country
+						while = {
+							count = 2
+							create_ship = {
+								design = "NAME_Tiyanki_Cow"
+							}
+						}
+						while = {
+							count = 5
+							create_ship = {
+								design = "NAME_Tiyanki_Bull"
+							}
+						}
+						while = {
+							count = 15
+							create_ship = {
+								design = "NAME_Tiyanki_Hatchling"
+							}
+						}
+						while = {
+							count = 2
+							create_ship = {
+								design = "NAME_Tiyanki_Calf"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 0
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_small_tiyanki
+		NAME = sgm_small_tiyanki
+		while = {
+			count = multiplier
+			create_tiyanki_country = yes
+			event_target:tiyanki_garrison_country = {
+				create_fleet = {
+					name = "NAME_Tiyanki_Space_Whale"
+					effect = {
+						set_owner = event_target:tiyanki_garrison_country
+						while = {
+							count = 1
+							create_ship = {
+								design = "NAME_Tiyanki_Cow"
+							}
+						}
+						while = {
+							count = 0
+							create_ship = {
+								design = "NAME_Tiyanki_Bull"
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								design = "NAME_Tiyanki_Hatchling"
+							}
+						}
+						while = {
+							count = 0
+							create_ship = {
+								design = "NAME_Tiyanki_Calf"
+							}
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 0
+					}
+				}
+			}
+		}
+	}
+
+	option = {					# sgm_roamer_tiyanki
+		NAME = sgm_small_tiyanki
+		while = {
+			count = multiplier
+			create_tiyanki_country = yes
+			event_target:tiyanki_country = {
+				create_fleet = {
+					name = "NAME_Tiyanki_Space_Whale"
+					effect = {
+						set_owner = event_target:tiyanki_country
+						create_ship = {
+							design = "NAME_Tiyanki_Cow"
+						}
+						create_ship = {
+							design = "NAME_Tiyanki_Bull"
+						}
+						create_ship = {
+							design = "NAME_Tiyanki_Calf"
+						}
+						create_ship = {
+							design = "NAME_Tiyanki_Calf"
+						}
+						create_ship = {
+							design = "NAME_Tiyanki_Hatchling"
+						}
+						create_ship = {
+							design = "NAME_Tiyanki_Hatchling"
+						}
+						set_location = event_target:giant
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 0
+						queue_actions = {
+							wait = { # Cooldown until they start moving
+								duration = 320
+								random = 80
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {					# sgm_matriarch_tiyanki
+		NAME = sgm_matriarch_tiyanki
+		while = {
+			count = multiplier
+			create_tiyanki_country = yes
+			event_target:tiyanki_garrison_country = {
+				create_fleet = {
+					name = "NAME_Elderly_Tiyanki"
+					settings = {
+						spawn_debris = no
+						is_boss = yes
+					}
+					effect = {
+						set_owner = event_target:tiyanki_garrison_country
+						create_ship = {
+							name = "NAME_Elder"
+							design = "NAME_Progenitor"
+						}
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 50
+						#save_global_event_target_as = elderly_tiyanki_fleet
+						#auto_move_to_planet = {
+						#	target = event_target:new_location
+						#	clear_auto_move_on_arrival = no		# distar.136 sets a new auto move target
+						#}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = sgm_planets.53
+	is_triggered_only = yes
+	title = sgm_planets_53_title
+	desc = sgm_planets_53_desc
+
+	immediate = {}
+
+	option = {
+		NAME = site_lost_moments 
+		custom_tooltip = site_lost_moments_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_lost_moments
+		} 
+	}
+
+	option = {
+		NAME = site_lesser_messenger 
+		custom_tooltip = site_site_lesser_messenger_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_lesser_messenger
+		} 
+	}
+
+	option = {
+		NAME = omnirelic_site 
+		custom_tooltip = omnirelic_site_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = omnirelic_site
+		} 
+	}
+
+	option = {
+		NAME = asteroid_vault_1 
+		custom_tooltip = asteroid_vault_1_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = asteroid_vault_1
+		} 
+	}
+
+	option = {
+		NAME = it_was_aliens_site 
+		custom_tooltip = it_was_aliens_site_intro	
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = it_was_aliens_site
+		} 
+	}
+
+	option = {
+		NAME = ancient_battle_site 
+		custom_tooltip = ancient_battle_site_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = ancient_battle_site
+		} 
+	}
+
+	option = {
+		NAME = city_of_bones 
+		custom_tooltip = city_of_bones_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = city_of_bones
+		} 
+	}
+
+	option = {
+		NAME = mutation_vats 
+		custom_tooltip = mutation_vats_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = mutation_vats
+		} 
+	}
+
+	option = {
+		NAME = planetary_mechanocalibrator 
+		custom_tooltip = planetary_mechanocalibrator_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = planetary_mechanocalibrator
+		} 
+	}
+	option = {
+		NAME = the_host 
+		custom_tooltip = the_host_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = the_host
+		} 
+	}
+	option = {
+		NAME = site_command_center 
+		custom_tooltip = site_command_center_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_command_center
+		} 
+	}
+	option = {
+		NAME = site_hunting_ground 
+		custom_tooltip = site_hunting_ground_intro
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_hunting_ground
+		} 
+	}
+	option = {
+		NAME = site_zarqlan 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_zarqlan
+		} 
+	}
+	option = {
+		NAME = site_minigalaxy_1 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_minigalaxy_1
+		} 
+	}
+	option = {
+		NAME = site_minigalaxy_2 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_minigalaxy_2
+		} 
+	}
+	option = {
+		NAME = site_star_petal 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_star_petal
+		} 
+	}
+	option = {
+		NAME = site_robot_debris 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_robot_debris
+		} 
+	}
+	option = {
+		NAME = site_freighter_crash 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_freighter_crash
+		} 
+	}
+	option = {
+		NAME = site_hidden_lab_a 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_hidden_lab_a
+		} 
+	}
+	option = {
+		NAME = site_moon_bump 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_moon_bump
+		} 
+	}
+	option = {
+		NAME = site_echoes_inside 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_echoes_inside
+		} 
+	}
+
+	option = {
+		NAME = Next
+		country_event = {
+			id = sgm_planets.54
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {
+	id = sgm_planets.54
+	is_triggered_only = yes
+	title = sgm_planets_54_title
+	desc = sgm_planets_54_desc
+
+	immediate = {}
+
+	option = {
+		NAME = site_target_from_orbit 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_target_from_orbit
+		} 
+	}
+	option = {
+		NAME = site_shot_into_the_ground 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_shot_into_the_ground
+		} 
+	}
+	option = {
+		NAME = site_cut_to_fit 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_cut_to_fit
+		} 
+	}
+	option = {
+		NAME = site_deja_vu_dig 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_deja_vu_dig
+		} 
+	}
+	option = {
+		NAME = site_trench_world 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_trench_world
+		} 
+	}
+	option = {
+		NAME = site_ebb_and_flow 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_ebb_and_flow
+		} 
+	}
+	option = {
+		NAME = site_sky_glow_hymn 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_sky_glow_hymn
+		} 
+	}
+	option = {
+		NAME = site_warmer_climates 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_warmer_climates
+		} 
+	}
+	option = {
+		NAME = site_phoenix_collective 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_phoenix_collective
+		} 
+	}
+	option = {
+		NAME = site_grand_herald 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_grand_herald
+		} 
+	}
+	option = {
+		NAME = site_hive_coral 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_hive_coral
+		} 
+	}
+	option = {
+		NAME = site_orbital_rain 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_orbital_rain
+		} 
+	}
+	option = {
+		NAME = site_fossilized_jellyfish 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_fossilized_jellyfish
+		} 
+	}
+	option = {
+		NAME = site_popular_rock 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_popular_rock
+		} 
+	}
+	option = {
+		NAME = site_strange_flows 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_strange_flows
+		} 
+	}
+	option = {
+		NAME = site_ruins_of_shallash 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_ruins_of_shallash
+		} 
+	}
+	option = {
+		NAME = relicrails_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = relicrails_digsite
+		} 
+	}
+	option = {
+		NAME = lithoids_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = lithoids_digsite
+		} 
+	}
+	option = {
+		NAME = rubricator_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = rubricator_digsite
+		} 
+	}
+	option = {
+		NAME = oracle_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = site_ororacle_digsitebital_rain
+		} 
+	}
+	option = {
+		NAME = endless_expanse_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = endless_expanse_digsite
+		} 
+	}
+	option = {
+		NAME = endless_expanse_digsite_2 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = endless_expanse_digsite_2
+		} 
+	}
+	option = {
+		NAME = sentinels_digsite 
+		allow = {
+			has_ancrel = yes
+			NOT = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			create_archaeological_site = sentinels_digsite
+		} 
+	}
+	option = {
+		NAME = Previous
+		country_event = {
+			id = sgm_planets.53
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}
+

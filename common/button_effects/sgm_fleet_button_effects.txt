@@ -78,6 +78,7 @@ sgm_assume_fleet_control = {
 			owner = {
 				is_same_value = from
 			}
+			has_fleet_flag = sgm_assumed_control
 		}
 	}
 	allow = {
