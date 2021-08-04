@@ -54,14 +54,24 @@ country_event = {								# Opens fleet menu
 	}
 
 	option = {
-		NAME = set_owner_target_country
+		NAME = change_ownership_to_target_country
 		allow = {
 			exists = event_target:target_country
 		}
 		from = {
 			set_owner = event_target:target_country 
+		}
 	}
-}
+
+	option = {
+		NAME = set_owner_target_country
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+			save_global_event_target_as = target_country 
+		}
+	}
 
 	option = {
 		NAME = ADD_CORVETTE
@@ -106,6 +116,23 @@ country_event = {								# Opens fleet menu
 			from = {
 				create_ship = {
 					random_existing_design = battleship
+				}
+			}
+		}
+	}
+
+	option = {
+		NAME = add_random_design_from_fleet
+		while = {
+			count = multiplier
+			from = {
+				random_owned_ship = {
+					design = {
+						save_event_target_as = new_design
+					}
+				}
+				create_ship = {
+					design = event_target:new_design
 				}
 			}
 		}

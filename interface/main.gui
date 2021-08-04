@@ -752,6 +752,28 @@ guiTypes = {
 				effect = target_fleet
 	#			shortCut = j
 			}
+			effectbuttonType = {					
+				name = sgm_galactic_effects
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -632 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = sgm_galactic_effects
+				orientation = UPPER_LEFT
+				effect = sgm_galactic_effects
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_return_to_gm
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -776 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = sgm_return_to_gm
+				orientation = UPPER_LEFT
+				effect = sgm_return_to_gm
+	#			shortCut = j
+			}
 		}
 		####################
 		# Time stuff

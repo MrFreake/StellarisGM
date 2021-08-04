@@ -115,7 +115,18 @@ sgm_return_fleet_control = {
 	}
 }
 
-
+sgm_set_owner_as_target = {
+	potential = {
+		is_gm = yes
+		exists = owner
+	}
+	allow = { }
+	effect = {
+		owner = {
+			save_global_event_target_as = target_country
+		}
+	}
+}
 
 
 

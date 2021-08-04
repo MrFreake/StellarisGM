@@ -210,14 +210,14 @@ guiTypes = {
 						}
 			
 						effectbuttonType = {					
-							name = sgm_grow_pop
+							name = sgm_add_anomaly
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 2 y = 76 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_grow_pop
+							buttonText = sgm_add_anomaly
 							orientation = UPPER_LEFT
-							effect = sgm_grow_pop
+							effect = sgm_add_anomaly
 				#			shortCut = j
 						}
 			
@@ -310,6 +310,17 @@ guiTypes = {
 							effect = sgm_generate_late_primitives
 				#			shortCut = j
 						}
+						effectbuttonType = {					
+							name = sgm_grow_pop
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 335 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_grow_pop
+							orientation = UPPER_LEFT
+							effect = sgm_grow_pop
+				#			shortCut = j
+						}						
 						## Middle Column
 						effectbuttonType = {					
 							name = sgm_change_planet_class

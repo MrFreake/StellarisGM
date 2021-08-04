@@ -96,6 +96,117 @@ country_event = {						# planet event menu
 	}
 
 	option = {
+		NAME = spawn_ww2_sol_III
+		from ={
+
+		change_pc = pc_continental
+		set_planet_size = 18
+		reroll_planet = yes
+		create_species = {
+			name = Human
+			plural = Humans
+			class = "HUM"
+			portrait = "human"
+			traits = {
+				trait = "trait_adaptive"
+				trait = "trait_nomadic"
+				trait = "trait_wasteful"
+			}
+			homeworld = this
+		}
+		create_country = {
+			name = random
+			authority = random
+			civics = {
+				civic = civic_increasing_urbanization
+				civic = civic_atmospheric_pollution
+			}
+			species = last_created_species
+			ethos = {
+				ethic = "ethic_materialist"
+				ethic = "ethic_fanatic_militarist"
+			}
+			origin = "origin_enlightened" # Should only be visible if they become spacefaring
+			flag = {
+				icon = {
+					category = "human"
+					file = "flag_human_7.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors={
+					"dark_blue"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			day_zero_contact = no
+			type = primitive
+		}
+		last_created_country = {
+			set_graphical_culture = industrial_01
+			set_country_flag = machine_age
+			set_country_flag = humans_machine_age
+			set_primitive_age = machine_age
+		}
+		set_owner = last_created_country
+
+		create_primitive_blockers = yes
+
+		while = {
+			count = 24
+			create_pop = {
+				species = last_created_species
+			}
+		}
+		add_building = building_primitive_farm
+		add_building = building_primitive_factory
+		add_building = building_primitive_mine
+		add_building = building_primitive_power_plant
+		add_building = building_primitive_capital
+		add_building = building_urban_dwellings
+
+		create_army = {
+			name = "NAME_German_Wehrmacht"
+			owner = last_created_country
+			species = last_created_species
+			type = "industrial_army"
+		}
+		create_army = {
+			name = "NAME_Soviet_Red_Army"
+			owner = last_created_country
+			species = last_created_species
+			type = "industrial_army"
+		}
+		create_army = {
+			name = "NAME_US_Armed_Forces"
+			owner = last_created_country
+			species = last_created_species
+			type = "industrial_army"
+		}
+		create_army = {
+			name = "NAME_British_Armed_Forces"
+			owner = last_created_country
+			species = last_created_species
+			type = "industrial_army"
+		}
+		create_army = {
+			name = "NAME_Imperial_Japanese_Forces"
+			owner = last_created_country
+			species = last_created_species
+			type = "industrial_army"
+		}
+
+		last_created_country = {
+			capital_scope = { set_name = "NAME_Sol_III" }
+		}
+	}
+	}
+
+	option = {
 		NAME = exit
 	}
 }
@@ -1566,7 +1677,7 @@ country_event = {
 	title = sgm_planets_54_title
 	desc = sgm_planets_54_desc
 
-	immediate = {}
+	immediate = { }
 
 	option = {
 		NAME = site_target_from_orbit 
@@ -1805,7 +1916,7 @@ country_event = {
 			}
 		}
 		from = {
-			create_archaeological_site = site_ororacle_digsitebital_rain
+			create_archaeological_site = oracle_digsite
 		} 
 	}
 	option = {
@@ -1853,6 +1964,655 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {
+	id = sgm_planets.55
+	is_triggered_only = yes
+	title = sgm_planets_55_title
+	desc = sgm_planets_55_desc
+
+	immediate = {}
+
+	# asteroid anomalies
+
+	option = { 					# crashed_ship_asteroid_category
+		NAME = crashed_ship_asteroid_category
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = crashed_ship_asteroid_category 
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# origin_asteroid_category 
+		NAME = origin_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = origin_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# debris_asteroid_category 
+		NAME = debris_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = debris_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# emissions_asteroid_category 
+		NAME = emissions_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = emissions_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# hatch_asteroid_category 
+		NAME = hatch_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = hatch_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# collision_asteroid_category 
+		NAME = collision_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { has_any_strategic_resource = no }
+		}
+		from = {
+		add_anomaly = {
+			category = collision_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# station_asteroid_category 
+		NAME = station_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { num_minerals > 0 }
+		}
+		from = {
+		add_anomaly = {
+			category = station_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# life_asteroid_category 
+		NAME = life_asteroid_category 
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = life_asteroid_category  
+			target = event_target:target_country }
+		}
+	}
+
+	# gas giant anomalies
+
+	option = { 					# object_gasgiant_category 
+		NAME = object_gasgiant_category 
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = object_gasgiant_category  
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# moon_gasgiant_category  
+		NAME = moon_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { has_any_strategic_resouce = no }
+		}
+		from = {
+		add_anomaly = {
+			category = moon_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# life_gasgiant_category  
+		NAME = life_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = life_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# storms_gasgiant_category  
+		NAME = storms_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = storms_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# aerostat_gasgiant_category  
+		NAME = aerostat_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = aerostat_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# cargo_gasgiant_category  
+		NAME = cargo_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = cargo_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# debris_gasgiant_category  
+		NAME = debris_gasgiant_category  
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = debris_gasgiant_category   
+			target = event_target:target_country }
+		}
+	}
+
+
+	option = { 					# signal_gasgiant_category   
+		NAME = signal_gasgiant_category   
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = signal_gasgiant_category    
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# ship_gasgiant_category   
+		NAME = ship_gasgiant_category   
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = ship_gasgiant_category    
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# terminal_gasgiant_category   
+		NAME = terminal_gasgiant_category   
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { is_moon = no }
+		}
+		from = {
+		add_anomaly = {
+			category = terminal_gasgiant_category    
+			target = event_target:target_country }
+		}
+	}
+
+	# uninhabitable planet anomalies
+	option = { 					# impact_uninhabitable_category   
+		NAME = impact_uninhabitable_category   
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = impact_uninhabitable_category    
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# energy_uninhabitable_category    
+		NAME = energy_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = energy_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# signal_uninhabitable_category    
+		NAME = signal_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = signal_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# asteroid_uninhabitable_category    
+		NAME = asteroid_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = asteroid_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# solar_uninhabitable_category    
+		NAME = solar_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = solar_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# life_toxic_category    
+		NAME = life_toxic_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = life_toxic_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# life_frozen_category    
+		NAME = life_frozen_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = life_frozen_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# life_barren_category    
+		NAME = life_barren_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = life_barren_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# battle_uninhabitable_category    
+		NAME = battle_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = battle_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# shipyard_uninhabitable_category    
+		NAME = shipyard_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = shipyard_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# inhabited_toxic_category    
+		NAME = inhabited_toxic_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { is_planet_class = pc_toxic }
+		}
+		from = {
+		add_anomaly = {
+			category = inhabited_toxic_category     
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# writing_uninhabitable_category    
+		NAME = writing_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = writing_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+	option = { 					# beacon_uninhabitable_category    
+		NAME = beacon_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = { has_any_strategic_resource = no }
+		}
+		from = {
+		add_anomaly = {
+			category = beacon_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+	option = { 					# mountain_uninhabitable_category    
+		NAME = mountain_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = mountain_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+	option = { 					# object_uninhabitable_category    
+		NAME = object_uninhabitable_category    
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+		add_anomaly = {
+			category = object_uninhabitable_category     
+			target = event_target:target_country }
+		}
+	}
+
+			# terraforming candidate anomalies
+
+	option = { 					# terraforming_candidate_category     
+		NAME = terraforming_candidate_category     
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = {
+				NOT = { has_modifier = terraforming_candidate }
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+				}	
+				planet_size > 9
+				planet_size < 26	
+				solar_system = {
+					NOR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_neutron_star
+						is_star_class = sc_pulsar
+					}
+				}
+			}
+		}
+		from = {
+		add_anomaly = {
+			category = terraforming_candidate_category      
+			target = event_target:target_country }
+		}
+	}
+
+	option = { 					# living_metal_category     
+		NAME = living_metal_category     
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = {
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_asteroid = yes
+				}
+				has_any_strategic_resource = no
+				NOT = {
+					has_deposit_for = shipclass_mining_station
+					has_deposit_for = shipclass_research_station
+				}
+			}
+		}
+		from = {
+		add_anomaly = {
+			category = living_metal_category      
+			target = event_target:target_country }
+		}
+	}
+	
+
 	option = {
 		NAME = Exit
 	}

@@ -362,3 +362,20 @@ sgm_add_dig_site = {
 	}
 }
 
+sgm_add_anomaly = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.55
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+

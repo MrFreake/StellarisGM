@@ -1,0 +1,518 @@
+namespace = sgm_galactic_events
+
+country_event = {
+	id = sgm_galactic_events.1
+	is_triggered_only = yes
+	title = sgm_galactic_events_title
+	desc = sgm_galactic_events_desc
+
+	immediate = {}
+
+	option = {
+		NAME = awaken_mauraders
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		country_event = {
+			id = sgm_galactic_events.50
+		}
+	}
+
+	option = {
+		NAME = spawn_wraith
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+			exists = event_target:target_planet
+		}
+		country_event = {
+			id = sgm_galactic_events.51
+		}
+	}
+
+	option = {
+		NAME = open_l_cluster
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		country_event = {
+			id = sgm_galactic_events.52
+		}
+	}
+
+	option = {
+		NAME = open_all_lgates
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+			has_global_flag = lgates_activated_globally
+		}
+		every_megastructure = {
+			limit = {
+				is_megastructure_type = lgate_base
+				NOT = {
+					has_megastructure_flag = lgate_activated
+				}
+			}
+			activate_gateway = this
+			set_megastructure_flag = lgate_activated
+		}
+	}
+
+	option = {
+		NAME = spawn_gray_tempest
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		country_event = {
+			id = graygoo.1
+		}
+	}
+
+	option = {
+		NAME = open_dragon_season
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		country_event = {
+			id = distar.13000
+		}
+	}
+
+	option = {
+		NAME = gray_goo_empire
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		country_event = {
+			id = graygoo.100
+		}
+	}
+
+	option = {
+		NAME = Exit
+	}
+}
+
+
+# mid game events													# The Great Khan
+country_event = {
+	id = sgm_galactic_events.50
+	is_triggered_only = yes
+	title = sgm_galactic_events_50_title
+	desc = sgm_galactic_events_50_desc_horde_triggered
+
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					exists = event_target:target_country
+					event_target:target_country = {
+						is_country_type = dormant_marauders
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = dormant_marauders
+				}
+				save_global_event_target_as = target_country
+			}
+		}
+		event_target:target_country = {
+			set_country_type = awakened_marauders
+			set_global_flag = marauder_crisis_started
+			set_global_flag = marauder_crisis_ongoing
+			save_global_event_target_as = raider_khanate
+			if = {
+				limit = { has_country_flag = marauder_1 }
+				random_system = {
+					limit = { has_star_flag = marauder_capital_1 }
+					random_system_planet = {
+						limit = { has_planet_flag = raid_source }
+						save_global_event_target_as = marauder_rally_point
+						set_planet_flag = marauder_rally_point
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = marauder_2 }
+				random_system = {
+					limit = { has_star_flag = marauder_capital_2 }
+					random_system_planet = {
+						limit = { has_planet_flag = raid_source }
+						save_global_event_target_as = marauder_rally_point
+						set_planet_flag = marauder_rally_point
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = marauder_3 }
+				random_system = {
+					limit = { has_star_flag = marauder_capital_3 }
+					random_system_planet = {
+						limit = { has_planet_flag = raid_source }
+						save_global_event_target_as = marauder_rally_point
+						set_planet_flag = marauder_rally_point
+					}
+				}
+			}
+			change_government = {
+				civics = { civic = civic_great_khans_vision }
+			}
+			set_name = random
+			change_country_flag = {
+				icon = {
+					category = "pirate"
+					file = "flag_pirate_11.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			create_ship_design = { design = "NAME_Pirate_Transport" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Clan_Builder" }
+			add_ship_design = last_created_design
+	
+			### Ruler Khan
+			create_leader = {
+				class = ruler
+				species = owner_main_species
+				name = random
+				skill = 10
+				leader_age_min = 22
+				leader_age_max = 40
+				traits = {
+					trait = leader_trait_ruler_great_khan
+				}
+			}
+			last_created_leader = {
+				set_leader_flag = great_khan
+				save_global_event_target_as = great_khan_ruler
+			}
+			assign_leader = last_created_leader
+			set_timed_global_flag = { flag = khan_no_die days = 7200 } # Should only die in battle first 20 years
+			country_event = { id = marauder.514 days = 10800 random = 5000 } # Khan dies of old age if still around
+	
+			### Admiral Khan
+			clone_leader = {
+				target = event_target:great_khan_ruler
+				class = admiral
+				skill = 10
+				traits = {
+					trait = leader_trait_great_khan
+				}
+				effect = {
+					set_leader_flag = great_khan
+					save_global_event_target_as = great_khan
+				}
+			}
+	
+			create_1st_khan_fleet = yes
+			create_marauder_fleet = yes
+			create_marauder_fleet = yes
+			create_marauder_fleet = yes
+			create_marauder_armies = yes
+			create_marauder_armies = yes
+			create_marauder_armies = yes
+			create_marauder_armies = yes
+			create_marauder_constructors = yes
+			create_marauder_constructors = yes
+			create_marauder_constructors = yes
+			country_event = { id = marauder.520 days = 180 } # Start reinforcement cycle
+			if = {
+				limit = {
+					NOT = { has_global_flag = horde_triggered }
+				}
+				observer_event = { id = observer.13 }
+				every_country = {
+					limit = { is_country_type = default }
+					establish_communications_no_message = root
+					country_event = { id = marauder.501 }
+				}
+			}
+			else = {
+				observer_event = { id = observer.18 }
+				every_country = {
+					limit = { is_country_type = default }
+					establish_communications_no_message = root
+					country_event = { id = marauder.526 }
+				}
+			}
+	
+			# Mercenaries Defect (Marauder 1)
+			if = {
+				limit = { has_country_flag = marauder_1 }
+				every_country = {
+					limit = {
+						OR = {
+							any_owned_fleet = {
+								OR = {
+									has_fleet_flag = armada_of_the_voidborn
+									has_fleet_flag = star_rider_flotilla
+									has_fleet_flag = first_storm_wing
+								}
+							}
+							any_owned_leader = {
+								has_leader_flag = hired_merc_leader_1
+							}
+						}
+					}
+					country_event = { id = marauder.77 days = 20 }
+				}
+			}
+			# Mercenaries Defect (Marauder 2)
+			if = {
+				limit = { has_country_flag = marauder_2 }
+				every_country = {
+					limit = {
+						OR = {
+							any_owned_fleet = {
+								OR = {
+									has_fleet_flag = dwamak_bashers
+									has_fleet_flag = unhinged_screamer_flotilla
+									has_fleet_flag = frenzied_volunteer_squadron
+								}
+							}
+							any_owned_leader = {
+								has_leader_flag = hired_merc_leader_1
+							}
+						}
+					}
+					country_event = { id = marauder.77 days = 20 }
+				}
+			}
+			# Mercenaries Defect (Marauder 3)
+			if = {
+				limit = { has_country_flag = marauder_3 }
+				every_country = {
+					limit = {
+						OR = {
+							any_owned_fleet = {
+								OR = {
+									has_fleet_flag = her_chosen_champions
+									has_fleet_flag = order_of_eternal_night
+									has_fleet_flag = twilight_congregation
+								}
+							}
+							any_owned_leader = {
+								has_leader_flag = hired_merc_leader_1
+							}
+						}
+					}
+					country_event = { id = marauder.77 days = 20 }
+				}
+			}
+	
+			# Mercenaries Join the Great Khan
+			country_event = { id = marauder.78 days = 20 }
+	
+			# Should not attack Enclaves
+			every_country = {
+				limit = { is_country_type = enclave }
+				event_target:raider_khanate = {
+					set_faction_hostility = {
+						target = prev
+						set_hostile = no
+						set_neutral = no
+						set_friendly = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {													# Spectral Wraith
+	id = sgm_galactic_events.51
+	is_triggered_only = yes
+	title = sgm_galactic_events_51_title
+	desc = sgm_galactic_events_51_desc_wraith_triggered
+
+	immediate = {
+
+		event_target:target_planet = {
+			save_event_target_as = wraith_star
+			remove_modifier = germinating_wraith
+			create_country = {
+				name = "NAME_Wraith"
+				type = guardian_wraith
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_5.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"red"
+						"red"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				set_country_flag = wraith_country
+				save_global_event_target_as = wraith_country
+				create_fleet = {
+					name = "NAME_Specter"
+					settings = {
+						spawn_debris = no
+						is_boss = yes
+					}
+					effect = {
+						set_owner = event_target:wraith_country
+						random_list = {
+							33 = {
+								create_ship = {
+									name = "NAME_Wraith_650THz"
+									design = "NAME_Spectral_Wraith_650THz"
+									effect = {
+										set_ship_flag = wraith_ship
+										set_ship_flag = wraith_freq_blue
+									}
+								}
+							}
+							33 = {
+								create_ship = {
+									name = "NAME_Wraith_450THz"
+									design = "NAME_Spectral_Wraith_450THz"
+									effect = {
+										set_ship_flag = wraith_ship
+										set_ship_flag = wraith_freq_red
+									}
+								}
+							}
+							33 = {
+								create_ship = {
+									name = "NAME_Wraith_520THz"
+									design = "NAME_Spectral_Wraith_520THz"
+									effect = {
+										set_ship_flag = wraith_ship
+										set_ship_flag = wraith_freq_yellow
+									}
+								}
+							}
+						}
+						save_global_event_target_as = wraith_fleet
+						set_fleet_flag = wraith_fleet
+						set_location = event_target:wraith_star
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 20
+						queue_actions = {
+							repeat = {
+								find_closest_system = {
+									trigger = {
+										id = wraith.1.trigger.1
+										NOR = {
+											exists = space_owner
+											any_fleet_in_system = {
+												is_same_value = event_target:wraith_fleet
+											}
+											has_star_flag = guardians_wraith_visited
+										}
+									}
+									found_system = {
+										move_to = this
+										find_closest_planet = {
+											trigger = {
+												id = wraith.1.trigger.2
+												is_star = yes
+											}
+											found_planet = {
+												move_to = this
+												#orbit_planet = this
+												wait = {
+													duration = 10
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = space_owner }
+				space_owner = {
+					country_event = { id = leviathans.2012 }
+				}
+			}
+		}
+	}
+}	
+
+country_event = {
+	id = sgm_galactic_events.52
+	is_triggered_only = yes
+	title = sgm_galactic_events_52_title
+	desc = sgm_galactic_events_52_desc_opened_l_gate
+
+	trigger = {
+		NOT = {
+			has_global_flag = lgates_activated_globally
+		}
+	}
+
+	immediate = {
+		set_country_flag = lcluster_opener
+		set_global_flag = l_cluster_opened
+		# spawn L-Cluster
+		country_event = { id = distar.11000 }
+		# enable L-Gate
+		from.solar_system = {
+			if = {
+				# flag prevents the Tempest from using this gate,
+				# do not set the flag if there's only one l-gate system
+				limit = {
+					any_system = {
+						has_star_flag = lgate
+						NOT = { is_same_value = prev }
+					}
+				}
+				set_star_flag = lgate_originating_system
+			}
+			else = {
+				root = { set_country_flag = only_one_lgate }
+			}
+			random_system_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base
+					NOT = { has_megastructure_flag = lgate_activated }
+				}
+				activate_gateway = this
+				set_megastructure_flag = lgate_activated
+			}
+		}
+		country_event = { id = distar.10951 }
+		# enable other L-Gates over time
+		random_country = {
+			limit = { is_country_type = global_event }
+			country_event = { id = distar.10960 days = 200 random = 500 }
+		}
+
+		# activated terminal egress l-gate
+		event_target:lcluster1 = {
+			random_system_megastructure = {
+				activate_gateway = this
+				set_megastructure_flag = lgate_activated
+			}
+		}
+		set_global_flag = lgates_activated_globally
+	}
+}
+
+
+# late game events

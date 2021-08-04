@@ -1443,6 +1443,17 @@ guiTypes = {
 						effect = sgm_return_to_gm
 			#			shortCut = j
 					}
+					effectbuttonType = {					
+						name = sgm_switch_player_to_country
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 187 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_switch_player_to_country
+						orientation = UPPER_LEFT
+						effect = sgm_switch_player_to_country
+			#			shortCut = j
+					}
 		
 				}
 			}

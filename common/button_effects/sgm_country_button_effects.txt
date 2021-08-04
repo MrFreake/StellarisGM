@@ -117,3 +117,26 @@ sgm_force_peace_with_target = {
 	}
 }
 }
+
+
+sgm_switch_player_to_country = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_ai = yes
+			NOT = { is_same_value = root } 
+		}
+		NOT = { 
+			is_ai = yes
+		}
+	}
+
+	effect = {
+		event_target:target_country = {
+			set_player = root
+		}
+	}
+}
