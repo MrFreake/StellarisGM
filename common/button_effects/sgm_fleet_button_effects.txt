@@ -96,8 +96,8 @@ sgm_assume_fleet_control = {
 
 sgm_return_fleet_control = {
 	potential = {
-		is_gm = yes
-		has_fleet_flag = sgm_assumed_control
+		from = { is_gm = yes }
+		has_fleet_flag = sgm_ajjssumed_control
 	}
 	allow = {
 		always = yes

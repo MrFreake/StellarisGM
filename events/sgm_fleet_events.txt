@@ -127,12 +127,11 @@ country_event = {								# Opens fleet menu
 			count = multiplier
 			from = {
 				random_owned_ship = {
-					design = {
-						save_event_target_as = new_design
+					fleet = {
+						create_ship = {
+							design = prev
+						}
 					}
-				}
-				create_ship = {
-					design = event_target:new_design
 				}
 			}
 		}

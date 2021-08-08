@@ -2146,7 +2146,7 @@ country_event = {
 		}
 		allow = {
 			exists = event_target:target_country
-			from = { has_any_strategic_resouce = no }
+			from = { has_strategic_resource = no }
 		}
 		from = {
 		add_anomaly = {

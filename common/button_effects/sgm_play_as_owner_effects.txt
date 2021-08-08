@@ -18,6 +18,7 @@ sgm_play_as_owner = {
 		owner = {
 			set_player = from
 			set_country_flag = sgm_assumed_control
+			#set_country_flag = sgm_assumed_controlfrom@prev
 		}
 	}	
 }
@@ -26,9 +27,9 @@ sgm_return_to_gm = {
 	potential = {
 		exists = owner
 		is_gm = yes
-		from = {
-				is_same_value = prev.owner
-		}
+		#from = {
+		#		is_same_value = prev.owner
+		#}
 		owner = {
 			has_country_flag = sgm_assumed_control
 		}
@@ -43,8 +44,11 @@ sgm_return_to_gm = {
 		random_country = {
 			limit = {
 				is_country_type = sgm_game_master
+				is_ai = no
+				#jprev.owner = { has_country_flag = sgm_assumed_controlfrom@prevprev }
 			}
 			set_player = from
+			#prev.owner = { remove_country_flag = sgm_assumed_controlfrom@prevprev }
 		}
 	}	
 }

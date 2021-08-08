@@ -63,6 +63,7 @@ sgm_negative_relations_with_target = {
 
 sgm_declare_war_with_target = {
 	potential = {
+		exists = event_target:target_country
 		is_gm = yes
 		NOT = {
 			root = {
@@ -71,7 +72,6 @@ sgm_declare_war_with_target = {
 		}
 	}
 	allow = {
-		exists = event_target:target_country
 		NOT = {
 			event_target:target_country = {
 				is_same_value = root
@@ -90,19 +90,18 @@ sgm_declare_war_with_target = {
 
 sgm_force_peace_with_target = {
 	potential = {
+		exists = event_target:target_country
 		is_gm = yes
 		root = {
 			is_at_war_with = event_target:target_country
 		}
 	}
 	allow = {
-		exists = event_target:target_country
 		NOT = {
 			event_target:target_country = {
 				is_same_value = root
 			}
 		}
-
 	}
 
 	effect = {
@@ -122,9 +121,10 @@ sgm_force_peace_with_target = {
 sgm_switch_player_to_country = {
 	potential = {
 		is_gm = yes
+		exists = event_target:target_country
 	}
 	allow = {
-		exists = event_target:target_country
+		
 		event_target:target_country = {
 			is_ai = yes
 			NOT = { is_same_value = root } 

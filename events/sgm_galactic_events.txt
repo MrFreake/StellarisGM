@@ -61,6 +61,7 @@ country_event = {
 		NAME = spawn_gray_tempest
 		allow = {
 			host_has_dlc = "Distant Stars Story Pack"
+			has_global_flag = l_cluster_opened
 		}
 		country_event = {
 			id = graygoo.1
@@ -71,6 +72,7 @@ country_event = {
 		NAME = open_dragon_season
 		allow = {
 			host_has_dlc = "Distant Stars Story Pack"
+			has_global_flag = l_cluster_opened
 		}
 		country_event = {
 			id = distar.13000
@@ -81,10 +83,32 @@ country_event = {
 		NAME = gray_goo_empire
 		allow = {
 			host_has_dlc = "Distant Stars Story Pack"
+			has_global_flag = l_cluster_opened
 		}
 		country_event = {
 			id = graygoo.100
 		}
+	}
+
+	option = {
+		NAME = spawn_unbidden
+		allow = {}
+	}
+
+	option = {
+		NAME = spawn_prethoryn_swarm
+		allow = {}
+	}
+
+	option = {
+		NAME = spawn_contingency
+		allow = {}
+	}
+
+
+	option = {
+		NAME = spawn_contingency
+		allow = {}
 	}
 
 	option = {

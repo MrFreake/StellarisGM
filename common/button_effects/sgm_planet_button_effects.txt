@@ -47,9 +47,7 @@ sgm_add_district = {
 	}
 }
 
-sgm_add_dig_site = {}
 
-sgm_add_anomaly = {}
 
 sgm_change_planet_class = {
 	potential = {
@@ -88,7 +86,7 @@ sgm_create_colony = {
 
 sgm_increase_planet_size = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	allow = {
 		planet_size < 25
@@ -114,7 +112,7 @@ sgm_decrease_planet_size = {
 
 sgm_reroll_modifiers = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	allow = {
 		num_pops < 1
@@ -125,7 +123,7 @@ sgm_reroll_modifiers = {
 }
 sgm_reroll_deposits = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	allow = {
 		num_pops < 1
@@ -136,7 +134,7 @@ sgm_reroll_deposits = {
 }
 sgm_reroll_planet = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	allow = {
 		num_pops < 1
@@ -148,7 +146,7 @@ sgm_reroll_planet = {
 
 sgm_generate_early_primitives = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	
 	allow = {
@@ -162,7 +160,7 @@ sgm_generate_early_primitives = {
 
 sgm_generate_late_primitives = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	
 	allow = {
@@ -176,7 +174,7 @@ sgm_generate_late_primitives = {
 
 sgm_unsurvey_system = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 		exists = event_target:target_country
 		is_surveyed = { status = yes who = event_target:target_country }
 	}
@@ -345,7 +343,7 @@ sgm_add_l_gate = {
 
 sgm_add_dig_site = {
 	potential = {
-		is_gm = yes
+		from = { is_gm = yes }
 	}
 	allow = {
 		is_star = no
