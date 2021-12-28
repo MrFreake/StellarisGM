@@ -233,9 +233,20 @@ guiTypes = {
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_play_as_owner
+							name = sgm_begin_event_chain
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 2 y = 150 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_begin_event_chain
+							orientation = UPPER_LEFT
+							effect = sgm_begin_event_chain
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_play_as_owner
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 187 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_play_as_owner
@@ -246,7 +257,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_return_to_gm
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 150 }
+							position = { x = 2 y = 187 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_return_to_gm
@@ -258,7 +269,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_create_colony
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 187 }
+							position = { x = 2 y = 224 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_create_colony
@@ -269,7 +280,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_unsurvey_system
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 224 }
+							position = { x = 2 y = 261 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_unsurvey_system
@@ -280,7 +291,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_survey_system
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 224 }
+							position = { x = 2 y = 261 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_survey_system
@@ -291,7 +302,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_generate_early_primitives
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 261 }
+							position = { x = 2 y = 298 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_generate_early_primitives
@@ -302,7 +313,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_generate_late_primitives
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 298 }
+							position = { x = 2 y = 335 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_generate_late_primitives
@@ -313,7 +324,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_grow_pop
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 335 }
+							position = { x = 2 y = 372 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_grow_pop

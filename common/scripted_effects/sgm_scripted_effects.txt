@@ -1,0 +1,69 @@
+# call from planet scope
+delete_point_of_interest = {
+	if = {
+		limit = {
+			has_point_of_interest = { poi = gm_poi.1 }
+		}
+			root = { remove_point_of_interest = gm_poi.1 }
+			break = yes
+		}
+	else_if = {
+		limit = {
+			has_point_of_interest = { poi = gm_poi.2 }
+		}
+		root = { remove_point_of_interest = gm_poi.2 }
+		break = yes
+		}
+	else_if = {
+		limit = {
+			has_point_of_interest = { poi = gm_poi.3 }
+			break = yes
+		}
+		root = { remove_point_of_interest = gm_poi.3 }
+		break = yes
+	}
+}
+
+
+set_point_of_interest = {
+	root = {
+		if = {
+			limit = {
+				NOT = { has_point_of_interest = { poi = gm_poi.1 } }  
+			}
+			create_point_of_interest = {
+				id = gm_poi.1
+				name = gm_poi
+				desc = gm_poi_desc
+				event_chain = gm_poi
+				location = prev
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_point_of_interest = { poi = gm_poi.2 } } 
+			}
+			create_point_of_interest = {
+				id = gm_poi.2
+				name = gm_poi
+				desc = gm_poi_desc
+				event_chain = gm_poi
+				location = prev
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { has_point_of_interest = { poi = gm_poi.3 } } 
+			}
+			create_point_of_interest = {
+				id = gm_poi.3
+				name = gm_poi
+				desc = gm_poi_desc
+				event_chain = gm_poi
+				location = prev
+			}
+			break = yes
+		}
+	}	
+}

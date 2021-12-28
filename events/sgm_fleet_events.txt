@@ -129,11 +129,39 @@ country_event = {								# Opens fleet menu
 				random_owned_ship = {
 					fleet = {
 						create_ship = {
-							design = prev
+							design = random_owned_design
 						}
 					}
 				}
 			}
+		}
+	}
+
+	option = {
+		NAME = set_target_country_as_player
+		allow = {
+			event_target:target_country = {
+				is_ai = no
+			}
+			from = {
+				owner = { is_ai = yes }
+			}
+		}
+		from = {
+			owner = { 
+				if = {
+					limit = {
+						event_target:target_country = {
+							is_gm = yes
+						}
+					}
+					set_country_flag = sgm_assumed_control
+				}
+				set_player = event_target:target_country 
+			}
+		}
+		event_target:target_country = {
+			remove_country_flag = sgm_assumed_control
 		}
 	}
 

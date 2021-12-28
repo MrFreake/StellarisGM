@@ -3,3 +3,38 @@ on_game_start_country = {
         sgm_start_events.1
     }
 }
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+        sgm_events.1
+    }
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+on_system_gained = {
+	events = {
+        sgm_events.2
+	}
+}
+
+# A Megastructure has begun to be upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgrade_begin = {
+	events = {
+		sgm_events.3
+	}
+}
+
+# No scope, like on_game_start
+# Does not run when loading MP saves due to OOS concerns
+on_single_player_save_game_load = {
+    events = {
+        sgm_start_events.2
+    }
+}

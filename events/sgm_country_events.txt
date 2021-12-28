@@ -3,10 +3,706 @@ namespace = sgm_country
 country_event = {
 	id = sgm_country.1
 	is_triggered_only = yes
+	title = sgm_country_1_title
+	desc = sgm_country_1_desc
 
 	immediate = {}
 
+	option = {
+		NAME = join_galactic_community
+		allow = {
+			is_country_type = sgm_game_master
+		}
+		custom_tooltip = "Forces the GM Country to join the Galactic Community."
+		root = {
+			add_to_galactic_community_no_message = yes
+		}
+	}
+
 	option ={
+		NAME = Exit
+	}
+}
+
+country_event = { 							# declare war options
+	id = sgm_country.2
+	is_triggered_only = yes
+	title = sgm_country_2_title
+	desc = sgm_country_2_desc
+
+	immediate = {}
+
+	option = {			# show standard wg
+		NAME = showing_standard_wg		
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		custom_tooltip = click_to_change
+		set_global_flag = showing_fe_wg
+		remove_global_flag = showing_standard_wg
+		country_event = {
+			id = sgm_country.2
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {			# show FE wg
+		NAME = showing_fe_wg		
+		trigger = {
+			has_global_flag = showing_fe_wg
+		}
+		custom_tooltip = click_to_change
+		set_global_flag = showing_event_wg
+		remove_global_flag = showing_fe_wg
+		country_event = {
+			id = sgm_country.2
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	
+	option = {			# show event wg
+		NAME = showing_event_wg		
+		trigger = {
+			has_global_flag = showing_event_wg
+		}
+		custom_tooltip = click_to_change
+		set_global_flag = showing_standard_wg
+		remove_global_flag = showing_event_wg
+		country_event = {
+			id = sgm_country.2
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {								# conquest
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				
+			}
+		}
+		NAME = wg_conquest
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_conquest
+			}
+		}
+	}
+
+	option = {								# wg_independence 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_independence 
+				}
+			}
+		}
+		NAME = wg_independence 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_independence 
+			}
+		}
+	}
+
+	option = {								# wg_end_threat 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_end_threat 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_end_threat 
+			}
+		}
+	}
+
+	option = {								# wg_end_threat_swarm 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_end_threat_swarm 
+				}
+			}
+		}
+		NAME = wg_end_threat_swarm 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_end_threat_swarm 
+			}
+		}
+	}
+
+	option = {								# wg_end_threat_assimilators 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_end_threat_assimilators 
+				}
+			}
+		}
+		NAME = wg_end_threat_assimilators 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_end_threat_assimilators 
+			}
+		}
+	}
+
+	option = {								# wg_assimilation 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_assimilation 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_assimilation 
+			}
+		}
+	}
+
+	option = {								# wg_cleansing 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_cleansing 					
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_cleansing 
+			}
+		}
+	}
+
+	option = {								# wg_absorption 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_absorption 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_absorption 
+			}
+		}
+	}
+
+	option = {								# wg_plunder  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_plunder 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_plunder 
+			}
+		}
+	}
+
+	option = {									# wg_colossus 
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_colossus 
+				}
+			}
+		}
+		NAME = wg_colossus 
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_colossus 
+			}
+		}
+	}
+
+	option = {									# wg_end_threat_colossus  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_end_threat_colossus  
+				}
+			}
+		}
+		NAME = wg_end_threat_colossus  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_end_threat_colossus  
+			}
+		}
+	}
+
+	option = {									# wg_subjugation  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_subjugation  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_subjugation  
+			}
+		}
+	}
+
+
+	option = {									# wg_tribute  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+
+		}
+		NAME = wg_tribute  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_tribute  
+			}
+		}
+	}
+
+
+	option = {									# wg_megacorp_subjugate  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				has_authority = auth_corporate 
+			}
+		}
+		NAME = wg_megacorp_subjugate  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_megacorp_subjugate  
+			}
+		}
+	}
+
+
+	option = {									# wg_force_ideology  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			
+		}
+		NAME = wg_force_ideology  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_force_ideology  
+			}
+		}
+	}
+
+
+	option = {									# wg_humiliation  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			
+		}
+		NAME = wg_humiliation  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_humiliation  
+			}
+		}
+	}
+
+
+	option = {									# wg_take_galatron  
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_take_galatron  
+				}
+			}
+		}
+		NAME = wg_take_galatron  
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_take_galatron  
+			}
+		}
+	}
+
+
+	option = {									# wg_expel_corp   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				any_owned_planet = {
+					has_branch_office = yes
+				}
+			}
+		}
+		NAME = wg_expel_corp   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_expel_corp   
+			}
+		}
+	}
+
+
+	option = {									# wg_hostile_takeover   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				has_authority = auth_corporate
+			}
+		}
+		NAME = wg_hostile_takeover   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_hostile_takeover   
+			}
+		}
+	}
+
+	
+	option = {									# wg_steal_galatron   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_steal_galatron   
+				}
+			}
+		}
+		NAME = wg_steal_galatron   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_steal_galatron   
+			}
+		}
+	}
+
+	
+	option = {									# wg_scion   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_scion   
+				}
+			}
+		}
+		NAME = wg_scion   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_scion   
+			}
+		}
+	}
+
+	
+	option = {									# wg_hegemon   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_hegemon   
+				}
+			}
+		}
+		NAME = wg_hegemon   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_hegemon   
+			}
+		}
+	}
+
+	
+	option = {									# wg_leave_hegemony   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			
+		}
+		NAME = wg_leave_hegemony   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_leave_hegemony   
+			}
+		}
+	}
+
+	
+	option = {									# wg_counterattack   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_counterattack   
+				}
+			}
+		}
+		NAME = wg_counterattack   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_counterattack   
+			}
+		}
+	}
+
+	
+	option = {									# wg_renegade_containment   
+		trigger = {
+			has_global_flag = showing_standard_wg
+		}
+		allow = {
+			from = {
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_renegade_containment   
+				}
+			}
+		}
+		NAME = wg_renegade_containment   
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_renegade_containment   
+			}
+		}
+	}
+
+	option = {									# wg_fe_humiliation    
+		NAME = wg_fe_humiliation    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_fe_humiliation    
+				}
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_fe_humiliation    
+			}
+		}
+	}
+
+
+	option = {									# wg_fe_stop_atrocities    
+		NAME = wg_fe_stop_atrocities    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_fe_stop_atrocities    
+			}
+		}
+	}
+
+	option = {									# wg_fe_stop_ai    
+		NAME = wg_fe_stop_ai    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_fe_stop_ai    
+			}
+		}
+	}
+
+	option = {									# wg_fe_cleanse_holy_worlds    
+		NAME = wg_fe_cleanse_holy_worlds    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_fe_cleanse_holy_worlds    
+				}
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_fe_cleanse_holy_worlds    
+			}
+		}
+	}
+
+	option = {									# wg_fe_cleanse_border_worlds    
+		NAME = wg_fe_cleanse_border_worlds    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+				can_declare_war = {
+					target = event_target:target_country
+					attacker_war_goal = wg_fe_cleanse_border_worlds    
+				}
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_fe_cleanse_border_worlds    
+			}
+		}
+	}
+
+	option = {									# wg_ae_domination    
+		NAME = wg_ae_domination    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = yes
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_ae_domination    
+			}
+		}
+	}
+
+	option = {									# wg_end_threat_ae    
+		NAME = wg_end_threat_ae    
+		trigger = {
+				has_global_flag = showing_FE_wg
+		}
+		allow = {
+			from = {
+				is_fallen_empire = no
+			}
+			event_target:target_country = {
+				is_fallen_empire = yes
+			}
+		}
+		from = {
+			declare_war = {
+				target = event_target:target_country
+				attacker_war_goal = wg_end_threat_ae    
+			}
+		}
+	}
+	
+
+	option = {
 		NAME = Exit
 	}
 }

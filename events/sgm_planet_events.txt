@@ -73,6 +73,38 @@ country_event = {						# planet event menu
 			}
 		}
 	}
+	option = {
+		allow = {
+			from = {
+				NOR = {
+					is_point_of_interest = { id = gm_poi.1 event_chain = gm_poi owner = root }
+					is_point_of_interest = { id = gm_poi.2 event_chain = gm_poi owner = root }
+					is_point_of_interest = { id = gm_poi.3 event_chain = gm_poi owner = root }
+				}
+			}
+		}
+		NAME = create_point_of_interest
+		from = {
+			set_point_of_interest = yes
+		}
+	}
+
+	option = {
+		allow = {
+			from = {
+				OR = {
+					is_point_of_interest = { id = gm_poi.1 event_chain = gm_poi owner = root }
+					is_point_of_interest = { id = gm_poi.2 event_chain = gm_poi owner = root }
+					is_point_of_interest = { id = gm_poi.3 event_chain = gm_poi owner = root }
+				}
+			}
+		}
+		
+		NAME = remove_point_of_interest
+		from = {
+			delete_point_of_interest = yes
+		}
+	}
 
 	option = {
 		NAME = set_owner_target_country
@@ -556,6 +588,7 @@ country_event = {							# add districts menu
 	option = {								# add district_hab_cultural       
 		NAME = district_hab_cultural        
 		allow = {
+			exists = owner
 			from = {
 				uses_district_set = habitat
 				owner = {

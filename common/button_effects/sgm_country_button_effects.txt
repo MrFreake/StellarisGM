@@ -10,8 +10,10 @@ sgm_country_effects = {
 		root = {
 			log = "[This.GetName]"
 		}
-		country_event = {
-			id = sgm_country.1
+		from = {
+			country_event = {
+				id = sgm_country.1
+			}
 		}
 	}
 }
@@ -42,10 +44,9 @@ sgm_positive_relations_with_target = {
 sgm_negative_relations_with_target = {
 	potential = {
 		is_gm = yes
+		exists = event_target:target_country
 	}
 	allow = {
-		always = yes
-		exists = event_target:target_country
 		NOT = {
 			event_target:target_country = {
 				is_same_value = root
@@ -77,13 +78,16 @@ sgm_declare_war_with_target = {
 				is_same_value = root
 			}
 		}
-
 	}
 
 	effect = {
-		declare_war = {
-			target = event_target:target_country
-			attacker_war_goal = wg_conquest 
+		from = {
+			country_event = {
+				id = sgm_country.2
+				scopes = {
+					from = prev
+				}
+			}
 		}
 	}
 }
@@ -124,7 +128,6 @@ sgm_switch_player_to_country = {
 		exists = event_target:target_country
 	}
 	allow = {
-		
 		event_target:target_country = {
 			is_ai = yes
 			NOT = { is_same_value = root } 

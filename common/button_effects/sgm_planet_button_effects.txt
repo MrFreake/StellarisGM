@@ -329,13 +329,31 @@ sgm_add_l_gate = {
 	potential = {
 		is_gm = yes
 	}
-
+	allow = {
+		NOT = {
+			solar_system = {
+				has_star_flag = lgate
+			}
+		}
+	}
 	effect = {
 		solar_system = {
 			spawn_megastructure = {
 				type = lgate_base
 				orbit_angle = 225
 				orbit_distance = 30
+			}
+			set_star_flag = lgate
+			if = {
+				limit = {
+					has_global_flag = l_cluster_opened
+				}
+				random_system_megastructure = {
+					limit = {
+						is_megastructure_type = lgate_base
+					}
+					activate_gateway = this
+				}
 			}
 		}
 	}
@@ -369,6 +387,23 @@ sgm_add_anomaly = {
 		from = {
 			country_event = {
 				id = sgm_planets.55
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_begin_event_chain = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_event_chains.1
 				scopes = {
 					from = prev
 				}

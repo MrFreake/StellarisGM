@@ -90,27 +90,138 @@ country_event = {
 		}
 	}
 
-	option = {
-		NAME = spawn_unbidden
-		allow = {}
-	}
-
+	# end game events
 	option = {
 		NAME = spawn_prethoryn_swarm
 		allow = {}
+		country_event = { id = crisis.10 }
+		from = {
+			country_event = { id = crisis.11 }
+			every_country = {
+				establish_communications_no_message = prev
+			}
+		}
 	}
+
+	option = {
+		NAME = spawn_unbidden
+		allow = {}
+		country_event = { id = crisis.1000 }
+		from = { 
+			country_event = { id = crisis.1007 }
+			every_country = {
+				establish_communications_no_message = prev
+			}
+		}
+	}
+
 
 	option = {
 		NAME = spawn_contingency
 		allow = {}
+		country_event = { id = crisis.2005 }
+		from = { 
+			country_event = { id = crisis.2010 }
+			every_country = {
+				establish_communications_no_message = prev
+			}
+		}
 	}
-
 
 	option = {
-		NAME = spawn_contingency
-		allow = {}
+		NAME = awaken_fallen_empire
+		allow = {
+			OR = {
+				AND = {
+					exists = event_target:target_country
+					event_target:target_country = {
+						is_country_type = fallen_empire
+					}
+				}
+				any_country = {
+					is_country_type = fallen_empire
+				}
+			}
+		}
+		if = {
+			limit = {
+				NAND = {
+					exists = event_target:target_country
+					event_target:target_country = {	is_country_type = fallen_empire }
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+				}
+				save_global_event_target_as = target_country
+			}
+		}
+		event_target:target_country = {
+			country_event = { id = fallen_empires_awakening.3 }
+		}
+		from = { 
+			country_event = { id = fallen_empires_awakening.2 }
+			every_country = {
+				establish_communications_no_message = prev
+			}
+		}
 	}
 
+	option = {
+		NAME = trigger_war_in_heaven
+		allow = {
+			#host_has_dlc = "Leviathans Story Pack"
+			OR = {
+				count_country = {
+					count > 1
+					limit = {
+						is_country_type = fallen_empire
+					}
+				}
+				exists = event_target:target_country
+				event_target:target_country = {
+					is_country_type = fallen_empire
+				}
+			}
+		}
+		random_country = { 
+			limit = {
+				is_country_type = awakened_fallen_empire
+			}
+			set_country_flag = sleepers_awake_ancient_rival
+			set_timed_country_flag = { flag = timed_ancient_rival days = 100 }
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				set_timed_country_flag = { flag = ai_no_wars days = 100 }
+			}						
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = event_target:target_country
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+				}
+				country_event = {
+					id = war_in_heaven.1
+				}
+			}
+		}
+		else = {
+			event_target:target_country = {
+					country_event = {
+						id = war_in_heaven.1
+					}
+			}
+		}
+	}
+	
 	option = {
 		NAME = Exit
 	}
@@ -478,7 +589,7 @@ country_event = {													# Spectral Wraith
 	}
 }	
 
-country_event = {
+country_event = {								# open L gates/spawn L cluster
 	id = sgm_galactic_events.52
 	is_triggered_only = yes
 	title = sgm_galactic_events_52_title
@@ -538,5 +649,3 @@ country_event = {
 	}
 }
 
-
-# late game events

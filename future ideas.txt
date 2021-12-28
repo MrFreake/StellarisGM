@@ -1,0 +1,22 @@
+#Target Where the Crisis spawn
+#form Federations levels/laws
+#Open/Close borders
+#Subjugation stuff
+#spawn systems
+#copy technologies
+#summary income/techs for GM
+#intel levels for gm
+#add bounty to player
+#	ships
+#	planets
+#	capital
+#	complete destruction
+#add communications with all
+#add communications with target
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+gm_poi = {
+	counter = {
+		test_counter = {
+			max = 20
+		}
+	}
+}

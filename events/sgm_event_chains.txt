@@ -1,0 +1,293 @@
+namespace = sgm_event_chains
+
+country_event = {
+	id = sgm_event_chains.1
+	is_triggered_only = yes
+	title = sgm_event_chains_1_title
+	desc = sgm_event_chains_1_desc
+
+	immediate = {}
+
+	option = {
+		NAME = colony.1.name
+		allow = {
+			from = {
+				has_owner = yes
+				is_homeworld = no
+				original_owner = yes
+				#is_ai = no
+				has_ground_combat = no
+				is_capital = no
+				is_occupied_flag = no
+				owner = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+				num_pops > 0
+				OR = {
+					is_planet_class = pc_continental
+					is_planet_class = pc_tropical
+					is_planet_class = pc_arid
+					is_planet_class = pc_tundra
+					is_planet_class = pc_savannah
+				}
+			}
+		}
+		from = {
+			set_planet_flag = colony_event
+			add_deposit = d_migrating_forests
+			add_modifier = {
+				modifier = "migrating_forests"
+				days = -1
+			}
+			tooltip = {
+				add_deposit = d_migrating_forests
+			}
+			begin_event_chain = {
+				event_chain = "migrating_forests_chain"
+				target = ROOT
+			}
+			enable_special_project = {
+				name = "MIGRATING_FORESTS_1_PROJECT"
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = "MIGRATING_FORESTS_2_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		NAME = colony.50.name
+		allow = {
+			from = {
+			#	is_ai = no
+				has_owner = yes
+				is_homeworld = no
+				original_owner = yes
+				has_ground_combat = no
+				is_capital = no
+				is_occupied_flag = no
+				num_pops > 0
+				NOR = {
+					#has_global_flag = seismic_disturbance_global
+					#has_planet_flag = colony_event
+					is_planet_class = pc_nuked
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_habitat
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					owner = { is_homicidal = yes }
+				}			
+			}
+		}
+		from = {
+			owner = { save_event_target_as = subterranean_planet_owner }
+			set_global_flag = seismic_disturbance_global
+			set_planet_flag = seismic_disturbance
+			set_planet_flag = colony_event
+			add_deposit = d_underground_farm_blocked
+			add_deposit = d_underground_mine_blocked
+			add_deposit = d_underground_generator_blocked
+			create_subterranean_nation = yes
+			begin_event_chain = {
+				event_chain = "subterranean_civilization_chain"
+				target = this.owner
+			}
+			enable_special_project = {
+				name = "SEISMIC_DISTURBANCE_1_PROJECT" #Establish Communications
+				location = this
+				owner = this.owner
+			}
+			enable_special_project = {
+				name = "SEISMIC_DISTURBANCE_2_PROJECT" #Preemptive Strike
+				location = this
+				owner = this.owner
+			}
+		}
+	}
+	option = {
+		NAME = colony.100.name
+		allow = {
+			from = {
+				has_owner = yes
+				is_homeworld = no
+				original_owner = yes
+				#is_ai = no
+				has_ground_combat = no
+				is_capital = no
+				is_occupied_flag = no
+				num_pops > 0
+				habitable_planet = yes
+				uses_district_set = standard
+				NOR = {
+					has_planet_flag = abandoned_terraforming_planet
+					#has_planet_flag = colony_event
+					is_planet_class = pc_nuked
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					#owner = { has_country_flag = abandoned_terraforming_country }
+					owner = { has_authority = auth_machine_intelligence }
+					AND = {
+						owner = { ideal_planet_class = pc_arid }
+						is_planet_class = pc_arid
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_desert }
+						is_planet_class = pc_desert
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_tropical }
+						is_planet_class = pc_tropical
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_continental }
+						is_planet_class = pc_continental
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_ocean }
+						is_planet_class = pc_ocean
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_tundra }
+						is_planet_class = pc_tundra
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_arctic }
+						is_planet_class = pc_arctic
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_alpine }
+						is_planet_class = pc_alpine
+					}
+					AND = {
+						owner = { ideal_planet_class = pc_savannah }
+						is_planet_class = pc_savannah
+					}
+				}
+			}
+		}
+		from = {
+			hidden_effect = {
+				add_modifier = {
+					modifier = "abandoned_terraforming"
+					days = -1
+				}
+			}
+			begin_event_chain = {
+				event_chain = "abandoned_terraforming_chain"
+				target = from.owner
+			}
+			enable_special_project = {
+				name = "ABANDONED_TERRAFORMING_1_PROJECT"
+				location = this
+				owner = from.owner
+			}
+			enable_special_project = {
+				name = "ABANDONED_TERRAFORMING_2_PROJECT"
+				location = this
+				owner = from.owner
+			}
+		}
+	}
+	option = {
+		NAME = colony.180.name
+		allow = {
+			from = {
+				has_owner = yes
+				is_homeworld = no
+				original_owner = yes
+				#is_ai = no
+				has_ground_combat = no
+				is_capital = no
+				is_occupied_flag = no
+				num_pops > 0
+				#years_passed < 50
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_habitable
+					has_planet_flag = asteroid_sighted
+					has_planet_flag = asteroid_collision
+					#has_global_flag = asteroid_sighted_global
+					owner = { has_country_flag = asteroid_sighted_country }
+				}
+			}
+		}
+		from = {
+			owner = {
+				set_country_flag = asteroid_sighted_country
+			}
+			#set_global_flag = asteroid_sighted_global
+			set_planet_flag = asteroid_sighted
+			create_country = {
+				name = "NAME_Incoming_Asteroid"
+				type = faction
+				auto_delete = no
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					establish_communications_no_message = from.owner
+				}
+			}
+			last_created_country = {
+				set_country_flag = incoming_asteroid
+				create_fleet = {
+					name = "NAME_Asteroid"
+					effect = {
+						set_aggro_range = 0
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_owner = PREV
+						set_fleet_flag = asteroid_fleet
+						save_event_target_as = asteroid_fleet_target
+						create_ship = {
+							name = "NAME_Asteroid"
+							design = "NAME_Asteroid"
+						}
+						set_location = {
+							target = from
+							distance = 75
+							angle = random
+						}
+						queue_actions = {
+							move_to = from
+							effect = {
+								id = "colony.180.effect.1"
+								from.owner = {
+									planet_event = { id = colony.183 }
+								}
+							}
+						}
+					}
+				}
+				set_relation_flag = {
+					who = from.owner
+					flag = asteroid_enemy
+				}
+			}
+			begin_event_chain = {
+				event_chain = "asteroid_sighted_chain"
+				target = from.owner
+			}
+		}
+	}
+
+	option = {
+		NAME = Exit
+	}
+}

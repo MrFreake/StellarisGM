@@ -18,6 +18,7 @@ sgm_play_as_owner = {
 		owner = {
 			set_player = from
 			set_country_flag = sgm_assumed_control
+			#set_country_flag = from@from
 			#set_country_flag = sgm_assumed_controlfrom@prev
 		}
 	}	
@@ -25,30 +26,89 @@ sgm_play_as_owner = {
 
 sgm_return_to_gm = {
 	potential = {
-		exists = owner
-		is_gm = yes
-		#from = {
-		#		is_same_value = prev.owner
+		#OR = {
+			AND = {
+				exists = owner
+				is_gm = yes
+				#from = {
+				#		is_same_value = prev.owner
+				#}
+				owner = {
+					has_country_flag = sgm_assumed_control
+				}
+			}
+			#any_country = {
+			#	count = all
+			#	is_gm = no
+			#} 
 		#}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		log = "main.gui This - [This.GetName]"
+		random_country = {
+			limit = {
+				is_country_type = sgm_game_master
+				is_ai = yes
+				#root = { has_country_flag = from@prev } 
+				#jprev.owner = { has_country_flag = sgm_assumed_controlfrom@prevprev }
+			}
+			set_player = root
+			#prev.owner = { remove_country_flag = sgm_assumed_controlfrom@prevprev }
+		}
 		owner = {
-			has_country_flag = sgm_assumed_control
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				remove_country_flag = sgm_assumed_control
+			}
+		}
+	}	
+}
+
+sgm_no_gm_exists = {
+	potential = {
+		count_country = {
+			count < 1
+			limit = {
+				OR = {
+					AND = {
+						is_country_type = sgm_game_master
+						is_ai = yes
+					}
+					AND = {
+						has_country_flag = sgm_assumed_control
+						is_ai = yes
+					}
+				}
+			}
 		}
 	}
 	allow = {
 		always = yes
 	}
 	effect = {
-		owner = {
-			remove_country_flag = sgm_assumed_control
-		}
+		log = "main.gui This - [This.GetName]"
 		random_country = {
 			limit = {
 				is_country_type = sgm_game_master
-				is_ai = no
+				is_ai = yes
+				#root = { has_country_flag = from@prev } 
 				#jprev.owner = { has_country_flag = sgm_assumed_controlfrom@prevprev }
 			}
-			set_player = from
+			set_player = root
 			#prev.owner = { remove_country_flag = sgm_assumed_controlfrom@prevprev }
+		}
+		owner = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				remove_country_flag = sgm_assumed_control
+			}
 		}
 	}	
 }

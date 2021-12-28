@@ -1,0 +1,132 @@
+namespace = sgm_events
+
+country_event = {
+	id = sgm_events.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_country_flag = sgm_assumed_control
+			is_country_type = sgm_game_master
+		}
+		is_ai = no
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_ai = yes
+			}
+			set_player = root
+			set_country_flag = sgm_assumed_control
+		}
+	}
+}
+
+country_event = {
+	id = sgm_events.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		exists = FromFrom
+		FromFrom = {
+			is_country_type = sgm_game_master
+		}
+	}
+
+	immediate = {
+		from = {
+			every_system_megastructure = {
+				limit = {
+					owner = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_owner = root
+			}
+		}
+	}
+}
+
+# A Megastructure has begun to be upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+country_event = {
+	id = sgm_events.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_country_type = sgm
+	}
+
+	immediate = {
+		remove_country_flag = built_dyson_sphere
+		remove_country_flag = built_interstellar_assembly_site
+		remove_country_flag = built_mega_art_installation_site
+		remove_country_flag = built_ringworld
+		remove_country_flag = built_sentry_array
+		remove_country_flag = built_spyorb
+		remove_country_flag = built_mega_shipyard_site
+		remove_country_flag = built_strategic_coordination_center_site
+		remove_country_flag = built_mega_art
+		remove_country_flag = built_think_tank
+		remove_country_flag = built_matter_decompressor_site
+	}
+}
+
+namespace = galcom
+
+# Proposal to form the Galactic Community (HIDDEN)
+event = {
+	id = galcom.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = galactic_community_founded
+			has_global_flag = galcom_founding_begun
+		}
+		count_playable_country = { # minimum 3 countries
+			limit = {
+				is_homicidal = no
+			}
+			count >= 3
+		}
+		any_playable_country = {
+			perc_communications_with_playable >= 0.7
+			is_gm = no
+			is_homicidal = no
+			is_gestalt = no
+		}
+	}
+
+	immediate = {
+		set_global_flag = galcom_founding_begun
+		random_playable_country = {
+			limit = {
+				perc_communications_with_playable >= 0.7
+				is_homicidal = no
+				is_gestalt = no
+			}
+			country_event = { id = galcom.2 }
+			every_playable_country = {
+				limit = {
+					NOT = { is_same_value = prev }
+					has_communications = prev
+					is_homicidal = no
+				}
+				country_event = { id = galcom.2 }
+			}
+		}
+		random_country = {
+			limit = { is_country_type = global_event }
+			country_event = { id = galcom.3 days = 360 }
+		}
+	}
+}
