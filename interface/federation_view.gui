@@ -1446,7 +1446,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "federation_law_popup"
 		position = { x=-200 y=-216 }
-		size = { width = 550 height = 500 }
+		size = { width = 600 height = 500 }
 		moveable = yes
 		Orientation = center
 		
@@ -1518,7 +1518,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "vote_breakdown"
 			position = { x=15 y=150 }
-			size = { width = 520 height = 290 }
+			size = { width = 95% height = 290 }
 			
 			background = {
 				name = "breakdown_bg"
@@ -1581,7 +1581,7 @@ guiTypes = {
 				format = right
 				maxWidth = 200
 				maxHeight = 30
-				position = { x = -350 y = 8 }
+				position = { x = -400 y = 8 }
 				orientation = upper_right
 			}
 
@@ -1589,7 +1589,7 @@ guiTypes = {
 				name = "voters_list"
 				position = { x = 15 y = 40 }
 				orientation = upper_left
-				size = { x = 500 y = 240 }
+				size = { x = 550 y = 240 }
 				borderSize = { x = 0 y = 0 }
 				scrollbartype = "standardlistbox_slider"
 				alwaysTransparent = no
@@ -1600,7 +1600,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "federation_law_voter_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 490 height = 50 }
+		size = { width = 540 height = 50 }
 		moveable = no
 
 		background = {
@@ -1629,7 +1629,7 @@ guiTypes = {
 		buttonType = {
 			name = "decrease_favors"
 			quadTextureSprite = "GFX_button_left"
-			position = { x = -250 y = 0 }
+			position = { x = -300 y = 0 }
 			clicksound = "click"
 			pdx_tooltip = "DECREASE_FAVOR_TOOLTIP"
 			orientation = upper_right
@@ -1638,7 +1638,7 @@ guiTypes = {
 		buttonType = {
 			name = "increase_favors"
 			quadTextureSprite = "GFX_button_right"
-			position = { x = -150 y = 0 }
+			position = { x = -200 y = 0 }
 			clicksound = "click"
 			pdx_tooltip = "INCREASE_FAVOR_TOOLTIP"
 			orientation = upper_right
@@ -1647,7 +1647,7 @@ guiTypes = {
 		instantTextBoxType={
 			name = "favors_amount"
 			font = "cg_16b"
-			position = { x = -210 y = 11 }
+			position = { x = -260 y = 11 }
 			maxWidth = 60
 			maxHeight = 20
 			fixedSize = yes
@@ -1663,7 +1663,7 @@ guiTypes = {
 			format = right
 			maxWidth = 50
 			maxHeight = 30
-			position = { x = -120 y = 17 }
+			position = { x = -135 y = 17 }
 			#alwaysTransparent = yes
 			orientation = upper_right
 		}
@@ -1671,7 +1671,7 @@ guiTypes = {
 		iconType = {
 			name = "acceptance_icon"
 			quadTextureSprite = "GFX_alliance_vote_status"
-			position = { x = -50 y = 5  }
+			position = { x = -65 y = 5  }
 			orientation = upper_right
 		}
 	}
