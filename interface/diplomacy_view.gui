@@ -1305,24 +1305,26 @@ guiTypes = {
 			}
 			effectbuttonType = {					# target 
 			name = sgm_set_target
-			quadTextureSprite = "GFX_fleetview_focus"
+			quadTextureSprite = "GFX_target_country"
 			position = { x = 756 y = 12 }
 			scale = 1
 			#buttonFont = malgun_goth_24
 			#buttonText = sgm_target_planet
 			orientation = UPPER_LEFT
 			effect = sgm_set_target
+			pdx_tooltip = "Set as target country"
 #			shortCut = j
 		}
 		effectbuttonType = {					# remove target 
 			name = sgm_unset_target
-			quadTextureSprite = "GFX_fleetview_destroy_fleet"
+			quadTextureSprite = "GFX_untarget_country"
 			position = { x = 756 y = 12 }
 			scale = 1
 			#buttonFont = malgun_goth_24
 			#buttonText = sgm_target_planet
 			orientation = UPPER_LEFT
 			effect = sgm_unset_target
+			pdx_tooltip = "Unset target country"
 #			shortCut = j
 		}
 		dropDownBoxType = {								## This controls the SGM Popout
@@ -1333,18 +1335,18 @@ guiTypes = {
 			expandButton = {
 				name = "expand_button"
 				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_button_right"
-				pdx_tooltip = "A very short tooltip that might turn out to be very long. Everything is relative"
+				quadTextureSprite = "GFX_open_gm_menu"
+				pdx_tooltip = "Open GM Menu"
 				pdx_tooltip_delayed = "Will pop up later"
 			}
 			expandedWindow = {
 				name = "expanded_window"
-				position = { x = 0 y = 0 }
-				show_position = { x = 205 y = -4 }
+				position = { x = -100 y = -100 }
+				show_position = { x = 204 y = -2 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 200
-				size = { width = 200 height = 270 }
+				size = { width = 350 height = 624 }
 				verticalScrollbar = "right_vertical_slider"
 				#priority = 100
 				defaultSelection = yes
@@ -1360,10 +1362,22 @@ guiTypes = {
 						name = "bg"
 						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 					}
+					# left column
+					instantTextBoxType = {
+						name = "COUNTRY_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 2 y = 2 }
+						text = "COUNTRY_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = no
+						format = center
+						orientation = UPPER_LEFT
+					}
 					effectbuttonType = {					
 						name = sgm_country_effects
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 2 }
+						position = { x = 2 y = 39 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_country_effects
@@ -1371,11 +1385,24 @@ guiTypes = {
 						effect = sgm_country_effects
 			#			shortCut = j
 					}
+					# left column
+					instantTextBoxType = {
+						name = "TARGET_COUNTRY_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 148 y = 2 }
+						text = "TARGET_COUNTRY_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}					
+
 
 					effectbuttonType = {					
 						name = sgm_positive_relations_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 39 }
+						position = { x = 148 y = 39 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_positive_relations_with_target
@@ -1387,7 +1414,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_negative_relations_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 76 }
+						position = { x = 148 y = 76 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_negative_relations_with_target
@@ -1399,7 +1426,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_declare_war_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 113 }
+						position = { x = 148 y = 113 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_declare_war_with_target
@@ -1411,7 +1438,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_force_peace_with_target
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 113 }
+						position = { x = 148 y = 113 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_force_peace_with_target
@@ -1422,7 +1449,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_play_as_owner
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 150 }
+						position = { x = 148 y = 150 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_play_as_owner
@@ -1433,7 +1460,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_return_to_gm
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 150 }
+						position = { x = 148 y = 150 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_return_to_gm
@@ -1444,7 +1471,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_switch_player_to_country
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 187 }
+						position = { x = 148 y = 187 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_switch_player_to_country

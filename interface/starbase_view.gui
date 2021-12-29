@@ -779,8 +779,8 @@ guiTypes = {
 			expandButton = {
 				name = "expand_button"
 				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_button_right"
-				pdx_tooltip = "A very short tooltip that might turn out to be very long. Everything is relative"
+				quadTextureSprite = "GFX_open_gm_menu"
+				pdx_tooltip = "Open GM Menu"
 				pdx_tooltip_delayed = "Will pop up later"
 			}
 			expandedWindow = {

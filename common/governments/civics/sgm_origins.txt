@@ -1,7 +1,7 @@
 origin_game_master = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_default.dds"
-	picture = GFX_evt_metropolis
+	icon = "gfx/event_pictures/origins/origin_gm.dds"
+	picture = GFX_evt_origin_gm
 
 	potential = {
 		always = yes

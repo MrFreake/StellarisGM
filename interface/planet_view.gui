@@ -130,7 +130,7 @@ guiTypes = {
 			#}
 			effectbuttonType = {					# target 
 				name = sgm_target_planet
-				quadTextureSprite = "GFX_fleetview_focus"
+				quadTextureSprite = "GFX_target_country"
 				position = { x = -68 y = 4 }
 				scale = 1
 				#buttonFont = malgun_goth_24
@@ -138,10 +138,11 @@ guiTypes = {
 				orientation = UPPER_LEFT
 				effect = sgm_set_target
 	#			shortCut = j
+				pdx_tooltip = "Set as target planet"
 			}
 			effectbuttonType = {					# remove target 
 				name = sgm_unset_target
-				quadTextureSprite = "GFX_fleetview_destroy_fleet"
+				quadTextureSprite = "GFX_untarget_country"
 				position = { x = -68 y = 4 }
 				scale = 1
 				#buttonFont = malgun_goth_24
@@ -149,6 +150,7 @@ guiTypes = {
 				orientation = UPPER_LEFT
 				effect = sgm_unset_target
 	#			shortCut = j
+				pdx_tooltip = "Unset target planet"
 			}
 			dropDownBoxType = {								## This controls the SGM Popout
 				name = "sgm_dropdown"
@@ -157,8 +159,8 @@ guiTypes = {
 				expandButton = {
 					name = "expand_button"
 					position = { x = 0 y = 0 }
-					quadTextureSprite = "GFX_button_right"
-					pdx_tooltip = "A very short tooltip that might turn out to be very long. Everything is relative"
+					quadTextureSprite = "GFX_open_gm_menu"
+					pdx_tooltip = "Open GM Menu"
 					pdx_tooltip_delayed = "Will pop up later"
 				}
 				expandedWindow = {
@@ -168,7 +170,7 @@ guiTypes = {
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 200
-					size = { width = 500 height = 500 }
+					size = { width = 478 height = 631 }
 					verticalScrollbar = "right_vertical_slider"
 					#priority = 100
 					defaultSelection = yes
@@ -196,10 +198,10 @@ guiTypes = {
 							format = center
 							orientation = UPPER_LEFT
 						}
-						effectbuttonType = {					# change to planet
+						effectbuttonType = {					# planet events - planet effects
 							name = sgm_planet_effects
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 2 }
+							position = { x = 2 y = 39 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_planet_effects
@@ -211,7 +213,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_add_dig_site
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 39 }
+							position = { x = 2 y = 76 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_add_dig_site
@@ -219,101 +221,11 @@ guiTypes = {
 							effect = sgm_add_dig_site
 				#			shortCut = j
 						}
-			
-						effectbuttonType = {					
-							name = sgm_add_anomaly
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 76 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_add_anomaly
-							orientation = UPPER_LEFT
-							effect = sgm_add_anomaly
-				#			shortCut = j
-						}
-			
-						effectbuttonType = {					
-							name = sgm_add_district
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 113 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_add_district
-							orientation = UPPER_LEFT
-							effect = sgm_add_district
-				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_begin_event_chain
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 150 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_begin_event_chain
-							orientation = UPPER_LEFT
-							effect = sgm_begin_event_chain
-				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_play_as_owner
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 187 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_play_as_owner
-							orientation = UPPER_LEFT
-							effect = sgm_play_as_owner
-				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_return_to_gm
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 187 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_return_to_gm
-							orientation = UPPER_LEFT
-							effect = sgm_return_to_gm
-				#			shortCut = j
-						}
 
-						effectbuttonType = {					
-							name = sgm_create_colony
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 224 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_create_colony
-							orientation = UPPER_LEFT
-							effect = sgm_create_colony
-				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_unsurvey_system
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 261 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_unsurvey_system
-							orientation = UPPER_LEFT
-							effect = sgm_unsurvey_system
-				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_survey_system
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 261 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_survey_system
-							orientation = UPPER_LEFT
-							effect = sgm_survey_system
-				#			shortCut = j
-						}
 						effectbuttonType = {					
 							name = sgm_generate_early_primitives
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 298 }
+							position = { x = 2 y = 113 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_generate_early_primitives
@@ -324,7 +236,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_generate_late_primitives
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 335 }
+							position = { x = 2 y = 150 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_generate_late_primitives
@@ -333,17 +245,86 @@ guiTypes = {
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_grow_pop
+							name = sgm_change_planet_class
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 187 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_change_planet_class
+							orientation = UPPER_LEFT
+							effect = sgm_change_planet_class
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_increase_planet_size
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 224 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_increase_planet_size
+							orientation = UPPER_LEFT
+							effect = sgm_increase_planet_size
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_decrease_planet_size
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 261 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_decrease_planet_size
+							orientation = UPPER_LEFT
+							effect = sgm_decrease_planet_size
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_planet
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 298 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_reroll_planet
+							orientation = UPPER_LEFT
+							effect = sgm_reroll_planet
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_deposits
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 335 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_reroll_deposits
+							orientation = UPPER_LEFT
+							effect = sgm_reroll_deposits
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_reroll_modifiers
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 2 y = 372 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_grow_pop
+							buttonText = sgm_reroll_modifiers
 							orientation = UPPER_LEFT
-							effect = sgm_grow_pop
+							effect = sgm_reroll_modifiers
 				#			shortCut = j
-						}						
+						}
+
+						effectbuttonType = {					
+							name = sgm_crack_planet
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 446 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_crack_planet
+							orientation = UPPER_LEFT
+							effect = sgm_crack_planet
+				#			shortCut = j
+						}
+			
 						## Middle Column
+
 						instantTextBoxType = {
 							name = "COUNTRY_EFFECTS"
 							font = "malgun_goth_24"
@@ -356,83 +337,105 @@ guiTypes = {
 							orientation = UPPER_LEFT
 						}
 						effectbuttonType = {					
-							name = sgm_change_planet_class
+							name = sgm_create_colony
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 148 y = 2 }
+							position = { x = 148 y = 39 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_change_planet_class
+							buttonText = sgm_create_colony
 							orientation = UPPER_LEFT
-							effect = sgm_change_planet_class
+							effect = sgm_create_colony
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_increase_planet_size
+							name = sgm_add_district
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 148 y = 76 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_increase_planet_size
+							buttonText = sgm_add_district
 							orientation = UPPER_LEFT
-							effect = sgm_increase_planet_size
+							effect = sgm_add_district
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_decrease_planet_size
+							name = sgm_add_anomaly
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 148 y = 113 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_decrease_planet_size
+							buttonText = sgm_add_anomaly
 							orientation = UPPER_LEFT
-							effect = sgm_decrease_planet_size
+							effect = sgm_add_anomaly
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_reroll_planet
+							name = sgm_begin_event_chain
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 148 y = 150 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_reroll_planet
+							buttonText = sgm_begin_event_chain
 							orientation = UPPER_LEFT
-							effect = sgm_reroll_planet
+							effect = sgm_begin_event_chain
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_reroll_deposits
+							name = sgm_play_as_owner
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 148 y = 187 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_reroll_deposits
+							buttonText = sgm_play_as_owner
 							orientation = UPPER_LEFT
-							effect = sgm_reroll_deposits
+							effect = sgm_play_as_owner
 				#			shortCut = j
 						}
 						effectbuttonType = {					
-							name = sgm_reroll_modifiers
+							name = sgm_return_to_gm
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 187 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_return_to_gm
+							orientation = UPPER_LEFT
+							effect = sgm_return_to_gm
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_unsurvey_system
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 148 y = 224 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_reroll_modifiers
+							buttonText = sgm_unsurvey_system
 							orientation = UPPER_LEFT
-							effect = sgm_reroll_modifiers
+							effect = sgm_unsurvey_system
 				#			shortCut = j
 						}
-
 						effectbuttonType = {					
-							name = sgm_crack_planet
+							name = sgm_survey_system
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 148 y = 261}
+							position = { x = 148 y = 224 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_crack_planet
+							buttonText = sgm_survey_system
 							orientation = UPPER_LEFT
-							effect = sgm_crack_planet
+							effect = sgm_survey_system
 				#			shortCut = j
 						}
+						effectbuttonType = {					
+							name = sgm_grow_pop
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 261 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_grow_pop
+							orientation = UPPER_LEFT
+							effect = sgm_grow_pop
+				#			shortCut = j
+						}	
+
 						# right column
 						instantTextBoxType = {
 							name = "SYSTEM_EFFECTS"
@@ -448,7 +451,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_create_hostiles
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 2 }
+							position = { x = 294 y = 39 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_create_hostiles
@@ -459,7 +462,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_add_hyperlane
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 39 }
+							position = { x = 294 y = 76 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_add_hyperlane
@@ -470,7 +473,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_remove_hyperlane
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 39 }
+							position = { x = 294 y = 76 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_remove_hyperlane
@@ -481,7 +484,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_remove_all_hyperlanes
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 76 }
+							position = { x = 294 y = 113 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_remove_all_hyperlanes
@@ -492,7 +495,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_add_wormhole
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 113 }
+							position = { x = 294 y = 150 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_add_wormhole
@@ -503,7 +506,7 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_add_l_gate
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 150 }
+							position = { x = 294 y = 187 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_add_l_gate
