@@ -412,3 +412,56 @@ sgm_begin_event_chain = {
 	}
 }
 
+# Initial stubbing AA
+sgm_open_branch_office = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+	
+	}
+}
+
+sgm_close_branch_office = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+	
+	}
+}
+
+sgm_add_devastation = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+	
+	}
+}
+
+sgm_destroy_colony = {
+	# May be a good idea to implement an Are You Sure? for something like this
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+	
+	}
+}
+
+sgm_add_colonising_progress = {
+	# Needs more research as a planet in the process of being colonised might have
+	# unexpected ownership issues
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+	
+	}
+}
