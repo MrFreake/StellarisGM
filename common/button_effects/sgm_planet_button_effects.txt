@@ -486,3 +486,20 @@ sgm_add_colonising_progress = {
 		add_colony_progress = 0.1
 	}
 }
+sgm_add_planet_modifier = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planet_modifiers.1
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+}
+}
