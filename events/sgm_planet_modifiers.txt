@@ -5,6 +5,7 @@ country_event = {								# requires passing the planet scope as from
 	is_triggered_only = yes
 	title = sgm_planet_modifiers_1
 	desc = sgm_planet_modifiers_1_desc
+	picture = GFX_planet_view_planet
 
 	immediate = {
 		if = {

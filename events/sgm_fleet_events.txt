@@ -5,6 +5,7 @@ country_event = {								# Opens fleet menu
 	is_triggered_only = yes
 	title = sgm_fleet_1_title
 	desc = sgm_fleet_1_desc
+	picture = GFX_evt_ship_in_orbit
 
 	trigger = {
 		exists = root
