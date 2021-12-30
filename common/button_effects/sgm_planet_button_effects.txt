@@ -92,7 +92,7 @@ sgm_create_colony = {
 
 sgm_increase_planet_size = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	allow = {
 		planet_size < 25
@@ -118,7 +118,7 @@ sgm_decrease_planet_size = {
 
 sgm_reroll_modifiers = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	allow = {
 		num_pops < 1
@@ -129,7 +129,7 @@ sgm_reroll_modifiers = {
 }
 sgm_reroll_deposits = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	allow = {
 		num_pops < 1
@@ -140,7 +140,7 @@ sgm_reroll_deposits = {
 }
 sgm_reroll_planet = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	allow = {
 		num_pops < 1
@@ -152,7 +152,7 @@ sgm_reroll_planet = {
 
 sgm_generate_early_primitives = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	
 	allow = {
@@ -166,7 +166,7 @@ sgm_generate_early_primitives = {
 
 sgm_generate_late_primitives = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	
 	allow = {
@@ -180,7 +180,7 @@ sgm_generate_late_primitives = {
 
 sgm_unsurvey_system = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 		exists = event_target:target_country
 		is_surveyed = { status = yes who = event_target:target_country }
 	}
@@ -312,25 +312,6 @@ sgm_add_wormhole = {
 	}
 }
 
-sgm_add_sealed_wormhole = {
-	potential = {
-		is_gm = yes
-		exists = event_target:target_planet
-	}
-
-	effect = {
-		solar_system = {
-			spawn_natural_wormhole = { bypass_type = sealed_wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
-			event_target:target_planet = {
-				solar_system = {
-					spawn_natural_wormhole = { bypass_type = sealed_wormhole orbit_distance = 100 orbit_angle = 90 random_pos = yes }
-					link_wormholes = prevprev
-				}
-			}
-		}
-	}
-}
-
 sgm_add_l_gate = {
 	potential = {
 		is_gm = yes
@@ -367,7 +348,7 @@ sgm_add_l_gate = {
 
 sgm_add_dig_site = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 	}
 	allow = {
 		is_star = no

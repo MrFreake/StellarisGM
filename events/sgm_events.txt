@@ -60,7 +60,7 @@ country_event = {
 	hide_window = yes
 
 	trigger = {
-		is_country_type = sgm
+		is_country_type = sgm_game_master
 	}
 
 	immediate = {
@@ -78,55 +78,3 @@ country_event = {
 	}
 }
 
-namespace = galcom
-
-# Proposal to form the Galactic Community (HIDDEN)
-event = {
-	id = galcom.1
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOR = {
-			has_global_flag = galactic_community_founded
-			has_global_flag = galcom_founding_begun
-		}
-		count_playable_country = { # minimum 3 countries
-			limit = {
-				is_homicidal = no
-			}
-			count >= 3
-		}
-		any_playable_country = {
-			perc_communications_with_playable >= 0.7
-			is_gm = no
-			is_homicidal = no
-			is_gestalt = no
-		}
-	}
-
-	immediate = {
-		set_global_flag = galcom_founding_begun
-		random_playable_country = {
-			limit = {
-				perc_communications_with_playable >= 0.7
-				is_homicidal = no
-				is_gestalt = no
-			}
-			country_event = { id = galcom.2 }
-			every_playable_country = {
-				limit = {
-					NOT = { is_same_value = prev }
-					has_communications = prev
-					is_homicidal = no
-				}
-				country_event = { id = galcom.2 }
-			}
-		}
-		random_country = {
-			limit = { is_country_type = global_event }
-			country_event = { id = galcom.3 days = 360 }
-		}
-	}
-}

@@ -5,22 +5,18 @@ delete_point_of_interest = {
 			has_point_of_interest = { poi = gm_poi.1 }
 		}
 			root = { remove_point_of_interest = gm_poi.1 }
-			break = yes
 		}
 	else_if = {
 		limit = {
 			has_point_of_interest = { poi = gm_poi.2 }
 		}
 		root = { remove_point_of_interest = gm_poi.2 }
-		break = yes
 		}
 	else_if = {
 		limit = {
 			has_point_of_interest = { poi = gm_poi.3 }
-			break = yes
 		}
 		root = { remove_point_of_interest = gm_poi.3 }
-		break = yes
 	}
 }
 
