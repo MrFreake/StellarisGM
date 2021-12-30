@@ -6,6 +6,7 @@ is_gm = {
             OR = { 
                 is_scope_type = fleet
                 is_scope_type = planet
+                is_scope_type = megastructure
             }
         }
         AND = {                                         # this covers GM switched to other country
@@ -13,6 +14,7 @@ is_gm = {
             OR = { 
                 is_scope_type = fleet
                 is_scope_type = planet
+                is_scope_type = megastructure
             }
         }
         AND = {                                         # this covers the diplo screen (country scope)

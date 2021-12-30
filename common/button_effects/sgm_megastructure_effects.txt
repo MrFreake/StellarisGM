@@ -1,0 +1,25 @@
+sgm_megastructure_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		
+	}
+
+	effect = {
+		
+	}
+}
+
+sgm_set_owner_target_country = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_country
+	}
+
+	effect = {
+		set_owner = event_target:target_country
+	}
+}
