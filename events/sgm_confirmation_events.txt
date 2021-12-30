@@ -21,3 +21,25 @@ country_event = {								# crack planet confirmation
 		NAME = No
 	}
 }
+
+## AA confirmations - ids start at 1000
+country_event = {								# destroy_colony confirmation
+	id = sgm_confirmation.1000					# from = planet
+	is_triggered_only = yes
+	title = destroy_colony_confirmation
+	desc = destroy_colony_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			destroy_colony = yes
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}
