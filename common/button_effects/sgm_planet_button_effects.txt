@@ -7,8 +7,14 @@ sgm_crack_planet = {
 	}
 	
 	effect = {
-		destroy_colony = yes
-		change_pc = pc_shattered
+		from = {
+			country_event = {
+				id = sgm_confirmation.1
+				scopes = {
+					from = prev
+				}
+			}
+		}
 	}
 }
 
@@ -412,10 +418,11 @@ sgm_begin_event_chain = {
 	}
 }
 
-# Initial stubbing AA
+# AA Additions WIP
 sgm_open_branch_office = {
 	potential = {
 		is_gm = yes
+		has_branch_office = no
 	}
 	allow = {}
 	effect = {
@@ -426,6 +433,7 @@ sgm_open_branch_office = {
 sgm_close_branch_office = {
 	potential = {
 		is_gm = yes
+		has_branch_office = yes
 	}
 	allow = {}
 	effect = {
@@ -436,32 +444,45 @@ sgm_close_branch_office = {
 sgm_add_devastation = {
 	potential = {
 		is_gm = yes
+		is_colony = yes
 	}
-	allow = {}
+	allow = {
+		planet_devastation < 100
+	}
 	effect = {
-	
+		add_planet_devastation = 5
 	}
 }
 
 sgm_destroy_colony = {
-	# May be a good idea to implement an Are You Sure? for something like this
 	potential = {
 		is_gm = yes
+		is_colony = yes
 	}
 	allow = {}
 	effect = {
-	
+		# Calls confirmation
+		from = {
+			country_event = {
+				id = sgm_confirmation.1000
+				scopes = {
+					from = prev
+				}
+			}
+		}
 	}
 }
 
 sgm_add_colonising_progress = {
 	# Needs more research as a planet in the process of being colonised might have
 	# unexpected ownership issues
+	# TEST THIS ASH
 	potential = {
 		is_gm = yes
+		is_under_colonization = yes
 	}
 	allow = {}
 	effect = {
-	
+		add_colony_progress = 0.1
 	}
 }

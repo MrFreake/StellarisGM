@@ -1,0 +1,44 @@
+## needs icons and icon names
+## needs localisation
+
+# Assume can be scaled with variable unless noted otherwise
+# Adding the same modifier multiple times is clumsy UX but may be a simpler way to scale
+# Increment amount can change if the defaults do not work out. 5 is better than 1? 0.05 is a better than 0.01?
+# These are non-vanilla modifiers, to avoid triggering events. DO NOT use vanilla modifier IDs.
+# icon frame 3 for penalties, icon frame 1 for bonuses
+
+# Crime
+gm_pm_crime_add = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 3
+	planet_crime_add = 5
+}
+gm_pm_crime_subtract = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 1
+	planet_crime_add = -5
+}
+gm_pm_crime_multiply = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 3
+	planet_crime_mult = 0.05
+}
+gm_pm_crime_divide = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 1
+	planet_crime_mult = -0.05
+}
+
+# Stability
+gm_pm_stability_bonus = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 1
+	planet_stability_add = 5
+}
+gm_pm_stability_penalty = {
+	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon_frame = 3
+	planet_stability_add = -5
+}
+
+### MOAR! ###
