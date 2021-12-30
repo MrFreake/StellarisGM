@@ -7,8 +7,14 @@ sgm_crack_planet = {
 	}
 	
 	effect = {
-		destroy_colony = yes
-		change_pc = pc_shattered
+		from = {
+			country_event = {
+				id = sgm_confirmation.1
+				scopes = {
+					from = prev
+				}
+			}
+		}
 	}
 }
 
