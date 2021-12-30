@@ -1,0 +1,23 @@
+namespace = sgm_confirmation
+
+country_event = {								# crack planet confirmation
+	id = sgm_confirmation.1						# from = planet
+	is_triggered_only = yes
+	title = crack_planet_confirmation
+	desc = crack_planet_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			destroy_colony = yes
+			change_pc = pc_shattered
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}
