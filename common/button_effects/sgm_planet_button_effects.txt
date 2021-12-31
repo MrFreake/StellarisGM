@@ -1,5 +1,9 @@
+# is_scope_type in the potential prevents mis-scoping when multiple non-modal windows open
+# and focus gets misplaced, which happens in Stellaris sometimes
+
 sgm_crack_planet = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -20,6 +24,7 @@ sgm_crack_planet = {
 
 sgm_grow_pop = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -35,6 +40,7 @@ sgm_grow_pop = {
 
 sgm_add_district = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -53,10 +59,9 @@ sgm_add_district = {
 	}
 }
 
-
-
 sgm_change_planet_class = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -76,6 +81,7 @@ sgm_change_planet_class = {
 
 sgm_create_colony = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		num_pops < 1
 	}
@@ -92,6 +98,7 @@ sgm_create_colony = {
 
 sgm_increase_planet_size = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -102,9 +109,9 @@ sgm_increase_planet_size = {
 		change_planet_size = 1
 	}
 }
-
 sgm_decrease_planet_size = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -118,6 +125,7 @@ sgm_decrease_planet_size = {
 
 sgm_reroll_modifiers = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -129,6 +137,7 @@ sgm_reroll_modifiers = {
 }
 sgm_reroll_deposits = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -140,6 +149,7 @@ sgm_reroll_deposits = {
 }
 sgm_reroll_planet = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -152,6 +162,7 @@ sgm_reroll_planet = {
 
 sgm_generate_early_primitives = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	
@@ -163,9 +174,9 @@ sgm_generate_early_primitives = {
 		generate_early_primitives_on_planet = yes
 	}
 }
-
 sgm_generate_late_primitives = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	
@@ -174,12 +185,14 @@ sgm_generate_late_primitives = {
 		is_colonizable = yes
 	}
 	effect = {
+		# AA - OI ASH! Check to see if equivalent available for late
 		generate_early_primitives_on_planet = yes
 	}
 }
 
 sgm_unsurvey_system = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		exists = event_target:target_country
 		is_surveyed = { status = yes who = event_target:target_country }
@@ -194,9 +207,9 @@ sgm_unsurvey_system = {
 		}
 	}
 }
-
 sgm_survey_system = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		exists = event_target:target_country
 		is_surveyed = { status = no who = event_target:target_country }
@@ -214,6 +227,7 @@ sgm_survey_system = {
 
 sgm_create_hostiles = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	
@@ -234,6 +248,7 @@ sgm_create_hostiles = {
 
 sgm_add_hyperlane = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		exists = event_target:target_planet
 		NOT = {
@@ -254,6 +269,7 @@ sgm_add_hyperlane = {
 }
 sgm_remove_hyperlane = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		exists = event_target:target_planet
 		solar_system = { has_hyperlane_to = event_target:target_planet.solar_system }  
@@ -270,9 +286,9 @@ sgm_remove_hyperlane = {
 		}
 	}
 }
-
 sgm_remove_all_hyperlanes = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	
@@ -295,6 +311,7 @@ sgm_remove_all_hyperlanes = {
 
 sgm_add_wormhole = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		exists = event_target:target_planet
 	}
@@ -314,6 +331,7 @@ sgm_add_wormhole = {
 
 sgm_add_l_gate = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -348,6 +366,7 @@ sgm_add_l_gate = {
 
 sgm_add_dig_site = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {
@@ -367,6 +386,7 @@ sgm_add_dig_site = {
 
 sgm_add_anomaly = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {}
@@ -384,6 +404,7 @@ sgm_add_anomaly = {
 
 sgm_begin_event_chain = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {}
@@ -399,31 +420,44 @@ sgm_begin_event_chain = {
 	}
 }
 
-# AA Additions WIP
+# AA
+# No corporate check, since branch offices still have energy value
+# and having a non-criminal heritage branch office open on a colony
+# benefits that colony since a criminal heritage cannot then open one
+# May need a DLC check though MrFreake?
 sgm_open_branch_office = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		has_branch_office = no
 	}
-	allow = {}
+	allow = {
+		exists = event_target:target_country
+	}
 	effect = {
-	
+		establish_branch_office = event_target:target_country
 	}
 }
 
 sgm_close_branch_office = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		has_branch_office = yes
 	}
-	allow = {}
+	allow = {
+		exists = branch_office_owner
+	}
 	effect = {
-	
+		set_planet_flag = criminal_branch_closed_cooldown_planet@branch_office_owner
+		branch_office_owner = { country_event = { id = crime.1002 }}
+		close_branch_office = yes
 	}
 }
 
 sgm_add_devastation = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		is_colony = yes
 	}
@@ -437,6 +471,7 @@ sgm_add_devastation = {
 
 sgm_destroy_colony = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		is_colony = yes
 	}
@@ -459,6 +494,7 @@ sgm_add_colonising_progress = {
 	# unexpected ownership issues
 	# TEST THIS ASH
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 		is_under_colonization = yes
 	}
@@ -467,8 +503,10 @@ sgm_add_colonising_progress = {
 		add_colony_progress = 0.1
 	}
 }
+
 sgm_add_planet_modifier = {
 	potential = {
+		is_scope_type = planet
 		is_gm = yes
 	}
 	allow = {}
@@ -482,5 +520,4 @@ sgm_add_planet_modifier = {
 			}
 		}
 	}
-}
 }
