@@ -5,6 +5,7 @@ country_event = {								# requires passing the planet scope as from
 	is_triggered_only = yes
 	title = sgm_planet_modifiers_1
 	desc = sgm_planet_modifiers_1_desc
+	picture = GFX_planet_view_planet
 
 	immediate = {
 		if = {
@@ -104,5 +105,33 @@ country_event = {								# requires passing the planet scope as from
 		}
 		NAME = filter_4_option_1
 		#code goes here 
-	}		
+	}
+	# Toggle whether to apply set multiplier as scale to planet modifiers
+	# The default modifier with no scaling applied is used if this is set to no
+	option = {
+		trigger = {
+			not = { has_global_flag = gmgf_planet_modifiers_use_multiplier }
+		}
+		NAME = planet_modifiers_use_multiplier_yes
+		set_global_flag = gmgf_planet_modifiers_use_multiplier
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}	
+	}
+	option = {
+		trigger = {
+			has_global_flag = gmgf_planet_modifiers_use_multiplier
+		}
+		NAME = planet_modifiers_use_multiplier_no
+		remove_global_flag = gmgf_planet_modifiers_use_multiplier
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}		
+	}	
 }

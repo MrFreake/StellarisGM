@@ -3,7 +3,10 @@
 can_be_part_of_galactic_community = {
 	custom_tooltip = {
 		fail_text = "community_default_failtext"
-		is_country_type = default
+		OR = { 
+			is_country_type = default
+			is_country_type = sgm_game_master
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
@@ -25,7 +28,6 @@ can_be_part_of_galactic_community = {
 			overlord = { has_been_declared_crisis = no }
 		}
 	}
-	is_gm = yes
 }
 
 # This = country

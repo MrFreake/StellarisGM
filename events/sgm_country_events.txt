@@ -5,7 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_country_1_title
 	desc = sgm_country_1_desc
-
+	picture = GFX_evt_alien_city
 	immediate = {}
 
 	option = {
@@ -29,8 +29,20 @@ country_event = { 							# declare war options
 	is_triggered_only = yes
 	title = sgm_country_2_title
 	desc = sgm_country_2_desc
+	picture = GFX_evt_ship_under_attack
 
-	immediate = {}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = showing_standard_wg
+					has_global_flag = showing_fe_wg
+					has_global_flag = showing_event_wg
+				}
+			}
+			set_global_flag = showing_standard_wg
+		}
+	}
 
 	option = {			# show standard wg
 		NAME = showing_standard_wg		
@@ -80,7 +92,7 @@ country_event = { 							# declare war options
 			}
 		}
 	}
-
+	# standard war goals
 	option = {								# conquest
 		trigger = {
 			has_global_flag = showing_standard_wg
@@ -581,7 +593,7 @@ country_event = { 							# declare war options
 		}
 	}
 
-
+	# fe war goals
 	option = {									# wg_fe_stop_atrocities    
 		NAME = wg_fe_stop_atrocities    
 		trigger = {

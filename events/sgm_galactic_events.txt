@@ -5,6 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_galactic_events_title
 	desc = sgm_galactic_events_desc
+	picture = GFX_evt_contingency_planet
 
 	immediate = {}
 
@@ -99,6 +100,16 @@ country_event = {
 			country_event = { id = crisis.11 }
 			every_country = {
 				establish_communications_no_message = prev
+			}
+		}
+		random_country = {
+			limit = {
+				is_country_type = default
+			}
+			country_event = {
+				id = crisis.12	# MTTH 600 months wait skip
+				days = 35
+				random = 10
 			}
 		}
 	}
@@ -227,13 +238,14 @@ country_event = {
 	}
 }
 
-
 # mid game events													# The Great Khan
 country_event = {
 	id = sgm_galactic_events.50
 	is_triggered_only = yes
-	title = sgm_galactic_events_50_title
-	desc = sgm_galactic_events_50_desc_horde_triggered
+	hide_window = yes
+	#title = sgm_galactic_events_50_title
+	#desc = sgm_galactic_events_50_desc_horde_triggered
+	#picture = GFX_evt_khan_throne_room
 
 	immediate = {
 		if = {
@@ -467,8 +479,9 @@ country_event = {
 country_event = {													# Spectral Wraith
 	id = sgm_galactic_events.51
 	is_triggered_only = yes
-	title = sgm_galactic_events_51_title
-	desc = sgm_galactic_events_51_desc_wraith_triggered
+	#title = sgm_galactic_events_51_title
+	#desc = sgm_galactic_events_51_desc_wraith_triggered
+	hide_window = yes
 
 	immediate = {
 
@@ -592,8 +605,9 @@ country_event = {													# Spectral Wraith
 country_event = {								# open L gates/spawn L cluster
 	id = sgm_galactic_events.52
 	is_triggered_only = yes
-	title = sgm_galactic_events_52_title
-	desc = sgm_galactic_events_52_desc_opened_l_gate
+	#title = sgm_galactic_events_52_title
+	#desc = sgm_galactic_events_52_desc_opened_l_gate
+	hide_window = yes
 
 	trigger = {
 		NOT = {

@@ -1303,7 +1303,7 @@ guiTypes = {
 					}
 				}
 			}
-			effectbuttonType = {					# target 
+		effectbuttonType = {					# target 
 			name = sgm_set_target
 			quadTextureSprite = "GFX_target_country"
 			position = { x = 756 y = 12 }
