@@ -102,6 +102,16 @@ country_event = {
 				establish_communications_no_message = prev
 			}
 		}
+		random_country = {
+			limit = {
+				is_country_type = default
+			}
+			country_event = {
+				id = crisis.12	# MTTH 600 months wait skip
+				days = 35
+				random = 10
+			}
+		}
 	}
 
 	option = {
@@ -227,7 +237,6 @@ country_event = {
 		NAME = Exit
 	}
 }
-
 
 # mid game events													# The Great Khan
 country_event = {
