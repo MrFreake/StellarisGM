@@ -40,6 +40,7 @@ country_event = { 							# declare war options
 					has_global_flag = showing_event_wg
 				}
 			}
+			set_global_flag = showing_standard_wg
 		}
 	}
 
@@ -91,7 +92,7 @@ country_event = { 							# declare war options
 			}
 		}
 	}
-
+	# standard war goals
 	option = {								# conquest
 		trigger = {
 			has_global_flag = showing_standard_wg
@@ -592,7 +593,7 @@ country_event = { 							# declare war options
 		}
 	}
 
-
+	# fe war goals
 	option = {									# wg_fe_stop_atrocities    
 		NAME = wg_fe_stop_atrocities    
 		trigger = {
