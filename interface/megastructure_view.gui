@@ -166,6 +166,94 @@ guiTypes = {
 					effect = sgm_megastructure_effects
 					#shortCut = j
 				}
+				effectbuttonType = {					# delete megastructure
+					name = sgm_delete_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 76 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_delete_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_delete_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# destroy megastructure
+					name = sgm_destroy_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 113 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_destroy_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_destroy_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# finish megastructure stage
+					name = sgm_finish_megastructure_stage
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 150 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_finish_megastructure_stage
+					orientation = UPPER_LEFT
+					effect = sgm_finish_megastructure_stage
+					#shortCut = j
+				}
+				effectbuttonType = {					# begin next stage
+					name = sgm_begin_next_stage
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 187 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_begin_next_stage
+					orientation = UPPER_LEFT
+					effect = sgm_begin_next_stage
+					#shortCut = j
+				}
+				effectbuttonType = {					# finish megastructure
+					name = sgm_finish_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 224 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_finish_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_finish_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# activate gateway
+					name = sgm_activate_gateway
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 261 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_activate_gateway
+					orientation = UPPER_LEFT
+					effect = sgm_activate_gateway
+					#shortCut = j
+				}
+				effectbuttonType = {					# halt construction
+					name = sgm_halt_construction
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_halt_construction
+					orientation = UPPER_LEFT
+					effect = sgm_halt_construction
+					#shortCut = j
+				}
+				effectbuttonType = {					# resume construction
+					name = sgm_resume_construction
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_resume_construction
+					orientation = UPPER_LEFT
+					effect = sgm_resume_construction
+					#shortCut = j
+				}
 				## Middle Column
 
 					instantTextBoxType = {
