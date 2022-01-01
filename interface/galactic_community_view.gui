@@ -181,14 +181,14 @@ guiTypes = {
 						orientation = UPPER_LEFT
 					}
 					effectbuttonType = {					# planet events - planet effects
-						name = sgm_galcom_effects
+						name = sgm_galcom_pass_resolution_button
 						quadTextureSprite = "GFX_standard_button_142_34_button"
 						position = { x = 2 y = 39 }
 						scale = 1
 						buttonFont = malgun_goth_24
-						buttonText = sgm_galcom_effects
+						buttonText = sgm_galcom_pass_resolution_button
 						orientation = UPPER_LEFT
-						effect = sgm_galcom_effects
+						effect = sgm_galcom_pass_resolution_button
 			#			shortCut = j
 					}
 					# middle column

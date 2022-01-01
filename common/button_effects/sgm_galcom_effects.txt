@@ -1,12 +1,13 @@
-sgm_galcom_effects = {
+sgm_galcom_pass_resolution_button = {
 	potential = {
 		is_gm = yes
 	}
 	allow = {
-		always = no
+		is_voting_on_resolution = any
 	}
-
 	effect = {
-		
+		country_event = {
+			id = sgm_galcom.1			# Confirmation window.
+		}
 	}
 }
