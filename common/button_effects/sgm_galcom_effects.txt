@@ -1,0 +1,12 @@
+sgm_galcom_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+
+	effect = {
+		
+	}
+}

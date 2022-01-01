@@ -17,8 +17,35 @@ country_event = {
         }
         every_country = {
             establish_communications_no_message = root
+            root = { 
+                add_intel = { amount = 100 who = prev } 
+                add_intel_report = {
+                    category = military
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = government
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = economy
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = technology
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = diplomacy
+                    level = 4
+                    who = prev
+                }
+            }
         }
-        
         add_resource = {
 			energy = 9999999
 			minerals = 9999999
@@ -48,6 +75,7 @@ event = {
     is_triggered_only = yes
     title = gm_country_created_title
     desc = gm_country_created_desc
+    picture = GFX_evt_ancient_artifact
 
     immediate = {
         random_galaxy_species = {

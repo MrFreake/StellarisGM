@@ -209,7 +209,6 @@ guiTypes = {
 							effect = sgm_planet_effects
 				#			shortCut = j
 						}
-			
 						effectbuttonType = {					
 							name = sgm_add_dig_site
 							quadTextureSprite = "GFX_standard_button_142_34_button"
@@ -221,29 +220,17 @@ guiTypes = {
 							effect = sgm_add_dig_site
 				#			shortCut = j
 						}
-
-						effectbuttonType = {					
-							name = sgm_generate_early_primitives
+						effectbuttonType = {					# planet events - planet effects
+							name = sgm_add_planet_modifier
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 2 y = 113 }
 							scale = 1
 							buttonFont = malgun_goth_24
-							buttonText = sgm_generate_early_primitives
+							buttonText = sgm_add_planet_modifier
 							orientation = UPPER_LEFT
-							effect = sgm_generate_early_primitives
+							effect = sgm_add_planet_modifier
 				#			shortCut = j
-						}
-						effectbuttonType = {					
-							name = sgm_generate_late_primitives
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 150 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_generate_late_primitives
-							orientation = UPPER_LEFT
-							effect = sgm_generate_late_primitives
-				#			shortCut = j
-						}
+						}	
 						effectbuttonType = {					
 							name = sgm_change_planet_class
 							quadTextureSprite = "GFX_standard_button_142_34_button"
@@ -310,7 +297,17 @@ guiTypes = {
 							effect = sgm_reroll_modifiers
 				#			shortCut = j
 						}
-
+						effectbuttonType = {					
+							name = sgm_add_devastation
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 409 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_add_devastation
+							orientation = UPPER_LEFT
+							effect = sgm_add_devastation
+				#			shortCut = j
+						}
 						effectbuttonType = {					
 							name = sgm_crack_planet
 							quadTextureSprite = "GFX_standard_button_142_34_button"
@@ -320,6 +317,39 @@ guiTypes = {
 							buttonText = sgm_crack_planet
 							orientation = UPPER_LEFT
 							effect = sgm_crack_planet
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_destroy_colony
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 483 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_destroy_colony
+							orientation = UPPER_LEFT
+							effect = sgm_destroy_colony
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_generate_early_primitives
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 520 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_generate_early_primitives
+							orientation = UPPER_LEFT
+							effect = sgm_generate_early_primitives
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_generate_late_primitives
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 557 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_generate_late_primitives
+							orientation = UPPER_LEFT
+							effect = sgm_generate_late_primitives
 				#			shortCut = j
 						}
 			
@@ -434,7 +464,51 @@ guiTypes = {
 							orientation = UPPER_LEFT
 							effect = sgm_grow_pop
 				#			shortCut = j
-						}	
+						}
+						effectbuttonType = {					
+							name = sgm_open_branch_office
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 298 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_open_branch_office
+							orientation = UPPER_LEFT
+							effect = sgm_open_branch_office
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_close_branch_office
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 298 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_close_branch_office
+							orientation = UPPER_LEFT
+							effect = sgm_close_branch_office
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_add_colonising_progress
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 298 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_add_colonising_progress
+							orientation = UPPER_LEFT
+							effect = sgm_add_colonising_progress
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_create_GM_constructor
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 372 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_create_GM_constructor
+							orientation = UPPER_LEFT
+							effect = sgm_create_GM_constructor
+				#			shortCut = j
+						}													
 
 						# right column
 						instantTextBoxType = {

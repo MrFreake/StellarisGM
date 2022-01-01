@@ -41,7 +41,7 @@ sgm_game_master = {
 		standard_economy_module = {}
 		standard_leader_module = {}
 		exclusive_diplomacy_module = {
-			contact_rule = never
+			contact_rule = on_action_only
 			can_receive = {}
 			can_send = {
 				action_offer_trade_deal

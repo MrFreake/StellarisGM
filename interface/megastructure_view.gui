@@ -85,6 +85,214 @@ guiTypes = {
 			pdx_tooltip = "TOOLTIP_AMBIENT_OBJECT_FOCUS"
 			clicksound = "back_click"
 		}
+	effectbuttonType = {					# target 
+		name = sgm_target_planet
+		quadTextureSprite = "GFX_target_country"
+		position = { x = -150 y = 16 }
+		scale = 1
+		#buttonFont = malgun_goth_24
+		#buttonText = sgm_target_planet
+		orientation = upper_right
+		effect = sgm_set_target
+#			shortCut = j
+		pdx_tooltip = "Set as target planet"
+	}
+	effectbuttonType = {					# remove target 
+		name = sgm_unset_target
+		quadTextureSprite = "GFX_untarget_country"
+		position = { x = -150 y = 16 }
+		scale = 1
+		#buttonFont = malgun_goth_24
+		#buttonText = sgm_target_planet
+		orientation = upper_right
+		effect = sgm_unset_target
+#			shortCut = j
+		pdx_tooltip = "Unset target planet"
+	}
+	dropDownBoxType = {								## This controls the SGM Popout
+		name = "sgm_dropdown"
+		position = { x = 450 y = 16 }
+		size = { width = 166 height = 58 }
+		expandButton = {
+			name = "expand_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_open_gm_menu"
+			pdx_tooltip = "Open GM Menu"
+			pdx_tooltip_delayed = "Will pop up later"
+		}
+		expandedWindow = {
+			name = "expanded_window"
+			position = { x = -100 y = -100 }
+			show_position = { x = 115 y = -7 }
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
+			animation_time = 200
+			size = { width = 478 height = 470 }
+			verticalScrollbar = "right_vertical_slider"
+			#priority = 100
+			defaultSelection = yes
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_subwindow_tile_plain_solid"
+			}
+			containerWindowType = {
+				name = "buttons"
+				size = { width = -10 height = -10 }
+				position = { x = 10 y = 10 }
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				}
+				# left column
+				instantTextBoxType = {
+					name = "MEGASTRUCTURE_EFFECTS"
+					font = "malgun_goth_24"
+					position = { x = 2 y = 2 }
+					text = "MEGASTRUCTURE_EFFECTS"
+					maxWidth = 142
+					maxHeight = 34
+					fixedSize = yes
+					format = center
+					orientation = UPPER_LEFT
+				}
+				effectbuttonType = {					# megastructure events - megastructure effects
+					name = sgm_megastructure_effects
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 39 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_megastructure_effects
+					orientation = UPPER_LEFT
+					effect = sgm_megastructure_effects
+					#shortCut = j
+				}
+				effectbuttonType = {					# delete megastructure
+					name = sgm_delete_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 76 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_delete_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_delete_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# destroy megastructure
+					name = sgm_destroy_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 113 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_destroy_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_destroy_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# finish megastructure stage
+					name = sgm_finish_megastructure_stage
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 150 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_finish_megastructure_stage
+					orientation = UPPER_LEFT
+					effect = sgm_finish_megastructure_stage
+					#shortCut = j
+				}
+				effectbuttonType = {					# begin next stage
+					name = sgm_begin_next_stage
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 187 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_begin_next_stage
+					orientation = UPPER_LEFT
+					effect = sgm_begin_next_stage
+					#shortCut = j
+				}
+				effectbuttonType = {					# finish megastructure
+					name = sgm_finish_megastructure
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 224 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_finish_megastructure
+					orientation = UPPER_LEFT
+					effect = sgm_finish_megastructure
+					#shortCut = j
+				}
+				effectbuttonType = {					# activate gateway
+					name = sgm_activate_gateway
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 261 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_activate_gateway
+					orientation = UPPER_LEFT
+					effect = sgm_activate_gateway
+					#shortCut = j
+				}
+				effectbuttonType = {					# halt construction
+					name = sgm_halt_construction
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_halt_construction
+					orientation = UPPER_LEFT
+					effect = sgm_halt_construction
+					#shortCut = j
+				}
+				effectbuttonType = {					# resume construction
+					name = sgm_resume_construction
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_resume_construction
+					orientation = UPPER_LEFT
+					effect = sgm_resume_construction
+					#shortCut = j
+				}
+				## Middle Column
+
+					instantTextBoxType = {
+						name = "COUNTRY_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 148 y = 2 }
+						text = "COUNTRY_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}
+				effectbuttonType = {					# set owner target country
+					name = sgm_set_owner_target_country
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 39 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_set_owner_target_country
+					orientation = UPPER_LEFT
+					effect = sgm_set_owner_target_country
+					#shortCut = j
+				}
+				# right column
+					instantTextBoxType = {
+						name = "SYSTEM_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 294 y = 2 }
+						text = "SYSTEM_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}
+				}
+		}
+	}
 
 		iconType = {
 			name = "hex_bg"

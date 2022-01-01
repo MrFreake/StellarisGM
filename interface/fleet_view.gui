@@ -259,6 +259,39 @@ guiTypes = {
 							effect = sgm_return_to_gm
 				#			shortCut = j
 						}
+						effectbuttonType = {					
+							name = sgm_set_owner_target_country
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 113 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_set_owner_target_country
+							orientation = UPPER_LEFT
+							effect = sgm_set_owner_target_country
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_set_owner_neutral_to_target_country
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 150 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_set_owner_neutral_to_target_country
+							orientation = UPPER_LEFT
+							effect = sgm_set_owner_neutral_to_target_country
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_set_owner_hostile_to_target_country
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 187 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_set_owner_hostile_to_target_country
+							orientation = UPPER_LEFT
+							effect = sgm_set_owner_hostile_to_target_country
+				#			shortCut = j
+						}
 						# right column
 						instantTextBoxType = {
 							name = "SYSTEM_EFFECTS"

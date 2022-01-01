@@ -9,6 +9,7 @@ sgm_set_target = {
 			AND = {	exists = event_target:target_planet is_same_value = event_target:target_planet } 
 			AND = {	exists = event_target:target_fleet is_same_value = event_target:target_fleet }
 			AND = {	exists = event_target:target_country is_same_value = event_target:target_country }
+			AND = {	exists = event_target:target_megastructure is_same_value = event_target:target_megastructure }
 		}
 	}
 	allow = {
@@ -34,6 +35,12 @@ sgm_set_target = {
 			}
 			save_global_event_target_as = target_fleet
 		}
+		if = {
+			limit = {
+				is_scope_type = megastructure
+			}
+			save_global_event_target_as = target_megastructure
+		}
 	}
 }
 
@@ -44,6 +51,7 @@ sgm_unset_target = {
 			AND = {	exists = event_target:target_planet is_same_value = event_target:target_planet } 
 			AND = {	exists = event_target:target_fleet is_same_value = event_target:target_fleet }
 			AND = {	exists = event_target:target_country is_same_value = event_target:target_country }
+			AND = {	exists = event_target:target_megastructure is_same_value = event_target:target_megastructure }
 		}
 	}
 	allow = {
@@ -68,6 +76,12 @@ sgm_unset_target = {
 				is_scope_type = fleet
 			}
 			clear_global_event_target = target_fleet
+		}
+		if = {
+			limit = {
+				is_scope_type = megastructure
+			}
+			clear_global_event_target = target_megastructure
 		}
 	}
 }

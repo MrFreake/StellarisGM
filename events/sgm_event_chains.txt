@@ -5,6 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_event_chains_1_title
 	desc = sgm_event_chains_1_desc
+	picture = GFX_evt_asteroid_approaching_planet
 
 	immediate = {}
 
@@ -268,7 +269,7 @@ country_event = {
 							move_to = from
 							effect = {
 								id = "colony.180.effect.1"
-								from.owner = {
+								from = {
 									planet_event = { id = colony.183 }
 								}
 							}

@@ -1,0 +1,137 @@
+namespace = sgm_planet_modifiers 
+
+country_event = {								# requires passing the planet scope as from
+	id = sgm_planet_modifiers.1
+	is_triggered_only = yes
+	title = sgm_planet_modifiers_1
+	desc = sgm_planet_modifiers_1_desc
+	picture = GFX_planet_view_planet
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {							
+					has_global_flag = filter_1	# this limit should contain all your filter flags
+					has_global_flag = filter_2
+					has_global_flag = filter_3
+					has_global_flag = filter_4
+				}
+			}
+			set_global_flag = filter_1			# set first filter flag if no filter flags found
+		}
+	}
+
+	option = {									# filter for first option
+		NAME = filter_1
+		trigger = {						
+			has_global_flag = filter_1
+		}
+		set_global_flag = filter_2
+		remove_global_flag = filter_1
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {									# filter for second option
+		NAME = filter_2
+		trigger = {						
+			has_global_flag = filter_2
+		}
+		set_global_flag = filter_3
+		remove_global_flag = filter_2
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {									# filter for third option
+		NAME = filter_3
+		trigger = {						
+			has_global_flag = filter_3
+		}
+		set_global_flag = filter_4
+		remove_global_flag = filter_3
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {									# filter for fourth option
+		NAME = filter_4							# last option needs to loop back to first option
+		trigger = {						
+			has_global_flag = filter_4
+		}
+		set_global_flag = filter_1
+		remove_global_flag = filter_4
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	# list all of your modifiers after this
+	option = {
+		trigger = {
+			has_global_flag = filter_1
+		}
+		NAME = filter_1_option_1
+		#code goes here 
+	}
+	option = {
+		trigger = {
+			has_global_flag = filter_2
+		}
+		NAME = filter_2_option_1
+		#code goes here 
+	}	
+	option = {
+		trigger = {
+			has_global_flag = filter_3
+		}
+		NAME = filter_3_option_1
+		#code goes here 
+	}	
+	option = {
+		trigger = {
+			has_global_flag = filter_4
+		}
+		NAME = filter_4_option_1
+		#code goes here 
+	}
+	# Toggle whether to apply set multiplier as scale to planet modifiers
+	# The default modifier with no scaling applied is used if this is set to no
+	option = {
+		trigger = {
+			not = { has_global_flag = gmgf_planet_modifiers_use_multiplier }
+		}
+		NAME = planet_modifiers_use_multiplier_yes
+		set_global_flag = gmgf_planet_modifiers_use_multiplier
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}	
+	}
+	option = {
+		trigger = {
+			has_global_flag = gmgf_planet_modifiers_use_multiplier
+		}
+		NAME = planet_modifiers_use_multiplier_no
+		remove_global_flag = gmgf_planet_modifiers_use_multiplier
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+			}
+		}		
+	}	
+}

@@ -5,22 +5,18 @@ delete_point_of_interest = {
 			has_point_of_interest = { poi = gm_poi.1 }
 		}
 			root = { remove_point_of_interest = gm_poi.1 }
-			break = yes
 		}
 	else_if = {
 		limit = {
 			has_point_of_interest = { poi = gm_poi.2 }
 		}
 		root = { remove_point_of_interest = gm_poi.2 }
-		break = yes
 		}
 	else_if = {
 		limit = {
 			has_point_of_interest = { poi = gm_poi.3 }
-			break = yes
 		}
 		root = { remove_point_of_interest = gm_poi.3 }
-		break = yes
 	}
 }
 
@@ -66,4 +62,299 @@ set_point_of_interest = {
 			break = yes
 		}
 	}	
+}
+
+sgm_begin_next_megastructure_stage = {
+			# dyson sphere
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_0
+				}
+				upgrade_megastructure_to = dyson_sphere_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_1
+				}
+				upgrade_megastructure_to = dyson_sphere_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_2
+				}
+				upgrade_megastructure_to = dyson_sphere_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_3
+				}
+				upgrade_megastructure_to = dyson_sphere_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_4
+				}
+				upgrade_megastructure_to = dyson_sphere_5
+			}
+			# spy orb
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_0
+				}
+				upgrade_megastructure_to = spy_orb_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_1
+				}
+				upgrade_megastructure_to = spy_orb_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_2
+				}
+				upgrade_megastructure_to = spy_orb_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_3
+				}
+				upgrade_megastructure_to = spy_orb_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_4
+				}
+				upgrade_megastructure_to = spy_orb_5
+			}
+			if = {
+				limit = {
+					is_megastructure_type = spy_orb_ruined
+				}
+				upgrade_megastructure_to = spy_orb_restored
+			}
+			#think tank
+			if = {
+				limit = {
+					is_megastructure_type = think_tank_0
+				}
+				upgrade_megastructure_to = think_tank_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = think_tank_1
+				}
+				upgrade_megastructure_to = think_tank_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = think_tank_2
+				}
+				upgrade_megastructure_to = think_tank_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = think_tank_3
+				}
+				upgrade_megastructure_to = think_tank_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = think_tank_ruined
+				}
+				upgrade_megastructure_to = think_tank_restored
+			}
+			# gateways
+			if = {
+				limit = {
+					is_megastructure_type = gateway_0
+				}
+				upgrade_megastructure_to = gateway_final
+			}
+			if = {
+				limit = {
+					is_megastructure_type = gateway_ruined
+				}
+				upgrade_megastructure_to = gateway_restored
+			}
+			# matter decompressor
+			if = {
+				limit = {
+					is_megastructure_type = matter_decompressor_0
+				}
+				upgrade_megastructure_to = matter_decompressor_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = matter_decompressor_1
+				}
+				upgrade_megastructure_to = matter_decompressor_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = matter_decompressor_2
+				}
+				upgrade_megastructure_to = matter_decompressor_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = matter_decompressor_3
+				}
+				upgrade_megastructure_to = matter_decompressor_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = matter_decompressor_ruined
+				}
+				upgrade_megastructure_to = matter_decompressor_restored
+			}
+			# strategic coordination center
+			if = {
+				limit = {
+					is_megastructure_type = strategic_coordination_center_0
+				}
+				upgrade_megastructure_to = strategic_coordination_center_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = strategic_coordination_center_1
+				}
+				upgrade_megastructure_to = strategic_coordination_center_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = strategic_coordination_center_2
+				}
+				upgrade_megastructure_to = strategic_coordination_center_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = strategic_coordination_center_3
+				}
+				upgrade_megastructure_to = strategic_coordination_center_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = strategic_coordination_center_ruined
+				}
+				upgrade_megastructure_to = strategic_coordination_center_restored
+			}
+			# mega art installation
+			if = {
+				limit = {
+					is_megastructure_type = mega_art_installation_0
+				}
+				upgrade_megastructure_to = mega_art_installation_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_art_installation_1
+				}
+				upgrade_megastructure_to = mega_art_installation_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_art_installation_2
+				}
+				upgrade_megastructure_to = mega_art_installation_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_art_installation_3
+				}
+				upgrade_megastructure_to = mega_art_installation_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_art_installation_ruined
+				}
+				upgrade_megastructure_to = mega_art_installation_restored
+			}
+			# interstellar assembly
+			if = {
+				limit = {
+					is_megastructure_type = interstellar_assembly_0
+				}
+				upgrade_megastructure_to = interstellar_assembly_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = interstellar_assembly_1
+				}
+				upgrade_megastructure_to = interstellar_assembly_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = interstellar_assembly_2
+				}
+				upgrade_megastructure_to = interstellar_assembly_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = interstellar_assembly_3
+				}
+				upgrade_megastructure_to = interstellar_assembly_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = interstellar_assembly_ruined
+				}
+				upgrade_megastructure_to = interstellar_assembly_restored
+			}
+			# mega shipyard
+			if = {
+				limit = {
+					is_megastructure_type = mega_shipyard_0
+				}
+				upgrade_megastructure_to = mega_shipyard_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_shipyard_1
+				}
+				upgrade_megastructure_to = mega_shipyard_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_shipyard_2
+				}
+				upgrade_megastructure_to = mega_shipyard_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_shipyard_3
+				}
+				upgrade_megastructure_to = mega_shipyard_4
+			}
+			if = {
+				limit = {
+					is_megastructure_type = mega_shipyard_ruined
+				}
+				upgrade_megastructure_to = mega_shipyard_restored
+			}
+			#crisis sphere
+			if = {
+				limit = {
+					is_megastructure_type = crisis_sphere_0
+				}
+				upgrade_megastructure_to = crisis_sphere_1
+			}
+			if = {
+				limit = {
+					is_megastructure_type = crisis_sphere_1
+				}
+				upgrade_megastructure_to = crisis_sphere_2
+			}
+			if = {
+				limit = {
+					is_megastructure_type = crisis_sphere_2
+				}
+				upgrade_megastructure_to = crisis_sphere_3
+			}
+			if = {
+				limit = {
+					is_megastructure_type = crisis_sphere_3
+				}
+				upgrade_megastructure_to = crisis_sphere_4
+			}
 }

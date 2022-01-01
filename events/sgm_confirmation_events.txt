@@ -21,3 +21,91 @@ country_event = {								# crack planet confirmation
 		NAME = No
 	}
 }
+
+country_event = {								# delete megastructure confirmation
+	id = sgm_confirmation.2						# from = megastructure
+	is_triggered_only = yes
+	title = delete_megastructure_confirmation
+	desc = delete_megastructure_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			delete_megastructure = this
+		}
+	}
+	option = {
+		NAME = No
+	}
+}
+
+country_event = {								# destroy megastructure confirmation
+	id = sgm_confirmation.3						# from = megastructure
+	is_triggered_only = yes
+	title = destroy_megastructure_confirmation
+	desc = destroy_megastructure_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			while = {
+				count = 8
+				create_ambient_object = {
+					type = "large_debris_object"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random
+					}
+				}
+			}
+			create_ambient_object = {
+				type = "derelict_particle_accelerator"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 5
+					angle = random
+				}
+			}
+			delete_megastructure = this
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}
+
+## AA confirmations - ids start at 1000
+country_event = {								# destroy_colony confirmation
+	id = sgm_confirmation.1000					# from = planet
+	is_triggered_only = yes
+	title = destroy_colony_confirmation
+	desc = destroy_colony_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			destroy_colony = yes
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}

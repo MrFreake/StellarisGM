@@ -1,0 +1,151 @@
+sgm_megastructure_effects = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		
+	}
+
+	effect = {
+		
+	}
+}
+
+sgm_set_owner_target_country = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		exists = event_target:target_country
+	}
+
+	effect = {
+		set_owner = event_target:target_country
+	}
+}
+
+sgm_delete_megastructure = {
+	potential = {
+		is_gm = yes
+	}
+	allow = { }
+
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_confirmation.2
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_destroy_megastructure = {
+	potential = {
+		is_gm = yes
+	}
+	allow = { }
+
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_confirmation.3
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_finish_megastructure_stage = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		upgrade_days_left > 1
+	}
+
+	effect = {
+		finish_upgrade = yes
+	}	
+}
+
+sgm_begin_next_stage = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		upgrade_days_left < 1
+	}
+
+	effect = {
+		sgm_begin_next_megastructure_stage = yes
+	}
+}
+
+sgm_finish_megastructure = {
+	potential = {
+		is_gm = yes
+	}
+	allow = { }
+
+	effect = {
+		while = {
+			count = 5
+			sgm_begin_next_megastructure_stage = yes
+			if = {
+				limit = {
+					upgrade_days_left > 1
+				}
+				finish_upgrade = yes
+			}
+		}
+	}
+}
+
+sgm_activate_gateway = {
+	potential = {
+		is_gm = yes
+	}
+	allow = { 
+		OR = {
+			is_megastructure_type = gateway_final
+			is_megastructure_type = gateway_restored
+		}
+	}
+
+	effect = {
+		activate_gateway = this
+	}	
+}
+
+sgm_halt_construction = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			has_megastructure_flag = construction_halted
+		}
+	}
+	allow = { }
+
+	effect = {
+		set_halted = -1
+		set_megastructure_flag = construction_halted
+	}
+}
+
+sgm_resume_construction = {
+	potential = {
+		is_gm = yes
+		has_megastructure_flag = construction_halted
+	}
+	allow = { }
+
+	effect = {
+		set_halted = 1
+		remove_megastructure_flag = construction_halted
+	}
+}

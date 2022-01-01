@@ -5,6 +5,7 @@ country_event = {						# planet event menu
 	is_triggered_only = yes
 	title = sgm_planet_1_title
 	desc = sgm_planet_1_desc
+	picture = GFX_evt_city_planet
 
 	trigger = {
 		exists = from
@@ -51,29 +52,6 @@ country_event = {						# planet event menu
 	}
 
 	option = {
-		NAME = create_GM_constructor
-		while = {
-			count = multiplier
-			from = {
-				solar_system = {
-					create_fleet = {
-						effect = {
-							set_owner = root
-							create_ship = {
-								random_existing_design = constructor
-							}
-							set_location = {
-								target = from
-								distance = 5
-								angle = random
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
 		allow = {
 			from = {
 				NOR = {
@@ -101,9 +79,9 @@ country_event = {						# planet event menu
 		}
 		
 		NAME = remove_point_of_interest
-		from = {
-			delete_point_of_interest = yes
-		}
+		remove_point_of_interest = gm_poi.1
+		remove_point_of_interest = gm_poi.2
+		remove_point_of_interest = gm_poi.3
 	}
 
 	option = {
@@ -113,18 +91,6 @@ country_event = {						# planet event menu
 		}
 		from = {
 			set_owner = event_target:target_country }
-	}
-
-	option = {
-		NAME = sgm_grow_pop
-		while = {
-			count = multiplier
-			from = {
-				create_pop = {
-					species = owner
-				}
-			}
-		}
 	}
 
 	option = {
@@ -248,6 +214,7 @@ country_event = {							# add districts menu
 	is_triggered_only = yes
 	title = sgm_planets_50_title
 	desc = sgm_planets_50_desc
+	picture = GFX_evt_alien_city
 
 	trigger = {
 #		exists = from
@@ -617,6 +584,7 @@ country_event = {								# change planet class menu
 	is_triggered_only = yes
 	title = sgm_planets_51_title
 	desc = sgm_planets_51_desc
+	picture = GFX_evt_gaia
 
 	trigger = {
 		from = {
@@ -745,6 +713,7 @@ country_event = {								# spawn hostiles menu
 	is_triggered_only = yes
 	title = sgm_planets_52_title
 	desc = sgm_planets_52_desc
+	picture = GFX_evt_exploding_ship
 
 	trigger = {}
 
@@ -1408,11 +1377,12 @@ country_event = {								# spawn hostiles menu
 
 }
 
-country_event = {
+country_event = {					# create archaeology site
 	id = sgm_planets.53
 	is_triggered_only = yes
 	title = sgm_planets_53_title
 	desc = sgm_planets_53_desc
+	picture = GFX_evt_archaeological_dig
 
 	immediate = {}
 
@@ -1704,11 +1674,12 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {					# archaeology sites #2
 	id = sgm_planets.54
 	is_triggered_only = yes
 	title = sgm_planets_54_title
 	desc = sgm_planets_54_desc
+	picture = GFX_evt_archaeological_dig
 
 	immediate = { }
 
@@ -2002,11 +1973,12 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {						# anomalies menu
 	id = sgm_planets.55
 	is_triggered_only = yes
 	title = sgm_planets_55_title
 	desc = sgm_planets_55_desc
+	picture = GFX_evt_analyzing_artifacts
 
 	immediate = {}
 
