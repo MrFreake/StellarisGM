@@ -1,0 +1,23 @@
+apply_planet_modifier = {
+	# $P_MODIFIER$ - Name of modifier
+	# multiplier (name to change) - Set on country by sgm_planets.1
+	# gmgf_planet_modifiers_use_multiplier - global flag set to indicate use scaler
+	
+	if = {
+		limit = {
+			# use scaler
+			has_global_flag = gmgf_planet_modifiers_use_multiplier
+		}
+		add_modifier = {
+			modifier = $P_MODIFIER$
+			multiplier = root.multiplier
+		}
+	}
+	else = {
+		add_modifier = $P_MODIFIER$
+	}
+	
+	### TO DO
+	### Need to check if modifier already on planet, and if it is,
+	### remove then replace with scale +1 or new scale
+}
