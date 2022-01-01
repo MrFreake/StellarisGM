@@ -97,7 +97,7 @@ sgm_assume_fleet_control = {
 sgm_return_fleet_control = {
 	potential = {
 		from = { is_gm = yes }
-		has_fleet_flag = sgm_ajjssumed_control
+		has_fleet_flag = sgm_assumed_control
 	}
 	allow = {
 		always = yes
@@ -115,7 +115,63 @@ sgm_return_fleet_control = {
 	}
 }
 
-sgm_set_owner_as_target = {
+sgm_set_owner_neutral_to_target_country = {
+	potential = {
+		is_gm = yes
+		exists = owner
+		exists = event_target:target_country
+		NOT = {
+			owner = {
+				is_same_value = event_target:target_country
+			}
+		}
+		owner = {
+            is_hostile = event_target:target_country
+        }
+	}
+	allow = { }
+	effect = {
+		owner = {
+			set_faction_hostility = { 
+				target = event_target:target_country
+				set_hostile = no 
+				set_neutral = yes 
+				set_friendly = no 
+			}
+		}
+	}
+}
+
+sgm_set_owner_hostile_to_target_country = {
+	potential = {
+		is_gm = yes
+		exists = owner
+		exists = event_target:target_country
+		NOT = {
+			owner = {
+				is_same_value = event_target:target_country
+			}
+		}
+		NOT = {
+			owner = {
+            	is_hostile = event_target:target_country
+        	}
+		}
+	}
+	allow = {}
+	effect = {
+		owner = {
+			set_faction_hostility = { 
+				target = event_target:target_country
+				set_hostile = yes 
+				set_neutral = no 
+				set_friendly = no 
+			}
+		}
+	}
+}
+
+sgm_set_owner_target_country = {
 	potential = {
 		is_gm = yes
 		exists = owner
