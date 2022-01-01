@@ -130,7 +130,7 @@ country_event = {								# Opens fleet menu
 				random_owned_ship = {
 					fleet = {
 						create_ship = {
-							design = random_owned_design
+							design = prevprev.owner
 						}
 					}
 				}

@@ -297,6 +297,11 @@ sgm_add_wormhole = {
 	potential = {
 		is_gm = yes
 		exists = event_target:target_planet
+		NOT = {
+			solar_system = {
+				has_natural_wormhole = yes
+			}
+		}
 	}
 
 	effect = {
@@ -483,4 +488,25 @@ sgm_add_planet_modifier = {
 		}
 	}
 }
+
+sgm_create_GM_constructor = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		create_fleet = {
+			effect = {
+				set_owner = root
+				create_ship = {
+					random_existing_design = constructor
+				}
+				set_location = {
+					target = prev
+					distance = 5
+					angle = random
+				}
+			}
+		}
+	}
 }

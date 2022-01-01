@@ -52,29 +52,6 @@ country_event = {						# planet event menu
 	}
 
 	option = {
-		NAME = create_GM_constructor
-		while = {
-			count = multiplier
-			from = {
-				solar_system = {
-					create_fleet = {
-						effect = {
-							set_owner = root
-							create_ship = {
-								random_existing_design = constructor
-							}
-							set_location = {
-								target = from
-								distance = 5
-								angle = random
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
 		allow = {
 			from = {
 				NOR = {
@@ -102,9 +79,9 @@ country_event = {						# planet event menu
 		}
 		
 		NAME = remove_point_of_interest
-		from = {
-			delete_point_of_interest = yes
-		}
+		remove_point_of_interest = gm_poi.1
+		remove_point_of_interest = gm_poi.2
+		remove_point_of_interest = gm_poi.3
 	}
 
 	option = {
@@ -114,18 +91,6 @@ country_event = {						# planet event menu
 		}
 		from = {
 			set_owner = event_target:target_country }
-	}
-
-	option = {
-		NAME = sgm_grow_pop
-		while = {
-			count = multiplier
-			from = {
-				create_pop = {
-					species = owner
-				}
-			}
-		}
 	}
 
 	option = {
