@@ -547,6 +547,7 @@ sgm_create_GM_constructor = {
 			}
 		}
 	}
+<<<<<<< HEAD
 }
 
 sgm_create_starbase = {
@@ -593,3 +594,6 @@ sgm_create_starbase_target_country = {
 		}
 	}
 }
+=======
+}
+>>>>>>> AlphaAsh
