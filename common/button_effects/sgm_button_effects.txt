@@ -37,3 +37,53 @@ sgm_planet_effects = {
 		}
 	}
 }
+
+sgm_increase_scalar = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		root = {
+			change_variable = {
+				which = scalar
+				value = 1
+			}
+		}
+		country_event = {
+			id = sgm_planets.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+}
+sgm_decrease_scalar = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		root = {
+			change_variable = {
+				which = scalar
+				value = -1
+			}
+		}
+		country_event = {
+			id = sgm_planets.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+}
+sgm_modifier_scalar = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = { }
+}
