@@ -14,6 +14,8 @@ delete_fleet = {
 create_corvette = {
 	potential = {
 		is_gm = yes
+		is_fleet = yes
+		is_civilian = no
 	}
 	allow = {
 		always = yes
@@ -29,6 +31,8 @@ create_corvette = {
 create_destroyer = {
 	potential = {
 		is_gm = yes
+		is_fleet = yes
+		is_civilian = no
 	}
 	allow = {
 		always = yes
@@ -44,6 +48,8 @@ create_destroyer = {
 create_cruiser = {
 	potential = {
 		is_gm = yes
+		is_fleet = yes
+		is_civilian = no
 	}
 	allow = {
 		always = yes
@@ -59,6 +65,8 @@ create_cruiser = {
 create_battleship = {
 	potential = {
 		is_gm = yes
+		is_fleet = yes
+		is_civilian = no
 	}
 	allow = {
 		always = yes
@@ -175,6 +183,11 @@ sgm_set_owner_target_country = {
 	potential = {
 		is_gm = yes
 		exists = owner
+		NOT = {
+			owner = {
+				is_same_value = event_target:target_country
+			}
+		}
 	}
 	allow = { }
 	effect = {
@@ -183,6 +196,68 @@ sgm_set_owner_target_country = {
 		}
 	}
 }
+
+# starbase stuff
+
+sgm_upgrade_starbase = {
+	potential = {
+		is_gm = yes
+		is_fleet = no
+	}
+	allow = {
+		NOT = {
+			is_ship_size = starbase_citadel 
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				any_owned_ship = { is_ship_size = starbase_outpost }
+			}
+			starbase = { set_starbase_size = starbase_starport }		
+		}
+		if = {
+			limit = {
+				is_ship_size = starbase_starport
+			}
+			starbase = { set_starbase_size = starbase_starhold }	
+		}
+		if = {
+			limit = {
+				is_ship_size = starbase_starhold
+			}
+			starbase = { set_starbase_size = starbase_starfortress }	
+		}
+		if = {
+			limit = {
+				is_ship_size = starbase_starfortress
+			}
+			starbase = { set_starbase_size = starbase_citadel }		
+		}
+	}
+}
+
+sgm_modify_starbase = { # this will need to be tackled by someone smarter than me
+	potential = {		# alternatively, you can assume/return control of a starbase and modify it that way
+		is_gm = yes
+		is_fleet = no
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_fleet.2
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+
 
 
 

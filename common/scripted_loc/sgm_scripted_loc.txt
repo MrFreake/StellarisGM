@@ -1,0 +1,17 @@
+defined_text = {
+	name = GetName_target_country_GetRealName
+	text = {
+		trigger = {
+			exists = event_target:target_country
+		}
+		localization_key = BLANK_STRING
+	}
+	text = {
+		trigger = {
+			NOT = {
+				exists = event_target:target_country
+			}
+		}
+		localization_key = HOME_BASE_NONE
+	}
+}

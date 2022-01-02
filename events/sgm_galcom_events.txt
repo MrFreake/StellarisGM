@@ -1,0 +1,39 @@
+namespace = sgm_galcom
+country_event = {
+	id = sgm_galcom.1
+	title = sgm_galcom.1.name
+	desc = sgm_galcom.1.desc
+	picture = GFX_evt_galactic_senate
+	is_triggered_only = yes
+	option = {
+		name = sgm_galcom.1.a
+		hidden_effect = {
+			sgm_galcom_resolve_resolution = {
+				RESOLVE = pass				#	pass/fail
+				TARGET = target_country				# Optional parameter accepts only event target name, for targeted resolutions.
+			}
+		}
+	}
+	option = {
+		name = sgm_galcom.1.b
+	}
+}
+
+country_event = {
+	id = sgm_galcom.2
+	title = RESOLUTIONS
+	desc =  VETO
+	picture = GFX_evt_galactic_senate
+	is_triggered_only = yes
+	option = {
+		name = DIALOG_AGREE
+		hidden_effect = {
+			sgm_galcom_resolve_resolution = {
+				RESOLVE = fail				#	pass/fail
+			}
+		}
+	}
+	option = {
+		name = CANCEL
+	}
+}

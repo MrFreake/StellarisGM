@@ -541,7 +541,7 @@ sgm_create_GM_constructor = {
 	effect = {
 		create_fleet = {
 			effect = {
-				set_owner = root
+				set_owner = from
 				create_ship = {
 					random_existing_design = constructor
 				}
@@ -558,3 +558,48 @@ sgm_create_GM_constructor = {
 =======
 >>>>>>> main
 >>>>>>> main
+
+sgm_create_starbase = {
+	potential = {
+		is_gm = yes
+		solar_system = {
+			NOT = {
+				exists = starbase
+			}
+		}
+	}
+	allow = {}
+
+	effect = {
+		solar_system = {
+			create_starbase = {
+				owner = from
+				size = starbase_outpost
+			}
+		}
+	}
+}
+
+sgm_create_starbase_target_country = {
+	potential = {
+		is_gm = yes
+		solar_system = {
+			NOT = {
+				exists = starbase
+			}
+		}
+
+	}
+	allow = {
+		exists = event_target:target_country
+	}
+
+	effect = {
+		solar_system = {
+			create_starbase = {
+				owner = event_target:target_country
+				size = starbase_outpost
+			}
+		}
+	}
+}
