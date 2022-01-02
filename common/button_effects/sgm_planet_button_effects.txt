@@ -525,12 +525,6 @@ sgm_add_planet_modifier = {
 			}
 		}
 	}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-=======
->>>>>>> main
 }
 
 sgm_create_GM_constructor = {
@@ -550,55 +544,6 @@ sgm_create_GM_constructor = {
 					distance = 5
 					angle = random
 				}
-			}
-		}
-	}
-}
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
-
-sgm_create_starbase = {
-	potential = {
-		is_gm = yes
-		solar_system = {
-			NOT = {
-				exists = starbase
-			}
-		}
-	}
-	allow = {}
-
-	effect = {
-		solar_system = {
-			create_starbase = {
-				owner = from
-				size = starbase_outpost
-			}
-		}
-	}
-}
-
-sgm_create_starbase_target_country = {
-	potential = {
-		is_gm = yes
-		solar_system = {
-			NOT = {
-				exists = starbase
-			}
-		}
-
-	}
-	allow = {
-		exists = event_target:target_country
-	}
-
-	effect = {
-		solar_system = {
-			create_starbase = {
-				owner = event_target:target_country
-				size = starbase_outpost
 			}
 		}
 	}
