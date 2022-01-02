@@ -509,7 +509,6 @@ guiTypes = {
 							effect = sgm_create_GM_constructor
 				#			shortCut = j
 						}													
-
 						# right column
 						instantTextBoxType = {
 							name = "SYSTEM_EFFECTS"
@@ -586,6 +585,28 @@ guiTypes = {
 							buttonText = sgm_add_l_gate
 							orientation = UPPER_LEFT
 							effect = sgm_add_l_gate
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_create_starbase
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 224 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_create_starbase
+							orientation = UPPER_LEFT
+							effect = sgm_create_starbase
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_create_starbase_target_country
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 291 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_create_starbase_target_country
+							orientation = UPPER_LEFT
+							effect = sgm_create_starbase_target_country
 				#			shortCut = j
 						}					
 					}
