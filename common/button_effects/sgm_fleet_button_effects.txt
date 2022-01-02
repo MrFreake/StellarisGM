@@ -79,6 +79,23 @@ create_battleship = {
 	}
 }
 
+teleport_fleet = {
+	potential = {
+		is_gm = yes
+		is_fleet = yes
+	}
+	allow = {
+		is_in_combat = no
+		is_mobile = yes
+	}
+	
+	effect = {
+        fleet_event = {
+			id = sgm_fleet.3
+		}
+	}
+}
+
 sgm_assume_fleet_control = {
 	potential = {
 		is_gm = yes
