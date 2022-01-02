@@ -547,8 +547,8 @@ sgm_create_GM_constructor = {
 			}
 		}
 	}
+<<<<<<< HEAD
 }
->>>>>>> main
 
 sgm_create_starbase = {
 	potential = {
@@ -594,3 +594,6 @@ sgm_create_starbase_target_country = {
 		}
 	}
 }
+=======
+}
+>>>>>>> AlphaAsh
