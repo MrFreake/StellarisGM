@@ -774,7 +774,7 @@ guiTypes = {
 
 			dropDownBoxType = {								## This controls the SGM Popout
 			name = "sgm_dropdown"
-			position = { x = 60 y = 0 }
+			position = { x = 55 y = 0 }
 			size = { width = 166 height = 58 }
 			expandButton = {
 				name = "expand_button"
@@ -786,11 +786,11 @@ guiTypes = {
 			expandedWindow = {
 				name = "expanded_window"
 				position = { x = -100 y = 0 }
-				show_position = { x = 100 y = 0 }
+				show_position = { x = 112 y = -6 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 200
-				size = { width = 200 height = 500 }
+				size = { width = 478 height = 631 }
 				verticalScrollbar = "right_vertical_slider"
 				#priority = 100
 				defaultSelection = yes
@@ -806,10 +806,22 @@ guiTypes = {
 						name = "bg"
 						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 					}
+					# left column
+					instantTextBoxType = {
+						name = "STARBASE_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 2 y = 2 }
+						text = "STARBASE_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}
 					effectbuttonType = {					
 						name = sgm_fleet_effects
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 2 }
+						position = { x = 2 y = 39 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_fleet_effects
@@ -821,7 +833,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = delete_fleet
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 39 }
+						position = { x = 2 y = 76 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = delete_fleet
@@ -833,7 +845,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_assume_fleet_control
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 224 }
+						position = { x = 2 y = 113 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_assume_fleet_control
@@ -844,7 +856,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_return_fleet_control
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 224 }
+						position = { x = 2 y = 113 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_return_fleet_control
@@ -855,7 +867,7 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_play_as_owner
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 261 }
+						position = { x = 2 y = 150 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_play_as_owner
@@ -866,14 +878,38 @@ guiTypes = {
 					effectbuttonType = {					
 						name = sgm_return_to_gm
 						quadTextureSprite = "GFX_standard_button_142_34_button"
-						position = { x = 2 y = 261 }
+						position = { x = 2 y = 150 }
 						scale = 1
 						buttonFont = malgun_goth_24
 						buttonText = sgm_return_to_gm
 						orientation = UPPER_LEFT
 						effect = sgm_return_to_gm
 			#			shortCut = j
-					}					
+					}
+					# middle column
+					instantTextBoxType = {
+						name = "COUNTRY_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 148 y = 2 }
+						text = "COUNTRY_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}
+					# right column
+					instantTextBoxType = {
+						name = "SYSTEM_EFFECTS"
+						font = "malgun_goth_24"
+						position = { x = 294 y = 2 }
+						text = "SYSTEM_EFFECTS"
+						maxWidth = 142
+						maxHeight = 34
+						fixedSize = yes
+						format = center
+						orientation = UPPER_LEFT
+					}										
 				}
 			}
 		}
