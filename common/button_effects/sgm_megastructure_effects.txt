@@ -11,19 +11,6 @@ sgm_megastructure_effects = {
 	}
 }
 
-sgm_set_owner_target_country = {
-	potential = {
-		is_gm = yes
-	}
-	allow = {
-		exists = event_target:target_country
-	}
-
-	effect = {
-		set_owner = event_target:target_country
-	}
-}
-
 sgm_delete_megastructure = {
 	potential = {
 		is_gm = yes
