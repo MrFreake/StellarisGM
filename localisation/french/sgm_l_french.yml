@@ -1,0 +1,5 @@
+﻿l_french:
+ sgm_galcom.1.name: "$RESOLUTIONS$"
+ sgm_galcom.1.desc: "Immediately pass resolution being voted on. If resolution is targeted the target country will be [this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!."
+ sgm_galcom.1.a: "OK (TARGET: [this.GetName_target_country_GetRealName]§G[target_country.GetRealName])§!"
+ sgm_galcom.1.b: "$CANCEL$"
