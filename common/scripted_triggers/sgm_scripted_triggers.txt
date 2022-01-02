@@ -26,3 +26,13 @@ is_gm = {
         }
     }
 }
+
+is_fleet = {
+    OR = { 
+        num_ships > 1
+        any_owned_ship = {
+            is_civilian = yes
+        }
+    }
+}
+

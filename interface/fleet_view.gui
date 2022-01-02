@@ -303,7 +303,30 @@ guiTypes = {
 							fixedSize = yes
 							format = center
 							orientation = UPPER_LEFT
-						}					
+						}
+						effectbuttonType = {					
+							name = sgm_upgrade_starbase
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 39 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_upgrade_starbase
+							orientation = UPPER_LEFT
+							effect = sgm_upgrade_starbase
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_modify_starbase
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 76 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_modify_starbase
+							orientation = UPPER_LEFT
+							effect = sgm_modify_starbase
+				#			shortCut = j
+						}
+											
 					}
 				}
 			}
