@@ -525,12 +525,6 @@ sgm_add_planet_modifier = {
 			}
 		}
 	}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-=======
->>>>>>> main
 }
 
 sgm_create_GM_constructor = {
@@ -554,10 +548,6 @@ sgm_create_GM_constructor = {
 		}
 	}
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
 
 sgm_create_starbase = {
 	potential = {
