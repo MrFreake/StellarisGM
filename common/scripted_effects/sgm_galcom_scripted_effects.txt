@@ -1,1004 +1,1212 @@
 # Grabs what resolution is being voted on and passes on as parameter to pass effect.
 # Accepts event target name as optional TARGET parameter for targeted resolutions.
 # Example:
-# sgm_galcom_pass_resolution = {
+# sgm_galcom_resolve_resolution = {
+# 	RESOLVE = pass
 # 	TARGET = target_country
 # }
+# sgm_galcom_resolve_resolution = {
+# 	RESOLVE = fail
+# }
 #
-sgm_galcom_pass_resolution = {
+sgm_galcom_resolve_resolution = {
 	switch = {
 		trigger = is_voting_on_resolution
 		# 00_resolutions.txt
 		resolution_galactic_market_form = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_form
 			}
 		}
 		resolution_ecology_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_repeal_1
 			}
 		}
 		resolution_ecology_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_repeal_2
 			}
 		}
 		resolution_ecology_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_repeal_3
 			}
 		}
 		resolution_ecology_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_repeal_4
 			}
 		}
 		resolution_ecology_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_repeal_5
 			}
 		}
 		resolution_ecology_recycling_initiatives = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_recycling_initiatives
 			}
 		}
 		resolution_ecology_natural_sanctuaries = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_natural_sanctuaries
 			}
 		}
 		resolution_ecology_integrated_gardens = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_integrated_gardens
 			}
 		}
 		resolution_ecology_environmental_control_board = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_environmental_control_board
 			}
 		}
 		resolution_ecology_paradise_initiative = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_ecology_paradise_initiative
 			}
 		}
 		resolution_galacticstudies_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_repeal_1
 			}
 		}
 		resolution_galacticstudies_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_repeal_2
 			}
 		}
 		resolution_galacticstudies_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_repeal_3
 			}
 		}
 		resolution_galacticstudies_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_repeal_4
 			}
 		}
 		resolution_galacticstudies_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_repeal_5
 			}
 		}
 		resolution_galacticstudies_cooperative_research_channels = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_cooperative_research_channels
 			}
 		}
 		resolution_galacticstudies_astral_studies_network = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_astral_studies_network
 			}
 		}
 		resolution_galacticstudies_advanced_xenostudies = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_advanced_xenostudies
 			}
 		}
 		resolution_galacticstudies_ethical_guideline_refactoring = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_ethical_guideline_refactoring
 			}
 		}
 		resolution_galacticstudies_extradimensional_experimentation = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticstudies_extradimensional_experimentation
 			}
 		}
 		resolution_commerce_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_repeal_1
 			}
 		}
 		resolution_commerce_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_repeal_2
 			}
 		}
 		resolution_commerce_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_repeal_3
 			}
 		}
 		resolution_commerce_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_repeal_4
 			}
 		}
 		resolution_commerce_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_repeal_5
 			}
 		}
 		resolution_commerce_buzzword_standardization = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_buzzword_standardization
 			}
 		}
 		resolution_commerce_leveraged_privateering = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_leveraged_privateering
 			}
 		}
 		resolution_commerce_underdeveloped_system_utilization = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_underdeveloped_system_utilization
 			}
 		}
 		resolution_commerce_holistic_asset_coordination = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_holistic_asset_coordination
 			}
 		}
 		resolution_commerce_profit_maximization_engines = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_commerce_profit_maximization_engines
 			}
 		}
 		resolution_industry_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_repeal_1
 			}
 		}
 		resolution_industry_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_repeal_2
 			}
 		}
 		resolution_industry_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_repeal_3
 			}
 		}
 		resolution_industry_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_repeal_4
 			}
 		}
 		resolution_industry_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_repeal_5
 			}
 		}
 		resolution_industry_regulatory_facilitation = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_regulatory_facilitation
 			}
 		}
 		resolution_industry_collective_waste_management = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_collective_waste_management
 			}
 		}
 		resolution_industry_building_a_better_tomorrow = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_building_a_better_tomorrow
 			}
 		}
 		resolution_industry_environmental_ordinance_waivers = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_environmental_ordinance_waivers
 			}
 		}
 		resolution_industry_project_cornucopia = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_industry_project_cornucopia
 			}
 		}
 		resolution_greatergood_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_repeal_1
 			}
 		}
 		resolution_greatergood_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_repeal_2
 			}
 		}
 		resolution_greatergood_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_repeal_3
 			}
 		}
 		resolution_greatergood_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_repeal_4
 			}
 		}
 		resolution_greatergood_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_repeal_5
 			}
 		}
 		resolution_greatergood_workers_rights = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_workers_rights
 			}
 		}
 		resolution_greatergood_five_year_plans = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_five_year_plans
 			}
 		}
 		resolution_greatergood_greater_than_ourselves = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_greater_than_ourselves
 			}
 		}
 		resolution_greatergood_balance_in_the_middle = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_balance_in_the_middle
 			}
 		}
 		resolution_greatergood_universal_prosperity_mandate = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_greatergood_universal_prosperity_mandate
 			}
 		}
 		resolution_mutualdefense_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_repeal_1
 			}
 		}
 		resolution_mutualdefense_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_repeal_2
 			}
 		}
 		resolution_mutualdefense_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_repeal_3
 			}
 		}
 		resolution_mutualdefense_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_repeal_4
 			}
 		}
 		resolution_mutualdefense_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_repeal_5
 			}
 		}
 		resolution_mutualdefense_the_readied_shield = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_the_readied_shield
 			}
 		}
 		resolution_mutualdefense_military_readiness_act = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_military_readiness_act
 			}
 		}
 		resolution_mutualdefense_enemy_of_my_enemy = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_enemy_of_my_enemy
 			}
 		}
 		resolution_mutualdefense_castigation_proclamation = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_castigation_proclamation
 			}
 		}
 		resolution_mutualdefense_renegade_containment = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_renegade_containment
 			}
 		}
 		resolution_mutualdefense_castigation_denouncement = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_mutualdefense_castigation_denouncement
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_council_denouncement = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_council_denouncement
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_rulesofwar_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_repeal_1
 			}
 		}
 		resolution_rulesofwar_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_repeal_2
 			}
 		}
 		resolution_rulesofwar_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_repeal_3
 			}
 		}
 		resolution_rulesofwar_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_repeal_4
 			}
 		}
 		resolution_rulesofwar_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_repeal_5
 			}
 		}
 		resolution_rulesofwar_guardian_angels = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_guardian_angels
 			}
 		}
 		resolution_rulesofwar_reverence_for_life = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_reverence_for_life
 			}
 		}
 		resolution_rulesofwar_independent_tribunals = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_independent_tribunals
 			}
 		}
 		resolution_rulesofwar_last_resort_doctrine = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_last_resort_doctrine
 			}
 		}
 		resolution_rulesofwar_demobilization_initiative = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_rulesofwar_demobilization_initiative
 			}
 		}
 		resolution_divinity_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_repeal_1
 			}
 		}
 		resolution_divinity_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_repeal_2
 			}
 		}
 		resolution_divinity_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_repeal_3
 			}
 		}
 		resolution_divinity_repeal_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_repeal_4
 			}
 		}
 		resolution_divinity_repeal_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_repeal_5
 			}
 		}
 		resolution_divinity_comfort_the_fallen = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_comfort_the_fallen
 			}
 		}
 		resolution_divinity_tithe_on_the_soulless = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_tithe_on_the_soulless
 			}
 		}
 		resolution_divinity_right_to_work = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_right_to_work
 			}
 		}
 		resolution_divinity_silence_the_soulless = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_silence_the_soulless
 			}
 		}
 		resolution_divinity_a_defined_purpose = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_divinity_a_defined_purpose
 			}
 		}
 		resolution_galacticreforms_abolish_council = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_abolish_council
 			}
 		}
 		resolution_galacticreforms_form_council = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_form_council
 			}
 		}
 		resolution_galacticreforms_council_size_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_council_size_1
 			}
 		}
 		resolution_galacticreforms_council_size_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_council_size_2
 			}
 		}
 		resolution_galacticreforms_council_size_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_council_size_3
 			}
 		}
 		resolution_galacticreforms_council_size_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_council_size_4
 			}
 		}
 		resolution_galacticreforms_council_size_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_council_size_5
 			}
 		}
 		resolution_galacticreforms_permanent_seat = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_permanent_seat
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_galacticreforms_revoke_permanent_seat = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_revoke_permanent_seat
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_galacticreforms_enable_council_veto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_enable_council_veto
 			}
 		}
 		resolution_galacticreforms_disable_council_veto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_disable_council_veto
 			}
 		}
 		resolution_galacticreforms_enable_council_denouncement = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_enable_council_denouncement
 			}
 		}
 		resolution_galacticreforms_disable_council_denouncement = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_disable_council_denouncement
 			}
 		}
 		resolution_sanctions_tech_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_repeal_1
 			}
 		}
 		resolution_sanctions_tech_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_repeal_2
 			}
 		}
 		resolution_sanctions_tech_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_repeal_3
 			}
 		}
 		resolution_sanctions_tech_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_1
 			}
 		}
 		resolution_sanctions_tech_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_2
 			}
 		}
 		resolution_sanctions_tech_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_tech_3
 			}
 		}
 		resolution_sanctions_economic_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_repeal_1
 			}
 		}
 		resolution_sanctions_economic_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_repeal_2
 			}
 		}
 		resolution_sanctions_economic_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_repeal_3
 			}
 		}
 		resolution_sanctions_economic_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_1
 			}
 		}
 		resolution_sanctions_economic_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_2
 			}
 		}
 		resolution_sanctions_economic_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_economic_3
 			}
 		}
 		resolution_sanctions_military_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_repeal_1
 			}
 		}
 		resolution_sanctions_military_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_repeal_2
 			}
 		}
 		resolution_sanctions_military_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_repeal_3
 			}
 		}
 		resolution_sanctions_military_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_1
 			}
 		}
 		resolution_sanctions_military_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_2
 			}
 		}
 		resolution_sanctions_military_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_military_3
 			}
 		}
 		resolution_sanctions_administrative_repeal_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_repeal_1
 			}
 		}
 		resolution_sanctions_administrative_repeal_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_repeal_2
 			}
 		}
 		resolution_sanctions_administrative_repeal_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_repeal_3
 			}
 		}
 		resolution_sanctions_administrative_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_1
 			}
 		}
 		resolution_sanctions_administrative_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_2
 			}
 		}
 		resolution_sanctions_administrative_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_sanctions_administrative_3
 			}
 		}
 		resolution_galactic_focus_crisis_prethoryn = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_crisis_prethoryn
 			}
 		}
 		resolution_galactic_focus_crisis_unbidden = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_crisis_unbidden
 			}
 		}
 		resolution_galactic_focus_crisis_contingency = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_crisis_contingency
 			}
 		}
 		resolution_galactic_focus_crisis_greatkhan = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_crisis_greatkhan
 			}
 		}
 		resolution_galactic_focus_crisis_nanites = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_crisis_nanites
 			}
 		}
 		resolution_galactic_focus_war_in_heaven_support_side_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_war_in_heaven_support_side_1
 			}
 		}
 		resolution_galactic_focus_war_in_heaven_support_side_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_war_in_heaven_support_side_2
 			}
 		}
 		resolution_galactic_focus_war_in_heaven_denounce_both = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_focus_war_in_heaven_denounce_both
 			}
 		}
 		resolution_tiyanki_conservation_act = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_tiyanki_conservation_act
 			}
 		}
 		resolution_repeal_tiyanki_conservation_act = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_repeal_tiyanki_conservation_act
 			}
 		}
 		resolution_tiyanki_pest_control = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_tiyanki_pest_control
 			}
 		}
 		resolution_repeal_tiyanki_pest_control = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_repeal_tiyanki_pest_control
 			}
 		}
 		resolution_amoeba_conservation_act = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_amoeba_conservation_act
 			}
 		}
 		resolution_repeal_amoeba_conservation_act = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_repeal_amoeba_conservation_act
 			}
 		}
 		resolution_galactic_market_ban_sentient_organic_slave_trade = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_ban_sentient_organic_slave_trade
 			}
 		}
 		resolution_galactic_market_repeal_sentient_organic_slave_trade = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_repeal_sentient_organic_slave_trade
 			}
 		}
 		resolution_galactic_market_ban_sentient_slave_trade = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_ban_sentient_slave_trade
 			}
 		}
 		resolution_galactic_market_allow_sentient_slave_trade = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_allow_sentient_slave_trade
 			}
 		}
 		resolution_galactic_market_relocate = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_market_relocate
 			}
 		}
 		# 01_resolutions_nemesis.txt
 		resolution_declare_crisis = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_declare_crisis
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_repeal_crisis = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_repeal_crisis
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_declare_crisis_empire = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_declare_crisis_empire
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_repeal_crisis_empire = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_repeal_crisis_empire
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_galacticreforms_nominate_custodian = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_nominate_custodian
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_galacticreforms_unseat_custodian = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galacticreforms_unseat_custodian
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_custodian_form_empire = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_form_empire
 			}
 		}
 		resolution_custodian_united_front = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_united_front
 			}
 		}
 		resolution_custodian_galactic_mobilization = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_galactic_mobilization
 			}
 		}
 		resolution_custodian_galactic_standard = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_galactic_standard
 			}
 		}
 		resolution_custodian_anti_piracy = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_anti_piracy
 			}
 		}
 		resolution_custodian_extend_custodianship = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_extend_custodianship
 			}
 		}
 		resolution_custodian_perpetual_custodianship = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_perpetual_custodianship
 			}
 		}
 		resolution_custodian_end_custodianship = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_end_custodianship
 			}
 		}
 		resolution_custodian_gdf = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_gdf
 			}
 		}
 		resolution_custodian_expand_gdf = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_expand_gdf
 			}
 		}
 		resolution_custodian_disband_gdf = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_disband_gdf
 			}
 		}
 		resolution_custodian_ina = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_ina
 			}
 		}
 		resolution_custodian_disband_ina = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_disband_ina
 			}
 		}
 		resolution_custodian_gto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_gto
 			}
 		}
 		resolution_custodian_disband_gto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_disband_gto
 			}
 		}
 		resolution_custodian_galpol = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_galpol
 			}
 		}
 		resolution_custodian_disband_galpol = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_custodian_disband_galpol
 			}
 		}
 		resolution_galactic_empire_imperial_crusade = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_galactic_empire_imperial_crusade
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_emperor_united_front = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_united_front
 			}
 		}
 		resolution_emperor_imperial_armada = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_imperial_armada
 			}
 		}
 		resolution_emperor_expand_ia = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_expand_ia
 			}
 		}
 		resolution_emperor_imperial_legions = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_imperial_legions
 			}
 		}
 		resolution_emperor_ina = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_ina
 			}
 		}
 		resolution_emperor_disband_ina = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_disband_ina
 			}
 		}
 		resolution_emperor_gto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_gto
 			}
 		}
 		resolution_emperor_disband_gto = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_disband_gto
 			}
 		}
 		resolution_emperor_isd = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_isd
 			}
 		}
 		resolution_emperor_imperial_charter = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_imperial_charter
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_emperor_revoke_imperial_charter = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_revoke_imperial_charter
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_emperor_abolish_council = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_abolish_council
 			}
 		}
 		resolution_emperor_restore_council = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_restore_council
 			}
 		}
 		resolution_emperor_council_size_1 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_council_size_1
 			}
 		}
 		resolution_emperor_council_size_2 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_council_size_2
 			}
 		}
 		resolution_emperor_council_size_3 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_council_size_3
 			}
 		}
 		resolution_emperor_council_size_4 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_council_size_4
 			}
 		}
 		resolution_emperor_council_size_5 = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_council_size_5
 			}
 		}
 		resolution_emperor_permanent_seat = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_permanent_seat
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_emperor_revoke_permanent_seat = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_revoke_permanent_seat
 				[[TARGET]TARGETED = $TARGET$]
 			}
 		}
 		resolution_emperor_trial_of_advancement = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_trial_of_advancement
 			}
 		}
 		resolution_emperor_by_appointment = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_by_appointment
 			}
 		}
 		resolution_emperor_by_election = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_by_election
 			}
 		}
 		resolution_emperor_pax_galactica = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_pax_galactica
 			}
 		}
 		resolution_emperor_repeal_pax_galactica = {
-			sgm_galcom_pass_resolution_execute = {
+			sgm_galcom_resolve_resolution_execute = {
+				[[RESOLVE]RESOLVED = $RESOLVE$]
 				NAME = resolution_emperor_repeal_pax_galactica
 			}
 		}
 		# If none of the above is true then proceeds to fallback effect.
 		default = {
+			sgm_galcom_resolve_resolution_fallback = yes
 		}
 	}
 }
 
 # Passes resolution being voted on.
-sgm_galcom_pass_resolution_execute = {
+sgm_galcom_resolve_resolution_execute = {
+	[[RESOLVED]
+	set_timed_country_flag = {
+		flag = sgm_galcom_resolve_resolution_resolved_$RESOLVED$
+		days = 1
+	}
+	]
 	[[NAME]
 	set_timed_country_flag = {
-		flag = sgm_galcom_pass_resolution_name_$NAME$
+		flag = sgm_galcom_resolve_resolution_name_$NAME$
 		days = 1
 	}
 	]
 	[[TARGETED]
 	set_timed_country_flag = {
-		flag = sgm_galcom_pass_resolution_targeted_$TARGETED$
+		flag = sgm_galcom_resolve_resolution_targeted_$TARGETED$
 		days = 1
 	}
 	]
 	switch = {
 		trigger = has_country_flag
-		sgm_galcom_pass_resolution_targeted_$TARGETED$ = {
-			pass_targeted_resolution = {
-				resolution = $NAME$
-				target = event_target:$TARGETED$
-			}
+		sgm_galcom_resolve_resolution_resolved_fail = {
+			cancel_resolution = $NAME$
 		}
-		# If TARGETED parameter is not specified assume resolution is not targeted.
+		# default: pass
 		default = {
-			pass_resolution_no_cooldown = $NAME$
+			switch = {
+				trigger = has_country_flag
+				sgm_galcom_resolve_resolution_targeted_$TARGETED$ = {
+					pass_targeted_resolution = {
+						resolution = $NAME$
+						target = event_target:$TARGETED$
+					}
+				}
+				# If TARGETED parameter is not specified assume resolution is not targeted.
+				default = {
+					pass_resolution_no_cooldown = $NAME$
+				}
+			}
 		}
 	}
 }
 
-sgm_galcom_pass_resolution_fallback = {
+sgm_galcom_resolve_resolution_fallback = {
 }

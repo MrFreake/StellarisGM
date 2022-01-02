@@ -11,3 +11,17 @@ sgm_galcom_pass_resolution_button = {
 		}
 	}
 }
+
+sgm_galcom_fail_resolution_button = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		is_voting_on_resolution = any
+	}
+	effect = {
+		country_event = {
+			id = sgm_galcom.2			# Confirmation window.
+		}
+	}
+}
