@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ sgm_galcom.1.name:0 "$RESOLUTIONS$"
+ sgm_galcom.1.desc:0 "Immediately pass resolution being voted on. If resolution is targeted the target country will be [GetName_target_country_GetRealName][target_country.GetRealName]."
+ sgm_galcom.1.a:0 "OK. Optional TARGET: [GetName_target_country_GetRealName]."
+ sgm_galcom.1.b:0 "$CANCEL$"

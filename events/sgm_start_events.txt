@@ -77,6 +77,14 @@ event = {
     desc = gm_country_created_desc
     picture = GFX_evt_ancient_artifact
 
+    trigger = {
+        NOT = {
+            any_country = {
+                is_country_type = sgm_game_master
+            }
+        }
+    }
+
     immediate = {
         random_galaxy_species = {
             save_event_target_as = gm_species
@@ -106,6 +114,34 @@ event = {
                 }
                 every_country = {
                     establish_communications_no_message = prev
+                    prev = { 
+                        add_intel = { amount = 100 who = prev } 
+                        add_intel_report = {
+                            category = military
+                            level = 4
+                            who = prev
+                        }
+                        add_intel_report = {
+                            category = government
+                            level = 4
+                            who = prev
+                        }
+                        add_intel_report = {
+                            category = economy
+                            level = 4
+                            who = prev
+                        }
+                        add_intel_report = {
+                            category = technology
+                            level = 4
+                            who = prev
+                        }
+                        add_intel_report = {
+                            category = diplomacy
+                            level = 4
+                            who = prev
+                        }
+                    }
                 }
                 add_resource = {
                     energy = 9999999
@@ -127,7 +163,8 @@ event = {
                     which = mulitplier
                     value = 1
                 }
-             }
+                set_country_flag = from@this
+            }
         }
     }    
 }
