@@ -183,6 +183,11 @@ sgm_set_owner_target_country = {
 	potential = {
 		is_gm = yes
 		exists = owner
+		NOT = {
+			owner = {
+				is_same_value = event_target:target_country
+			}
+		}
 	}
 	allow = { }
 	effect = {
