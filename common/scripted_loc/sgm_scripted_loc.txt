@@ -15,3 +15,38 @@ defined_text = {
 		localization_key = HOME_BASE_NONE
 	}
 }
+
+defined_text = {
+	name = GetName_sgm_fleet_3_teleport_radius
+	text = {
+		trigger = {
+			has_global_flag = sgm_teleport_fleet_single
+		}
+		localization_key = FLEET
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_teleport_fleet_military
+		}
+		localization_key = OUTLINER_FLEETS
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_teleport_fleet_civilian
+		}
+		localization_key = OUTLINER_CIVILIAN_FLEETS
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_teleport_fleet_all
+		}
+		localization_key =  EVERY_FLEET_IN_SYSTEM_EFFECT
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_teleport_fleet_100_radius
+		}
+		localization_key = DEBUG_AI_FLEETS_NEARBY
+	}
+	default = FLEET
+}

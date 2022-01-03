@@ -547,7 +547,6 @@ sgm_create_GM_constructor = {
 			}
 		}
 	}
-}
 
 sgm_create_starbase = {
 	potential = {
@@ -593,3 +592,4 @@ sgm_create_starbase_target_country = {
 		}
 	}
 }
+
