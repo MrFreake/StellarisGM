@@ -326,6 +326,17 @@ guiTypes = {
 							effect = sgm_modify_starbase
 				#			shortCut = j
 						}
+						effectbuttonType = {					
+							name = teleport_fleet
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 213 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = teleport_fleet
+							orientation = UPPER_LEFT
+							effect = teleport_fleet
+				#			shortCut = j
+						}
 											
 					}
 				}
