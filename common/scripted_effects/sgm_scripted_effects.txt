@@ -456,9 +456,30 @@ sgm_teleport_fleet_effect = {
 			set_location = event_target:$TARGET$
 		}
 	}
+	sgm_teleport_fleet_effect_cleanup = yes
+}
+
+sgm_teleport_fleet_effect_cleanup = {
 	remove_global_flag = sgm_teleport_fleet_single
 	remove_global_flag = sgm_teleport_fleet_military
 	remove_global_flag = sgm_teleport_fleet_civilian
 	remove_global_flag = sgm_teleport_fleet_all
 	remove_global_flag = sgm_teleport_fleet_100_radius
-}
+	clear_global_event_target = target_megastructure_solar_system
+	clear_global_event_target = target_country_capital_scope_solar_system
+	clear_global_event_target = target_country_capital_scope
+	clear_global_event_target = target_country_capital_scope_random_planet
+	clear_global_event_target = target_country_capital_scope_random_fleet
+	clear_global_event_target = target_planet_solar_system
+	clear_global_event_target = target_fleet_solar_system
+	clear_global_event_target = target_system_primary_star
+	clear_global_event_target = target_country
+	clear_global_event_target = target_country
+	clear_global_event_target = target_country
+	clear_global_event_target = target_country			# Need to clear this one multiple times. I do not know why and do not want to know.
+	clear_global_event_target = target_fleet
+	clear_global_event_target = target_planet
+	clear_global_event_target = target_megastructure
+	clear_global_event_target = target_system
+	clear_global_event_target = target_ambient_object
+} 

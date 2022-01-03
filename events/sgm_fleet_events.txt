@@ -261,7 +261,7 @@ fleet_event = {								# Opens teleport fleet menu
 			}
 			event_target:target_country = {
 				capital_scope = {
-					save_global_event_target_as = target_country_capital_scope
+					save_global_event_target_as = target_country_capital_scope 			# Also used in teleport script below.
 					solar_system = {
 						save_global_event_target_as = target_country_capital_scope_solar_system
 					}
@@ -369,20 +369,15 @@ fleet_event = {								# Opens teleport fleet menu
 		trigger = {
 			exists = event_target:target_country
 		}
-		remove_global_flag = sgm_teleport_fleet_single
-		remove_global_flag = sgm_teleport_fleet_military
-		remove_global_flag = sgm_teleport_fleet_civilian
-		remove_global_flag = sgm_teleport_fleet_all
-		remove_global_flag = sgm_teleport_fleet_100_radius
 		clear_orders = yes
 		clear_fleet_actions = this
 		if = {
 			limit = {
 				event_target:target_country = {
-					exists =  capital_scope
+					exists = capital_scope
 				}
 			}
-			set_location = event_target:target_country.capital_scope
+			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope }
 		}
 		else_if = {
 			limit = {
@@ -392,11 +387,10 @@ fleet_event = {								# Opens teleport fleet menu
 			}
 			event_target:target_country = {
 				random_owned_planet = {
-					prevprev = {
-						set_location = prev
-					}
+					save_global_event_target_as = target_country_capital_scope_random_planet
 				}
 			}
+			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_planet }
 		}
 		else_if = {
 			limit = {
@@ -406,11 +400,10 @@ fleet_event = {								# Opens teleport fleet menu
 			}
 			event_target:target_country = {
 				random_owned_fleet = {
-					prevprev = {
-						set_location = prev
-					}
+					save_global_event_target_as = target_country_capital_scope_random_fleet
 				}
 			}
+			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_fleet }
 		}
 		
 	}
