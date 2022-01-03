@@ -9,22 +9,22 @@
 
 # Amenities
 gm_pm_amenities_add = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_amenities_add.dds"
 	icon_frame = 1
 	planet_amenities_add = 5
 }
 gm_pm_amenities_subtract = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_amenities_subtract.dds"
 	icon_frame = 3
 	planet_amenities_add = -5 
 }
 gm_pm_amenities_multiply = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_amenities_multiply.dds"
 	icon_frame = 1
 	planet_amenities_mult = 0.05
 }
 gm_pm_amenities_divide = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_amenities_divide.dds"
 	icon_frame = 1
 	planet_amenities_mult = -0.05
 }
@@ -53,24 +53,24 @@ gm_pm_crime_divide = {
 
 # Growth Rate
 gm_pm_growthrate_bonus = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_growthrate_bonus.dds"
 	icon_frame = 1
 	pop_growth_speed = 0.05
 }
 gm_pm_growthrate_penalty = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_growthrate_penalty.dds"
 	icon_frame = 3
 	pop_growth_speed = -0.05
 }
 
 # Habitability
 gm_pm_habitability_bonus = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_habitability_bonus.dds"
 	icon_frame = 1
 	pop_environment_tolerance = 0.05
 }
 gm_pm_habitability_penalty = {
-	icon = "gfx/interface/icons/planet_modifiers/iconnamehere.dds"
+	icon = "gfx/interface/icons/planet_modifiers/gm_pm_habitability_penalty.dds"
 	icon_frame = 3
 	pop_environment_tolerance = -0.05
 }
