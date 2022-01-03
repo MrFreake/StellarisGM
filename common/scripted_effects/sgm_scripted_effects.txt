@@ -379,6 +379,9 @@ sgm_teleport_fleet_effect = {
 						is_mobile = yes
 						OR = {
 							is_ship_class = shipclass_military
+							is_ship_class = shipclass_military_special
+							is_ship_size = juggernaut
+							is_ship_size = star_eater
 							fleet_power > 0
 						}
 					}
@@ -389,64 +392,70 @@ sgm_teleport_fleet_effect = {
 			}
 		}
 		sgm_teleport_fleet_civilian = {
-			solar_system = {
-				every_fleet_in_system = {
-					limit = {
-						exists = owner
-						owner = {
-							is_same_value = prevprevprev.owner
+			fromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
+							OR = {
+								is_ship_class = shipclass_colonizer
+								is_ship_class = shipclass_constructor
+								is_ship_class = shipclass_science_ship
+							}
 						}
-						is_in_combat = no
-						is_mobile = yes
-						OR = {
-							is_ship_class = shipclass_colonizer
-							is_ship_class = shipclass_constructor
-							is_ship_class = shipclass_science_ship
-						}
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
 					}
-					clear_orders = yes
-					clear_fleet_actions = this
-					set_location = event_target:$TARGET$
 				}
 			}
 		}
 		sgm_teleport_fleet_all = {
-			solar_system = {
-				every_fleet_in_system = {
-					limit = {
-						exists = owner
-						owner = {
-							is_same_value = prevprevprev.owner
+			fromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
 						}
-						is_in_combat = no
-						is_mobile = yes
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
 					}
-					clear_orders = yes
-					clear_fleet_actions = this
-					set_location = event_target:$TARGET$
 				}
 			}
 		}
 		sgm_teleport_fleet_100_radius = {
-			solar_system = {
-				every_fleet_in_system = {
-					limit = {
-						exists = owner
-						owner = {
-							is_same_value = prevprevprev.owner
+			fromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
+							distance = {
+								source = prevprev
+								min_distance >= 0
+								max_distance <= 100
+								same_solar_system = yes
+							}
 						}
-						is_in_combat = no
-						is_mobile = yes
-						distance = {
-							source = prevprev
-							min_distance >= 0
-							max_distance <= 100
-							same_solar_system = yes
-						}
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
 					}
-					clear_orders = yes
-					clear_fleet_actions = this
-					set_location = event_target:$TARGET$
 				}
 			}
 		}
@@ -465,21 +474,4 @@ sgm_teleport_fleet_effect_cleanup = {
 	remove_global_flag = sgm_teleport_fleet_civilian
 	remove_global_flag = sgm_teleport_fleet_all
 	remove_global_flag = sgm_teleport_fleet_100_radius
-	clear_global_event_target = target_megastructure_solar_system
-	clear_global_event_target = target_country_capital_scope_solar_system
-	clear_global_event_target = target_country_capital_scope
-	clear_global_event_target = target_country_capital_scope_random_planet
-	clear_global_event_target = target_country_capital_scope_random_fleet
-	clear_global_event_target = target_planet_solar_system
-	clear_global_event_target = target_fleet_solar_system
-	clear_global_event_target = target_system_primary_star
-	clear_global_event_target = target_country
-	clear_global_event_target = target_country
-	clear_global_event_target = target_country
-	clear_global_event_target = target_country			# Need to clear this one multiple times. I do not know why and do not want to know.
-	clear_global_event_target = target_fleet
-	clear_global_event_target = target_planet
-	clear_global_event_target = target_megastructure
-	clear_global_event_target = target_system
-	clear_global_event_target = target_ambient_object
 } 

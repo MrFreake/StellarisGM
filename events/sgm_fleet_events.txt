@@ -235,7 +235,7 @@ country_event = {
 
 }
 
-fleet_event = {								# Opens teleport fleet menu
+country_event = {								# Opens teleport fleet menu
 	id = sgm_fleet.3
 	is_triggered_only = yes
 	title = sgm_fleet.3.name
@@ -317,7 +317,7 @@ fleet_event = {								# Opens teleport fleet menu
 				set_global_flag = sgm_teleport_fleet_military
 			}
 		}
-		fleet_event = {
+		country_event = {
 			id = sgm_fleet.3
 		}
 	}
@@ -326,28 +326,36 @@ fleet_event = {								# Opens teleport fleet menu
 		trigger = {
 			exists = event_target:target_fleet
 		}
-		sgm_teleport_fleet_effect = { TARGET = target_fleet }
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_fleet }
+		}
 	}
 	option = {
 		name = sgm_fleet.3.planet
 		trigger = {
 			exists = event_target:target_planet
 		}
-		sgm_teleport_fleet_effect = { TARGET = target_planet }
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_planet }
+		}
 	}
 	option = {
 		name = sgm_fleet.3.megastructure
 		trigger = {
 			exists = event_target:target_megastructure
 		}
-		sgm_teleport_fleet_effect = { TARGET = target_megastructure }
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_megastructure }
+		}
 	}
 	option = {
 		name = sgm_fleet.3.ambient_object
 		trigger = {
 			exists = event_target:target_ambient_object
 		}
-		sgm_teleport_fleet_effect = { TARGET = target_ambient_object }
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_ambient_object }
+		}
 	}
 	option = {
 		name = sgm_fleet.3.system
@@ -362,22 +370,28 @@ fleet_event = {								# Opens teleport fleet menu
 				save_global_event_target_as = target_system_primary_star
 			}
 		}
-		sgm_teleport_fleet_effect = { TARGET = target_system_primary_star }
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_system_primary_star }
+		}
 	}
 	option = {
 		name = sgm_fleet.3.country
 		trigger = {
 			exists = event_target:target_country
 		}
-		clear_orders = yes
-		clear_fleet_actions = this
+		fromfrom = {
+			clear_orders = yes
+			clear_fleet_actions = this
+		}
 		if = {
 			limit = {
 				event_target:target_country = {
 					exists = capital_scope
 				}
 			}
-			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope }
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope }
+			}
 		}
 		else_if = {
 			limit = {
@@ -390,7 +404,9 @@ fleet_event = {								# Opens teleport fleet menu
 					save_global_event_target_as = target_country_capital_scope_random_planet
 				}
 			}
-			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_planet }
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_planet }
+			}
 		}
 		else_if = {
 			limit = {
@@ -403,7 +419,9 @@ fleet_event = {								# Opens teleport fleet menu
 					save_global_event_target_as = target_country_capital_scope_random_fleet
 				}
 			}
-			sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_fleet }
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_fleet }
+			}
 		}
 		
 	}

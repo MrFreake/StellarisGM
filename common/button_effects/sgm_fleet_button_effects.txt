@@ -89,9 +89,14 @@ teleport_fleet = {
 		is_mobile = yes
 	}
 	
-	effect = {
-        fleet_event = {
-			id = sgm_fleet.3
+	effect = {	
+		from = {
+			country_event = {
+				id = sgm_fleet.3
+				scopes = {
+					from = prev
+				}
+			}
 		}
 	}
 }
