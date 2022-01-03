@@ -416,7 +416,7 @@ sgm_teleport_fleet_effect = {
 			}
 		}
 		sgm_teleport_fleet_all = {
-			fromfrom = {
+			fromfromfrom = {
 				solar_system = {
 					every_fleet_in_system = {
 						limit = {
@@ -435,7 +435,7 @@ sgm_teleport_fleet_effect = {
 			}
 		}
 		sgm_teleport_fleet_100_radius = {
-			fromfrom = {
+			fromfromfromfrom = {
 				solar_system = {
 					every_fleet_in_system = {
 						limit = {
