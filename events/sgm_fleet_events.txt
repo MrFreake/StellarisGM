@@ -232,5 +232,207 @@ country_event = {
 			}
 		}
 	}
-	
+
+}
+
+country_event = {								# Opens teleport fleet menu
+	id = sgm_fleet.3
+	is_triggered_only = yes
+	title = sgm_fleet.3.name
+	desc = sgm_fleet.3.desc
+	picture = GFX_evt_wormhole
+	immediate = {
+		if = {
+			limit = {
+				exists = event_target:target_megastructure
+			}
+			event_target:target_megastructure = {
+				solar_system = {
+					save_global_event_target_as = target_megastructure_solar_system
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:target_country
+				event_target:target_country = {
+					exists = capital_scope
+				}
+			}
+			event_target:target_country = {
+				capital_scope = {
+					save_global_event_target_as = target_country_capital_scope 			# Also used in teleport script below.
+					solar_system = {
+						save_global_event_target_as = target_country_capital_scope_solar_system
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:target_planet
+			}
+			event_target:target_planet = {
+				solar_system = {
+					save_global_event_target_as = target_planet_solar_system
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:target_fleet
+			}
+			event_target:target_fleet = {
+				solar_system = {
+					save_global_event_target_as = target_fleet_solar_system
+				}
+			}
+		}
+	}
+	option = {
+		name = sgm_fleet.3.teleport_radius
+		switch = {
+			trigger = has_global_flag
+			sgm_teleport_fleet_single = {
+				remove_global_flag = sgm_teleport_fleet_single
+				set_global_flag = sgm_teleport_fleet_military
+			}
+			sgm_teleport_fleet_military = {
+				remove_global_flag = sgm_teleport_fleet_military
+				set_global_flag = sgm_teleport_fleet_civilian
+			}
+			sgm_teleport_fleet_civilian = {
+				remove_global_flag = sgm_teleport_fleet_civilian
+				set_global_flag = sgm_teleport_fleet_all
+			}
+			sgm_teleport_fleet_all = {
+				remove_global_flag = sgm_teleport_fleet_all
+				set_global_flag = sgm_teleport_fleet_100_radius
+			}
+			sgm_teleport_fleet_100_radius = {
+				remove_global_flag = sgm_teleport_fleet_100_radius
+				set_global_flag = sgm_teleport_fleet_single
+			}
+			default = {
+				set_global_flag = sgm_teleport_fleet_military
+			}
+		}
+		country_event = {
+			id = sgm_fleet.3
+		}
+	}
+	option = {
+		name = sgm_fleet.3.fleet
+		trigger = {
+			exists = event_target:target_fleet
+		}
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_fleet }
+		}
+	}
+	option = {
+		name = sgm_fleet.3.planet
+		trigger = {
+			exists = event_target:target_planet
+		}
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_planet }
+		}
+	}
+	option = {
+		name = sgm_fleet.3.megastructure
+		trigger = {
+			exists = event_target:target_megastructure
+		}
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_megastructure }
+		}
+	}
+	option = {
+		name = sgm_fleet.3.ambient_object
+		trigger = {
+			exists = event_target:target_ambient_object
+		}
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_ambient_object }
+		}
+	}
+	option = {
+		name = sgm_fleet.3.system
+		trigger = {
+			exists = event_target:target_system
+		}
+		event_target:target_system = {
+			random_system_planet = {
+				limit = {
+					is_primary_star = yes
+				}
+				save_global_event_target_as = target_system_primary_star
+			}
+		}
+		fromfrom = {
+			sgm_teleport_fleet_effect = { TARGET = target_system_primary_star }
+		}
+	}
+	option = {
+		name = sgm_fleet.3.country
+		trigger = {
+			exists = event_target:target_country
+		}
+		fromfrom = {
+			clear_orders = yes
+			clear_fleet_actions = this
+		}
+		if = {
+			limit = {
+				event_target:target_country = {
+					exists = capital_scope
+				}
+			}
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope }
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:target_country = {
+					num_owned_planets > 0 
+				}
+			}
+			event_target:target_country = {
+				random_owned_planet = {
+					save_global_event_target_as = target_country_capital_scope_random_planet
+				}
+			}
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_planet }
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:target_country = {
+					num_fleets > 0
+				}
+			}
+			event_target:target_country = {
+				random_owned_fleet = {
+					save_global_event_target_as = target_country_capital_scope_random_fleet
+				}
+			}
+			fromfrom = {
+				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_fleet }
+			}
+		}
+		
+	}
+	option = {
+		name = CANCEL
+		hidden_effect = {
+			remove_global_flag = sgm_teleport_fleet_single
+			remove_global_flag = sgm_teleport_fleet_military
+			remove_global_flag = sgm_teleport_fleet_civilian
+			remove_global_flag = sgm_teleport_fleet_all
+			remove_global_flag = sgm_teleport_fleet_100_radius
+		}
+	}
 }
