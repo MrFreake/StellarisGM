@@ -1,0 +1,449 @@
+namespace = sgm_bounty
+
+country_event = {
+	id = sgm_bounty.1
+	is_triggered_only = yes
+	title = sgm_bounty_1
+	desc = sgm_bounty_1_desc
+	diplomatic = yes
+	custom_gui = "sgm_BountyEventWindow"
+	picture_event_data = {
+		portrait = event_target:position_0.owner_main_species
+		room = enclave_curator_room
+	}
+
+	immediate = {}
+
+	option = {
+		NAME = OK
+		hidden_effect = {
+			clear_global_event_target = position_0
+			clear_global_event_target = position_1
+			clear_global_event_target = position_2
+			clear_global_event_target = position_3
+			clear_global_event_target = position_4
+			clear_global_event_target = position_5
+			clear_global_event_target = position_6
+			clear_global_event_target = position_7
+			clear_global_event_target = position_8
+			clear_global_event_target = position_9
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				set_variable = {
+					which = bounty_points
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sgm_bounty.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			export_resource_stockpile_to_variable = { resource = bounty_points variable = bounty_points }
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 0
+			order_by = bounty_points
+			save_global_event_target_as = position_0
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 1
+			order_by = bounty_points
+			save_global_event_target_as = position_1
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 2
+			order_by = bounty_points
+			save_global_event_target_as = position_2
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 3
+			order_by = bounty_points
+			save_global_event_target_as = position_3
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 4
+			order_by = bounty_points
+			save_global_event_target_as = position_4
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 5
+			order_by = bounty_points
+			save_global_event_target_as = position_5
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 6
+			order_by = bounty_points
+			save_global_event_target_as = position_6
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 7
+			order_by = bounty_points
+			save_global_event_target_as = position_7
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 8
+			order_by = bounty_points
+			save_global_event_target_as = position_8
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 9
+			order_by = bounty_points
+			save_global_event_target_as = position_9
+		}
+	}
+}
+
+
+
+# 200+ Bounty Awards
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+country_event = {
+	id = sgm_bounty.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = ship_destroyed
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.ship_destroyed_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+#Fired whenever a new owner is set for a planet, and the planet was aggressively conquered
+#Fired in ADDITION to on_planet_transfer
+#From = Country scope (new owner)
+#This = Planet scope
+planet_event = {
+	id = sgm_bounty.201
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		from = {
+			change_variable = {
+				which = planet_conquered
+				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.planet_conquered_scalar #(optional: multiplies all gained resources by a variable)
+			}
+		}
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+country_event = {
+	id = sgm_bounty.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = country_destroyed
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.country_destroyed_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+country_event = {
+	id = sgm_bounty.203
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = megastructure_built
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.megastructure_built_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+country_event = {
+	id = sgm_bounty.204
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = system_gained
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.system_gained_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# This = subject
+# From = subject's overlord
+country_event = {
+	id = sgm_bounty.205
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		from = {
+			change_variable = {
+				which = subject_gained
+				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.subject_gained_scalar #(optional: multiplies all gained resources by a variable)
+			}
+		}
+	}
+}
+
+# fires when a country finishes being integrated
+# This = overlord
+# From = subject
+
+country_event = {
+	id = sgm_bounty.206
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = subject_integrated
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.subject_integrated_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+#Fired from destroy_star_system scripted effect
+#This = system
+#From = destroyer (if using a star cracker)
+galactic_object_event = {
+	id = sgm_bounty.207
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		from = {
+			change_variable = {
+				which = star_system_destroyed
+				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.star_system_destroyed_scalar #(optional: multiplies all gained resources by a variable)
+			}
+		}
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+
+country_event = {
+	id = sgm_bounty.208
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = tech_unlocked
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.tech_unlocked_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# Executed when a country picks any tradition (including starters and finishers)
+# THIS = country
+country_event = {
+	id = sgm_bounty.209
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = tradition_unlocked
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.tradition_unlocked_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# Executed when a country picks an ascension perk
+# THIS = country
+country_event = {
+	id = sgm_bounty.210
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		change_variable = {
+			which = ascension_perk_unlocked
+			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.ascension_perk_unlocked_scalar #(optional: multiplies all gained resources by a variable)
+		}
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+
+planet_event = {
+	id = sgm_bounty.211
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		from = {
+			change_variable = {
+				which = pop_purged
+				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.pop_purged_scalar #(optional: multiplies all gained resources by a variable)
+			}
+		}
+	}
+}
+
+# Scope:
+# this/root = planet that have been fired upon
+# from = fleet that fired
+
+fleet_event = {
+	id = sgm_bounty.212
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = planet_destroyed
+				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.planet_destroyed_scalar #(optional: multiplies all gained resources by a variable)
+			}
+		}
+	}
+}
