@@ -220,7 +220,7 @@ guiTypes = {
 							effect = sgm_add_dig_site
 				#			shortCut = j
 						}
-						effectbuttonType = {					# planet events - planet effects
+						effectbuttonType = {					# planet modifiers
 							name = sgm_add_planet_modifier
 							quadTextureSprite = "GFX_standard_button_142_34_button"
 							position = { x = 2 y = 113 }
@@ -231,6 +231,18 @@ guiTypes = {
 							effect = sgm_add_planet_modifier
 				#			shortCut = j
 						}	
+						effectbuttonType = {					# planet deposits
+							name = sgm_add_deposit
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 150 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_add_deposit
+							orientation = UPPER_LEFT
+							effect = sgm_add_deposit
+				#			shortCut = j
+						}
+						
 						effectbuttonType = {					
 							name = sgm_change_planet_class
 							quadTextureSprite = "GFX_standard_button_142_34_button"
