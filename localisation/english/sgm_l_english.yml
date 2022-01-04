@@ -27,6 +27,19 @@
 # bounty stuff
 sgm_bounty_1: "Galactic Bounty Leaderboard"
 sgm_bounty_1_desc: "Position\n\n1. [position_0.GetName] - [position_0.bounty_points]\n2. [position_1.GetName] - [position_1.bounty_points]\n3. [position_2.GetName] - [position_2.bounty_points]\n4. [position_3.GetName] - [position_3.bounty_points]\n5. [position_4.GetName] - [position_4.bounty_points]\n6. [position_5.GetName] - [position_5.bounty_points]\n7. [position_6.GetName] - [position_6.bounty_points]\n8. [position_7.GetName] - [position_7.bounty_points]\n9. [position_8.GetName] - [position_8.bounty_points]\n10. [position_9.GetName] - [position_9.bounty_points]"
+megastructure_built: "Megastructure Built"
+country_destroyed: "Country Destroyed"
+planet_conquered: "Planet Conquered"
+ship_destroyed: "Ship Destroyed"
+pop_purged: "Pop Purged"
+planet_destroyed: "Planet Destroyed"
+ascension_perk_unlocked: "Ascension Perk Gained"
+tradition_unlocked: "Tradition Unlocked"
+tech_unlocked: "Tech Researched"
+star_system_destroyed: "Star Destroyed"
+subject_integrated: "Subject Integrated"
+subject_gained: "Subject Gained"
+system_gained: "System Gained"
 
 
 
