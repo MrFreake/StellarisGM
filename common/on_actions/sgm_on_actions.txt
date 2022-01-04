@@ -39,6 +39,18 @@ on_single_player_save_game_load = {
     }
 }
 
+##
+#
+# Bounty on_actions
+#
+##
+
+on_press_begin = {
+    events = {
+        sgm_start_events.3
+    }
+}
+
 # This = owner of ship 1 (combatant)
 # From = owner of ship 2 (destroyed)
 # FromFrom = ship 1

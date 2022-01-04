@@ -168,3 +168,67 @@ event = {
         }
     }    
 }
+
+country_event = {
+    id = sgm_start_events.3
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    immediate = {
+        event_target:global_event_country = {
+            set_variable = {
+                which = ship_destroyed_scalar
+                value = 1
+            }
+            set_variable = {
+                which = pop_purged_scalar
+                value = 2
+            }
+            set_variable = {
+                which = planet_conquered_scalar
+                value = 3
+            }
+            set_variable = {
+                which = country_destroyed_scalar
+                value = 10
+            }
+            set_variable = {
+                which = megastructure_built_scalar
+                value = 20
+            }
+            set_variable = {
+                which = system_gained_scalar
+                value = 2
+            }
+            set_variable = {
+                which = subject_gained_scalar
+                value = 3
+            }
+            set_variable = {
+                which = subject_integrated_scalar
+                value = 3
+            }
+            set_variable = {
+                which = star_system_destroyed_scalar
+                value = 20
+            }
+            set_variable = {
+                which = tech_unlocked_scalar
+                value = 2
+            }            
+            set_variable = {
+                which = tradition_unlocked_scalar
+                value = 2
+            }
+            set_variable = {
+                which = ascension_perk_unlocked_scalar
+                value = 5
+            }
+            set_variable = {
+                which = planet_destroyed_scalar
+                value = 5
+            }     
+        }
+    }
+}

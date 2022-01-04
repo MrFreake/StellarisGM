@@ -4,71 +4,11 @@ bounty_test = {
 	}
 	allow = {}
 	effect = {
-		every_country = {
-			limit = {
-				is_country_type = default
+		country_event = {
+			id = sgm_bounty.2
+			scopes = {
+				from = from
 			}
-			export_resource_stockpile_to_variable = { resource = bounty_points variable = bounty_points }
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 0
-			order_by = bounty_points
-			save_global_event_target_as = position_0
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 1
-			order_by = bounty_points
-			save_global_event_target_as = position_1
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 2
-			order_by = bounty_points
-			save_global_event_target_as = position_2
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 3
-			order_by = bounty_points
-			save_global_event_target_as = position_3
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 4
-			order_by = bounty_points
-			save_global_event_target_as = position_4
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 5
-			order_by = bounty_points
-			save_global_event_target_as = position_5
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 6
-			order_by = bounty_points
-			save_global_event_target_as = position_6
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 7
-			order_by = bounty_points
-			save_global_event_target_as = position_7
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 8
-			order_by = bounty_points
-			save_global_event_target_as = position_8
-		}
-		ordered_country = {
-			limit = { is_country_type = default }
-			position = 9
-			order_by = bounty_points
-			save_global_event_target_as = position_9
 		}
 		country_event = {
 			id = sgm_bounty.1
@@ -87,12 +27,7 @@ bounty_plus_one = {
 
 	}
 	effect = {
-		event_target:global_event_country = {
-			change_variable = {
-				which = ship_destroyed_scalar
-				value = 1
-			}
-		}
+		sgm_bounty_plus_one = yes
 	}
 }
 bounty_plus_ten = {
@@ -103,12 +38,7 @@ bounty_plus_ten = {
 
 	}
 	effect = {
-		event_target:global_event_country = {
-			change_variable = {
-				which = ship_destroyed_scalar
-				value = 10
-			}
-		}
+		sgm_bounty_plus_ten = yes
 	}
 }
 bounty_minus_one = {
@@ -119,12 +49,7 @@ bounty_minus_one = {
 
 	}
 	effect = {
-		event_target:global_event_country = {
-			change_variable = {
-				which = ship_destroyed_scalar
-				value = -1
-			}
-		}
+		sgm_bounty_minus_one = yes
 	}
 }
 bounty_minus_ten = {
@@ -135,15 +60,10 @@ bounty_minus_ten = {
 
 	}
 	effect = {
-		event_target:global_event_country = {
-			change_variable = {
-				which = ship_destroyed_scalar
-				value = -10
-			}
-		}
+		sgm_bounty_minus_ten = yes
 	}
 }
-bounty_test_value = {
+CurrentlyEditingBountyValue = {
 	potential = {
 		is_gm = yes
 	}
@@ -152,23 +72,215 @@ bounty_test_value = {
 	}
 	effect = { }
 }
-enable_bounty = {
+CurrentlyEditingBounty = {
 	potential = {
 		is_gm = yes
-		NOT = { has_global_flag = galactic_bounty_enabled }
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+disabled_bounty = {
+	potential = {
+		is_gm = yes
+		NOT = { has_global_flag = galactic_bounty_enabled } 
 	}
 	allow ={}
 	effect = {
-		remove_global_flag = galactic_bounty_enabled
+		set_global_flag = galactic_bounty_enabled
 	}
 }
-disable_bounty = {
+enabled_bounty = {
 	potential = {
 		is_gm = yes
 		has_global_flag = galactic_bounty_enabled 
 	}
 	allow ={}
 	effect = {
-		set_global_flag = galactic_bounty_enabled
+		remove_global_flag = galactic_bounty_enabled
+	}
+}
+# option buttons
+ship_destroyed = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_ship_destroyed
+	}
+}
+pop_purged = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_pop_purged
+	}
+}
+planet_conquered = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_planet_conquered
+	}
+}
+planet_destroyed = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_planet_destroyed
+	}
+}
+country_destroyed = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_country_destroyed
+	}
+}
+megastructure_built = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_megastructure_built
+	}
+}
+system_gained = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_system_gained
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_system_gained
+	}
+}
+subject_gained = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_subject_gained
+	}
+}
+subject_integrated = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_subject_integrated
+	}
+}
+star_system_destroyed = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_star_system_destroyed
+	}
+}
+tech_unlocked = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_tech_unlocked
+	}
+}
+tradition_unlocked = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_tradition_unlocked
+	}
+}
+ascension_perk_unlocked = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_ascension_perk_unlocked
 	}
 }

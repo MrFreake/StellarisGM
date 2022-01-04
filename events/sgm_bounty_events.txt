@@ -40,6 +40,84 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = sgm_bounty.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = galactic_bounty_enabled
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			export_resource_stockpile_to_variable = { resource = bounty_points variable = bounty_points }
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 0
+			order_by = bounty_points
+			save_global_event_target_as = position_0
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 1
+			order_by = bounty_points
+			save_global_event_target_as = position_1
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 2
+			order_by = bounty_points
+			save_global_event_target_as = position_2
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 3
+			order_by = bounty_points
+			save_global_event_target_as = position_3
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 4
+			order_by = bounty_points
+			save_global_event_target_as = position_4
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 5
+			order_by = bounty_points
+			save_global_event_target_as = position_5
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 6
+			order_by = bounty_points
+			save_global_event_target_as = position_6
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 7
+			order_by = bounty_points
+			save_global_event_target_as = position_7
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 8
+			order_by = bounty_points
+			save_global_event_target_as = position_8
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 9
+			order_by = bounty_points
+			save_global_event_target_as = position_9
+		}
+	}
+}
+
 
 
 # 200+ Bounty Awards
@@ -88,6 +166,10 @@ planet_event = {
 				which = planet_conquered
 				value = 1
 			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.planet_conquered_scalar #(optional: multiplies all gained resources by a variable)
+			}
 		}
 	}
 }
@@ -107,6 +189,10 @@ country_event = {
 		change_variable = {
 			which = country_destroyed
 			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.country_destroyed_scalar #(optional: multiplies all gained resources by a variable)
 		}
 	}
 }
@@ -130,6 +216,10 @@ country_event = {
 			which = megastructure_built
 			value = 1
 		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.megastructure_built_scalar #(optional: multiplies all gained resources by a variable)
+		}
 	}
 }
 
@@ -150,6 +240,10 @@ country_event = {
 			which = system_gained
 			value = 1
 		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.system_gained_scalar #(optional: multiplies all gained resources by a variable)
+		}
 	}
 }
 
@@ -169,6 +263,10 @@ country_event = {
 			change_variable = {
 				which = subject_gained
 				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.subject_gained_scalar #(optional: multiplies all gained resources by a variable)
 			}
 		}
 	}
@@ -192,6 +290,10 @@ country_event = {
 			which = subject_integrated
 			value = 1
 		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.subject_integrated_scalar #(optional: multiplies all gained resources by a variable)
+		}
 	}
 }
 
@@ -212,6 +314,10 @@ galactic_object_event = {
 			change_variable = {
 				which = star_system_destroyed
 				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.star_system_destroyed_scalar #(optional: multiplies all gained resources by a variable)
 			}
 		}
 	}
@@ -234,6 +340,10 @@ country_event = {
 			which = tech_unlocked
 			value = 1
 		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.tech_unlocked_scalar #(optional: multiplies all gained resources by a variable)
+		}
 	}
 }
 
@@ -253,6 +363,10 @@ country_event = {
 			which = tradition_unlocked
 			value = 1
 		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.tradition_unlocked_scalar #(optional: multiplies all gained resources by a variable)
+		}
 	}
 }
 
@@ -271,6 +385,10 @@ country_event = {
 		change_variable = {
 			which = ascension_perk_unlocked
 			value = 1
+		}
+		add_resource = {
+			bounty_points = 1
+			mult = event_target:global_event_country.ascension_perk_unlocked_scalar #(optional: multiplies all gained resources by a variable)
 		}
 	}
 }
@@ -295,6 +413,10 @@ planet_event = {
 				which = pop_purged
 				value = 1
 			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.pop_purged_scalar #(optional: multiplies all gained resources by a variable)
+			}
 		}
 	}
 }
@@ -317,6 +439,10 @@ fleet_event = {
 			change_variable = {
 				which = planet_destroyed
 				value = 1
+			}
+			add_resource = {
+				bounty_points = 1
+				mult = event_target:global_event_country.planet_destroyed_scalar #(optional: multiplies all gained resources by a variable)
 			}
 		}
 	}
