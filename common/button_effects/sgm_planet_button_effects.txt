@@ -547,6 +547,7 @@ sgm_create_GM_constructor = {
 			}
 		}
 	}
+}
 
 sgm_create_starbase = {
 	potential = {

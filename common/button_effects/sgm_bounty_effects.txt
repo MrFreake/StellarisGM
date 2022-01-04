@@ -1,0 +1,174 @@
+bounty_test = {
+	potential = {
+		always = yes
+	}
+	allow = {}
+	effect = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			export_resource_stockpile_to_variable = { resource = bounty_points variable = bounty_points }
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 0
+			order_by = bounty_points
+			save_global_event_target_as = position_0
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 1
+			order_by = bounty_points
+			save_global_event_target_as = position_1
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 2
+			order_by = bounty_points
+			save_global_event_target_as = position_2
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 3
+			order_by = bounty_points
+			save_global_event_target_as = position_3
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 4
+			order_by = bounty_points
+			save_global_event_target_as = position_4
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 5
+			order_by = bounty_points
+			save_global_event_target_as = position_5
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 6
+			order_by = bounty_points
+			save_global_event_target_as = position_6
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 7
+			order_by = bounty_points
+			save_global_event_target_as = position_7
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 8
+			order_by = bounty_points
+			save_global_event_target_as = position_8
+		}
+		ordered_country = {
+			limit = { is_country_type = default }
+			position = 9
+			order_by = bounty_points
+			save_global_event_target_as = position_9
+		}
+		country_event = {
+			id = sgm_bounty.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+}
+
+bounty_plus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+
+	}
+	effect = {
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = 1
+			}
+		}
+	}
+}
+bounty_plus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+
+	}
+	effect = {
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = 10
+			}
+		}
+	}
+}
+bounty_minus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+
+	}
+	effect = {
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = -1
+			}
+		}
+	}
+}
+bounty_minus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+
+	}
+	effect = {
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = -10
+			}
+		}
+	}
+}
+bounty_test_value = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = { }
+}
+enable_bounty = {
+	potential = {
+		is_gm = yes
+		NOT = { has_global_flag = galactic_bounty_enabled }
+	}
+	allow ={}
+	effect = {
+		remove_global_flag = galactic_bounty_enabled
+	}
+}
+disable_bounty = {
+	potential = {
+		is_gm = yes
+		has_global_flag = galactic_bounty_enabled 
+	}
+	allow ={}
+	effect = {
+		set_global_flag = galactic_bounty_enabled
+	}
+}

@@ -91,47 +91,93 @@ sgm_unset_target = {
 target_planet = {
 	potential = {
 		is_gm = yes
-	}
-	allow = {
 		exists = event_target:target_planet
 	}
-	effect = {
-		from = {
-			country_event = {
-				id = sgm_planets.1
-				scopes = {
-					from = prev
-				}
-			}
-		}
+	allow = {
+		always = no
 	}
+	effect = {}
+}
+
+target_planet_not_set = {
+	potential = {
+		is_gm = yes
+		NOT = { exists = event_target:target_planet }
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
 }
 
 target_fleet = {
 	potential = {
 		is_gm = yes
-	}
-	allow = {
 		exists = event_target:target_fleet
 	}
-	effect = {
-		from = {
-			country_event = {
-				id = sgm_fleet.1
-				scopes = {
-					from = prev
-				}
-			}
-		}
+	allow = {
+		always = no
 	}
+	effect = {}
+}
+
+target_fleet_not_set = {
+	potential = {
+		is_gm = yes
+		NOT = { exists = event_target:target_fleet }
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
 }
 
 target_country = {
 	potential = {
 		is_gm = yes
+		exists = event_target:target_country
 	}
 	allow = {
-		exists = event_target:target_country
+		always = no
+	}
+	effect = {
+
+	}
+}
+
+target_country_not_set = {
+	potential = {
+		is_gm = yes
+		NOT = { exists = event_target:target_country }
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}
+
+target_megastructure = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_megastructure
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}
+
+target_megastructure_not_set = {
+	potential = {
+		is_gm = yes
+		NOT = { exists = event_target:target_megastructure }
+	}
+	allow = {
+		always = no
 	}
 	effect = {
 

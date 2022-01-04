@@ -38,3 +38,158 @@ on_single_player_save_game_load = {
         sgm_start_events.2
     }
 }
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+        sgm_bounty.200
+    }
+}
+
+#Fired whenever a new owner is set for a planet, and the planet was aggressively conquered
+#Fired in ADDITION to on_planet_transfer
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_conquer = {
+	events = {
+        sgm_bounty.201
+    }
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+        sgm_bounty.202
+    }
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+        sgm_bounty.203
+    }
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+on_system_gained = {
+	events = {
+        sgm_bounty.204
+    }
+}
+
+# This = subject
+# From = subject's overlord
+on_becoming_subject = {
+	events = {
+        sgm_bounty.205
+    }
+}
+
+# fires when a country finishes being integrated
+# This = overlord
+# From = subject
+on_subject_integrated = {
+	events = {
+        sgm_bounty.206
+    }
+}
+
+#Fired from destroy_star_system scripted effect
+#This = system
+#From = destroyer (if using a star cracker)
+on_destroy_star_system = {
+	events = {
+		sgm_bounty.207
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+    events = {
+        sgm_bounty.208
+    }
+}
+
+# Executed when a country picks any tradition (including starters and finishers)
+# THIS = country
+on_tradition_picked = {
+    events = {
+        sgm_bounty.209
+    }
+}
+
+# Executed when a country picks an ascension perk
+# THIS = country
+on_ascension_perk_picked = {
+	events = {
+		sgm_bounty.210
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_purged = {
+	events = {
+        sgm_bounty.211
+    }
+}
+
+# Scope:
+# this/root = planet that have been fired upon
+# from = fleet that fired
+
+on_destroy_planet_with_PLANET_KILLER_CRACKER = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_SHIELDER = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NEUTRON = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_GODRAY = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_DELUGE = {
+	events = {
+        sgm_bounty.212
+	}
+}
+
