@@ -214,8 +214,13 @@ country_event = {							# add districts menu
 	is_triggered_only = yes
 	title = sgm_planets_50_title
 	desc = sgm_planets_50_desc
-	picture = GFX_evt_alien_city
-
+	#picture = GFX_evt_alien_city
+	custom_gui = sgm_EventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
 	trigger = {
 #		exists = from
 #		exists = root
