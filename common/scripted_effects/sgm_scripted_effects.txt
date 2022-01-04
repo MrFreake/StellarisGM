@@ -123,12 +123,6 @@ sgm_begin_next_megastructure_stage = {
 			}
 			if = {
 				limit = {
-					is_megastructure_type = spy_orb_4
-				}
-				upgrade_megastructure_to = spy_orb_5
-			}
-			if = {
-				limit = {
 					is_megastructure_type = spy_orb_ruined
 				}
 				upgrade_megastructure_to = spy_orb_restored
@@ -229,12 +223,6 @@ sgm_begin_next_megastructure_stage = {
 			}
 			if = {
 				limit = {
-					is_megastructure_type = strategic_coordination_center_3
-				}
-				upgrade_megastructure_to = strategic_coordination_center_4
-			}
-			if = {
-				limit = {
 					is_megastructure_type = strategic_coordination_center_ruined
 				}
 				upgrade_megastructure_to = strategic_coordination_center_restored
@@ -322,12 +310,6 @@ sgm_begin_next_megastructure_stage = {
 			}
 			if = {
 				limit = {
-					is_megastructure_type = mega_shipyard_3
-				}
-				upgrade_megastructure_to = mega_shipyard_4
-			}
-			if = {
-				limit = {
 					is_megastructure_type = mega_shipyard_ruined
 				}
 				upgrade_megastructure_to = mega_shipyard_restored
@@ -358,3 +340,120 @@ sgm_begin_next_megastructure_stage = {
 				upgrade_megastructure_to = crisis_sphere_4
 			}
 }
+
+sgm_teleport_fleet_effect = {
+	switch = {
+		trigger = has_global_flag
+		sgm_teleport_fleet_single = {
+			clear_orders = yes
+			clear_fleet_actions = this
+			set_location = event_target:$TARGET$
+		}
+		sgm_teleport_fleet_military = {
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						exists = owner
+						owner = {
+							is_same_value = prevprevprev.owner
+						}
+						is_in_combat = no
+						is_mobile = yes
+						OR = {
+							is_ship_class = shipclass_military
+							is_ship_class = shipclass_military_special
+							is_ship_size = juggernaut
+							is_ship_size = star_eater
+							fleet_power > 0
+						}
+					}
+					clear_orders = yes
+					clear_fleet_actions = this
+					set_location = event_target:$TARGET$
+				}
+			}
+		}
+		sgm_teleport_fleet_civilian = {
+			fromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
+							OR = {
+								is_ship_class = shipclass_colonizer
+								is_ship_class = shipclass_constructor
+								is_ship_class = shipclass_science_ship
+							}
+						}
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
+					}
+				}
+			}
+		}
+		sgm_teleport_fleet_all = {
+			fromfromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
+						}
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
+					}
+				}
+			}
+		}
+		sgm_teleport_fleet_100_radius = {
+			fromfromfromfrom = {
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_same_value = prevprevprev.owner
+							}
+							is_in_combat = no
+							is_mobile = yes
+							distance = {
+								source = prevprev
+								min_distance >= 0
+								max_distance <= 100
+								same_solar_system = yes
+							}
+						}
+						clear_orders = yes
+						clear_fleet_actions = this
+						set_location = event_target:$TARGET$
+					}
+				}
+			}
+		}
+		default = {
+			clear_orders = yes
+			clear_fleet_actions = this
+			set_location = event_target:$TARGET$
+		}
+	}
+	sgm_teleport_fleet_effect_cleanup = yes
+}
+
+sgm_teleport_fleet_effect_cleanup = {
+	remove_global_flag = sgm_teleport_fleet_single
+	remove_global_flag = sgm_teleport_fleet_military
+	remove_global_flag = sgm_teleport_fleet_civilian
+	remove_global_flag = sgm_teleport_fleet_all
+	remove_global_flag = sgm_teleport_fleet_100_radius
+} 
