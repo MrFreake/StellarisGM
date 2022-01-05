@@ -2540,3 +2540,17 @@ country_event = {						# anomalies menu
 	}
 }
 
+country_event = {
+	id = sgm_planets.56
+	is_triggered_only = yes
+	title = sgm_planets_56
+	desc = sgm_planets_56_desc
+	picture = GFX_evt_asteroid_field
+
+	immediate = {}
+	
+	option = {
+		NAME = OK
+	}
+}
+

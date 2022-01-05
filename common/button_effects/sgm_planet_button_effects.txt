@@ -597,3 +597,22 @@ sgm_create_starbase_target_country = {
 	}
 }
 
+sgm_add_deposit = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.56
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
