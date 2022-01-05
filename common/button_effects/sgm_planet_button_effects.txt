@@ -241,6 +241,7 @@ sgm_create_hostiles = {
 				id = sgm_planets.52
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}

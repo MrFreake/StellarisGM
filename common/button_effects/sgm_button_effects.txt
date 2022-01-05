@@ -45,10 +45,11 @@ modifier_var_add_one = {
 	allow = {}
 	effect = {
 		fromfrom = {
-		change_variable = {
-			which = modifier_var
-			value = 1
-		} }
+			change_variable = {
+				which = modifier_var
+				value = 1
+			} 
+		}
 	}
 }
 modifier_var_add_ten = {
@@ -57,9 +58,11 @@ modifier_var_add_ten = {
 	}
 	allow = {}
 	effect = {
-		change_variable = {
-			which = modifier_var
-			value = 10
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 10
+			}
 		}
 	}
 }
@@ -69,9 +72,11 @@ modifier_var_minus_ten = {
 	}
 	allow = {}
 	effect = {
-		change_variable = {
-			which = modifier_var
-			value = -10
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -10
+			}
 		}
 	}
 }
@@ -81,9 +86,11 @@ modifier_var_minus_one = {
 	}
 	allow = {}
 	effect = {
-		change_variable = {
-			which = modifier_var
-			value = -1
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -1
+			}
 		}
 	}
 }
