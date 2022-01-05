@@ -725,38 +725,116 @@ guiTypes = {
 			position = { x = -175 y = 0 }
 			size = { width=600 height=200 }
 			Orientation = upper_right
-			
+
 			effectbuttonType = {					
-				name = target_planet
-				quadTextureSprite = "GFX_standard_button_142_34_button"
-				position = { x = -200 y = -12 }
+				name = "targets"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 40 }
 				scale = 1
-				buttonFont = malgun_goth_24
+				buttonFont = cg_16b
+				buttonText = Targets
+				orientation = UPPER_LEFT
+				effect = targets
+	#			shortCut = j
+				alwaysTransparent = yes
+			}
+			effectbuttonType = {					
+				name = "target_planet"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 60 }
+				scale = 1
+				buttonFont = cg_16b
 				buttonText = target_planet
 				orientation = UPPER_LEFT
 				effect = target_planet
 	#			shortCut = j
+				alwaysTransparent = yes
+			}
+			effectbuttonType = {					
+				name = target_planet_not_set
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 60 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = target_planet_not_set
+				orientation = UPPER_LEFT
+				effect = target_planet_not_set
+	#			shortCut = j
+				alwaysTransparent = yes
 			}
 			effectbuttonType = {					
 				name = target_country
-				quadTextureSprite = "GFX_standard_button_142_34_button"
-				position = { x = -344 y = -12 }
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 80 }
 				scale = 1
-				buttonFont = malgun_goth_24
+				buttonFont = cg_16b
 				buttonText = target_country
 				orientation = UPPER_LEFT
 				effect = target_country
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = target_fleet
-				quadTextureSprite = "GFX_standard_button_142_34_button"
-				position = { x = -488 y = -12 }
+				name = target_country_not_set
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 80 }
 				scale = 1
-				buttonFont = malgun_goth_24
+				buttonFont = cg_16b
+				buttonText = target_country_not_set
+				orientation = UPPER_LEFT
+				effect = target_country_not_set
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = target_fleet
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 100 }
+				scale = 1
+				buttonFont = cg_16b
 				buttonText = target_fleet
 				orientation = UPPER_LEFT
 				effect = target_fleet
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = target_fleet_not_set
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 100 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = target_fleet_not_set
+				orientation = UPPER_LEFT
+				effect = target_fleet_not_set
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = target_megastructure
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 120 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = target_megastructure
+				orientation = UPPER_LEFT
+				effect = target_megastructure
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = target_megastructure_not_set
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				size = { x = 300 y = 34 }
+				position = { x = -400 y = 120 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = target_megastructure_not_set
+				orientation = UPPER_LEFT
+				effect = target_megastructure_not_set
 	#			shortCut = j
 			}
 			effectbuttonType = {					
@@ -768,6 +846,17 @@ guiTypes = {
 				buttonText = sgm_galactic_effects
 				orientation = UPPER_LEFT
 				effect = sgm_galactic_effects
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_bounty
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -488 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = sgm_bounty
+				orientation = UPPER_LEFT
+				effect = bounty_test
 	#			shortCut = j
 			}
 			effectbuttonType = {					
