@@ -53,6 +53,7 @@ sgm_add_district = {
 				id = sgm_planets.50
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
@@ -240,6 +241,7 @@ sgm_create_hostiles = {
 				id = sgm_planets.52
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}

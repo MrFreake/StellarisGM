@@ -55,4 +55,5 @@ ascension_perk_unlocked_value: "[event_target:global_event_country.ascension_per
 planet_destroyed_value: "[event_target:global_event_country.planet_destroyed_scalar]"
 enabled_bounty: "§GBounty Enabled"
 disabled_bounty: "§RBounty Disabled"
+modifier_var_value: "[FromFrom.modifier_var]"
 

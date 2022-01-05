@@ -160,7 +160,7 @@ event = {
                     nanites = 9999999
                 }
                 set_variable = {
-                    which = mulitplier
+                    which = modifier_var
                     value = 1
                 }
                 set_country_flag = from@this

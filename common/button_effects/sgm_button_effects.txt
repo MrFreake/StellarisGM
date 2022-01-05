@@ -37,3 +37,69 @@ sgm_planet_effects = {
 		}
 	}
 }
+
+modifier_var_add_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 1
+			} 
+		}
+	}
+}
+modifier_var_add_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 10
+			}
+		}
+	}
+}
+modifier_var_minus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -10
+			}
+		}
+	}
+}
+modifier_var_minus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -1
+			}
+		}
+	}
+}
+modifier_var_value = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = { }
+}
