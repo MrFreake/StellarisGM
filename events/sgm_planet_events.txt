@@ -15,38 +15,17 @@ country_event = {						# planet event menu
 		}
 	}
 
-	immediate = { }
-
-	option = {
-		NAME = increase_multiplier
-		change_variable = {
-			which = multiplier
-			value = 1
-		}
-		country_event = {
-			id = sgm_planets.1
-			scopes = {
-				from = from
+	immediate = { 
+		if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value < 1
+				}
 			}
-		}
-	}
-
-	option = {
-		NAME = decrease_multiplier
-		allow = {
-			check_variable = {
-				which = multiplier
-				value > 1
-			}
-		}
-		change_variable = {
-			which = multiplier
-			value = -1
-		}
-		country_event = {
-			id = sgm_planets.1
-			scopes = {
-				from = from
+			set_variable = {
+				which = modifier_var
+				value = 1
 			}
 		}
 	}
@@ -214,8 +193,13 @@ country_event = {							# add districts menu
 	is_triggered_only = yes
 	title = sgm_planets_50_title
 	desc = sgm_planets_50_desc
-	picture = GFX_evt_alien_city
-
+	#picture = GFX_evt_alien_city
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
 	trigger = {
 #		exists = from
 #		exists = root
@@ -226,40 +210,6 @@ country_event = {							# add districts menu
 
 	immediate = {
 		log = "sgm_planets.50 firing"
-	}
-
-	option = {
-		NAME = increase_multiplier
-		change_variable = {
-			which = multiplier
-			value = 1
-		}
-		country_event = {
-			id = sgm_planets.50
-			scopes = {
-				from = from
-			}
-		}
-	}
-
-	option = {
-		NAME = decrease_multiplier
-		allow = {
-			check_variable = {
-				which = multiplier
-				value > 1
-			}
-		}
-		change_variable = {
-			which = multiplier
-			value = -1
-		}
-		country_event = {
-			id = sgm_planets.50
-			scopes = {
-				from = from
-			}
-		}
 	}
 
 	option = {								# add city districts
@@ -274,7 +224,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				if = { limit = { from.owner = { is_regular_empire = yes } }
 					add_district = district_city
@@ -296,7 +246,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_industrial 
 			}
@@ -315,7 +265,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				if = {
 					limit = {
@@ -343,7 +293,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				if = {
 					limit = {
@@ -370,7 +320,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				if = {
 					limit = {
@@ -392,7 +342,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_arcology_housing  
 			}
@@ -407,7 +357,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_arcology_arms_industry   
 			}   
@@ -428,7 +378,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_arcology_civilian_industry    
 			} 
@@ -446,7 +396,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_arcology_leisure    
 			}
@@ -461,7 +411,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_housing     
 			}
@@ -480,7 +430,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_energy      
 			}   
@@ -495,7 +445,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_industrial      
 			}   
@@ -511,7 +461,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_science      
 			}
@@ -529,7 +479,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_commercial       
 			}
@@ -545,7 +495,7 @@ country_event = {							# add districts menu
 			}
 		}
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_mining       
 			}   
@@ -567,7 +517,7 @@ country_event = {							# add districts menu
 			}
 		} 
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				add_district = district_hab_cultural       
 			}   
@@ -713,7 +663,12 @@ country_event = {								# spawn hostiles menu
 	is_triggered_only = yes
 	title = sgm_planets_52_title
 	desc = sgm_planets_52_desc
-	picture = GFX_evt_exploding_ship
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
 
 	trigger = {}
 
@@ -721,49 +676,11 @@ country_event = {								# spawn hostiles menu
 		log = "sgm_planets.52 scope: [This.GetName]"
 	}
 
-	option = {
-		NAME = increase_multiplier
-		change_variable = {
-			which = multiplier
-			value = 1
-		}
-		
-		country_event = {
-			id = sgm_planets.52
-			scopes = {
-				from = from
-			}
-		}
-	}
-
-
-	option = {
-		NAME = decrease_multiplier
-		allow = {
-			check_variable = {
-				which = multiplier
-				value > 1
-			}
-		}
-		change_variable = {
-			which = multiplier
-			value = -1
-		}
 	
-		country_event = {
-			id = sgm_planets.52
-			scopes = {
-				from = from
-
-			}
-		}
-	}
-
-
 	option = {						# large crystals
 		NAME = sgm_large_crystals
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_crystal_country = yes
 			event_target:crystal_country = {
 				create_fleet = {
@@ -808,7 +725,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# medium crystals
 		NAME = sgm_med_crystals
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_crystal_country = yes
 			event_target:crystal_country = {
 				create_fleet = {
@@ -853,7 +770,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# small crystals
 		NAME = sgm_small_crystals
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_crystal_country = yes
 			event_target:crystal_country = {
 				create_fleet = {
@@ -898,7 +815,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# crystals base
 		NAME = sgm_base_crystals
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_crystal_country = yes
 			event_target:crystal_country = {
 				create_fleet = {
@@ -926,7 +843,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_large_ameobas
 		NAME = sgm_large_ameobas
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_amoeba_country = yes
 			event_target:amoeba_country = {
 				create_fleet = {
@@ -968,7 +885,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_med_ameobas
 		NAME = sgm_med_ameobas
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_amoeba_country = yes
 			event_target:amoeba_country = {
 				create_fleet = {
@@ -1010,7 +927,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_small_ameobas
 		NAME = sgm_small_ameobas
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_amoeba_country = yes
 			event_target:amoeba_country = {
 				create_fleet = {
@@ -1052,7 +969,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_roamer_ameobas
 		NAME = sgm_small_ameobas
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_amoeba_country = yes
 			save_event_target_as = grazing_grounds
 			event_target:amoeba_country = {
@@ -1118,7 +1035,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_mother_ameoba
 		NAME = sgm_mother_ameoba
 		while = {
-			count = multiplier
+			count = modifier_var
 				create_amoeba_country = yes
 				event_target:amoeba_country = {
 					create_fleet = {
@@ -1153,7 +1070,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_large_tiyanki
 		NAME = sgm_large_tiyanki
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_tiyanki_country = yes
 			event_target:tiyanki_garrison_country = {
 				create_fleet = {
@@ -1201,7 +1118,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_med_tiyanki
 		NAME = sgm_med_tiyanki
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_tiyanki_country = yes
 			event_target:tiyanki_garrison_country = {
 				create_fleet = {
@@ -1249,7 +1166,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_small_tiyanki
 		NAME = sgm_small_tiyanki
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_tiyanki_country = yes
 			event_target:tiyanki_garrison_country = {
 				create_fleet = {
@@ -1297,7 +1214,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_roamer_tiyanki
 		NAME = sgm_small_tiyanki
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_tiyanki_country = yes
 			event_target:tiyanki_country = {
 				create_fleet = {
@@ -1341,7 +1258,7 @@ country_event = {								# spawn hostiles menu
 	option = {					# sgm_matriarch_tiyanki
 		NAME = sgm_matriarch_tiyanki
 		while = {
-			count = multiplier
+			count = modifier_var
 			create_tiyanki_country = yes
 			event_target:tiyanki_garrison_country = {
 				create_fleet = {
@@ -2620,6 +2537,20 @@ country_event = {						# anomalies menu
 
 	option = {
 		NAME = Exit
+	}
+}
+
+country_event = {
+	id = sgm_planets.56
+	is_triggered_only = yes
+	title = sgm_planets_56
+	desc = sgm_planets_56_desc
+	picture = GFX_evt_asteroid_field
+
+	immediate = {}
+	
+	option = {
+		NAME = OK
 	}
 }
 
