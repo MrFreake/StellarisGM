@@ -1,0 +1,661 @@
+sgm_bounty_plus_one = {
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = pop_purged_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_conquered_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = country_destroyed_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = megastructure_built_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = system_gained_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_gained_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_integrated_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = star_system_destroyed_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tech_unlocked_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tradition_unlocked_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ascension_perk_unlocked_scalar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_destroyed_scalar
+				value = 1
+			}
+		}
+	}
+}
+sgm_bounty_minus_one = {
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = pop_purged_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_conquered_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = country_destroyed_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = megastructure_built_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = system_gained_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_gained_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_integrated_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = star_system_destroyed_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tech_unlocked_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tradition_unlocked_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ascension_perk_unlocked_scalar
+				value = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_destroyed_scalar
+				value = -1
+			}
+		}
+	}
+}
+sgm_bounty_plus_ten = {
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = pop_purged_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_conquered_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = country_destroyed_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = megastructure_built_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = system_gained_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_gained_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_integrated_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = star_system_destroyed_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tech_unlocked_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tradition_unlocked_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ascension_perk_unlocked_scalar
+				value = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_destroyed_scalar
+				value = 10
+			}
+		}
+	}
+}
+sgm_bounty_minus_ten = {
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ship_destroyed_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = pop_purged_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_conquered_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = country_destroyed_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = megastructure_built_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = system_gained_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_gained_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = subject_integrated_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = star_system_destroyed_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tech_unlocked_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = tradition_unlocked_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = ascension_perk_unlocked_scalar
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = planet_destroyed_scalar
+				value = -10
+			}
+		}
+	}
+}
+
+sgm_reset_bounty_flags = {
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		remove_global_flag = editing_bounty_ship_destroyed
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		remove_global_flag = editing_bounty_pop_purged
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		remove_global_flag = editing_bounty_planet_conquered
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		remove_global_flag = editing_bounty_planet_destroyed
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		remove_global_flag = editing_bounty_country_destroyed
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		remove_global_flag = editing_bounty_megastructure_built
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		remove_global_flag = editing_bounty_system_gained
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		remove_global_flag = editing_bounty_subject_gained
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		remove_global_flag = editing_bounty_subject_integrated
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		remove_global_flag = editing_bounty_star_system_destroyed
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		remove_global_flag = editing_bounty_tech_unlocked
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		remove_global_flag = editing_bounty_tradition_unlocked
+	}
+	if = {
+		limit = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		remove_global_flag = editing_bounty_ascension_perk_unlocked
+	}	
+}

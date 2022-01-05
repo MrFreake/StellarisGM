@@ -50,3 +50,168 @@ defined_text = {
 	}
 	default = FLEET
 }
+
+defined_text = { 
+	name = CurrentlyEditingBounty
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		localization_key = ship_destroyed
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		localization_key = pop_purged
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		localization_key = planet_conquered
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		localization_key = country_destroyed
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		localization_key = megastructure_built
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		localization_key = system_gained
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		localization_key = subject_gained
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		localization_key = subject_integrated
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		localization_key = star_system_destroyed
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		localization_key = tech_unlocked
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		localization_key = tradition_unlocked
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		localization_key = ascension_perk_unlocked
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		localization_key = planet_destroyed
+	}
+	default = NONE
+}	
+
+defined_text = { 
+	name = CurrentlyEditingBountyValue
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_ship_destroyed
+		}
+		localization_key = ship_destroyed_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_pop_purged
+		}
+		localization_key = pop_purged_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_planet_conquered
+		}
+		localization_key = planet_conquered_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_country_destroyed
+		}
+		localization_key = country_destroyed_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_megastructure_built
+		}
+		localization_key = megastructure_built_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_system_gained
+		}
+		localization_key = system_gained_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_subject_gained
+		}
+		localization_key = subject_gained_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_subject_integrated
+		}
+		localization_key = subject_integrated_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_star_system_destroyed
+		}
+		localization_key = star_system_destroyed_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_tech_unlocked
+		}
+		localization_key = tech_unlocked_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_tradition_unlocked
+		}
+		localization_key = tradition_unlocked_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+		localization_key = ascension_perk_unlocked_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = editing_bounty_planet_destroyed
+		}
+		localization_key = planet_destroyed_value
+	}
+}	
