@@ -3432,6 +3432,473 @@ country_event = {
 		}
 	}
 
+	# origin deposits
+
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_arcane_replicator            
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_arcane_replicator            
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_arcane_generator             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_arcane_generator             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_segment_rubble_1             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_segment_rubble_1             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_segment_rubble_2             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_segment_rubble_2             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_segment_rubble_3             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_segment_rubble_3             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_segment_rubble_4             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_segment_rubble_4             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_decrepit_tunnels_1              
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_decrepit_tunnels_1              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_decrepit_tunnels_2              
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_decrepit_tunnels_2              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_decrepit_tunnels_3              
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_decrepit_tunnels_3              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_spore_vents              
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_spore_vents             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_cave_shroom_veins              
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_cave_shroom_veins              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_segment_rubble_4             
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_segment_rubble_4             
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_tree_of_life_home              
+		allow = {
+			host_has_dlc = "Utopia"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tree_of_life_home              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_tree_of_life_colony              
+		allow = {
+			host_has_dlc = "Utopia"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tree_of_life_colony              
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_buried_lithoids               
+		allow = {
+			host_has_dlc = "Lithoids Species Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_buried_lithoids               
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_lithoid_crater               
+		allow = {
+			host_has_dlc = "Lithoids Species Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_lithoid_crater               
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_machine_minerals               
+		allow = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_machine_minerals               
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_organic_slurry                
+		allow = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_organic_slurry                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_project_cornucopia                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_project_cornucopia                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_disco_planet                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_disco_planet                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_disco_planet2                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_disco_planet2                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_impossiblecorrie                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_impossiblecorrie                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_bluelotus                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_bluelotus                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_bluelotus2                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_bluelotus2               
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_ruin_bluelotus                
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_ruin_bluelotus                
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_crater_bluelotus                 
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crater_bluelotus                 
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_federation_hegemony_monument_1                 
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_federation_hegemony_monument_1                 
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_federation_hegemony_monument_2                 
+		allow = {
+			host_has_dlc = "Federations"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_federation_hegemony_monument_2                 
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = d_resource_consolidation_1                 
+		allow = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_resource_consolidation_1                 
+			}
+		}
+	}
+
 	option = {
 		NAME = EXIT
 	}
