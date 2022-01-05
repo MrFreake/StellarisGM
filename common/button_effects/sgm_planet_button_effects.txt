@@ -53,6 +53,7 @@ sgm_add_district = {
 				id = sgm_planets.50
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
@@ -240,6 +241,7 @@ sgm_create_hostiles = {
 				id = sgm_planets.52
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
@@ -320,6 +322,7 @@ sgm_add_wormhole = {
 			}
 		}
 	}
+	allow = {}
 
 	effect = {
 		solar_system = {
@@ -547,6 +550,7 @@ sgm_create_GM_constructor = {
 			}
 		}
 	}
+}
 
 sgm_create_starbase = {
 	potential = {
@@ -588,6 +592,25 @@ sgm_create_starbase_target_country = {
 			create_starbase = {
 				owner = event_target:target_country
 				size = starbase_outpost
+			}
+		}
+	}
+}
+
+sgm_add_deposit = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.56
+				scopes = {
+					from = prev
+				}
 			}
 		}
 	}
