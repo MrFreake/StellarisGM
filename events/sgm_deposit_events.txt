@@ -1,0 +1,3438 @@
+namespace = sgm_deposits
+
+country_event = {
+	id = sgm_deposits.1
+	is_triggered_only = yes
+	title = sgm_planets_56
+	desc = sgm_planets_56_desc
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = showing_orbital_deposits
+					has_global_flag = showing_planetary_deposits
+					has_global_flag = showing_strategic_resource_deposits
+					has_global_flag = showing_blocker_deposits
+					has_global_flag = showing_DLC_deposits
+					has_global_flag = showing_origin_deposits
+				}
+			}
+			set_global_flag = showing_orbital_deposits
+		}
+	}
+	# filters
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = orbital_deposits
+		hidden_effect = {
+			remove_global_flag = showing_orbital_deposits
+			set_global_flag = showing_planetary_deposits
+			country_event = {
+				id = sgm_deposits.1
+				scopes = {
+					from = from
+					fromfrom = fromfrom
+				}
+			}			
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = planetary_deposits
+		hidden_effect = {
+			remove_global_flag = showing_planetary_deposits
+			set_global_flag = showing_blocker_deposits
+			country_event = {
+				id = sgm_deposits.1
+				scopes = {
+					from = from
+					fromfrom = fromfrom
+				}
+			}			
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = blocker_deposits
+		hidden_effect = {
+			remove_global_flag = showing_blocker_deposits
+			set_global_flag = showing_DLC_deposits
+			country_event = {
+				id = sgm_deposits.1
+				scopes = {
+					from = from
+					fromfrom = fromfrom
+				}
+			}			
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = DLC_deposits
+		hidden_effect = {
+			remove_global_flag = showing_DLC_deposits
+			set_global_flag = showing_origin_deposits
+			country_event = {
+				id = sgm_deposits.1
+				scopes = {
+					from = from
+					fromfrom = fromfrom
+				}
+			}			
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_origin_deposits
+		}
+		NAME = origin_deposits
+		hidden_effect = {
+			remove_global_flag = showing_origin_deposits
+			set_global_flag = showing_orbital_deposits
+			country_event = {
+				id = sgm_deposits.1
+				scopes = {
+					from = from
+					fromfrom = fromfrom
+				}
+			}			
+		}
+	}
+
+	option = {
+		NAME = clear_deposits
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+		country_event = {
+			id = sgm_confirmation.4
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	# orbital deposits
+	option = {			
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_minerals_1
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_minerals_1 
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_minerals_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_minerals_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_energy_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_energy_1  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_energy_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_energy_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_society_1 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_society_1  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_society_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_society_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_physics_1 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_physics_1  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_physics_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_physics_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_engineering_1 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_engineering_1  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_engineering_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_engineering_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_trade_value_1 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_trade_value_1 
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_trade_value_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_trade_value_10 
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_alloys_1 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_alloys_1  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_alloys_5 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_alloys_5  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_food_3 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_food_3  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_food_10 
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_food_10  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_exotic_gases_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_exotic_gases_1   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_exotic_gases_5  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_exotic_gases_5   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_rare_crystals_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_rare_crystals_1   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_rare_crystals_5  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_rare_crystals_5   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_volatile_motes_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_volatile_motes_1   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_volatile_motes_5  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_volatile_motes_5   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_zro_deposit_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_zro_deposit_1   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_zro_deposit_5  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_zro_deposit_5   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_dark_matter_deposit_1  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dark_matter_deposit_1   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_dark_matter_deposit_3  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dark_matter_deposit_3   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_dark_matter_deposit_10  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dark_matter_deposit_10   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_orbital_deposits
+		}
+		NAME = d_living_metal_deposit  
+		allow = {
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_living_metal_deposit   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	# planetary deposits
+
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = energy_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_arid_highlands  
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_arid_highlands  
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hot_springs   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hot_springs   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_rushing_waterfalls   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_rushing_waterfalls   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_searing_desert   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_searing_desert   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_frozen_gas_lake   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_frozen_gas_lake   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_geothermal_vent   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_geothermal_vent   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_underwater_vent   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_underwater_vent   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_tempestous_mountain   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tempestous_mountain   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_tempestous_mountain 
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tempestous_mountain   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = mineral_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_veiny_cliffs   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_veiny_cliffs   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_mineral_fields   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_mineral_fields   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_prosperous_mesa   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_prosperous_mesa   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_ore_rich_caverns   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_ore_rich_caverns   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_rich_mountain   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_rich_mountain   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_submerged_ore_veins   
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_submerged_ore_veins   
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = food_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_lichen_fields    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_lichen_fields    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_bountiful_plains    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_bountiful_plains    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_rugged_woods    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_rugged_woods    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_green_hills    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_green_hills    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_forgiving_tundra    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_forgiving_tundra    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_boggy_fens    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_boggy_fens    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_nutritious_mudland    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_nutritious_mudland    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_fungal_caves    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_fungal_caves    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_lush_jungle    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_lush_jungle    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_fertile_lands    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_fertile_lands    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_great_river    
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_great_river    
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_black_soil     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_black_soil     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_teeming_reef     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_teeming_reef     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_marvelous_oasis     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_marvelous_oasis     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_tropical_island     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tropical_island     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_fungal_forest     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_fungal_forest     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = strategic_resource_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_dust_caverns     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dust_caverns     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_dust_desert     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dust_desert     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_bubbling_swamp     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_bubbling_swamp     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_fuming_bog     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_fuming_bog     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_crystalline_caverns     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crystalline_caverns     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_crystal_forest     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crystal_forest     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_crystal_reef     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crystal_reef     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = special_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_betharian_deposit     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_betharian_deposit     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_alien_pets_deposit     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_alien_pets_deposit     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = gaia_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_buzzing_plains     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_buzzing_plains     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_mineral_striations     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_mineral_striations     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_natural_farmland     
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_natural_farmland     
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = habitat_deposits
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_gas_1      
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_gas_1      
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_gas_5       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_gas_5       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_crystal_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_crystal_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_crystal_5       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_crystal_5       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_mote_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_mote_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_mote_5       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_mote_5       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_zro_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_zro_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_zro_3       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_zro_3       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_dark_matter_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_dark_matter_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_dark_matter_3       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_dark_matter_3       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_living_metal_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_living_metal_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_alloy_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_alloy_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_alloy_5       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_alloy_5       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_planetary_deposits
+		}
+		NAME = d_hab_nanites_1       
+		allow = {
+			from = { is_planet_class = pc_habitat }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hab_nanites_1       
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	# blocker deposits
+
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = block_all_districts       
+		allow = {
+			always = no
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_mountain_range        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_mountain_range        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_active_volcano        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_active_volcano        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_dangerous_wildlife_blocker        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dangerous_wildlife_blocker        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_dense_jungle        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dense_jungle        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_toxic_kelp        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_toxic_kelp        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_deep_sinkhole        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_deep_sinkhole        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_quicksand_basin        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_quicksand_basin        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_noxious_swamp        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_noxious_swamp        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_massive_glacier        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_massive_glacier        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = special_blockers        
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_radioactive_wasteland        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_radioactive_wasteland        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_city_ruins        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_city_ruins        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_bomb_crater        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_bomb_crater        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_infestation        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_infestation        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_quarantine_zone        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_quarantine_zone        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_slums        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_slums        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_crater        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crater        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_wandering_forests        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_wandering_forests        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_sinkhole_subterraneans        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_sinkhole_subterraneans        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_titanic_life_blocker        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_titanic_life_blocker        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = homeworld_blockers       
+		allow = {
+			always = no
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_failing_infrastructure        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_failing_infrastructure        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_decrepit_dwellings        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_decrepit_dwellings        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_tomb_world_ruins        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tomb_world_ruins        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_tomb_world_wasteland        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_tomb_world_wasteland        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_machine_empire_ruins        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_machine_empire_ruins        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_exterminators_ruins        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_exterminators_ruins        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_former_battlefield        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_former_battlefield        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_strip_mine        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_strip_mine        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_unsupervised_settlement        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_unsupervised_settlement        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_collapsed_burrows        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_collapsed_burrows        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_assimilators_ruins        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_assimilators_ruins        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_fungoid_extermination        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_fungoid_extermination        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_exofungus_blocker        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_exofungus_blocker        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_egg_cracking        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_egg_cracking        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_ruined_building_blocker        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_ruined_building_blocker        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_living_subterraneans        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_living_subterraneans        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_dead_subterraneans        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dead_subterraneans        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_ruined_arcology        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_ruined_arcology        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_hibernating_lithoids        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_hibernating_lithoids        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_lithoid_devastation        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_lithoid_devastation        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_blocker_deposits
+		}
+		NAME = d_terraforming_blocker        
+		allow = {
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_terraforming_blocker        
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	# DLC deposits
+
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_guardian_dragon_hoard         
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_guardian_dragon_hoard         
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_dragon_monument         
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_dragon_monument         
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_stellarite_trophy         
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_stellarite_trophy         
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_vast_unity_deposit         
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_vast_unity_deposit         
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_nanites_deposit         
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+			from = { habitable_planet = no }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_nanites_deposit         
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_collapsed_spire          
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_collapsed_spire          
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_massive_crevice           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_massive_crevice           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_shattered_solar_array           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_shattered_solar_array           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = relic_world_blockers           
+		allow = {
+			always = no
+		}		
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_flooded_reactor_pits           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_flooded_reactor_pits           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_crumbling_mining_tunnels           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_crumbling_mining_tunnels           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	# relic world deposits
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = relic_world_deposits           
+		allow = {
+			always = no
+		}		
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_ancient_reactor_pits           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_ancient_reactor_pits           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_immense_solar_array           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_immense_solar_array           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_abandoned_mining_tunnels           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_abandoned_mining_tunnels           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_relic_metal_boneyard           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_relic_metal_boneyard           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_central_spire           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_central_spire           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_industrial_sector           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_industrial_sector           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_relic_dense_ruins           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_relic_dense_ruins           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_former_relic_world           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_former_relic_world           
+			}
+		}
+		country_event = {
+			id = sgm_deposits.1
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = showing_DLC_deposits
+		}
+		NAME = d_mutation_vats           
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+			from = { habitable_planet = yes }
+		}
+		from = { 
+			while = {
+				count = prev.modifier_var 
+				add_deposit = d_mutation_vats           
+			}
+		}
+	}
+
+	option = {
+		NAME = EXIT
+	}
+}
