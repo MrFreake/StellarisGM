@@ -38,47 +38,56 @@ sgm_planet_effects = {
 	}
 }
 
-sgm_increase_scalar = {
+modifier_var_add_one = {
 	potential = {
 		is_gm = yes
 	}
 	allow = {}
 	effect = {
-		root = {
-			change_variable = {
-				which = scalar
-				value = 1
-			}
-		}
-		country_event = {
-			id = sgm_planets.1
-			scopes = {
-				from = from
-			}
-		}
+		fromfrom = {
+		change_variable = {
+			which = modifier_var
+			value = 1
+		} }
 	}
 }
-sgm_decrease_scalar = {
+modifier_var_add_ten = {
 	potential = {
 		is_gm = yes
 	}
 	allow = {}
 	effect = {
-		root = {
-			change_variable = {
-				which = scalar
-				value = -1
-			}
-		}
-		country_event = {
-			id = sgm_planets.1
-			scopes = {
-				from = from
-			}
+		change_variable = {
+			which = modifier_var
+			value = 10
 		}
 	}
 }
-sgm_modifier_scalar = {
+modifier_var_minus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		change_variable = {
+			which = modifier_var
+			value = -10
+		}
+	}
+}
+modifier_var_minus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		change_variable = {
+			which = modifier_var
+			value = -1
+		}
+	}
+}
+modifier_var_value = {
 	potential = {
 		is_gm = yes
 	}

@@ -1,33 +1,16 @@
-@column1value = 500
-@column2value = 704
-@column3value = 788
-@y1 = 28 
-@y2 = 54
-@y3 = 80
-@y4 = 106
-@y5 = 132
-@y6 = 158
-@y7 = 184
-@y8 = 210
-@y9 = 236
-@y10 = 262
-@y11 = 288
-@y12 = 314
-
-
 guiTypes = {
-	### Bounty event window
+	### modifier_var event window
 
 	containerWindowType = {
-		name = "sgm_EventWindow"
+		name = "sgm_ScalarEventWindow"
 		orientation = center
 		origo = center
 		moveable = yes
-		size = { width = 490 height = 680 }
+		size = { width = 490 height = 690 }
 		
 		background = {
 			name = "background"
-			quadTextureSprite ="GFX_tile_large_bg_caravaneer" 
+			quadTextureSprite ="GFX_tile_outliner_bg" 
 		}
 
 		#iconType = {
@@ -39,7 +22,7 @@ guiTypes = {
 
 		iconType = {
 			name = "empire_header_line"
-			quadTextureSprite = "GFX_line_long_caravaneer"
+			quadTextureSprite = "GFX_line"
 			position = { x = 6 y = 22 }
 			alwaysTransparent = yes
 		}
@@ -66,7 +49,7 @@ guiTypes = {
 			name = "heading"
 			font = "malgun_goth_24"
 			text = "DIPLOMACY"
-			position = { x = 20 y = 5 }
+			position = { x = -520 y = 5 }
 			maxWidth = 400
 			maxHeight = 22
 			fixedSize = yes
@@ -75,7 +58,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "alien_message_background"
-			size = { x = 450 y = 240 }
+			size = { x = 468 y = 150 }
 			position = { x = 11 y = 50 }
 			spriteType = "GFX_tiles_dark_area_cut_8"
 			alwaysTransparent = yes
@@ -85,8 +68,8 @@ guiTypes = {
 			name = "alien_message"
 			font = "cg_16b"
 			position = { x = 20 y = 55 }
-			maxWidth = 430
-			maxHeight = 230
+			maxWidth = 450
+			maxHeight = 130
 			format = left
 			scrollbartype = "standardtext_slider"
 		}
@@ -94,8 +77,8 @@ guiTypes = {
 		buttonType = {
 			name = "confirm_button"
 			quadTextureSprite = "GFX_standard_button_142_34_button"
-			position = { x= -175 y = 564  }
-			Orientation = "UPPER_RIGHT"
+			position = { x= 0 y = 100  }
+			Orientation = "CENTER"
 			font = "cg_16b"
 			text = "MESSAGE_OK"
 			clicksound = "confirmation"
@@ -108,7 +91,7 @@ guiTypes = {
 			position = { x = 17 y = 45 }
 			size = { width = 400 height = 200 }
 			clipping = yes
-			scale = 0.5
+			
 			
 			iconType = {
 				name = "event_picture"
@@ -314,11 +297,65 @@ guiTypes = {
 			instantTextBoxType={
 				name = "action_title"
 				font = "malgun_goth_24"
-				position = { x = 20 y = 0 }
+				position = { x = 15 y = -295 }
 				maxWidth = 520
 				alwaysTransparent = yes
 			}
-			
+			effectbuttonType = {					
+				name = modifier_var_minus_ten
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 156 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "-10"
+				orientation = CENTER_LEFT
+				effect = modifier_var_minus_ten
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_minus_1
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 188 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "-1"
+				orientation = CENTER_LEFT
+				effect = modifier_var_minus_1
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_value
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 220 y = -85 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = modifier_var_value
+				orientation = CENTER_LEFT
+				effect = modifier_var_value
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_add_one
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 252 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "+1"
+				orientation = CENTER_LEFT
+				effect = modifier_var_add_one
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_add_ten
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 284 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "+10"
+				orientation = CENTER_LEFT
+				effect = modifier_var_add_ten
+	#			shortCut = j
+			}
 			instantTextBoxType={
 				name = "action_desc"
 				font = "malgun_goth_24"
@@ -333,9 +370,9 @@ guiTypes = {
 
 			listboxType = {
 				name = "option_list"
-				position = { x = 0 y = 50 }
+				position = { x = 0 y = -50 }
 				backGround=""
-				size = { x = 470 y = 310 }
+				size = { x = 470 y = 420 }
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
