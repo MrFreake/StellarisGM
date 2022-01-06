@@ -12,6 +12,7 @@ sgm_fleet_effects = {
 				id = sgm_fleet.1
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
@@ -32,6 +33,7 @@ sgm_planet_effects = {
 				id = sgm_planets.1
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
