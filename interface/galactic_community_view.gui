@@ -203,6 +203,128 @@ guiTypes = {
 						effect = sgm_galcom_fail_resolution_button
 			#			shortCut = j
 					}
+					effectbuttonType = {					# form galactic council
+						name = sgm_form_council
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 113 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_form_council
+						orientation = UPPER_LEFT
+						effect = sgm_form_council
+			#			shortCut = j
+					}
+					effectbuttonType = {					# disband galactic council
+						name = sgm_disband_council
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 113 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_disband_council
+						orientation = UPPER_LEFT
+						effect = sgm_disband_council
+			#			shortCut = j
+					}
+					effectbuttonType = {					# form galactic market
+						name = sgm_form_galactic_market
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 150 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_form_galactic_market
+						orientation = UPPER_LEFT
+						effect = sgm_form_galactic_market
+			#			shortCut = j
+					}
+					effectbuttonType = {					# increase council size
+						name = sgm_increase_council_size
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 261 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_increase_council_size
+						orientation = UPPER_LEFT
+						effect = sgm_increase_council_size
+			#			shortCut = j
+					}
+					effectbuttonType = {					# decrease council size
+						name = sgm_decrease_council_size
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 298 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_decrease_council_size
+						orientation = UPPER_LEFT
+						effect = sgm_decrease_council_size
+			#			shortCut = j
+					}
+					effectbuttonType = {					# set council veto
+						name = sgm_set_council_veto
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 335 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_set_council_veto
+						orientation = UPPER_LEFT
+						effect = sgm_set_council_veto
+			#			shortCut = j
+					}
+					effectbuttonType = {					# remove council veto
+						name = sgm_remove_council_veto
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 335 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_remove_council_veto
+						orientation = UPPER_LEFT
+						effect = sgm_remove_council_veto
+			#			shortCut = j
+					}
+					effectbuttonType = {					# set council emergency measures
+						name = sgm_set_council_emergency_measures
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 372 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_set_council_emergency_measures
+						orientation = UPPER_LEFT
+						effect = sgm_set_council_emergency_measures
+			#			shortCut = j
+					}
+					effectbuttonType = {					# remove council emergency measures
+						name = sgm_remove_council_emergency_measures
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 372 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_remove_council_emergency_measures
+						orientation = UPPER_LEFT
+						effect = sgm_remove_council_emergency_measures
+			#			shortCut = j
+					}					
+					effectbuttonType = {					# enable council denouncement
+						name = sgm_enable_council_denouncement
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 409 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_enable_council_denouncement
+						orientation = UPPER_LEFT
+						effect = sgm_enable_council_denouncement
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # disable council denouncement
+						name = sgm_disable_council_denouncement
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 409 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_disable_council_denouncement
+						orientation = UPPER_LEFT
+						effect = sgm_disable_council_denouncement
+			#			shortCut = j
+					}					
+
 					# middle column
 					instantTextBoxType = {
 						name = "COUNTRY_EFFECTS"
@@ -215,7 +337,74 @@ guiTypes = {
 						format = center
 						orientation = UPPER_LEFT
 					}
-					# middle column
+					effectbuttonType = {					 # add to council
+						name = sgm_add_to_council
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 39 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_add_to_council
+						orientation = UPPER_LEFT
+						effect = sgm_add_to_council
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # remove from council
+						name = sgm_remove_from_council
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 39 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_remove_from_council
+						orientation = UPPER_LEFT
+						effect = sgm_remove_from_council
+			#			shortCut = j
+					}					
+					effectbuttonType = {					 # add to council permanent
+						name = sgm_add_to_council_permanent
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 76 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_add_to_council_permanent
+						orientation = UPPER_LEFT
+						effect = sgm_add_to_council_permanent
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # remove from council permanent
+						name = sgm_remove_from_council_permanent
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 76 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_remove_from_council_permanent
+						orientation = UPPER_LEFT
+						effect = sgm_remove_from_council_permanent
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # nominate custodian
+						name = sgm_nominate_custodian
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 113 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_nominate_custodian
+						orientation = UPPER_LEFT
+						effect = sgm_nominate_custodian
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # end custodian
+						name = sgm_end_custodianship
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 113 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_end_custodianship
+						orientation = UPPER_LEFT
+						effect = sgm_end_custodianship
+			#			shortCut = j
+					}
+
+					# right column
 					instantTextBoxType = {
 						name = "2_COUNTRY_EFFECTS"
 						font = "malgun_goth_24"
