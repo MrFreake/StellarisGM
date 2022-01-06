@@ -300,7 +300,7 @@ country_event = {
 #Fired from destroy_star_system scripted effect
 #This = system
 #From = destroyer (if using a star cracker)
-galactic_object_event = {
+system_event = {
 	id = sgm_bounty.207
 	hide_window = yes
 	is_triggered_only = yes
