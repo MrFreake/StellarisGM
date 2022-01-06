@@ -602,14 +602,15 @@ sgm_add_deposit = {
 		is_gm = yes
 	}
 	allow = {
-		always = no
+		
 	}
 	effect = {
 		from = {
 			country_event = {
-				id = sgm_planets.56
+				id = sgm_deposits.1
 				scopes = {
 					from = prev
+					fromfrom = this
 				}
 			}
 		}
