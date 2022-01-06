@@ -88,6 +88,29 @@ country_event = {								# destroy megastructure confirmation
 	}
 }
 
+country_event = {								# clear deposits confirmation
+	id = sgm_confirmation.4						# from = planet
+	is_triggered_only = yes						# fromfrom = gm_country
+	title = clear_deposit_confirmation
+	desc = clear_deposit_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}
+
+
+
 ## AA confirmations - ids start at 1000
 country_event = {								# destroy_colony confirmation
 	id = sgm_confirmation.1000					# from = planet

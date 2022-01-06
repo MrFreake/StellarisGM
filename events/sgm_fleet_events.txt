@@ -5,7 +5,12 @@ country_event = {								# Opens fleet menu
 	is_triggered_only = yes
 	title = sgm_fleet_1_title
 	desc = sgm_fleet_1_desc
-	picture = GFX_evt_ship_in_orbit
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
 
 	trigger = {
 		exists = root
@@ -14,40 +19,6 @@ country_event = {								# Opens fleet menu
 	}
 
 	immediate = { }
-
-	option = {
-		NAME = increase_multiplier
-		change_variable = {
-			which = multiplier
-			value = 1
-		}
-		country_event = {
-			id = sgm_fleet.1
-			scopes = {
-				from = from
-			}
-		}
-	}
-
-	option = {
-		NAME = decrease_multiplier
-		allow = {
-			check_variable = {
-				which = multiplier
-				value > 1
-			}
-		}
-		change_variable = {
-			which = multiplier
-			value = -1
-		}
-		country_event = {
-			id = sgm_fleet.1
-			scopes = {
-				from = from
-			}
-		}
-	}
 
 	option = {
 		NAME = DELETE_FLEET
@@ -77,7 +48,7 @@ country_event = {								# Opens fleet menu
 	option = {
 		NAME = ADD_CORVETTE
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				create_ship = {
 					random_existing_design = corvette
@@ -89,7 +60,7 @@ country_event = {								# Opens fleet menu
 	option = {
 		NAME = ADD_DESTROYER
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				create_ship = {
 					random_existing_design = destroyer
@@ -101,7 +72,7 @@ country_event = {								# Opens fleet menu
 	option = {
 		NAME = ADD_CRUISER
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				create_ship = {
 					random_existing_design = cruiser
@@ -113,7 +84,7 @@ country_event = {								# Opens fleet menu
 	option = {
 		NAME = ADD_BATTLESHIP
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				create_ship = {
 					random_existing_design = battleship
@@ -125,7 +96,7 @@ country_event = {								# Opens fleet menu
 	option = {
 		NAME = add_random_design_from_fleet
 		while = {
-			count = multiplier
+			count = modifier_var
 			from = {
 				random_owned_ship = {
 					fleet = {
