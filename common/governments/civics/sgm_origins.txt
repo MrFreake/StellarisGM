@@ -4,10 +4,11 @@ origin_game_master = {
 	picture = GFX_evt_origin_gm
 
 	potential = {
-		always = yes
+		is_ai = no
 	}
 
 	possible = {
+		
 	}
 
 	random_weight = {
