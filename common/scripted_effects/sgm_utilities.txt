@@ -7,6 +7,7 @@ apply_vanilla_planet_modifier = {
 		}
 		add_modifier = {
 			modifier = $P_MODIFIER$
+			days = -1
 		}
 	}
 }
@@ -24,6 +25,7 @@ apply_planet_modifier = {
 		remove_modifier = $P_MODIFIER$
 		add_modifier = {
 			modifier = $P_MODIFIER$
+			days = -1
 			multiplier = 2
 		}
 	}
@@ -35,6 +37,7 @@ apply_planet_modifier = {
 		remove_modifier = $P_MODIFIER$
 		add_modifier = {
 			modifier = $P_MODIFIER$
+			days = -1
 			multiplier = root.multiplier
 		}
 	}	
@@ -45,10 +48,14 @@ apply_planet_modifier = {
 		}
 		add_modifier = {
 			modifier = $P_MODIFIER$
+			days = -1
 			multiplier = root.multiplier
 		}
 	}
 	else = {
-		add_modifier = $P_MODIFIER$
+		add_modifier = {
+			modifier = $P_MODIFIER$
+			days = -1
+		}
 	}
 }

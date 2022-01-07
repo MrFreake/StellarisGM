@@ -25,3 +25,357 @@ sgm_galcom_fail_resolution_button = {
 		}
 	}
 }
+
+sgm_form_council = {
+	potential = {
+		is_gm = yes
+		NOT = { has_global_flag = galactic_council_formed }
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_form_council
+		pass_resolution_no_cooldown = resolution_galacticreforms_form_council
+	}
+}
+
+sgm_disband_council = {
+	potential = {
+		is_gm = yes
+		has_global_flag = galactic_council_formed 
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_abolish_council
+		pass_resolution_no_cooldown = resolution_galacticreforms_abolish_council
+	}
+}
+
+sgm_form_galactic_market = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			is_active_resolution = resolution_galactic_market_form
+		}
+	}
+	allow = {
+		NOT = {
+			is_active_resolution = resolution_galactic_market_form
+		}
+	}
+	effect = {
+		pass_resolution_no_cooldown = resolution_galactic_market_form
+	}
+}
+
+sgm_increase_council_size = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		increase_council_size = yes
+	}
+}
+
+sgm_decrease_council_size = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		decrease_council_size = yes
+	}
+}
+
+sgm_set_council_veto = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			has_global_flag = galactic_council_veto 
+			#is_active_resolution = resolution_galacticreforms_enable_council_veto
+		}
+	}
+	allow = {
+		host_has_dlc = "Federations"
+		has_global_flag = galactic_council_formed
+		has_galactic_emperor = no
+
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_enable_council_veto
+		pass_resolution_no_cooldown = resolution_galacticreforms_enable_council_veto
+		set_global_flag = galactic_council_veto
+		set_council_veto = yes
+	}
+}
+
+sgm_remove_council_veto = {
+	potential = {
+		is_gm = yes
+		has_global_flag = galactic_council_veto 
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_enable_council_veto
+		pass_resolution_no_cooldown = resolution_galacticreforms_disable_council_veto
+		remove_global_flag = galactic_council_veto
+		set_council_veto = no
+	}
+}
+
+sgm_set_council_emergency_measures = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			has_global_flag = council_emergency_measures_enabled
+		}
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		set_council_emergency_measures = yes
+		set_global_flag = council_emergency_measures_enabled
+	}
+}
+
+
+sgm_remove_council_emergency_measures = {
+	potential = {
+		is_gm = yes
+		has_global_flag = council_emergency_measures_enabled
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		set_council_emergency_measures = no
+		remove_global_flag = council_emergency_measures_enabled
+	}
+}
+
+sgm_enable_council_denouncement = {
+	potential = {
+		is_gm = yes
+		has_global_flag = resolution_council_denouncement_abolished
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_enable_council_denouncement
+		pass_resolution_no_cooldown = resolution_galacticreforms_enable_council_denouncement
+	}
+}
+
+sgm_disable_council_denouncement = {
+	potential = {
+		is_gm = yes
+		NOT = {
+			has_global_flag = resolution_council_denouncement_abolished
+		}
+	}
+	allow = {
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		cancel_resolution = resolution_galacticreforms_disable_council_denouncement
+		pass_resolution_no_cooldown = resolution_galacticreforms_disable_council_denouncement
+		set_global_flag = resolution_council_denouncement_abolished
+	}
+}
+
+
+sgm_add_to_council = {
+	potential = {
+		is_gm = yes
+		#has_global_flag = galactic_council_formed
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_part_of_galactic_council = no
+		}
+	}
+	allow = {
+		#has_galactic_custodian = no
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		event_target:target_country = {
+			add_to_galactic_council = yes
+		}
+	}
+}
+
+sgm_remove_from_council = {
+	potential = {
+		is_gm = yes
+		#has_global_flag = galactic_council_formed
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_part_of_galactic_council = yes
+		}
+	}
+	allow = {
+		#has_galactic_custodian = no
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		event_target:target_country = {
+			remove_from_galactic_council = yes
+		}
+	}
+}
+
+sgm_add_to_council_permanent = {
+	potential = {
+		is_gm = yes
+		#has_global_flag = galactic_council_formed
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_permanent_councillor = no
+		}
+	}
+	allow = {
+		has_galactic_custodian = no
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		event_target:target_country = {
+			add_permanent_councillor = yes
+		}
+	}
+}
+
+sgm_remove_from_council_permanent = {
+	potential = {
+		is_gm = yes
+		#has_global_flag = galactic_council_formed
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_part_of_galactic_council = yes
+			is_permanent_councillor = yes
+		}
+	}
+	allow = {
+		has_galactic_custodian = no
+		OR = {
+			host_has_dlc = "Federations"
+			host_has_dlc = "Nemesis" 
+		}
+		has_global_flag = galactic_council_formed
+	}
+	effect = {
+		event_target:target_country = {
+			remove_permanent_councillor = yes
+		}
+	}
+}
+
+sgm_nominate_custodian = {
+    potential = {
+        is_gm = yes
+        has_galactic_custodian = no
+        exists = event_target:target_country
+    }
+    allow = {
+		host_has_dlc = "Nemesis"
+		is_galactic_council_established = yes
+		has_galactic_custodian = no
+		has_galactic_emperor = no
+    }
+    effect = {
+        event_target:target_country = { 
+			set_galactic_custodian = yes
+			country_event = { id = custodian.1 }
+			if = {
+				limit = { has_global_flag = gdf_active }
+				country_event = { id = custodian.35 days = 10 }
+			}
+		}
+    }
+}
+
+sgm_end_custodianship = {
+    potential = {
+        is_gm = yes
+        has_galactic_custodian = yes
+    }
+    allow = {
+		host_has_dlc = "Nemesis"
+		has_galactic_custodian = yes
+    }
+    effect = {
+        galactic_custodian = { 
+			set_galactic_custodian = no
+			if = {
+				limit = { is_active_resolution = "resolution_custodian_perpetual_custodianship" }
+				cancel_resolution = "resolution_custodian_perpetual_custodianship"
+			}
+			country_event = { id = custodian.16 }
+		}
+	}
+}
+
+
+#sgm_form_imperium
+#resolution_custodian_form_empire
+#sgm_disband_imperium
+
+
+

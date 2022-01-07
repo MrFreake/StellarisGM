@@ -126,7 +126,7 @@ sgm_assume_fleet_control = {
 
 sgm_return_fleet_control = {
 	potential = {
-		from = { is_gm = yes }
+		is_gm = yes
 		has_fleet_flag = sgm_assumed_control
 	}
 	allow = {
@@ -205,6 +205,7 @@ sgm_set_owner_target_country = {
 	potential = {
 		is_gm = yes
 		exists = owner
+		exists = event_target:target_country
 		NOT = {
 			owner = {
 				is_same_value = event_target:target_country
@@ -259,25 +260,6 @@ sgm_upgrade_starbase = {
 	}
 }
 
-sgm_modify_starbase = { # this will need to be tackled by someone smarter than me
-	potential = {		# alternatively, you can assume/return control of a starbase and modify it that way
-		is_gm = yes
-		is_fleet = no
-	}
-	allow = {
-		always = no
-	}
-	effect = {
-		from = {
-			country_event = {
-				id = sgm_fleet.2
-				scopes = {
-					from = prev
-				}
-			}
-		}
-	}
-}
 
 
 
