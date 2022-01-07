@@ -73,9 +73,10 @@ country_event = {
 event = {
     id = sgm_start_events.2
     is_triggered_only = yes
-    title = gm_country_created_title
-    desc = gm_country_created_desc
-    picture = GFX_evt_ancient_artifact
+    #title = gm_country_created_title
+    #desc = gm_country_created_desc
+    #picture = GFX_evt_ancient_artifact
+    hide_window = yes
 
     trigger = {
         NOT = {
