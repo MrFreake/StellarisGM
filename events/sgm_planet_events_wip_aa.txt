@@ -7,11 +7,23 @@ namespace = sgm_planet_modifiers_aa
 country_event = {								# requires passing the planet scope as from
 	id = sgm_planet_modifiers_aa.1
 	is_triggered_only = yes
-	title = sgm_planet_modifiers_aa_1
+	title = sgm_planet_modifiers_aa_1_title
 	desc = sgm_planet_modifiers_aa_1_desc
-	picture = GFX_planet_view_planet
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	trigger = {
+		from = {
+			is_scope_type = planet
+		}
+	}
 	
-	immediate = {}
+	immediate = {
+		log = "sgm_planet_modifiers_aa.1 firing"
+	}
 	
 	### Set a Filter
 	option = { 
@@ -244,11 +256,23 @@ country_event = {								# requires passing the planet scope as from
 country_event = {								# requires passing the planet scope as from
 	id = sgm_planet_modifiers_aa.2
 	is_triggered_only = yes
-	title = sgm_planet_modifiers_aa_2
+	title = sgm_planet_modifiers_aa_2_title
 	desc = sgm_planet_modifiers_aa_2_desc
-	picture = GFX_planet_view_planet
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	trigger = {
+		from = {
+			is_scope_type = planet
+		}
+	}
 	
-	immediate = {}
+	immediate = {
+		log = "sgm_planet_modifiers_aa.2 firing"
+	}
 	
 	option = { NAME = remove_modifier_gm_pm_amenities_add trigger = { from = { has_modifier = gm_pm_amenities_add }} from = { remove_modifier = gm_pm_amenities_add } country_event = { id = sgm_planet_modifiers_aa.2 scopes = { from = from }}}
 	option = { NAME = remove_modifier_gm_pm_amenities_subtract trigger = { from = { has_modifier = gm_pm_amenities_subtract }} from = { remove_modifier = gm_pm_amenities_subtract } country_event = { id = sgm_planet_modifiers_aa.2 scopes = { from = from }}}
