@@ -732,10 +732,12 @@ country_event = {								# ethics shifter
 		NAME = embrace_pacifism
 		trigger = {
 			NOT = {
-				has_ethic = ethic_fanatic_pacifist
+				from = {
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
-		shift_ethic = ethic_pacifist
+		from = { shift_ethic = ethic_pacifist }
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -746,9 +748,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_pacifism
 		trigger = {
-			has_ethic = ethic_pacifist
+			from = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
 		}
-		country_remove_ethic = ethic_pacifist
+		from = {
+			country_remove_ethic = ethic_pacifist
+			country_remove_ethic = ethic_fanatic_pacifist
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -776,9 +786,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_ethic_authoritarianism
 		trigger = {
-			has_ethic = ethic_authoritarian
+			from = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
 		}
-		country_remove_ethic = ethic_authoritarian
+		from = {
+			country_remove_ethic = ethic_authoritarian
+			country_remove_ethic = ethic_fanatic_authoritarian
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -806,9 +824,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_egalitarianism
 		trigger = {
-			has_ethic = ethic_egalitarian
+			from = {
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
 		}
-		country_remove_ethic = ethic_egalitarian
+		from = {
+			country_remove_ethic = ethic_egalitarian
+			country_remove_ethic = ethic_fanatic_egalitarian
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -834,9 +860,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_xenophobia
 		trigger = {
-			has_ethic = ethic_xenophobe
+			from = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
 		}
-		country_remove_ethic = ethic_xenophobe
+		from = {
+			country_remove_ethic = ethic_xenophobe
+			country_remove_ethic = ethic_fanatic_xenophobe
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -862,9 +896,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_xenophilia
 		trigger = {
-			has_ethic = ethic_xenophile
+			from = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
 		}
-		country_remove_ethic = ethic_xenophile
+		from = {
+			country_remove_ethic = ethic_xenophile
+			country_remove_ethic = ethic_fanatic_xenophile
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -890,9 +932,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_militarism
 		trigger = {
-			has_ethic = ethic_militarist
+			from = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
 		}
-		country_remove_ethic = ethic_militarist
+		from = {
+			country_remove_ethic = ethic_militarist
+			country_remove_ethic = ethic_fanatic_militarist
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -918,9 +968,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_spiritualism
 		trigger = {
-			has_ethic = ethic_spiritualist
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
 		}
-		country_remove_ethic = ethic_spiritualist
+		from = {
+			country_remove_ethic = ethic_spiritualist
+			country_remove_ethic = ethic_fanatic_spiritualist
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
@@ -946,9 +1004,17 @@ country_event = {								# ethics shifter
 	option = {
 		NAME = renounce_materialism
 		trigger = {
-			has_ethic = ethic_materialist
+			from = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
 		}
-		country_remove_ethic = ethic_materialist
+		from = {
+			country_remove_ethic = ethic_materialist
+			country_remove_ethic = ethic_fanatic_materialist
+		}
 		country_event = {
 			id = sgm_country.3
 			scopes = {
