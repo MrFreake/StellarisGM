@@ -718,3 +718,2746 @@ country_event = { 							# declare war options
 		NAME = Exit
 	}
 }
+
+country_event = {								# ethics shifter
+	id = sgm_country.3
+	is_triggered_only = yes
+	title = sgm_country_3
+	desc = sgm_country_3_desc
+	picture = GFX_evt_ship_under_attack
+
+	immediate = {}
+
+	option = {
+		NAME = embrace_pacifism
+		trigger = {
+			NOT = {
+				from = {
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		from = { shift_ethic = ethic_pacifist }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_pacifism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_pacifist
+			country_remove_ethic = ethic_fanatic_pacifist
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_authoritarianism
+		trigger = {
+			NOT = {
+				from = {
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+		}
+		from = { shift_ethic = ethic_authoritarian }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_ethic_authoritarianism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_authoritarian
+			country_remove_ethic = ethic_fanatic_authoritarian
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_egalitarianism
+		trigger = {
+			NOT = {
+				from = {
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		from = { shift_ethic = ethic_egalitarian }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_egalitarianism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_egalitarian
+			country_remove_ethic = ethic_fanatic_egalitarian
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrance_xenophobia
+		trigger = {
+			NOT = {
+				from = { has_ethic = ethic_fanatic_xenophobe }
+			}
+		}
+		from = { shift_ethic = ethic_xenophobe }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_xenophobia
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_xenophobe
+			country_remove_ethic = ethic_fanatic_xenophobe
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_xenophilia
+		trigger = {
+			NOT = {
+				from = { has_ethic = ethic_fanatic_xenophile }
+			}
+		}
+		from = { shift_ethic = ethic_xenophile }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_xenophilia
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_xenophile
+			country_remove_ethic = ethic_fanatic_xenophile
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_militarist
+		trigger = {
+			NOT = {
+				from = { has_ethic = ethic_fanatic_militarist }
+			}
+		}
+		from = { shift_ethic = ethic_militarist }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_militarism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_militarist
+			country_remove_ethic = ethic_fanatic_militarist
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_spiritualism
+		trigger = {
+			NOT = {
+				from = { has_ethic = ethic_fanatic_spiritualist }
+			}
+		}
+		from = { shift_ethic = ethic_spiritualist }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_spiritualism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_spiritualist
+			country_remove_ethic = ethic_fanatic_spiritualist
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = embrace_materialism
+		trigger = {
+			NOT = {
+				from = { has_ethic = ethic_fanatic_materialist }
+			}
+		}
+		from = { shift_ethic = ethic_materialist }
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = renounce_materialism
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		from = {
+			country_remove_ethic = ethic_materialist
+			country_remove_ethic = ethic_fanatic_materialist
+		}
+		country_event = {
+			id = sgm_country.3
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {
+	id = sgm_country.4
+	is_triggered_only = yes
+	title = sgm_country_4
+	desc = sgm_country_4_esc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_ScrollbarEventWindow
+
+	immediate = {}
+
+	# regular civics
+
+	option = {
+		NAME = add_civic_corvee_system 						# add civic_corvee_system 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_corvee_system 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+		custom_tooltip = civic_corvee_system_effects
+		from = { force_add_civic = civic_corvee_system }
+	}
+	option = {									# remove civic_corvee_system 
+		NAME = remove_civic_corvee_system 
+		trigger = {
+			from = {
+			has_civic = civic_corvee_system 
+			}
+		}
+		from = { force_remove_civic = civic_corvee_system }
+	}
+	option = {
+		NAME = add_civic_imperial_cult 						# add civic_imperial_cult 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_imperial_cult 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+		custom_tooltip = civic_imperial_cult_desc
+		from = { force_add_civic = civic_imperial_cult }
+	}
+	option = {									# remove civic_imperial_cult 
+		NAME = remove_civic_imperial_cult 
+		trigger = {
+			from = {
+			has_civic = civic_imperial_cult 
+			}
+		}
+		from = { force_remove_civic = civic_imperial_cult }
+	}
+	option = {
+		NAME = add_civic_beacon_of_liberty 						# add civic_beacon_of_liberty 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_beacon_of_liberty 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+		custom_tooltip = civic_beacon_of_liberty_desc
+		from = { force_add_civic = civic_beacon_of_liberty }
+	}
+	option = {									# remove civic_beacon_of_liberty 
+		NAME = remove_civic_beacon_of_liberty 
+		trigger = {
+			from = {
+			has_civic = civic_beacon_of_liberty 
+			}
+		}
+		from = { force_remove_civic = civic_beacon_of_liberty }
+	}
+	option = {
+		NAME = add_civic_exalted_priesthood 						# add civic_exalted_priesthood 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_exalted_priesthood 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+		custom_tooltip = civic_tooltip_exalted_priesthood_effects
+		from = { force_add_civic = civic_exalted_priesthood }
+	}
+	option = {									# remove civic_exalted_priesthood 
+		NAME = remove_civic_exalted_priesthood 
+		trigger = {
+			from = {
+			has_civic = civic_exalted_priesthood 
+		}
+	}
+		from = { force_remove_civic = civic_exalted_priesthood }
+	}
+	option = {
+		NAME = add_civic_philosopher_king 						# add civic_philosopher_king 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_philosopher_king 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+		custom_tooltip = "civic_tooltip_philosopher_king_effects"
+		from = { force_add_civic = civic_philosopher_king }
+	}
+	option = {									# remove civic_philosopher_king 
+		NAME = remove_civic_philosopher_king 
+		trigger = {
+			from = {
+			has_civic = civic_philosopher_king 
+			}
+		}
+		from = { force_remove_civic = civic_philosopher_king }
+	}
+	option = {
+		NAME = add_civic_meritocracy 						# add civic_meritocracy 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_meritocracy 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_meritocracy_desc
+		from = { force_add_civic = civic_meritocracy }
+	}
+	option = {									# remove civic_meritocracy 
+		NAME = remove_civic_meritocracy 
+		trigger = {
+			from = {
+			has_civic = civic_meritocracy 
+			}
+		}
+		from = { force_remove_civic = civic_meritocracy }
+	}
+	option = {
+		NAME = add_civic_citizen_service						# add civic_citizen_service
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_citizen_service
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = "civic_tooltip_citizen_service_effects"
+		from = { force_add_civic = civic_citizen_service }
+	}
+	option = {									# remove civic_citizen_service
+		NAME = remove_civic_citizen_service
+		trigger = {
+			from = {
+			has_civic = civic_citizen_service
+			}
+		}
+		from = { force_remove_civic = civic_citizen_service }
+	}
+	option = {
+		NAME = add_civic_technocracy						# add civic_technocracy
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_technocracy
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_technocracy_desc
+		from = { force_add_civic = civic_technocracy }
+	}
+	option = {									# remove civic_technocracy
+		NAME = remove_civic_technocracy
+		trigger = {
+			from = {
+			has_civic = civic_technocracy
+			}
+		}
+		from = { force_remove_civic = civic_technocracy }
+	}
+	option = {
+		NAME = add_civic_feudal_realm						# add civic_feudal_realm
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_feudal_realm
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_feudal_realm_desc
+		from = { force_add_civic = civic_feudal_realm }
+	}
+	option = {									# remove civic_feudal_realm
+		NAME = remove_civic_feudal_realm
+		trigger = {
+			from = {
+			has_civic = civic_feudal_realm
+			}
+		}
+		from = { force_remove_civic = civic_feudal_realm }
+	}
+	option = {
+		NAME = add_civic_police_state						# add civic_police_state
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_police_state
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = "civic_tooltip_police_state_effects"
+		from = { force_add_civic = civic_police_state }
+	}
+	option = {									# remove civic_police_state
+		NAME = remove_civic_police_state
+		trigger = {
+			from = {
+			has_civic = civic_police_state
+			}
+		}
+		from = { force_remove_civic = civic_police_state }
+	}
+	option = {
+		NAME = add_civic_idealistic_foundation						# add civic_idealistic_foundation
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_idealistic_foundation
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_idealistic_foundation_desc
+		from = { force_add_civic = civic_idealistic_foundation }
+	}
+	option = {									# remove civic_idealistic_foundation
+		NAME = remove_civic_idealistic_foundation
+		trigger = {
+			from = {
+			has_civic = civic_idealistic_foundation
+			}
+		}
+		from = { force_remove_civic = civic_idealistic_foundation }
+	}
+	option = {
+		NAME = add_civic_environmentalist						# add civic_environmentalist
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_environmentalist
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_environmentalist_desc
+		from = { force_add_civic = civic_environmentalist }
+	}
+	option = {									# remove civic_environmentalist
+		NAME = remove_civic_environmentalist
+		trigger = {
+			from = {
+			has_civic = civic_environmentalist
+			}
+		}
+		from = { force_remove_civic = civic_environmentalist }
+	}
+	option = {
+		NAME = add_civic_slaver_guilds						# add civic_slaver_guilds
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_slaver_guilds
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_slaver_guilds_desc
+		from = { force_add_civic = civic_slaver_guilds }
+	}
+	option = {									# remove civic_slaver_guilds
+		NAME = remove_civic_slaver_guilds
+		trigger = {
+			from = {
+			has_civic = civic_slaver_guilds
+			}
+		}
+		from = { force_remove_civic = civic_slaver_guilds }
+	}
+	option = {
+		NAME = add_civic_inwards_perfection						# add civic_inwards_perfection
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_inwards_perfection
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_inwards_perfection_desc
+		from = { force_add_civic = civic_inwards_perfection }
+	}
+	option = {									# remove civic_inwards_perfection
+		NAME = remove_civic_inwards_perfection
+		trigger = {
+			from = {
+			has_civic = civic_inwards_perfection
+			}
+		}
+		from = { force_remove_civic = civic_inwards_perfection }
+	}
+	option = {
+		NAME = add_civic_warrior_culture						# add civic_warrior_culture
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_warrior_culture
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_warrior_culture_desc
+		from = { force_add_civic = civic_warrior_culture }
+	}
+	option = {									# remove civic_warrior_culture
+		NAME = remove_civic_warrior_culture
+		trigger = {
+			from = {
+			has_civic = civic_warrior_culture
+			}
+		}
+		from = { force_remove_civic = civic_warrior_culture }
+	}
+	option = {
+		NAME = add_civic_distinguished_admiralty						# add civic_distinguished_admiralty
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_distinguished_admiralty
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_distinguished_admiralty_desc
+		from = { force_add_civic = civic_distinguished_admiralty }
+	}
+	option = {									# remove civic_distinguished_admiralty
+		NAME = remove_civic_distinguished_admiralty
+		trigger = {
+			from = {
+			has_civic = civic_distinguished_admiralty
+			}
+		}
+		from = { force_remove_civic = civic_distinguished_admiralty }
+	}
+	option = {
+		NAME = add_civic_free_haven						# add civic_free_haven
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_free_haven
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_free_haven_desc
+		from = { force_add_civic = civic_free_haven }
+	}
+	option = {									# remove civic_free_haven
+		NAME = remove_civic_free_haven
+		trigger = {
+			from = {
+			has_civic = civic_free_haven
+			}
+		}
+		from = { force_remove_civic = civic_free_haven }
+	}
+	option = {
+		NAME = add_civic_cutthroat_politics						# add civic_cutthroat_politics
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_cutthroat_politics
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_cutthroat_politics_desc
+		from = { force_add_civic = civic_cutthroat_politics }
+	}
+	option = {									# remove civic_cutthroat_politics
+		NAME = remove_civic_cutthroat_politics
+		trigger = {
+			from = {
+			has_civic = civic_cutthroat_politics
+			}
+		}
+		from = { force_remove_civic = civic_cutthroat_politics }
+	}
+	option = {
+		NAME = add_civic_corporate_dominion						# add civic_corporate_dominion
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_corporate_dominion
+				host_has_dlc = "Megacorp"
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = "civic_tooltip_corporate_dominion_effects"
+		from = { force_add_civic = civic_corporate_dominion }
+	}
+	option = {									# remove civic_corporate_dominion
+		NAME = remove_civic_corporate_dominion
+		trigger = {
+			from = {
+			has_civic = civic_corporate_dominion
+			}
+		}
+		from = { force_remove_civic = civic_corporate_dominion }
+	}
+	option = {
+		NAME = add_civic_agrarian_idyll						# add civic_agrarian_idyll
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_agrarian_idyll
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_agrarian_idyll_desc
+		from = { force_add_civic = civic_agrarian_idyll }
+	}
+	option = {									# remove civic_agrarian_idyll
+		NAME = remove_civic_agrarian_idyll
+		trigger = {
+			from = {
+			has_civic = civic_agrarian_idyll
+			}
+		}
+		from = { force_remove_civic = civic_agrarian_idyll }
+	}
+	option = {
+		NAME = add_civic_shadow_council						# add civic_shadow_council
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_shadow_council
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_shadow_council_desc
+		from = { force_add_civic = civic_shadow_council }
+	}
+	option = {									# remove civic_shadow_council
+		NAME = remove_civic_shadow_council
+		trigger = {
+			from = {
+			has_civic = civic_shadow_council
+			}
+		}
+		from = { force_remove_civic = civic_shadow_council }
+	}
+	option = {
+		NAME = add_civic_mining_guilds						# add civic_mining_guilds
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_mining_guilds
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_mining_guilds_desc
+		from = { force_add_civic = civic_mining_guilds }
+	}
+	option = {									# remove civic_mining_guilds
+		NAME = remove_civic_mining_guilds
+		trigger = {
+			from = {
+			has_civic = civic_mining_guilds
+			}
+		}
+		from = { force_remove_civic = civic_mining_guilds }
+	}
+	option = {
+		NAME = add_civic_parliamentary_system						# add civic_parliamentary_system
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_parliamentary_system
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_parliamentary_system_desc
+		from = { force_add_civic = civic_parliamentary_system }
+	}
+	option = {									# remove civic_parliamentary_system
+		NAME = remove_civic_parliamentary_system
+		trigger = {
+			from = {
+			has_civic = civic_parliamentary_system
+			}
+		}
+		from = { force_remove_civic = civic_parliamentary_system }
+	}
+	option = {
+		NAME = add_civic_efficient_bureaucracy						# add civic_efficient_bureaucracy
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_efficient_bureaucracy
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_efficient_bureaucracy_desc
+		from = { force_add_civic = civic_efficient_bureaucracy }
+	}
+	option = {									# remove civic_efficient_bureaucracy
+		NAME = remove_civic_efficient_bureaucracy
+		trigger = {
+			from = {
+			has_civic = civic_efficient_bureaucracy
+			}
+		}
+		from = { force_remove_civic = civic_efficient_bureaucracy }
+	}
+	option = {
+		NAME = add_civic_functional_architecture						# add civic_functional_architecture
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_functional_architecture
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_functional_architecture_desc
+		from = { force_add_civic = civic_functional_architecture }
+	}
+	option = {									# remove civic_functional_architecture
+		NAME = remove_civic_functional_architecture
+		trigger = {
+			from = {
+			has_civic = civic_functional_architecture
+			}
+		}
+		from = { force_remove_civic = civic_functional_architecture }
+	}
+	option = {
+		NAME = add_civic_aristocratic_elite						# add civic_aristocratic_elite
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_aristocratic_elite
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		}
+		custom_tooltip = civic_aristocratic_elite_desc
+		from = { force_add_civic = civic_aristocratic_elite }
+	}
+	option = {									# remove civic_aristocratic_elite
+		NAME = remove_civic_aristocratic_elite
+		trigger = {
+			from = {
+			has_civic = civic_aristocratic_elite
+			}
+		}
+		from = { force_remove_civic = civic_aristocratic_elite }
+	}
+	option = {
+		NAME = add_civic_shared_burden						# add civic_shared_burden
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_shared_burden
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Megacorp"
+		}
+		}
+		custom_tooltip = civic_tooltip_shared_burden_effects
+		from = { force_add_civic = civic_shared_burden }
+	}
+	option = {									# remove civic_shared_burden
+		NAME = remove_civic_shared_burden
+		trigger = {
+			from = {
+			has_civic = civic_shared_burden
+			}
+		}
+		from = { force_remove_civic = civic_shared_burden }
+	}
+	option = {
+		NAME = add_civic_fanatic_purifiers						# add civic_fanatic_purifiers
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_fanatic_purifiers
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Utopia"
+		}
+		}
+		custom_tooltip = "civic_tooltip_fanatic_purifiers_effects"
+		from = { force_add_civic = civic_fanatic_purifiers }
+	}
+	option = {									# remove civic_fanatic_purifiers
+		NAME = remove_civic_fanatic_purifiers
+		trigger = {
+			from = {
+			has_civic = civic_fanatic_purifiers
+			}
+		}
+		from = { force_remove_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		NAME = add_civic_barbaric_despoilers						# add civic_barbaric_despoilers
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_barbaric_despoilers
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Apocalypse"
+		}
+		}
+		custom_tooltip = "civic_tooltip_barbaric_despoilers_effects"
+		from = { force_add_civic = civic_barbaric_despoilers }
+	}
+	option = {									# remove civic_barbaric_despoilers
+		NAME = remove_civic_barbaric_despoilers
+		trigger = {
+			from = {
+			has_civic = civic_barbaric_despoilers
+			}
+		}
+		from = { force_remove_civic = civic_barbaric_despoilers }
+	}
+	option = {
+		NAME = add_civic_byzantine_bureaucracy						# add civic_byzantine_bureaucracy
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_byzantine_bureaucracy
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Megacorp"
+		}
+		}
+		custom_tooltip = "civic_tooltip_byzantine_bureaucracy_effects"
+		from = { force_add_civic = civic_byzantine_bureaucracy }
+	}
+	option = {									# remove civic_byzantine_bureaucracy
+		NAME = remove_civic_byzantine_bureaucracy
+		trigger = {
+			from = {
+			has_civic = civic_byzantine_bureaucracy
+			}
+		}
+		from = { force_remove_civic = civic_byzantine_bureaucracy }
+	}
+	option = {
+		NAME = add_civic_merchant_guilds						# add civic_merchant_guilds
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_merchant_guilds
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Megacorp"
+		}
+		}
+		custom_tooltip = "civic_tooltip_merchant_guilds_effects"
+		from = { force_add_civic = civic_merchant_guilds }
+	}
+	option = {									# remove civic_merchant_guilds
+		NAME = remove_civic_merchant_guilds
+		trigger = {
+			from = {
+			has_civic = civic_merchant_guilds
+			}
+		}
+		from = { force_remove_civic = civic_merchant_guilds }
+	}
+	option = {
+		NAME = add_civic_reanimated_armies						# add civic_reanimated_armies
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_reanimated_armies
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Necroids Species Pack"
+		}
+		}
+		custom_tooltip = civic_reanimated_armies_desc
+		from = { force_add_civic = civic_reanimated_armies }
+	}
+	option = {									# remove civic_reanimated_armies
+		NAME = remove_civic_reanimated_armies
+		trigger = {
+			from = {
+			has_civic = civic_reanimated_armies
+			}
+		}
+		from = { force_remove_civic = civic_reanimated_armies }
+	}
+	option = {
+		NAME = add_civic_diplomatic_corps						# add civic_diplomatic_corps
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_diplomatic_corps
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Federations"
+		}
+		}
+		custom_tooltip = civic_diplomatic_corps_desc
+		from = { force_add_civic = civic_diplomatic_corps }
+	}
+	option = {									# remove civic_diplomatic_corps
+		NAME = remove_civic_diplomatic_corps
+		trigger = {
+			from = {
+			has_civic = civic_diplomatic_corps
+			}
+		}
+		from = { force_remove_civic = civic_diplomatic_corps }
+	}
+	option = {
+		NAME = add_civic_death_cult						# add civic_death_cult
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_death_cult
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Necroids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_death_cult_effects"
+		from = { force_add_civic = civic_death_cult }
+	}
+	option = {									# remove civic_death_cult
+		NAME = remove_civic_death_cult
+		trigger = {
+			from = {
+			has_civic = civic_death_cult
+			}
+		}
+		from = { force_remove_civic = civic_death_cult }
+	}
+	option = {
+		NAME = add_civic_memorialist						# add civic_memorialist
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_memorialist
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Necroids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_memorialist_effects"
+		from = { force_add_civic = civic_memorialist }
+	}
+	option = {									# remove civic_memorialist
+		NAME = remove_civic_memorialist
+		trigger = {
+			from = {
+			has_civic = civic_memorialist
+			}
+		}
+		from = { force_remove_civic = civic_memorialist }
+	}
+	option = {
+		NAME = add_civic_catalytic_processing 						# add civic_catalytic_processing 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_catalytic_processing 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Plantoids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_catalytic_processing_effects"
+		from = { force_add_civic = civic_catalytic_processing }
+	}
+	option = {									# remove civic_catalytic_processing 
+		NAME = remove_civic_catalytic_processing 
+		trigger = {
+			from = {
+			has_civic = civic_catalytic_processing 
+			}
+		}
+		from = { force_remove_civic = civic_catalytic_processing }
+	}
+	option = {
+		NAME = add_civic_crafters						# add civic_crafters
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_crafters
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Humanoids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_crafters_effects"
+		from = { force_add_civic = civic_crafters }
+	}
+	option = {									# remove civic_crafters
+		NAME = remove_civic_crafters
+		trigger = {
+			from = {
+			has_civic = civic_crafters
+			}
+		}
+		from = { force_remove_civic = civic_crafters }
+	}
+	option = {
+		NAME = add_civic_pleasure_seekers						# add civic_pleasure_seekers
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_pleasure_seekers
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Humanoids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_pleasure_seekers_effects"
+		from = { force_add_civic = civic_pleasure_seekers }
+	}
+	option = {									# remove civic_pleasure_seekers
+		NAME = remove_civic_pleasure_seekers
+		trigger = {
+			from = {
+			has_civic = civic_pleasure_seekers
+			}
+		}
+		from = { force_remove_civic = civic_pleasure_seekers }
+	}
+	option = {
+		NAME = add_civic_idyllic_bloom						# add civic_idyllic_bloom
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_idyllic_bloom
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			host_has_dlc = "Plantoids Species Pack"
+		}
+		}
+		custom_tooltip = "civic_tooltip_idyllic_bloom_effects"
+		from = { force_add_civic = civic_idyllic_bloom }
+	}
+	option = {									# remove civic_idyllic_bloom
+		NAME = remove_civic_idyllic_bloom
+		trigger = {
+			from = {
+			has_civic = civic_idyllic_bloom
+			}
+		}
+		from = { force_remove_civic = civic_idyllic_bloom }
+	}
+	option = {
+		NAME = add_civic_anglers						# add civic_anglers
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_anglers
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			has_aquatics = yes
+		}
+		}
+		custom_tooltip = "civic_tooltip_anglers_effects"
+		from = { force_add_civic = civic_anglers }
+	}
+	option = {									# remove civic_anglers
+		NAME = remove_civic_anglers
+		trigger = {
+			from = {
+			has_civic = civic_anglers
+			}
+		}
+		from = { force_remove_civic = civic_anglers }
+	}
+	option = {
+		NAME = add_civic_pompous_purists 						# add civic_pompous_purists 
+		trigger = {
+			from = {
+			NOT = {
+				has_civic = civic_pompous_purists 
+			}
+			NOR = {
+				is_megacorp = yes
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+			has_humanoids = yes
+		}
+		}
+		custom_tooltip = "civic_tooltip_pompous_purists_effects"
+		from = { force_add_civic = civic_pompous_purists }
+	}
+	option = {									# remove civic_pompous_purists 
+		NAME = remove_civic_pompous_purists 
+		trigger = {
+			from = {
+			has_civic = civic_pompous_purists 
+			}
+		}
+		from = { force_remove_civic = civic_pompous_purists }
+	}
+
+	# gestalt civics
+
+	option = {
+		NAME = add_civic_hive_subspace_ephapse 						# add civic_hive_subspace_ephapse 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_subspace_ephapse 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_subspace_ephapse_desc
+		from = { force_add_civic = civic_hive_subspace_ephapse }
+	}
+	option = {									# remove civic_hive_subspace_ephapse 
+		NAME = remove_civic_hive_subspace_ephapse 
+		trigger = {
+			from = {
+				has_civic = civic_hive_subspace_ephapse 
+			}
+		}
+		from = { force_remove_civic = civic_hive_subspace_ephapse }
+	}
+	option = {
+		NAME = add_civic_hive_natural_neural_network 						# add civic_hive_natural_neural_network 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_natural_neural_network 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = "civic_tooltip_natural_neural_network_effects"
+		from = { force_add_civic = civic_hive_natural_neural_network }
+	}
+	option = {									# remove civic_hive_natural_neural_network 
+		NAME = remove_civic_hive_natural_neural_network 
+		trigger = {
+			from = {
+				has_civic = civic_hive_natural_neural_network 
+			}
+		}
+		from = { force_remove_civic = civic_hive_natural_neural_network }
+	}
+	option = {
+		NAME = add_civic_hive_ascetic 						# add civic_hive_ascetic 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_ascetic 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_ascetic_desc
+		from = { force_add_civic = civic_hive_ascetic }
+	}
+	option = {									# remove civic_hive_ascetic 
+		NAME = remove_civic_hive_ascetic 
+		trigger = {
+			from = {
+				has_civic = civic_hive_ascetic 
+			}
+		}
+		from = { force_remove_civic = civic_hive_ascetic }
+	}
+	option = {
+		NAME = add_civic_hive_one_mind 						# add civic_hive_one_mind 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_one_mind 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_one_mind_desc
+		from = { force_add_civic = civic_hive_one_mind }
+	}
+	option = {									# remove civic_hive_one_mind 
+		NAME = remove_civic_hive_one_mind 
+		trigger = {
+			from = {
+				has_civic = civic_hive_one_mind 
+			}
+		}
+		from = { force_remove_civic = civic_hive_one_mind }
+	}
+	option = {
+		NAME = add_civic_hive_divided_attention 						# add civic_hive_divided_attention 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_divided_attention 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_divided_attention_desc
+		from = { force_add_civic = civic_hive_divided_attention }
+	}
+	option = {									# remove civic_hive_divided_attention 
+		NAME = remove_civic_hive_divided_attention 
+		trigger = {
+			from = {
+				has_civic = civic_hive_divided_attention 
+			}
+		}
+		from = { force_remove_civic = civic_hive_divided_attention }
+	}
+	option = {
+		NAME = add_civic_hive_strength_of_legions 						# add civic_hive_strength_of_legions 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_strength_of_legions 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_strength_of_legions_desc
+		from = { force_add_civic = civic_hive_strength_of_legions }
+	}
+	option = {									# remove civic_hive_strength_of_legions 
+		NAME = remove_civic_hive_strength_of_legions 
+		trigger = {
+			from = {
+				has_civic = civic_hive_strength_of_legions 
+			}
+		}
+		from = { force_remove_civic = civic_hive_strength_of_legions }
+	}
+	option = {
+		NAME = add_civic_hive_subsumed_will 						# add civic_hive_subsumed_will 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_subsumed_will 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = "civic_hive_subsumed_will_effects"
+		from = { force_add_civic = civic_hive_subsumed_will }
+	}
+	option = {									# remove civic_hive_subsumed_will 
+		NAME = remove_civic_hive_subsumed_will 
+		trigger = {
+			from = {
+				has_civic = civic_hive_subsumed_will 
+			}
+		}
+		from = { force_remove_civic = civic_hive_subsumed_will }
+	}
+	option = {
+		NAME = add_civic_hive_pooled_knowledge 						# add civic_hive_pooled_knowledge 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_pooled_knowledge 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = civic_hive_pooled_knowledge_desc
+		from = { force_add_civic = civic_hive_pooled_knowledge }
+	}
+	option = {									# remove civic_hive_pooled_knowledge 
+		NAME = remove_civic_hive_pooled_knowledge 
+		trigger = {
+			from = {
+				has_civic = civic_hive_pooled_knowledge 
+			}
+		}
+		from = { force_remove_civic = civic_hive_pooled_knowledge }
+	}
+	option = {
+		NAME = add_civic_hive_devouring_swarm 						# add civic_hive_devouring_swarm 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_devouring_swarm 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				#dlc_requirement = yes
+			}
+		}
+		custom_tooltip = "civic_tooltip_devouring_swarm_effects"
+		from = { force_add_civic = civic_hive_devouring_swarm }
+	}
+	option = {									# remove civic_hive_devouring_swarm 
+		NAME = remove_civic_hive_devouring_swarm 
+		trigger = {
+			from = {
+				has_civic = civic_hive_devouring_swarm 
+			}
+		}
+		from = { force_remove_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		NAME = add_civic_hive_empath 						# add civic_hive_empath 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_empath 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				host_has_dlc = "Federations"
+			}
+		}
+		custom_tooltip = "civic_tooltip_empath_effects"
+		from = { force_add_civic = civic_hive_empath }
+	}
+	option = {									# remove civic_hive_empath 
+		NAME = remove_civic_hive_empath 
+		trigger = {
+			from = {
+				has_civic = civic_hive_empath 
+			}
+		}
+		from = { force_remove_civic = civic_hive_empath }
+	}
+	option = {
+		NAME = add_civic_hive_memorialist 						# add civic_hive_memorialist 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_memorialist 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				host_has_dlc = "Necroids Species Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_memorialist_gestalt_effects"
+		from = { force_add_civic = civic_hive_memorialist }
+	}
+	option = {									# remove civic_hive_memorialist 
+		NAME = remove_civic_hive_memorialist 
+		trigger = {
+			from = {
+				has_civic = civic_hive_memorialist 
+			}
+		}
+		from = { force_remove_civic = civic_hive_memorialist }
+	}
+	option = {
+		NAME = add_civic_hive_catalytic_processing 						# add civic_hive_catalytic_processing 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_catalytic_processing 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				host_has_dlc = "Plantoids Species Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_hive_catalytic_processing_effects"
+		from = { force_add_civic = civic_hive_catalytic_processing }
+	}
+	option = {									# remove civic_hive_catalytic_processing 
+		NAME = remove_civic_hive_catalytic_processing 
+		trigger = {
+			from = {
+				has_civic = civic_hive_catalytic_processing 
+			}
+		}
+		from = { force_remove_civic = civic_hive_catalytic_processing }
+	}
+	option = {
+		NAME = add_civic_hive_idyllic_bloom 						# add civic_hive_idyllic_bloom 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_hive_idyllic_bloom 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = yes
+				is_machine_empire = no
+				host_has_dlc = "Plantoids Species Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_idyllic_bloom_effects"
+		from = { force_add_civic = civic_hive_idyllic_bloom }
+	}
+	option = {									# remove civic_hive_idyllic_bloom 
+		NAME = remove_civic_hive_idyllic_bloom 
+		trigger = {
+			from = {
+				has_civic = civic_hive_idyllic_bloom 
+			}
+		}
+		from = { force_remove_civic = civic_hive_idyllic_bloom }
+	}
+
+	# machine intelligence
+
+	option = {
+		NAME = add_civic_machine_servitor 						# add civic_machine_servitor 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_servitor 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_tooltip_machine_servitor_effects
+		from = { force_add_civic = civic_machine_servitor }
+	}
+	option = {									# remove civic_machine_servitor 
+		NAME = remove_civic_machine_servitor 
+		trigger = {
+			from = {
+				has_civic = civic_machine_servitor 
+			}
+		}
+		from = { force_remove_civic = civic_machine_servitor }
+	}
+	option = {
+		NAME = add_civic_machine_terminator 						# add civic_machine_terminator 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_terminator 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_tooltip_machine_terminator_effects
+		from = { force_add_civic = civic_machine_terminator }
+	}
+	option = {									# remove civic_machine_terminator 
+		NAME = remove_civic_machine_terminator 
+		trigger = {
+			from = {
+				has_civic = civic_machine_terminator 
+			}
+		}
+		from = { force_remove_civic = civic_machine_terminator }
+	}
+	option = {
+		NAME = add_civic_machine_assimilator 						# add civic_machine_assimilator 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_assimilator 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_tooltip_machine_assimilator_effects
+		from = { force_add_civic = civic_machine_assimilator }
+	}
+	option = {									# remove civic_machine_assimilator 
+		NAME = remove_civic_machine_assimilator 
+		trigger = {
+			from = {
+				has_civic = civic_machine_assimilator 
+			}
+		}
+		from = { force_remove_civic = civic_machine_assimilator }
+	}
+	option = {
+		NAME = add_civic_machine_builder 						# add civic_machine_builder 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_builder 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_functional_architecture_effects"
+		from = { force_add_civic = civic_machine_builder }
+	}
+	option = {									# remove civic_machine_builder 
+		NAME = remove_civic_machine_builder 
+		trigger = {
+			from = {
+				has_civic = civic_machine_builder 
+			}
+		}
+		from = { force_remove_civic = civic_machine_builder }
+	}
+	option = {
+		NAME = add_civic_machine_factory_overclock 						# add civic_machine_factory_overclock 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_factory_overclock 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_factory_overclock_desc
+		from = { force_add_civic = civic_machine_factory_overclock }
+	}
+	option = {									# remove civic_machine_factory_overclock 
+		NAME = remove_civic_machine_factory_overclock 
+		trigger = {
+			from = {
+				has_civic = civic_machine_factory_overclock 
+			}
+		}
+		from = { force_remove_civic = civic_machine_factory_overclock }
+	}
+	option = {
+		NAME = add_civic_machine_unitary_cohesion 						# add civic_machine_unitary_cohesion 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_unitary_cohesion 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_unitary_cohesion_desc
+		from = { force_add_civic = civic_machine_unitary_cohesion }
+	}
+	option = {									# remove civic_machine_unitary_cohesion 
+		NAME = remove_civic_machine_unitary_cohesion 
+		trigger = {
+			from = {
+				has_civic = civic_machine_unitary_cohesion 
+			}
+		}
+		from = { force_remove_civic = civic_machine_unitary_cohesion }
+	}
+	option = {
+		NAME = add_civic_machine_rockbreakers 						# add civic_machine_rockbreakers 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_rockbreakers 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_rockbreakers_desc
+		from = { force_add_civic = civic_machine_rockbreakers }
+	}
+	option = {									# remove civic_machine_rockbreakers 
+		NAME = remove_civic_machine_rockbreakers 
+		trigger = {
+			from = {
+				has_civic = civic_machine_rockbreakers 
+			}
+		}
+		from = { force_remove_civic = civic_machine_rockbreakers }
+	}
+	option = {
+		NAME = add_civic_machine_zero_waste_protocols 						# add civic_machine_zero_waste_protocols 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_zero_waste_protocols 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_zero_waste_protocols_desc
+		from = { force_add_civic = civic_machine_zero_waste_protocols }
+	}
+	option = {									# remove civic_machine_zero_waste_protocols 
+		NAME = remove_civic_machine_zero_waste_protocols 
+		trigger = {
+			from = {
+				has_civic = civic_machine_zero_waste_protocols 
+			}
+		}
+		from = { force_remove_civic = civic_machine_zero_waste_protocols }
+	}
+	option = {
+		NAME = add_civic_machine_built_to_last 						# add civic_machine_built_to_last 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_built_to_last 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_built_to_last_desc
+		from = { force_add_civic = civic_machine_built_to_last }
+	}
+	option = {									# remove civic_machine_built_to_last 
+		NAME = remove_civic_machine_built_to_last 
+		trigger = {
+			from = {
+				has_civic = civic_machine_built_to_last 
+			}
+		}
+		from = { force_remove_civic = civic_machine_built_to_last }
+	}
+	option = {
+		NAME = add_civic_machine_ota_updates 						# add civic_machine_ota_updates 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_ota_updates 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_ota_updates_effect
+		from = { force_add_civic = civic_machine_ota_updates }
+	}
+	option = {									# remove civic_machine_ota_updates 
+		NAME = remove_civic_machine_ota_updates 
+		trigger = {
+			from = {
+				has_civic = civic_machine_ota_updates 
+			}
+		}
+		from = { force_remove_civic = civic_machine_ota_updates }
+	}
+	option = {
+		NAME = add_civic_machine_warbots 						# add civic_machine_warbots 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_warbots 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_warbots_desc
+		from = { force_add_civic = civic_machine_warbots }
+	}
+	option = {									# remove civic_machine_warbots 
+		NAME = remove_civic_machine_warbots 
+		trigger = {
+			from = {
+				has_civic = civic_machine_warbots 
+			}
+		}
+		from = { force_remove_civic = civic_machine_warbots }
+	}
+	option = {
+		NAME = add_civic_machine_introspective 						# add civic_machine_introspective 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_introspective 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_introspective_desc
+		from = { force_add_civic = civic_machine_introspective }
+	}
+	option = {									# remove civic_machine_introspective 
+		NAME = remove_civic_machine_introspective 
+		trigger = {
+			from = {
+				has_civic = civic_machine_introspective 
+			}
+		}
+		from = { force_remove_civic = civic_machine_introspective }
+	}
+	option = {
+		NAME = add_civic_machine_delegated_functions 						# add civic_machine_delegated_functions 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_delegated_functions 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_delegated_functions_desc
+		from = { force_add_civic = civic_machine_delegated_functions }
+	}
+	option = {									# remove civic_machine_delegated_functions 
+		NAME = remove_civic_machine_delegated_functions 
+		trigger = {
+			from = {
+				has_civic = civic_machine_delegated_functions 
+			}
+		}
+		from = { force_remove_civic = civic_machine_delegated_functions }
+	}
+	option = {
+		NAME = add_civic_machine_predictive_analysis 						# add civic_machine_predictive_analysis 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_predictive_analysis 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_predictive_analysis_desc
+		from = { force_add_civic = civic_machine_predictive_analysis }
+	}
+	option = {									# remove civic_machine_predictive_analysis 
+		NAME = remove_civic_machine_predictive_analysis 
+		trigger = {
+			from = {
+				has_civic = civic_machine_predictive_analysis 
+			}
+		}
+		from = { force_remove_civic = civic_machine_predictive_analysis }
+	}
+	option = {
+		NAME = add_civic_machine_replication 						# add civic_machine_replication 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_replication 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_machine_replication_desc
+		from = { force_add_civic = civic_machine_replication }
+	}
+	option = {									# remove civic_machine_replication 
+		NAME = remove_civic_machine_replication 
+		trigger = {
+			from = {
+				has_civic = civic_machine_replication 
+			}
+		}
+		from = { force_remove_civic = civic_machine_replication }
+	}
+	option = {
+		NAME = add_civic_machine_maintenance_protocols 						# add civic_machine_maintenance_protocols 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_maintenance_protocols 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+		custom_tooltip = civic_tooltip_machine_maintenance_protocols_effects
+		from = { force_add_civic = civic_machine_maintenance_protocols }
+	}
+	option = {									# remove civic_machine_maintenance_protocols 
+		NAME = remove_civic_machine_maintenance_protocols 
+		trigger = {
+			from = {
+				has_civic = civic_machine_maintenance_protocols 
+			}
+		}
+		from = { force_remove_civic = civic_machine_maintenance_protocols }
+	}
+	option = {
+		NAME = add_civic_machine_memorialist 						# add civic_machine_memorialist 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_memorialist 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				host_has_dlc = "Necroids Species Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_memorialist_gestalt_effects"
+		from = { force_add_civic = civic_machine_memorialist }
+	}
+	option = {									# remove civic_machine_memorialist 
+		NAME = remove_civic_machine_memorialist 
+		trigger = {
+			from = {
+				has_civic = civic_machine_memorialist 
+			}
+		}
+		from = { force_remove_civic = civic_machine_memorialist }
+	}
+	option = {
+		NAME = add_civic_machine_catalytic_processing 						# add civic_machine_catalytic_processing 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_machine_catalytic_processing 
+				}
+				is_megacorp = no
+				is_gestalt = yes
+				is_hive_empire = no
+				is_machine_empire = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				host_has_dlc = "Plantoids Species Pack"
+			}
+		}
+		custom_tooltip = "civic_tooltip_machine_catalytic_processing_effects"
+		from = { force_add_civic = civic_machine_catalytic_processing }
+	}
+	option = {									# remove civic_machine_catalytic_processing 
+		NAME = remove_civic_machine_catalytic_processing 
+		trigger = {
+			from = {
+				has_civic = civic_machine_catalytic_processing 
+			}
+		}
+		from = { force_remove_civic = civic_machine_catalytic_processing }
+	}
+
+	# Megacorp civics
+
+	option = {
+		NAME = add_civic_franchising 						# add civic_franchising 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_franchising 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_franchising_effects"
+		from = { force_add_civic = civic_franchising }
+	}
+	option = {									# remove civic_franchising 
+		NAME = remove_civic_franchising 
+		trigger = {
+			from = {
+				has_civic = civic_franchising 
+			}
+		}
+		from = { force_remove_civic = remove_civic_franchising }
+	}
+	option = {
+		NAME = add_civic_media_conglomerate 						# add civic_media_conglomerate 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_media_conglomerate 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_media_conglomerate_desc
+		from = { force_add_civic = civic_media_conglomerate }
+	}
+	option = {									# remove civic_media_conglomerate 
+		NAME = remove_civic_media_conglomerate 
+		trigger = {
+			from = {
+				has_civic = civic_media_conglomerate 
+			}
+		}
+		from = { force_remove_civic = civic_media_conglomerate }
+	}
+	option = {
+		NAME = add_civic_naval_contractors 						# add civic_naval_contractors 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_naval_contractors 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_naval_contractors_desc
+		from = { force_add_civic = civic_naval_contractors }
+	}
+	option = {									# remove civic_naval_contractors 
+		NAME = remove_civic_naval_contractors 
+		trigger = {
+			from = {
+				has_civic = civic_naval_contractors 
+			}
+		}
+		from = { force_remove_civic = civic_naval_contractors }
+	}
+	option = {
+		NAME = add_civic_free_traders 						# add civic_free_traders 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_free_traders 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_free_traders_desc
+		from = { force_add_civic = civic_free_traders }
+	}
+	option = {									# remove civic_free_traders 
+		NAME = remove_civic_free_traders 
+		trigger = {
+			from = {
+				has_civic = civic_free_traders 
+			}
+		}
+		from = { force_remove_civic = civic_free_traders }
+	}
+	option = {
+		NAME = add_civic_private_prospectors 						# add civic_private_prospectors 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_private_prospectors 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_private_prospectors_effects"
+		from = { force_add_civic = civic_private_prospectors }
+	}
+	option = {									# remove civic_private_prospectors 
+		NAME = remove_civic_private_prospectors 
+		trigger = {
+			from = {
+				has_civic = civic_private_prospectors 
+			}
+		}
+		from = { force_remove_civic = civic_private_prospectors }
+	}
+	option = {
+		NAME = add_civic_gospel_of_the_masses 						# add civic_gospel_of_the_masses 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_gospel_of_the_masses 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_gospel_of_the_masses_effects"
+		from = { force_add_civic = civic_gospel_of_the_masses }
+	}
+	option = {									# remove civic_gospel_of_the_masses 
+		NAME = remove_civic_gospel_of_the_masses 
+		trigger = {
+			from = {
+				has_civic = civic_gospel_of_the_masses 
+			}
+		}
+		from = { force_remove_civic = civic_gospel_of_the_masses }
+	}
+	option = {
+		NAME = add_civic_ruthless_competition 						# add civic_ruthless_competition 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_ruthless_competition 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_ruthless_competition_desc
+		from = { force_add_civic = civic_ruthless_competition }
+	}
+	option = {									# remove civic_ruthless_competition 
+		NAME = remove_civic_ruthless_competition 
+		trigger = {
+			from = {
+				has_civic = civic_ruthless_competition 
+			}
+		}
+		from = { force_remove_civic = civic_ruthless_competition }
+	}
+	option = {
+		NAME = add_civic_criminal_heritage 						# add civic_criminal_heritage 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_criminal_heritage 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_criminal_heritage_effects"
+		from = { force_add_civic = civic_criminal_heritage }
+	}
+	option = {									# remove civic_criminal_heritage 
+		NAME = remove_civic_criminal_heritage 
+		trigger = {
+			from = {
+				has_civic = civic_criminal_heritage 
+			}
+		}
+		from = { force_remove_civic = civic_criminal_heritage }
+	}
+	option = {
+		NAME = add_civic_private_military_companies 						# add civic_private_military_companies 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_private_military_companies 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_private_military_companies_desc
+		from = { force_add_civic = civic_private_military_companies }
+	}
+	option = {									# remove civic_private_military_companies 
+		NAME = remove_civic_private_military_companies 
+		trigger = {
+			from = {
+				has_civic = civic_private_military_companies 
+			}
+		}
+		from = { force_remove_civic = civic_private_military_companies }
+	}
+	option = {
+		NAME = add_civic_indentured_assets 						# add civic_indentured_assets 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_indentured_assets 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_indentured_assets_desc
+		from = { force_add_civic = civic_indentured_assets }
+	}
+	option = {									# remove civic_indentured_assets 
+		NAME = remove_civic_indentured_assets 
+		trigger = {
+			from = {
+				has_civic = civic_indentured_assets 
+			}
+		}
+		from = { force_remove_civic = civic_indentured_assets }
+	}
+	option = {
+		NAME = add_civic_brand_loyalty 						# add civic_brand_loyalty 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_brand_loyalty 
+				}
+				is_megacorp = yes
+				#dlc_requirement = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_brand_loyalty_desc
+		from = { force_add_civic = civic_brand_loyalty }
+	}
+	option = {									# remove civic_brand_loyalty 
+		NAME = remove_civic_brand_loyalty 
+		trigger = {
+			from = {
+				has_civic = civic_brand_loyalty 
+			}
+		}
+		from = { force_remove_civic = civic_brand_loyalty }
+	}
+	option = {
+		NAME = add_civic_public_relations_specialists 						# add civic_public_relations_specialists 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_public_relations_specialists 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				host_has_dlc = "Federations"
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = civic_public_relations_specialists_desc
+		from = { force_add_civic = civic_public_relations_specialists }
+	}
+	option = {									# remove civic_public_relations_specialists 
+		NAME = remove_civic_public_relations_specialists 
+		trigger = {
+			from = {
+				has_civic = civic_public_relations_specialists 
+			}
+		}
+		from = { force_remove_civic = civic_public_relations_specialists }
+	}
+	option = {
+		NAME = add_civic_death_cult_corporate  						# add civic_death_cult_corporate  
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_death_cult_corporate  
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				host_has_dlc = "Necroids Species Pack"
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_death_cult_effects"
+		from = { force_add_civic = civic_death_cult_corporate  }
+	}
+	option = {									# remove civic_death_cult_corporate  
+		NAME = remove_civic_death_cult_corporate  
+		trigger = {
+			from = {
+				has_civic = civic_death_cult_corporate  
+			}
+		}
+		from = { force_remove_civic = civic_death_cult_corporate  }
+	}
+	option = {
+		NAME = add_civic_corporate_catalytic_processing 						# add civic_corporate_catalytic_processing 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_corporate_catalytic_processing 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				host_has_dlc = "Plantoids Species Pack"
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_catalytic_processing_corporate_effects"
+		from = { force_add_civic = civic_corporate_catalytic_processing }
+	}
+	option = {									# remove civic_corporate_catalytic_processing 
+		NAME = remove_civic_corporate_catalytic_processing 
+		trigger = {
+			from = {
+				has_civic = civic_corporate_catalytic_processing 
+			}
+		}
+		from = { force_remove_civic = civic_corporate_catalytic_processing }
+	}
+	option = {
+		NAME = add_civic_corporate_hedonism 						# add civic_corporate_hedonism 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_corporate_hedonism 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				host_has_dlc = "Humanoids Species Pack"
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_corporate_hedonism_effects"
+		from = { force_add_civic = civic_corporate_hedonism }
+	}
+	option = {									# remove civic_corporate_hedonism 
+		NAME = remove_civic_corporate_hedonism 
+		trigger = {
+			from = {
+				has_civic = civic_corporate_hedonism 
+			}
+		}
+		from = { force_remove_civic = civic_corporate_hedonism }
+	}
+	option = {
+		NAME = add_civic_corporate_anglers 						# add civic_corporate_anglers 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_corporate_anglers 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				has_aquatics = yes
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_anglers_effects"
+		from = { force_add_civic = civic_corporate_anglers }
+	}
+	option = {									# remove civic_corporate_anglers 
+		NAME = remove_civic_corporate_anglers 
+		trigger = {
+			from = {
+				has_civic = civic_corporate_anglers 
+			}
+		}
+		from = { force_remove_civic = civic_corporate_anglers }
+	}
+	option = {
+		NAME = add_civic_corporate_crafters 						# add civic_corporate_crafters 
+		trigger = {
+			from = {
+				NOT = {
+					has_civic = civic_corporate_crafters 
+				}
+				is_megacorp = yes
+				is_gestalt = no
+				is_hive_empire = no
+				is_machine_empire = no
+				host_has_dlc = "Humanoids Species Pack"
+				host_has_dlc = "Megacorp"
+			}
+		}
+		custom_tooltip = "civic_tooltip_crafters_effects"
+		from = { force_add_civic = civic_corporate_crafters }
+	}
+	option = {									# remove civic_corporate_crafters 
+		NAME = remove_civic_corporate_crafters 
+		trigger = {
+			from = {
+				has_civic = civic_corporate_crafters 
+			}
+		}
+		from = { force_remove_civic = civic_corporate_crafters }
+	}
+	option = {
+		NAME = Exit
+	}
+}
