@@ -530,6 +530,24 @@ sgm_add_planet_modifier = {
 	}
 }
 
+sgm_remove_planet_modifier = {
+	potential = {
+		is_scope_type = planet
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planet_modifiers.2
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+}
+
 sgm_create_GM_constructor = {
 	potential = {
 		is_gm = yes

@@ -62,6 +62,52 @@ sgm_negative_relations_with_target = {
 	}
 }
 
+sgm_improve_target_opinion = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	effect = {
+		event_target:target_country = {
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_gm_positive
+			}
+		}
+	}
+}
+
+sgm_hurt_target_opinion = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {
+		NOT = {
+			event_target:target_country = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	effect = {
+		event_target:target_country = {
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_gm_negative
+			}
+		}
+	}
+}
+
 sgm_declare_war_with_target = {
 	potential = {
 		exists = event_target:target_country
@@ -140,6 +186,41 @@ sgm_switch_player_to_country = {
 	effect = {
 		event_target:target_country = {
 			set_player = root
+		}
+	}
+}
+
+sgm_change_civics = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.4
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_shift_ethics = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.3
+				scopes = {
+					from = prev
+				}
+			}
 		}
 	}
 }
