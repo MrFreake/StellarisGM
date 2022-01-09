@@ -310,3 +310,21 @@ defined_text = {
 	}
 	default = NONE
 }
+
+defined_text = {
+	name = GetNameRelicsAddRemoveSwitch
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = sgm_relics_remove
+			}
+		}
+		localization_key = ADD
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_relics_remove
+		}
+		localization_key = REMOVE
+	}
+}
