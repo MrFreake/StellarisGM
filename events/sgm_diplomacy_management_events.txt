@@ -1,0 +1,34 @@
+namespace = sgm_diplomanagement
+
+country_event = {
+	id = sgm_diplomanagement.1
+	is_triggered_only = yes
+	title = sgm_diplomanagement_1
+	desc = sgm_diplomanagement_1_desc
+	diplomatic = yes
+	custom_gui = "sgm_diplomacymanagementEventWindow"
+	picture_event_data = {
+		portrait = event_target:position_0.owner_main_species
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_ai = yes
+				is_country_type = default
+			}
+			save_event_target_as = ai_country
+		}
+		random_country = {
+			limit = {
+				is_ai = no
+			}
+			save_event_target_as = player_country
+		}
+	}
+
+	option = { 
+		NAME = OK
+	}
+}
