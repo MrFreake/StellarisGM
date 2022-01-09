@@ -1,0 +1,381 @@
+sgm_diplo_management = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_diplomanagement.1
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+set_target_date = {
+	potential = {
+		is_gm = yes
+	}
+	allow ={}
+	effect = {
+		fromfrom = {
+			set_variable = {
+				which = final_date
+				value = modifier_var
+			}
+			multiply_variable = {
+				which = final_date
+				value = 360
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = setting_preventing_pvp_wars
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_wars_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = setting_preventing_ai_wars
+			}
+			every_country = {
+				limit = {
+					is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_wars_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		fromfrom = {
+			set_variable = {
+				which = final_date
+				value = 0
+			}
+		}
+	}
+}
+
+date_minus_ten = {
+	potential = {
+		is_gm =yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -10
+			}
+		}
+	}
+}
+
+date_minus_one = {
+	potential = {
+		is_gm =yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -1
+			}
+		}
+	}
+}
+
+CurrentlyEditingDateValue = {
+	potential = {
+		is_gm =yes
+	}
+	allow = { always = no }
+	effect = {}
+}
+
+CurrentlyEditingDate = {
+	potential = {
+		is_gm =yes
+	}
+	allow = { always = no }
+	effect = {}
+}
+
+date_plus_one = {
+	potential = {
+		is_gm =yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 1
+			}
+		}
+	}
+}
+
+date_plus_ten = {
+	potential = {
+		is_gm =yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 10
+			}
+		}
+	}
+}
+
+pvp_wars = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_pvp_wars
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_pvp_wars
+	}
+}
+
+ai_wars = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_ai_wars
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_ai_wars
+	}
+}
+
+all_wars = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_all_wars
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_all_wars
+	}
+}
+
+ai_federations = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_ai_federations
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_ai_federations
+	}
+}
+
+player_federations = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_player_federations
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_player_federations
+	}
+}
+
+all_federations = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_all_federations
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_all_federations
+	}
+}
+
+ai_demand_subjugation = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_ai_demand_subjugation
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_ai_demand_subjugation
+	}
+}
+
+player_demand_subjugation = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_player_demand_subjugation
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_player_demand_subjugation
+	}
+}
+
+all_demand_subjugation = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_all_demand_subjugation
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_all_demand_subjugation
+	}
+}
+
+ai_form_d_pact = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_ai_form_d_pact
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_ai_form_d_pact
+	}
+}
+
+player_form_d_pact = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_player_form_d_pact
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_player_form_d_pact
+	}
+}
+
+all_d_pact = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_all_d_pact
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_all_d_pact
+	}
+}
+
+form_galactic_community = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_form_galactic_community
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_form_galactic_community
+	}
+}
+
+player_join_galcom = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_player_join_galcom
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_player_join_galcom
+	}
+}
+
+ai_join_galcom = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = setting_preventing_ai_join_galcom
+		}
+	}
+	effect = {
+		clear_diplo_management_flags = yes
+		set_global_flag = setting_preventing_ai_join_galcom
+	}
+}
+

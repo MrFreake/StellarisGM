@@ -35,7 +35,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_crime
@@ -50,7 +50,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_growthrate
@@ -65,7 +65,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_habitability
@@ -80,7 +80,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_happiness
@@ -95,7 +95,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_housing
@@ -110,7 +110,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_loyalty
@@ -125,7 +125,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_stability
@@ -140,7 +140,7 @@ country_event = {								# requires passing the planet scope as from
 		set_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	option = { 
 		NAME = use_filter_trade
@@ -155,7 +155,7 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		set_global_flag = filter_trade
 		set_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	
 	### Clear filter
@@ -172,37 +172,37 @@ country_event = {								# requires passing the planet scope as from
 		remove_global_flag = filter_stability
 		remove_global_flag = filter_trade
 		remove_global_flag = gmgf_planet_modifier_filter_set
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
 	}
 	
 	### Apply planet modifier. Filter determines which are shown.
-	option = { NAME = apply_modifier_gm_pm_amenities_add trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_amenities_subtract trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_amenities_multiply trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_amenities_divide trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_divide }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_crime_add trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_crime_subtract trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_crime_multiply trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_crime_divide trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_divide }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_growthrate_bonus trigger = { has_global_flag = filter_growthrate } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_growthrate_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_growthrate_penalty trigger = { has_global_flag = filter_growthrate } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_growthrate_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_habitability_bonus trigger = { has_global_flag = filter_habitability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_habitability_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_habitability_penalty trigger = { has_global_flag = filter_habitability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_habitability_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_happiness_bonus_all trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_bonus_all }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_happiness_penalty_all trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_penalty_all }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_happiness_bonus_citizens trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_bonus_citizens }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_happiness_penalty_citizens trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_penalty_citizens }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_housing_available_bonus trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_available_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_housing_available_penalty trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_available_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_housing_use_bonus trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_use_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_housing_use_penalty trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_use_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_loyalty_bonus trigger = { has_global_flag = filter_loyalty } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_loyalty_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_loyalty_penalty trigger = { has_global_flag = filter_loyalty } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_loyalty_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_stability_bonus trigger = { has_global_flag = filter_stability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_stability_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_stability_penalty trigger = { has_global_flag = filter_stability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_stability_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_trade_add trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_trade_subtract trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
-	option = { NAME = apply_modifier_gm_pm_trade_multiply trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from }}}
+	option = { NAME = apply_modifier_gm_pm_amenities_add trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_amenities_subtract trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_amenities_multiply trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_amenities_divide trigger = { has_global_flag = filter_amenities } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_amenities_divide }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_crime_add trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_crime_subtract trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_crime_multiply trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_crime_divide trigger = { has_global_flag = filter_crime } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_crime_divide }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_growthrate_bonus trigger = { has_global_flag = filter_growthrate } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_growthrate_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_growthrate_penalty trigger = { has_global_flag = filter_growthrate } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_growthrate_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_habitability_bonus trigger = { has_global_flag = filter_habitability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_habitability_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_habitability_penalty trigger = { has_global_flag = filter_habitability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_habitability_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_happiness_bonus_all trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_bonus_all }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_happiness_penalty_all trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_penalty_all }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_happiness_bonus_citizens trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_bonus_citizens }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_happiness_penalty_citizens trigger = { has_global_flag = filter_happiness } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_happiness_penalty_citizens }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_housing_available_bonus trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_available_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_housing_available_penalty trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_available_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_housing_use_bonus trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_use_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_housing_use_penalty trigger = { has_global_flag = filter_housing } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_housing_use_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_loyalty_bonus trigger = { has_global_flag = filter_loyalty } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_loyalty_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_loyalty_penalty trigger = { has_global_flag = filter_loyalty } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_loyalty_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_stability_bonus trigger = { has_global_flag = filter_stability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_stability_bonus }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_stability_penalty trigger = { has_global_flag = filter_stability } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_stability_penalty }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_trade_add trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_add }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_trade_subtract trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_subtract }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
+	option = { NAME = apply_modifier_gm_pm_trade_multiply trigger = { has_global_flag = filter_trade } from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_multiply }} country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}}
 	
 	# More readable version of above options
 	option = { 
@@ -211,7 +211,7 @@ country_event = {								# requires passing the planet scope as from
 		from = { apply_planet_modifier = { P_MODIFIER = gm_pm_trade_divide }} 
 		country_event = { 
 			id = sgm_planet_modifiers.1 
-			scopes = { from = from }
+			scopes = { from = from fromfrom = this }
 		}
 	}
 	
@@ -226,7 +226,7 @@ country_event = {								# requires passing the planet scope as from
 		country_event = {
 			id = sgm_planet_modifiers.1
 			scopes = {
-				from = from
+				from = from fromfrom = this
 			}
 		}	
 	}
@@ -239,12 +239,15 @@ country_event = {								# requires passing the planet scope as from
 		country_event = {
 			id = sgm_planet_modifiers.1
 			scopes = {
-				from = from
+				from = from fromfrom = this
 			}
 		}		
 	}
 	
-	option = { NAME = exit }
+	option = { 
+		NAME = exit 
+		country_event = { id = sgm_planets.1 scopes = { from = from fromfrom = this }}
+	}
 }
 
 ## Removing planet modifiers that a planet has
@@ -270,33 +273,33 @@ country_event = {								# requires passing the planet scope as from
 		log = "sgm_planet_modifiers.2 firing"
 	}
 	
-	option = { NAME = remove_modifier_gm_pm_amenities_add trigger = { from = { has_modifier = gm_pm_amenities_add }} from = { remove_modifier = gm_pm_amenities_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_amenities_subtract trigger = { from = { has_modifier = gm_pm_amenities_subtract }} from = { remove_modifier = gm_pm_amenities_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_amenities_multiply trigger = { from = { has_modifier = gm_pm_amenities_multiply }} from = { remove_modifier = gm_pm_amenities_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_amenities_divide trigger = { from = { has_modifier = gm_pm_amenities_divide }} from = { remove_modifier = gm_pm_amenities_divide } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_crime_add trigger = { from = { has_modifier = gm_pm_crime_add }} from = { remove_modifier = gm_pm_crime_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_crime_subtract trigger = { from = { has_modifier = gm_pm_crime_subtract }} from = { remove_modifier = gm_pm_crime_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_crime_multiply trigger = { from = { has_modifier = gm_pm_crime_multiply }} from = { remove_modifier = gm_pm_crime_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_crime_divide trigger = { from = { has_modifier = gm_pm_crime_divide }} from = { remove_modifier = gm_pm_crime_divide } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_growthrate_bonus trigger = { from = { has_modifier = gm_pm_growthrate_bonus }} from = { remove_modifier = gm_pm_growthrate_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_growthrate_penalty trigger = { from = { has_modifier = gm_pm_growthrate_penalty }} from = { remove_modifier = gm_pm_growthrate_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_habitability_bonus trigger = { from = { has_modifier = gm_pm_habitability_bonus }} from = { remove_modifier = gm_pm_habitability_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_habitability_penalty trigger = { from = { has_modifier = gm_pm_habitability_penalty }} from = { remove_modifier = gm_pm_habitability_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_happiness_bonus_all trigger = {	from = { has_modifier = gm_pm_happiness_bonus_all }} from = { remove_modifier = gm_pm_happiness_bonus_all } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_happiness_penalty_all trigger = { from = { has_modifier = gm_pm_happiness_penalty_all }} from = { remove_modifier = gm_pm_happiness_penalty_all } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_happiness_bonus_citizens trigger = { from = { has_modifier = gm_pm_happiness_bonus_citizens }} from = { remove_modifier = gm_pm_happiness_bonus_citizens } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_happiness_penalty_citizens trigger = { from = { has_modifier = gm_pm_happiness_penalty_citizens }} from = { remove_modifier = gm_pm_happiness_penalty_citizens } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_housing_available_bonus trigger = {	from = { has_modifier = gm_pm_housing_available_bonus }} from = { remove_modifier = gm_pm_housing_available_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_housing_available_penalty trigger = { from = { has_modifier = gm_pm_housing_available_penalty }} from = { remove_modifier = gm_pm_housing_available_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_housing_use_bonus trigger = { from = { has_modifier = gm_pm_housing_use_bonus }} from = { remove_modifier = gm_pm_housing_use_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_housing_use_penalty trigger = {	from = { has_modifier = gm_pm_housing_use_penalty }} from = { remove_modifier = gm_pm_housing_use_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_loyalty_bonus trigger = { from = { has_modifier = gm_pm_loyalty_bonus }} from = { remove_modifier = gm_pm_loyalty_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_loyalty_penalty trigger = {	from = { has_modifier = gm_pm_loyalty_penalty }} from = { remove_modifier = gm_pm_loyalty_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_stability_bonus trigger = {	from = { has_modifier = gm_pm_stability_bonus }} from = { remove_modifier = gm_pm_stability_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_stability_penalty trigger = { from = { has_modifier = gm_pm_stability_penalty }} from = { remove_modifier = gm_pm_stability_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_trade_add trigger = { from = { has_modifier = gm_pm_trade_add }} from = { remove_modifier = gm_pm_trade_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_trade_subtract trigger = { from = { has_modifier = gm_pm_trade_subtract }} from = { remove_modifier = gm_pm_trade_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
-	option = { NAME = remove_modifier_gm_pm_trade_multiply trigger = { from = { has_modifier = gm_pm_trade_multiply }} from = { remove_modifier = gm_pm_trade_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from }}}
+	option = { NAME = remove_modifier_gm_pm_amenities_add trigger = { from = { has_modifier = gm_pm_amenities_add }} from = { remove_modifier = gm_pm_amenities_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_amenities_subtract trigger = { from = { has_modifier = gm_pm_amenities_subtract }} from = { remove_modifier = gm_pm_amenities_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_amenities_multiply trigger = { from = { has_modifier = gm_pm_amenities_multiply }} from = { remove_modifier = gm_pm_amenities_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_amenities_divide trigger = { from = { has_modifier = gm_pm_amenities_divide }} from = { remove_modifier = gm_pm_amenities_divide } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_crime_add trigger = { from = { has_modifier = gm_pm_crime_add }} from = { remove_modifier = gm_pm_crime_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_crime_subtract trigger = { from = { has_modifier = gm_pm_crime_subtract }} from = { remove_modifier = gm_pm_crime_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_crime_multiply trigger = { from = { has_modifier = gm_pm_crime_multiply }} from = { remove_modifier = gm_pm_crime_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_crime_divide trigger = { from = { has_modifier = gm_pm_crime_divide }} from = { remove_modifier = gm_pm_crime_divide } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_growthrate_bonus trigger = { from = { has_modifier = gm_pm_growthrate_bonus }} from = { remove_modifier = gm_pm_growthrate_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_growthrate_penalty trigger = { from = { has_modifier = gm_pm_growthrate_penalty }} from = { remove_modifier = gm_pm_growthrate_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_habitability_bonus trigger = { from = { has_modifier = gm_pm_habitability_bonus }} from = { remove_modifier = gm_pm_habitability_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_habitability_penalty trigger = { from = { has_modifier = gm_pm_habitability_penalty }} from = { remove_modifier = gm_pm_habitability_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_happiness_bonus_all trigger = {	from = { has_modifier = gm_pm_happiness_bonus_all }} from = { remove_modifier = gm_pm_happiness_bonus_all } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_happiness_penalty_all trigger = { from = { has_modifier = gm_pm_happiness_penalty_all }} from = { remove_modifier = gm_pm_happiness_penalty_all } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_happiness_bonus_citizens trigger = { from = { has_modifier = gm_pm_happiness_bonus_citizens }} from = { remove_modifier = gm_pm_happiness_bonus_citizens } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_happiness_penalty_citizens trigger = { from = { has_modifier = gm_pm_happiness_penalty_citizens }} from = { remove_modifier = gm_pm_happiness_penalty_citizens } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_housing_available_bonus trigger = {	from = { has_modifier = gm_pm_housing_available_bonus }} from = { remove_modifier = gm_pm_housing_available_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_housing_available_penalty trigger = { from = { has_modifier = gm_pm_housing_available_penalty }} from = { remove_modifier = gm_pm_housing_available_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_housing_use_bonus trigger = { from = { has_modifier = gm_pm_housing_use_bonus }} from = { remove_modifier = gm_pm_housing_use_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_housing_use_penalty trigger = {	from = { has_modifier = gm_pm_housing_use_penalty }} from = { remove_modifier = gm_pm_housing_use_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_loyalty_bonus trigger = { from = { has_modifier = gm_pm_loyalty_bonus }} from = { remove_modifier = gm_pm_loyalty_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_loyalty_penalty trigger = {	from = { has_modifier = gm_pm_loyalty_penalty }} from = { remove_modifier = gm_pm_loyalty_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_stability_bonus trigger = {	from = { has_modifier = gm_pm_stability_bonus }} from = { remove_modifier = gm_pm_stability_bonus } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_stability_penalty trigger = { from = { has_modifier = gm_pm_stability_penalty }} from = { remove_modifier = gm_pm_stability_penalty } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_trade_add trigger = { from = { has_modifier = gm_pm_trade_add }} from = { remove_modifier = gm_pm_trade_add } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_trade_subtract trigger = { from = { has_modifier = gm_pm_trade_subtract }} from = { remove_modifier = gm_pm_trade_subtract } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
+	option = { NAME = remove_modifier_gm_pm_trade_multiply trigger = { from = { has_modifier = gm_pm_trade_multiply }} from = { remove_modifier = gm_pm_trade_multiply } country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}}
 	
 	# More readable
 	option = { 
@@ -305,9 +308,12 @@ country_event = {								# requires passing the planet scope as from
 		from = { remove_modifier = gm_pm_trade_divide } 
 		country_event = { 
 			id = sgm_planet_modifiers.2 
-			scopes = { from = from }
+			scopes = { from = from fromfrom = this }
 		}
 	}
 	
-	option = { NAME = exit }
+	option = { 
+		NAME = exit 
+		country_event = { id = sgm_planets.1 scopes = { from = from fromfrom = this }}
+	}
 }
