@@ -1,0 +1,17 @@
+clear_diplo_management_flags = {
+	remove_global_flag = setting_preventing_pvp_wars
+	remove_global_flag = setting_preventing_ai_wars
+	remove_global_flag = setting_preventing_all_wars
+	remove_global_flag = setting_preventing_ai_federations
+	remove_global_flag = setting_preventing_player_federations
+	remove_global_flag = setting_preventing_all_federations
+	remove_global_flag = setting_preventing_ai_demand_subjugation
+	remove_global_flag = setting_preventing_player_demand_subjugation
+	remove_global_flag = setting_preventing_all_demand_subjugation
+	remove_global_flag = setting_preventing_ai_form_d_pact
+	remove_global_flag = setting_preventing_player_form_d_pact
+	remove_global_flag = setting_preventing_all_d_pact
+	remove_global_flag = setting_preventing_form_galactic_community
+	remove_global_flag = setting_preventing_player_join_galcom
+	remove_global_flag = setting_preventing_ai_join_galcom
+}

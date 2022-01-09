@@ -214,4 +214,99 @@ defined_text = {
 		}
 		localization_key = planet_destroyed_value
 	}
-}	
+}
+
+defined_text = { 
+	name = CurrentlyEditingDate
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_pvp_wars
+		}
+		localization_key = preventing_pvp_wars
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_ai_wars
+		}
+		localization_key = preventing_ai_wars
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_all_wars
+		}
+		localization_key = preventing_all_wars
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_ai_federations
+		}
+		localization_key = setting_preventing_ai_federations
+	}	
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_player_federations
+		}
+		localization_key = preventing_player_federations
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_all_federations
+		}
+		localization_key = preventing_all_federations
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_ai_demand_subjugation
+		}
+		localization_key = preventing_ai_demand_subjugation
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_player_demand_subjugation
+		}
+		localization_key = preventing_player_demand_subjugation
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_all_demand_subjugation
+		}
+		localization_key = preventing_all_demand_subjugation
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_ai_form_d_pact
+		}
+		localization_key = preventing_ai_form_d_pact
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_player_form_d_pact
+		}
+		localization_key = preventing_player_form_d_pact
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_all_d_pact
+		}
+		localization_key = preventing_all_d_pact
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_form_galactic_community
+		}
+		localization_key = preventing_form_galactic_community
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_player_join_galcom
+		}
+		localization_key = preventing_player_join_galcom
+	}
+	text = {
+		trigger = {
+			has_global_flag = setting_preventing_ai_join_galcom
+		}
+		localization_key = preventing_ai_join_galcom
+	}
+	default = NONE
+}
