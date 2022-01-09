@@ -29,6 +29,18 @@ country_event = {						# planet event menu
 			}
 		}
 	}
+	
+	option = {
+		allow = { always = yes }
+		NAME = add_mod_planet_modifier
+		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
+	}
+	
+	option = {
+		allow = { always = yes }
+		NAME = remove_mod_planet_modifier
+		country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}
+	}
 
 	option = {
 		allow = {
