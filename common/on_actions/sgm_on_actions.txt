@@ -51,6 +51,12 @@ on_press_begin = {
     }
 }
 
+on_monthly_pulse = {        # leaderboard updates
+    events = {
+        sgm_bounty.3
+    }
+}
+
 # This = owner of ship 1 (combatant)
 # From = owner of ship 2 (destroyed)
 # FromFrom = ship 1

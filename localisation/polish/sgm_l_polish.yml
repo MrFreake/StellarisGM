@@ -1,8 +1,12 @@
 ﻿l_polish:
+
+# Galactic Community
  sgm_galcom.1.name: "$RESOLUTIONS$"
  sgm_galcom.1.desc: "Immediately pass resolution being voted on. If resolution is targeted the target country will be [this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!."
  sgm_galcom.1.a: "OK (TARGET: [this.GetName_target_country_GetRealName]§G[target_country.GetRealName])§!"
  sgm_galcom.1.b: "$CANCEL$"
+
+# Fleet
  sgm_fleet.3.name: "Teleport $FLEET$"
  sgm_fleet.3.desc: "Instantly teleport $FLEET$ to the target scope."
  sgm_fleet.3.teleport_radius: "§ETeleport $SYSTEM$ $FLEETS$: [this.GetName_sgm_fleet_3_teleport_radius]§!"
@@ -12,3 +16,55 @@
  # sgm_fleet.3.ambient_object: "§Gambient_object§! ([target_ambient_object.GetStarName])"
  sgm_fleet.3.system: "$SYSTEM$ §G[target_system.GetName]§!"
  sgm_fleet.3.country: "§G[target_country.GetRealName]§! $EMPIRE_CAPITAL$ [target_country_capital_scope.GetName] ([target_country_capital_scope_solar_system.GetName] $SYSTEM$)"
+
+# Main.gui targets
+ target_planet: "§GPlanet: [target_planet.GetName]"
+ target_country: "§GCountry: [target_country.GetName]"
+ target_megastructure: "§GMega: [target_megastructure.GetName]"
+ target_fleet: "§GFleet: [target_fleet.GetName]"
+ target_planet_not_set: "§GPlanet: §RNot Set"
+ target_country_not_set: "§GCountry: §RNot Set"
+ target_megastructure_not_set: "§GMega: §RNot Set"
+ target_fleet_not_set: "§GFleet: §RNot Set"
+
+# bounty stuff
+sgm_bounty_1: "Galactic Bounty Leaderboard"
+sgm_bounty_1_desc: "Position\n\n1. [position_0.GetName] - [position_0.bounty_points]\n2. [position_1.GetName] - [position_1.bounty_points]\n3. [position_2.GetName] - [position_2.bounty_points]\n4. [position_3.GetName] - [position_3.bounty_points]\n5. [position_4.GetName] - [position_4.bounty_points]\n6. [position_5.GetName] - [position_5.bounty_points]\n7. [position_6.GetName] - [position_6.bounty_points]\n8. [position_7.GetName] - [position_7.bounty_points]\n9. [position_8.GetName] - [position_8.bounty_points]\n10. [position_9.GetName] - [position_9.bounty_points]"
+megastructure_built: "Megastructure Built - [global_event_country.megastructure_built_scalar]"
+country_destroyed: "Country Destroyed - [global_event_country.country_destroyed_scalar]"
+planet_conquered: "Planet Conquered - [global_event_country.planet_conquered_scalar]"
+ship_destroyed: "Ship Destroyed - [global_event_country.ship_destroyed_scalar]"
+pop_purged: "Pop Purged - [global_event_country.pop_purged_scalar]"
+planet_destroyed: "Planet Destroyed - [global_event_country.planet_destroyed_scalar]"
+ascension_perk_unlocked: "Ascension Perk Gained - [global_event_country.ascension_perk_unlocked_scalar]"
+tradition_unlocked: "Tradition Unlocked - [global_event_country.tradition_unlocked_scalar]"
+tech_unlocked: "Tech Researched - [global_event_country.tech_unlocked_scalar]"
+star_system_destroyed: "Star Destroyed - [global_event_country.star_system_destroyed_scalar]"
+subject_integrated: "Subject Integrated - [global_event_country.subject_integrated_scalar]"
+subject_gained: "Subject Gained - [global_event_country.subject_gained_scalar]"
+system_gained: "System Gained - [global_event_country.system_gained_scalar]"
+ship_destroyed_value: "[global_event_country.ship_destroyed_scalar]"
+pop_purged_value: "[global_event_country.pop_purged_scalar]"
+planet_conquered_value: "[global_event_country.planet_conquered_scalar]"
+country_destroyed_value: "[global_event_country.country_destroyed_scalar]"
+megastructure_built_value: "[global_event_country.megastructure_built_scalar]"
+system_gained_value: "[global_event_country.system_gained_scalar]"
+subject_gained_value: "[global_event_country.subject_gained_scalar]"
+subject_integrated_value: "[global_event_country.subject_integrated_scalar]"
+star_system_destroyed_value: "[global_event_country.star_system_destroyed_scalar]"
+tech_unlocked_value: "[global_event_country.tech_unlocked_scalar]"
+tradition_unlocked_value: "[global_event_country.tradition_unlocked_scalar]"
+ascension_perk_unlocked_value: "[global_event_country.ascension_perk_unlocked_scalar]"
+planet_destroyed_value: "[global_event_country.planet_destroyed_scalar]"
+enabled_bounty: "§GBounty Enabled"
+disabled_bounty: "§RBounty Disabled"
+modifier_var_value: "[FromFrom.modifier_var]"
+
+# Relics
+sgm_relics.1.desc: "$ADD$ or $REMOVE$ $RELICS$: §G[from.GetRealName]§! ([this.GetNameRelicsAddRemoveSwitch])"
+sgm_relics.1.a: "§Y[this.GetNameRelicsAddRemoveSwitch]§!"
+
+# Technologies
+sgm_technologies.1.desc: "$ADD$ $TECHNOLOGY$: §G[from.GetRealName]§! ([this.GetNameTechnologiesAddSwitch])"
+sgm_technologies.1.a: "§Y[this.GetNameTechnologiesAddSwitch]§!"
+sgm_technologies.1.b: "§Y[this.GetNameTechnologiesOptionSwitch]§!"

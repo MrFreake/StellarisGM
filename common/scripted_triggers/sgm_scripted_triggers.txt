@@ -33,3 +33,12 @@ is_fleet = {
         is_ship_class = shipclass_starbase
     }
 }
+
+sgm_give_technology_allow_trigger = {
+    from = {
+        NOT = {
+            has_technology = $TECH$
+        }
+        can_research_technology = $TECH$
+    }
+}
