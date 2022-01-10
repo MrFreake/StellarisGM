@@ -87,7 +87,15 @@ sgm_unset_target = {
 }
 
 # main.gui buttons
-
+targets = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = {}	
+}
 target_planet = {
 	potential = {
 		is_gm = yes

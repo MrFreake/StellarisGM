@@ -456,4 +456,19 @@ sgm_teleport_fleet_effect_cleanup = {
 	remove_global_flag = sgm_teleport_fleet_civilian
 	remove_global_flag = sgm_teleport_fleet_all
 	remove_global_flag = sgm_teleport_fleet_100_radius
-} 
+}
+
+sgm_give_technology_effect = {
+	switch = {
+		trigger = has_global_flag
+		sgm_give_technology_option ={
+			add_research_option = $TECH$
+		}
+		default = {
+			give_technology = {
+				tech = $TECH$
+				message = $MESSAGE|yes$
+			}
+		}
+	}
+}
