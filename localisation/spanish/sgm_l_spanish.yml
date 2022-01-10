@@ -63,3 +63,8 @@ modifier_var_value: "[FromFrom.modifier_var]"
 # Relics
 sgm_relics.1.desc: "$ADD$ or $REMOVE$ $RELICS$: §G[from.GetRealName]§! ([this.GetNameRelicsAddRemoveSwitch])"
 sgm_relics.1.a: "§Y[this.GetNameRelicsAddRemoveSwitch]§!"
+
+# Technologies
+sgm_technologies.1.desc: "$ADD$ $TECHNOLOGY$: §G[from.GetRealName]§! ([this.GetNameTechnologiesAddSwitch])"
+sgm_technologies.1.a: "§Y[this.GetNameTechnologiesAddSwitch]§!"
+sgm_technologies.1.b: "§Y[this.GetNameTechnologiesOptionSwitch]§!"

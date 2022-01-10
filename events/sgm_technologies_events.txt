@@ -1,0 +1,6746 @@
+namespace = sgm_technologies
+country_event = {
+	id = sgm_technologies.1
+	title = TECHNOLOGY
+	desc = sgm_technologies.1.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_ScrollbarEventWindow
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_give_technology_physics
+					has_global_flag = sgm_give_technology_society
+					has_global_flag = sgm_give_technology_engineering
+				}
+			}
+			set_global_flag = sgm_give_technology_physics
+		}
+	}
+	option = {
+		name = sgm_technologies.1.a
+		switch = {
+			trigger = has_global_flag
+			sgm_give_technology_physics = {
+				remove_global_flag = sgm_give_technology_physics
+				set_global_flag = sgm_give_technology_society
+			}
+			sgm_give_technology_society = {
+				remove_global_flag = sgm_give_technology_society
+				set_global_flag = sgm_give_technology_engineering
+			}
+			sgm_give_technology_engineering = {
+				remove_global_flag = sgm_give_technology_engineering
+				set_global_flag = sgm_give_technology_physics
+			}
+			default = {
+				set_global_flag = sgm_give_technology_physics
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = sgm_technologies.1.b
+		switch = {
+			trigger = has_global_flag
+			sgm_give_technology_option = {
+				remove_global_flag = sgm_give_technology_option
+			}
+			default = {
+				set_global_flag = sgm_give_technology_option
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	# Physics
+	option = {
+		name = tech_lgate_activation
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_lgate_activation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_lgate_activation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_lgate_activation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_dark_matter_deflector
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_dark_matter_deflector
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_dark_matter_deflector
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_dark_matter_deflector
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_dark_matter_power_core
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_dark_matter_power_core
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_dark_matter_power_core
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_dark_matter_power_core
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_enigmatic_encoder
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_enigmatic_encoder
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_enigmatic_encoder
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_enigmatic_encoder
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_enigmatic_decoder
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_enigmatic_decoder
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_enigmatic_decoder
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_enigmatic_decoder
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gateway_activation
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_gateway_activation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gateway_activation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gateway_activation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gateway_construction
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_gateway_construction
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gateway_construction
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gateway_construction
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_basic_science_lab_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_basic_science_lab_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_basic_science_lab_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_basic_science_lab_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_science_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_space_science_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_science_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_science_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_science_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_space_science_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_science_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_science_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_science_3
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_space_science_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_science_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_science_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_science_4
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_space_science_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_science_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_science_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_science_5
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_space_science_5
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_science_5
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_science_5
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_physics_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_physics_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_physics_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_physics_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_physics_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_physics_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_physics_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_physics_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_physics_3
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_physics_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_physics_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_physics_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cryostasis_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_cryostasis_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cryostasis_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cryostasis_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cryostasis_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_cryostasis_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cryostasis_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cryostasis_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_consumer_good_refinement_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_consumer_good_refinement_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_consumer_good_refinement_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_consumer_good_refinement_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_consumer_good_refinement_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_consumer_good_refinement_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_consumer_good_refinement_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_consumer_good_refinement_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_plant_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_plant_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_plant_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_plant_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_plant_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_plant_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_plant_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_plant_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_plant_3
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_plant_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_plant_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_plant_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_plant_4
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_plant_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_plant_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_plant_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_hub_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_hub_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_hub_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_hub_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_power_hub_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_power_hub_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_power_hub_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_power_hub_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hyper_drive_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_hyper_drive_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hyper_drive_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hyper_drive_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hyper_drive_2
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_hyper_drive_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hyper_drive_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hyper_drive_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hyper_drive_3
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_hyper_drive_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hyper_drive_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hyper_drive_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_wormhole_stabilization
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_wormhole_stabilization
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_wormhole_stabilization
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_wormhole_stabilization
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_jump_drive_1
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_jump_drive_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_jump_drive_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_jump_drive_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_bio_reactor
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_bio_reactor
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_bio_reactor
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_bio_reactor
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_volatile_motes
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_volatile_motes
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_volatile_motes
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_volatile_motes
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mine_dark_matter
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+			from = {
+				NOT = {
+					has_technology = tech_mine_dark_matter
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mine_dark_matter
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mine_dark_matter
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	# Society
+	option = {
+		name = tech_gargantuan_evolution
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gargantuan_evolution
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gargantuan_evolution
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gargantuan_evolution
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_neuroregeneration
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_neuroregeneration
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_neuroregeneration
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_neuroregeneration
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_xeno_tourism_agency
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_xeno_tourism_agency
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_xeno_tourism_agency
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_xeno_tourism_agency
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_executive_retreat
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_executive_retreat
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_executive_retreat
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_executive_retreat
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_planetary_defenses
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_planetary_defenses
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_planetary_defenses
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_planetary_defenses
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_interplanetary_commerce
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_interplanetary_commerce
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_interplanetary_commerce
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_interplanetary_commerce
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_trading
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_space_trading
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_trading
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_trading
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_interstellar_economics
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_interstellar_economics
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_interstellar_economics
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_interstellar_economics
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_galactic_markets
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_galactic_markets
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_galactic_markets
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_galactic_markets
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_prescient_data_modeling
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_prescient_data_modeling
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_prescient_data_modeling
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_prescient_data_modeling
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_industrial_farming
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_industrial_farming
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_industrial_farming
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_industrial_farming
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_eco_simulation
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_eco_simulation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_eco_simulation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_eco_simulation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gene_crops
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gene_crops
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gene_crops
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gene_crops
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_nano_vitality_crops
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_nano_vitality_crops
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_nano_vitality_crops
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_nano_vitality_crops
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_nutrient_replication
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_nutrient_replication
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_nutrient_replication
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_nutrient_replication
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hydroponics
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hydroponics
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hydroponics
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hydroponics
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_food_processing_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_food_processing_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_food_processing_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_food_processing_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_food_processing_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_food_processing_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_food_processing_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_food_processing_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_society_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_society_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_society_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_society_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_society_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_society_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_society_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_society_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_society_3
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_society_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_society_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_society_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_alien_life_studies
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_alien_life_studies
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_alien_life_studies
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_alien_life_studies
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_arcane_deciphering
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_arcane_deciphering
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_arcane_deciphering
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_arcane_deciphering
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonization_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonization_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonization_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonization_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonization_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonization_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonization_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonization_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonization_3
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonization_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonization_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonization_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonization_4
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonization_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonization_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonization_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonization_5
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonization_5
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonization_5
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonization_5
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_tomb_world_adaption
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_tomb_world_adaption
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_tomb_world_adaption
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_tomb_world_adaption
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_frontier_health
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_frontier_health
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_frontier_health
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_frontier_health
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_frontier_hospital
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_frontier_hospital
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_frontier_hospital
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_frontier_hospital
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mountain_range
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_mountain_range
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mountain_range
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mountain_range
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_volcano
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_volcano
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_volcano
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_volcano
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_dangerous_wildlife
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_dangerous_wildlife
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_dangerous_wildlife
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_dangerous_wildlife
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_dense_jungle
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_dense_jungle
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_dense_jungle
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_dense_jungle
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_quicksand_basin
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_quicksand_basin
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_quicksand_basin
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_quicksand_basin
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_noxious_swamp
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_noxious_swamp
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_noxious_swamp
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_noxious_swamp
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_massive_glacier
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_massive_glacier
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_massive_glacier
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_massive_glacier
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_toxic_kelp
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_toxic_kelp
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_toxic_kelp
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_toxic_kelp
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_deep_sinkhole
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_deep_sinkhole
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_deep_sinkhole
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_deep_sinkhole
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_terrestrial_sculpting
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_terrestrial_sculpting
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_terrestrial_sculpting
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_terrestrial_sculpting
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_ecological_adaptation
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_ecological_adaptation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_ecological_adaptation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_ecological_adaptation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_climate_restoration
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_climate_restoration
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_climate_restoration
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_climate_restoration
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_genome_mapping
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_genome_mapping
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_genome_mapping
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_genome_mapping
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_vitality_boosters
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_vitality_boosters
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_vitality_boosters
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_vitality_boosters
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_epigenetic_triggers
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_epigenetic_triggers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_epigenetic_triggers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_epigenetic_triggers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cloning
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_cloning
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cloning
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cloning
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gene_banks
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gene_banks
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gene_banks
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gene_seed_purification
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gene_seed_purification
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gene_seed_purification
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gene_seed_purification
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_morphogenetic_field_mastery
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_morphogenetic_field_mastery
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_morphogenetic_field_mastery
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_morphogenetic_field_mastery
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gene_tailoring
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gene_tailoring
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gene_tailoring
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gene_tailoring
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_glandular_acclimation
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_glandular_acclimation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_glandular_acclimation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_glandular_acclimation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_genetic_resequencing
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_genetic_resequencing
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_genetic_resequencing
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_genetic_resequencing
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_gene_expressions
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_gene_expressions
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_gene_expressions
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_gene_expressions
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_selected_lineages
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_selected_lineages
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_selected_lineages
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_selected_lineages
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_capacity_boosters
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_capacity_boosters
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_capacity_boosters
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_capacity_boosters
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_fleet_size_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_fleet_size_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_fleet_size_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_fleet_size_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_fleet_size_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_fleet_size_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_fleet_size_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_fleet_size_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_fleet_size_3
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_fleet_size_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_fleet_size_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_fleet_size_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_fleet_size_4
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_fleet_size_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_fleet_size_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_fleet_size_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_fleet_size_5
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_fleet_size_5
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_fleet_size_5
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_fleet_size_5
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_interstellar_fleet_traditions
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_interstellar_fleet_traditions
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_interstellar_fleet_traditions
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_interstellar_fleet_traditions
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_refit_standards
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_refit_standards
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_refit_standards
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_refit_standards
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_command_matrix
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_command_matrix
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_command_matrix
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_command_matrix
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_navy_size_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_navy_size_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_navy_size_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_navy_size_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_navy_size_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_navy_size_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_navy_size_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_navy_size_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_navy_size_3
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_navy_size_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_navy_size_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_navy_size_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_doctrine_navy_size_4
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_doctrine_navy_size_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_doctrine_navy_size_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_doctrine_navy_size_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_centralized_command
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_centralized_command
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_centralized_command
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_centralized_command
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_combat_training
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_combat_training
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_combat_training
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_combat_training
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_ground_defense_planning
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_ground_defense_planning
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_ground_defense_planning
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_ground_defense_planning
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_global_defense_grid
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_global_defense_grid
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_global_defense_grid
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_global_defense_grid
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_psionic_theory
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_psionic_theory
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_psionic_theory
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_psionic_theory
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_telepathy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_telepathy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_telepathy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_telepathy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_precognition_interface
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_precognition_interface
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_precognition_interface
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_precognition_interface
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_thought_enforcement
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_thought_enforcement
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_thought_enforcement
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_thought_enforcement
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_psi_jump_drive_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_psi_jump_drive_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_psi_jump_drive_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_psi_jump_drive_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_galactic_ambitions
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_galactic_ambitions
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_galactic_ambitions
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_galactic_ambitions
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_manifest_destiny
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_manifest_destiny
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_manifest_destiny
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_manifest_destiny
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_interstellar_campaigns
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_interstellar_campaigns
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_interstellar_campaigns
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_interstellar_campaigns
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_galactic_campaigns
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_galactic_campaigns
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_galactic_campaigns
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_galactic_campaigns
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_planetary_government
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_planetary_government
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_planetary_government
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_planetary_government
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_planetary_unification
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_planetary_unification
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_planetary_unification
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_planetary_unification
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonial_centralization
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonial_centralization
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonial_centralization
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonial_centralization
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_galactic_administration
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_galactic_administration
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_galactic_administration
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_galactic_administration
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_planetary_infrastructure_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_planetary_infrastructure_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_planetary_infrastructure_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_planetary_infrastructure_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_planetary_infrastructure_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_planetary_infrastructure_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_planetary_infrastructure_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_planetary_infrastructure_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_subdermal_stimulation
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_subdermal_stimulation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_subdermal_stimulation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_subdermal_stimulation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_global_production_strategy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_global_production_strategy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_global_production_strategy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_global_production_strategy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_adaptive_bureaucracy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_adaptive_bureaucracy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_adaptive_bureaucracy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_adaptive_bureaucracy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_effective_bureaucracy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_effective_bureaucracy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_effective_bureaucracy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_effective_bureaucracy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_colonial_bureaucracy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_colonial_bureaucracy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colonial_bureaucracy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colonial_bureaucracy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_galactic_bureaucracy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_galactic_bureaucracy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_galactic_bureaucracy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_galactic_bureaucracy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_living_state
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_living_state
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_living_state
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_living_state
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_collective_self
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_collective_self
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_collective_self
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_collective_self
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_autonomous_agents
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_autonomous_agents
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_autonomous_agents
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_autonomous_agents
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_embodied_dynamism
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_embodied_dynamism
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_embodied_dynamism
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_embodied_dynamism
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_neural_implants
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_neural_implants
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_neural_implants
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_neural_implants
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_artificial_moral_codes
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_artificial_moral_codes
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_artificial_moral_codes
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_artificial_moral_codes
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_synthetic_thought_patterns
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_synthetic_thought_patterns
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_synthetic_thought_patterns
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_synthetic_thought_patterns
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_unity_of_purpose
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_unity_of_purpose
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_unity_of_purpose
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_unity_of_purpose
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_collective_production_methods
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_collective_production_methods
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_collective_production_methods
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_collective_production_methods
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_resource_processing_algorithms
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_resource_processing_algorithms
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_resource_processing_algorithms
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_resource_processing_algorithms
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_holo_entertainment
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_holo_entertainment
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_holo_entertainment
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_holo_entertainment
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hyper_entertainment_forum
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hyper_entertainment_forum
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hyper_entertainment_forum
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hyper_entertainment_forum
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_paradise_dome
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_paradise_dome
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_paradise_dome
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_paradise_dome
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cultural_heritage
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_cultural_heritage
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cultural_heritage
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cultural_heritage
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_heritage_site
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_heritage_site
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_heritage_site
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_heritage_site
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hypercomms_forum
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hypercomms_forum
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hypercomms_forum
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hypercomms_forum
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_autocurating_vault
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_autocurating_vault
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_autocurating_vault
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_autocurating_vault
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_holographic_rituals
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_holographic_rituals
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_holographic_rituals
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_holographic_rituals
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_consecration_fields
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_consecration_fields
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_consecration_fields
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_consecration_fields
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_transcendent_faith
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_transcendent_faith
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_transcendent_faith
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_transcendent_faith
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hive_node
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hive_node
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hive_node
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hive_node
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hive_cluster
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hive_cluster
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hive_cluster
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hive_cluster
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_hive_confluence
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_hive_confluence
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_hive_confluence
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_hive_confluence
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_penal_colonies
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_penal_colonies
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_penal_colonies
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_penal_colonies
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_resort_colonies
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_resort_colonies
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_resort_colonies
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_resort_colonies
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_slave_colonies
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_slave_colonies
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_slave_colonies
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_slave_colonies
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_housing_agrarian_idyll
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_housing_agrarian_idyll
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_housing_agrarian_idyll
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_housing_agrarian_idyll
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_xeno_diplomacy
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_xeno_diplomacy
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_xeno_diplomacy
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_xeno_diplomacy
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_xeno_relations
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_xeno_relations
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_xeno_relations
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_xeno_relations
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_capital_productivity_1
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_capital_productivity_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_capital_productivity_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_capital_productivity_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_capital_productivity_2
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_capital_productivity_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_capital_productivity_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_capital_productivity_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_capital_productivity_3
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_capital_productivity_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_capital_productivity_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_capital_productivity_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mine_zro
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_mine_zro
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mine_zro
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mine_zro
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_adaptive_combat_algorithms
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_adaptive_combat_algorithms
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_adaptive_combat_algorithms
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_adaptive_combat_algorithms
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_biomechanics
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+			from = {
+				NOT = {
+					has_technology = tech_biomechanics
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_biomechanics
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_biomechanics
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	# Engineering
+	option = {
+		name = tech_colossus
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_colossus
+				}
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_colossus
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_colossus
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_exploration
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_exploration
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_exploration
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_exploration
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_corvettes
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_corvettes
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_corvettes
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_corvettes
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_destroyers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_destroyers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_destroyers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_destroyers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cruisers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_cruisers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cruisers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cruisers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_battleships
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_battleships
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_battleships
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_battleships
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_titans
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_titans
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_titans
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_titans
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_juggernaut
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_juggernaut
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_juggernaut
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_juggernaut
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_corvette_build_speed
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_corvette_build_speed
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_corvette_build_speed
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_corvette_build_speed
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_corvette_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_corvette_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_corvette_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_corvette_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_corvette_hull_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_corvette_hull_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_corvette_hull_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_corvette_hull_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_destroyer_build_speed
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_destroyer_build_speed
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_destroyer_build_speed
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_destroyer_build_speed
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_destroyer_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_destroyer_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_destroyer_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_destroyer_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_destroyer_hull_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_destroyer_hull_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_destroyer_hull_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_destroyer_hull_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cruiser_build_speed
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_cruiser_build_speed
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cruiser_build_speed
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cruiser_build_speed
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cruiser_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_cruiser_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cruiser_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cruiser_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_cruiser_hull_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_cruiser_hull_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_cruiser_hull_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_cruiser_hull_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_battleship_build_speed
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_battleship_build_speed
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_battleship_build_speed
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_battleship_build_speed
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_battleship_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_battleship_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_battleship_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_battleship_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_battleship_hull_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_battleship_hull_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_battleship_hull_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_battleship_hull_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_titan_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_titan_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_titan_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_titan_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_titan_hull_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_titan_hull_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_titan_hull_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_titan_hull_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_starbase_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_starbase_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_starbase_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_starbase_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_starbase_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_starbase_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_starbase_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_starbase_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_starbase_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_starbase_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_starbase_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_starbase_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_starbase_4
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_starbase_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_starbase_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_starbase_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_starbase_5
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_starbase_5
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_starbase_5
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_starbase_5
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_habitat_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_habitat_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_habitat_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_habitat_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_habitat_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_habitat_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_habitat_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_habitat_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_habitat_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_habitat_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_habitat_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_habitat_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_modular_engineering
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_modular_engineering
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_modular_engineering
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_modular_engineering
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_defense_station_improvement
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_defense_station_improvement
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_defense_station_improvement
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_defense_station_improvement
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_strike_craft_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_strike_craft_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_strike_craft_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_strike_craft_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_strike_craft_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_strike_craft_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_strike_craft_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_strike_craft_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_strike_craft_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_strike_craft_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_strike_craft_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_strike_craft_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_assault_armies
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_assault_armies
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_assault_armies
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_assault_armies
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_ship_armor_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_ship_armor_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_ship_armor_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_ship_armor_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_defense_platform_hull_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_defense_platform_hull_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_defense_platform_hull_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_defense_platform_hull_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_basic_industry
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_basic_industry
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_basic_industry
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_basic_industry
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mechanized_mining
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mechanized_mining
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mechanized_mining
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mechanized_mining
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_powered_exoskeletons
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_powered_exoskeletons
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_powered_exoskeletons
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_powered_exoskeletons
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_mining_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_mining_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_mining_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_mining_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_mining_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_mining_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_mining_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_mining_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_mining_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_mining_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_mining_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_mining_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_mining_4
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_mining_4
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_mining_4
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_mining_4
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_mining_5
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_mining_5
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_mining_5
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_mining_5
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mining_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mining_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mining_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mining_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mining_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mining_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mining_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mining_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mining_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mining_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mining_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mining_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mineral_purification_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mineral_purification_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mineral_purification_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mineral_purification_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mineral_purification_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mineral_purification_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mineral_purification_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mineral_purification_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_alloys_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_alloys_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_alloys_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_alloys_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_alloys_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_alloys_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_alloys_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_alloys_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_advanced_metallurgy_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_advanced_metallurgy_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_advanced_metallurgy_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_advanced_metallurgy_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_advanced_metallurgy_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_advanced_metallurgy_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_advanced_metallurgy_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_advanced_metallurgy_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_luxuries_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_luxuries_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_luxuries_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_luxuries_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_luxuries_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_luxuries_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_luxuries_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_luxuries_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_engineering_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_engineering_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_engineering_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_engineering_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_engineering_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_engineering_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_engineering_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_engineering_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_engineering_3
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_engineering_3
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_engineering_3
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_engineering_3
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_robotic_workers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_robotic_workers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_robotic_workers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_robotic_workers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_droid_workers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_droid_workers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_droid_workers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_droid_workers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_synthetic_workers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_synthetic_workers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_synthetic_workers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_synthetic_workers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_synthetic_leaders
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_synthetic_leaders
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_synthetic_leaders
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_synthetic_leaders
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_space_construction
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_space_construction
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_space_construction
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_space_construction
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_assembly_pattern
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_assembly_pattern
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_assembly_pattern
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_assembly_pattern
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_construction_templates
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_construction_templates
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_construction_templates
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_construction_templates
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_housing_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_housing_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_housing_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_housing_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_housing_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_housing_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_housing_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_housing_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_dark_matter_propulsion
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_dark_matter_propulsion
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_dark_matter_propulsion
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_dark_matter_propulsion
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mine_living_metal
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mine_living_metal
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mine_living_metal
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mine_living_metal
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mine_betharian
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mine_betharian
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mine_betharian
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mine_betharian
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_exotic_gases
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_exotic_gases
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_exotic_gases
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_exotic_gases
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mine_rare_crystals
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mine_rare_crystals
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mine_rare_crystals
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_rare_crystals
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_rare_crystals
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_rare_crystals
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_rare_crystals
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_nanite_transmutation
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_nanite_transmutation
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_nanite_transmutation
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_nanite_transmutation
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_robomodding_m
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_robomodding_m
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_robomodding_m
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_robomodding_m
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_robomodding
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_robomodding
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_robomodding
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_robomodding
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_robomodding_points_1
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_robomodding_points_1
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_robomodding_points_1
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_robomodding_points_1
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_robomodding_points_2
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_robomodding_points_2
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_robomodding_points_2
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_robomodding_points_2
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_binary_motivators
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_binary_motivators
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_binary_motivators
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_binary_motivators
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_nanite_assemblers
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_nanite_assemblers
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_nanite_assemblers
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_nanite_assemblers
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_mega_assembly
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_mega_assembly
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_mega_assembly
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_mega_assembly
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_micro_replicators
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_micro_replicators
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_micro_replicators
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_micro_replicators
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = tech_self_assembling_components
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+			from = {
+				NOT = {
+					has_technology = tech_self_assembling_components
+				}
+			}
+		}
+		allow = {
+			sgm_give_technology_allow_trigger = {
+				TECH = tech_self_assembling_components
+			}
+		}
+		from = {
+			sgm_give_technology_effect = {
+				TECH = tech_self_assembling_components
+			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = EXIT
+	}
+}

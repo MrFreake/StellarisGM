@@ -20,6 +20,17 @@ country_event = {
 	}
 
 	option = {
+		NAME = TECHNOLOGY
+		custom_tooltip = "Grants technologies."
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
 		NAME = RELICS
 		custom_tooltip = "Grants or removes relics."
 		country_event = {
