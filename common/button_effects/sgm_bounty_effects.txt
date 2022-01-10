@@ -1,6 +1,6 @@
 bounty_test = {
 	potential = {
-		always = yes
+		is_gm = yes
 	}
 	allow = {}
 	effect = {
@@ -282,5 +282,264 @@ ascension_perk_unlocked = {
 	effect = {
 		sgm_reset_bounty_flags = yes
 		set_global_flag = editing_bounty_ascension_perk_unlocked
+	}
+}
+ascension_perk_unlocked = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_global_flag = editing_bounty_ascension_perk_unlocked
+		}
+	}
+	effect = {
+		sgm_reset_bounty_flags = yes
+		set_global_flag = editing_bounty_ascension_perk_unlocked
+	}
+}
+bounty_leaderboard = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_1 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_2 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_3 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_4 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_5 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_6 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_7 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_8 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_9 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+sgm_bounty_pos_10 = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+bounty_rewards = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+megastructure_built_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+country_destroyed_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+planet_conquered_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+ship_destroyed_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+pop_purged_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+planet_destroyed_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+ascension_perk_unlocked_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+tradition_unlocked_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+tech_unlocked_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+star_system_destroyed_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+subject_integrated_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+subject_gained_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+system_gained_lb = {
+	potential = {
+		has_country_flag = showing_leaderboard
+	}
+	allow = {
+		always = no
+	}
+	effect = {}
+}
+hide_leaderboard = {
+	potential = {
+		has_global_flag = galactic_bounty_enabled
+		has_country_flag = showing_leaderboard
+	}
+	allow = {}
+	effect = {
+		remove_country_flag = showing_leaderboard
+	}
+}
+show_leaderboard = {
+	potential = {
+		has_global_flag = galactic_bounty_enabled
+		NOT = { has_country_flag = showing_leaderboard }
+	}
+	allow = {}
+	effect = {
+		set_country_flag = showing_leaderboard
 	}
 }
