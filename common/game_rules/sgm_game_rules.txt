@@ -2,6 +2,12 @@
 # This = country
 can_be_part_of_galactic_community = {
 	custom_tooltip = {
+		fail_text = sgm_join_galcom_blocked
+		NOT = {
+			has_country_flag = sgm_join_galcom_blocked
+		}
+	}
+	custom_tooltip = {
 		fail_text = "community_default_failtext"
 		OR = { 
 			is_country_type = default

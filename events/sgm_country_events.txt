@@ -3048,7 +3048,7 @@ country_event = {
 				has_civic = civic_franchising 
 			}
 		}
-		from = { force_remove_civic = remove_civic_franchising }
+		from = { force_remove_civic = civic_franchising }
 	}
 	option = {
 		NAME = add_civic_media_conglomerate 						# add civic_media_conglomerate 

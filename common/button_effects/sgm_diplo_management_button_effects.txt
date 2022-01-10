@@ -32,7 +32,7 @@ set_target_date = {
 				value = 360
 			}
 		}
-		if = {
+		if = {						# prevent PVP wars
 			limit = {
 				has_global_flag = setting_preventing_pvp_wars
 			}
@@ -50,7 +50,7 @@ set_target_date = {
 				}
 			}
 		}
-		if = {
+		if = {						# prevent AI wars
 			limit = {
 				has_global_flag = setting_preventing_ai_wars
 			}
@@ -69,7 +69,190 @@ set_target_date = {
 				}
 			}
 		}
-		fromfrom = {
+		if = {						# prevent all wars
+			limit = {
+				has_global_flag = setting_preventing_all_wars
+			}
+			every_country = {
+				limit = {
+					#is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_wars_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent AI Federations
+			limit = {
+				has_global_flag = setting_preventing_ai_federations
+			}
+			every_country = {
+				limit = {
+					is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_federations_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent player federation
+			limit = {
+				has_global_flag = setting_preventing_player_federations
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_federations_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent all federations
+			limit = {
+				has_global_flag = setting_preventing_all_federations
+			}
+			every_country = {
+				limit = {
+					#is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_federations_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent AI subjugation
+			limit = {
+				has_global_flag = preventing_ai_demand_subjugation
+			}
+			every_country = {
+				limit = {
+					is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_subjugation_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent player subjugation
+			limit = {
+				has_global_flag = setting_preventing_player_demand_subjugation
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_subjugation_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent all subjugation
+			limit = {
+				has_global_flag = setting_preventing_all_demand_subjugation
+			}
+			every_country = {
+				limit = {
+					#is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_subjugation_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent player joining galactic community
+			limit = {
+				has_global_flag = setting_preventing_player_join_galcom
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_join_galcom_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent AI join galactic community
+			limit = {
+				has_global_flag = setting_preventing_ai_join_galcom
+			}
+			every_country = {
+				limit = {
+					is_ai = yes
+					is_country_type = default
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+				}
+				set_saved_date = {
+					key = sgm_join_galcom_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		if = {						# prevent formation of the galactic community
+			limit = {
+				has_global_flag = setting_preventing_form_galactic_community
+			}
+			event_target:global_event_country = {
+				set_saved_date = {
+					key = galcom_formation_blocked
+					days_from_present = prev.fromfrom.final_date
+					expires = prev.fromfrom.final_date
+				}
+			}
+		}
+		fromfrom = { 				# final cleanup
 			set_variable = {
 				which = final_date
 				value = 0
