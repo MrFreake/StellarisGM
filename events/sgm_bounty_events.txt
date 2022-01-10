@@ -27,15 +27,15 @@ country_event = {
 			#clear_global_event_target = position_7
 			#clear_global_event_target = position_8
 			#clear_global_event_target = position_9
-			every_country = {
-				limit = {
-					is_country_type = default
-				}
-				set_variable = {
-					which = bounty_points
-					value = 0
-				}
-			}
+			#every_country = {
+			#	limit = {
+			#		is_country_type = default
+			#	}
+			#	set_variable = {
+			#		which = bounty_points
+			#		value = 0
+			#	}
+			#}
 		}
 	}
 }
@@ -115,15 +115,6 @@ country_event = {
 			order_by = bounty_points
 			save_global_event_target_as = position_9
 		}
-		every_country = {
-			limit = {
-				is_country_type = default
-			}
-			set_variable = {
-				which = bounty_points
-				value = 0
-			}
-		}
 	}
 }
 event = {											# monthly pulse leaderboard update
@@ -200,15 +191,6 @@ event = {											# monthly pulse leaderboard update
 			position = 9
 			order_by = bounty_points
 			save_global_event_target_as = position_9
-		}
-		every_country = {
-			limit = {
-				is_country_type = default
-			}
-			set_variable = {
-				which = bounty_points
-				value = 0
-			}
 		}
 	}
 }
