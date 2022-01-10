@@ -1,0 +1,716 @@
+namespace = sgm_relics
+country_event = {
+	id = sgm_relics.1
+	title = RELICS
+	desc = sgm_relics.1.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_ScrollbarEventWindow
+	is_triggered_only = yes
+	option = {
+		name = sgm_relics.1.a
+		hidden_effect = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_global_flag = sgm_relics_remove
+				}
+				default = {
+					set_global_flag = sgm_relics_remove
+				}
+			}
+			country_event = {
+				id = sgm_relics.1
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+	option = {
+		name = r_dragon_trophy
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_dragon_trophy
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_dragon_trophy
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_dragon_trophy
+				}
+				default = {
+					add_relic = r_dragon_trophy
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_khans_throne
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_khans_throne
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_khans_throne
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_khans_throne
+				}
+				default = {
+					add_relic = r_khans_throne
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_worm_scales
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_worm_scales
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_worm_scales
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_worm_scales
+				}
+				default = {
+					add_relic = r_worm_scales
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_rubricator
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_rubricator
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_rubricator
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_rubricator
+				}
+				default = {
+					add_relic = r_rubricator
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_galaxy
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_galaxy
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_galaxy
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_galaxy
+				}
+				default = {
+					add_relic = r_galaxy
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_omnicodex
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_omnicodex
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_omnicodex
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_omnicodex
+				}
+				default = {
+					add_relic = r_omnicodex
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_surveyor
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_surveyor
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_surveyor
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_surveyor
+				}
+				default = {
+					add_relic = r_surveyor
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_galatron
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_galatron
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_galatron
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_galatron
+				}
+				default = {
+					add_relic = r_galatron
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_ancient_sword
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_ancient_sword
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_ancient_sword
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_ancient_sword
+				}
+				default = {
+					add_relic = r_ancient_sword
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_severed_head
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_severed_head
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_severed_head
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_severed_head
+				}
+				default = {
+					add_relic = r_severed_head
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_prethoryn_queen
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_prethoryn_queen
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_prethoryn_queen
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_prethoryn_queen
+				}
+				default = {
+					add_relic = r_prethoryn_queen
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_unbidden_warlock
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_unbidden_warlock
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_unbidden_warlock
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_unbidden_warlock
+				}
+				default = {
+					add_relic = r_unbidden_warlock
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_contingency_core
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_contingency_core
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_contingency_core
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_contingency_core
+				}
+				default = {
+					add_relic = r_contingency_core
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_zro_crystal
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_zro_crystal
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_zro_crystal
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_zro_crystal
+				}
+				default = {
+					add_relic = r_zro_crystal
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_the_last_baol
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_the_last_baol
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_the_last_baol
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_the_last_baol
+				}
+				default = {
+					add_relic = r_the_last_baol
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_the_defragmentor
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_the_defragmentor
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_the_defragmentor
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_the_defragmentor
+				}
+				default = {
+					add_relic = r_the_defragmentor
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_reality_perforator
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_reality_perforator
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_reality_perforator
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_reality_perforator
+				}
+				default = {
+					add_relic = r_reality_perforator
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_pox_sample
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_pox_sample
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_pox_sample
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_pox_sample
+				}
+				default = {
+					add_relic = r_pox_sample
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_cryo_core
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_cryo_core
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_cryo_core
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_cryo_core
+				}
+				default = {
+					add_relic = r_cryo_core
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = r_war_forge
+		allow = {
+			from = {
+				OR = {
+					NOR = {
+						has_relic = r_war_forge
+						has_global_flag = sgm_relics_remove
+					}
+					AND = {
+						has_relic = r_war_forge
+						has_global_flag = sgm_relics_remove
+					}
+				}
+			}
+		}
+		from = {
+			switch = {
+				trigger = has_global_flag
+				sgm_relics_remove = {
+					remove_relic = r_war_forge
+				}
+				default = {
+					add_relic = r_war_forge
+				}
+			}
+		}
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		NAME = EXIT
+	}
+}

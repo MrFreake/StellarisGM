@@ -19,8 +19,30 @@ country_event = {
 		}
 	}
 
-	option ={
-		NAME = Exit
+	option = {
+		NAME = TECHNOLOGY
+		custom_tooltip = "Grants technologies."
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = RELICS
+		custom_tooltip = "Grants or removes relics."
+		country_event = {
+			id = sgm_relics.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
+		NAME = EXIT
 	}
 }
 
@@ -715,7 +737,7 @@ country_event = { 							# declare war options
 	
 
 	option = {
-		NAME = Exit
+		NAME = EXIT
 	}
 }
 
@@ -1023,7 +1045,7 @@ country_event = {								# ethics shifter
 		}
 	}
 	option = {
-		NAME = Exit
+		NAME = EXIT
 	}
 }
 
@@ -3458,6 +3480,6 @@ country_event = {
 		from = { force_remove_civic = civic_corporate_crafters }
 	}
 	option = {
-		NAME = Exit
+		NAME = EXIT
 	}
 }
