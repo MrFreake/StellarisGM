@@ -1,0 +1,145 @@
+#### This is the overwrite of the start of the galactic community events
+
+namespace = galcom
+
+# Proposal to form the Galactic Community (HIDDEN)
+event = {
+	id = galcom.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+		NOR = {
+			event_target:global_event_country = { has_country_flag = galcom_formation_blocked }
+			has_global_flag = galactic_community_founded
+			has_global_flag = galcom_founding_begun
+		}
+		count_playable_country = { # minimum 3 countries
+			limit = {
+				is_homicidal = no
+			}
+			count >= 3
+		}
+		any_playable_country = {
+			NOT = {
+				is_country_type = sgm_game_master
+			}
+			perc_communications_with_playable >= 0.7
+			is_homicidal = no
+			is_gestalt = no
+		}
+	}
+}
+
+	immediate = {
+		random_playable_country = {
+			limit = {
+					NOT = {
+						is_country_type = sgm_game_master
+					}
+					perc_communications_with_playable >= 0.7
+					is_homicidal = no
+					is_gestalt = no
+				}
+			log = "this country passed the trigger -> [This.GetName]"
+		}
+		
+		set_global_flag = galcom_founding_begun
+		random_playable_country = {
+			limit = {
+				perc_communications_with_playable >= 0.7
+				is_homicidal = no
+				is_gestalt = no
+			}
+			country_event = { id = galcom.2 }
+			every_playable_country = {
+				limit = {
+					NOT = { is_same_value = prev }
+					has_communications = prev
+					is_homicidal = no
+				}
+				country_event = { id = galcom.2 }
+			}
+		}
+		random_country = {
+			limit = { is_country_type = global_event }
+			country_event = { id = galcom.3 days = 360 }
+		}
+	}
+}
+
+# Proposal to form the Galactic Community
+country_event = {
+	id = galcom.2
+	title = "galcom.2.name"
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = galcom_form_failed }
+		}
+		text = galcom.2a.desc
+	}
+	desc = {
+		trigger = {
+			has_global_flag = galcom_form_failed
+		}
+		text = galcom.2b.desc
+	}
+	picture = GFX_evt_galactic_community
+	show_sound = event_vote
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = sgm_join_galcom_blocked
+		}
+	}
+
+	option = {
+		name = galcom.2.a
+		custom_tooltip = galcom_2_aye
+		hidden_effect = {
+			set_country_flag = galcom_form_aye
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 3
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_civic = civic_diplomatic_corps
+					has_civic = civic_public_relations_specialists
+					has_civic = civic_hive_empath
+					has_civic = civic_machine_servitor
+				}
+			}
+		}
+	}
+	option = {
+		name = galcom.2.b
+		custom_tooltip = galcom_2_nay
+		hidden_effect = {
+			set_country_flag = galcom_form_nay
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}

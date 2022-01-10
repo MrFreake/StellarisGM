@@ -310,3 +310,63 @@ defined_text = {
 	}
 	default = NONE
 }
+
+defined_text = {
+	name = GetNameRelicsAddRemoveSwitch
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = sgm_relics_remove
+			}
+		}
+		localization_key = ADD
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_relics_remove
+		}
+		localization_key = REMOVE
+	}
+}
+
+defined_text = {
+	name = GetNameTechnologiesAddSwitch
+	text = {
+		trigger = {
+			has_global_flag = sgm_give_technology_physics
+		}
+		localization_key = physics_research
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_give_technology_society
+		}
+		localization_key = society_research
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_give_technology_engineering
+		}
+		localization_key = engineering_research
+	}
+	default = research
+}
+
+defined_text = {
+	name = GetNameTechnologiesOptionSwitch
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = sgm_give_technology_option
+			}
+		}
+		localization_key = GIVE_TECH_EFFECT
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_give_technology_option
+		}
+		localization_key = ADD_RESEARCH_OPTION_EFFECT
+	}
+	default = research
+}
