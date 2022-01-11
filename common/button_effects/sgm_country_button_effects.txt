@@ -224,3 +224,38 @@ sgm_shift_ethics = {
 		}
 	}
 }
+
+sgm_give_technology = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_technologies.1
+				scopes = {
+					from = prev
+				}
+			}
+
+		}
+	}
+}
+
+sgm_give_relic = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_relics.1
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}

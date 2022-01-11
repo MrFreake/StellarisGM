@@ -1407,6 +1407,28 @@ guiTypes = {
 						effect = sgm_change_civics
 			#			shortCut = j
 					}
+					effectbuttonType = {					
+						name = sgm_give_technology
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 150 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_give_technology
+						orientation = UPPER_LEFT
+						effect = sgm_give_technology
+			#			shortCut = j
+					}
+					effectbuttonType = {					
+						name = sgm_give_relic
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 187 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_give_relic
+						orientation = UPPER_LEFT
+						effect = sgm_give_relic
+			#			shortCut = j
+					}
 					# left column
 					instantTextBoxType = {
 						name = "TARGET_COUNTRY_EFFECTS"
