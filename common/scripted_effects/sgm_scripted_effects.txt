@@ -472,3 +472,2484 @@ sgm_give_technology_effect = {
 		}
 	}
 }
+
+sgm_give_all_technology_effect = {
+	sgm_give_all_technology_database_effect = {
+		TECH_1 = tech_colossus
+		TECH_2 = tech_pk_cracker
+		TECH_3 = tech_pk_shielder
+		TECH_4 = tech_pk_neutron
+		TECH_5 = tech_pk_godray
+		TECH_6 = tech_pk_nanobots
+		TECH_7 = tech_btc_1
+		TECH_8 = tech_gargantuan_evolution
+		TECH_9 = tech_lgate_activation
+		TECH_10 = tech_repeatable_lcluster_clue
+		TECH_11 = tech_experimental_subspace_navigation
+		TECH_12 = tech_neuroregeneration
+		TECH_13 = tech_nanite_repair_system
+		TECH_14 = tech_repeatable_improved_tile_mineral_output
+		TECH_15 = tech_repeatable_improved_military_station_damage
+		TECH_16 = tech_repeatable_improved_military_station_health
+		TECH_17 = tech_repeatable_improved_armor_output
+		TECH_18 = tech_repeatable_weapon_type_explosive_damage
+		TECH_19 = tech_repeatable_weapon_type_explosive_fire_rate
+		TECH_20 = tech_repeatable_weapon_type_kinetic_damage
+		TECH_21 = tech_repeatable_weapon_type_kinetic_fire_rate
+		TECH_22 = tech_repeatable_weapon_type_strike_craft_fire_damage
+		TECH_23 = tech_repeatable_weapon_type_strike_craft_fire_rate
+		TECH_24 = tech_repeatable_reduced_building_time
+		TECH_25 = tech_solar_panel_network
+		TECH_26 = tech_space_exploration
+		TECH_27 = tech_corvettes
+		TECH_28 = tech_destroyers
+		TECH_29 = tech_cruisers
+		TECH_30 = tech_battleships
+		TECH_31 = tech_titans
+		TECH_32 = tech_juggernaut
+		TECH_33 = tech_corvette_build_speed
+		TECH_34 = tech_corvette_hull_1
+		TECH_35 = tech_corvette_hull_2
+		TECH_36 = tech_destroyer_build_speed
+		TECH_37 = tech_destroyer_hull_1
+		TECH_38 = tech_destroyer_hull_2
+		TECH_39 = tech_cruiser_build_speed
+		TECH_40 = tech_cruiser_hull_1
+		TECH_41 = tech_cruiser_hull_2
+		TECH_42 = tech_battleship_build_speed
+		TECH_43 = tech_battleship_hull_1
+		TECH_44 = tech_battleship_hull_2
+		TECH_45 = tech_titan_hull_1
+		TECH_46 = tech_titan_hull_2
+		TECH_47 = tech_starbase_1
+		TECH_48 = tech_starbase_2
+		TECH_49 = tech_starbase_3
+		TECH_50 = tech_starbase_4
+		TECH_51 = tech_starbase_5
+		TECH_52 = tech_habitat_1
+		TECH_53 = tech_habitat_2
+		TECH_54 = tech_habitat_3
+		TECH_55 = tech_modular_engineering
+		TECH_56 = tech_space_defense_station_improvement
+		TECH_57 = tech_strike_craft_1
+		TECH_58 = tech_strike_craft_2
+		TECH_59 = tech_strike_craft_3
+		TECH_60 = tech_assault_armies
+		TECH_61 = tech_ship_armor_1
+		TECH_62 = tech_ship_armor_2
+		TECH_63 = tech_ship_armor_3
+		TECH_64 = tech_ship_armor_4
+		TECH_65 = tech_ship_armor_5
+		TECH_66 = tech_crystal_armor_1
+		TECH_67 = tech_crystal_armor_2
+		TECH_68 = tech_thrusters_1
+		TECH_69 = tech_thrusters_2
+		TECH_70 = tech_thrusters_3
+		TECH_71 = tech_thrusters_4
+		TECH_72 = tech_space_defense_station_1
+		TECH_73 = tech_defense_platform_hull_1
+		TECH_74 = tech_basic_industry
+		TECH_75 = tech_mechanized_mining
+		TECH_76 = tech_powered_exoskeletons
+		TECH_77 = tech_space_mining_1
+		TECH_78 = tech_space_mining_2
+		TECH_79 = tech_space_mining_3
+		TECH_80 = tech_space_mining_4
+		TECH_81 = tech_space_mining_5
+		TECH_82 = tech_mining_1
+		TECH_83 = tech_mining_2
+		TECH_84 = tech_mining_3
+		TECH_85 = tech_mineral_purification_1
+		TECH_86 = tech_mineral_purification_2
+		TECH_87 = tech_alloys_1
+		TECH_88 = tech_alloys_2
+		TECH_89 = tech_advanced_metallurgy_1
+		TECH_90 = tech_advanced_metallurgy_2
+		TECH_91 = tech_luxuries_1
+		TECH_92 = tech_luxuries_2
+		TECH_93 = tech_engineering_1
+		TECH_94 = tech_engineering_2
+		TECH_95 = tech_engineering_3
+		TECH_96 = tech_robotic_workers
+		TECH_97 = tech_droid_workers
+		TECH_98 = tech_synthetic_workers
+		TECH_99 = tech_synthetic_leaders
+		TECH_100 = tech_space_construction
+		TECH_101 = tech_afterburners_1
+		TECH_102 = tech_afterburners_2
+		TECH_103 = tech_assembly_pattern
+		TECH_104 = tech_construction_templates
+		TECH_105 = tech_housing_1
+		TECH_106 = tech_housing_2
+		TECH_107 = tech_mass_drivers_1
+		TECH_108 = tech_mass_drivers_2
+		TECH_109 = tech_mass_drivers_3
+		TECH_110 = tech_mass_drivers_4
+		TECH_111 = tech_mass_drivers_5
+		TECH_112 = tech_kinetic_artillery_1
+		TECH_113 = tech_kinetic_artillery_2
+		TECH_114 = tech_mass_accelerator_1
+		TECH_115 = tech_mass_accelerator_2
+		TECH_116 = tech_autocannons_1
+		TECH_117 = tech_autocannons_2
+		TECH_118 = tech_autocannons_3
+		TECH_119 = tech_flak_batteries_1
+		TECH_120 = tech_flak_batteries_2
+		TECH_121 = tech_flak_batteries_3
+		TECH_122 = tech_missiles_1
+		TECH_123 = tech_missiles_2
+		TECH_124 = tech_missiles_3
+		TECH_125 = tech_missiles_4
+		TECH_126 = tech_missiles_5
+		TECH_127 = tech_swarmer_missiles_1
+		TECH_128 = tech_swarmer_missiles_2
+		TECH_129 = tech_torpedoes_1
+		TECH_130 = tech_torpedoes_2
+		TECH_131 = tech_torpedoes_3
+		TECH_132 = tech_dark_matter_deflector
+		TECH_133 = tech_dark_matter_power_core
+		TECH_134 = tech_dark_matter_propulsion
+		TECH_135 = tech_akx_worm_1
+		TECH_136 = tech_akx_worm_2
+		TECH_137 = tech_akx_worm_3
+		TECH_138 = tech_dragon_armor
+		TECH_139 = tech_enigmatic_encoder
+		TECH_140 = tech_enigmatic_decoder
+		TECH_141 = tech_orbital_trash_dispersal
+		TECH_142 = tech_xeno_tourism_agency
+		TECH_143 = tech_executive_retreat
+		TECH_144 = tech_mega_engineering
+		TECH_145 = tech_science_nexus
+		TECH_146 = tech_sentry_array
+		TECH_147 = tech_strategic_coordination
+		TECH_148 = tech_interstellar_assembly
+		TECH_149 = tech_mega_art
+		TECH_150 = tech_gateway_activation
+		TECH_151 = tech_gateway_construction
+		TECH_152 = tech_dyson_sphere
+		TECH_153 = tech_matter_decompressor
+		TECH_154 = tech_ring_world
+		TECH_155 = tech_mega_shipyard
+		TECH_156 = tech_repeatable_improved_tile_energy_output
+		TECH_157 = tech_repeatable_improved_shield_output
+		TECH_158 = tech_repeatable_weapon_type_energy_damage
+		TECH_159 = tech_repeatable_weapon_type_energy_fire_rate
+		TECH_160 = tech_repeatable_reduced_building_cost
+		TECH_161 = tech_basic_science_lab_1
+		TECH_162 = tech_basic_science_lab_2
+		TECH_163 = tech_basic_science_lab_3
+		TECH_164 = tech_global_research_initiative
+		TECH_165 = tech_curator_lab
+		TECH_166 = tech_archeology_lab_ancrel
+		TECH_167 = tech_archeology_lab
+		TECH_168 = tech_space_science_1
+		TECH_169 = tech_space_science_2
+		TECH_170 = tech_space_science_3
+		TECH_171 = tech_space_science_4
+		TECH_172 = tech_space_science_5
+		TECH_173 = tech_physics_1
+		TECH_174 = tech_physics_2
+		TECH_175 = tech_physics_3
+		TECH_176 = tech_administrative_ai
+		TECH_177 = tech_cryostasis_1
+		TECH_178 = tech_cryostasis_2
+		TECH_179 = tech_self_aware_logic
+		TECH_180 = tech_automated_exploration
+		TECH_181 = tech_sapient_ai
+		TECH_182 = tech_positronic_implants
+		TECH_183 = tech_combat_computers_1
+		TECH_184 = tech_combat_computers_2
+		TECH_185 = tech_combat_computers_3
+		TECH_186 = tech_combat_computers_autonomous
+		TECH_187 = tech_auxiliary_fire_control
+		TECH_188 = tech_synchronized_defences
+		TECH_189 = tech_consumer_good_refinement_1
+		TECH_190 = tech_consumer_good_refinement_2
+		TECH_191 = tech_encryption_1
+		TECH_192 = tech_encryption_2
+		TECH_193 = tech_encryption_3
+		TECH_194 = tech_decryption_1
+		TECH_195 = tech_decryption_2
+		TECH_196 = tech_decryption_3
+		TECH_197 = tech_fission_power
+		TECH_198 = tech_fusion_power
+		TECH_199 = tech_cold_fusion_power
+		TECH_200 = tech_antimatter_power
+		TECH_201 = tech_zero_point_power
+		TECH_202 = tech_reactor_boosters_1
+		TECH_203 = tech_reactor_boosters_2
+		TECH_204 = tech_reactor_boosters_3
+		TECH_205 = tech_shields_1
+		TECH_206 = tech_shields_2
+		TECH_207 = tech_shields_3
+		TECH_208 = tech_shields_4
+		TECH_209 = tech_shields_5
+		TECH_210 = tech_shield_rechargers_1
+		TECH_211 = tech_planetary_shield_generator
+		TECH_212 = tech_sensors_2
+		TECH_213 = tech_sensors_3
+		TECH_214 = tech_sensors_4
+		TECH_215 = tech_power_plant_1
+		TECH_216 = tech_power_plant_2
+		TECH_217 = tech_power_plant_3
+		TECH_218 = tech_power_plant_4
+		TECH_219 = tech_power_hub_1
+		TECH_220 = tech_power_hub_2
+		TECH_221 = tech_hyper_drive_1
+		TECH_222 = tech_hyper_drive_2
+		TECH_223 = tech_hyper_drive_3
+		TECH_224 = tech_wormhole_stabilization
+		TECH_225 = tech_jump_drive_1
+		TECH_226 = tech_ftl_inhibitor
+		TECH_227 = tech_bio_reactor
+		TECH_228 = tech_lasers_1
+		TECH_229 = tech_lasers_2
+		TECH_230 = tech_lasers_3
+		TECH_231 = tech_lasers_4
+		TECH_232 = tech_lasers_5
+		TECH_233 = tech_energy_lance_1
+		TECH_234 = tech_energy_lance_2
+		TECH_235 = tech_plasma_1
+		TECH_236 = tech_plasma_2
+		TECH_237 = tech_plasma_3
+		TECH_238 = tech_arc_emitter_1
+		TECH_239 = tech_arc_emitter_2
+		TECH_240 = tech_disruptors_1
+		TECH_241 = tech_disruptors_2
+		TECH_242 = tech_disruptors_3
+		TECH_243 = tech_energy_torpedoes_1
+		TECH_244 = tech_energy_torpedoes_2
+		TECH_245 = tech_pd_tracking_1
+		TECH_246 = tech_pd_tracking_2
+		TECH_247 = tech_pd_tracking_3
+		TECH_248 = tech_extradimensional_weapon_1
+		TECH_249 = tech_mining_drone_weapon_1
+		TECH_250 = tech_space_cloud_weapon_1
+		TECH_251 = tech_repeatable_improved_tile_food_output
+		TECH_252 = tech_repeatable_improved_core_system_cap
+		TECH_253 = tech_repeatable_improved_edict_length
+		TECH_254 = tech_repeatable_improved_army_damage
+		TECH_255 = tech_repeatable_improved_army_health
+		TECH_256 = tech_repeatable_improved_leader_life_span
+		TECH_257 = tech_repeatable_naval_cap
+		TECH_258 = tech_repeatable_command_limit
+		TECH_259 = tech_repeatable_improved_starbase_capacity
+		TECH_260 = tech_planetary_defenses
+		TECH_261 = tech_interplanetary_commerce
+		TECH_262 = tech_space_trading
+		TECH_263 = tech_interstellar_economics
+		TECH_264 = tech_galactic_markets
+		TECH_265 = tech_prescient_data_modeling
+		TECH_266 = tech_industrial_farming
+		TECH_267 = tech_eco_simulation
+		TECH_268 = tech_gene_crops
+		TECH_269 = tech_nano_vitality_crops
+		TECH_270 = tech_nutrient_replication
+		TECH_271 = tech_hydroponics
+		TECH_272 = tech_food_processing_1
+		TECH_273 = tech_food_processing_2
+		TECH_274 = tech_society_1
+		TECH_275 = tech_society_2
+		TECH_276 = tech_society_3
+		TECH_277 = tech_alien_life_studies
+		TECH_278 = tech_arcane_deciphering
+		TECH_279 = tech_colonization_1
+		TECH_280 = tech_colonization_2
+		TECH_281 = tech_colonization_3
+		TECH_282 = tech_colonization_4
+		TECH_283 = tech_colonization_5
+		TECH_284 = tech_tomb_world_adaption
+		TECH_285 = tech_frontier_health
+		TECH_286 = tech_frontier_hospital
+		TECH_287 = tech_mountain_range
+		TECH_288 = tech_volcano
+		TECH_289 = tech_dangerous_wildlife
+		TECH_290 = tech_dense_jungle
+		TECH_291 = tech_quicksand_basin
+		TECH_292 = tech_noxious_swamp
+		TECH_293 = tech_massive_glacier
+		TECH_294 = tech_toxic_kelp
+		TECH_295 = tech_deep_sinkhole
+		TECH_296 = tech_terrestrial_sculpting
+		TECH_297 = tech_ecological_adaptation
+		TECH_298 = tech_climate_restoration
+		TECH_299 = tech_genome_mapping
+		TECH_300 = tech_vitality_boosters
+		TECH_301 = tech_epigenetic_triggers
+		TECH_302 = tech_cloning
+		TECH_303 = tech_gene_banks
+		TECH_304 = tech_gene_seed_purification
+		TECH_305 = tech_morphogenetic_field_mastery
+		TECH_306 = tech_gene_tailoring
+		TECH_307 = tech_glandular_acclimation
+		TECH_308 = tech_genetic_resequencing
+		TECH_309 = tech_gene_expressions
+		TECH_310 = tech_selected_lineages
+		TECH_311 = tech_capacity_boosters
+		TECH_312 = tech_regenerative_hull_tissue
+		TECH_313 = tech_doctrine_fleet_size_1
+		TECH_314 = tech_doctrine_fleet_size_2
+		TECH_315 = tech_doctrine_fleet_size_3
+		TECH_316 = tech_doctrine_fleet_size_4
+		TECH_317 = tech_doctrine_fleet_size_5
+		TECH_318 = tech_interstellar_fleet_traditions
+		TECH_319 = tech_refit_standards
+		TECH_320 = tech_command_matrix
+		TECH_321 = tech_doctrine_navy_size_1
+		TECH_322 = tech_doctrine_navy_size_2
+		TECH_323 = tech_doctrine_navy_size_3
+		TECH_324 = tech_doctrine_navy_size_4
+		TECH_325 = tech_centralized_command
+		TECH_326 = tech_combat_training
+		TECH_327 = tech_ground_defense_planning
+		TECH_328 = tech_global_defense_grid
+		TECH_329 = tech_psionic_theory
+		TECH_330 = tech_telepathy
+		TECH_331 = tech_precognition_interface
+		TECH_332 = tech_thought_enforcement
+		TECH_333 = tech_psi_jump_drive_1
+		TECH_334 = tech_galactic_ambitions
+		TECH_335 = tech_manifest_destiny
+		TECH_336 = tech_interstellar_campaigns
+		TECH_337 = tech_galactic_campaigns
+		TECH_338 = tech_planetary_government
+		TECH_339 = tech_planetary_unification
+		TECH_340 = tech_colonial_centralization
+		TECH_341 = tech_galactic_administration
+		TECH_342 = tech_planetary_infrastructure_1
+		TECH_343 = tech_planetary_infrastructure_2
+		TECH_344 = tech_subdermal_stimulation
+		TECH_345 = tech_tracking_implants
+		TECH_346 = tech_global_production_strategy
+		TECH_347 = tech_adaptive_bureaucracy
+		TECH_348 = tech_effective_bureaucracy
+		TECH_349 = tech_colonial_bureaucracy
+		TECH_350 = tech_galactic_bureaucracy
+		TECH_351 = tech_living_state
+		TECH_352 = tech_collective_self
+		TECH_353 = tech_autonomous_agents
+		TECH_354 = tech_embodied_dynamism
+		TECH_355 = tech_neural_implants
+		TECH_356 = tech_artificial_moral_codes
+		TECH_357 = tech_synthetic_thought_patterns
+		TECH_358 = tech_unity_of_purpose
+		TECH_359 = tech_collective_production_methods
+		TECH_360 = tech_resource_processing_algorithms
+		TECH_361 = tech_holo_entertainment
+		TECH_362 = tech_hyper_entertainment_forum
+		TECH_363 = tech_paradise_dome
+		TECH_364 = tech_cultural_heritage
+		TECH_365 = tech_heritage_site
+		TECH_366 = tech_hypercomms_forum
+		TECH_367 = tech_autocurating_vault
+		TECH_368 = tech_holographic_rituals
+		TECH_369 = tech_consecration_fields
+		TECH_370 = tech_transcendent_faith
+		TECH_371 = tech_hive_node
+		TECH_372 = tech_hive_cluster
+		TECH_373 = tech_hive_confluence
+		TECH_374 = tech_ascension_theory
+		TECH_375 = tech_psionic_barrier
+		TECH_376 = tech_psionic_shield
+		TECH_377 = tech_penal_colonies
+		TECH_378 = tech_resort_colonies
+		TECH_379 = tech_slave_colonies
+		TECH_380 = tech_housing_agrarian_idyll
+		TECH_381 = tech_xeno_diplomacy
+		TECH_382 = tech_xeno_relations
+		TECH_383 = tech_capital_productivity_1
+		TECH_384 = tech_capital_productivity_2
+		TECH_385 = tech_capital_productivity_3
+		TECH_386 = tech_amoeba_strike_craft_1
+		TECH_387 = tech_swarm_strike_craft_1
+		TECH_388 = tech_scourge_missile_1
+		TECH_389 = tech_space_whale_weapon_1
+		TECH_390 = tech_mine_living_metal
+		TECH_391 = tech_mine_betharian
+		TECH_392 = tech_mine_volatile_motes
+		TECH_393 = tech_volatile_motes
+		TECH_394 = tech_mine_exotic_gases
+		TECH_395 = tech_exotic_gases
+		TECH_396 = tech_mine_rare_crystals
+		TECH_397 = tech_rare_crystals
+		TECH_398 = tech_mine_zro
+		TECH_399 = tech_mine_dark_matter
+		TECH_400 = tech_nanite_transmutation
+		TECH_401 = tech_robomodding_m
+		TECH_402 = tech_robomodding
+		TECH_403 = tech_robomodding_points_1
+		TECH_404 = tech_robomodding_points_2
+		TECH_405 = tech_binary_motivators
+		TECH_406 = tech_nanite_assemblers
+		TECH_407 = tech_mega_assembly
+		TECH_408 = tech_adaptive_combat_algorithms
+		TECH_409 = tech_biomechanics
+		TECH_410 = tech_micro_replicators
+		TECH_411 = tech_self_assembling_components
+	}
+}
+
+sgm_give_all_technology_database_effect = {
+	switch = {
+		trigger = has_global_flag
+		sgm_give_technology_option = {
+			add_research_option = $TECH_1$
+			add_research_option = $TECH_2$
+			add_research_option = $TECH_3$
+			add_research_option = $TECH_4$
+			add_research_option = $TECH_5$
+			add_research_option = $TECH_6$
+			add_research_option = $TECH_7$
+			add_research_option = $TECH_8$
+			add_research_option = $TECH_9$
+			add_research_option = $TECH_10$
+			add_research_option = $TECH_11$
+			add_research_option = $TECH_12$
+			add_research_option = $TECH_13$
+			add_research_option = $TECH_14$
+			add_research_option = $TECH_15$
+			add_research_option = $TECH_16$
+			add_research_option = $TECH_17$
+			add_research_option = $TECH_18$
+			add_research_option = $TECH_19$
+			add_research_option = $TECH_20$
+			add_research_option = $TECH_21$
+			add_research_option = $TECH_22$
+			add_research_option = $TECH_23$
+			add_research_option = $TECH_24$
+			add_research_option = $TECH_25$
+			add_research_option = $TECH_26$
+			add_research_option = $TECH_27$
+			add_research_option = $TECH_28$
+			add_research_option = $TECH_29$
+			add_research_option = $TECH_30$
+			add_research_option = $TECH_31$
+			add_research_option = $TECH_32$
+			add_research_option = $TECH_33$
+			add_research_option = $TECH_34$
+			add_research_option = $TECH_35$
+			add_research_option = $TECH_36$
+			add_research_option = $TECH_37$
+			add_research_option = $TECH_38$
+			add_research_option = $TECH_39$
+			add_research_option = $TECH_40$
+			add_research_option = $TECH_41$
+			add_research_option = $TECH_42$
+			add_research_option = $TECH_43$
+			add_research_option = $TECH_44$
+			add_research_option = $TECH_45$
+			add_research_option = $TECH_46$
+			add_research_option = $TECH_47$
+			add_research_option = $TECH_48$
+			add_research_option = $TECH_49$
+			add_research_option = $TECH_50$
+			add_research_option = $TECH_51$
+			add_research_option = $TECH_52$
+			add_research_option = $TECH_53$
+			add_research_option = $TECH_54$
+			add_research_option = $TECH_55$
+			add_research_option = $TECH_56$
+			add_research_option = $TECH_57$
+			add_research_option = $TECH_58$
+			add_research_option = $TECH_59$
+			add_research_option = $TECH_60$
+			add_research_option = $TECH_61$
+			add_research_option = $TECH_62$
+			add_research_option = $TECH_63$
+			add_research_option = $TECH_64$
+			add_research_option = $TECH_65$
+			add_research_option = $TECH_66$
+			add_research_option = $TECH_67$
+			add_research_option = $TECH_68$
+			add_research_option = $TECH_69$
+			add_research_option = $TECH_70$
+			add_research_option = $TECH_71$
+			add_research_option = $TECH_72$
+			add_research_option = $TECH_73$
+			add_research_option = $TECH_74$
+			add_research_option = $TECH_75$
+			add_research_option = $TECH_76$
+			add_research_option = $TECH_77$
+			add_research_option = $TECH_78$
+			add_research_option = $TECH_79$
+			add_research_option = $TECH_80$
+			add_research_option = $TECH_81$
+			add_research_option = $TECH_82$
+			add_research_option = $TECH_83$
+			add_research_option = $TECH_84$
+			add_research_option = $TECH_85$
+			add_research_option = $TECH_86$
+			add_research_option = $TECH_87$
+			add_research_option = $TECH_88$
+			add_research_option = $TECH_89$
+			add_research_option = $TECH_90$
+			add_research_option = $TECH_91$
+			add_research_option = $TECH_92$
+			add_research_option = $TECH_93$
+			add_research_option = $TECH_94$
+			add_research_option = $TECH_95$
+			add_research_option = $TECH_96$
+			add_research_option = $TECH_97$
+			add_research_option = $TECH_98$
+			add_research_option = $TECH_99$
+			add_research_option = $TECH_100$
+			add_research_option = $TECH_101$
+			add_research_option = $TECH_102$
+			add_research_option = $TECH_103$
+			add_research_option = $TECH_104$
+			add_research_option = $TECH_105$
+			add_research_option = $TECH_106$
+			add_research_option = $TECH_107$
+			add_research_option = $TECH_108$
+			add_research_option = $TECH_109$
+			add_research_option = $TECH_110$
+			add_research_option = $TECH_111$
+			add_research_option = $TECH_112$
+			add_research_option = $TECH_113$
+			add_research_option = $TECH_114$
+			add_research_option = $TECH_115$
+			add_research_option = $TECH_116$
+			add_research_option = $TECH_117$
+			add_research_option = $TECH_118$
+			add_research_option = $TECH_119$
+			add_research_option = $TECH_120$
+			add_research_option = $TECH_121$
+			add_research_option = $TECH_122$
+			add_research_option = $TECH_123$
+			add_research_option = $TECH_124$
+			add_research_option = $TECH_125$
+			add_research_option = $TECH_126$
+			add_research_option = $TECH_127$
+			add_research_option = $TECH_128$
+			add_research_option = $TECH_129$
+			add_research_option = $TECH_130$
+			add_research_option = $TECH_131$
+			add_research_option = $TECH_132$
+			add_research_option = $TECH_133$
+			add_research_option = $TECH_134$
+			add_research_option = $TECH_135$
+			add_research_option = $TECH_136$
+			add_research_option = $TECH_137$
+			add_research_option = $TECH_138$
+			add_research_option = $TECH_139$
+			add_research_option = $TECH_140$
+			add_research_option = $TECH_141$
+			add_research_option = $TECH_142$
+			add_research_option = $TECH_143$
+			add_research_option = $TECH_144$
+			add_research_option = $TECH_145$
+			add_research_option = $TECH_146$
+			add_research_option = $TECH_147$
+			add_research_option = $TECH_148$
+			add_research_option = $TECH_149$
+			add_research_option = $TECH_150$
+			add_research_option = $TECH_151$
+			add_research_option = $TECH_152$
+			add_research_option = $TECH_153$
+			add_research_option = $TECH_154$
+			add_research_option = $TECH_155$
+			add_research_option = $TECH_156$
+			add_research_option = $TECH_157$
+			add_research_option = $TECH_158$
+			add_research_option = $TECH_159$
+			add_research_option = $TECH_160$
+			add_research_option = $TECH_161$
+			add_research_option = $TECH_162$
+			add_research_option = $TECH_163$
+			add_research_option = $TECH_164$
+			add_research_option = $TECH_165$
+			add_research_option = $TECH_166$
+			add_research_option = $TECH_167$
+			add_research_option = $TECH_168$
+			add_research_option = $TECH_169$
+			add_research_option = $TECH_170$
+			add_research_option = $TECH_171$
+			add_research_option = $TECH_172$
+			add_research_option = $TECH_173$
+			add_research_option = $TECH_174$
+			add_research_option = $TECH_175$
+			add_research_option = $TECH_176$
+			add_research_option = $TECH_177$
+			add_research_option = $TECH_178$
+			add_research_option = $TECH_179$
+			add_research_option = $TECH_180$
+			add_research_option = $TECH_181$
+			add_research_option = $TECH_182$
+			add_research_option = $TECH_183$
+			add_research_option = $TECH_184$
+			add_research_option = $TECH_185$
+			add_research_option = $TECH_186$
+			add_research_option = $TECH_187$
+			add_research_option = $TECH_188$
+			add_research_option = $TECH_189$
+			add_research_option = $TECH_190$
+			add_research_option = $TECH_191$
+			add_research_option = $TECH_192$
+			add_research_option = $TECH_193$
+			add_research_option = $TECH_194$
+			add_research_option = $TECH_195$
+			add_research_option = $TECH_196$
+			add_research_option = $TECH_197$
+			add_research_option = $TECH_198$
+			add_research_option = $TECH_199$
+			add_research_option = $TECH_200$
+			add_research_option = $TECH_201$
+			add_research_option = $TECH_202$
+			add_research_option = $TECH_203$
+			add_research_option = $TECH_204$
+			add_research_option = $TECH_205$
+			add_research_option = $TECH_206$
+			add_research_option = $TECH_207$
+			add_research_option = $TECH_208$
+			add_research_option = $TECH_209$
+			add_research_option = $TECH_210$
+			add_research_option = $TECH_211$
+			add_research_option = $TECH_212$
+			add_research_option = $TECH_213$
+			add_research_option = $TECH_214$
+			add_research_option = $TECH_215$
+			add_research_option = $TECH_216$
+			add_research_option = $TECH_217$
+			add_research_option = $TECH_218$
+			add_research_option = $TECH_219$
+			add_research_option = $TECH_220$
+			add_research_option = $TECH_221$
+			add_research_option = $TECH_222$
+			add_research_option = $TECH_223$
+			add_research_option = $TECH_224$
+			add_research_option = $TECH_225$
+			add_research_option = $TECH_226$
+			add_research_option = $TECH_227$
+			add_research_option = $TECH_228$
+			add_research_option = $TECH_229$
+			add_research_option = $TECH_230$
+			add_research_option = $TECH_231$
+			add_research_option = $TECH_232$
+			add_research_option = $TECH_233$
+			add_research_option = $TECH_234$
+			add_research_option = $TECH_235$
+			add_research_option = $TECH_236$
+			add_research_option = $TECH_237$
+			add_research_option = $TECH_238$
+			add_research_option = $TECH_239$
+			add_research_option = $TECH_240$
+			add_research_option = $TECH_241$
+			add_research_option = $TECH_242$
+			add_research_option = $TECH_243$
+			add_research_option = $TECH_244$
+			add_research_option = $TECH_245$
+			add_research_option = $TECH_246$
+			add_research_option = $TECH_247$
+			add_research_option = $TECH_248$
+			add_research_option = $TECH_249$
+			add_research_option = $TECH_250$
+			add_research_option = $TECH_251$
+			add_research_option = $TECH_252$
+			add_research_option = $TECH_253$
+			add_research_option = $TECH_254$
+			add_research_option = $TECH_255$
+			add_research_option = $TECH_256$
+			add_research_option = $TECH_257$
+			add_research_option = $TECH_258$
+			add_research_option = $TECH_259$
+			add_research_option = $TECH_260$
+			add_research_option = $TECH_261$
+			add_research_option = $TECH_262$
+			add_research_option = $TECH_263$
+			add_research_option = $TECH_264$
+			add_research_option = $TECH_265$
+			add_research_option = $TECH_266$
+			add_research_option = $TECH_267$
+			add_research_option = $TECH_268$
+			add_research_option = $TECH_269$
+			add_research_option = $TECH_270$
+			add_research_option = $TECH_271$
+			add_research_option = $TECH_272$
+			add_research_option = $TECH_273$
+			add_research_option = $TECH_274$
+			add_research_option = $TECH_275$
+			add_research_option = $TECH_276$
+			add_research_option = $TECH_277$
+			add_research_option = $TECH_278$
+			add_research_option = $TECH_279$
+			add_research_option = $TECH_280$
+			add_research_option = $TECH_281$
+			add_research_option = $TECH_282$
+			add_research_option = $TECH_283$
+			add_research_option = $TECH_284$
+			add_research_option = $TECH_285$
+			add_research_option = $TECH_286$
+			add_research_option = $TECH_287$
+			add_research_option = $TECH_288$
+			add_research_option = $TECH_289$
+			add_research_option = $TECH_290$
+			add_research_option = $TECH_291$
+			add_research_option = $TECH_292$
+			add_research_option = $TECH_293$
+			add_research_option = $TECH_294$
+			add_research_option = $TECH_295$
+			add_research_option = $TECH_296$
+			add_research_option = $TECH_297$
+			add_research_option = $TECH_298$
+			add_research_option = $TECH_299$
+			add_research_option = $TECH_300$
+			add_research_option = $TECH_301$
+			add_research_option = $TECH_302$
+			add_research_option = $TECH_303$
+			add_research_option = $TECH_304$
+			add_research_option = $TECH_305$
+			add_research_option = $TECH_306$
+			add_research_option = $TECH_307$
+			add_research_option = $TECH_308$
+			add_research_option = $TECH_309$
+			add_research_option = $TECH_310$
+			add_research_option = $TECH_311$
+			add_research_option = $TECH_312$
+			add_research_option = $TECH_313$
+			add_research_option = $TECH_314$
+			add_research_option = $TECH_315$
+			add_research_option = $TECH_316$
+			add_research_option = $TECH_317$
+			add_research_option = $TECH_318$
+			add_research_option = $TECH_319$
+			add_research_option = $TECH_320$
+			add_research_option = $TECH_321$
+			add_research_option = $TECH_322$
+			add_research_option = $TECH_323$
+			add_research_option = $TECH_324$
+			add_research_option = $TECH_325$
+			add_research_option = $TECH_326$
+			add_research_option = $TECH_327$
+			add_research_option = $TECH_328$
+			add_research_option = $TECH_329$
+			add_research_option = $TECH_330$
+			add_research_option = $TECH_331$
+			add_research_option = $TECH_332$
+			add_research_option = $TECH_333$
+			add_research_option = $TECH_334$
+			add_research_option = $TECH_335$
+			add_research_option = $TECH_336$
+			add_research_option = $TECH_337$
+			add_research_option = $TECH_338$
+			add_research_option = $TECH_339$
+			add_research_option = $TECH_340$
+			add_research_option = $TECH_341$
+			add_research_option = $TECH_342$
+			add_research_option = $TECH_343$
+			add_research_option = $TECH_344$
+			add_research_option = $TECH_345$
+			add_research_option = $TECH_346$
+			add_research_option = $TECH_347$
+			add_research_option = $TECH_348$
+			add_research_option = $TECH_349$
+			add_research_option = $TECH_350$
+			add_research_option = $TECH_351$
+			add_research_option = $TECH_352$
+			add_research_option = $TECH_353$
+			add_research_option = $TECH_354$
+			add_research_option = $TECH_355$
+			add_research_option = $TECH_356$
+			add_research_option = $TECH_357$
+			add_research_option = $TECH_358$
+			add_research_option = $TECH_359$
+			add_research_option = $TECH_360$
+			add_research_option = $TECH_361$
+			add_research_option = $TECH_362$
+			add_research_option = $TECH_363$
+			add_research_option = $TECH_364$
+			add_research_option = $TECH_365$
+			add_research_option = $TECH_366$
+			add_research_option = $TECH_367$
+			add_research_option = $TECH_368$
+			add_research_option = $TECH_369$
+			add_research_option = $TECH_370$
+			add_research_option = $TECH_371$
+			add_research_option = $TECH_372$
+			add_research_option = $TECH_373$
+			add_research_option = $TECH_374$
+			add_research_option = $TECH_375$
+			add_research_option = $TECH_376$
+			add_research_option = $TECH_377$
+			add_research_option = $TECH_378$
+			add_research_option = $TECH_379$
+			add_research_option = $TECH_380$
+			add_research_option = $TECH_381$
+			add_research_option = $TECH_382$
+			add_research_option = $TECH_383$
+			add_research_option = $TECH_384$
+			add_research_option = $TECH_385$
+			add_research_option = $TECH_386$
+			add_research_option = $TECH_387$
+			add_research_option = $TECH_388$
+			add_research_option = $TECH_389$
+			add_research_option = $TECH_390$
+			add_research_option = $TECH_391$
+			add_research_option = $TECH_392$
+			add_research_option = $TECH_393$
+			add_research_option = $TECH_394$
+			add_research_option = $TECH_395$
+			add_research_option = $TECH_396$
+			add_research_option = $TECH_397$
+			add_research_option = $TECH_398$
+			add_research_option = $TECH_399$
+			add_research_option = $TECH_400$
+			add_research_option = $TECH_401$
+			add_research_option = $TECH_402$
+			add_research_option = $TECH_403$
+			add_research_option = $TECH_404$
+			add_research_option = $TECH_405$
+			add_research_option = $TECH_406$
+			add_research_option = $TECH_407$
+			add_research_option = $TECH_408$
+			add_research_option = $TECH_409$
+			add_research_option = $TECH_410$
+			add_research_option = $TECH_411$
+		}
+		default = {
+			give_technology = {
+				tech = $TECH_1$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_2$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_3$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_4$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_5$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_6$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_7$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_8$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_9$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_10$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_11$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_12$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_13$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_14$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_15$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_16$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_17$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_18$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_19$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_20$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_21$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_22$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_23$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_24$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_25$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_26$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_27$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_28$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_29$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_30$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_31$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_32$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_33$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_34$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_35$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_36$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_37$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_38$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_39$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_40$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_41$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_42$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_43$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_44$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_45$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_46$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_47$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_48$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_49$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_50$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_51$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_52$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_53$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_54$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_55$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_56$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_57$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_58$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_59$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_60$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_61$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_62$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_63$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_64$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_65$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_66$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_67$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_68$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_69$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_70$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_71$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_72$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_73$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_74$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_75$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_76$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_77$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_78$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_79$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_80$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_81$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_82$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_83$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_84$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_85$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_86$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_87$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_88$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_89$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_90$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_91$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_92$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_93$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_94$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_95$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_96$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_97$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_98$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_99$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_100$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_101$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_102$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_103$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_104$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_105$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_106$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_107$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_108$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_109$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_110$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_111$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_112$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_113$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_114$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_115$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_116$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_117$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_118$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_119$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_120$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_121$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_122$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_123$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_124$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_125$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_126$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_127$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_128$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_129$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_130$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_131$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_132$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_133$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_134$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_135$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_136$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_137$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_138$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_139$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_140$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_141$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_142$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_143$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_144$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_145$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_146$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_147$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_148$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_149$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_150$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_151$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_152$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_153$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_154$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_155$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_156$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_157$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_158$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_159$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_160$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_161$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_162$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_163$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_164$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_165$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_166$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_167$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_168$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_169$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_170$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_171$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_172$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_173$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_174$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_175$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_176$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_177$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_178$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_179$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_180$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_181$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_182$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_183$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_184$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_185$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_186$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_187$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_188$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_189$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_190$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_191$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_192$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_193$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_194$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_195$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_196$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_197$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_198$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_199$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_200$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_201$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_202$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_203$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_204$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_205$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_206$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_207$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_208$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_209$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_210$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_211$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_212$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_213$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_214$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_215$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_216$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_217$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_218$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_219$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_220$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_221$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_222$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_223$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_224$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_225$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_226$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_227$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_228$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_229$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_230$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_231$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_232$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_233$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_234$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_235$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_236$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_237$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_238$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_239$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_240$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_241$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_242$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_243$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_244$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_245$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_246$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_247$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_248$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_249$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_250$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_251$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_252$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_253$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_254$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_255$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_256$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_257$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_258$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_259$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_260$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_261$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_262$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_263$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_264$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_265$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_266$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_267$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_268$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_269$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_270$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_271$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_272$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_273$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_274$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_275$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_276$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_277$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_278$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_279$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_280$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_281$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_282$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_283$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_284$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_285$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_286$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_287$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_288$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_289$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_290$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_291$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_292$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_293$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_294$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_295$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_296$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_297$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_298$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_299$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_300$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_301$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_302$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_303$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_304$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_305$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_306$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_307$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_308$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_309$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_310$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_311$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_312$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_313$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_314$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_315$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_316$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_317$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_318$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_319$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_320$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_321$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_322$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_323$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_324$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_325$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_326$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_327$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_328$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_329$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_330$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_331$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_332$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_333$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_334$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_335$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_336$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_337$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_338$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_339$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_340$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_341$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_342$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_343$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_344$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_345$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_346$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_347$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_348$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_349$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_350$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_351$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_352$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_353$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_354$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_355$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_356$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_357$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_358$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_359$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_360$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_361$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_362$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_363$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_364$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_365$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_366$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_367$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_368$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_369$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_370$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_371$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_372$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_373$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_374$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_375$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_376$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_377$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_378$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_379$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_380$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_381$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_382$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_383$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_384$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_385$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_386$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_387$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_388$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_389$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_390$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_391$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_392$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_393$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_394$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_395$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_396$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_397$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_398$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_399$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_400$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_401$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_402$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_403$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_404$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_405$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_406$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_407$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_408$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_409$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_410$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_411$
+				message = $MESSAGE|no$
+			}
+		}
+	}
+}
