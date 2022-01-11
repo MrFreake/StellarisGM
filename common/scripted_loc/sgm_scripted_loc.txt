@@ -349,6 +349,12 @@ defined_text = {
 		}
 		localization_key = engineering_research
 	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_give_technology_settings
+		}
+		localization_key = SETTINGS
+	}
 	default = research
 }
 
