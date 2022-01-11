@@ -233,3 +233,52 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = sgm_start_events.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        is_country_type = sgm_game_master
+    }
+
+    immediate = {
+        random_country = {
+            limit = {
+                NOT = {
+                    has_communications = root
+                }
+            }
+            establish_communications_no_message = root
+            root = { 
+                add_intel = { amount = 100 who = prev } 
+                add_intel_report = {
+                    category = military
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = government
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = economy
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = technology
+                    level = 4
+                    who = prev
+                }
+                add_intel_report = {
+                    category = diplomacy
+                    level = 4
+                    who = prev
+                }
+            }
+        }
+    }
+}
