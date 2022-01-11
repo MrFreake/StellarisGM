@@ -49,6 +49,10 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			set_timed_global_flag = {
+				flag = preventing_pvp_wars
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent AI wars
 			limit = {
@@ -66,6 +70,27 @@ set_target_date = {
 					key = sgm_wars_blocked
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
+				}
+			}
+			set_timed_global_flag = {
+				flag = AI_wars_blocked
+				days = fromfrom.final_date
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ai_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = ai_country
 				}
 			}
 		}
@@ -87,6 +112,10 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			set_global_flag = {
+				flag = preventing_all_wars
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent AI Federations
 			limit = {
@@ -105,6 +134,27 @@ set_target_date = {
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
 				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ai_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = ai_country
+				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_ai_federations
+				days = fromfrom.final_date
 			}
 		}
 		if = {						# prevent player federation
@@ -125,6 +175,10 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			set_timed_global_flag = {
+				flag = preventing_player_federations
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent all federations
 			limit = {
@@ -143,6 +197,10 @@ set_target_date = {
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
 				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_all_federations
+				days = fromfrom.final_date
 			}
 		}
 		if = {						# prevent AI subjugation
@@ -163,6 +221,27 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ai_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = ai_country
+				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_ai_subjugation
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent player subjugation
 			limit = {
@@ -181,6 +260,10 @@ set_target_date = {
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
 				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_player_subjugation
+				days = fromfrom.final_date
 			}
 		}
 		if = {						# prevent all subjugation
@@ -201,6 +284,10 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			set_timed_global_flag = {
+				flag = preventing_all_subjugation
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent player joining galactic community
 			limit = {
@@ -219,6 +306,10 @@ set_target_date = {
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
 				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_players_joining_galcom
+				days = fromfrom.final_date
 			}
 		}
 		if = {						# prevent AI join galactic community
@@ -239,6 +330,27 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ai_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = ai_country
+				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_ai_joining_galcom
+				days = fromfrom.final_date
+			}
 		}
 		if = {						# prevent formation of the galactic community
 			limit = {
@@ -250,6 +362,10 @@ set_target_date = {
 					days_from_present = prev.fromfrom.final_date
 					expires = prev.fromfrom.final_date
 				}
+			}
+			set_timed_global_flag = {
+				flag = preventing_formation_galcom
+				days = fromfrom.final_date
 			}
 		}
 		fromfrom = { 				# final cleanup
