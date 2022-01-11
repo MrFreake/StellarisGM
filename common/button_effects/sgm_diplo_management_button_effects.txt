@@ -112,7 +112,7 @@ set_target_date = {
 					expires = prev.fromfrom.final_date
 				}
 			}
-			set_global_flag = {
+			set_timed_global_flag = {
 				flag = preventing_all_wars
 				days = fromfrom.final_date
 			}

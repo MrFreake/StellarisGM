@@ -46,7 +46,6 @@ set_point_of_interest = {
 				event_chain = gm_poi
 				location = prev
 			}
-			break = yes
 		}
 		else_if = {
 			limit = {
@@ -59,7 +58,6 @@ set_point_of_interest = {
 				event_chain = gm_poi
 				location = prev
 			}
-			break = yes
 		}
 	}	
 }
