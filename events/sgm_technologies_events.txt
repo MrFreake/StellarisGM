@@ -17,6 +17,7 @@ country_event = {
 					has_global_flag = sgm_give_technology_physics
 					has_global_flag = sgm_give_technology_society
 					has_global_flag = sgm_give_technology_engineering
+					has_global_flag = sgm_give_technology_settings
 				}
 			}
 			set_global_flag = sgm_give_technology_physics
@@ -36,6 +37,10 @@ country_event = {
 			}
 			sgm_give_technology_engineering = {
 				remove_global_flag = sgm_give_technology_engineering
+				set_global_flag = sgm_give_technology_settings
+			}
+			sgm_give_technology_settings = {
+				remove_global_flag = sgm_give_technology_settings
 				set_global_flag = sgm_give_technology_physics
 			}
 			default = {
@@ -59,6 +64,21 @@ country_event = {
 			default = {
 				set_global_flag = sgm_give_technology_option
 			}
+		}
+		country_event = {
+			id = sgm_technologies.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = feature_unlocks_auto_research
+		trigger = {
+			has_global_flag = sgm_give_technology_settings
+		}
+		from = {
+			sgm_give_all_technology_effect = yes
 		}
 		country_event = {
 			id = sgm_technologies.1
