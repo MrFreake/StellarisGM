@@ -240,7 +240,7 @@ defined_text = {
 		trigger = {
 			has_global_flag = setting_preventing_ai_federations
 		}
-		localization_key = setting_preventing_ai_federations
+		localization_key = preventing_ai_federations
 	}	
 	text = {
 		trigger = {
@@ -258,19 +258,19 @@ defined_text = {
 		trigger = {
 			has_global_flag = setting_preventing_ai_demand_subjugation
 		}
-		localization_key = preventing_ai_demand_subjugation
+		localization_key = preventing_ai_subjugation
 	}
 	text = {
 		trigger = {
 			has_global_flag = setting_preventing_player_demand_subjugation
 		}
-		localization_key = preventing_player_demand_subjugation
+		localization_key = preventing_player_subjugation
 	}
 	text = {
 		trigger = {
 			has_global_flag = setting_preventing_all_demand_subjugation
 		}
-		localization_key = preventing_all_demand_subjugation
+		localization_key = preventing_all_subjugation
 	}
 	text = {
 		trigger = {
@@ -375,4 +375,160 @@ defined_text = {
 		localization_key = ADD_RESEARCH_OPTION_EFFECT
 	}
 	default = research
+}
+
+defined_text = {
+	name = war_status
+	text = {
+		trigger = {
+			has_global_flag = preventing_pvp_wars
+			NOR = {
+				has_global_flag = AI_wars_blocked
+				has_global_flag = preventing_all_wars
+			}
+		}
+		localization_key = preventing_pvp_wars
+	}
+	text = {
+		trigger = {
+			NOR = {
+				has_global_flag = preventing_pvp_wars
+				has_global_flag = preventing_all_wars
+			}
+			has_global_flag = AI_wars_blocked
+		}
+		localization_key = AI_wars_blocked
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = preventing_all_wars
+				AND = {
+					has_global_flag = preventing_pvp_wars
+					has_global_flag = AI_wars_blocked
+				}
+			}
+		}
+		localization_key = preventing_all_wars
+	}
+	default = wars_allowed
+}
+
+defined_text = {
+	name = federation_status
+	text = {
+		trigger = {
+			has_global_flag = preventing_player_federations
+			NOR = {
+				has_global_flag = preventing_ai_federations
+				has_global_flag = preventing_all_federations
+			}
+		}
+		localization_key = preventing_player_federations
+	}
+	text = {
+		trigger = {
+			NOR = {
+				has_global_flag = preventing_player_federations
+				has_global_flag = preventing_all_federations
+			}
+			has_global_flag = preventing_ai_federations
+		}
+		localization_key = preventing_ai_federations
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = preventing_all_federations
+				AND = {
+					has_global_flag = preventing_player_federations
+					has_global_flag = preventing_ai_federations
+				}
+			}
+		}
+		localization_key = preventing_all_federations
+	}
+	default = federations_allowed
+}
+
+defined_text = {
+	name = subjugation_status
+	text = {
+		trigger = {
+			has_global_flag = preventing_player_subjugation
+			NOR = {
+				has_global_flag = preventing_ai_subjugation
+				has_global_flag = preventing_all_subjugation
+			}
+		}
+		localization_key = preventing_player_subjugation
+	}
+	text = {
+		trigger = {
+			NOR = {
+				has_global_flag = preventing_player_subjugation
+				has_global_flag = preventing_all_subjugation
+			}
+			has_global_flag = preventing_ai_subjugation
+		}
+		localization_key = preventing_ai_subjugation
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = preventing_all_subjugation
+				AND = {
+					has_global_flag = preventing_player_subjugation
+					has_global_flag = preventing_ai_subjugation
+				}
+			}
+		}
+		localization_key = preventing_all_subjugation
+	}
+	default = subjugation_allowed
+}
+
+defined_text = {
+	name = galactic_community_status
+	text = {
+		trigger = {
+			has_global_flag = preventing_players_joining_galcom
+			NOT = {
+				has_global_flag = preventing_ai_joining_galcom
+			}
+		}
+		localization_key = preventing_players_joining_galcom
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = preventing_players_joining_galcom
+			}
+			has_global_flag = preventing_ai_joining_galcom
+		}
+		localization_key = preventing_ai_joining_galcom
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = preventing_formation_galcom
+				AND = {
+					has_global_flag = preventing_ai_joining_galcom
+					has_global_flag = preventing_players_joining_galcom
+				}
+			}
+		}
+		localization_key = preventing_formation_galcom
+	}
+	default = galactic_community_allowed
+}
+
+defined_text = {
+	name = "war_status_tooltip"
+	text = {
+		trigger = {
+			has_global_flag = AI_wars_blocked
+		}
+		localization_key = preventing_ai_wars_tooltip
+	}
 }

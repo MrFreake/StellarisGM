@@ -399,7 +399,7 @@ sgm_bounty_pos_10 = {
 }
 bounty_rewards = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -408,7 +408,7 @@ bounty_rewards = {
 }
 megastructure_built_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -417,7 +417,7 @@ megastructure_built_lb = {
 }
 country_destroyed_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -426,7 +426,7 @@ country_destroyed_lb = {
 }
 planet_conquered_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -435,7 +435,7 @@ planet_conquered_lb = {
 }
 ship_destroyed_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -444,7 +444,7 @@ ship_destroyed_lb = {
 }
 pop_purged_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -453,7 +453,7 @@ pop_purged_lb = {
 }
 planet_destroyed_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -462,7 +462,7 @@ planet_destroyed_lb = {
 }
 ascension_perk_unlocked_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -471,7 +471,7 @@ ascension_perk_unlocked_lb = {
 }
 tradition_unlocked_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -480,7 +480,7 @@ tradition_unlocked_lb = {
 }
 tech_unlocked_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -489,7 +489,7 @@ tech_unlocked_lb = {
 }
 star_system_destroyed_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -498,7 +498,7 @@ star_system_destroyed_lb = {
 }
 subject_integrated_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -507,7 +507,7 @@ subject_integrated_lb = {
 }
 subject_gained_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -516,7 +516,7 @@ subject_gained_lb = {
 }
 system_gained_lb = {
 	potential = {
-		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {
 		always = no
@@ -527,19 +527,39 @@ hide_leaderboard = {
 	potential = {
 		has_global_flag = galactic_bounty_enabled
 		has_country_flag = showing_leaderboard
+		has_country_flag = showing_leaderboard_rewards
 	}
 	allow = {}
 	effect = {
 		remove_country_flag = showing_leaderboard
+		remove_country_flag = showing_leaderboard_rewards
 	}
 }
 show_leaderboard = {
 	potential = {
 		has_global_flag = galactic_bounty_enabled
-		NOT = { has_country_flag = showing_leaderboard }
+		NOR = { 
+			has_country_flag = showing_leaderboard 
+			has_country_flag = showing_leaderboard_rewards
+		}
 	}
 	allow = {}
 	effect = {
 		set_country_flag = showing_leaderboard
 	}
 }
+show_leaderboard_rewards = {
+	potential = {
+		has_global_flag = galactic_bounty_enabled
+		has_country_flag = showing_leaderboard
+		NOR = {
+			has_country_flag = showing_leaderboard_rewards
+		} 
+	}
+	allow = {}
+	effect = {
+		set_country_flag = showing_leaderboard_rewards
+	}
+}
+
+
