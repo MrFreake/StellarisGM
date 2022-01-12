@@ -205,7 +205,7 @@ set_target_date = {
 		}
 		if = {						# prevent AI subjugation
 			limit = {
-				has_global_flag = preventing_ai_demand_subjugation
+				has_global_flag = setting_preventing_ai_demand_subjugation
 			}
 			every_country = {
 				limit = {
@@ -678,3 +678,41 @@ ai_join_galcom = {
 	}
 }
 
+war_status = {
+	potential = {}
+	allow = { 
+		custom_tooltip = {
+			fail_text = "war_status_tooltip"
+			always = no
+		}
+	effect = {}
+}
+
+federation_status = {
+	potential = {}
+	allow = { 
+		custom_tooltip = {
+			fail_text = "preventing_ai_wars_tooltip"
+			always = no
+		}
+	}
+	effect = {}
+}
+
+subjugation_status = {
+	potential = {}
+	allow = { always = no }
+	effect = {}
+}
+
+galactic_community_status = {
+	potential = {}
+	allow = { always = no }
+	effect = {}
+}
+
+diplomatic_restrictions = {
+	potential = {}
+	allow = { always = no }
+	effect = {}
+}

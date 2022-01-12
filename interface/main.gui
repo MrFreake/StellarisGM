@@ -783,6 +783,17 @@ guiTypes = {
 	#			shortCut = j
 			}
 			effectbuttonType = {					
+				name = show_leaderboard_rewards
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -200 y = -12 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = show_leaderboard_rewards
+				orientation = UPPER_LEFT
+				effect = show_leaderboard_rewards
+	#			shortCut = j
+			}v
+			effectbuttonType = {					
 				name = sgm_return_to_gm
 				quadTextureSprite = "GFX_standard_button_142_34_button"
 				position = { x = -776 y = -12 }
