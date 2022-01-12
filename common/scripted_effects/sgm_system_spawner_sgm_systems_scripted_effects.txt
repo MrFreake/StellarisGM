@@ -40,7 +40,7 @@ sgm_test_spawn_system = {
 		# Or
 		# sgm_spawn_system_aquatics_initializers_effect = yes		# etc.
 		# Cleanup
-		remove_global_flag = sgm_test_spawn_system_sgm_systems
+		remove_global_flag = sgm_spawn_system_sgm_systems
 		remove_global_flag = sgm_spawn_system_initializer_sgm_init_template_1
 		remove_global_flag = sgm_spawn_system_hyperlane_yes
 		remove_global_flag = sgm_spawn_system_is_discovered_yes
