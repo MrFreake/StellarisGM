@@ -1,10 +1,9 @@
 namespace = sgm_events
-
-country_event = {				# this stops GM getting stuck if the country they're controlling is destroyed
+country_event = {
+	# this stops GM getting stuck if the country they're controlling is destroyed
 	id = sgm_events.1
 	is_triggered_only = yes
 	hide_window = yes
-
 	trigger = {
 		OR = {
 			has_country_flag = sgm_assumed_control
@@ -12,7 +11,6 @@ country_event = {				# this stops GM getting stuck if the country they're contro
 		}
 		is_ai = no
 	}
-
 	immediate = {
 		random_country = {
 			limit = {
@@ -28,14 +26,12 @@ country_event = {
 	id = sgm_events.2
 	is_triggered_only = yes
 	hide_window = yes
-
 	trigger = {
 		exists = FromFrom
 		FromFrom = {
 			is_country_type = sgm_game_master
 		}
 	}
-
 	immediate = {
 		from = {
 			every_system_megastructure = {
@@ -58,11 +54,9 @@ country_event = {
 	id = sgm_events.3
 	is_triggered_only = yes
 	hide_window = yes
-
 	trigger = {
 		is_country_type = sgm_game_master
 	}
-
 	immediate = {
 		remove_country_flag = built_dyson_sphere
 		remove_country_flag = built_interstellar_assembly_site
@@ -78,3 +72,20 @@ country_event = {
 	}
 }
 
+# This = system
+# From = scope spawn_system was fired in (check scope type first!)
+system_event = {
+	id = sgm_events.4
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_star_flag = sgm_system_spawned
+		from = {
+			change_variable = {
+				which = sgm_system_spawned_origin
+				value = 1
+			}
+		}
+		set_star_flag = sgm_system_spawned@from
+	}
+}

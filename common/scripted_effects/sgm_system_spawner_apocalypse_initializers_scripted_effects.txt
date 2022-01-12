@@ -1,5 +1,4 @@
-# Template with one example system. Also see sgm_system_spawner_sgm_systems_scripted_effects.txt for actual use.
-sgm_spawn_system_effect = {
+sgm_spawn_system_apocalypse_initializers_effect = {
 	switch = {
 		trigger = has_global_flag
 		sgm_spawn_system_hyperlane_no = {
@@ -13,7 +12,7 @@ sgm_spawn_system_effect = {
 								value = 0
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 0
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -26,7 +25,7 @@ sgm_spawn_system_effect = {
 								value = 1
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -39,7 +38,7 @@ sgm_spawn_system_effect = {
 								value = 2
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 2
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -52,7 +51,7 @@ sgm_spawn_system_effect = {
 								value = 3
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 3
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -65,7 +64,7 @@ sgm_spawn_system_effect = {
 								value = 4
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 4
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -78,7 +77,7 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 5
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -91,7 +90,7 @@ sgm_spawn_system_effect = {
 								value = 6
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 6
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -104,7 +103,7 @@ sgm_spawn_system_effect = {
 								value = 7
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 7
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -117,7 +116,7 @@ sgm_spawn_system_effect = {
 								value = 8
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 8
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -130,7 +129,7 @@ sgm_spawn_system_effect = {
 								value = 9
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 9
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -143,14 +142,14 @@ sgm_spawn_system_effect = {
 								value = 10
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 10
 							IS_DISCOVERED = yes
 							HYPERLANE = no
 						}
 					}
 					else = {
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 0
 							IS_DISCOVERED = yes
 							HYPERLANE = no
@@ -165,7 +164,7 @@ sgm_spawn_system_effect = {
 								value = 0
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 0
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -178,7 +177,7 @@ sgm_spawn_system_effect = {
 								value = 1
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -191,7 +190,7 @@ sgm_spawn_system_effect = {
 								value = 2
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 2
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -204,7 +203,7 @@ sgm_spawn_system_effect = {
 								value = 3
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 3
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -217,7 +216,7 @@ sgm_spawn_system_effect = {
 								value = 4
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 4
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -230,7 +229,7 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 5
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -243,7 +242,7 @@ sgm_spawn_system_effect = {
 								value = 6
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 6
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -256,7 +255,7 @@ sgm_spawn_system_effect = {
 								value = 7
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 7
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -269,7 +268,7 @@ sgm_spawn_system_effect = {
 								value = 8
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 8
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -282,7 +281,7 @@ sgm_spawn_system_effect = {
 								value = 9
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 9
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -295,14 +294,14 @@ sgm_spawn_system_effect = {
 								value = 10
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 10
 							IS_DISCOVERED = no
 							HYPERLANE = no
 						}
 					}
 					else = {
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = no
 							HYPERLANE = no
@@ -322,7 +321,7 @@ sgm_spawn_system_effect = {
 								value = 0
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 0
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -335,7 +334,7 @@ sgm_spawn_system_effect = {
 								value = 1
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -348,7 +347,7 @@ sgm_spawn_system_effect = {
 								value = 2
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 2
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -361,7 +360,7 @@ sgm_spawn_system_effect = {
 								value = 3
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 3
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -374,7 +373,7 @@ sgm_spawn_system_effect = {
 								value = 4
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 4
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -387,7 +386,7 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 5
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -400,7 +399,7 @@ sgm_spawn_system_effect = {
 								value = 6
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 6
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -413,7 +412,7 @@ sgm_spawn_system_effect = {
 								value = 7
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 7
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -426,7 +425,7 @@ sgm_spawn_system_effect = {
 								value = 8
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 8
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -439,7 +438,7 @@ sgm_spawn_system_effect = {
 								value = 9
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 9
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -452,14 +451,14 @@ sgm_spawn_system_effect = {
 								value = 10
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 10
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
 						}
 					}
 					else = {
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = yes
 							HYPERLANE = yes
@@ -474,7 +473,7 @@ sgm_spawn_system_effect = {
 								value = 0
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 0
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -487,7 +486,7 @@ sgm_spawn_system_effect = {
 								value = 1
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -500,7 +499,7 @@ sgm_spawn_system_effect = {
 								value = 2
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 2
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -513,7 +512,7 @@ sgm_spawn_system_effect = {
 								value = 3
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 3
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -526,7 +525,7 @@ sgm_spawn_system_effect = {
 								value = 4
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 4
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -539,7 +538,7 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 5
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -552,7 +551,7 @@ sgm_spawn_system_effect = {
 								value = 6
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 6
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -565,7 +564,7 @@ sgm_spawn_system_effect = {
 								value = 7
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 7
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -578,7 +577,7 @@ sgm_spawn_system_effect = {
 								value = 8
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 8
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -591,7 +590,7 @@ sgm_spawn_system_effect = {
 								value = 9
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 9
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -604,14 +603,14 @@ sgm_spawn_system_effect = {
 								value = 10
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 10
 							IS_DISCOVERED = no
 							HYPERLANE = yes
 						}
 					}
 					else = {
-						sgm_var_distance_spawn_system_effect = {
+						sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 							JUMPS = 1
 							IS_DISCOVERED = no
 							HYPERLANE = yes
@@ -623,7 +622,7 @@ sgm_spawn_system_effect = {
 	}
 }
 
-sgm_var_distance_spawn_system_effect = {
+sgm_var_distance_spawn_system_apocalypse_initializers_effect = {
 	if = {
 		limit = {
 			check_variable = {
@@ -631,7 +630,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 0
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -645,7 +644,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 1
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -659,7 +658,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 2
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -673,7 +672,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 3
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -687,7 +686,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 4
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -701,7 +700,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 5
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -715,7 +714,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 6
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -729,7 +728,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 7
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -743,7 +742,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 8
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -757,7 +756,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 9
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -771,7 +770,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 10
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -785,7 +784,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 11
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -799,7 +798,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 12
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -813,7 +812,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 13
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -827,7 +826,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 14
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -841,7 +840,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 15
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -855,7 +854,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 16
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -869,7 +868,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 17
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -883,7 +882,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 18
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -897,7 +896,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 19
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -911,7 +910,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 20
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -925,7 +924,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 21
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -939,7 +938,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 22
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -953,7 +952,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 23
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -967,7 +966,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 24
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -981,7 +980,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 25
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -995,7 +994,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 26
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1009,7 +1008,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 27
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1023,7 +1022,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 28
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1037,7 +1036,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 29
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1051,7 +1050,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 30
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1065,7 +1064,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 31
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1079,7 +1078,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 32
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1093,7 +1092,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 33
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1107,7 +1106,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 34
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1121,7 +1120,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 35
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1135,7 +1134,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 36
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1149,7 +1148,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 37
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1163,7 +1162,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 38
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1177,7 +1176,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 39
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1191,7 +1190,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 40
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1205,7 +1204,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 41
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1219,7 +1218,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 42
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1233,7 +1232,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 43
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1247,7 +1246,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 44
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1261,7 +1260,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 45
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1275,7 +1274,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 46
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1289,7 +1288,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 47
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1303,7 +1302,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 48
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1317,7 +1316,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 49
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1331,7 +1330,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 50
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1345,7 +1344,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 51
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1359,7 +1358,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 52
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1373,7 +1372,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 53
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1387,7 +1386,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 54
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1401,7 +1400,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 55
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1415,7 +1414,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 56
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1429,7 +1428,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 57
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1443,7 +1442,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 58
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1457,7 +1456,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 59
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1471,7 +1470,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 60
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1485,7 +1484,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 61
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1499,7 +1498,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 62
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1513,7 +1512,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 63
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1527,7 +1526,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 64
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1541,7 +1540,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 65
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1555,7 +1554,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 66
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1569,7 +1568,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 67
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1583,7 +1582,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 68
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1597,7 +1596,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 69
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1611,7 +1610,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 70
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1625,7 +1624,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 71
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1639,7 +1638,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 72
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1653,7 +1652,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 73
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1667,7 +1666,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 74
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1681,7 +1680,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 75
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1695,7 +1694,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 76
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1709,7 +1708,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 77
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1723,7 +1722,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 78
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1737,7 +1736,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 79
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1751,7 +1750,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 80
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1765,7 +1764,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 81
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1779,7 +1778,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 82
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1793,7 +1792,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 83
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1807,7 +1806,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 84
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1821,7 +1820,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 85
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1835,7 +1834,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 86
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1849,7 +1848,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 87
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1863,7 +1862,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 88
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1877,7 +1876,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 89
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1891,7 +1890,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 90
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1905,7 +1904,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 91
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1919,7 +1918,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 92
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1933,7 +1932,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 93
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1947,7 +1946,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 94
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1961,7 +1960,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 95
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1975,7 +1974,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 96
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -1989,7 +1988,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 97
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -2003,7 +2002,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 98
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -2017,7 +2016,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 99
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -2031,7 +2030,7 @@ sgm_var_distance_spawn_system_effect = {
 				value = 100
 			}
 		}
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -2039,7 +2038,7 @@ sgm_var_distance_spawn_system_effect = {
 		}
 	}
 	else = {
-		sgm_initialiser_spawn_system_effect = {
+		sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 			JUMPS = $JUMPS$
 			IS_DISCOVERED = $IS_DISCOVERED$
 			HYPERLANE = $HYPERLANE$
@@ -2048,24 +2047,24 @@ sgm_var_distance_spawn_system_effect = {
 	}
 }
 
-sgm_initialiser_spawn_system_effect = {
+sgm_initialiser_spawn_system_apocalypse_initializers_effect = {
 	prev = {
 		switch = {
 			trigger = has_global_flag
-			sgm_spawn_system_sgm_systems = {
+			sgm_spawn_system_apocalypse_initializers = {
 				switch = {
 					trigger = has_global_flag
-					sgm_spawn_system_initializer_sgm_init_template_1 = {
+					sgm_spawn_system_initializer_abandoned_gateways_01 = {
 						spawn_system = {
 							min_jumps = $JUMPS$
 							max_jumps = $JUMPS$
-							min_distance = $DISTANCE$							# 0-100
-							max_distance = $DISTANCE$							# 0-100
-							initializer = sgm_init_template_1							# initializer key name
-							hyperlane = $HYPERLANE$							# yes/no
-							is_discovered = $IS_DISCOVERED$							# yes/no
+							min_distance = $DISTANCE$
+							max_distance = $DISTANCE$
+							initializer = abandoned_gateways_01
+							hyperlane = $HYPERLANE$
+							is_discovered = $IS_DISCOVERED$
 							effect = {
-								set_star_flag = sgm_spawn_system_initializer_sgm_init_template_1
+								set_star_flag = sgm_spawn_system_initializer_abandoned_gateways_01
 								fire_on_action = {
 									on_action = sgm_on_system_spawned
 									scopes = {
@@ -2079,162 +2078,7 @@ sgm_initialiser_spawn_system_effect = {
 					}
 				}
 			}
-			sgm_spawn_system_ancient_relics_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_apocalypse_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_aquatics_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_central_crystal_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_crisis_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_custom_starting_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_distant_stars_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_empire_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_example = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_fallen_empire_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_federations_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_hostile_system_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_leviathans_system_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_marauder_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_megacorp_intializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_misc_system_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_nebula_test_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_prescripted_species_systems = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_sol_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_special_system_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_test_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
-			sgm_spawn_system_utopia_initializers = {
-				switch = {
-					trigger = has_global_flag
-					default = {
-					}
-				}
-			}
 			default = {
-				set_global_flag = debug
 			}
 		}
 	}
