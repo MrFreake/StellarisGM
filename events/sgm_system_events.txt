@@ -1,0 +1,325 @@
+namespace = sgm_system
+country_event = {
+	id = sgm_system.3
+	is_triggered_only = yes
+	title = sgm_system.3.name
+	desc = sgm_system.3.desc
+	picture = GFX_evt_binary_stars
+	immediate = {
+		save_event_target_as = sgm_system_country_spawner
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						is_variable_set = sgm_var_jumps_spawn_system
+					}
+				}
+				set_variable = {
+					which = sgm_var_jumps_spawn_system
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_variable_set = sgm_var_distance_spawn_system
+					}
+				}
+				set_variable = {
+					which = sgm_var_distance_spawn_system
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_global_flag = sgm_spawn_system_hyperlane_yes
+						has_global_flag = sgm_spawn_system_hyperlane_no
+					}
+				}
+				set_global_flag = sgm_spawn_system_hyperlane_yes
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_spawn_system_is_discovered_yes
+					has_global_flag = sgm_spawn_system_is_discovered_no
+				}
+			}
+			set_global_flag = sgm_spawn_system_is_discovered_yes
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_spawn_system_sgm_systems
+					has_global_flag = sgm_spawn_system_ancient_relics_initializers
+					has_global_flag = sgm_spawn_system_apocalypse_initializers
+					has_global_flag = sgm_spawn_system_aquatics_initializers
+					has_global_flag = sgm_spawn_system_central_crystal_initializers
+					has_global_flag = sgm_spawn_system_crisis_initializers
+					has_global_flag = sgm_spawn_system_custom_starting_initializers
+					has_global_flag = sgm_spawn_system_distant_stars_initializers
+					has_global_flag = sgm_spawn_system_empire_initializers
+					has_global_flag = sgm_spawn_system_example_initializers
+					has_global_flag = sgm_spawn_system_fallen_empire_initializers
+					has_global_flag = sgm_spawn_system_federations_initializers
+					has_global_flag = sgm_spawn_system_hostile_system_initializers
+					has_global_flag = sgm_spawn_system_leviathans_system_initializers
+					has_global_flag = sgm_spawn_system_marauder_initializers
+					has_global_flag = sgm_spawn_system_megacorp_intializers
+					has_global_flag = sgm_spawn_system_misc_system_initializers
+					has_global_flag = sgm_spawn_system_prescripted_species_systems
+					has_global_flag = sgm_spawn_system_sol_initializers
+					has_global_flag = sgm_spawn_system_special_system_initializers
+					has_global_flag = sgm_spawn_system_utopia_initializers
+				}
+			}
+			set_global_flag = sgm_spawn_system_sgm_systems
+		}
+	}
+	option = {
+		name = sgm_system.3.a
+		switch = {
+			trigger = has_global_flag
+			sgm_spawn_system_sgm_systems = {
+				remove_global_flag = sgm_spawn_system_sgm_systems
+				set_global_flag = sgm_spawn_system_ancient_relics_initializers
+			}
+			sgm_spawn_system_ancient_relics_initializers = {
+				remove_global_flag = sgm_spawn_system_ancient_relics_initializers
+				set_global_flag = sgm_spawn_system_apocalypse_initializers
+			}
+			sgm_spawn_system_apocalypse_initializers = {
+				remove_global_flag = sgm_spawn_system_apocalypse_initializers
+				set_global_flag = sgm_spawn_system_aquatics_initializers
+			}
+			sgm_spawn_system_aquatics_initializers = {
+				remove_global_flag = sgm_spawn_system_aquatics_initializers
+				set_global_flag = sgm_spawn_system_central_crystal_initializers
+			}
+			sgm_spawn_system_central_crystal_initializers = {
+				remove_global_flag = sgm_spawn_system_central_crystal_initializers
+				set_global_flag = sgm_spawn_system_crisis_initializers
+			}
+			sgm_spawn_system_crisis_initializers = {
+				remove_global_flag = sgm_spawn_system_crisis_initializers
+				set_global_flag = sgm_spawn_system_custom_starting_initializers
+			}
+			sgm_spawn_system_custom_starting_initializers = {
+				remove_global_flag = sgm_spawn_system_custom_starting_initializers
+				set_global_flag = sgm_spawn_system_distant_stars_initializers
+			}
+			sgm_spawn_system_distant_stars_initializers = {
+				remove_global_flag = sgm_spawn_system_distant_stars_initializers
+				set_global_flag = sgm_spawn_system_empire_initializers
+			}
+			sgm_spawn_system_empire_initializers = {
+				remove_global_flag = sgm_spawn_system_empire_initializers
+				set_global_flag = sgm_spawn_system_example_initializers
+			}
+			sgm_spawn_system_example_initializers = {
+				remove_global_flag = sgm_spawn_system_example_initializers
+				set_global_flag = sgm_spawn_system_fallen_empire_initializers
+			}
+			sgm_spawn_system_fallen_empire_initializers = {
+				remove_global_flag = sgm_spawn_system_fallen_empire_initializers
+				set_global_flag = sgm_spawn_system_federations_initializers
+			}
+			sgm_spawn_system_federations_initializers = {
+				remove_global_flag = sgm_spawn_system_federations_initializers
+				set_global_flag = sgm_spawn_system_hostile_system_initializers
+			}
+			sgm_spawn_system_hostile_system_initializers = {
+				remove_global_flag = sgm_spawn_system_hostile_system_initializers
+				set_global_flag = sgm_spawn_system_leviathans_system_initializers
+			}
+			sgm_spawn_system_leviathans_system_initializers = {
+				remove_global_flag = sgm_spawn_system_leviathans_system_initializers
+				set_global_flag = sgm_spawn_system_marauder_initializers
+			}
+			sgm_spawn_system_marauder_initializers = {
+				remove_global_flag = sgm_spawn_system_marauder_initializers
+				set_global_flag = sgm_spawn_system_megacorp_intializers
+			}
+			sgm_spawn_system_megacorp_intializers = {
+				remove_global_flag = sgm_spawn_system_megacorp_intializers
+				set_global_flag = sgm_spawn_system_misc_system_initializers
+			}
+			sgm_spawn_system_misc_system_initializers = {
+				remove_global_flag = sgm_spawn_system_misc_system_initializers
+				set_global_flag = sgm_spawn_system_prescripted_species_systems
+			}
+			sgm_spawn_system_prescripted_species_systems = {
+				remove_global_flag = sgm_spawn_system_prescripted_species_systems
+				set_global_flag = sgm_spawn_system_sol_initializers
+			}
+			sgm_spawn_system_sol_initializers = {
+				remove_global_flag = sgm_spawn_system_sol_initializers
+				set_global_flag = sgm_spawn_system_special_system_initializers
+			}
+			sgm_spawn_system_special_system_initializers = {
+				remove_global_flag = sgm_spawn_system_special_system_initializers
+				set_global_flag = sgm_spawn_system_utopia_initializers
+			}
+			sgm_spawn_system_utopia_initializers = {
+				remove_global_flag = sgm_spawn_system_utopia_initializers
+				set_global_flag = sgm_spawn_system_sgm_systems
+			}
+			default = {
+				set_global_flag = sgm_spawn_system_sgm_systems
+			}
+		}
+		country_event = {
+			id = sgm_system.3
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		name = sgm_init_template_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_sgm_systems
+		}
+		set_global_flag = sgm_spawn_system_initializer_sgm_init_template_1
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_sgm_systems_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_sgm_init_template_1
+	}
+	option = {
+		name = relic_system_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_relic_system_1
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_relic_system_1
+	}
+	option = {
+		name = Zrocursor_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_Zrocursor_system
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_Zrocursor_system
+	}
+	option = {
+		name = relic_system_4
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_relic_system_4
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_relic_system_4
+	}
+	option = {
+		name = last_baol_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_last_baol_system
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_last_baol_system
+	}
+	option = {
+		name = mechanocalibrator_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_mechanocalibrator_system
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_mechanocalibrator_system
+	}
+	option = {
+		name = rubricator_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_rubricator_system
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_ancient_relics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_rubricator_system
+	}
+	option = {
+		name = abandoned_gateways_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_apocalypse_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_abandoned_gateways_01
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_apocalypse_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_abandoned_gateways_01
+	}
+	option = {
+		name = ocean_paradise_start
+		trigger = {
+			has_global_flag = sgm_spawn_system_aquatics_initializers
+		}
+		set_global_flag = sgm_spawn_system_initializer_ocean_paradise_start
+		from = {
+			event_target:global_event_country = {
+				sgm_spawn_system_aquatics_initializers_effect = yes
+			}
+		}
+		remove_global_flag = sgm_spawn_system_initializer_ocean_paradise_start
+	}
+	# TO DO: Rest of initialisers.
+	option = {
+		name = CANCEL
+		hidden_effect = {
+			remove_global_flag = sgm_spawn_system_sgm_systems
+			remove_global_flag = sgm_spawn_system_ancient_relics_initializers
+			remove_global_flag = sgm_spawn_system_apocalypse_initializers
+			remove_global_flag = sgm_spawn_system_aquatics_initializers
+			remove_global_flag = sgm_spawn_system_central_crystal_initializers
+			remove_global_flag = sgm_spawn_system_crisis_initializers
+			remove_global_flag = sgm_spawn_system_custom_starting_initializers
+			remove_global_flag = sgm_spawn_system_distant_stars_initializers
+			remove_global_flag = sgm_spawn_system_empire_initializers
+			remove_global_flag = sgm_spawn_system_example_initializers
+			remove_global_flag = sgm_spawn_system_fallen_empire_initializers
+			remove_global_flag = sgm_spawn_system_federations_initializers
+			remove_global_flag = sgm_spawn_system_hostile_system_initializers
+			remove_global_flag = sgm_spawn_system_leviathans_system_initializers
+			remove_global_flag = sgm_spawn_system_marauder_initializers
+			remove_global_flag = sgm_spawn_system_megacorp_intializers
+			remove_global_flag = sgm_spawn_system_misc_system_initializers
+			remove_global_flag = sgm_spawn_system_prescripted_species_systems
+			remove_global_flag = sgm_spawn_system_sol_initializers
+			remove_global_flag = sgm_spawn_system_special_system_initializers
+			remove_global_flag = sgm_spawn_system_utopia_initializers
+		}
+	}
+}
