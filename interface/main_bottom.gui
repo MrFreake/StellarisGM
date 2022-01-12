@@ -1,4 +1,6 @@
 @bounty_x = -350
+@diplomanage_x = -550
+@targets_x = -700
 guiTypes = {
 
 	positionType = {
@@ -233,7 +235,7 @@ guiTypes = {
 			name = "targets"
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 40 }
+			position = { x = @targets_x y = 40 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = Targets
@@ -246,7 +248,7 @@ guiTypes = {
 			name = "target_planet"
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 60 }
+			position = { x = @targets_x y = 60 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_planet
@@ -259,7 +261,7 @@ guiTypes = {
 			name = target_planet_not_set
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 60 }
+			position = { x = @targets_x y = 60 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_planet_not_set
@@ -272,7 +274,7 @@ guiTypes = {
 			name = target_country
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 80 }
+			position = { x = @targets_x y = 80 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_country
@@ -284,7 +286,7 @@ guiTypes = {
 			name = target_country_not_set
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 80 }
+			position = { x = @targets_x y = 80 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_country_not_set
@@ -296,7 +298,7 @@ guiTypes = {
 			name = target_fleet
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 100 }
+			position = { x = @targets_x y = 100 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_fleet
@@ -308,7 +310,7 @@ guiTypes = {
 			name = target_fleet_not_set
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 100 }
+			position = { x = @targets_x y = 100 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_fleet_not_set
@@ -320,7 +322,7 @@ guiTypes = {
 			name = target_megastructure
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 120 }
+			position = { x = @targets_x y = 120 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_megastructure
@@ -332,7 +334,7 @@ guiTypes = {
 			name = target_megastructure_not_set
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			size = { x = 300 y = 34 }
-			position = { x = -600 y = 120 }
+			position = { x = @targets_x y = 120 }
 			scale = 1
 			buttonFont = cg_16b
 			buttonText = target_megastructure_not_set
@@ -664,6 +666,69 @@ guiTypes = {
 			effect = system_gained_lb
 #			shortCut = j
 			alwaysTransparent = yes
+		}
+		effectbuttonType = {					
+			name = "diplomatic_restrictions"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 300 y = 34 }
+			position = { x = @diplomanage_x y = 40 }
+			scale = 1
+			buttonFont = cg_16b
+			buttonText = diplomatic_restrictions
+			orientation = UPPER_LEFT
+			effect = diplomatic_restrictions
+#			shortCut = j
+			alwaysTransparent = yes
+		}
+		effectbuttonType = {					
+			name = war_status
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 300 y = 34 }
+			position = { x = @diplomanage_x y = 60 }
+			scale = 1
+			buttonFont = cg_16b
+			buttonText = [This.war_status]
+			orientation = UPPER_LEFT
+			effect = war_status
+			
+#			shortCut = j
+			alwaysTransparent = yes
+		}
+		effectbuttonType = {					
+			name = federation_status
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 300 y = 34 }
+			position = { x = @diplomanage_x y = 80 }
+			scale = 1
+			buttonFont = cg_16b
+			buttonText = [This.federation_status]
+			orientation = UPPER_LEFT
+			effect = federation_status
+#			shortCut = j
+		}
+		effectbuttonType = {					
+			name = subjugation_status
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 300 y = 34 }
+			position = { x = @diplomanage_x y = 100 }
+			scale = 1
+			buttonFont = cg_16b
+			buttonText = [This.subjugation_status]
+			orientation = UPPER_LEFT
+			effect = subjugation_status
+#			shortCut = j
+		}
+		effectbuttonType = {					
+			name = galactic_community_status
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 300 y = 34 }
+			position = { x = @diplomanage_x y = 120 }
+			scale = 1
+			buttonFont = cg_16b
+			buttonText = [This.galactic_community_status]
+			orientation = UPPER_LEFT
+			effect = galactic_community_status
+#			shortCut = j
 		}
 	}
 
