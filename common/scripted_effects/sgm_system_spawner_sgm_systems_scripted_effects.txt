@@ -9,7 +9,7 @@ sgm_test_spawn_system = {
 			which = sgm_var_distance_spawn_system
 			value = 10
 		}
-		set_global_flag = sgm_test_spawn_system_sgm_systems
+		set_global_flag = sgm_spawn_system_sgm_systems
 		# Or
 		# set_global_flag = sgm_spawn_system_ancient_relics_initializers
 		# set_global_flag = sgm_spawn_system_apocalypse_initializers
