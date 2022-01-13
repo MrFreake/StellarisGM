@@ -87,5 +87,7 @@ system_event = {
 			}
 		}
 		set_star_flag = sgm_system_spawned@from
+		log = "System [this.GetName] has been spawned by SGM ([sgm_system_country_spawner.GetRealName]) from initializer file [this.GetNameInitilalizerSpawnSwitch]. Origin system: [from.GetName]. Jumps: [global_event_country.sgm_var_jumps_spawn_system] Distance: [global_event_country.sgm_var_distance_spawn_system] Connected: [this.Get_hyperlane_spawn_system] Discovered: [this.Get_is_discovered_spawn_system]"
+		clear_global_event_target = sgm_system_country_spawner
 	}
 }

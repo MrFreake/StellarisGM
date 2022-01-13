@@ -685,6 +685,7 @@ war_status = {
 			fail_text = "war_status_tooltip"
 			always = no
 		}
+	}
 	effect = {}
 }
 
