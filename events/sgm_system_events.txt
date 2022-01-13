@@ -4,7 +4,13 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_system.3.name
 	desc = sgm_system.3.desc
-	picture = GFX_evt_binary_stars
+	# picture = GFX_evt_binary_stars
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_SpawnSystemEventWindow
 	immediate = {
 		save_global_event_target_as = sgm_system_country_spawner
 		event_target:global_event_country = {
