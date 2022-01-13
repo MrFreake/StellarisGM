@@ -304,7 +304,7 @@ country_event = {
 			set_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
 			from = {
 				event_target:global_event_country = {
-					sgm_spawn_system_central_crystal_initializers = yes
+					sgm_spawn_system_central_crystal_initializers_effect = yes
 				}
 			}
 			remove_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
