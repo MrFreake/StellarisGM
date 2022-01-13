@@ -84,71 +84,71 @@ sgm_spawn_system_effect = {
 							HYPERLANE = no
 						}
 					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 6
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 6
-							IS_DISCOVERED = yes
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 7
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 7
-							IS_DISCOVERED = yes
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 8
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 8
-							IS_DISCOVERED = yes
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 9
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 9
-							IS_DISCOVERED = yes
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 10
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 10
-							IS_DISCOVERED = yes
-							HYPERLANE = no
-						}
-					}
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 6
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 6
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 7
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 7
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 8
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 8
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 9
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 9
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 10
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 10
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = no
+					# 	}
+					# }
 					else = {
 						sgm_var_distance_spawn_system_effect = {
 							JUMPS = 0
@@ -236,71 +236,71 @@ sgm_spawn_system_effect = {
 							HYPERLANE = no
 						}
 					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 6
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 6
-							IS_DISCOVERED = no
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 7
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 7
-							IS_DISCOVERED = no
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 8
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 8
-							IS_DISCOVERED = no
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 9
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 9
-							IS_DISCOVERED = no
-							HYPERLANE = no
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 10
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 10
-							IS_DISCOVERED = no
-							HYPERLANE = no
-						}
-					}
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 6
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 6
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 7
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 7
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 8
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 8
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 9
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 9
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = no
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 10
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 10
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = no
+					# 	}
+					# }
 					else = {
 						sgm_var_distance_spawn_system_effect = {
 							JUMPS = 1
@@ -387,77 +387,77 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 5
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 6
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 6
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 7
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 7
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 8
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 8
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 9
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 9
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 10
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 10
-							IS_DISCOVERED = yes
-							HYPERLANE = yes
-						}
-					}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 5
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 6
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 6
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 7
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 7
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 8
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 8
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 9
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 9
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 10
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 10
+					# 		IS_DISCOVERED = yes
+					# 		HYPERLANE = yes
+					# 	}
+					# }
 					else = {
 						sgm_var_distance_spawn_system_effect = {
 							JUMPS = 1
@@ -539,77 +539,77 @@ sgm_spawn_system_effect = {
 								value = 5
 							}
 						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 5
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 6
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 6
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 7
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 7
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 8
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 8
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 9
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 9
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								which = sgm_var_jumps_spawn_system
-								value = 10
-							}
-						}
-						sgm_var_distance_spawn_system_effect = {
-							JUMPS = 10
-							IS_DISCOVERED = no
-							HYPERLANE = yes
-						}
-					}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 5
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 6
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 6
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 7
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 7
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 8
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 8
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 9
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 9
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
+					# else_if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = sgm_var_jumps_spawn_system
+					# 			value = 10
+					# 		}
+					# 	}
+					# 	sgm_var_distance_spawn_system_effect = {
+					# 		JUMPS = 10
+					# 		IS_DISCOVERED = no
+					# 		HYPERLANE = yes
+					# 	}
+					# }
 					else = {
 						sgm_var_distance_spawn_system_effect = {
 							JUMPS = 1

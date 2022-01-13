@@ -295,3217 +295,3216 @@ country_event = {
 		}
 		remove_global_flag = sgm_spawn_system_initializer_ocean_paradise_start
 	}
-	# Compiled event too big, causes crash. Commented out for the time being.
-	# option = {
-	# 	name = central_crystal_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_central_crystal_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_aquatics_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_01
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_02
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_03
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_04
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_05
-	# 	}
-	# }
-	# option = {
-	# 	name = cybrex_beta
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_cybrex_beta
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_cybrex_beta
-	# 	}
-	# }
-	# option = {
-	# 	name = sentinel_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_crisis_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sentinel_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_crisis_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sentinel_system
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_05
-	# 	}
-	# }
-	# option = {
-	# 	name = custom_starting_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_custom_starting_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_custom_starting_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_custom_starting_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = star_lifting_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_star_lifting_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_star_lifting_system
-	# 	}
-	# }
-	# option = {
-	# 	name = vechtar_zavonia_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_vechtar_zavonia_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_vechtar_zavonia_system
-	# 	}
-	# }
-	# option = {
-	# 	name = big_rip_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_big_rip_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_big_rip_system
-	# 	}
-	# }
-	# option = {
-	# 	name = time_loop_world_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_time_loop_world_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_time_loop_world_system
-	# 	}
-	# }
-	# option = {
-	# 	name = toxic_planet_toxic_moon
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_toxic_planet_toxic_moon
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_toxic_planet_toxic_moon
-	# 	}
-	# }
-	# option = {
-	# 	name = shattered_world_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_shattered_world_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_shattered_world_system
-	# 	}
-	# }
-	# option = {
-	# 	name = asteroid_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_asteroid_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_asteroid_system
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_mining_drones
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_mining_drones
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_mining_drones
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_amoeba
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_amoeba
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_amoeba
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_void_cloud
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_void_cloud
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_void_cloud
-	# 	}
-	# }
-	# option = {
-	# 	name = ice_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ice_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ice_system
-	# 	}
-	# }
-	# option = {
-	# 	name = high_energy_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_high_energy_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_high_energy_system
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_hatchling
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_hatchling
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_hatchling
-	# 	}
-	# }
-	# option = {
-	# 	name = great_wound_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_great_wound_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_great_wound_system
-	# 	}
-	# }
-	# option = {
-	# 	name = primitive_robot_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_primitive_robot_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_primitive_robot_system
-	# 	}
-	# }
-	# option = {
-	# 	name = superflare_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_superflare_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_superflare_system
-	# 	}
-	# }
-	# option = {
-	# 	name = collapse_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_collapse_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_collapse_system
-	# 	}
-	# }
-	# option = {
-	# 	name = old_foes_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_old_foes_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_old_foes_system
-	# 	}
-	# }
-	# option = {
-	# 	name = scavenger_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_scavenger_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_scavenger_system
-	# 	}
-	# }
-	# option = {
-	# 	name = living_planet_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_living_planet_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_living_planet_system
-	# 	}
-	# }
-	# option = {
-	# 	name = elderly_tiyanki_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_elderly_tiyanki_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_elderly_tiyanki_system
-	# 	}
-	# }
-	# option = {
-	# 	name = ratling_1_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ratling_1_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ratling_1_1
-	# 	}
-	# }
-	# option = {
-	# 	name = ratling_1_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ratling_1_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ratling_1_2
-	# 	}
-	# }
-	# option = {
-	# 	name = ratling_1_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ratling_1_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ratling_1_3
-	# 	}
-	# }
-	# option = {
-	# 	name = distar_crystal_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distar_crystal_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distar_crystal_system
-	# 	}
-	# }
-	# option = {
-	# 	name = distar_sealed_1_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distar_sealed_1_1
-	# 	}
-	# }
-	# option = {
-	# 	name = distar_sealed_1_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distar_sealed_1_2
-	# 	}
-	# }
-	# option = {
-	# 	name = distar_pod_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distar_pod_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distar_pod_system
-	# 	}
-	# }
-	# option = {
-	# 	name = distar_phaseshift_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distar_phaseshift_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distar_phaseshift_system
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_00
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_00
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_00
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_05
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_01b
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_01b
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_01b
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_02b
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_02b
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_02b
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_03b
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_03b
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_03b
-	# 	}
-	# }
-	# option = {
-	# 	name = distantstars_init_04b
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_distantstars_init_04b
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_distantstars_init_04b
-	# 	}
-	# }
-	# option = {
-	# 	name = star_crazy_fallback_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_distant_stars_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_star_crazy_fallback_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_distant_stars_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_star_crazy_fallback_system
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_05
-	# 	}
-	# }
-	# option = {
-	# 	name = random_empire_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_random_empire_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_random_empire_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = neighbor_t2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_neighbor_t2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_neighbor_t2
-	# 	}
-	# }
-	# option = {
-	# 	name = neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = example_initializer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_example_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_example_initializer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_example_initializer
-	# 	}
-	# }
-	# option = {
-	# 	name = example_neighbor
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_example_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_example_neighbor
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_example_neighbor
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_1
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_1_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_1_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_1_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_3
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_4
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_4
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_4
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_col_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_col_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_col_1
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_col_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_col_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_col_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_orbitals_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_orbitals_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_orbitals_1
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_orbitals_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_orbitals_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_orbitals_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_shrouded
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_shrouded
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_shrouded
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_shielded_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_shielded_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_1
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_shielded_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_shielded_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_shielded_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_shielded_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_3
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_holy_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_holy_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_holy_01
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_holy_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_holy_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_holy_02
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_holy_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_holy_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_holy_03
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_holy_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_holy_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_holy_04
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_xeno_zoo
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_xeno_zoo
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_xeno_zoo
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_machine
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_machine
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_machine
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_machine_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_machine_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_machine_2
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_machine_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_machine_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_machine_3
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_machine_4
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_machine_4
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_machine_4
-	# 	}
-	# }
-	# option = {
-	# 	name = fallen_machine_5
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_fallen_empire_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fallen_machine_5
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_fallen_empire_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fallen_machine_5
-	# 	}
-	# }
-	# option = {
-	# 	name = hauer_system_initializer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hauer_system_initializer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hauer_system_initializer
-	# 	}
-	# }
-	# option = {
-	# 	name = intercepting_history_system_initializer_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_01
-	# 	}
-	# }
-	# option = {
-	# 	name = intercepting_history_system_initializer_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_02
-	# 	}
-	# }
-	# option = {
-	# 	name = relentless_pursuit_system_initializer_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_01
-	# 	}
-	# }
-	# option = {
-	# 	name = relentless_pursuit_system_initializer_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_02
-	# 	}
-	# }
-	# option = {
-	# 	name = void_dweller_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_void_dweller_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_void_dweller_system
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_1
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = scion_fallen_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_scion_fallen_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_scion_fallen_1
-	# 	}
-	# }
-	# option = {
-	# 	name = scion_fallen_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_scion_fallen_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_scion_fallen_2
-	# 	}
-	# }
-	# option = {
-	# 	name = shattered_ring_start
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_shattered_ring_start
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_shattered_ring_start
-	# 	}
-	# }
-	# option = {
-	# 	name = mega_shipyard_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_mega_shipyard_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_mega_shipyard_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = planet_with_too_many_moons_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_planet_with_too_many_moons_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_planet_with_too_many_moons_system
-	# 	}
-	# }
-	# option = {
-	# 	name = wenkwort_initializer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_wenkwort_initializer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_wenkwort_initializer
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_system_void_dweller_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_federations_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_system_void_dweller_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_federations_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_system_void_dweller_system
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_05
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_07
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_07
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_07
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_08
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_08
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_08
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_10
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_10
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_10
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_10_small_amoeba_pack
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_10_small_amoeba_pack
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_10_small_amoeba_pack
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_11
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_11
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_11
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_12
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_12
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_12
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_12_mining_drones
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_12_mining_drones
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_12_mining_drones
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_12_drone_destroyer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_12_drone_destroyer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_12_drone_destroyer
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_13
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_13
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_13
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_14
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_14
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_14
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_15
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_15
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_15
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_16
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_16
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_16
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_18
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_18
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_18
-	# 	}
-	# }
-	# option = {
-	# 	name = hostile_init_20
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_hostile_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hostile_init_20
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_hostile_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hostile_init_20
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_artist_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_artist_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_artist_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_curator_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_curator_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_curator_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_trader_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_trader_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_trader_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_stellarites
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_stellarites
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_stellarites
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_dragon
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_dragon
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_dragon
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_horror
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_horror
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_horror
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_dreadnought
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_dreadnought
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_dreadnought
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_hive
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_hive
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_hive
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_technosphere
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_technosphere
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_technosphere
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_fortress
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_fortress
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_fortress
-	# 	}
-	# }
-	# option = {
-	# 	name = guardians_init_wraith
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_leviathans_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_guardians_init_wraith
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_leviathans_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_guardians_init_wraith
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_1_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_1_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_1_1
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_1_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_1_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_1_2
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_1_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_1_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_1_3
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_2_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_2_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_2_1
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_2_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_2_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_2_2
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_2_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_2_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_2_3
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_3_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_3_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_3_1
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_3_2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_3_2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_3_2
-	# 	}
-	# }
-	# option = {
-	# 	name = marauder_3_3
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_marauder_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_marauder_3_3
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_marauder_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_marauder_3_3
-	# 	}
-	# }
-	# option = {
-	# 	name = megacorp_caravaneer_init
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_megacorp_intializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_megacorp_caravaneer_init
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_megacorp_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_megacorp_caravaneer_init
-	# 	}
-	# }
-	# option = {
-	# 	name = megacorp_matter_decompressor_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_megacorp_intializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_megacorp_matter_decompressor_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_megacorp_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_megacorp_matter_decompressor_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = megacorp_strategic_coordination_center_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_megacorp_intializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_megacorp_strategic_coordination_center_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_megacorp_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_megacorp_strategic_coordination_center_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = megacorp_mega_art_installation_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_megacorp_intializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_megacorp_mega_art_installation_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_megacorp_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_megacorp_mega_art_installation_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = megacorp_interstellar_assembly_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_megacorp_intializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_megacorp_interstellar_assembly_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_megacorp_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_megacorp_interstellar_assembly_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_05
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_05
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_05
-	# 	}
-	# }
-	# option = {
-	# 	name = basic_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_basic_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_basic_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = asteroid_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_asteroid_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_asteroid_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = binary_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_binary_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_binary_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = binary_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_binary_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_binary_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = trinary_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_trinary_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_trinary_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = trinary_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_misc_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_trinary_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_misc_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_trinary_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = deneb_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_deneb_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_deneb_system
-	# 	}
-	# }
-	# option = {
-	# 	name = une_deneb_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_une_deneb_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_une_deneb_system
-	# 	}
-	# }
-	# option = {
-	# 	name = deneb_neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = deneb_neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = deneb_neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = vultaumar_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_vultaumar_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_vultaumar_system
-	# 	}
-	# }
-	# option = {
-	# 	name = yuhtaan_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_yuhtaan_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_yuhtaan_system
-	# 	}
-	# }
-	# option = {
-	# 	name = fen_habbanis_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fen_habbanis_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fen_habbanis_system
-	# 	}
-	# }
-	# option = {
-	# 	name = irass_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_irass_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_irass_system
-	# 	}
-	# }
-	# option = {
-	# 	name = cybrex_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_prescripted_species_systems
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_cybrex_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_cybrex_system
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_system_initializer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_system_initializer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_system_initializer
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t1_no_guaranteed_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_no_guaranteed_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_no_guaranteed_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t2
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = sol_neighbor_t2_no_guaranteed_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_no_guaranteed_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_no_guaranteed_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = com_sol_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_com_sol_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_com_sol_system
-	# 	}
-	# }
-	# option = {
-	# 	name = com_sol_neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = com_sol_neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = com_sol_neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_sol_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_system
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_sol_neighbor_t1_first_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1_first_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1_first_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_sol_neighbor_t1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1
-	# 	}
-	# }
-	# option = {
-	# 	name = lost_colony_sol_neighbor_t2_second_colony
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_sol_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t2_second_colony
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_sol_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t2_second_colony
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_02
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_02
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_02
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_03
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_03
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_03
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_04
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_04
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_04
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_06
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_06
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_06
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_07
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_07
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_07
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_08
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_08
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_08
-	# 	}
-	# }
-	# option = {
-	# 	name = special_init_09
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_special_init_09
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_special_init_09
-	# 	}
-	# }
-	# option = {
-	# 	name = sanctuary_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sanctuary_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sanctuary_system
-	# 	}
-	# }
-	# option = {
-	# 	name = hyacinth_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_hyacinth_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_hyacinth_system
-	# 	}
-	# }
-	# option = {
-	# 	name = ai_system_1
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ai_system_1
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ai_system_1
-	# 	}
-	# }
-	# option = {
-	# 	name = crystal_manufactory_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_crystal_manufactory_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_crystal_manufactory_system
-	# 	}
-	# }
-	# option = {
-	# 	name = trappist_initializer
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_trappist_initializer
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_trappist_initializer
-	# 	}
-	# }
-	# option = {
-	# 	name = parvus_system
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_parvus_system
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_parvus_system
-	# 	}
-	# }
-	# option = {
-	# 	name = polaris_civilization
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_polaris_civilization
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_polaris_civilization
-	# 	}
-	# }
-	# option = {
-	# 	name = fumongus_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_special_system_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_fumongus_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_special_system_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_fumongus_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = dyson_sphere_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_utopia_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_dyson_sphere_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_utopia_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_dyson_sphere_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = science_nexus_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_utopia_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_science_nexus_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_utopia_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_science_nexus_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = sentry_array_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_utopia_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_sentry_array_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_utopia_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_sentry_array_init_01
-	# 	}
-	# }
-	# option = {
-	# 	name = ring_world_init_01
-	# 	trigger = {
-	# 		has_global_flag = sgm_spawn_system_utopia_initializers
-	# 	}
-	# 	hidden_effect = {
-	# 		set_global_flag = sgm_spawn_system_initializer_ring_world_init_01
-	# 		from = {
-	# 			event_target:global_event_country = {
-	# 				sgm_spawn_system_utopia_initializers_effect = yes
-	# 			}
-	# 		}
-	# 		remove_global_flag = sgm_spawn_system_initializer_ring_world_init_01
-	# 	}
-	# }
+	option = {
+		name = central_crystal_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_central_crystal_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_central_crystal_initializers = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_central_crystal_init_01
+		}
+	}
+	option = {
+		name = ai_system_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_01
+		}
+	}
+	option = {
+		name = ai_system_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_02
+		}
+	}
+	option = {
+		name = ai_system_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_03
+		}
+	}
+	option = {
+		name = ai_system_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_04
+		}
+	}
+	option = {
+		name = ai_system_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_05
+		}
+	}
+	option = {
+		name = cybrex_beta
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_cybrex_beta
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_cybrex_beta
+		}
+	}
+	option = {
+		name = sentinel_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sentinel_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_crisis_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sentinel_system
+		}
+	}
+	option = {
+		name = custom_starting_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_01
+		}
+	}
+	option = {
+		name = custom_starting_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_02
+		}
+	}
+	option = {
+		name = custom_starting_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_03
+		}
+	}
+	option = {
+		name = custom_starting_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_04
+		}
+	}
+	option = {
+		name = custom_starting_init_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_05
+		}
+	}
+	option = {
+		name = custom_starting_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_custom_starting_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_custom_starting_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_custom_starting_init_06
+		}
+	}
+	option = {
+		name = star_lifting_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_star_lifting_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_star_lifting_system
+		}
+	}
+	option = {
+		name = vechtar_zavonia_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_vechtar_zavonia_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_vechtar_zavonia_system
+		}
+	}
+	option = {
+		name = big_rip_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_big_rip_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_big_rip_system
+		}
+	}
+	option = {
+		name = time_loop_world_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_time_loop_world_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_time_loop_world_system
+		}
+	}
+	option = {
+		name = toxic_planet_toxic_moon
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_toxic_planet_toxic_moon
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_toxic_planet_toxic_moon
+		}
+	}
+	option = {
+		name = shattered_world_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_shattered_world_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_shattered_world_system
+		}
+	}
+	option = {
+		name = asteroid_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_asteroid_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_asteroid_system
+		}
+	}
+	option = {
+		name = hostile_init_mining_drones
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_mining_drones
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_mining_drones
+		}
+	}
+	option = {
+		name = hostile_init_amoeba
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_amoeba
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_amoeba
+		}
+	}
+	option = {
+		name = hostile_init_void_cloud
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_void_cloud
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_void_cloud
+		}
+	}
+	option = {
+		name = ice_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ice_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ice_system
+		}
+	}
+	option = {
+		name = high_energy_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_high_energy_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_high_energy_system
+		}
+	}
+	option = {
+		name = guardians_init_hatchling
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_hatchling
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_hatchling
+		}
+	}
+	option = {
+		name = great_wound_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_great_wound_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_great_wound_system
+		}
+	}
+	option = {
+		name = primitive_robot_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_primitive_robot_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_primitive_robot_system
+		}
+	}
+	option = {
+		name = superflare_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_superflare_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_superflare_system
+		}
+	}
+	option = {
+		name = collapse_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_collapse_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_collapse_system
+		}
+	}
+	option = {
+		name = old_foes_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_old_foes_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_old_foes_system
+		}
+	}
+	option = {
+		name = scavenger_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_scavenger_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_scavenger_system
+		}
+	}
+	option = {
+		name = living_planet_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_living_planet_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_living_planet_system
+		}
+	}
+	option = {
+		name = elderly_tiyanki_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_elderly_tiyanki_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_elderly_tiyanki_system
+		}
+	}
+	option = {
+		name = ratling_1_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ratling_1_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ratling_1_1
+		}
+	}
+	option = {
+		name = ratling_1_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ratling_1_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ratling_1_2
+		}
+	}
+	option = {
+		name = ratling_1_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ratling_1_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ratling_1_3
+		}
+	}
+	option = {
+		name = distar_crystal_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distar_crystal_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distar_crystal_system
+		}
+	}
+	option = {
+		name = distar_sealed_1_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distar_sealed_1_1
+		}
+	}
+	option = {
+		name = distar_sealed_1_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distar_sealed_1_2
+		}
+	}
+	option = {
+		name = distar_pod_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distar_pod_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distar_pod_system
+		}
+	}
+	option = {
+		name = distar_phaseshift_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distar_phaseshift_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distar_phaseshift_system
+		}
+	}
+	option = {
+		name = distantstars_init_00
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_00
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_00
+		}
+	}
+	option = {
+		name = distantstars_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_06
+		}
+	}
+	option = {
+		name = distantstars_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_01
+		}
+	}
+	option = {
+		name = distantstars_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_02
+		}
+	}
+	option = {
+		name = distantstars_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_03
+		}
+	}
+	option = {
+		name = distantstars_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_04
+		}
+	}
+	option = {
+		name = distantstars_init_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_05
+		}
+	}
+	option = {
+		name = distantstars_init_01b
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_01b
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_01b
+		}
+	}
+	option = {
+		name = distantstars_init_02b
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_02b
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_02b
+		}
+	}
+	option = {
+		name = distantstars_init_03b
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_03b
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_03b
+		}
+	}
+	option = {
+		name = distantstars_init_04b
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_distantstars_init_04b
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_distantstars_init_04b
+		}
+	}
+	option = {
+		name = star_crazy_fallback_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_star_crazy_fallback_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_distant_stars_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_star_crazy_fallback_system
+		}
+	}
+	option = {
+		name = random_empire_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_01
+		}
+	}
+	option = {
+		name = random_empire_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_02
+		}
+	}
+	option = {
+		name = random_empire_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_03
+		}
+	}
+	option = {
+		name = random_empire_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_04
+		}
+	}
+	option = {
+		name = random_empire_init_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_05
+		}
+	}
+	option = {
+		name = random_empire_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_random_empire_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_random_empire_init_06
+		}
+	}
+	option = {
+		name = neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_neighbor_t1
+		}
+	}
+	option = {
+		name = neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = neighbor_t2
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_neighbor_t2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_neighbor_t2
+		}
+	}
+	option = {
+		name = neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = example_initializer
+		trigger = {
+			has_global_flag = sgm_spawn_system_example_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_example_initializer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_example_initializer
+		}
+	}
+	option = {
+		name = example_neighbor
+		trigger = {
+			has_global_flag = sgm_spawn_system_example_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_example_neighbor
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_example_neighbor
+		}
+	}
+	option = {
+		name = fallen_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_1
+		}
+	}
+	option = {
+		name = fallen_1_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_1_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_1_2
+		}
+	}
+	option = {
+		name = fallen_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_2
+		}
+	}
+	option = {
+		name = fallen_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_3
+		}
+	}
+	option = {
+		name = fallen_4
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_4
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_4
+		}
+	}
+	option = {
+		name = fallen_col_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_col_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_col_1
+		}
+	}
+	option = {
+		name = fallen_col_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_col_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_col_2
+		}
+	}
+	option = {
+		name = fallen_orbitals_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_orbitals_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_orbitals_1
+		}
+	}
+	option = {
+		name = fallen_orbitals_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_orbitals_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_orbitals_2
+		}
+	}
+	option = {
+		name = fallen_shrouded
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_shrouded
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_shrouded
+		}
+	}
+	option = {
+		name = fallen_shielded_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_shielded_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_1
+		}
+	}
+	option = {
+		name = fallen_shielded_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_shielded_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_2
+		}
+	}
+	option = {
+		name = fallen_shielded_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_shielded_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_shielded_3
+		}
+	}
+	option = {
+		name = fallen_holy_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_holy_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_holy_01
+		}
+	}
+	option = {
+		name = fallen_holy_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_holy_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_holy_02
+		}
+	}
+	option = {
+		name = fallen_holy_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_holy_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_holy_03
+		}
+	}
+	option = {
+		name = fallen_holy_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_holy_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_holy_04
+		}
+	}
+	option = {
+		name = fallen_xeno_zoo
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_xeno_zoo
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_xeno_zoo
+		}
+	}
+	option = {
+		name = fallen_machine
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_machine
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_machine
+		}
+	}
+	option = {
+		name = fallen_machine_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_machine_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_machine_2
+		}
+	}
+	option = {
+		name = fallen_machine_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_machine_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_machine_3
+		}
+	}
+	option = {
+		name = fallen_machine_4
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_machine_4
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_machine_4
+		}
+	}
+	option = {
+		name = fallen_machine_5
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fallen_machine_5
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_fallen_empire_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fallen_machine_5
+		}
+	}
+	option = {
+		name = hauer_system_initializer
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hauer_system_initializer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hauer_system_initializer
+		}
+	}
+	option = {
+		name = intercepting_history_system_initializer_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_01
+		}
+	}
+	option = {
+		name = intercepting_history_system_initializer_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_02
+		}
+	}
+	option = {
+		name = relentless_pursuit_system_initializer_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_01
+		}
+	}
+	option = {
+		name = relentless_pursuit_system_initializer_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_02
+		}
+	}
+	option = {
+		name = void_dweller_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_void_dweller_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_void_dweller_system
+		}
+	}
+	option = {
+		name = lost_colony_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_1
+		}
+	}
+	option = {
+		name = lost_colony_neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1
+		}
+	}
+	option = {
+		name = lost_colony_neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = lost_colony_neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = scion_fallen_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_scion_fallen_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_scion_fallen_1
+		}
+	}
+	option = {
+		name = scion_fallen_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_scion_fallen_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_scion_fallen_2
+		}
+	}
+	option = {
+		name = shattered_ring_start
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_shattered_ring_start
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_shattered_ring_start
+		}
+	}
+	option = {
+		name = mega_shipyard_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_mega_shipyard_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_mega_shipyard_init_01
+		}
+	}
+	option = {
+		name = planet_with_too_many_moons_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_planet_with_too_many_moons_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_planet_with_too_many_moons_system
+		}
+	}
+	option = {
+		name = wenkwort_initializer
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_wenkwort_initializer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_wenkwort_initializer
+		}
+	}
+	option = {
+		name = sol_system_void_dweller_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_system_void_dweller_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_federations_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_system_void_dweller_system
+		}
+	}
+	option = {
+		name = hostile_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_01
+		}
+	}
+	option = {
+		name = hostile_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_02
+		}
+	}
+	option = {
+		name = hostile_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_03
+		}
+	}
+	option = {
+		name = hostile_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_04
+		}
+	}
+	option = {
+		name = hostile_init_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_05
+		}
+	}
+	option = {
+		name = hostile_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_06
+		}
+	}
+	option = {
+		name = hostile_init_07
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_07
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_07
+		}
+	}
+	option = {
+		name = hostile_init_08
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_08
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_08
+		}
+	}
+	option = {
+		name = hostile_init_10
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_10
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_10
+		}
+	}
+	option = {
+		name = hostile_init_10_small_amoeba_pack
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_10_small_amoeba_pack
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_10_small_amoeba_pack
+		}
+	}
+	option = {
+		name = hostile_init_11
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_11
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_11
+		}
+	}
+	option = {
+		name = hostile_init_12
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_12
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_12
+		}
+	}
+	option = {
+		name = hostile_init_12_mining_drones
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_12_mining_drones
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_12_mining_drones
+		}
+	}
+	option = {
+		name = hostile_init_12_drone_destroyer
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_12_drone_destroyer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_12_drone_destroyer
+		}
+	}
+	option = {
+		name = hostile_init_13
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_13
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_13
+		}
+	}
+	option = {
+		name = hostile_init_14
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_14
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_14
+		}
+	}
+	option = {
+		name = hostile_init_15
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_15
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_15
+		}
+	}
+	option = {
+		name = hostile_init_16
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_16
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_16
+		}
+	}
+	option = {
+		name = hostile_init_18
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_18
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_18
+		}
+	}
+	option = {
+		name = hostile_init_20
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_20
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_hostile_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_20
+		}
+	}
+	option = {
+		name = guardians_artist_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_01
+		}
+	}
+	option = {
+		name = guardians_artist_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_02
+		}
+	}
+	option = {
+		name = guardians_artist_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_artist_init_03
+		}
+	}
+	option = {
+		name = guardians_curator_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_01
+		}
+	}
+	option = {
+		name = guardians_curator_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_02
+		}
+	}
+	option = {
+		name = guardians_curator_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_curator_init_03
+		}
+	}
+	option = {
+		name = guardians_trader_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_01
+		}
+	}
+	option = {
+		name = guardians_trader_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_02
+		}
+	}
+	option = {
+		name = guardians_trader_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_trader_init_03
+		}
+	}
+	option = {
+		name = guardians_init_stellarites
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_stellarites
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_stellarites
+		}
+	}
+	option = {
+		name = guardians_init_dragon
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_dragon
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_dragon
+		}
+	}
+	option = {
+		name = guardians_init_horror
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_horror
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_horror
+		}
+	}
+	option = {
+		name = guardians_init_dreadnought
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_dreadnought
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_dreadnought
+		}
+	}
+	option = {
+		name = guardians_init_hive
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_hive
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_hive
+		}
+	}
+	option = {
+		name = guardians_init_technosphere
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_technosphere
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_technosphere
+		}
+	}
+	option = {
+		name = guardians_init_fortress
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_fortress
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_fortress
+		}
+	}
+	option = {
+		name = guardians_init_wraith
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_guardians_init_wraith
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_leviathans_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_guardians_init_wraith
+		}
+	}
+	option = {
+		name = marauder_1_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_1_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_1_1
+		}
+	}
+	option = {
+		name = marauder_1_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_1_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_1_2
+		}
+	}
+	option = {
+		name = marauder_1_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_1_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_1_3
+		}
+	}
+	option = {
+		name = marauder_2_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_2_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_2_1
+		}
+	}
+	option = {
+		name = marauder_2_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_2_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_2_2
+		}
+	}
+	option = {
+		name = marauder_2_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_2_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_2_3
+		}
+	}
+	option = {
+		name = marauder_3_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_3_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_3_1
+		}
+	}
+	option = {
+		name = marauder_3_2
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_3_2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_3_2
+		}
+	}
+	option = {
+		name = marauder_3_3
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_marauder_3_3
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_marauder_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_marauder_3_3
+		}
+	}
+	option = {
+		name = megacorp_caravaneer_init
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_megacorp_caravaneer_init
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_megacorp_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_megacorp_caravaneer_init
+		}
+	}
+	option = {
+		name = megacorp_matter_decompressor_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_megacorp_matter_decompressor_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_megacorp_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_megacorp_matter_decompressor_init_01
+		}
+	}
+	option = {
+		name = megacorp_strategic_coordination_center_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_megacorp_strategic_coordination_center_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_megacorp_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_megacorp_strategic_coordination_center_init_01
+		}
+	}
+	option = {
+		name = megacorp_mega_art_installation_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_megacorp_mega_art_installation_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_megacorp_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_megacorp_mega_art_installation_init_01
+		}
+	}
+	option = {
+		name = megacorp_interstellar_assembly_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_megacorp_interstellar_assembly_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_megacorp_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_megacorp_interstellar_assembly_init_01
+		}
+	}
+	option = {
+		name = basic_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_01
+		}
+	}
+	option = {
+		name = basic_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_02
+		}
+	}
+	option = {
+		name = basic_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_03
+		}
+	}
+	option = {
+		name = basic_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_04
+		}
+	}
+	option = {
+		name = basic_init_05
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_05
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_05
+		}
+	}
+	option = {
+		name = basic_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_basic_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_basic_init_06
+		}
+	}
+	option = {
+		name = asteroid_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_asteroid_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_asteroid_init_01
+		}
+	}
+	option = {
+		name = binary_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_binary_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_binary_init_01
+		}
+	}
+	option = {
+		name = binary_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_binary_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_binary_init_02
+		}
+	}
+	option = {
+		name = trinary_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_trinary_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_trinary_init_01
+		}
+	}
+	option = {
+		name = trinary_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_trinary_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_trinary_init_02
+		}
+	}
+	option = {
+		name = deneb_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_deneb_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_deneb_system
+		}
+	}
+	option = {
+		name = une_deneb_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_une_deneb_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_une_deneb_system
+		}
+	}
+	option = {
+		name = deneb_neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1
+		}
+	}
+	option = {
+		name = deneb_neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = deneb_neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_deneb_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = vultaumar_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_vultaumar_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_vultaumar_system
+		}
+	}
+	option = {
+		name = yuhtaan_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_yuhtaan_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_yuhtaan_system
+		}
+	}
+	option = {
+		name = fen_habbanis_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fen_habbanis_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fen_habbanis_system
+		}
+	}
+	option = {
+		name = irass_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_irass_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_irass_system
+		}
+	}
+	option = {
+		name = cybrex_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_cybrex_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_prescripted_species_systems_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_cybrex_system
+		}
+	}
+	option = {
+		name = sol_system_initializer
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_system_initializer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_system_initializer
+		}
+	}
+	option = {
+		name = sol_neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1
+		}
+	}
+	option = {
+		name = sol_neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = sol_neighbor_t1_no_guaranteed_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_no_guaranteed_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t1_no_guaranteed_colony
+		}
+	}
+	option = {
+		name = sol_neighbor_t2
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2
+		}
+	}
+	option = {
+		name = sol_neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = sol_neighbor_t2_no_guaranteed_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_no_guaranteed_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sol_neighbor_t2_no_guaranteed_colony
+		}
+	}
+	option = {
+		name = com_sol_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_com_sol_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_com_sol_system
+		}
+	}
+	option = {
+		name = com_sol_neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = com_sol_neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t1
+		}
+	}
+	option = {
+		name = com_sol_neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_com_sol_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = lost_colony_sol_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_system
+		}
+	}
+	option = {
+		name = lost_colony_sol_neighbor_t1_first_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1_first_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1_first_colony
+		}
+	}
+	option = {
+		name = lost_colony_sol_neighbor_t1
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t1
+		}
+	}
+	option = {
+		name = lost_colony_sol_neighbor_t2_second_colony
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t2_second_colony
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_sol_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_lost_colony_sol_neighbor_t2_second_colony
+		}
+	}
+	option = {
+		name = special_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_01
+		}
+	}
+	option = {
+		name = special_init_02
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_02
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_02
+		}
+	}
+	option = {
+		name = special_init_03
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_03
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_03
+		}
+	}
+	option = {
+		name = special_init_04
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_04
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_04
+		}
+	}
+	option = {
+		name = special_init_06
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_06
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_06
+		}
+	}
+	option = {
+		name = special_init_07
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_07
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_07
+		}
+	}
+	option = {
+		name = special_init_08
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_08
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_08
+		}
+	}
+	option = {
+		name = special_init_09
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_special_init_09
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_special_init_09
+		}
+	}
+	option = {
+		name = sanctuary_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sanctuary_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sanctuary_system
+		}
+	}
+	option = {
+		name = hyacinth_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hyacinth_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hyacinth_system
+		}
+	}
+	option = {
+		name = ai_system_1
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ai_system_1
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ai_system_1
+		}
+	}
+	option = {
+		name = crystal_manufactory_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_crystal_manufactory_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_crystal_manufactory_system
+		}
+	}
+	option = {
+		name = trappist_initializer
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_trappist_initializer
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_trappist_initializer
+		}
+	}
+	option = {
+		name = parvus_system
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_parvus_system
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_parvus_system
+		}
+	}
+	option = {
+		name = polaris_civilization
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_polaris_civilization
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_polaris_civilization
+		}
+	}
+	option = {
+		name = fumongus_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_fumongus_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_special_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_fumongus_init_01
+		}
+	}
+	option = {
+		name = dyson_sphere_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_dyson_sphere_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_utopia_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_dyson_sphere_init_01
+		}
+	}
+	option = {
+		name = science_nexus_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_science_nexus_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_utopia_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_science_nexus_init_01
+		}
+	}
+	option = {
+		name = sentry_array_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_sentry_array_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_utopia_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_sentry_array_init_01
+		}
+	}
+	option = {
+		name = ring_world_init_01
+		trigger = {
+			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_ring_world_init_01
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_utopia_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_ring_world_init_01
+		}
+	}
 	option = {
 		name = CANCEL
 		hidden_effect = {
