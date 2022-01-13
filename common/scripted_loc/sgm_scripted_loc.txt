@@ -40,7 +40,7 @@ defined_text = {
 		trigger = {
 			has_global_flag = sgm_teleport_fleet_all
 		}
-		localization_key =  EVERY_FLEET_IN_SYSTEM_EFFECT
+		localization_key = EVERY_FLEET_IN_SYSTEM_EFFECT
 	}
 	text = {
 		trigger = {
@@ -51,7 +51,7 @@ defined_text = {
 	default = FLEET
 }
 
-defined_text = { 
+defined_text = {
 	name = CurrentlyEditingBounty
 	text = {
 		trigger = {
@@ -132,9 +132,9 @@ defined_text = {
 		localization_key = planet_destroyed
 	}
 	default = NONE
-}	
+}
 
-defined_text = { 
+defined_text = {
 	name = CurrentlyEditingBountyValue
 	text = {
 		trigger = {
@@ -216,7 +216,7 @@ defined_text = {
 	}
 }
 
-defined_text = { 
+defined_text = {
 	name = CurrentlyEditingDate
 	text = {
 		trigger = {
@@ -241,7 +241,7 @@ defined_text = {
 			has_global_flag = setting_preventing_ai_federations
 		}
 		localization_key = preventing_ai_federations
-	}	
+	}
 	text = {
 		trigger = {
 			has_global_flag = setting_preventing_player_federations
@@ -524,11 +524,164 @@ defined_text = {
 }
 
 defined_text = {
-	name = "war_status_tooltip"
+	name = war_status_tooltip
 	text = {
 		trigger = {
 			has_global_flag = AI_wars_blocked
 		}
 		localization_key = preventing_ai_wars_tooltip
 	}
+}
+
+defined_text = {
+	name = GetNameInitilalizerSpawnSwitch
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_sgm_systems
+		}
+		localization_key = STAT_SOURCE_UTILITY
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		localization_key = ANCIENT_RELICS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_apocalypse_initializers
+		}
+		localization_key = APOCALYPSE_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_aquatics_initializers
+		}
+		localization_key = AQUATICS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_central_crystal_initializers
+		}
+		localization_key = NAME_Central_Crystal_Species
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_crisis_initializers
+		}
+		localization_key = CRISIS_FACTOR
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_custom_starting_initializers
+		}
+		localization_key = customizer_custom_value
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		localization_key = DISTANT_STARS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_empire_initializers
+		}
+		localization_key = SELECT_SYSTEM_INITIALIZER_LABEL
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_example_initializers
+		}
+		localization_key = NAME_LISTS_EXAMPLES
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_fallen_empire_initializers
+		}
+		localization_key = NUM_FALLEN_EMPIRES
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		localization_key = FEDERATIONS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_hostile_system_initializers
+		}
+		localization_key = FC_RELATION_LABEL_HOSTILE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		localization_key = LEVIATHANS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		localization_key = sys_marauder
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		localization_key = MEGACORP_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		localization_key = FLAG_CATEGORY_no_category
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_prescripted_species_systems
+		}
+		localization_key = PREDEFINED
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_sol_initializers
+		}
+		localization_key = sol_system_initializer_NAME
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_special_system_initializers
+		}
+		localization_key = OTHER
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		localization_key =  UTOPIA_TITLE
+	}
+	default = SOLAR_SYSTEM
+}
+
+defined_text = {
+	name = Get_hyperlane_spawn_system
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_hyperlane_yes
+		}
+		localization_key = YES
+	}
+	default = NO
+}
+
+defined_text = {
+	name = Get_is_discovered_spawn_system
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_is_discovered_yes
+		}
+		localization_key = YES
+	}
+	default = NO
 }
