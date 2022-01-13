@@ -613,14 +613,25 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_create_starbase_target_country
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 291 }
+							position = { x = 294 y = 261 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_create_starbase_target_country
 							orientation = UPPER_LEFT
 							effect = sgm_create_starbase_target_country
 				#			shortCut = j
-						}					
+						}
+						effectbuttonType = {					
+							name = sgm_spawn_system
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 298 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_spawn_system
+							orientation = UPPER_LEFT
+							effect = sgm_spawn_system
+				#			shortCut = j
+						}						
 					}
 				}
 			}
