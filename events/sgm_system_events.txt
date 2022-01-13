@@ -196,6 +196,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
 		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
 		set_global_flag = sgm_spawn_system_initializer_relic_system_1
 		from = {
 			event_target:global_event_country = {
@@ -208,6 +211,9 @@ country_event = {
 		name = Zrocursor_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		set_global_flag = sgm_spawn_system_initializer_Zrocursor_system
 		from = {
@@ -222,6 +228,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
 		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
 		set_global_flag = sgm_spawn_system_initializer_relic_system_4
 		from = {
 			event_target:global_event_country = {
@@ -234,6 +243,9 @@ country_event = {
 		name = last_baol_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		set_global_flag = sgm_spawn_system_initializer_last_baol_system
 		from = {
@@ -248,6 +260,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
 		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
 		set_global_flag = sgm_spawn_system_initializer_mechanocalibrator_system
 		from = {
 			event_target:global_event_country = {
@@ -260,6 +275,9 @@ country_event = {
 		name = rubricator_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_ancient_relics_initializers
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		set_global_flag = sgm_spawn_system_initializer_rubricator_system
 		from = {
@@ -274,6 +292,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_apocalypse_initializers
 		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
 		set_global_flag = sgm_spawn_system_initializer_abandoned_gateways_01
 		from = {
 			event_target:global_event_country = {
@@ -286,6 +307,9 @@ country_event = {
 		name = ocean_paradise_start
 		trigger = {
 			has_global_flag = sgm_spawn_system_aquatics_initializers
+		}
+		allow = {
+			host_has_dlc = "Aquatics Species Pack"
 		}
 		set_global_flag = sgm_spawn_system_initializer_ocean_paradise_start
 		from = {
@@ -510,6 +534,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_star_lifting_system
 			from = {
@@ -524,6 +551,9 @@ country_event = {
 		name = vechtar_zavonia_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_vechtar_zavonia_system
@@ -540,6 +570,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_big_rip_system
 			from = {
@@ -554,6 +587,9 @@ country_event = {
 		name = time_loop_world_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_time_loop_world_system
@@ -570,6 +606,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_toxic_planet_toxic_moon
 			from = {
@@ -584,6 +623,9 @@ country_event = {
 		name = shattered_world_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_shattered_world_system
@@ -600,6 +642,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_asteroid_system
 			from = {
@@ -614,6 +659,9 @@ country_event = {
 		name = hostile_init_mining_drones
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_hostile_init_mining_drones
@@ -630,6 +678,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_hostile_init_amoeba
 			from = {
@@ -644,6 +695,9 @@ country_event = {
 		name = hostile_init_void_cloud
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_hostile_init_void_cloud
@@ -660,6 +714,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_ice_system
 			from = {
@@ -674,6 +731,9 @@ country_event = {
 		name = high_energy_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_high_energy_system
@@ -690,6 +750,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_hatchling
 			from = {
@@ -704,6 +767,9 @@ country_event = {
 		name = great_wound_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_great_wound_system
@@ -720,6 +786,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_primitive_robot_system
 			from = {
@@ -734,6 +803,9 @@ country_event = {
 		name = superflare_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_superflare_system
@@ -750,6 +822,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_collapse_system
 			from = {
@@ -764,6 +839,9 @@ country_event = {
 		name = old_foes_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_old_foes_system
@@ -780,6 +858,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_scavenger_system
 			from = {
@@ -794,6 +875,9 @@ country_event = {
 		name = living_planet_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_living_planet_system
@@ -810,6 +894,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_elderly_tiyanki_system
 			from = {
@@ -824,6 +911,9 @@ country_event = {
 		name = ratling_1_1
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_ratling_1_1
@@ -840,6 +930,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_ratling_1_2
 			from = {
@@ -854,6 +947,9 @@ country_event = {
 		name = ratling_1_3
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_ratling_1_3
@@ -870,6 +966,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distar_crystal_system
 			from = {
@@ -884,6 +983,9 @@ country_event = {
 		name = distar_sealed_1_1
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_1
@@ -900,6 +1002,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distar_sealed_1_2
 			from = {
@@ -914,6 +1019,9 @@ country_event = {
 		name = distar_pod_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distar_pod_system
@@ -930,6 +1038,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distar_phaseshift_system
 			from = {
@@ -944,6 +1055,9 @@ country_event = {
 		name = distantstars_init_00
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_00
@@ -960,6 +1074,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_06
 			from = {
@@ -974,6 +1091,9 @@ country_event = {
 		name = distantstars_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_01
@@ -990,6 +1110,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_02
 			from = {
@@ -1004,6 +1127,9 @@ country_event = {
 		name = distantstars_init_03
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_03
@@ -1020,6 +1146,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_04
 			from = {
@@ -1034,6 +1163,9 @@ country_event = {
 		name = distantstars_init_05
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_05
@@ -1050,6 +1182,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_01b
 			from = {
@@ -1064,6 +1199,9 @@ country_event = {
 		name = distantstars_init_02b
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_02b
@@ -1080,6 +1218,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_03b
 			from = {
@@ -1095,6 +1236,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
 		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_distantstars_init_04b
 			from = {
@@ -1109,6 +1253,9 @@ country_event = {
 		name = star_crazy_fallback_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_distant_stars_initializers
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_star_crazy_fallback_system
@@ -1650,6 +1797,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_hauer_system_initializer
 			from = {
@@ -1664,6 +1814,9 @@ country_event = {
 		name = intercepting_history_system_initializer_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_01
@@ -1680,6 +1833,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_intercepting_history_system_initializer_02
 			from = {
@@ -1694,6 +1850,9 @@ country_event = {
 		name = relentless_pursuit_system_initializer_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_01
@@ -1710,6 +1869,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_relentless_pursuit_system_initializer_02
 			from = {
@@ -1724,6 +1886,9 @@ country_event = {
 		name = void_dweller_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_void_dweller_system
@@ -1740,6 +1905,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_lost_colony_1
 			from = {
@@ -1754,6 +1922,9 @@ country_event = {
 		name = lost_colony_neighbor_t1
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1
@@ -1770,6 +1941,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t1_first_colony
 			from = {
@@ -1784,6 +1958,9 @@ country_event = {
 		name = lost_colony_neighbor_t2_second_colony
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_lost_colony_neighbor_t2_second_colony
@@ -1800,6 +1977,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_scion_fallen_1
 			from = {
@@ -1814,6 +1994,9 @@ country_event = {
 		name = scion_fallen_2
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_scion_fallen_2
@@ -1830,6 +2013,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_shattered_ring_start
 			from = {
@@ -1844,6 +2030,9 @@ country_event = {
 		name = mega_shipyard_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_mega_shipyard_init_01
@@ -1860,6 +2049,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_planet_with_too_many_moons_system
 			from = {
@@ -1875,6 +2067,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
 		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_wenkwort_initializer
 			from = {
@@ -1889,6 +2084,9 @@ country_event = {
 		name = sol_system_void_dweller_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_federations_initializers
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_sol_system_void_dweller_system
@@ -2205,6 +2403,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_01
 			from = {
@@ -2219,6 +2420,9 @@ country_event = {
 		name = guardians_artist_init_02
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_02
@@ -2235,6 +2439,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_artist_init_03
 			from = {
@@ -2249,6 +2456,9 @@ country_event = {
 		name = guardians_curator_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_01
@@ -2265,6 +2475,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_02
 			from = {
@@ -2279,6 +2492,9 @@ country_event = {
 		name = guardians_curator_init_03
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_curator_init_03
@@ -2295,6 +2511,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_01
 			from = {
@@ -2309,6 +2528,9 @@ country_event = {
 		name = guardians_trader_init_02
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_02
@@ -2325,6 +2547,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_trader_init_03
 			from = {
@@ -2339,6 +2564,9 @@ country_event = {
 		name = guardians_init_stellarites
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_stellarites
@@ -2355,6 +2583,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_dragon
 			from = {
@@ -2369,6 +2600,9 @@ country_event = {
 		name = guardians_init_horror
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_horror
@@ -2385,6 +2619,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_dreadnought
 			from = {
@@ -2399,6 +2636,9 @@ country_event = {
 		name = guardians_init_hive
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_hive
@@ -2415,6 +2655,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_technosphere
 			from = {
@@ -2429,6 +2672,9 @@ country_event = {
 		name = guardians_init_fortress
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_fortress
@@ -2445,6 +2691,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_leviathans_system_initializers
 		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_guardians_init_wraith
 			from = {
@@ -2459,6 +2708,9 @@ country_event = {
 		name = marauder_1_1
 		trigger = {
 			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_marauder_1_1
@@ -2505,6 +2757,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_marauder_initializers
 		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_marauder_2_1
 			from = {
@@ -2549,6 +2804,9 @@ country_event = {
 		name = marauder_3_1
 		trigger = {
 			has_global_flag = sgm_spawn_system_marauder_initializers
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_marauder_3_1
@@ -2595,6 +2853,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_megacorp_intializers
 		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_megacorp_caravaneer_init
 			from = {
@@ -2609,6 +2870,9 @@ country_event = {
 		name = megacorp_matter_decompressor_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_megacorp_matter_decompressor_init_01
@@ -2625,6 +2889,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_megacorp_intializers
 		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_megacorp_strategic_coordination_center_init_01
 			from = {
@@ -2640,6 +2907,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_megacorp_intializers
 		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_megacorp_mega_art_installation_init_01
 			from = {
@@ -2654,6 +2924,9 @@ country_event = {
 		name = megacorp_interstellar_assembly_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_megacorp_intializers
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_megacorp_interstellar_assembly_init_01
@@ -3450,6 +3723,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_utopia_initializers
 		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_dyson_sphere_init_01
 			from = {
@@ -3464,6 +3740,9 @@ country_event = {
 		name = science_nexus_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_science_nexus_init_01
@@ -3480,6 +3759,9 @@ country_event = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_utopia_initializers
 		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_sentry_array_init_01
 			from = {
@@ -3494,6 +3776,9 @@ country_event = {
 		name = ring_world_init_01
 		trigger = {
 			has_global_flag = sgm_spawn_system_utopia_initializers
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		hidden_effect = {
 			set_global_flag = sgm_spawn_system_initializer_ring_world_init_01
