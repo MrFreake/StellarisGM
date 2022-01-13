@@ -635,3 +635,22 @@ sgm_add_deposit = {
 	}
 }
 
+sgm_spawn_system = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_system.3
+				scopes = {
+					from = prev.solar_system	# solar_system
+					fromfrom = prev 	# Planet scope
+				}
+			}
+		}
+	}
+}
+
