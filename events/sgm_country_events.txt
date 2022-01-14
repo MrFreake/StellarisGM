@@ -9,17 +9,6 @@ country_event = {
 	immediate = {}
 
 	option = {
-		NAME = join_galactic_community
-		allow = {
-			is_country_type = sgm_game_master
-		}
-		custom_tooltip = "Forces the GM Country to join the Galactic Community."
-		root = {
-			add_to_galactic_community_no_message = yes
-		}
-	}
-
-	option = {
 		NAME = TECHNOLOGY
 		custom_tooltip = "Grants technologies."
 		country_event = {
@@ -124,7 +113,7 @@ country_event = { 							# declare war options
 				
 			}
 		}
-		NAME = wg_conquest
+		NAME = war_goal_wg_conquest
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -145,7 +134,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_independence 
+		NAME = war_goal_wg_independence 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -161,7 +150,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_end_threat 
+		NAME = war_goal_wg_end_threat 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -182,7 +171,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_end_threat_swarm 
+		NAME = war_goal_wg_end_threat_swarm 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -203,7 +192,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_end_threat_assimilators 
+		NAME = war_goal_wg_end_threat_assimilators 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -219,7 +208,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_assimilation 
+		NAME = war_goal_wg_assimilation 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -235,7 +224,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_cleansing 					
+		NAME = war_goal_wg_cleansing 					
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -251,7 +240,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_absorption 
+		NAME = war_goal_wg_absorption 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -267,7 +256,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_plunder 
+		NAME = war_goal_wg_plunder 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -288,7 +277,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_colossus 
+		NAME = war_goal_wg_colossus 
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -309,7 +298,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_end_threat_colossus  
+		NAME = war_goal_wg_end_threat_colossus  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -325,7 +314,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_subjugation  
+		NAME = war_goal_wg_subjugation  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -342,7 +331,7 @@ country_event = { 							# declare war options
 		allow = {
 
 		}
-		NAME = wg_tribute  
+		NAME = war_goal_wg_tribute  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -361,7 +350,7 @@ country_event = { 							# declare war options
 				has_authority = auth_corporate 
 			}
 		}
-		NAME = wg_megacorp_subjugate  
+		NAME = war_goal_wg_megacorp_subjugate  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -378,7 +367,7 @@ country_event = { 							# declare war options
 		allow = {
 			
 		}
-		NAME = wg_force_ideology  
+		NAME = war_goal_wg_force_ideology  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -395,7 +384,7 @@ country_event = { 							# declare war options
 		allow = {
 			
 		}
-		NAME = wg_humiliation  
+		NAME = war_goal_wg_humiliation  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -417,7 +406,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_take_galatron  
+		NAME = war_goal_wg_take_galatron  
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -438,7 +427,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_expel_corp   
+		NAME = war_goal_wg_expel_corp   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -457,7 +446,7 @@ country_event = { 							# declare war options
 				has_authority = auth_corporate
 			}
 		}
-		NAME = wg_hostile_takeover   
+		NAME = war_goal_wg_hostile_takeover   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -479,7 +468,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_steal_galatron   
+		NAME = war_goal_wg_steal_galatron   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -501,7 +490,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_scion   
+		NAME = war_goal_wg_scion   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -523,7 +512,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_hegemon   
+		NAME = war_goal_wg_hegemon   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -540,7 +529,7 @@ country_event = { 							# declare war options
 		allow = {
 			
 		}
-		NAME = wg_leave_hegemony   
+		NAME = war_goal_wg_leave_hegemony   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -562,7 +551,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_counterattack   
+		NAME = war_goal_wg_counterattack   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -584,7 +573,7 @@ country_event = { 							# declare war options
 				}
 			}
 		}
-		NAME = wg_renegade_containment   
+		NAME = war_goal_wg_renegade_containment   
 		from = {
 			declare_war = {
 				target = event_target:target_country
@@ -594,7 +583,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_fe_humiliation    
-		NAME = wg_fe_humiliation    
+		NAME = war_goal_wg_fe_humiliation    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -617,7 +606,7 @@ country_event = { 							# declare war options
 
 	# fe war goals
 	option = {									# wg_fe_stop_atrocities    
-		NAME = wg_fe_stop_atrocities    
+		NAME = war_goal_wg_fe_stop_atrocities    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -635,7 +624,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_fe_stop_ai    
-		NAME = wg_fe_stop_ai    
+		NAME = war_goal_wg_fe_stop_ai    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -653,7 +642,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_fe_cleanse_holy_worlds    
-		NAME = wg_fe_cleanse_holy_worlds    
+		NAME = war_goal_wg_fe_cleanse_holy_worlds    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -675,7 +664,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_fe_cleanse_border_worlds    
-		NAME = wg_fe_cleanse_border_worlds    
+		NAME = war_goal_wg_fe_cleanse_border_worlds    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -697,7 +686,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_ae_domination    
-		NAME = wg_ae_domination    
+		NAME = war_goal_wg_ae_domination    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
@@ -715,7 +704,7 @@ country_event = { 							# declare war options
 	}
 
 	option = {									# wg_end_threat_ae    
-		NAME = wg_end_threat_ae    
+		NAME = war_goal_wg_end_threat_ae    
 		trigger = {
 				has_global_flag = showing_FE_wg
 		}
