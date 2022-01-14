@@ -109,3 +109,4 @@ sgm_var_jumps_spawn_system_value: "[global_event_country.sgm_var_jumps_spawn_sys
 sgm_var_distance_spawn_system_value: "[global_event_country.sgm_var_distance_spawn_system]"
 sgm_spawn_system_hyperlane_switch: "[this.Get_hyperlane_spawn_system]"
 sgm_spawn_system_is_discovered_switch: "[this.Get_is_discovered_spawn_system]"
+
