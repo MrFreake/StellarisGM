@@ -2,7 +2,7 @@ guiTypes = {
 	### modifier_var event window
 
 	containerWindowType = {
-		name = "sgm_ScalarEventWindow"
+		name = "sgm_SpawnSystemEventWindow"
 		orientation = center
 		origo = center
 		moveable = yes
@@ -302,58 +302,102 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 			effectbuttonType = {					
-				name = modifier_var_minus_ten
+				name = sgm_spawn_system_var_jumps_minus_one
 				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 156 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-10"
-				orientation = CENTER_LEFT
-				effect = modifier_var_minus_ten
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_minus_one
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 188 y = -85 }
+				position = { x = 92 y = -85 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-1"
 				orientation = CENTER_LEFT
-				effect = modifier_var_minus_one
+				effect = sgm_spawn_system_var_jumps_minus_one
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = modifier_var_value
+				name = sgm_var_jumps_spawn_system_value
 				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 220 y = -85 }
+				position = { x = 124 y = -85 }
 				scale = 1
 				buttonFont = malgun_goth_24
-				buttonText = modifier_var_value
+				buttonText = sgm_var_jumps_spawn_system_value
 				orientation = CENTER_LEFT
-				effect = modifier_var_value
+				effect = sgm_var_jumps_spawn_system_value
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = modifier_var_add_one
+				name = sgm_spawn_system_var_jumps_plus_one
 				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 252 y = -85 }
+				position = { x = 156 y = -85 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+1"
 				orientation = CENTER_LEFT
-				effect = modifier_var_add_one
+				effect = sgm_spawn_system_var_jumps_plus_one
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = modifier_var_add_ten
+				name = sgm_spawn_system_var_distance_minus_ten
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 220 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "-10"
+				orientation = CENTER_LEFT
+				effect = sgm_spawn_system_var_distance_minus_ten
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_var_distance_spawn_system_value
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 252 y = -85 }
+				scale = 1
+				buttonFont = malgun_goth_24
+				buttonText = sgm_var_distance_spawn_system_value
+				orientation = CENTER_LEFT
+				effect = sgm_var_distance_spawn_system_value
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_spawn_system_var_distance_plus_ten
 				quadTextureSprite = "GFX_bounty_square"
 				position = { x = 284 y = -85 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+10"
 				orientation = CENTER_LEFT
-				effect = modifier_var_add_ten
+				effect = sgm_spawn_system_var_distance_plus_ten
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_spawn_system_var_distance_plus_ten
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 316 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "+10"
+				orientation = CENTER_LEFT
+				effect = sgm_spawn_system_var_distance_plus_ten
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_spawn_system_hyperlane_switch
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 348 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = sgm_spawn_system_hyperlane_switch
+				orientation = CENTER_LEFT
+				effect = sgm_spawn_system_hyperlane_switch
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = sgm_spawn_system_is_discovered_switch
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 380 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = sgm_spawn_system_is_discovered_switch
+				orientation = CENTER_LEFT
+				effect = sgm_spawn_system_is_discovered_switch
 	#			shortCut = j
 			}
 			instantTextBoxType={

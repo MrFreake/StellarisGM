@@ -229,7 +229,7 @@ guiTypes = {
 		position = { x = -175 y = 0 }
 		size = { width=600 height=200 }
 		Orientation = upper_right
-		priority = 0
+		#priority = 0
 
 		effectbuttonType = {					
 			name = "targets"
