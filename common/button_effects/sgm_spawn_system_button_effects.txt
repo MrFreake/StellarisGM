@@ -1,0 +1,179 @@
+sgm_spawn_system_var_jumps_plus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = sgm_var_jumps_spawn_system
+							value >= 5
+						}
+					}
+				}
+				change_variable = {
+					which = sgm_var_jumps_spawn_system
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+sgm_spawn_system_var_jumps_minus_one = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = sgm_var_jumps_spawn_system
+							value <= 0
+						}
+					}
+				}
+				change_variable = {
+					which = sgm_var_jumps_spawn_system
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+sgm_var_jumps_spawn_system_value = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+sgm_spawn_system_var_distance_plus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = sgm_var_distance_spawn_system
+							value >= 100
+						}
+					}
+				}
+				change_variable = {
+					which = sgm_var_distance_spawn_system
+					value = 10
+				}
+			}
+		}
+	}
+}
+
+sgm_spawn_system_var_distance_minus_ten = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = sgm_var_distance_spawn_system
+							value <= 10
+						}
+					}
+				}
+				change_variable = {
+					which = sgm_var_distance_spawn_system
+					value = -10
+				}
+			}
+		}
+	}
+}
+
+sgm_var_distance_spawn_system_value = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+sgm_spawn_system_hyperlane_switch = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		switch = {
+			trigger = has_global_flag
+			sgm_spawn_system_hyperlane_yes = {
+				remove_global_flag = sgm_spawn_system_hyperlane_yes
+				set_global_flag = sgm_spawn_system_hyperlane_no
+			}
+			sgm_spawn_system_hyperlane_no = {
+				remove_global_flag = sgm_spawn_system_hyperlane_no
+				set_global_flag = sgm_spawn_system_hyperlane_yes
+			}
+			default = {
+				set_global_flag = sgm_spawn_system_hyperlane_yes
+			}
+		}
+	}
+}
+
+sgm_spawn_system_is_discovered_switch = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		switch = {
+			trigger = has_global_flag
+			sgm_spawn_system_is_discovered_yes = {
+				remove_global_flag = sgm_spawn_system_is_discovered_yes
+				set_global_flag = sgm_spawn_system_is_discovered_no
+			}
+			sgm_spawn_system_is_discovered_no = {
+				remove_global_flag = sgm_spawn_system_is_discovered_no
+				set_global_flag = sgm_spawn_system_is_discovered_yes
+			}
+			default = {
+				set_global_flag = sgm_spawn_system_is_discovered_yes
+			}
+		}
+	}
+}

@@ -103,6 +103,10 @@ diplomatic_restrictions: "Diplomatic Restrictions"
 
 # System spawn
 sgm_system.3.name: "Spawn System"
-sgm_system.3.desc: "$sgm_system.3.name$ from initializer file §Y[this.GetNameInitilalizerSpawnSwitch].§!\nOrigin system: [from.GetName]. Jumps: [global_event_country.sgm_var_jumps_spawn_system] Distance: [global_event_country.sgm_var_distance_spawn_system]\n$CONNECTED$: [this.Get_hyperlane_spawn_system] $tradition_discovery$: [this.Get_is_discovered_spawn_system]"
+sgm_system.3.desc: "$sgm_system.3.name$ from initializer file §Y[this.GetNameInitilalizerSpawnSwitch].§!\nOrigin system: [from.GetName]. Jumps: [global_event_country.sgm_var_jumps_spawn_system] Distance: [global_event_country.sgm_var_distance_spawn_system]\n$CONNECTED$: [this.Get_hyperlane_spawn_system] $tradition_discovery$: [this.Get_is_discovered_spawn_system]\n\nNote: Many initialisers have spawn limit."
 sgm_system.3.a: "§Y[this.GetNameInitilalizerSpawnSwitch]§!"
+sgm_var_jumps_spawn_system_value: "[global_event_country.sgm_var_jumps_spawn_system]"
+sgm_var_distance_spawn_system_value: "[global_event_country.sgm_var_distance_spawn_system]"
+sgm_spawn_system_hyperlane_switch: "[this.Get_hyperlane_spawn_system]"
+sgm_spawn_system_is_discovered_switch: "[this.Get_is_discovered_spawn_system]"
 
