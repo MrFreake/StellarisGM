@@ -725,7 +725,7 @@ guiTypes = {
 			position = { x = -175 y = 0 }
 			size = { width=600 height=200 }
 			Orientation = upper_right
-			priority = 0
+			#priority = 0
 
 			effectbuttonType = {					
 				name = sgm_galactic_effects
@@ -792,7 +792,7 @@ guiTypes = {
 				orientation = UPPER_LEFT
 				effect = show_leaderboard_rewards
 	#			shortCut = j
-			}v
+			}
 			effectbuttonType = {					
 				name = sgm_return_to_gm
 				quadTextureSprite = "GFX_standard_button_142_34_button"
