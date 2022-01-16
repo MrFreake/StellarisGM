@@ -53,6 +53,23 @@ set_target_date = {
 				flag = preventing_pvp_wars
 				days = fromfrom.final_date
 			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:player_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = no
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = player_country
+				}
+			}
 		}
 		if = {						# prevent AI wars
 			limit = {
@@ -115,6 +132,23 @@ set_target_date = {
 			set_timed_global_flag = {
 				flag = preventing_all_wars
 				days = fromfrom.final_date
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ai_country
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+						NOT = {
+							is_country_type = sgm_game_master
+						}
+					}
+					save_global_event_target_as = ai_country
+				}
 			}
 		}
 		if = {						# prevent AI Federations
@@ -682,20 +716,28 @@ war_status = {
 	potential = {}
 	allow = { 
 		custom_tooltip = {
-			fail_text = "war_status_tooltip"
-			always = no
+			fail_text = "preventing_ai_wars_tooltip"
+			NOT = { has_global_flag = AI_wars_blocked }
 		}
-	}
+
+		custom_tooltip = {
+			fail_text = "preventing_pvp_wars_tooltip"
+			NOT = { has_global_flag = preventing_pvp_wars }
+		}
+		
+		custom_tooltip = {
+			fail_text = "preventing_all_wars_tooltip"
+			NOT = { has_global_flag = preventing_all_wars }
+			}
+		hidden_trigger = { always = no }
+		}
 	effect = {}
 }
 
 federation_status = {
 	potential = {}
 	allow = { 
-		custom_tooltip = {
-			fail_text = "preventing_ai_wars_tooltip"
-			always = no
-		}
+		always = no
 	}
 	effect = {}
 }
