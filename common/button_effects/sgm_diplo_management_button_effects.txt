@@ -728,7 +728,7 @@ war_status = {
 		custom_tooltip = {
 			fail_text = "preventing_all_wars_tooltip"
 			NOT = { has_global_flag = preventing_all_wars }
-			}
+		}
 		hidden_trigger = { always = no }
 		}
 	effect = {}
