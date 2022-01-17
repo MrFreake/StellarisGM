@@ -531,6 +531,23 @@ defined_text = {
 		}
 		localization_key = preventing_ai_wars_tooltip
 	}
+	text = {
+		trigger = {
+			has_global_flag = preventing_pvp_wars
+		}
+		localization_key = preventing_pvp_wars_tooltip
+	}
+	text = {
+		trigger = {
+			has_global_flag = preventing_all_wars
+			NOR = {
+				has_global_flag = preventing_all_wars
+				has_global_flag = AI_wars_blocked
+			}
+		}
+		localization_key = preventing_all_wars_tooltip
+	}
+	default = wars_allowed
 }
 
 defined_text = {
