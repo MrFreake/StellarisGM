@@ -24,6 +24,10 @@ sgm_country_1_desc: "Perform event actions on [from.GetName]."
 sgm_country_2_desc: "Choose wargoal for [from.GetName]'s war declaration on [target_country.GetName].\n\nNote: This action may ignore war goal requirements."
 sgm_country_3_desc: "This action will shift a [from.GetName]'s ethics one step towards the chosen ethic.\n\nNote: Leaving a country with only one ethic may cause issues."
 sgm_country_4_esc: "Choose civic to add/remove from [from.GetName].\n\nIt is possible to add more than 3 civics."
+sgm_country_5: "Special Resources"
+sgm_country_5_desc: "Here you can give untradable resources. For tradable resources, use the trades on the diplomacy screen."
+sgm_country_6: "Gift FE Buildings"
+sgm_country_6_desc: "Here you can grant the ability to build Fallen Empire buildings to [from.GetName]."
 sgm_diplomanagement_1: "Diplomacy Management"
 sgm_diplomanagement_1_desc: "Here you can restrict empire's diplomatic options, in years.\n\nEvery time a diplomatic restriction is set it overwrites the previous restriction. However, it is possible to add different length restrictions for players and AI."
 sgm_event_chains_1_desc: "Begin event chain on [from.GetName] for [from.owner.GetName]."
@@ -328,7 +332,15 @@ relic_world_deposits: "Relic World Deposits"
 d_dark_matter_deposit_3: "Dark Matter +3"
 d_dark_matter_deposit_10: "Dark Matter +10"
 
-
+# special resources
+give_unity: "Give Unity"
+take_unity: "Take Unity"
+give_influence: "Give Influence"
+take_influence: "Take Influence"
+give_menace: "Give Menace"
+take_menace: "Take Menace"
+give_minor_artifacts: "Give Minor Artifacts"
+take_minor_artifacts: "Take Minor Artifacts"
 
 # spawn system initializers
 
@@ -615,6 +627,8 @@ sgm_hurt_target_opinion: "Hurt [target_country.GetName] Opinion"
 sgm_declare_war_with_target: "Declare war on [target_country.GetName]"
 sgm_play_as_owner: "Play as [this.owner.GetName]"
 sgm_switch_player_to_country: "Set Player [target_country.GetName]"
+sgm_give_special_resources: "Give Special Resources"
+sgm_set_owner
 
 # fleet_view.gui
 
@@ -625,7 +639,9 @@ create_destroyer: "Create Destroyer"
 create_cruiser: "Create Cruiser"
 create_battleship: "Create Battleship"
 sgm_set_owner_target_country: "Target Owner Country"
-sgm_set_owner_hostile_to_target_country: "Set Owner Hostility"
+sgm_set_owner_hostile_to_target_country: "Set Owner Hostile"
+sgm_set_owner_friendly_to_target_country: "Set Owner Friendly"
+sgm_set_owner_neutral_to_target_country: "Set Owner Neutral"
 teleport_fleet: "Teleport Fleet"
 
 # megastructure_view.gui

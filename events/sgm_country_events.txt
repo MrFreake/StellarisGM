@@ -3472,3 +3472,166 @@ country_event = {
 		NAME = EXIT
 	}
 }
+
+country_event = {								# give special resources
+	id = sgm_country.5
+	is_triggered_only = yes
+	title = sgm_country_5
+	desc = sgm_country_5_desc
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+
+	trigger = {}
+
+	option = {
+		NAME = give_unity
+		from = {
+			add_resource = {
+				unity = 1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = take_unity
+		from = {
+			add_resource = {
+				unity = -1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = give_influence
+		from = {
+			add_resource = {
+				influence = 1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = take_influence
+		from = {
+			add_resource = {
+				influence = -1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = give_menace
+		from = {
+			add_resource = {
+				menace = 1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = take_menace
+		from = {
+			add_resource = {
+				menace = -1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = give_minor_artifacts
+		from = {
+			add_resource = {
+				minor_artifacts = 1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = take_minor_artifacts
+		from = {
+			add_resource = {
+				minor_artifacts = -1
+				mult = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {								# give FE buildings
+	id = sgm_country.6
+	is_triggered_only = yes
+	title = sgm_country_6
+	desc = sgm_country_6_desc
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+
+	trigger = {}
+
+	option = {
+		NAME = building_affluence_center
+		from = {
+			set_variable = {
+				which = affluence_center_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = building_nourishment_center
+		from = {
+			set_variable = {
+				which = nourishment_center_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = building_dimensional_fabricator
+		from = {
+			set_variable = {
+				which = dimensional_fabricator_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = building_class_4_singularity
+		from = {
+			set_variable = {
+				which = class_4_singularity_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = building_nano_forge
+		from = {
+			set_variable = {
+				which = nano_forge_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+	option = {
+		NAME = building_fe_dome
+		from = {
+			set_variable = {
+				which = skydome_build_count
+				value = prev.fromfrom.modifier_var
+			}
+		}
+	}
+}
+
+

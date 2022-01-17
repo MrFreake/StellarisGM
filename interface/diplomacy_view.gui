@@ -1429,7 +1429,42 @@ guiTypes = {
 						effect = sgm_give_relic
 			#			shortCut = j
 					}
-					# left column
+					effectbuttonType = {					
+						name = sgm_give_special_resources
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 224 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_give_special_resources
+						orientation = UPPER_LEFT
+						effect = sgm_give_special_resources
+			#			shortCut = j
+					}
+					effectbuttonType = {					
+						name = sgm_give_FE_buildings
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 261 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_give_FE_buildings
+						orientation = UPPER_LEFT
+						effect = sgm_give_FE_buildings
+			#			shortCut = j
+					}
+					effectbuttonType = {					
+						name = sgm_remove_relic_cooldown
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 298 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_remove_relic_cooldown
+						orientation = UPPER_LEFT
+						effect = sgm_remove_relic_cooldown
+			#			shortCut = j
+					}
+					
+					
+					# middle column
 					instantTextBoxType = {
 						name = "TARGET_COUNTRY_EFFECTS"
 						font = "malgun_goth_24"
