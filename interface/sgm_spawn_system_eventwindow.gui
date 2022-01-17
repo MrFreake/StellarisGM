@@ -368,17 +368,6 @@ guiTypes = {
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = sgm_spawn_system_var_distance_plus_ten
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 316 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+10"
-				orientation = CENTER_LEFT
-				effect = sgm_spawn_system_var_distance_plus_ten
-	#			shortCut = j
-			}
-			effectbuttonType = {					
 				name = sgm_spawn_system_hyperlane_switch
 				quadTextureSprite = "GFX_bounty_square"
 				position = { x = 348 y = -85 }
