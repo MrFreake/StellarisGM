@@ -690,9 +690,9 @@ guiTypes = {
 			buttonText = [This.war_status]
 			orientation = UPPER_LEFT
 			effect = war_status
-			
+			pdx_tooltip = war_status_tooltip
 #			shortCut = j
-			alwaysTransparent = yes
+			
 		}
 		effectbuttonType = {					
 			name = federation_status
@@ -704,6 +704,7 @@ guiTypes = {
 			buttonText = [This.federation_status]
 			orientation = UPPER_LEFT
 			effect = federation_status
+			
 #			shortCut = j
 		}
 		effectbuttonType = {					
