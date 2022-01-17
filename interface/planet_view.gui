@@ -165,7 +165,7 @@ guiTypes = {
 				}
 				expandedWindow = {
 					name = "expanded_window"
-					position = { x = -100 y = -4 }
+					position = { x = -300 y = -4 }
 					show_position = { x = 230 y = -7 }
 					show_animation_type = decelerated
 					hide_animation_type = accelerated

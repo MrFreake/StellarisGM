@@ -38,7 +38,10 @@ sgm_form_council = {
 		}
 	}
 	effect = {
-		cancel_resolution = resolution_galacticreforms_form_council
+		hidden_effect = {
+			cancel_resolution = resolution_galacticreforms_abolish_council
+			cancel_resolution = resolution_galacticreforms_form_council
+		}
 		pass_resolution_no_cooldown = resolution_galacticreforms_form_council
 	}
 }
@@ -55,7 +58,10 @@ sgm_disband_council = {
 		}
 	}
 	effect = {
-		cancel_resolution = resolution_galacticreforms_abolish_council
+		hidden_effect = {
+			cancel_resolution = resolution_galacticreforms_form_council
+			cancel_resolution = resolution_galacticreforms_abolish_council
+		}
 		pass_resolution_no_cooldown = resolution_galacticreforms_abolish_council
 	}
 }
