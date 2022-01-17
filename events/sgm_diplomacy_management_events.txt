@@ -18,7 +18,7 @@ country_event = {
 				is_ai = yes
 				is_country_type = default
 			}
-			save_event_target_as = ai_country
+			save_global_event_target_as = ai_country
 		}
 		random_country = {
 			limit = {
@@ -27,7 +27,7 @@ country_event = {
 					is_country_type = sgm_game_master
 				}
 			}
-			save_event_target_as = player_country
+			save_global_event_target_as = player_country
 		}
 	}
 
