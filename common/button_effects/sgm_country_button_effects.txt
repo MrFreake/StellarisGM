@@ -309,3 +309,23 @@ sgm_give_FE_buildings = {
 		}
 	}
 }
+
+sgm_change_authority = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_ancrel = yes
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.7
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}

@@ -3634,4 +3634,127 @@ country_event = {								# give FE buildings
 	}
 }
 
+country_event = {
+	id = sgm_country.7
+	is_triggered_only = yes
+	title = sgm_country_7
+	desc = sgm_country_7_desc
 
+	immediate = {}
+
+	option = {
+		NAME = auth_democratic
+		trigger = { 
+			NOT = {
+				has_authority = auth_democratic
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_democratic
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_oligarchic
+		trigger = { 
+			NOT = {
+				has_authority = auth_oligarchic
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_oligarchic
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_imperial
+		trigger = { 
+			NOT = {
+				has_authority = auth_imperial
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_imperial
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_dictatorial
+		trigger = { 
+			NOT = {
+				has_authority = auth_dictatorial
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_dictatorial
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_hive_mind
+		trigger = { 
+			NOT = {
+				has_authority = auth_hive_mind
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_hive_mind
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_machine_intelligence
+		trigger = { 
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_machine_intelligence
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = auth_corporate
+		trigger = { 
+			NOT = {
+				has_authority = auth_corporate
+			}
+		}
+		from = {
+			change_government = {
+				authority = auth_corporate
+				civics = random
+				cooldown = yes 
+				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}
