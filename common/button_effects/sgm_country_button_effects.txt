@@ -259,3 +259,73 @@ sgm_give_relic = {
 		}
 	}
 }
+
+sgm_remove_relic_cooldown = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_modifier = relic_activation_cooldown
+	}
+	effect = {
+		remove_modifier = relic_activation_cooldown
+	}
+}
+
+sgm_give_special_resources = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.5
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+sgm_give_FE_buildings = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_ancrel = yes
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.6
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+sgm_change_authority = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_ancrel = yes
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.7
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
