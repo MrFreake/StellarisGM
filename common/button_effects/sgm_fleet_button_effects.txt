@@ -144,7 +144,34 @@ sgm_return_fleet_control = {
 		set_owner = event_target:fleet_original_owner
 	}
 }
-
+sgm_set_owner_friendly_to_target_country = {
+	potential = {
+		is_gm = yes
+		exists = owner
+		exists = event_target:target_country
+		NOT = {
+			owner = {
+				is_same_value = event_target:target_country
+			}
+		}
+		owner = {
+            NOT = {
+				is_forced_friendly = event_target:target_country
+    		}
+		}
+	}
+	allow = { }
+	effect = {
+		owner = {
+			set_faction_hostility = { 
+				target = event_target:target_country
+				set_hostile = no 
+				set_neutral = no 
+				set_friendly = yes 
+			}
+		}
+	}
+}
 sgm_set_owner_neutral_to_target_country = {
 	potential = {
 		is_gm = yes
