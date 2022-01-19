@@ -2552,4 +2552,607 @@ country_event = {						# anomalies menu
 	}
 }
 
+country_event = {							# spawn armies menu
+	id = sgm_planets.56
+	is_triggered_only = yes
+	title = sgm_planets_56
+	desc = sgm_planets_56_desc
+	#picture = GFX_evt_alien_city
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:target_country.owner_main_species
+		room = enclave_curator_room
+	}
 
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = creating_army_flag
+					has_global_flag = creating_army_transport_flag
+				}
+			}
+			set_global_flag = creating_army_flag
+		}
+	}
+
+	option = {
+		NAME = creating_army
+		trigger = {
+			has_global_flag = creating_army_flag
+		}
+		set_global_flag = creating_army_transport_flag
+		remove_global_flag = creating_army_flag
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	option = {
+		NAME = creating_army_transport
+		trigger = {
+			has_global_flag = creating_army_transport_flag
+		}
+		set_global_flag = creating_army_flag
+		remove_global_flag = creating_army_transport_flag
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	option = {
+		NAME = spawn_armies
+		from = { sgm_spawn_army_type_check = yes }
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = assault_army
+			}
+		}
+		NAME = assault_army
+		remove_army_flags = yes
+		set_global_flag = assault_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = slave_army
+			}
+		}
+		NAME = slave_army
+		remove_army_flags = yes
+		set_global_flag = slave_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = clone_army
+			}
+		}
+		NAME = clone_army
+		remove_army_flags = yes
+		set_global_flag = clone_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = robotic_army
+			}
+		}
+		NAME = robotic_army
+		remove_army_flags = yes
+		set_global_flag = robotic_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = psionic_army
+			}
+		}
+		NAME = psionic_army
+		remove_army_flags = yes
+		set_global_flag = psionic_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = xenomorph_army
+			}
+		}
+		NAME = xenomorph_army
+		remove_army_flags = yes
+		set_global_flag = xenomorph_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = gene_warrior_army
+			}
+		}
+		NAME = gene_warrior_army
+		remove_army_flags = yes
+		set_global_flag = gene_warrior_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = rebel_army
+			}
+		}
+		NAME = rebel_army
+		remove_army_flags = yes
+		set_global_flag = rebel_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = primitive_army
+			}
+		}
+		NAME = primitive_army
+		remove_army_flags = yes
+		set_global_flag = primitive_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = industrial_army
+			}
+		}
+		NAME = industrial_army
+		remove_army_flags = yes
+		set_global_flag = industrial_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = postatomic_army
+			}
+		}
+		NAME = postatomic_army
+		remove_army_flags = yes
+		set_global_flag = postatomic_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = subterranean_industrial_army
+			}
+		}
+		NAME = subterranean_industrial_army
+		remove_army_flags = yes
+		set_global_flag = subterranean_industrial_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = subterranean_postatomic_army
+			}
+		}
+		NAME = subterranean_postatomic_army
+		remove_army_flags = yes
+		set_global_flag = subterranean_postatomic_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = mutant_army
+			}
+		}
+		NAME = mutant_army
+		remove_army_flags = yes
+		set_global_flag = mutant_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = swarm_army
+			}
+		}
+		NAME = swarm_army
+		remove_army_flags = yes
+		set_global_flag = swarm_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = tree_army
+			}
+		}
+		NAME = tree_army
+		remove_army_flags = yes
+		set_global_flag = tree_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = enraged_army
+			}
+		}
+		NAME = enraged_army
+		remove_army_flags = yes
+		set_global_flag = enraged_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = ketling_army
+			}
+		}
+		NAME = ketling_army
+		remove_army_flags = yes
+		set_global_flag = ketling_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = titanic_assault_army
+			}
+		}
+		NAME = titanic_assault_army
+		remove_army_flags = yes
+		set_global_flag = titanic_assault_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = titanic_azizian_assault_army
+			}
+		}
+		NAME = titanic_azizian_assault_army
+		remove_army_flags = yes
+		set_global_flag = titanic_azizian_assault_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = shroud_army
+			}
+		}
+		NAME = shroud_army
+		remove_army_flags = yes
+		set_global_flag = shroud_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = gray_army
+			}
+		}
+		NAME = gray_army
+		remove_army_flags = yes
+		set_global_flag = gray_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = care_defensive_protocols
+			}
+		}
+		NAME = care_defensive_protocols
+		remove_army_flags = yes
+		set_global_flag = care_defensive_protocols
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = sentinel_army
+			}
+		}
+		NAME = sentinel_army
+		remove_army_flags = yes
+		set_global_flag = sentinel_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = cybrex_warform
+			}
+			has_ancrel = yes
+		}
+		NAME = cybrex_warform
+		remove_army_flags = yes
+		set_global_flag = cybrex_warform
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = machine_assault_1
+			}
+		}
+		NAME = machine_assault_1
+		remove_army_flags = yes
+		set_global_flag = machine_assault_1
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = machine_assault_2
+			}
+		}
+		NAME = machine_assault_2
+		remove_army_flags = yes
+		set_global_flag = machine_assault_2
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = machine_assault_3
+			}
+		}
+		NAME = machine_assault_3
+		remove_army_flags = yes
+		set_global_flag = machine_assault_3
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = undead_army
+			}
+			host_has_dlc = "Necroids Species Pack"
+		}
+		NAME = undead_army
+		remove_army_flags = yes
+		set_global_flag = undead_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = giant_undead_army
+			}
+			host_has_dlc = "Necroids Species Pack"
+		}
+		NAME = giant_undead_army
+		remove_army_flags = yes
+		set_global_flag = giant_undead_army
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		allow = {
+			NOT = {
+				has_global_flag = imperial_legion
+			}
+			host_has_dlc = "Nemesis"
+		}
+		NAME = imperial_legion
+		remove_army_flags = yes
+		set_global_flag = imperial_legion
+		country_event = {
+			id = sgm_planets.56
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}

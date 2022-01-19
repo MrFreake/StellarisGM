@@ -68,6 +68,62 @@ modifier_var_add_ten = {
 		}
 	}
 }
+modifier_var_add_hundred = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 100
+			}
+		}
+	}
+}
+modifier_var_add_thousand = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = 1000
+			}
+		}
+	}
+}
+modifier_var_minus_thousand = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -1000
+			}
+		}
+	}
+}
+modifier_var_minus_hundred = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		fromfrom = {
+			change_variable = {
+				which = modifier_var
+				value = -100
+			}
+		}
+	}
+}
 modifier_var_minus_ten = {
 	potential = {
 		is_gm = yes
