@@ -109,6 +109,26 @@ country_event = {								# clear deposits confirmation
 	}
 }
 
+country_event = {								# set planet owner confirmation
+	id = sgm_confirmation.5						# from = planet
+	is_triggered_only = yes						# fromfrom = gm_country
+	title = set_planet_owner_confirmation
+	desc = set_planet_owner_confirmation_desc
+	picture = GFX_evt_ruined_system
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		from = {
+			set_owner = event_target:target_country
+		}
+	}
+
+	option = {
+		NAME = No
+	}
+}
 
 
 ## AA confirmations - ids start at 1000

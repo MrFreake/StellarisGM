@@ -39,7 +39,8 @@ sgm_planets_51_desc: "Change [from.GetName]'s planet class:\n\nChanging planet c
 sgm_planets_52_desc: "Choose hostiles to spawn.\n\nIncrease the multiplier to spawn multiples."
 sgm_planets_53_desc: "Spawn Archaeology Site on [from.GetName]"
 sgm_planets_54_desc: "Spawn Archaeology Site on [from.GetName]"
-
+sgm_planets_55_desc: "Spawn Anomaly on [from.GetName]"
+sgm_planets_56_desc: "Choose army type, amount, and whether the armies spawn on [from.GetName] or on transports in orbit."
 
 
 add_mod_planet_modifier: "Add GM Planet Modifier"
@@ -612,6 +613,10 @@ sgm_remove_all_hyperlanes: "Remove All Hyperlanes"
 sgm_add_wormhole: "Add Wormhole"
 sgm_add_l_gate: "Add L-Gate"
 sgm_spawn_system: "Spawn System"
+creating_army: "Creating Army"
+creating_army_transport: "Creating Army Transport"
+spawn_armies: "Spawn Armies"
+sgm_create_army_for_target: "Create Army for [target_country.GetName]"
 
 # diplomacy_view.gui
 

@@ -364,7 +364,17 @@ guiTypes = {
 							effect = sgm_generate_late_primitives
 				#			shortCut = j
 						}
-			
+						effectbuttonType = {					
+							name = sgm_trigger_revolt
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 2 y = 594 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_trigger_revolt
+							orientation = UPPER_LEFT
+							effect = sgm_trigger_revolt
+				#			shortCut = j
+						}
 						## Middle Column
 
 						instantTextBoxType = {
@@ -513,12 +523,34 @@ guiTypes = {
 						effectbuttonType = {					
 							name = sgm_create_GM_constructor
 							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 148 y = 372 }
+							position = { x = 148 y = 335 }
 							scale = 1
 							buttonFont = malgun_goth_24
 							buttonText = sgm_create_GM_constructor
 							orientation = UPPER_LEFT
 							effect = sgm_create_GM_constructor
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_create_army_for_target
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 372 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_create_army_for_target
+							orientation = UPPER_LEFT
+							effect = sgm_create_army_for_target
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_set_planet_owner
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 409 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_set_planet_owner
+							orientation = UPPER_LEFT
+							effect = sgm_set_planet_owner
 				#			shortCut = j
 						}													
 						# right column
