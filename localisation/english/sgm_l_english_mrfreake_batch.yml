@@ -15,10 +15,6 @@ clear_deposit_confirmation_desc: "Performing this action will clear all deposits
 destroy_colony_confirmation_desc: "Are you sure you want to destroy the colony on [from.GetName], owned by [from.owner.GetName]?"
 
 
-
-
-
-
 # events
 sgm_country_1_desc: "Perform event actions on [from.GetName]."
 sgm_country_2_desc: "Choose wargoal for [from.GetName]'s war declaration on [target_country.GetName].\n\nNote: This action may ignore war goal requirements."
@@ -28,6 +24,10 @@ sgm_country_5: "Special Resources"
 sgm_country_5_desc: "Here you can give untradable resources. For tradable resources, use the trades on the diplomacy screen."
 sgm_country_6: "Gift FE Buildings"
 sgm_country_6_desc: "Here you can grant the ability to build Fallen Empire buildings to [from.GetName]."
+sgm_country_7: "Change [from.GetName]'s Authority"
+sgm_country_7_desc: "Here you can change [from.GetName]'s authority. This will clear ethics/civics if they become invalid. They can be reassigned using the ethics shifter and add civic from the Country menu."
+sgm_country_8: "Modify [from.GetName]'s Main Species"
+sgm_country_8_desc: "Choose traits to add to [from.owner_main_species.GetName]. You may add as many traits as you like here."
 sgm_diplomanagement_1: "Diplomacy Management"
 sgm_diplomanagement_1_desc: "Here you can restrict empire's diplomatic options, in years.\n\nEvery time a diplomatic restriction is set it overwrites the previous restriction. However, it is possible to add different length restrictions for players and AI."
 sgm_event_chains_1_desc: "Begin event chain on [from.GetName] for [from.owner.GetName]."
@@ -628,7 +628,20 @@ sgm_declare_war_with_target: "Declare war on [target_country.GetName]"
 sgm_play_as_owner: "Play as [this.owner.GetName]"
 sgm_switch_player_to_country: "Set Player [target_country.GetName]"
 sgm_give_special_resources: "Give Special Resources"
-sgm_set_owner
+sgm_set_owner: "Set Owner [target_country.GetName]"
+sgm_give_FE_buildings: "Give FE Buildings"
+sgm_remove_relic_cooldown: "Remove Relic Cooldown"
+sgm_change_authority: "Change Authority"
+sgm_modify_main_species: "Modify Main Species"
+sgm_increase_neighbor_opinion: "Increase Neighbor Opinion"
+sgm_hurt_neighbor_opinion: "Decrease Neighbor Opinion"
+sgm_join_federation: "Join Federation"
+sgm_leave_federation: "Leave Federation"
+sgm_begin_truce: "Begin Truce"
+sgm_end_truce: "End Truce"
+sgm_end_all_treaties: "End treaties with target"
+sgm_join_war_with_target: "Join war with target"
+sgm_establish_communications: "Establish Comms"
 
 # fleet_view.gui
 
