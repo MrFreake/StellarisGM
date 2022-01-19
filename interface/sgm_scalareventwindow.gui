@@ -302,6 +302,28 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 			effectbuttonType = {					
+				name = modifier_var_minus_thousand
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 92 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "-1000"
+				orientation = CENTER_LEFT
+				effect = modifier_var_minus_thousand
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_minus_hundred
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 124 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "-100"
+				orientation = CENTER_LEFT
+				effect = modifier_var_minus_hundred
+	#			shortCut = j
+			}
+			effectbuttonType = {					
 				name = modifier_var_minus_ten
 				quadTextureSprite = "GFX_bounty_square"
 				position = { x = 156 y = -85 }
@@ -325,10 +347,12 @@ guiTypes = {
 			}
 			effectbuttonType = {					
 				name = modifier_var_value
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 220 y = -85 }
+				#quadTextureSprite = "GFX_bounty_square"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				position = { x = 218 y = -82 }
+				size = { x = 40 y = 32 }
 				scale = 1
-				buttonFont = malgun_goth_24
+				buttonFont = cg_16b
 				buttonText = modifier_var_value
 				orientation = CENTER_LEFT
 				effect = modifier_var_value
@@ -354,6 +378,28 @@ guiTypes = {
 				buttonText = "+10"
 				orientation = CENTER_LEFT
 				effect = modifier_var_add_ten
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_add_hundred
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 316 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "+100"
+				orientation = CENTER_LEFT
+				effect = modifier_var_add_hundred
+	#			shortCut = j
+			}
+			effectbuttonType = {					
+				name = modifier_var_add_thousand
+				quadTextureSprite = "GFX_bounty_square"
+				position = { x = 348 y = -85 }
+				scale = 1
+				buttonFont = cg_16b
+				buttonText = "+1000"
+				orientation = CENTER_LEFT
+				effect = modifier_var_add_thousand
 	#			shortCut = j
 			}
 			instantTextBoxType={

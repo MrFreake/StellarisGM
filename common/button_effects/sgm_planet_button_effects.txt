@@ -523,7 +523,7 @@ sgm_add_planet_modifier = {
 			country_event = {
 				id = sgm_planet_modifiers.1
 				scopes = {
-					from = from
+					from = prev
 				}
 			}
 		}
@@ -651,6 +651,54 @@ sgm_spawn_system = {
 				}
 			}
 		}
+	}
+}
+
+sgm_create_army_for_target = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.56
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+sgm_set_planet_owner = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_confirmation.5
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+sgm_trigger_revolt = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	planet_event = {
+		id = unrest.4200
 	}
 }
 

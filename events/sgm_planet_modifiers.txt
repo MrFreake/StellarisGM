@@ -246,7 +246,7 @@ country_event = {								# requires passing the planet scope as from
 	
 	option = { 
 		NAME = exit 
-		country_event = { id = sgm_planets.1 scopes = { from = from fromfrom = this }}
+		#country_event = { id = sgm_planets.1 scopes = { from = from fromfrom = this }}
 	}
 }
 

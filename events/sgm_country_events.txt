@@ -3632,6 +3632,9 @@ country_event = {								# give FE buildings
 			}
 		}
 	}
+	option = {
+		NAME = Exit
+	}
 }
 
 country_event = {
@@ -3650,6 +3653,12 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+				clear_ethos = yes
+			}
 			change_government = {
 				authority = auth_democratic
 				civics = random
@@ -3666,6 +3675,12 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+				clear_ethos = yes
+			}
 			change_government = {
 				authority = auth_oligarchic
 				civics = random
@@ -3682,6 +3697,12 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+				clear_ethos = yes
+			}
 			change_government = {
 				authority = auth_imperial
 				civics = random
@@ -3698,6 +3719,12 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+				clear_ethos = yes
+			}
 			change_government = {
 				authority = auth_dictatorial
 				civics = random
@@ -3714,6 +3741,15 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+				clear_ethos = yes
+				country_add_ethic = ethic_gestalt_consciousness
+			}
 			change_government = {
 				authority = auth_hive_mind
 				civics = random
@@ -3730,6 +3766,15 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+				clear_ethos = yes
+				country_add_ethic = ethic_gestalt_consciousness
+			}
 			change_government = {
 				authority = auth_machine_intelligence
 				civics = random
@@ -3746,11 +3791,927 @@ country_event = {
 			}
 		}
 		from = {
+			if = {
+				limit = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+				clear_ethos = yes
+			}
 			change_government = {
 				authority = auth_corporate
 				civics = random
 				cooldown = yes 
 				remove_invalid_civics = yes 
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+}
+
+country_event = {
+	id = sgm_country.8
+	is_triggered_only = yes
+	title = sgm_country_8
+	desc = sgm_country_8_desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_ScrollbarEventWindow
+
+	immediate = {}
+
+	option = {
+		NAME = trait_brainslug
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_brainslug 
+				}
+			}
+			has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_brainslug 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_nivlac
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_nivlac 
+				}
+			}
+			has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_nivlac 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_harvested_radiotrophic
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_harvested_radiotrophic 
+				}
+			}
+			has_plantoids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_harvested_radiotrophic 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_cybernetic
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_cybernetic 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_cybernetic 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_latent_psionic
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_latent_psionic 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_latent_psionic 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_psionic
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_psionic 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_psionic 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_hive_mind
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_hive_mind 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_hive_mind 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_syncretic_proles
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_syncretic_proles 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_syncretic_proles 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_delicious
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_delicious 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_delicious 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_nerve_stapled
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_nerve_stapled 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_nerve_stapled 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_fertile
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_fertile 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_fertile 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_robust
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_robust 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_robust 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_erudite
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_erudite 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_erudite 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_survivor
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_survivor 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_survivor 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_enigmatic_intelligence
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_enigmatic_intelligence 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_enigmatic_intelligence 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_bioadaptability
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_bioadaptability 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_bioadaptability 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_social_pheromones
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_social_pheromones 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_social_pheromones 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_limited_regeneration
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_limited_regeneration 
+				}
+			}
+			has_utopia = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_limited_regeneration 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_starborn
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_starborn 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_starborn 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_earthbound
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_earthbound 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_earthbound 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_natural_intellectuals
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_natural_intellectuals 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_natural_intellectuals 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_proles
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_proles 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_proles 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_conservative
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_conservative 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_conservative 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_irradiated
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_irradiated 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_irradiated 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_presapient_docile_livestock
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_presapient_docile_livestock 
+				}
+			}
+			#has_distar = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_presapient_docile_livestock 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_machine_unit
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_machine_unit 
+				}
+			}
+			has_synthetic_dawn = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_machine_unit 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_mechanical
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_mechanical 
+				}
+			}
+			has_synthetic_dawn = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_mechanical 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_lithoid
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_lithoid 
+				}
+			}
+			has_lithoids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_lithoid 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_aquatic
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_aquatic 
+				}
+			}
+			has_aquatics = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_aquatic 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_necrophage
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_necrophage 
+				}
+			}
+			has_necroids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_necrophage 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_clone_soldier_infertile
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_clone_soldier_infertile 
+				}
+			}
+			has_humanoids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_clone_soldier_infertile 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_clone_soldier_infertile_full_potential
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_clone_soldier_infertile_full_potential 
+				}
+			}
+			has_humanoids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_clone_soldier_infertile_full_potential 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		NAME = trait_clone_soldier_fertile
+		allow = {
+			NOT = {
+				from = {
+					has_trait = trait_clone_soldier_fertile 
+				}
+			}
+			has_humanoids = yes
+		}
+		from = {
+			modify_species = {
+				species = owner_main_species
+				base = auto
+				add_trait = trait_clone_soldier_fertile 
+				change_scoped_species = yes
+				effect = {
+					prev = {
+						change_dominant_species = {
+							species = prev
+							change_all = yes
+						}
+					}
+				}
 			}
 		}
 	}
