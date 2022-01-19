@@ -329,3 +329,142 @@ sgm_change_authority = {
 		}
 	}
 }
+
+sgm_increase_neighbor_opinion = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		every_neighbor_country = {
+			limit = {
+				is_country_type = default
+			}
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_gm_positive
+			}
+		}
+	}
+}
+sgm_hurt_neighbor_opinion = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		every_neighbor_country = {
+			limit = {
+				is_country_type = default
+			}
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_gm_negative
+			}
+		}
+	}
+}
+
+sgm_modify_main_species = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.8
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+sgm_join_federation = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		has_federation = no
+	}
+	allow = {}
+	effect = {
+		join_alliance = { who = event_target:target_country override_requirements = yes }
+	} 
+}
+
+sgm_leave_federation = {
+	potential = {
+		is_gm = yes
+		#exists = event_target:target_country
+		has_federation = yes
+	}
+	allow = {}
+	effect = {
+		leave_alliance = { override_requirements = yes apply_opinion_penalty = no }
+	} 
+}
+
+sgm_begin_truce = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		NOT = {
+			has_truce = event_target:target_country
+		}
+	}
+	allow = {}
+	effect = {
+		set_truce = { target = event_target:target_country type = none }
+	}
+}
+
+sgm_end_truce = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		has_truce = event_target:target_country
+	}
+	allow = {}
+	effect = {
+		end_truce = event_target:target_country 
+	}
+}
+
+sgm_end_all_treaties = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {}
+	effect = {
+		end_all_treaties_with = event_target:target_country 
+	}
+}
+
+sgm_establish_communications = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+	}
+	allow = {}
+	effect = {
+		establish_communications = event_target:target_country 
+	}
+}
+
+sgm_join_war_with_target = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		event_target:target_country = {
+			is_at_war = yes
+		}
+	}
+	allow = {}
+	effect = { 
+		join_war = event_target:target_country
+	}
+}
