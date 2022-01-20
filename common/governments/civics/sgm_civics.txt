@@ -1,0 +1,20 @@
+sgm_game_master_civic = {
+	ai_playable = {
+		always = no
+	}
+	pickable_at_start = yes
+	modification = no
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	description = "sgm_game_master_civic_desc"
+}

@@ -1,5 +1,13 @@
 ﻿l_braz_por:
 
+# Misc
+origin_game_master: "Game Master"
+origin_game_master_desc: "Become the Game Master."
+sgm_game_master_civic: "$origin_game_master$"
+sgm_game_master_civic_desc: "$origin_game_master_desc$"
+sgm_start_events.11.name: "$origin_game_master$"
+sgm_start_events.11.desc: "Number of $origin_game_master$ player countries: [global_event_country.sgm_var_num_gm]."
+
 # Galactic Community
  sgm_galcom.1.name: "$RESOLUTIONS$"
  sgm_galcom.1.desc: "Immediately pass resolution being voted on. If resolution is targeted the target country will be [this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!."
