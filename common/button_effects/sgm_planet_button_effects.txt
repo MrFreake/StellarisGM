@@ -695,10 +695,69 @@ sgm_set_planet_owner = {
 sgm_trigger_revolt = {
 	potential = {
 		is_gm = yes
+		exists = owner
 	}
 	allow = {}
-	planet_event = {
-		id = unrest.4200
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.4199
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
 	}
 }
 
+sgm_add_claims = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		#NOT = { event_target:target_country = { has_claim = prev.solar_system } }
+	}
+	allow = {}
+	effect = {
+		solar_system = {
+			add_claims = {
+				who = event_target:target_country
+				num_of_claims = 1
+			}
+		}
+	}
+}
+sgm_remove_claims = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		event_target:target_country = { has_claim = prev.solar_system } 
+	}
+	allow = {}
+	effect = {
+		solar_system = {
+			remove_claims = {
+				who = event_target:target_country
+				num_of_claims = 1
+			}
+		}
+	}
+}
+
+sgm_spawn_megastructure = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.57
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
