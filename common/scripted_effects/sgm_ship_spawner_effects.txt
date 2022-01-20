@@ -1,0 +1,1598 @@
+# @sgm_var_create_ship = 5
+sgm_create_fleet_test_effect = {
+	space_owner = {
+		save_event_target_as = sgm_ship_spawner_country
+	}
+	create_fleet = {
+		name = random
+		effect = {
+			set_owner = event_target:sgm_ship_spawner_country
+			set_location = prev
+		}
+	}
+	last_created_fleet = {
+		sgm_create_ship_test_effect = yes
+	}
+}
+
+sgm_create_ship_test_effect = {
+	event_target:global_event_country = {
+		if = {
+			limit = {
+				NOT = {
+					is_variable_set = sgm_var_create_ship
+				}
+			}
+			set_variable = {
+				which = sgm_var_create_ship
+				value = 1
+			}
+		}
+	}
+	set_fleet_flag = NAME_Asteroid
+	sgm_create_ship_database_effect = yes
+	clear_variable = sgm_var_create_ship
+	remove_fleet_flag = NAME_Asteroid
+}
+
+# Supported Scopes: fleet starbase
+# Parameters: DESIGN
+sgm_create_ship_basic_effect = {
+	set_variable = {
+		which = sgm_var_create_ship
+		value = event_target:global_event_country.sgm_var_create_ship
+	}
+	while = {
+		count = sgm_var_create_ship
+		create_ship = {
+			name = random
+			prefix = no
+			colonizer_species = owner
+			design = $DESIGN$
+			# random_existing_design = <ship size key>
+			graphical_culture = $GRAPHICAL_CULTURE$
+		}
+	}
+}
+
+sgm_create_ship_database_effect = {
+	switch = {
+		trigger = has_fleet_flag
+		NAME_Euthanizer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Euthanizer
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_Sterilizer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sterilizer
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_STARBASE = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_STARBASE
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_1 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_1
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_2 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_2
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_Core = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_Core
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_Final_Core = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_Final_Core
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_Transport = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_Transport
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_Colonizer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_Colonizer
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_AI_Constructor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AI_Constructor
+				GRAPHICAL_CULTURE = "ai_01"
+			}
+		}
+		NAME_Taciturn = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Taciturn
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Reticent = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Reticent
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Cybrex_Core = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cybrex_Core
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Cybrex_Station_1 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cybrex_Station_1
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Cybrex_Station_2 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cybrex_Station_2
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Cybrex_Transport = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cybrex_Transport
+				GRAPHICAL_CULTURE = "ai_02"
+			}
+		}
+		NAME_Crisis_Star_Eater = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Crisis_Star_Eater
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Blue = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Blue
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Blue = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Blue
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Blue = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Blue
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Green = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Green
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Green = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Green
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Green = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Green
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Yellow = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Yellow
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Yellow = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Yellow
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Yellow = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Yellow
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Red = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Red
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Red = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Red
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Red = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Red
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Blue_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Blue_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Blue_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Blue_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Blue_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Blue_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Green_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Green_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Green_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Green_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Green_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Green_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Yellow_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Yellow_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Yellow_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Yellow_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Yellow_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Yellow_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Crystal_Entity_Red_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Crystal_Entity_Red_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Medium_Crystal_Entity_Red_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Medium_Crystal_Entity_Red_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Crystal_Entity_Red_Elite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Crystal_Entity_Red_Elite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Crystal_Nidus = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Crystal_Nidus
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Mining_Expansion_Barge = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Mining_Expansion_Barge
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Mining_Expansion_Drone = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Mining_Expansion_Drone
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Cracked_Crystalline_Shard = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cracked_Crystalline_Shard
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Herald = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Herald
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Polaris_ship = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Polaris_ship
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Abandoned_Manufactory = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Abandoned_Manufactory
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_F79 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_F79
+				GRAPHICAL_CULTURE = "pirate_01"
+			}
+		}
+		NAME_R44 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_R44
+				GRAPHICAL_CULTURE = "pirate_01"
+			}
+		}
+		NAME_Alien_Ship = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Alien_Ship
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Prototype = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Prototype
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Derelict = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Derelict
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sword = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sword
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Seeker = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Seeker
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Voidstalker = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Voidstalker
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Starfang = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Starfang
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Persistent = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Persistent
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Returned_Science_Ship = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Returned_Science_Ship
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_mardak_vol_haters_corvette = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_mardak_vol_haters_corvette
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_mardak_vol_haters_destroyer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_mardak_vol_haters_destroyer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_mardak_vol_haters_cruiser = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_mardak_vol_haters_cruiser
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_mardak_vol_haters_colossus = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_mardak_vol_haters_colossus
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Voidspawn = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Voidspawn
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_enigmatic_cache = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_enigmatic_cache
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Nanite_Dragon = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Nanite_Dragon
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Nanite_Factory = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Nanite_Factory
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Nanite_Mothership = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Nanite_Mothership
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Gray_Warship = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Gray_Warship
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Nanite_Interdictor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Nanite_Interdictor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Dessanu_Mothership = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Dessanu_Mothership
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Dessanu_Interdictor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Dessanu_Interdictor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Gatebuilder_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Gatebuilder_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Reclaimer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Reclaimer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_S8751 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_S8751
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Progenitor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Progenitor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_AH4B = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_AH4B
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Adopted_Amoeba_Centenarian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Adopted_Amoeba_Centenarian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Lessenger = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Lessenger
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Warder_of_the_Ruins = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Warder_of_the_Ruins
+				GRAPHICAL_CULTURE = "fallen_empire_01"
+			}
+		}
+		NAME_Gardener_Drone = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Gardener_Drone
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Wenkwort_Enforcer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Wenkwort_Enforcer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Elusive_Craft = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Elusive_Craft
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Splendor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Splendor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_C1 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_C1
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_C2 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_C2
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Space_Station = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Space_Station
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Citadel = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Citadel
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sentry = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sentry
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Dagger = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Dagger
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ravager = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ravager
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Asteroid = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Asteroid
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_DS47 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_DS47
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Divine_Glory = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Divine_Glory
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Righteous = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Righteous
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Central_Crystal_Station = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Central_Crystal_Station
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Diaspora = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Diaspora
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Nomad_Cruiser = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Nomad_Cruiser
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Protector = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Protector
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Vigil = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Vigil
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_PR_417 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_PR_417
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Spearhead = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Spearhead
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Deaths_Head = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Deaths_Head
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bug_Crusher = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bug_Crusher
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Blade = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Blade
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Guardian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Guardian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sanctuary_Core = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sanctuary_Core
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Defensive_A_1 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Defensive_A_1
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Defensive_A_2 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Defensive_A_2
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Revenant = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Revenant
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Phantom = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Phantom
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Wraith = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Wraith
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Void_Shaper = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Void_Shaper
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Huntress = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Huntress
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Assassin = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Assassin
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Predator = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Predator
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Void_Former = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Void_Former
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Eradicator = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Eradicator
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Annihilator = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Annihilator
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Obliterator = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Obliterator
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Void_Weaver = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Void_Weaver
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Unbidden_Portal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Unbidden_Portal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Vehement_Portal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Vehement_Portal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Aberrant_Portal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Aberrant_Portal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Unbidden_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Unbidden_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Unbidden_Anchor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Unbidden_Anchor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Vehement_Anchor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Vehement_Anchor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Aberrant_Anchor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Aberrant_Anchor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Omega = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Omega
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Alpha = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Alpha
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Beta = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Beta
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Gamma = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Gamma
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sigma = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sigma
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Theta = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Theta
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tau = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tau
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Enforcer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Enforcer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Savant = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Savant
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Scholar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Scholar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sage = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sage
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Cloaker = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cloaker
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Librarian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Librarian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Archivist = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Archivist
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Cleanser = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cleanser
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Eternal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Eternal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Avatar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Avatar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Zealot = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Zealot
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Faith = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Faith
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Penitent = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Penitent
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Pilgrim = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Pilgrim
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Reaper = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Reaper
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Imperium = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Imperium
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Supremacy = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Supremacy
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Glory = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Glory
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Devastator = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Devastator
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Servitor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Servitor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Destiny = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Destiny
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Adjuster = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Adjuster
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Keeper = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Keeper
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Custodian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Custodian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Warden = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Warden
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Watcher = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Watcher
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Builder = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Builder
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Seeder = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Seeder
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Beta = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Beta
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Scholar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Scholar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Custodian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Custodian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Gamma = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Gamma
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Sage = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Sage
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Warden = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Warden
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Avatar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Avatar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Surplus_Zealot = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Surplus_Zealot
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_FE_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_FE_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Constructor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Constructor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Colonizer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Colonizer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Colonizer-lithoids = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Colonizer-lithoids
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Trader_Enclave_Station = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Trader_Enclave_Station
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Artist_Enclave_Station = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Artist_Enclave_Station
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Curator_Enclave_Station = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Curator_Enclave_Station
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Grand_Dragon = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Grand_Dragon
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Stellarite = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Stellarite
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Sentinel = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Sentinel
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Defender = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Defender
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Warden = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Warden
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Guardian = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Guardian
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Vault = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Vault
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Hive_Asteroid = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Hive_Asteroid
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Dimensional_Horror = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Dimensional_Horror
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Relic = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Relic
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Type_37 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Type_37
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Type_46 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Type_46
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Infinity_Machine = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Infinity_Machine
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Spectral_Wraith_650THz = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Spectral_Wraith_650THz
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Spectral_Wraith_450THz = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Spectral_Wraith_450THz
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Spectral_Wraith_520THz = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Spectral_Wraith_520THz
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Dragonspawn = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Dragonspawn
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Shard_Dragon = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Shard_Dragon
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sky_Dragon = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sky_Dragon
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Sky_Dragon_Baby = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Sky_Dragon_Baby
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Warrior_Freehold = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Warrior_Freehold
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Void_Dwelling = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Void_Dwelling
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Outrider = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Outrider
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Lancer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Lancer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Void_Champion = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Void_Champion
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancestral_Glory = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancestral_Glory
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Clan_Builder = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Clan_Builder
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Marauder_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Marauder_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Caravaneer_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Caravaneer_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tradestation_Tungle = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tradestation_Tungle
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Gunslinger = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Gunslinger
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Yojimbo = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Yojimbo
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Schooner = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Schooner
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Mining_Drone = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Mining_Drone
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Combat_Drone = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Combat_Drone
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Ancient_Destroyer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Ancient_Destroyer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Drone_Home_Base = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Drone_Home_Base
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Pirate_Nest = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Pirate_Nest
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Reaver = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Reaver
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Brigand = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Brigand
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Skull = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Skull
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Marauder = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Marauder
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Corsair = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Corsair
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Black_Earl = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Black_Earl
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Pirate_Galleon = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Pirate_Galleon
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Pirate_Transport = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Pirate_Transport
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bemat_corvette_01 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bemat_corvette_01
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bemat_destroyer_01 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bemat_destroyer_01
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bemat_destroyer_02 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bemat_destroyer_02
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bemat_cruiser_01 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bemat_cruiser_01
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Bemat_cruiser_02 = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Bemat_cruiser_02
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Cloud_Entity = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Cloud_Entity
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Lesser_Cloud_Entity = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Lesser_Cloud_Entity
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Great_Space_Organism = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Great_Space_Organism
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Space_Organism_Blue = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Space_Organism_Blue
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Space_Organism_Blue = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Space_Organism_Blue
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Space_Organism_Teal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Space_Organism_Teal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Space_Organism_Teal = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Space_Organism_Teal
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Space_Organism_Orange = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Space_Organism_Orange
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Space_Organism_Orange = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Space_Organism_Orange
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Large_Space_Organism_Zebra = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Large_Space_Organism_Zebra
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Small_Space_Organism_Zebra = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Small_Space_Organism_Zebra
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tiyanki_Cow = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tiyanki_Cow
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tiyanki_Bull = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tiyanki_Bull
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tiyanki_Hatchling = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tiyanki_Hatchling
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Tiyanki_Calf = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Tiyanki_Calf
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Large = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Large
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Carrier = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Carrier
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Small = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Small
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Starbase = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Starbase
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Queen = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Queen
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Transport = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Transport
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Colonizer = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Colonizer
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Swarm_Constructor = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Swarm_Constructor
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Shroud_Avatar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Shroud_Avatar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Corrupted_Avatar = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Corrupted_Avatar
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Warped_Consciousness = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Warped_Consciousness
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+		NAME_Shroud_Manifestation = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Shroud_Manifestation
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
+	}
+}
