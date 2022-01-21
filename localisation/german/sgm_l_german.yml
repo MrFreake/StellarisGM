@@ -1,5 +1,13 @@
 ﻿l_german:
 
+# Misc
+origin_game_master: "Game Master"
+origin_game_master_desc: "Become the Game Master."
+sgm_game_master_civic: "$origin_game_master$"
+sgm_game_master_civic_desc: "$origin_game_master_desc$"
+sgm_start_events.11.name: "$origin_game_master$"
+sgm_start_events.11.desc: "Number of $origin_game_master$ player countries: [global_event_country.sgm_var_num_gm]."
+
 # Galactic Community
  sgm_galcom.1.name: "$RESOLUTIONS$"
  sgm_galcom.1.desc: "Immediately pass resolution being voted on. If resolution is targeted the target country will be [this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!."
@@ -87,9 +95,11 @@ preventing_ai_federations: "§GFederations: §RNo AI"
 preventing_all_federations: "§GFederations: §RBlocked"
 federations_allowed: "§GFederations: Allowed"
 preventing_pvp_wars: "§GWars: §RNo Players"
+preventing_pvp_wars_tooltip: "§RNo Player Wars until [player_country.sgm_wars_blocked]"
 AI_wars_blocked: "§GWars: §RNo AI"
 preventing_ai_wars_tooltip: "§RNo AI Wars until [ai_country.sgm_wars_blocked]"
 preventing_all_wars: "§GWars: §RBlocked"
+preventing_all_wars_tooltip: "§RNo Wars until [ai_country.sgm_wars_blocked]"
 wars_allowed: "§GWars: Allowed"
 preventing_player_subjugation: "§GSubjugation: §RNo Players"
 preventing_ai_subjugation: "§GSubjugation: §RNo AI"
@@ -109,3 +119,12 @@ sgm_var_jumps_spawn_system_value: "[global_event_country.sgm_var_jumps_spawn_sys
 sgm_var_distance_spawn_system_value: "[global_event_country.sgm_var_distance_spawn_system]"
 sgm_spawn_system_hyperlane_switch: "[this.Get_hyperlane_spawn_system]"
 sgm_spawn_system_is_discovered_switch: "[this.Get_is_discovered_spawn_system]"
+sgm_system_prevprev_GetName: "$NAME$: [prevprev.GetName]"
+MESSAGE_SGM_SYSTEM_SPAWNED_TITLE: "System Spawned"
+
+# Ship spawn
+sgm_ship_spawner.3.name: "Spawn Ship"
+sgm_ship_spawner.3.desc: "$sgm_ship_spawner.3.name$ from global ship designs file §Y[this.GetNameShipSpawnSwitch]§!.\n$TRADE_OFFER_QUANTITY$: §Y[global_event_country.sgm_spawn_ship_var_num_ships]§!\n$FLEET_VIEW_REINFORCE_HEADER$: §Y[from.GetName]§!\nOverride graphical culture to target country ([this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!): $sgm_spawn_ship_override_to_owner_graphical_culture_switch$"
+sgm_ship_spawner.3.a: "§Y[this.GetNameShipSpawnSwitch]§!"
+sgm_spawn_ship_var_num_ships_value: "[global_event_country.sgm_spawn_ship_var_num_ships]"
+sgm_spawn_ship_override_to_owner_graphical_culture_switch: "[this.Get_override_to_owner_graphical_culture]"

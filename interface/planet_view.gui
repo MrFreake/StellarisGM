@@ -364,17 +364,6 @@ guiTypes = {
 							effect = sgm_generate_late_primitives
 				#			shortCut = j
 						}
-						effectbuttonType = {					
-							name = sgm_trigger_revolt
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 594 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_trigger_revolt
-							orientation = UPPER_LEFT
-							effect = sgm_trigger_revolt
-				#			shortCut = j
-						}
 						## Middle Column
 
 						instantTextBoxType = {
@@ -552,6 +541,17 @@ guiTypes = {
 							orientation = UPPER_LEFT
 							effect = sgm_set_planet_owner
 				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_trigger_revolt
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 446 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_trigger_revolt
+							orientation = UPPER_LEFT
+							effect = sgm_trigger_revolt
+				#			shortCut = j
 						}													
 						# right column
 						instantTextBoxType = {
@@ -662,6 +662,39 @@ guiTypes = {
 							buttonText = sgm_spawn_system
 							orientation = UPPER_LEFT
 							effect = sgm_spawn_system
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_add_claims
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 335 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_add_claims
+							orientation = UPPER_LEFT
+							effect = sgm_add_claims
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_remove_claims
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 372 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_remove_claims
+							orientation = UPPER_LEFT
+							effect = sgm_remove_claims
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_spawn_megastructure
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 409 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_spawn_megastructure
+							orientation = UPPER_LEFT
+							effect = sgm_spawn_megastructure
 				#			shortCut = j
 						}						
 					}
@@ -1993,7 +2026,21 @@ guiTypes = {
 						name = "designation_name"
 						font = "cg_16b"
 						text = ""
-						position = { x = 60 y = -53 }
+						position = { x = 60 y = -62 }
+						maxWidth = 120
+						maxHeight = 40
+						fixedSize = yes
+						format = left
+						orientation = lower_left
+						vertical_alignment = center
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "ascension_tier"
+						font = "cg_16b"
+						text = ""
+						position = { x = 60 y = -43 }
 						maxWidth = 120
 						maxHeight = 40
 						fixedSize = yes
@@ -2016,34 +2063,25 @@ guiTypes = {
 					}
 
 					buttonType = {
-						name = "automated_development_button"
+						name = "upgrade_ascension_tier_button"
 						position = { x = -85 y = -50 }
+						quadTextureSprite = "GFX_button_upgrade_ascension_tier"
+						orientation = lower_right
+					}
+
+					buttonType = {
+						name = "automated_development_button"
+						position = { x = -49 y = -50 }
 						quadTextureSprite = "GFX_button_automate"
 						pdx_tooltip = "SELECT_COLONY_AUTOMATIC_DEVELOPMENT"
 						orientation = lower_right
 					}
 
-					iconType = {
+					buttonType = {
 						name = "automated_development_selected"
-						position = { x = -85 y = -50 }
+						position = { x = -49 y = -50 }
 						quadTextureSprite = "GFX_button_automate_selected"
 						pdx_tooltip = "COLONY_AUTOMATIC_DEVELOPMENT_SELECTED"
-						orientation = lower_right
-					}
-
-					buttonType = {
-						name = "manual_development_button"
-						position = { x = -49 y = -50 }
-						quadTextureSprite = "GFX_button_manual"
-						pdx_tooltip = "SELECT_COLONY_MANUAL_DEVELOPMENT"
-						orientation = lower_right
-					}
-
-					iconType = {
-						name = "manual_development_selected"
-						position = { x = -49 y = -50 }
-						quadTextureSprite = "GFX_button_manual_selected"
-						pdx_tooltip = "COLONY_MANUAL_DEVELOPMENT_SELECTED"
 						orientation = lower_right
 					}
 				}

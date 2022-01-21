@@ -62,7 +62,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_topbar_background_cutoff"
 			position = { x= 0 y = 0 }
 		}
-			
+
 		buttonType = {
 			name = "music_controls_toggle"
 			quadTextureSprite = "GFX_music_commands_icon"
@@ -156,7 +156,7 @@ guiTypes = {
 			orientation = "CENTER"
 			scale = 1
 		}
-		
+
 		### TOPBAR
 
 		containerWindowType = {
@@ -233,7 +233,7 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
 				name = "empire_size_group"
 				size = { width = 100 height = 35 }
@@ -295,7 +295,7 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
 				name = "pop_group"
 				size = { width = 50 height = 35 }
@@ -325,7 +325,7 @@ guiTypes = {
 					format = center
 					alwaysTransparent = yes
 				}
-			}			
+			}
 
 			containerWindowType = {
 				name = "starbase_group"
@@ -643,12 +643,12 @@ guiTypes = {
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 200
-					
+
 					background = {
 						name = "bg"
 						spriteType = "GFX_subwindow_tile_plain_solid"
 					}
-					
+
 					gridBoxType = {
 						name = "resources"
 						format = "UPPER_LEFT"
@@ -696,12 +696,12 @@ guiTypes = {
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 200
-					
+
 					background = {
 						name = "bg"
 						spriteType = "GFX_subwindow_tile_plain_solid"
 					}
-					
+
 					gridBoxType = {
 						name = "resources"
 						format = "UPPER_LEFT"
@@ -938,7 +938,7 @@ guiTypes = {
 			tooltip_mode_enabled = yes
 			alwaysTransparent = yes
 		}
-	
+
 		instantTextBoxType={
 			name = "amount"
 			font = "cg_16b"
@@ -1149,7 +1149,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "maingui_left_bar_buttons"
-		size = { width = 250 height = 670 } 
+		size = { width = 250 height = 670 }
 		position = { x = -225 y = 35 }
 		hide_position = { x = -225 y = 35 }
 		show_position = { x = -5 y = 35 }
@@ -1160,12 +1160,12 @@ guiTypes = {
 		orientation = upper_left
 		moveable = no
 		clipping = no
-		
+
 		containerWindowType = {
 			name = "background"
 			size = { width = 250 height = 640 }
 			position = { x = 5 y = 5 }
-			
+
 			background = {
 				name = "navbar_bg"
 				spriteType = "GFX_navbar_bg"

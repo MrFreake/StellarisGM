@@ -103,7 +103,7 @@ sgm_increase_planet_size = {
 		is_gm = yes
 	}
 	allow = {
-		planet_size < 25
+		#planet_size < 25
 	}
 	
 	effect = {
@@ -116,7 +116,7 @@ sgm_decrease_planet_size = {
 		is_gm = yes
 	}
 	allow = {
-		planet_size > 5
+		planet_size > 1
 	}
 	
 	effect = {
@@ -130,7 +130,7 @@ sgm_reroll_modifiers = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet_modifiers = yes
@@ -142,7 +142,7 @@ sgm_reroll_deposits = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet = yes
@@ -154,7 +154,7 @@ sgm_reroll_planet = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet = yes
@@ -168,7 +168,7 @@ sgm_generate_early_primitives = {
 	}
 	
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 		is_colonizable = yes
 	}
 	effect = {
@@ -182,7 +182,7 @@ sgm_generate_late_primitives = {
 	}
 	
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 		is_colonizable = yes
 	}
 	effect = {
@@ -695,10 +695,69 @@ sgm_set_planet_owner = {
 sgm_trigger_revolt = {
 	potential = {
 		is_gm = yes
+		exists = owner
 	}
 	allow = {}
-	planet_event = {
-		id = unrest.4200
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.4199
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
 	}
 }
 
+sgm_add_claims = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		#NOT = { event_target:target_country = { has_claim = prev.solar_system } }
+	}
+	allow = {}
+	effect = {
+		solar_system = {
+			add_claims = {
+				who = event_target:target_country
+				num_of_claims = 1
+			}
+		}
+	}
+}
+sgm_remove_claims = {
+	potential = {
+		is_gm = yes
+		exists = event_target:target_country
+		event_target:target_country = { has_claim = prev.solar_system } 
+	}
+	allow = {}
+	effect = {
+		solar_system = {
+			remove_claims = {
+				who = event_target:target_country
+				num_of_claims = 1
+			}
+		}
+	}
+}
+
+sgm_spawn_megastructure = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.57
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
