@@ -32,7 +32,7 @@ guiTypes = {
 		effectbuttonType = {					# target 
 			name = sgm_set_target
 			quadTextureSprite = "GFX_target_country"
-			position = { x = 490 y = 22 }
+			position = { x = 458 y = 22 }
 			scale = 1
 			#buttonFont = malgun_goth_24
 			#buttonText = sgm_target_planet
@@ -43,7 +43,7 @@ guiTypes = {
 		effectbuttonType = {					# remove target 
 			name = sgm_unset_target
 			quadTextureSprite = "GFX_untarget_country"
-			position = { x = 490 y = 22 }
+			position = { x = 458 y = 22 }
 			scale = 1
 			#buttonFont = malgun_goth_24
 			#buttonText = sgm_target_planet
@@ -51,6 +51,383 @@ guiTypes = {
 			pdx_tooltip = "Unset target country"
 #			shortCut = j
 		}
+
+		dropDownBoxType = {								## This controls the SGM Popout
+		name = "sgm_dropdown"
+		position = { x = 490 y = 22 }
+		size = { width = 166 height = 58 }
+		orientation = upper_left
+		expandButton = {
+			name = "expand_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_open_gm_menu"
+			pdx_tooltip = "Open GM Menu"
+			pdx_tooltip_delayed = "Will pop up later"
+		}
+		expandedWindow = {
+			name = "expanded_window"
+			position = { x = -300 y = -100 }
+			show_position = { x = 80 y = -2 }
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
+			animation_time = 200
+			size = { width = 350 height = 624 }
+			verticalScrollbar = "right_vertical_slider"
+			#priority = 100
+			defaultSelection = yes
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_subwindow_tile_plain_solid"
+			}
+			containerWindowType = {
+				name = "buttons"
+				size = { width = -10 height = -10 }
+				position = { x = 10 y = 10 }
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				}
+				# left column
+				instantTextBoxType = {
+					name = "COUNTRY_EFFECTS"
+					font = "malgun_goth_24"
+					position = { x = 2 y = 2 }
+					text = "COUNTRY_EFFECTS"
+					maxWidth = 142
+					maxHeight = 34
+					fixedSize = no
+					format = center
+					orientation = UPPER_LEFT
+				}
+				effectbuttonType = {					
+					name = sgm_country_effects
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 39 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_country_effects
+					orientation = UPPER_LEFT
+					effect = sgm_country_effects
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_shift_ethics
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 76 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_shift_ethics
+					orientation = UPPER_LEFT
+					effect = sgm_shift_ethics
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_change_civics
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 113 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_change_civics
+					orientation = UPPER_LEFT
+					effect = sgm_change_civics
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_give_technology
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 150 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_give_technology
+					orientation = UPPER_LEFT
+					effect = sgm_give_technology
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_give_relic
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 187 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_give_relic
+					orientation = UPPER_LEFT
+					effect = sgm_give_relic
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_give_special_resources
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 224 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_give_special_resources
+					orientation = UPPER_LEFT
+					effect = sgm_give_special_resources
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_give_FE_buildings
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 261 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_give_FE_buildings
+					orientation = UPPER_LEFT
+					effect = sgm_give_FE_buildings
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_remove_relic_cooldown
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_remove_relic_cooldown
+					orientation = UPPER_LEFT
+					effect = sgm_remove_relic_cooldown
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_change_authority
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 335 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_change_authority
+					orientation = UPPER_LEFT
+					effect = sgm_change_authority
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_modify_main_species
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 2 y = 372 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_modify_main_species
+					orientation = UPPER_LEFT
+					effect = sgm_modify_main_species
+		#			shortCut = j
+				}
+				
+				
+				# middle column
+				instantTextBoxType = {
+					name = "TARGET_COUNTRY_EFFECTS"
+					font = "malgun_goth_24"
+					position = { x = 148 y = 2 }
+					text = "TARGET_COUNTRY_EFFECTS"
+					maxWidth = 142
+					maxHeight = 34
+					fixedSize = yes
+					format = center
+					orientation = UPPER_LEFT
+				}					
+
+
+				effectbuttonType = {					
+					name = sgm_positive_relations_with_target
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 39 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_positive_relations_with_target
+					orientation = UPPER_LEFT
+					effect = sgm_positive_relations_with_target
+		#			shortCut = j
+				}					
+
+				effectbuttonType = {					
+					name = sgm_negative_relations_with_target
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 76 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_negative_relations_with_target
+					orientation = UPPER_LEFT
+					effect = sgm_negative_relations_with_target
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_improve_target_opinion
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 113 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_improve_target_opinion
+					orientation = UPPER_LEFT
+					effect = sgm_improve_target_opinion
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_hurt_target_opinion
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 150 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_hurt_target_opinion
+					orientation = UPPER_LEFT
+					effect = sgm_hurt_target_opinion
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_declare_war_with_target
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 187 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_declare_war_with_target
+					orientation = UPPER_LEFT
+					effect = sgm_declare_war_with_target
+		#			shortCut = j
+				}
+	
+				effectbuttonType = {					
+					name = sgm_force_peace_with_target
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 187 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_force_peace_with_target
+					orientation = UPPER_LEFT
+					effect = sgm_force_peace_with_target
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_play_as_owner
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 224 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_play_as_owner
+					orientation = UPPER_LEFT
+					effect = sgm_play_as_owner
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_return_to_gm
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 224 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_return_to_gm
+					orientation = UPPER_LEFT
+					effect = sgm_return_to_gm
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_switch_player_to_country
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 261 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_switch_player_to_country
+					orientation = UPPER_LEFT
+					effect = sgm_switch_player_to_country
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_increase_neighbor_opinion
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 298 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_increase_neighbor_opinion
+					orientation = UPPER_LEFT
+					effect = sgm_increase_neighbor_opinion
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_hurt_neighbor_opinion
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 335 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_hurt_neighbor_opinion
+					orientation = UPPER_LEFT
+					effect = sgm_hurt_neighbor_opinion
+		#			shortCut = j
+				}					
+				effectbuttonType = {					
+					name = sgm_join_federation
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 372 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_join_federation
+					orientation = UPPER_LEFT
+					effect = sgm_join_federation
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_leave_federation
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 372 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_leave_federation
+					orientation = UPPER_LEFT
+					effect = sgm_leave_federation
+		#			shortCut = j
+				}		
+				effectbuttonType = {					
+					name = sgm_begin_truce
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 409 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_begin_truce
+					orientation = UPPER_LEFT
+					effect = sgm_begin_truce
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_end_truce
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 409 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_end_truce
+					orientation = UPPER_LEFT
+					effect = sgm_end_truce
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_end_all_treaties
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 446 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_end_all_treaties
+					orientation = UPPER_LEFT
+					effect = sgm_end_all_treaties
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_join_war_with_target
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 483 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_join_war_with_target
+					orientation = UPPER_LEFT
+					effect = sgm_join_war_with_target
+		#			shortCut = j
+				}
+				effectbuttonType = {					
+					name = sgm_establish_communications
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					position = { x = 148 y = 520 }
+					scale = 1
+					buttonFont = malgun_goth_24
+					buttonText = sgm_establish_communications
+					orientation = UPPER_LEFT
+					effect = sgm_establish_communications
+		#			shortCut = j
+				}
+			}
+		}
+	}
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close_button"
