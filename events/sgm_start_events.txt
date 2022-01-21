@@ -1,52 +1,52 @@
 namespace = sgm_start_events
-
 country_event = {
-    id = sgm_start_events.1
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        has_origin = origin_game_master
-    }
-
-    immediate = {
-        set_country_type = sgm_game_master
-        add_modifier = {
-            modifier = gm_country
-            days = -1
-        }
-        every_country = {
-            establish_communications_no_message = root
-            root = { 
-                add_intel = { amount = 100 who = prev } 
-                add_intel_report = {
-                    category = military
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = government
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = economy
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = technology
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = diplomacy
-                    level = 4
-                    who = prev
-                }
-            }
-        }
-        add_resource = {
+	id = sgm_start_events.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_origin = origin_game_master
+	}
+	immediate = {
+		set_country_type = sgm_game_master
+		add_modifier = {
+			modifier = gm_country
+			days = -1
+		}
+		every_country = {
+			establish_communications_no_message = root
+			root = {
+				add_intel = {
+					amount = 100
+					who = prev
+				}
+				add_intel_report = {
+					category = military
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = government
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = economy
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = technology
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = diplomacy
+					level = 4
+					who = prev
+				}
+			}
+		}
+		add_resource = {
 			energy = 9999999
 			minerals = 9999999
 			influence = 9999999
@@ -61,224 +61,299 @@ country_event = {
 			exotic_gases = 9999999
 			rare_crystals = 9999999
 			nanites = 9999999
-        }
-        set_variable = {
-            which = mulitplier
-            value = 1
-        }
-        set_country_flag = from@this
-    }
+		}
+		set_variable = {
+			which = mulitplier
+			value = 1
+		}
+		set_country_flag = from@this
+	}
 }
 
 event = {
-    id = sgm_start_events.2
-    is_triggered_only = yes
-    #title = gm_country_created_title
-    #desc = gm_country_created_desc
-    #picture = GFX_evt_ancient_artifact
-    hide_window = yes
-
-    trigger = {
-        NOT = {
-            any_country = {
-                is_country_type = sgm_game_master
-            }
-        }
-    }
-
-    immediate = {
-        random_galaxy_species = {
-            save_event_target_as = gm_species
-        }
-        create_country = {
-            name = gm_country
-            type = sgm_game_master
-            species = event_target:gm_species
-            origin = origin_game_master
-            name_list = "PRT1"
-            flag = {
-                background = {
-                    category = "backgrounds"
-                    file = "00_solid.dds"
-                }
-                colors ={
-                    "black"
-                    "black"
-                    "null"
-                    "null"
-                }
-            }
-            effect = { 
-                add_modifier = {
-                    modifier = gm_country
-                    days = -1
-                }
-                every_country = {
-                    establish_communications_no_message = prev
-                    prev = { 
-                        add_intel = { amount = 100 who = prev } 
-                        add_intel_report = {
-                            category = military
-                            level = 4
-                            who = prev
-                        }
-                        add_intel_report = {
-                            category = government
-                            level = 4
-                            who = prev
-                        }
-                        add_intel_report = {
-                            category = economy
-                            level = 4
-                            who = prev
-                        }
-                        add_intel_report = {
-                            category = technology
-                            level = 4
-                            who = prev
-                        }
-                        add_intel_report = {
-                            category = diplomacy
-                            level = 4
-                            who = prev
-                        }
-                    }
-                }
-                add_resource = {
-                    energy = 9999999
-                    minerals = 9999999
-                    influence = 9999999
-                    unity = 9999999
-                    alloys = 9999999
-                    food = 9999999
-                    consumer_goods = 9999999
-                    sr_dark_matter = 9999999
-                    sr_living_metal = 9999999
-                    sr_zro = 9999999
-                    volatile_motes = 9999999
-                    exotic_gases = 9999999
-                    rare_crystals = 9999999
-                    nanites = 9999999
-                }
-                set_variable = {
-                    which = modifier_var
-                    value = 1
-                }
-                set_country_flag = from@this
-            }
-        }
-    }    
+	id = sgm_start_events.2
+	is_triggered_only = yes
+	#title = gm_country_created_title
+	#desc = gm_country_created_desc
+	#picture = GFX_evt_ancient_artifact
+	hide_window = yes
+	trigger = {
+		NOT = {
+			any_country = {
+				is_country_type = sgm_game_master
+			}
+		}
+	}
+	immediate = {
+		random_galaxy_species = {
+			save_event_target_as = gm_species
+		}
+		create_country = {
+			name = gm_country
+			type = sgm_game_master
+			species = event_target:gm_species
+			origin = origin_game_master
+			name_list = "PRT1"
+			flag = {
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				add_modifier = {
+					modifier = gm_country
+					days = -1
+				}
+				every_country = {
+					establish_communications_no_message = prev
+					prev = {
+						add_intel = {
+							amount = 100
+							who = prev
+						}
+						add_intel_report = {
+							category = military
+							level = 4
+							who = prev
+						}
+						add_intel_report = {
+							category = government
+							level = 4
+							who = prev
+						}
+						add_intel_report = {
+							category = economy
+							level = 4
+							who = prev
+						}
+						add_intel_report = {
+							category = technology
+							level = 4
+							who = prev
+						}
+						add_intel_report = {
+							category = diplomacy
+							level = 4
+							who = prev
+						}
+					}
+				}
+				add_resource = {
+					energy = 9999999
+					minerals = 9999999
+					influence = 9999999
+					unity = 9999999
+					alloys = 9999999
+					food = 9999999
+					consumer_goods = 9999999
+					sr_dark_matter = 9999999
+					sr_living_metal = 9999999
+					sr_zro = 9999999
+					volatile_motes = 9999999
+					exotic_gases = 9999999
+					rare_crystals = 9999999
+					nanites = 9999999
+				}
+				set_variable = {
+					which = modifier_var
+					value = 1
+				}
+				set_country_flag = from@this
+			}
+		}
+	}
 }
 
 country_event = {
-    id = sgm_start_events.3
-    hide_window = yes
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    immediate = {
-        event_target:global_event_country = {
-            set_variable = {
-                which = ship_destroyed_scalar
-                value = 1
-            }
-            set_variable = {
-                which = pop_purged_scalar
-                value = 2
-            }
-            set_variable = {
-                which = planet_conquered_scalar
-                value = 3
-            }
-            set_variable = {
-                which = country_destroyed_scalar
-                value = 10
-            }
-            set_variable = {
-                which = megastructure_built_scalar
-                value = 20
-            }
-            set_variable = {
-                which = system_gained_scalar
-                value = 2
-            }
-            set_variable = {
-                which = subject_gained_scalar
-                value = 3
-            }
-            set_variable = {
-                which = subject_integrated_scalar
-                value = 3
-            }
-            set_variable = {
-                which = star_system_destroyed_scalar
-                value = 20
-            }
-            set_variable = {
-                which = tech_unlocked_scalar
-                value = 2
-            }            
-            set_variable = {
-                which = tradition_unlocked_scalar
-                value = 2
-            }
-            set_variable = {
-                which = ascension_perk_unlocked_scalar
-                value = 5
-            }
-            set_variable = {
-                which = planet_destroyed_scalar
-                value = 5
-            }     
-        }
-    }
+	id = sgm_start_events.3
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		event_target:global_event_country = {
+			set_variable = {
+				which = ship_destroyed_scalar
+				value = 1
+			}
+			set_variable = {
+				which = pop_purged_scalar
+				value = 2
+			}
+			set_variable = {
+				which = planet_conquered_scalar
+				value = 3
+			}
+			set_variable = {
+				which = country_destroyed_scalar
+				value = 10
+			}
+			set_variable = {
+				which = megastructure_built_scalar
+				value = 20
+			}
+			set_variable = {
+				which = system_gained_scalar
+				value = 2
+			}
+			set_variable = {
+				which = subject_gained_scalar
+				value = 3
+			}
+			set_variable = {
+				which = subject_integrated_scalar
+				value = 3
+			}
+			set_variable = {
+				which = star_system_destroyed_scalar
+				value = 20
+			}
+			set_variable = {
+				which = tech_unlocked_scalar
+				value = 2
+			}
+			set_variable = {
+				which = tradition_unlocked_scalar
+				value = 2
+			}
+			set_variable = {
+				which = ascension_perk_unlocked_scalar
+				value = 5
+			}
+			set_variable = {
+				which = planet_destroyed_scalar
+				value = 5
+			}
+		}
+	}
 }
 
 country_event = {
-    id = sgm_start_events.4
-    is_triggered_only = yes
-    hide_window = yes
+	id = sgm_start_events.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_country_type = sgm_game_master
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				NOT = {
+					has_communications = root
+				}
+			}
+			establish_communications_no_message = root
+			root = {
+				add_intel = {
+					amount = 100
+					who = prev
+				}
+				add_intel_report = {
+					category = military
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = government
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = economy
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = technology
+					level = 4
+					who = prev
+				}
+				add_intel_report = {
+					category = diplomacy
+					level = 4
+					who = prev
+				}
+			}
+		}
+	}
+}
 
-    trigger = {
-        is_country_type = sgm_game_master
-    }
+# Counts player GM countries on game start.
+event = {
+	id = sgm_start_events.9
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = {
+				id = sgm_start_events.10
+				days = 5
+			}
+		}
+	}
+}
 
-    immediate = {
-        random_country = {
-            limit = {
-                NOT = {
-                    has_communications = root
-                }
-            }
-            establish_communications_no_message = root
-            root = { 
-                add_intel = { amount = 100 who = prev } 
-                add_intel_report = {
-                    category = military
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = government
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = economy
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = technology
-                    level = 4
-                    who = prev
-                }
-                add_intel_report = {
-                    category = diplomacy
-                    level = 4
-                    who = prev
-                }
-            }
-        }
-    }
+country_event = {
+	id = sgm_start_events.10
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					is_variable_set = sgm_var_num_gm
+				}
+				clear_variable = sgm_var_num_gm
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					sgm_has_gm_permissions = yes
+				}
+				prev = {
+					change_variable = {
+						which = sgm_var_num_gm
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = sgm_var_num_gm
+						value > 1
+					}
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = sgm_start_events.11
+					}
+				}
+			}
+		}
+	}
+}
+
+# Warns if more than one player picked Game Master permissions.
+country_event = {
+	id = sgm_start_events.11
+	is_triggered_only = yes
+	picture = GFX_evt_galactic_empire
+	title = sgm_start_events.11.name
+	desc = sgm_start_events.11.desc
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = OK
+	}
 }

@@ -550,6 +550,7 @@ defined_text = {
 	default = wars_allowed
 }
 
+# System spawner
 defined_text = {
 	name = GetNameInitilalizerSpawnSwitch
 	text = {
@@ -697,6 +698,30 @@ defined_text = {
 	text = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_is_discovered_yes
+		}
+		localization_key = YES
+	}
+	default = NO
+}
+
+# Ship spawner
+
+defined_text = {
+	name = GetNameShipSpawnSwitch
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+		}
+		localization_key = SHIP
+	}
+	default = SHIP
+}
+
+defined_text = {
+	name = Get_override_to_owner_graphical_culture
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
 		}
 		localization_key = YES
 	}

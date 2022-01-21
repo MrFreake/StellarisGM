@@ -2,19 +2,12 @@ origin_game_master = {
 	is_origin = yes
 	icon = "gfx/event_pictures/origins/origin_gm.dds"
 	picture = GFX_evt_origin_gm
-
-	potential = {
-		is_ai = no
+	ai_playable = {
+		always = no
 	}
-
-	possible = {
-		
-	}
-
 	random_weight = {
 		base = 0
 	}
-	description = become_the_game_master
-
+	description = origin_game_master_desc
 	advanced_start = yes
 }
