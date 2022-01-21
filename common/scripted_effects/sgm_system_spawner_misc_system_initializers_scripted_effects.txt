@@ -754,6 +754,26 @@ sgm_initialiser_spawn_system_misc_system_initializers_effect = {
 							}
 						}
 					}
+					sgm_spawn_system_initializer_hostile_init_21 = {
+						spawn_system = {
+							min_jumps = $JUMPS$
+							max_jumps = $JUMPS$
+							min_distance = $DISTANCE$
+							max_distance = $DISTANCE$
+							initializer = hostile_init_21
+							hyperlane = $HYPERLANE$
+							is_discovered = $IS_DISCOVERED$
+							effect = {
+								set_star_flag = sgm_spawn_system_initializer_hostile_init_21
+								fire_on_action = {
+									on_action = sgm_on_system_spawned
+									scopes = {
+										from = prev
+									}
+								}
+							}
+						}
+					}
 					default = {
 					}
 				}
