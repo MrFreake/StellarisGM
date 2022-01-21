@@ -29,10 +29,10 @@ sgm_create_ship_test_effect = {
 			}
 		}
 	}
-	set_fleet_flag = NAME_Asteroid
+	set_fleet_flag = NAME_Large_Crystal_Entity_Yellow
 	sgm_create_ship_database_effect = yes
 	clear_variable = sgm_var_create_ship
-	remove_fleet_flag = NAME_Asteroid
+	remove_fleet_flag = NAME_Large_Crystal_Entity_Yellow
 }
 
 # Supported Scopes: fleet starbase
@@ -385,7 +385,7 @@ sgm_create_ship_database_effect = {
 		NAME_Seeker = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Seeker
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Voidstalker = {
@@ -535,7 +535,7 @@ sgm_create_ship_database_effect = {
 		NAME_Warder_of_the_Ruins = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Warder_of_the_Ruins
-				GRAPHICAL_CULTURE = "fallen_empire_01"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Gardener_Drone = {
@@ -661,7 +661,7 @@ sgm_create_ship_database_effect = {
 		NAME_PR_417 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_PR_417
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Spearhead = {
@@ -697,397 +697,403 @@ sgm_create_ship_database_effect = {
 		NAME_Sanctuary_Core = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Sanctuary_Core
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Defensive_A_1 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Defensive_A_1
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Defensive_A_2 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Defensive_A_2
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Revenant = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Revenant
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Phantom = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Phantom
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Wraith = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Wraith
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Void_Shaper = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Void_Shaper
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Huntress = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Huntress
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Assassin = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Assassin
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Predator = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Predator
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Void_Former = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Void_Former
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Eradicator = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Eradicator
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Annihilator = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Annihilator
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Obliterator = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Obliterator
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Void_Weaver = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Void_Weaver
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Unbidden_Portal = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Unbidden_Portal
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Vehement_Portal = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Vehement_Portal
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Aberrant_Portal = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Aberrant_Portal
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Unbidden_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Unbidden_Starbase
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
+				# GRAPHICAL_CULTURE = "extra_dimensional_02"
+				# GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Unbidden_Anchor = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Unbidden_Anchor
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_01"
 			}
 		}
 		NAME_Vehement_Anchor = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Vehement_Anchor
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_03"
 			}
 		}
 		NAME_Aberrant_Anchor = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Aberrant_Anchor
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "extra_dimensional_02"
 			}
 		}
 		NAME_Omega = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Omega
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Alpha = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Alpha
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Beta = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Beta
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Gamma = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Gamma
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Sigma = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Sigma
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Theta = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Theta
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Tau = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Tau
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Enforcer = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Enforcer
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Savant = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Savant
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Scholar = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Scholar
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Sage = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Sage
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Cloaker = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cloaker
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Librarian = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Librarian
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Archivist = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Archivist
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_02"
 			}
 		}
 		NAME_Cleanser = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cleanser
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Eternal = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Eternal
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Avatar = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Avatar
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Zealot = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Zealot
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Faith = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Faith
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Penitent = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Penitent
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Pilgrim = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Pilgrim
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Reaper = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Reaper
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Imperium = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Imperium
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Supremacy = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Supremacy
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Glory = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Glory
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Devastator = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Devastator
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Servitor = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Servitor
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Destiny = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Destiny
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_04"
 			}
 		}
 		NAME_Adjuster = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Adjuster
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Keeper = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Keeper
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Custodian = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Custodian
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Warden = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Warden
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Watcher = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Watcher
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Builder = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Builder
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Seeder = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Seeder
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_03"
 			}
 		}
 		NAME_Surplus_Beta = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Beta
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Scholar = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Scholar
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Custodian = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Custodian
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Gamma = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Gamma
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Sage = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Sage
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Warden = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Warden
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Avatar = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Avatar
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_Surplus_Zealot = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Surplus_Zealot
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
 			}
 		}
 		NAME_FE_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_FE_Starbase
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "fallen_empire_01"
+				# GRAPHICAL_CULTURE = "fallen_empire_02"
+				# GRAPHICAL_CULTURE = "fallen_empire_03"
+				# GRAPHICAL_CULTURE = "fallen_empire_04"
+				# GRAPHICAL_CULTURE = "fallen_machine_empire_01"
 			}
 		}
 		NAME_Constructor = {
@@ -1141,31 +1147,31 @@ sgm_create_ship_database_effect = {
 		NAME_Ancient_Sentinel = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancient_Sentinel
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "ancient"
 			}
 		}
 		NAME_Ancient_Defender = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancient_Defender
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "ancient"
 			}
 		}
 		NAME_Ancient_Warden = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancient_Warden
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "ancient"
 			}
 		}
 		NAME_Ancient_Guardian = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancient_Guardian
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "ancient"
 			}
 		}
 		NAME_Ancient_Vault = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancient_Vault
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "ancient"
 			}
 		}
 		NAME_Hive_Asteroid = {
@@ -1183,25 +1189,27 @@ sgm_create_ship_database_effect = {
 		NAME_Relic = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Relic
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "npf_01"
+				# GRAPHICAL_CULTURE = "npf_01_dirty"
 			}
 		}
 		NAME_Type_37 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Type_37
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				# GRAPHICAL_CULTURE = "npf_01_dirty"
 			}
 		}
 		NAME_Type_46 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Type_46
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "npf_01"
+				# GRAPHICAL_CULTURE = "npf_01_dirty"
 			}
 		}
 		NAME_Infinity_Machine = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Infinity_Machine
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "techno"
 			}
 		}
 		NAME_Spectral_Wraith_650THz = {
@@ -1249,7 +1257,7 @@ sgm_create_ship_database_effect = {
 		NAME_Warrior_Freehold = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Warrior_Freehold
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Void_Dwelling = {
@@ -1261,43 +1269,43 @@ sgm_create_ship_database_effect = {
 		NAME_Outrider = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Outrider
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Lancer = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Lancer
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Void_Champion = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Void_Champion
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Ancestral_Glory = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Ancestral_Glory
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Clan_Builder = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Clan_Builder
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Marauder_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Marauder_Starbase
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE =  "pirate_01"
 			}
 		}
 		NAME_Caravaneer_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Caravaneer_Starbase
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "caravaneer_01"
 			}
 		}
 		NAME_Tradestation_Tungle = {
@@ -1315,7 +1323,7 @@ sgm_create_ship_database_effect = {
 		NAME_Yojimbo = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Yojimbo
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "caravaneer_01"
 			}
 		}
 		NAME_Schooner = {
@@ -1345,91 +1353,91 @@ sgm_create_ship_database_effect = {
 		NAME_Drone_Home_Base = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Drone_Home_Base
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "drone"
 			}
 		}
 		NAME_Pirate_Nest = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Pirate_Nest
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Reaver = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Reaver
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Brigand = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Brigand
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Skull = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Skull
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Marauder = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Marauder
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Corsair = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Corsair
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Black_Earl = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Black_Earl
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Pirate_Galleon = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Pirate_Galleon
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Pirate_Transport = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Pirate_Transport
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "mammalian_01"
 			}
 		}
 		NAME_Bemat_corvette_01 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Bemat_corvette_01
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Bemat_destroyer_01 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Bemat_destroyer_01
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Bemat_destroyer_02 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Bemat_destroyer_02
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Bemat_cruiser_01 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Bemat_cruiser_01
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Bemat_cruiser_02 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Bemat_cruiser_02
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Cloud_Entity = {
@@ -1525,49 +1533,49 @@ sgm_create_ship_database_effect = {
 		NAME_Swarm_Large = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Large
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Carrier = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Carrier
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Small = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Small
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Starbase
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Queen = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Queen
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Transport = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Transport
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Colonizer = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Colonizer
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Swarm_Constructor = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Swarm_Constructor
-				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+				GRAPHICAL_CULTURE = "swarm_01"
 			}
 		}
 		NAME_Shroud_Avatar = {
