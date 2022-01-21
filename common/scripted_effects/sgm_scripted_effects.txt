@@ -94,6 +94,12 @@ sgm_begin_next_megastructure_stage = {
 				}
 				upgrade_megastructure_to = dyson_sphere_5
 			}
+			if = {
+				limit = {
+					is_megastructure_type = dyson_sphere_ruined
+				}
+				upgrade_megastructure_to = dyson_sphere_restored
+			}
 			# spy orb
 			if = {
 				limit = {
