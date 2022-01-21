@@ -1602,5 +1602,11 @@ sgm_create_ship_database_effect = {
 				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
 			}
 		}
+		NAME_Hillos_ship = {
+			sgm_create_ship_basic_effect = {
+				DESIGN = NAME_Hillos_ship
+				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
+			}
+		}
 	}
 }
