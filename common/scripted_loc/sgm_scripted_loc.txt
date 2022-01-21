@@ -727,3 +727,32 @@ defined_text = {
 	}
 	default = NO
 }
+
+defined_text = {
+	name = GetName_reinforce_or_make
+	text = {
+		trigger = {
+			is_scope_type = fleet
+		}
+		localization_key = sgm_ship_spawner.3.desc_reinforce_fleet
+	}
+	text = {
+		trigger = {
+			is_scope_type = megastructure
+		}
+		localization_key = sgm_ship_spawner.3.desc_create_fleet
+	}
+	text = {
+		trigger = {
+			is_scope_type = planet
+		}
+		localization_key = sgm_ship_spawner.3.desc_create_fleet
+	}
+	text = {
+		trigger = {
+			is_scope_type = ambient_object
+		}
+		localization_key = sgm_ship_spawner.3.desc_create_fleet
+	}
+	default = NO
+}

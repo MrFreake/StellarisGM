@@ -124,7 +124,10 @@ MESSAGE_SGM_SYSTEM_SPAWNED_TITLE: "System Spawned"
 
 # Ship spawn
 sgm_ship_spawner.3.name: "Spawn Ship"
-sgm_ship_spawner.3.desc: "$sgm_ship_spawner.3.name$ from global ship designs file §Y[this.GetNameShipSpawnSwitch]§!.\n$TRADE_OFFER_QUANTITY$: §Y[global_event_country.sgm_spawn_ship_var_num_ships]§!\n$FLEET_VIEW_REINFORCE_HEADER$: §Y[from.GetName]§!\nOverride graphical culture to target country ([this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!): $sgm_spawn_ship_override_to_owner_graphical_culture_switch$"
+sgm_ship_spawner.3.desc: "$sgm_ship_spawner.3.name$ from global ship designs file §Y[this.GetNameShipSpawnSwitch]§!.\n$TRADE_OFFER_QUANTITY$: §Y[global_event_country.sgm_spawn_ship_var_num_ships]§!\n[from.GetName_reinforce_or_make]\nOverride graphical culture to target country ([this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!): $sgm_spawn_ship_override_to_owner_graphical_culture_switch$"
+sgm_ship_spawner.3.desc_reinforce_or_make: "[from.GetName_reinforce_or_make]"
+sgm_ship_spawner.3.desc_reinforce_fleet: "$FLEET_VIEW_REINFORCE_HEADER$: §Y[from.GetName]§!"
+sgm_ship_spawner.3.desc_create_fleet: "$WILL_CREATE$ $FLEET$ ($TRIGGER_OWNER$: [this.GetName_target_country_GetRealName]§G[event_target:target_country.GetRealName]§!)"
 sgm_ship_spawner.3.a: "§Y[this.GetNameShipSpawnSwitch]§!"
 sgm_spawn_ship_var_num_ships_value: "[global_event_country.sgm_spawn_ship_var_num_ships]"
 sgm_spawn_ship_override_to_owner_graphical_culture_switch: "[this.Get_override_to_owner_graphical_culture]"
