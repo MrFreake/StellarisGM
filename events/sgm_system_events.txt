@@ -3110,6 +3110,21 @@ country_event = {
 		}
 	}
 	option = {
+		name = hostile_init_21
+		trigger = {
+			has_global_flag = sgm_spawn_system_misc_system_initializers
+		}
+		hidden_effect = {
+			set_global_flag = sgm_spawn_system_initializer_hostile_init_21
+			from = {
+				event_target:global_event_country = {
+					sgm_spawn_system_misc_system_initializers_effect = yes
+				}
+			}
+			remove_global_flag = sgm_spawn_system_initializer_hostile_init_21
+		}
+	}
+	option = {
 		name = deneb_system
 		trigger = {
 			has_global_flag = sgm_spawn_system_prescripted_species_systems

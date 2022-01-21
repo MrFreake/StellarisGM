@@ -1,15 +1,21 @@
+on_game_start = {
+	events = {
+		sgm_start_events.9
+	}
+}
+
 on_game_start_country = {
-    events = {
-        sgm_start_events.1
-    }
+	events = {
+		sgm_start_events.1
+	}
 }
 
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
-        sgm_events.1
-    }
+		sgm_events.1
+	}
 }
 
 # From = system
@@ -17,7 +23,7 @@ on_country_destroyed = {
 # This = country (new owner)
 on_system_gained = {
 	events = {
-        sgm_events.2
+		sgm_events.2
 	}
 }
 
@@ -34,15 +40,15 @@ on_megastructure_upgrade_begin = {
 # No scope, like on_game_start
 # Does not run when loading MP saves due to OOS concerns
 on_single_player_save_game_load = {
-    events = {
-        sgm_start_events.2
-    }
+	events = {
+		sgm_start_events.2
+	}
 }
 
 on_monthly_pulse_country = {
-    events = {
-        sgm_start_events.4
-    }
+	events = {
+		sgm_start_events.4
+	}
 }
 
 ##
@@ -50,17 +56,17 @@ on_monthly_pulse_country = {
 # Bounty on_actions
 #
 ##
-
 on_press_begin = {
-    events = {
-        sgm_start_events.3
-    }
+	events = {
+		sgm_start_events.3
+	}
 }
 
-on_monthly_pulse = {        # leaderboard updates
-    events = {
-        sgm_bounty.3
-    }
+on_monthly_pulse = {
+	# leaderboard updates
+	events = {
+		sgm_bounty.3
+	}
 }
 
 # This = owner of ship 1 (combatant)
@@ -69,8 +75,8 @@ on_monthly_pulse = {        # leaderboard updates
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-        sgm_bounty.200
-    }
+		sgm_bounty.200
+	}
 }
 
 #Fired whenever a new owner is set for a planet, and the planet was aggressively conquered
@@ -79,16 +85,16 @@ on_ship_destroyed_perp = {
 #This = Planet scope
 on_planet_conquer = {
 	events = {
-        sgm_bounty.201
-    }
+		sgm_bounty.201
+	}
 }
 
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
-        sgm_bounty.202
-    }
+		sgm_bounty.202
+	}
 }
 
 # A Megastructure has been built
@@ -98,8 +104,8 @@ on_country_destroyed = {
 # FromFromFrom = Fleet
 on_megastructure_built = {
 	events = {
-        sgm_bounty.203
-    }
+		sgm_bounty.203
+	}
 }
 
 # From = system
@@ -107,16 +113,16 @@ on_megastructure_built = {
 # This = country (new owner)
 on_system_gained = {
 	events = {
-        sgm_bounty.204
-    }
+		sgm_bounty.204
+	}
 }
 
 # This = subject
 # From = subject's overlord
 on_becoming_subject = {
 	events = {
-        sgm_bounty.205
-    }
+		sgm_bounty.205
+	}
 }
 
 # fires when a country finishes being integrated
@@ -124,8 +130,8 @@ on_becoming_subject = {
 # From = subject
 on_subject_integrated = {
 	events = {
-        sgm_bounty.206
-    }
+		sgm_bounty.206
+	}
 }
 
 #Fired from destroy_star_system scripted effect
@@ -140,17 +146,17 @@ on_destroy_star_system = {
 # A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
 # This = Country
 on_tech_increased = {
-    events = {
-        sgm_bounty.208
-    }
+	events = {
+		sgm_bounty.208
+	}
 }
 
 # Executed when a country picks any tradition (including starters and finishers)
 # THIS = country
 on_tradition_picked = {
-    events = {
-        sgm_bounty.209
-    }
+	events = {
+		sgm_bounty.209
+	}
 }
 
 # Executed when a country picks an ascension perk
@@ -167,53 +173,51 @@ on_ascension_perk_picked = {
 # FromFrom = Pop
 on_pop_purged = {
 	events = {
-        sgm_bounty.211
-    }
+		sgm_bounty.211
+	}
 }
 
 # Scope:
 # this/root = planet that have been fired upon
 # from = fleet that fired
-
 on_destroy_planet_with_PLANET_KILLER_CRACKER = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_GODRAY = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
 
 on_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	events = {
-        sgm_bounty.212
+		sgm_bounty.212
 	}
 }
-

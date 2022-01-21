@@ -70,6 +70,7 @@ sgm_begin_next_stage = {
 
 	effect = {
 		sgm_begin_next_megastructure_stage = yes
+		set_graphical_culture = mammalian_01
 	}
 }
 
@@ -89,6 +90,7 @@ sgm_finish_megastructure = {
 				}
 				finish_upgrade = yes
 			}
+			set_graphical_culture = mammalian_01
 		}
 	}
 }

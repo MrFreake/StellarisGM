@@ -557,6 +557,9 @@ country_event = {								# change planet class menu
 	immediate = { }
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_gaia
 		from = {
 			change_pc = pc_gaia
@@ -566,6 +569,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_city
 		from = {
 			change_pc = pc_city
@@ -575,6 +581,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_relic
 		from = {
 			change_pc = pc_city
@@ -584,6 +593,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_frozen
 		from = {
 			change_pc = pc_frozen
@@ -593,6 +605,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_alpine
 		from = {
 			change_pc = pc_alpine
@@ -602,6 +617,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_tundra
 		from = {
 			change_pc = pc_tundra
@@ -611,6 +629,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_continental
 		from = {
 			change_pc = pc_continental
@@ -620,6 +641,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_ocean
 		from = {
 			change_pc = pc_ocean
@@ -629,6 +653,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_tropical
 		from = {
 			change_pc = pc_tropical
@@ -638,6 +665,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_desert
 		from = {
 			change_pc = pc_desert
@@ -647,6 +677,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_arid
 		from = {
 			change_pc = pc_arid
@@ -656,6 +689,9 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = no }
+		}
 		NAME = pc_savannah
 		from = {
 			change_pc = pc_savannah
@@ -665,9 +701,118 @@ country_event = {								# change planet class menu
 	}
 
 	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_b_star 
+		from = {
+			change_pc = pc_b_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_a_star 
+		from = {
+			change_pc = pc_a_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_f_star 
+		from = {
+			change_pc = pc_f_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_g_star 
+		from = {
+			change_pc = pc_g_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_k_star 
+		from = {
+			change_pc = pc_k_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_m_star 
+		from = {
+			change_pc = pc_m_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_m_giant_star 
+		from = {
+			change_pc = pc_m_giant_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_t_star 
+		from = {
+			change_pc = pc_t_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_black_hole 
+		from = {
+			change_pc = pc_black_hole 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_neutron_star 
+		from = {
+			change_pc = pc_neutron_star 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes}
+		}
+		NAME = pc_pulsar 
+		from = {
+			change_pc = pc_pulsar 
+		}
+	}
+	option = {
+		trigger = {
+			from = { is_star = yes }
+		}
+		NAME = trigger_supernova
+		from = {
+			solar_system = {
+				destroy_star_system = yes
+			}
+		}
+	}
+	option = {
 		NAME = Exit
 	}
-
 }
 
 country_event = {								# spawn hostiles menu
@@ -3156,3 +3301,679 @@ country_event = {							# spawn armies menu
 		NAME = Exit
 	}
 }
+
+
+country_event = {
+	id = sgm_planets.4199
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		from = {
+			planet_event = {
+				id = sgm_planets.4200
+			}
+		}
+	}
+}
+
+# this is a modified version of unrest.4200, check to be sure it hasn't been updated
+
+planet_event = {
+	id = sgm_planets.4200
+	title = unrest.4200.name
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_planet_flag = nationalist_revolt
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		text = unrest.4200.desc.returner
+	}
+	desc = {
+		trigger = {
+			has_planet_flag = secessionist_revolt
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		text = unrest.4200.desc.secession
+	}
+	desc = {
+		trigger = {
+			has_planet_flag = nationalist_revolt
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = unrest.4200.desc.returner.gesta
+	}
+	desc = {
+		trigger = {
+			has_planet_flag = secessionist_revolt
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = unrest.4200.desc.secession.gesta
+	}
+	picture = GFX_evt_surrender
+	show_sound = event_ground_battle
+	location = root
+
+	#mean_time_to_happen = { months = 600 }
+	pre_triggers = {
+		has_ground_combat = no
+	}
+
+	trigger = {
+		#planet_stability < @stabilitylevel1
+		#check_variable = {
+		#	which = unrest_50
+		#	value > 36
+		#}
+		NOR = {
+			has_planet_flag = recent_unrest_event
+			has_planet_flag = slave_stirring
+			has_planet_flag = slave_resistance
+			has_planet_flag = slave_riots
+			has_planet_flag = slave_revolt
+		}
+		has_orbital_bombardment = no
+		#exists = controller
+		#controller = { is_same_value = root.owner }
+		#any_owned_species = {
+		#	species_has_happiness_with_owner = root.owner
+		#}
+		#original_owner = no
+		#any_country = {
+		#	NOT = { is_same_value = root.owner }
+		#	root = {
+		#		is_original_owner = prev
+		#		any_owned_pop = {
+		#			is_same_species = prevprev
+		#		}
+		#	}
+		#}
+	}
+
+	immediate = {
+		set_planet_flag = revolt_in_progress
+		set_variable = {
+			which = unrest_50
+			value = 0
+		}
+		set_variable = {
+			which = rebel_armies_var
+			value = 0
+		}
+		every_owned_pop = {
+			planet = {
+				change_variable = {
+					which = rebel_armies_var
+					value = 1
+				}
+			}
+		}
+		multiply_variable = {
+			which = rebel_armies_var
+			value = 0.67
+		}
+		if = {
+			limit = { # has original owner
+				original_owner = no
+				any_country = {
+					NOT = { is_same_value = root.owner }
+					is_subject = no
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					root = {
+						is_original_owner = prev
+						any_owned_pop = {
+							is_same_species = prevprev
+						}
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					NOT = { is_same_value = root.owner }
+					is_subject = no
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					root = {
+						is_original_owner = prev
+						any_owned_pop = {
+							is_same_species = prevprev
+						}
+					}
+				}
+				save_event_target_as = fatherland
+			}
+			random_owned_pop = {
+				limit = { is_same_species = event_target:fatherland }
+				save_event_target_as = nationalist_pop
+			}
+			create_rebels = {
+				name = random
+				ethos = event_target:fatherland
+				authority = event_target:fatherland
+				#civics = event_target:fatherland
+				civics = random
+				origin = "origin_separatists"
+				species = event_target:fatherland
+				flag = random
+				effect = {
+					if = {
+						limit = {
+							has_trait = trait_necrophage
+						}
+						set_origin = origin_necrophage
+					}
+					set_country_flag = standard_unrest_rebels
+					save_event_target_as = nationalist_rebels
+					establish_communications_no_message = root.owner
+					establish_communications_no_message = event_target:fatherland
+					root = {
+						owner = {
+							every_relation = {
+								establish_communications_no_message = prevprevprev
+							}
+						}
+					}
+				}
+			}
+			while = {
+				count = rebel_armies_var
+				create_army = {
+					owner = event_target:nationalist_rebels
+					species = event_target:fatherland
+					type = "assault_army"
+				}
+			}
+			set_planet_flag = nationalist_revolt
+			set_timed_planet_flag = {
+				flag = recent_unrest_event
+				days = 720
+			}
+		}
+		else = { # no original owner
+			random_owned_pop = {
+				limit = {
+					is_sapient = yes
+					pop_has_happiness = yes
+				}
+				save_event_target_as = rebel_pop
+			}
+			if = {
+				limit = {
+					NOT = { exists = event_target:rebel_pop }
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					save_event_target_as = rebel_pop
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = event_target:rebel_pop }
+				}
+				random_owned_pop = {
+					save_event_target_as = rebel_pop
+				}
+			}
+			create_rebels = {
+				species = event_target:rebel_pop.species
+				ethos = random
+				authority = random
+				origin = "origin_separatists"
+				name = random
+				flag = random
+				effect = {
+					if = {
+						limit = {
+							has_trait = trait_necrophage
+						}
+						set_origin = origin_necrophage
+					}
+					set_country_flag = standard_unrest_rebels
+					save_event_target_as = secessionist_rebels
+					establish_communications_no_message = root.owner
+					root = {
+						owner = {
+							every_relation = {
+								establish_communications_no_message = prevprevprev
+							}
+						}
+					}
+				}
+			}
+			while = {
+				count = rebel_armies_var
+				create_army = {
+					owner = event_target:secessionist_rebels
+					species = event_target:secessionist_rebels
+					type = "assault_army"
+				}
+			}
+			set_planet_flag = secessionist_revolt
+			set_timed_planet_flag = {
+				flag = recent_unrest_event
+				days = 720
+			}
+		}
+		clear_variable = rebel_armies_var
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = sgm_planets.57
+	is_triggered_only = yes
+	title = sgm_planets_57
+	desc = sgm_planets_57_desc
+	picture = GFX_evt_alien_city
+
+	immediate = {}
+
+	option = {							
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = dyson_sphere_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = dyson_sphere_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = sgm_dyson_sphere_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = dyson_sphere_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = dyson_sphere_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = dyson_sphere_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}							
+		NAME = spy_orb_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = spy_orb_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = spy_orb_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = spy_orb_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = spy_orb_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = spy_orb_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+
+	option = {		
+		allow = {
+			host_has_dlc = "Utopia"
+		}					
+		NAME = think_tank_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = think_tank_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = sgm_think_tank_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = think_tank_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = think_tank_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = think_tank_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+
+	option = {							
+		NAME = gateway_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = gateway_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		NAME = gateway_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = gateway_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+
+	option = {		
+		allow = {
+			host_has_dlc = "Megacorp"
+		}					
+		NAME = matter_decompressor_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = matter_decompressor_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		NAME = sgm_matter_decompressor_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = matter_decompressor_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		NAME = matter_decompressor_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = matter_decompressor_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = sgm_strategic_coordination_center_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = strategic_coordination_center_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = strategic_coordination_center_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = strategic_coordination_center_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {		
+		allow = {
+			host_has_dlc = "Federations"
+		}					
+		NAME = mega_art_installation_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_art_installation_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		NAME = sgm_mega_art_installation_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_art_installation_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		NAME = mega_art_installation_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_art_installation_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {		
+		allow = {
+			host_has_dlc = "Megacorp"
+		}					
+		NAME = interstellar_assembly_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = interstellar_assembly_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		NAME = sgm_interstellar_assembly_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = interstellar_assembly_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		NAME = interstellar_assembly_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = interstellar_assembly_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {		
+		allow = {
+			host_has_dlc = "Federations"
+		}					
+		NAME = mega_shipyard_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_shipyard_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		NAME = sgm_mega_shipyard_permanently_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_shipyard_permanently_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		NAME = mega_shipyard_ruined
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = mega_shipyard_ruined
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		NAME = habitat_0 
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = habitat_0 
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+	option = {		
+		allow = {
+			host_has_dlc = "Nemesis"
+		}					
+		NAME = crisis_sphere_0
+		from = {
+			solar_system = {
+				spawn_megastructure = {
+					type = crisis_sphere_0
+					planet = this
+					graphical_culture = mammalian_01
+				}
+			}
+		}
+	}
+}
+

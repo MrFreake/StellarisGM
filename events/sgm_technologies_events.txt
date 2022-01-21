@@ -6926,33 +6926,34 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = tech_repeatable_improved_edict_length
-		trigger = {
-			has_global_flag = sgm_give_technology_society
-			from = {
-				NOT = {
-					has_technology = tech_repeatable_improved_edict_length
-				}
-			}
-		}
-		allow = {
-			sgm_give_technology_allow_trigger = {
-				TECH = tech_repeatable_improved_edict_length
-			}
-		}
-		from = {
-			sgm_give_technology_effect = {
-				TECH = tech_repeatable_improved_edict_length
-			}
-		}
-		country_event = {
-			id = sgm_technologies.1
-			scopes = {
-				from = from
-			}
-		}
-	}
+	# Removed in 3.3.0
+	# option = {
+	# 	name = tech_repeatable_improved_edict_length
+	# 	trigger = {
+	# 		has_global_flag = sgm_give_technology_society
+	# 		from = {
+	# 			NOT = {
+	# 				has_technology = tech_repeatable_improved_edict_length
+	# 			}
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		sgm_give_technology_allow_trigger = {
+	# 			TECH = tech_repeatable_improved_edict_length
+	# 		}
+	# 	}
+	# 	from = {
+	# 		sgm_give_technology_effect = {
+	# 			TECH = tech_repeatable_improved_edict_length
+	# 		}
+	# 	}
+	# 	country_event = {
+	# 		id = sgm_technologies.1
+	# 		scopes = {
+	# 			from = from
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = tech_repeatable_improved_army_damage
 		trigger = {

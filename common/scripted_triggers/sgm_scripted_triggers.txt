@@ -1,46 +1,40 @@
-
+# For button effects
 is_gm = {
-    OR = {
-        AND = {                                         # this covers GM accessing planet and fleet menus
-            from = { is_country_type = sgm_game_master }
-            OR = { 
-                is_scope_type = fleet
-                is_scope_type = planet
-                is_scope_type = megastructure
-            }
-        }
-        AND = {                                         # this covers GM switched to other country
-            from = { has_country_flag = sgm_assumed_control }
-            OR = { 
-                is_scope_type = fleet
-                is_scope_type = planet
-                is_scope_type = megastructure
-            }
-        }
-        AND = {                                         # this covers the diplo screen (country scope)
-            OR = { 
-                from = { is_country_type = sgm_game_master }
-                from = { has_country_flag = sgm_assumed_control }
-            }
-            is_scope_type = country
-        }
-    }
+	exists = from
+	from = {
+		is_scope_type = country
+		sgm_has_gm_permissions = yes
+	}
+	OR = {
+		is_scope_type = planet
+		is_scope_type = fleet
+		is_scope_type = megastructure
+		is_scope_type = country		# this covers the diplo screen (country scope)
+	}
+}
+
+sgm_has_gm_permissions = {
+	OR = {
+		is_country_type = sgm_game_master		# this covers GM accessing planet and fleet menus
+		has_country_flag = sgm_assumed_control		# this covers GM switched to other country
+		has_civic = sgm_game_master_civic
+	}
 }
 
 is_fleet = {
-    is_scope_type = fleet
-    NOT = {
-        is_ship_class = shipclass_starbase
-    }
+	is_scope_type = fleet
+	NOT = {
+		is_ship_class = shipclass_starbase
+	}
 }
 
 sgm_give_technology_allow_trigger = {
-    from = {
-        NOT = {
-            has_technology = $TECH$
-        }
-        can_research_technology = $TECH$
-    }
+	from = {
+		NOT = {
+			has_technology = $TECH$
+		}
+		can_research_technology = $TECH$
+	}
 }
 
 has_army_flags = {
