@@ -103,7 +103,7 @@ sgm_increase_planet_size = {
 		is_gm = yes
 	}
 	allow = {
-		planet_size < 25
+		#planet_size < 25
 	}
 	
 	effect = {
@@ -116,7 +116,7 @@ sgm_decrease_planet_size = {
 		is_gm = yes
 	}
 	allow = {
-		planet_size > 5
+		planet_size > 1
 	}
 	
 	effect = {
@@ -130,7 +130,7 @@ sgm_reroll_modifiers = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet_modifiers = yes
@@ -142,7 +142,7 @@ sgm_reroll_deposits = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet = yes
@@ -154,7 +154,7 @@ sgm_reroll_planet = {
 		is_gm = yes
 	}
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 	}
 	effect = {
 		reroll_planet = yes
@@ -168,7 +168,7 @@ sgm_generate_early_primitives = {
 	}
 	
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 		is_colonizable = yes
 	}
 	effect = {
@@ -182,7 +182,7 @@ sgm_generate_late_primitives = {
 	}
 	
 	allow = {
-		num_pops < 1
+		#num_pops < 1
 		is_colonizable = yes
 	}
 	effect = {
