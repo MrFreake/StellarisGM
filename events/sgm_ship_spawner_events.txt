@@ -1,0 +1,231 @@
+namespace = sgm_ship_spawner
+country_event = {
+	id = sgm_ship_spawner.3
+	is_triggered_only = yes
+	title = sgm_ship_spawner.3.name
+	desc = sgm_ship_spawner.3.desc
+	# picture = GFX_evt_binary_stars
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_SpawnShipEventWindow
+	immediate = {
+		save_global_event_target_as = sgm_ship_spawner_country_spawner
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					NOT = {
+						is_variable_set = sgm_spawn_ship_var_num_ships
+					}
+				}
+				set_variable = {
+					which = sgm_spawn_ship_var_num_ships
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
+						has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_no
+					}
+				}
+				set_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_no
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+					has_global_flag = sgm_spawn_ship_ai_ship_designs
+					has_global_flag = sgm_spawn_ship_crisis_ship_designs
+					has_global_flag = sgm_spawn_ship_crystal_monster_designs
+					has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+					has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+					has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+					has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+					has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+					has_global_flag = sgm_spawn_ship_event_ship_designs_general
+					has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+					has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+					has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+					has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+					has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+					has_global_flag = sgm_spawn_ship_global_ship_designs
+					has_global_flag = sgm_spawn_ship_leviathans_designs
+					has_global_flag = sgm_spawn_ship_marauder_ship_designs
+					has_global_flag = sgm_spawn_ship_megacorp_designs
+					has_global_flag = sgm_spawn_ship_mining_drone_designs
+					has_global_flag = sgm_spawn_ship_pirate_ship_designs
+					has_global_flag = sgm_spawn_ship_space_monster_designs
+					has_global_flag = sgm_spawn_ship_space_whale_designs
+					has_global_flag = sgm_spawn_ship_swarm_ship_designs
+					has_global_flag = sgm_spawn_ship_utopia_designs
+				}
+			}
+			set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+		}
+	}
+	option = {
+		name = sgm_ship_spawner.3.a
+		switch = {
+			trigger = has_global_flag
+			sgm_spawn_ship_sgm_ship_spawners = {
+				remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
+				set_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+			sgm_spawn_ship_ai_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_ai_ship_designs
+				set_global_flag = sgm_spawn_ship_crisis_ship_designs
+			}
+			sgm_spawn_ship_crisis_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_crisis_ship_designs
+				set_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+			sgm_spawn_ship_crystal_monster_designs = {
+				remove_global_flag = sgm_spawn_ship_crystal_monster_designs
+				set_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
+			sgm_spawn_ship_event_ship_designs_an4 = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_an4
+				set_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			}
+			sgm_spawn_ship_event_ship_designs_ancrel = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+				set_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+			sgm_spawn_ship_event_ship_designs_anomalies = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+				set_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+			sgm_spawn_ship_event_ship_designs_distant_stars = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+				set_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+			sgm_spawn_ship_event_ship_designs_federations = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_federations
+				set_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+			sgm_spawn_ship_event_ship_designs_general = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_general
+				set_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
+			sgm_spawn_ship_event_ship_designs_nomad = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+				set_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+			sgm_spawn_ship_event_ship_designs_sentinels = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+				set_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
+			sgm_spawn_ship_event_ship_designs_special_systems = {
+				remove_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+				set_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+			sgm_spawn_ship_extra_dimensional_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+				set_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+			sgm_spawn_ship_fallen_empire_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+				set_global_flag = sgm_spawn_ship_global_ship_designs
+			}
+			sgm_spawn_ship_global_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_global_ship_designs
+				set_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+			sgm_spawn_ship_leviathans_designs = {
+				remove_global_flag = sgm_spawn_ship_leviathans_designs
+				set_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+			sgm_spawn_ship_marauder_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_marauder_ship_designs
+				set_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+			sgm_spawn_ship_megacorp_designs = {
+				remove_global_flag = sgm_spawn_ship_megacorp_designs
+				set_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
+			sgm_spawn_ship_mining_drone_designs = {
+				remove_global_flag = sgm_spawn_ship_mining_drone_designs
+				set_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+			sgm_spawn_ship_pirate_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_pirate_ship_designs
+				set_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+			sgm_spawn_ship_space_monster_designs = {
+				remove_global_flag = sgm_spawn_ship_space_monster_designs
+				set_global_flag = sgm_spawn_ship_space_whale_designs
+			}
+			sgm_spawn_ship_space_whale_designs = {
+				remove_global_flag = sgm_spawn_ship_space_whale_designs
+				set_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+			sgm_spawn_ship_swarm_ship_designs = {
+				remove_global_flag = sgm_spawn_ship_swarm_ship_designs
+				set_global_flag = sgm_spawn_ship_utopia_designs
+			}
+			sgm_spawn_ship_utopia_designs = {
+				remove_global_flag = sgm_spawn_ship_utopia_designs
+				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			}
+			default = {
+				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			}
+		}
+		country_event = {
+			id = sgm_ship_spawner.3
+			scopes = {
+				from = from
+				fromfrom = fromfrom
+			}
+		}
+	}
+	option = {
+		name = NAME_Euthanizer
+		trigger = {
+			has_global_flag = sgm_spawn_ship_ai_ship_designs
+		}
+		from = {
+			set_fleet_flag = NAME_Euthanizer
+			owner = {
+				save_event_target_as = event_target:sgm_ship_spawner_country
+			}
+			sgm_create_ship_database_effect = yes
+			remove_fleet_flag = NAME_Euthanizer
+		}
+	}
+	option = {
+		name = CANCEL
+		hidden_effect = {
+			remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			remove_global_flag = sgm_spawn_ship_ai_ship_designs
+			remove_global_flag = sgm_spawn_ship_crisis_ship_designs
+			remove_global_flag = sgm_spawn_ship_crystal_monster_designs
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_general
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			remove_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			remove_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			remove_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			remove_global_flag = sgm_spawn_ship_global_ship_designs
+			remove_global_flag = sgm_spawn_ship_leviathans_designs
+			remove_global_flag = sgm_spawn_ship_marauder_ship_designs
+			remove_global_flag = sgm_spawn_ship_megacorp_designs
+			remove_global_flag = sgm_spawn_ship_mining_drone_designs
+			remove_global_flag = sgm_spawn_ship_pirate_ship_designs
+			remove_global_flag = sgm_spawn_ship_space_monster_designs
+			remove_global_flag = sgm_spawn_ship_space_whale_designs
+			remove_global_flag = sgm_spawn_ship_swarm_ship_designs
+			remove_global_flag = sgm_spawn_ship_utopia_designs
+		}
+	}
+}

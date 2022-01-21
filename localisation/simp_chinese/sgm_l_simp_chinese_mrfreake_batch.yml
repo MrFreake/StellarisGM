@@ -13,7 +13,7 @@ destroy_megastructure_confirmation_desc: "Destroying this megastructure will cau
 delete_megastructure_confirmation_desc: "Deleting this megastructure will not spawn debris in this system.\n\nAre you sure you want to delete this megastructure?"
 clear_deposit_confirmation_desc: "Performing this action will clear all deposits from this planet. Performing this action on an inhabited planet is not recommended.\n\nAre you sure you want to clear deposits on [from.GetName]?"
 destroy_colony_confirmation_desc: "Are you sure you want to destroy the colony on [from.GetName], owned by [from.owner.GetName]?"
-
+set_planet_owner_confirmation_desc: "Are you sure you want to set [target_country.GetName] owner of [from.GetName]?"
 
 # events
 sgm_country_1_desc: "Perform event actions on [from.GetName]."
@@ -40,8 +40,10 @@ sgm_planets_52_desc: "Choose hostiles to spawn.\n\nIncrease the multiplier to sp
 sgm_planets_53_desc: "Spawn Archaeology Site on [from.GetName]"
 sgm_planets_54_desc: "Spawn Archaeology Site on [from.GetName]"
 sgm_planets_55_desc: "Spawn Anomaly on [from.GetName]"
+sgm_planets_56: "Create Armies"
 sgm_planets_56_desc: "Choose army type, amount, and whether the armies spawn on [from.GetName] or on transports in orbit."
-
+sgm_planets_57: "Spawn Megastructure"
+sgm_planets_57_desc: "Spawn a megastructure in this system.\n\nYou can upgrade or restore the megastructure by using the GM menu."
 
 add_mod_planet_modifier: "Add GM Planet Modifier"
 remove_mod_planet_modifier: "Remove GM Planet Modifier"
@@ -588,7 +590,7 @@ sgm_planet_effects: "Planet Effects"
 sgm_add_dig_site: "Add Dig Site"
 sgm_add_planet_modifier: "Add Modifier"
 sgm_add_deposit: "Add Deposit"
-sgm_change_planet_class: "Change Planet Class"
+sgm_change_planet_class: "Change Class"
 sgm_increase_planet_size: "Planet Size +1"
 sgm_decrease_planet_size: "Planet Size -1"
 sgm_reroll_planet: "Reroll Planet"
@@ -617,6 +619,12 @@ creating_army: "Creating Army"
 creating_army_transport: "Creating Army Transport"
 spawn_armies: "Spawn Armies"
 sgm_create_army_for_target: "Create Army for [target_country.GetName]"
+sgm_create_colony: "Create Colony"
+sgm_add_claims: "Add Claims"
+sgm_remove_claims: "Remove Claims"
+sgm_set_planet_owner: "Set Owner [target_country.GetName]"
+sgm_trigger_revolt: "Trigger Revolt"
+trigger_supernova: "Trigger Supernova"
 
 # diplomacy_view.gui
 
@@ -695,3 +703,13 @@ sgm_add_to_council_permanent: "Give Permanent Council Seat"
 sgm_remove_from_council_permanent: "Remove Permanent Council Seat"
 sgm_nominate_custodian: "Set Target Custodian"
 sgm_end_custodianship: "End Custodianship"
+
+# megastructures
+
+sgm_dyson_sphere_permanently_ruined: "Dyson Sphere Permanently Ruined"
+sgm_think_tank_permanently_ruined: "Science Nexus Permanently Ruined"
+sgm_matter_decompressor_permanently_ruined: "Matter Decompressor Permanently Ruined"
+sgm_strategic_coordination_center_permanently_ruined: "Strategic Coordination Center Permanently Ruined"
+sgm_mega_art_installation_permanently_ruined: "Mega Art Installation Permanently Ruined"
+sgm_interstellar_assembly_permanently_ruined: "Interstellar Assembly Permanently Ruined"
+sgm_mega_shipyard_permanently_ruined: "Mega Shipyard Permanently Ruined"

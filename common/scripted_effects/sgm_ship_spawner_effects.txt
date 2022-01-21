@@ -1,4 +1,4 @@
-# @sgm_var_create_ship = 5
+# @sgm_spawn_ship_var_num_ships = 5
 sgm_create_fleet_test_effect = {
 	space_owner = {
 		save_event_target_as = sgm_ship_spawner_country
@@ -20,18 +20,18 @@ sgm_create_ship_test_effect = {
 		if = {
 			limit = {
 				NOT = {
-					is_variable_set = sgm_var_create_ship
+					is_variable_set = sgm_spawn_ship_var_num_ships
 				}
 			}
 			set_variable = {
-				which = sgm_var_create_ship
+				which = sgm_spawn_ship_var_num_ships
 				value = 1
 			}
 		}
 	}
 	set_fleet_flag = NAME_Large_Crystal_Entity_Yellow
 	sgm_create_ship_database_effect = yes
-	clear_variable = sgm_var_create_ship
+	clear_variable = sgm_spawn_ship_var_num_ships
 	remove_fleet_flag = NAME_Large_Crystal_Entity_Yellow
 }
 
@@ -39,18 +39,37 @@ sgm_create_ship_test_effect = {
 # Parameters: DESIGN
 sgm_create_ship_basic_effect = {
 	set_variable = {
-		which = sgm_var_create_ship
-		value = event_target:global_event_country.sgm_var_create_ship
+		which = sgm_spawn_ship_var_num_ships
+		value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
 	}
-	while = {
-		count = sgm_var_create_ship
-		create_ship = {
-			name = random
-			prefix = no
-			colonizer_species = owner
-			design = $DESIGN$
-			# random_existing_design = <ship size key>
-			graphical_culture = $GRAPHICAL_CULTURE$
+	if = {
+		limit = {
+			has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
+			exists = event_target:target_country
+		}
+		while = {
+			count = sgm_spawn_ship_var_num_ships
+			create_ship = {
+				name = random
+				prefix = no
+				colonizer_species = owner
+				design = $DESIGN$
+				# random_existing_design = <ship size key>
+				graphical_culture = event_target:target_country
+			}
+		}
+	}
+	else = {
+		while = {
+			count = sgm_spawn_ship_var_num_ships
+			create_ship = {
+				name = random
+				prefix = no
+				colonizer_species = owner
+				design = $DESIGN$
+				# random_existing_design = <ship size key>
+				graphical_culture = $GRAPHICAL_CULTURE$
+			}
 		}
 	}
 }
@@ -1299,7 +1318,7 @@ sgm_create_ship_database_effect = {
 		NAME_Marauder_Starbase = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Marauder_Starbase
-				GRAPHICAL_CULTURE =  "pirate_01"
+				GRAPHICAL_CULTURE = "pirate_01"
 			}
 		}
 		NAME_Caravaneer_Starbase = {

@@ -364,17 +364,6 @@ guiTypes = {
 							effect = sgm_generate_late_primitives
 				#			shortCut = j
 						}
-						effectbuttonType = {					
-							name = sgm_trigger_revolt
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 594 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_trigger_revolt
-							orientation = UPPER_LEFT
-							effect = sgm_trigger_revolt
-				#			shortCut = j
-						}
 						## Middle Column
 
 						instantTextBoxType = {
@@ -552,6 +541,17 @@ guiTypes = {
 							orientation = UPPER_LEFT
 							effect = sgm_set_planet_owner
 				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_trigger_revolt
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 446 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_trigger_revolt
+							orientation = UPPER_LEFT
+							effect = sgm_trigger_revolt
+				#			shortCut = j
 						}													
 						# right column
 						instantTextBoxType = {
@@ -662,6 +662,39 @@ guiTypes = {
 							buttonText = sgm_spawn_system
 							orientation = UPPER_LEFT
 							effect = sgm_spawn_system
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_add_claims
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 335 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_add_claims
+							orientation = UPPER_LEFT
+							effect = sgm_add_claims
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_remove_claims
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 372 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_remove_claims
+							orientation = UPPER_LEFT
+							effect = sgm_remove_claims
+				#			shortCut = j
+						}
+						effectbuttonType = {					
+							name = sgm_spawn_megastructure
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 294 y = 409 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_spawn_megastructure
+							orientation = UPPER_LEFT
+							effect = sgm_spawn_megastructure
 				#			shortCut = j
 						}						
 					}
