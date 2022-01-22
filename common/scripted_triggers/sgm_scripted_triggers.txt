@@ -21,6 +21,22 @@ sgm_has_gm_permissions = {
 	}
 }
 
+is_fleet_scope = {
+	is_scope_type = fleet
+}
+
+is_planet_scope = {
+	is_scope_type = planet
+}
+
+is_megastructure_scope = {
+	is_scope_type = megastructure
+}
+
+is_country_scope = {
+	is_scope_type = country
+}
+
 is_fleet = {
 	is_scope_type = fleet
 	NOT = {
