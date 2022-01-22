@@ -705,18 +705,6 @@ defined_text = {
 }
 
 # Ship spawner
-
-defined_text = {
-	name = GetNameShipSpawnSwitch
-	text = {
-		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
-		}
-		localization_key = SHIP
-	}
-	default = SHIP
-}
-
 defined_text = {
 	name = Get_override_to_owner_graphical_culture
 	text = {
@@ -755,4 +743,166 @@ defined_text = {
 		localization_key = sgm_ship_spawner.3.desc_create_fleet
 	}
 	default = NO
+}
+
+defined_text = {
+	name = GetNameShipSpawnSwitch
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_all_designs
+		}
+		localization_key = ALL
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+		}
+		localization_key = STAT_SOURCE_UTILITY
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_ai_ship_designs
+		}
+		localization_key = CRISIS_TYPE_CONTINGENCY
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_crisis_ship_designs
+		}
+		localization_key = NEMESIS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_crystal_monster_designs
+		}
+		localization_key = anomaly.6825.name
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+		}
+		localization_key = ANNIVERSARY_LANDINGPAGE_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+		}
+		localization_key = ANCIENT_RELICS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+		}
+		localization_key = ANOMALIES
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+		}
+		localization_key = DISTANT_STARS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+		}
+		localization_key = FEDERATIONS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_general
+		}
+		localization_key = FLAG_CATEGORY_no_category
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+		}
+		localization_key =  first_contact_critters.95.name
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+		}
+		localization_key =  crisis.51.2.name
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+		}
+		localization_key = special_init_01
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+		}
+		localization_key = EXD
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+		}
+		localization_key = NUM_FALLEN_EMPIRES
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_global_ship_designs
+		}
+		localization_key = RANDOM
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_leviathans_designs
+		}
+		localization_key = LEVIATHANS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_marauder_ship_designs
+		}
+		localization_key = NUM_MARAUDER_EMPIRES
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_megacorp_designs
+		}
+		localization_key = MEGACORP_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_mining_drone_designs
+		}
+		localization_key = job_mining_drone_plural
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_pirate_ship_designs
+		}
+		localization_key = TRADE_VALUE_PIRACY
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_space_monster_designs
+		}
+		localization_key = space_amoeba_plural
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_space_whale_designs
+		}
+		localization_key = space_whale_1_plural
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_swarm_ship_designs
+		}
+		localization_key = CRISIS_TYPE_PRETHORYN
+	}
+	text = {
+		trigger = {
+			has_global_flag = sgm_spawn_ship_utopia_designs
+		}
+		localization_key = UTOPIA_TITLE
+	}
+	default =  SHIPDESIGNER
+
 }

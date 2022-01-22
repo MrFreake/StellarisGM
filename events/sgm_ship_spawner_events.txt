@@ -38,6 +38,7 @@ country_event = {
 		if = {
 			limit = {
 				NOR = {
+					has_global_flag = sgm_spawn_ship_all_designs
 					has_global_flag = sgm_spawn_ship_sgm_ship_spawners
 					has_global_flag = sgm_spawn_ship_ai_ship_designs
 					has_global_flag = sgm_spawn_ship_crisis_ship_designs
@@ -65,13 +66,17 @@ country_event = {
 					has_global_flag = sgm_spawn_ship_utopia_designs
 				}
 			}
-			set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			set_global_flag = sgm_spawn_ship_all_designs
 		}
 	}
 	option = {
 		name = sgm_ship_spawner.3.a
 		switch = {
 			trigger = has_global_flag
+			sgm_spawn_ship_all_designs = {
+				remove_global_flag = sgm_spawn_ship_all_designs
+				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			}
 			sgm_spawn_ship_sgm_ship_spawners = {
 				remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
 				set_global_flag = sgm_spawn_ship_ai_ship_designs
@@ -170,10 +175,10 @@ country_event = {
 			}
 			sgm_spawn_ship_utopia_designs = {
 				remove_global_flag = sgm_spawn_ship_utopia_designs
-				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+				set_global_flag = sgm_spawn_ship_all_designs
 			}
 			default = {
-				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+				set_global_flag = sgm_spawn_ship_all_designs
 			}
 		}
 		country_event = {
@@ -187,7 +192,10 @@ country_event = {
 	option = {
 		name = NAME_Euthanizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -198,7 +206,10 @@ country_event = {
 	option = {
 		name = NAME_Sterilizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -209,7 +220,10 @@ country_event = {
 	option = {
 		name = NAME_AI_STARBASE
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -220,7 +234,10 @@ country_event = {
 	option = {
 		name = NAME_AI_1
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -231,7 +248,10 @@ country_event = {
 	option = {
 		name = NAME_AI_2
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -242,7 +262,10 @@ country_event = {
 	option = {
 		name = NAME_AI_Core
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -253,7 +276,10 @@ country_event = {
 	option = {
 		name = NAME_AI_Final_Core
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -264,7 +290,10 @@ country_event = {
 	option = {
 		name = NAME_AI_Transport
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -275,7 +304,10 @@ country_event = {
 	option = {
 		name = NAME_AI_Colonizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -286,7 +318,10 @@ country_event = {
 	option = {
 		name = NAME_AI_Constructor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -297,7 +332,10 @@ country_event = {
 	option = {
 		name = NAME_Taciturn
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -308,7 +346,10 @@ country_event = {
 	option = {
 		name = NAME_Reticent
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -319,7 +360,10 @@ country_event = {
 	option = {
 		name = NAME_Cybrex_Core
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -330,7 +374,10 @@ country_event = {
 	option = {
 		name = NAME_Cybrex_Station_1
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -341,7 +388,10 @@ country_event = {
 	option = {
 		name = NAME_Cybrex_Station_2
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -352,7 +402,10 @@ country_event = {
 	option = {
 		name = NAME_Cybrex_Transport
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -363,7 +416,13 @@ country_event = {
 	option = {
 		name = NAME_Crisis_Star_Eater
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crisis_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Nemesis"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -374,7 +433,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Blue
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -385,7 +447,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Blue
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -396,7 +461,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Blue
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -407,7 +475,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Green
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -418,7 +489,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Green
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -429,7 +503,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Green
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -440,7 +517,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Yellow
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -451,7 +531,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Yellow
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -462,7 +545,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Yellow
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -473,7 +559,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Red
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -484,7 +573,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Red
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -495,7 +587,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Red
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -506,7 +601,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Blue_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -517,7 +615,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Blue_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -528,7 +629,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Blue_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -539,7 +643,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Green_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -550,7 +657,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Green_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -561,7 +671,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Green_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -572,7 +685,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Yellow_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -583,7 +699,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Yellow_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -594,7 +713,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Yellow_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -605,7 +727,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Crystal_Entity_Red_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -616,7 +741,10 @@ country_event = {
 	option = {
 		name = NAME_Medium_Crystal_Entity_Red_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -627,7 +755,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Crystal_Entity_Red_Elite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -638,7 +769,10 @@ country_event = {
 	option = {
 		name = NAME_Crystal_Nidus
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -649,7 +783,10 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Mining_Expansion_Barge
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -660,7 +797,10 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Mining_Expansion_Drone
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -671,7 +811,10 @@ country_event = {
 	option = {
 		name = NAME_Cracked_Crystalline_Shard
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -682,7 +825,13 @@ country_event = {
 	option = {
 		name = NAME_Herald
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -693,7 +842,13 @@ country_event = {
 	option = {
 		name = NAME_Polaris_ship
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -704,7 +859,10 @@ country_event = {
 	option = {
 		name = NAME_Abandoned_Manufactory
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -715,7 +873,10 @@ country_event = {
 	option = {
 		name = NAME_F79
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -726,7 +887,10 @@ country_event = {
 	option = {
 		name = NAME_R44
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -737,7 +901,10 @@ country_event = {
 	option = {
 		name = NAME_Alien_Ship
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -748,7 +915,10 @@ country_event = {
 	option = {
 		name = NAME_Prototype
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -759,7 +929,10 @@ country_event = {
 	option = {
 		name = NAME_Derelict
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -770,7 +943,10 @@ country_event = {
 	option = {
 		name = NAME_Sword
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -781,7 +957,10 @@ country_event = {
 	option = {
 		name = NAME_Seeker
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -792,7 +971,10 @@ country_event = {
 	option = {
 		name = NAME_Voidstalker
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -803,7 +985,10 @@ country_event = {
 	option = {
 		name = NAME_Starfang
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -814,7 +999,10 @@ country_event = {
 	option = {
 		name = NAME_Persistent
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -825,7 +1013,10 @@ country_event = {
 	option = {
 		name = NAME_Returned_Science_Ship
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -836,7 +1027,10 @@ country_event = {
 	option = {
 		name = NAME_mardak_vol_haters_corvette
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -847,7 +1041,10 @@ country_event = {
 	option = {
 		name = NAME_mardak_vol_haters_destroyer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -858,7 +1055,10 @@ country_event = {
 	option = {
 		name = NAME_mardak_vol_haters_cruiser
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -869,7 +1069,13 @@ country_event = {
 	option = {
 		name = NAME_mardak_vol_haters_colossus
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -878,9 +1084,29 @@ country_event = {
 		}
 	}
 	option = {
+		name = NAME_Hillos_ship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Hillos_ship
+			}
+		}
+	}
+	option = {
 		name = NAME_Voidspawn
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -891,7 +1117,13 @@ country_event = {
 	option = {
 		name = NAME_enigmatic_cache
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -902,7 +1134,13 @@ country_event = {
 	option = {
 		name = NAME_Nanite_Dragon
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -913,7 +1151,13 @@ country_event = {
 	option = {
 		name = NAME_Nanite_Factory
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -924,7 +1168,13 @@ country_event = {
 	option = {
 		name = NAME_Nanite_Mothership
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -935,7 +1185,13 @@ country_event = {
 	option = {
 		name = NAME_Gray_Warship
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -946,7 +1202,13 @@ country_event = {
 	option = {
 		name = NAME_Nanite_Interdictor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -957,7 +1219,13 @@ country_event = {
 	option = {
 		name = NAME_Dessanu_Mothership
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -968,7 +1236,13 @@ country_event = {
 	option = {
 		name = NAME_Dessanu_Interdictor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -979,7 +1253,13 @@ country_event = {
 	option = {
 		name = NAME_Gatebuilder_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -990,7 +1270,13 @@ country_event = {
 	option = {
 		name = NAME_Reclaimer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1001,7 +1287,13 @@ country_event = {
 	option = {
 		name = NAME_S8751
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1012,7 +1304,13 @@ country_event = {
 	option = {
 		name = NAME_Progenitor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1023,7 +1321,13 @@ country_event = {
 	option = {
 		name = NAME_AH4B
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1034,7 +1338,13 @@ country_event = {
 	option = {
 		name = NAME_Adopted_Amoeba_Centenarian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1045,7 +1355,13 @@ country_event = {
 	option = {
 		name = NAME_Lessenger
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1056,7 +1372,13 @@ country_event = {
 	option = {
 		name = NAME_Warder_of_the_Ruins
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1067,7 +1389,13 @@ country_event = {
 	option = {
 		name = NAME_Gardener_Drone
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1078,7 +1406,13 @@ country_event = {
 	option = {
 		name = NAME_Wenkwort_Enforcer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1089,7 +1423,13 @@ country_event = {
 	option = {
 		name = NAME_Elusive_Craft
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1100,7 +1440,10 @@ country_event = {
 	option = {
 		name = NAME_Splendor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1111,7 +1454,10 @@ country_event = {
 	option = {
 		name = NAME_C1
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1122,7 +1468,10 @@ country_event = {
 	option = {
 		name = NAME_C2
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1133,7 +1482,10 @@ country_event = {
 	option = {
 		name = NAME_Space_Station
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1144,7 +1496,10 @@ country_event = {
 	option = {
 		name = NAME_Citadel
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1155,7 +1510,10 @@ country_event = {
 	option = {
 		name = NAME_Sentry
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1166,7 +1524,10 @@ country_event = {
 	option = {
 		name = NAME_Dagger
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1177,7 +1538,10 @@ country_event = {
 	option = {
 		name = NAME_Ravager
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1188,7 +1552,10 @@ country_event = {
 	option = {
 		name = NAME_Asteroid
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1199,7 +1566,10 @@ country_event = {
 	option = {
 		name = NAME_DS47
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1210,7 +1580,10 @@ country_event = {
 	option = {
 		name = NAME_Divine_Glory
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1221,7 +1594,10 @@ country_event = {
 	option = {
 		name = NAME_Righteous
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1232,7 +1608,10 @@ country_event = {
 	option = {
 		name = NAME_Central_Crystal_Station
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1243,7 +1622,10 @@ country_event = {
 	option = {
 		name = NAME_Diaspora
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1254,7 +1636,10 @@ country_event = {
 	option = {
 		name = NAME_Nomad_Cruiser
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1265,7 +1650,10 @@ country_event = {
 	option = {
 		name = NAME_Protector
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1276,7 +1664,10 @@ country_event = {
 	option = {
 		name = NAME_Vigil
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1287,7 +1678,10 @@ country_event = {
 	option = {
 		name = NAME_PR_417
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1298,7 +1692,10 @@ country_event = {
 	option = {
 		name = NAME_Spearhead
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1309,7 +1706,10 @@ country_event = {
 	option = {
 		name = NAME_Deaths_Head
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1320,7 +1720,10 @@ country_event = {
 	option = {
 		name = NAME_Bug_Crusher
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1331,7 +1734,10 @@ country_event = {
 	option = {
 		name = NAME_Blade
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1342,7 +1748,10 @@ country_event = {
 	option = {
 		name = NAME_Guardian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1353,7 +1762,10 @@ country_event = {
 	option = {
 		name = NAME_Sanctuary_Core
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1364,7 +1776,10 @@ country_event = {
 	option = {
 		name = NAME_Defensive_A_1
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1375,7 +1790,10 @@ country_event = {
 	option = {
 		name = NAME_Defensive_A_2
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1386,7 +1804,10 @@ country_event = {
 	option = {
 		name = NAME_Revenant
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1397,7 +1818,10 @@ country_event = {
 	option = {
 		name = NAME_Phantom
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1408,7 +1832,10 @@ country_event = {
 	option = {
 		name = NAME_Wraith
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1419,7 +1846,10 @@ country_event = {
 	option = {
 		name = NAME_Void_Shaper
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1430,7 +1860,10 @@ country_event = {
 	option = {
 		name = NAME_Huntress
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1441,7 +1874,10 @@ country_event = {
 	option = {
 		name = NAME_Assassin
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1452,7 +1888,10 @@ country_event = {
 	option = {
 		name = NAME_Predator
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1463,7 +1902,10 @@ country_event = {
 	option = {
 		name = NAME_Void_Former
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1474,7 +1916,10 @@ country_event = {
 	option = {
 		name = NAME_Eradicator
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1485,7 +1930,10 @@ country_event = {
 	option = {
 		name = NAME_Annihilator
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1496,7 +1944,10 @@ country_event = {
 	option = {
 		name = NAME_Obliterator
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1507,7 +1958,10 @@ country_event = {
 	option = {
 		name = NAME_Void_Weaver
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1518,7 +1972,10 @@ country_event = {
 	option = {
 		name = NAME_Unbidden_Portal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1529,7 +1986,10 @@ country_event = {
 	option = {
 		name = NAME_Vehement_Portal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1540,7 +2000,10 @@ country_event = {
 	option = {
 		name = NAME_Aberrant_Portal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1551,7 +2014,10 @@ country_event = {
 	option = {
 		name = NAME_Unbidden_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1562,7 +2028,10 @@ country_event = {
 	option = {
 		name = NAME_Unbidden_Anchor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1573,7 +2042,10 @@ country_event = {
 	option = {
 		name = NAME_Vehement_Anchor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1584,7 +2056,10 @@ country_event = {
 	option = {
 		name = NAME_Aberrant_Anchor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1595,7 +2070,13 @@ country_event = {
 	option = {
 		name = NAME_Omega
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1606,7 +2087,10 @@ country_event = {
 	option = {
 		name = NAME_Alpha
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1617,7 +2101,10 @@ country_event = {
 	option = {
 		name = NAME_Beta
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1628,7 +2115,10 @@ country_event = {
 	option = {
 		name = NAME_Gamma
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1639,7 +2129,10 @@ country_event = {
 	option = {
 		name = NAME_Sigma
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1650,7 +2143,10 @@ country_event = {
 	option = {
 		name = NAME_Theta
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1661,7 +2157,10 @@ country_event = {
 	option = {
 		name = NAME_Tau
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1672,7 +2171,13 @@ country_event = {
 	option = {
 		name = NAME_Enforcer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1683,7 +2188,10 @@ country_event = {
 	option = {
 		name = NAME_Savant
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1694,7 +2202,10 @@ country_event = {
 	option = {
 		name = NAME_Scholar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1705,7 +2216,10 @@ country_event = {
 	option = {
 		name = NAME_Sage
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1716,7 +2230,10 @@ country_event = {
 	option = {
 		name = NAME_Cloaker
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1727,7 +2244,10 @@ country_event = {
 	option = {
 		name = NAME_Librarian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1738,7 +2258,10 @@ country_event = {
 	option = {
 		name = NAME_Archivist
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1749,7 +2272,13 @@ country_event = {
 	option = {
 		name = NAME_Cleanser
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1760,7 +2289,10 @@ country_event = {
 	option = {
 		name = NAME_Eternal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1771,7 +2303,10 @@ country_event = {
 	option = {
 		name = NAME_Avatar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1782,7 +2317,10 @@ country_event = {
 	option = {
 		name = NAME_Zealot
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1793,7 +2331,10 @@ country_event = {
 	option = {
 		name = NAME_Faith
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1804,7 +2345,10 @@ country_event = {
 	option = {
 		name = NAME_Penitent
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1815,7 +2359,10 @@ country_event = {
 	option = {
 		name = NAME_Pilgrim
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1826,7 +2373,13 @@ country_event = {
 	option = {
 		name = NAME_Reaper
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1837,7 +2390,10 @@ country_event = {
 	option = {
 		name = NAME_Imperium
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1848,7 +2404,10 @@ country_event = {
 	option = {
 		name = NAME_Supremacy
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1859,7 +2418,10 @@ country_event = {
 	option = {
 		name = NAME_Glory
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1870,7 +2432,10 @@ country_event = {
 	option = {
 		name = NAME_Devastator
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1881,7 +2446,10 @@ country_event = {
 	option = {
 		name = NAME_Servitor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1892,7 +2460,10 @@ country_event = {
 	option = {
 		name = NAME_Destiny
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1903,7 +2474,13 @@ country_event = {
 	option = {
 		name = NAME_Adjuster
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1914,7 +2491,10 @@ country_event = {
 	option = {
 		name = NAME_Keeper
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1925,7 +2505,10 @@ country_event = {
 	option = {
 		name = NAME_Custodian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1936,7 +2519,10 @@ country_event = {
 	option = {
 		name = NAME_Warden
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1947,7 +2533,10 @@ country_event = {
 	option = {
 		name = NAME_Watcher
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1958,7 +2547,10 @@ country_event = {
 	option = {
 		name = NAME_Builder
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1969,7 +2561,10 @@ country_event = {
 	option = {
 		name = NAME_Seeder
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1980,7 +2575,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Beta
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -1991,7 +2589,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Scholar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2002,7 +2603,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Custodian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2013,7 +2617,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Gamma
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2024,7 +2631,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Sage
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2035,7 +2645,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Warden
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2046,7 +2659,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Avatar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2057,7 +2673,10 @@ country_event = {
 	option = {
 		name = NAME_Surplus_Zealot
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2068,7 +2687,10 @@ country_event = {
 	option = {
 		name = NAME_FE_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2079,7 +2701,10 @@ country_event = {
 	option = {
 		name = NAME_Constructor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2090,7 +2715,10 @@ country_event = {
 	option = {
 		name = NAME_Colonizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2101,7 +2729,13 @@ country_event = {
 	option = {
 		name = NAME_Colonizer-lithoids
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Lithoids Species Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2112,7 +2746,13 @@ country_event = {
 	option = {
 		name = NAME_Trader_Enclave_Station
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2123,7 +2763,13 @@ country_event = {
 	option = {
 		name = NAME_Artist_Enclave_Station
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2134,7 +2780,13 @@ country_event = {
 	option = {
 		name = NAME_Curator_Enclave_Station
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2145,7 +2797,13 @@ country_event = {
 	option = {
 		name = NAME_Grand_Dragon
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2156,7 +2814,13 @@ country_event = {
 	option = {
 		name = NAME_Stellarite
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2167,7 +2831,13 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Sentinel
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2178,7 +2848,13 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Defender
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2189,7 +2865,13 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Warden
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2200,7 +2882,13 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Guardian
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2211,7 +2899,13 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Vault
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2222,7 +2916,13 @@ country_event = {
 	option = {
 		name = NAME_Hive_Asteroid
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2233,7 +2933,15 @@ country_event = {
 	option = {
 		name = NAME_Dimensional_Horror
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			always = yes
+			# always = yes # User can disable in the launcher
+			# host_has_dlc = "Horizon Signal"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2244,7 +2952,13 @@ country_event = {
 	option = {
 		name = NAME_Relic
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2255,7 +2969,13 @@ country_event = {
 	option = {
 		name = NAME_Type_37
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2266,7 +2986,13 @@ country_event = {
 	option = {
 		name = NAME_Type_46
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2277,7 +3003,13 @@ country_event = {
 	option = {
 		name = NAME_Infinity_Machine
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2288,7 +3020,13 @@ country_event = {
 	option = {
 		name = NAME_Spectral_Wraith_650THz
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2299,7 +3037,13 @@ country_event = {
 	option = {
 		name = NAME_Spectral_Wraith_450THz
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2310,7 +3054,13 @@ country_event = {
 	option = {
 		name = NAME_Spectral_Wraith_520THz
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2321,7 +3071,13 @@ country_event = {
 	option = {
 		name = NAME_Dragonspawn
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2332,7 +3088,13 @@ country_event = {
 	option = {
 		name = NAME_Shard_Dragon
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2343,7 +3105,13 @@ country_event = {
 	option = {
 		name = NAME_Sky_Dragon
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Aquatics Species Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2354,7 +3122,13 @@ country_event = {
 	option = {
 		name = NAME_Sky_Dragon_Baby
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Aquatics Species Pack"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2365,7 +3139,13 @@ country_event = {
 	option = {
 		name = NAME_Warrior_Freehold
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2376,7 +3156,13 @@ country_event = {
 	option = {
 		name = NAME_Void_Dwelling
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2387,7 +3173,13 @@ country_event = {
 	option = {
 		name = NAME_Outrider
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2398,7 +3190,13 @@ country_event = {
 	option = {
 		name = NAME_Lancer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2409,7 +3207,13 @@ country_event = {
 	option = {
 		name = NAME_Void_Champion
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2420,7 +3224,13 @@ country_event = {
 	option = {
 		name = NAME_Ancestral_Glory
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2431,7 +3241,13 @@ country_event = {
 	option = {
 		name = NAME_Clan_Builder
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2442,7 +3258,13 @@ country_event = {
 	option = {
 		name = NAME_Marauder_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2453,7 +3275,13 @@ country_event = {
 	option = {
 		name = NAME_Caravaneer_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2464,7 +3292,13 @@ country_event = {
 	option = {
 		name = NAME_Tradestation_Tungle
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2475,7 +3309,13 @@ country_event = {
 	option = {
 		name = NAME_Gunslinger
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2486,7 +3326,13 @@ country_event = {
 	option = {
 		name = NAME_Yojimbo
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2497,7 +3343,13 @@ country_event = {
 	option = {
 		name = NAME_Schooner
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2508,7 +3360,10 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Mining_Drone
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2519,7 +3374,10 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Combat_Drone
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2530,7 +3388,10 @@ country_event = {
 	option = {
 		name = NAME_Ancient_Destroyer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2541,7 +3402,10 @@ country_event = {
 	option = {
 		name = NAME_Drone_Home_Base
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2552,7 +3416,10 @@ country_event = {
 	option = {
 		name = NAME_Pirate_Nest
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2563,7 +3430,10 @@ country_event = {
 	option = {
 		name = NAME_Reaver
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2574,7 +3444,10 @@ country_event = {
 	option = {
 		name = NAME_Brigand
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2585,7 +3458,10 @@ country_event = {
 	option = {
 		name = NAME_Skull
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2596,7 +3472,10 @@ country_event = {
 	option = {
 		name = NAME_Marauder
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2607,7 +3486,10 @@ country_event = {
 	option = {
 		name = NAME_Corsair
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2618,7 +3500,10 @@ country_event = {
 	option = {
 		name = NAME_Black_Earl
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2629,7 +3514,10 @@ country_event = {
 	option = {
 		name = NAME_Pirate_Galleon
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2640,7 +3528,10 @@ country_event = {
 	option = {
 		name = NAME_Pirate_Transport
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2651,7 +3542,10 @@ country_event = {
 	option = {
 		name = NAME_Bemat_corvette_01
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2662,7 +3556,10 @@ country_event = {
 	option = {
 		name = NAME_Bemat_destroyer_01
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2673,7 +3570,10 @@ country_event = {
 	option = {
 		name = NAME_Bemat_destroyer_02
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2684,7 +3584,10 @@ country_event = {
 	option = {
 		name = NAME_Bemat_cruiser_01
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2695,7 +3598,10 @@ country_event = {
 	option = {
 		name = NAME_Bemat_cruiser_02
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2706,7 +3612,10 @@ country_event = {
 	option = {
 		name = NAME_Cloud_Entity
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2717,7 +3626,10 @@ country_event = {
 	option = {
 		name = NAME_Lesser_Cloud_Entity
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2728,7 +3640,10 @@ country_event = {
 	option = {
 		name = NAME_Great_Space_Organism
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2739,7 +3654,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Space_Organism_Blue
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2750,7 +3668,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Space_Organism_Blue
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2761,7 +3682,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Space_Organism_Teal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2772,7 +3696,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Space_Organism_Teal
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2783,7 +3710,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Space_Organism_Orange
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2794,7 +3724,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Space_Organism_Orange
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2805,7 +3738,10 @@ country_event = {
 	option = {
 		name = NAME_Large_Space_Organism_Zebra
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2816,7 +3752,10 @@ country_event = {
 	option = {
 		name = NAME_Small_Space_Organism_Zebra
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2827,7 +3766,10 @@ country_event = {
 	option = {
 		name = NAME_Tiyanki_Cow
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2838,7 +3780,10 @@ country_event = {
 	option = {
 		name = NAME_Tiyanki_Bull
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2849,7 +3794,10 @@ country_event = {
 	option = {
 		name = NAME_Tiyanki_Hatchling
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2860,7 +3808,10 @@ country_event = {
 	option = {
 		name = NAME_Tiyanki_Calf
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2871,7 +3822,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Large
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2882,7 +3836,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Carrier
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2893,7 +3850,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Small
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2904,7 +3864,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Starbase
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2915,7 +3878,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Queen
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2926,7 +3892,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Transport
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2937,7 +3906,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Colonizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2948,7 +3920,10 @@ country_event = {
 	option = {
 		name = NAME_Swarm_Constructor
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2959,7 +3934,13 @@ country_event = {
 	option = {
 		name = NAME_Shroud_Avatar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2970,7 +3951,13 @@ country_event = {
 	option = {
 		name = NAME_Corrupted_Avatar
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2981,7 +3968,13 @@ country_event = {
 	option = {
 		name = NAME_Warped_Consciousness
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -2992,7 +3985,13 @@ country_event = {
 	option = {
 		name = NAME_Shroud_Manifestation
 		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
 		}
 		from = {
 			sgm_create_ship_effect = {
@@ -3001,19 +4000,9 @@ country_event = {
 		}
 	}
 	option = {
-		name = NAME_Hillos_ship
-		trigger = {
-			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
-		}
-		from = {
-			sgm_create_ship_effect = {
-				SHIP_DESIGN = NAME_Hillos_ship
-			}
-		}
-	}
-	option = {
 		name = CANCEL
 		hidden_effect = {
+			remove_global_flag = sgm_spawn_ship_all_designs
 			remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
 			remove_global_flag = sgm_spawn_ship_ai_ship_designs
 			remove_global_flag = sgm_spawn_ship_crisis_ship_designs
