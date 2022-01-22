@@ -138,6 +138,226 @@ country_event = {								# Opens fleet menu
 	}
 
 	option = {
+		NAME = sgm_set_formation_scale
+		custom_tooltip = "sgm_set_formation_scale_tooltip"
+		if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value < 2
+				}
+			}
+			from = {
+				set_formation_scale = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 2
+				}
+			}
+			from = {
+				set_formation_scale = 2
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 3
+				}
+			}
+			from = {
+				set_formation_scale = 3
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 4
+				}
+			}
+			from = {
+				set_formation_scale = 4
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 5
+				}
+			}
+			from = {
+				set_formation_scale = 5
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 6
+				}
+			}
+			from = {
+				set_formation_scale = 6
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 7
+				}
+			}
+			from = {
+				set_formation_scale = 8
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 9
+				}
+			}
+			from = {
+				set_formation_scale = 9
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 10
+				}
+			}
+			from = {
+				set_formation_scale = 10
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 20
+				}
+			}
+			from = {
+				set_formation_scale = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 30
+				}
+			}
+			from = {
+				set_formation_scale = 30
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 30
+				}
+			}
+			from = {
+				set_formation_scale = 30
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 40
+				}
+			}
+			from = {
+				set_formation_scale = 40
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 50
+				}
+			}
+			from = {
+				set_formation_scale = 50
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 60
+				}
+			}
+			from = {
+				set_formation_scale = 60
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 70
+				}
+			}
+			from = {
+				set_formation_scale = 70
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 80
+				}
+			}
+			from = {
+				set_formation_scale = 80
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 90
+				}
+			}
+			from = {
+				set_formation_scale = 90
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = modifier_var
+					value = 100
+				}
+			}
+			from = {
+				set_formation_scale = 100
+			}
+		}
+		else = {
+			from = {
+				set_formation_scale = 1
+			}
+		}
+	}
+	
+
+	option = {
 		NAME = Exit
 	}
 }

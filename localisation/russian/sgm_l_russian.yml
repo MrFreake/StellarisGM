@@ -131,3 +131,7 @@ sgm_ship_spawner.3.desc_create_fleet: "$WILL_CREATE$ $FLEET$ ($TRIGGER_OWNER$: [
 sgm_ship_spawner.3.a: "§Y[this.GetNameShipSpawnSwitch]§!"
 sgm_spawn_ship_var_num_ships_value: "[global_event_country.sgm_spawn_ship_var_num_ships]"
 sgm_spawn_ship_override_to_owner_graphical_culture_switch: "[this.Get_override_to_owner_graphical_culture]"
+
+# Fleet formation scale - Fleet Effects
+sgm_set_formation_scale: "Set fleet formation scale"
+sgm_set_formation_scale_tooltip: "set_formation_scale = modifier_var\nAccepted integers: 1-10, 10-100. Default: 1."
