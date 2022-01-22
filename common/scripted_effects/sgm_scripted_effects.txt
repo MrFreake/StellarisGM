@@ -890,6 +890,7 @@ sgm_give_all_technology_effect = {
 		TECH_409 = tech_biomechanics
 		TECH_410 = tech_micro_replicators
 		TECH_411 = tech_self_assembling_components
+		TECH_412 = null_void_beam
 	}
 }
 
@@ -1308,6 +1309,7 @@ sgm_give_all_technology_database_effect = {
 			add_research_option = $TECH_409$
 			add_research_option = $TECH_410$
 			add_research_option = $TECH_411$
+			add_research_option = $TECH_412$
 		}
 		default = {
 			give_technology = {
@@ -2952,6 +2954,10 @@ sgm_give_all_technology_database_effect = {
 			}
 			give_technology = {
 				tech = $TECH_411$
+				message = $MESSAGE|no$
+			}
+			give_technology = {
+				tech = $TECH_412$
 				message = $MESSAGE|no$
 			}
 		}

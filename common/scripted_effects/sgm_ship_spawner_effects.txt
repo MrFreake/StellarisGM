@@ -35,12 +35,73 @@ sgm_create_ship_test_effect = {
 	remove_fleet_flag = NAME_Large_Crystal_Entity_Yellow
 }
 
+sgm_create_ship_effect = {
+	if = {
+		limit = {
+			is_scope_type = fleet
+		}
+		owner = {
+			save_event_target_as = event_target:sgm_ship_spawner_country
+		}
+		set_fleet_flag = $SHIP_DESIGN$
+		sgm_create_ship_database_effect = yes
+		remove_fleet_flag = $SHIP_DESIGN$
+	}
+	else_if = {
+		limit = {
+			exists = event_target:target_country
+		}
+		create_fleet = {
+			# name = random
+			effect = {
+				set_location = prev
+				set_owner = event_target:target_country
+				owner = {
+					save_event_target_as = event_target:sgm_ship_spawner_country
+				}
+				set_fleet_flag = $SHIP_DESIGN$
+				sgm_create_ship_database_effect = yes
+				remove_fleet_flag = $SHIP_DESIGN$
+			}
+		}
+	}
+}
+
 # Supported Scopes: fleet starbase
 # Parameters: DESIGN
 sgm_create_ship_basic_effect = {
-	set_variable = {
-		which = sgm_spawn_ship_var_num_ships
-		value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+	event_target:global_event_country = {
+		if = {
+			limit = {
+				NOT = {
+					is_variable_set = sgm_spawn_ship_var_num_ships
+				}
+			}
+			set_variable = {
+				which = sgm_spawn_ship_var_num_ships
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
+					has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_no
+				}
+			}
+			set_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_no
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				is_variable_set = sgm_spawn_ship_var_num_ships
+			}
+		}
+		set_variable = {
+			which = sgm_spawn_ship_var_num_ships
+			value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+		}
 	}
 	if = {
 		limit = {
@@ -50,7 +111,7 @@ sgm_create_ship_basic_effect = {
 		while = {
 			count = sgm_spawn_ship_var_num_ships
 			create_ship = {
-				name = random
+				# name = random
 				prefix = no
 				colonizer_species = owner
 				design = $DESIGN$
@@ -63,7 +124,7 @@ sgm_create_ship_basic_effect = {
 		while = {
 			count = sgm_spawn_ship_var_num_ships
 			create_ship = {
-				name = random
+				# name = random
 				prefix = no
 				colonizer_species = owner
 				design = $DESIGN$
@@ -152,25 +213,25 @@ sgm_create_ship_database_effect = {
 		NAME_Cybrex_Core = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cybrex_Core
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Cybrex_Station_1 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cybrex_Station_1
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Cybrex_Station_2 = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cybrex_Station_2
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Cybrex_Transport = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Cybrex_Transport
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Crisis_Star_Eater = {
