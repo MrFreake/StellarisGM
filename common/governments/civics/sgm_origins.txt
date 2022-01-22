@@ -8,6 +8,6 @@ origin_game_master = {
 	random_weight = {
 		base = 0
 	}
-	description = origin_game_master_desc
+	description = origin_game_master_effects
 	advanced_start = yes
 }
