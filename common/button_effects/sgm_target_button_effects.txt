@@ -191,3 +191,20 @@ target_megastructure_not_set = {
 
 	}
 }
+
+target_system = {
+	potential = {
+		#exists = galactic_object
+		#		is_gm = yes
+#		exists = event_target:target_planet
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		save_global_event_target_as = target_system
+		log = "[This.GetName] is target system"
+		print_scope_effect = yes
+		print_scope_trigger = yes
+	}
+}

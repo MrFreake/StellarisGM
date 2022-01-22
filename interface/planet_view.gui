@@ -4650,6 +4650,19 @@ guiTypes = {
 					text_color_code = "E"
 					format = CENTER
 				}
+				effectbuttonType = {					
+					name = "target_system"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+					size = { x = 300 y = 34 }
+					position = { x = 45 y = 20 }
+					scale = 1
+					buttonFont = cg_16b
+					buttonText = target_system
+					#orientation = UPPER_LEFT
+					effect = target_system
+		#			shortCut = j
+					#alwaysTransparent = yes
+				}
 
 				containerWindowType = {
 					name = "pop_species_info"

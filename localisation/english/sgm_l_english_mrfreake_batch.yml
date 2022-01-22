@@ -713,3 +713,7 @@ sgm_strategic_coordination_center_permanently_ruined: "Strategic Coordination Ce
 sgm_mega_art_installation_permanently_ruined: "Mega Art Installation Permanently Ruined"
 sgm_interstellar_assembly_permanently_ruined: "Interstellar Assembly Permanently Ruined"
 sgm_mega_shipyard_permanently_ruined: "Mega Shipyard Permanently Ruined"
+
+# global event targets
+
+target_system: "[This.GetName] [From.GetName]"
