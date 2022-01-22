@@ -40,16 +40,41 @@ sgm_create_ship_effect = {
 		limit = {
 			is_scope_type = fleet
 		}
-		owner = {
-			save_event_target_as = event_target:sgm_ship_spawner_country
+		if = {
+			# Spawn as new fleet
+			limit = {
+				has_fleet_flag = sgm_do_not_spawn_reinforce
+			}
+			create_fleet = {
+				# name = random
+				effect = {
+					set_location = prev
+					set_owner = prev.owner
+					prev.owner = {
+						save_event_target_as = event_target:sgm_ship_spawner_country
+					}
+					set_fleet_flag = $SHIP_DESIGN$
+					sgm_create_ship_database_effect = yes
+					remove_fleet_flag = $SHIP_DESIGN$
+				}
+			}
 		}
-		set_fleet_flag = $SHIP_DESIGN$
-		sgm_create_ship_database_effect = yes
-		remove_fleet_flag = $SHIP_DESIGN$
+		# Spawn as reinforcement for current fleet
+		else = {
+			owner = {
+				save_event_target_as = event_target:sgm_ship_spawner_country
+			}
+			set_fleet_flag = $SHIP_DESIGN$
+			sgm_create_ship_database_effect = yes
+			remove_fleet_flag = $SHIP_DESIGN$
+		}
 	}
 	else_if = {
+		# Spawn as new fleet
 		limit = {
-			exists = event_target:target_country
+			OR = {
+				exists = event_target:target_country
+			}
 		}
 		create_fleet = {
 			# name = random
@@ -107,6 +132,9 @@ sgm_create_ship_basic_effect = {
 		limit = {
 			has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
 			exists = event_target:target_country
+			NOT = {
+				has_fleet_flag = sgm_do_not_spawn_reinforce				# Let us not overdo it.
+			}
 		}
 		while = {
 			count = sgm_spawn_ship_var_num_ships
@@ -117,7 +145,18 @@ sgm_create_ship_basic_effect = {
 				design = $DESIGN$
 				# random_existing_design = <ship size key>
 				graphical_culture = event_target:target_country
+				effect = {
+					set_ship_flag = $DESIGN$
+				}
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_fleet_flag = sgm_do_not_spawn_reinforce
+				}
+			}
+			clear_variable = sgm_spawn_ship_var_num_ships
 		}
 	}
 	else = {
@@ -130,7 +169,18 @@ sgm_create_ship_basic_effect = {
 				design = $DESIGN$
 				# random_existing_design = <ship size key>
 				graphical_culture = $GRAPHICAL_CULTURE$
+				effect = {
+					set_ship_flag = $DESIGN$
+				}
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_fleet_flag = sgm_do_not_spawn_reinforce
+				}
+			}
+			clear_variable = sgm_spawn_ship_var_num_ships
 		}
 	}
 }
@@ -201,13 +251,13 @@ sgm_create_ship_database_effect = {
 		NAME_Taciturn = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Taciturn
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Reticent = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Reticent
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Cybrex_Core = {
