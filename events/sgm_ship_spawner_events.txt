@@ -38,6 +38,7 @@ country_event = {
 		if = {
 			limit = {
 				NOR = {
+					has_global_flag = sgm_spawn_ship_all_designs
 					has_global_flag = sgm_spawn_ship_sgm_ship_spawners
 					has_global_flag = sgm_spawn_ship_ai_ship_designs
 					has_global_flag = sgm_spawn_ship_crisis_ship_designs
@@ -65,13 +66,17 @@ country_event = {
 					has_global_flag = sgm_spawn_ship_utopia_designs
 				}
 			}
-			set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			set_global_flag = sgm_spawn_ship_all_designs
 		}
 	}
 	option = {
 		name = sgm_ship_spawner.3.a
 		switch = {
 			trigger = has_global_flag
+			sgm_spawn_ship_all_designs = {
+				remove_global_flag = sgm_spawn_ship_all_designs
+				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+			}
 			sgm_spawn_ship_sgm_ship_spawners = {
 				remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
 				set_global_flag = sgm_spawn_ship_ai_ship_designs
@@ -170,10 +175,10 @@ country_event = {
 			}
 			sgm_spawn_ship_utopia_designs = {
 				remove_global_flag = sgm_spawn_ship_utopia_designs
-				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+				set_global_flag = sgm_spawn_ship_all_designs
 			}
 			default = {
-				set_global_flag = sgm_spawn_ship_sgm_ship_spawners
+				set_global_flag = sgm_spawn_ship_all_designs
 			}
 		}
 		country_event = {
@@ -187,20 +192,3817 @@ country_event = {
 	option = {
 		name = NAME_Euthanizer
 		trigger = {
-			has_global_flag = sgm_spawn_ship_ai_ship_designs
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
 		}
 		from = {
-			set_fleet_flag = NAME_Euthanizer
-			owner = {
-				save_event_target_as = event_target:sgm_ship_spawner_country
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Euthanizer
 			}
-			sgm_create_ship_database_effect = yes
-			remove_fleet_flag = NAME_Euthanizer
+		}
+	}
+	option = {
+		name = NAME_Sterilizer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sterilizer
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_STARBASE
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_STARBASE
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_1
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_1
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_2
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_2
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_Core
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_Core
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_Final_Core
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_Final_Core
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_Transport
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_Transport
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_Colonizer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_Colonizer
+			}
+		}
+	}
+	option = {
+		name = NAME_AI_Constructor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AI_Constructor
+			}
+		}
+	}
+	option = {
+		name = NAME_Taciturn
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Taciturn
+			}
+		}
+	}
+	option = {
+		name = NAME_Reticent
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Reticent
+			}
+		}
+	}
+	option = {
+		name = NAME_Cybrex_Core
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cybrex_Core
+			}
+		}
+	}
+	option = {
+		name = NAME_Cybrex_Station_1
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cybrex_Station_1
+			}
+		}
+	}
+	option = {
+		name = NAME_Cybrex_Station_2
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cybrex_Station_2
+			}
+		}
+	}
+	option = {
+		name = NAME_Cybrex_Transport
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_ai_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cybrex_Transport
+			}
+		}
+	}
+	option = {
+		name = NAME_Crisis_Star_Eater
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crisis_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Nemesis"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Crisis_Star_Eater
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Blue
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Blue
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Blue
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Blue
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Blue
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Blue
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Green
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Green
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Green
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Green
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Green
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Green
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Yellow
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Yellow
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Yellow
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Yellow
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Yellow
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Yellow
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Red
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Red
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Red
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Red
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Red
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Red
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Blue_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Blue_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Blue_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Blue_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Blue_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Blue_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Green_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Green_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Green_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Green_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Green_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Green_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Yellow_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Yellow_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Yellow_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Yellow_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Yellow_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Yellow_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Crystal_Entity_Red_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Crystal_Entity_Red_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Medium_Crystal_Entity_Red_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Medium_Crystal_Entity_Red_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Crystal_Entity_Red_Elite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Crystal_Entity_Red_Elite
+			}
+		}
+	}
+	option = {
+		name = NAME_Crystal_Nidus
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_crystal_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Crystal_Nidus
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Mining_Expansion_Barge
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Mining_Expansion_Barge
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Mining_Expansion_Drone
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Mining_Expansion_Drone
+			}
+		}
+	}
+	option = {
+		name = NAME_Cracked_Crystalline_Shard
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_an4
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cracked_Crystalline_Shard
+			}
+		}
+	}
+	option = {
+		name = NAME_Herald
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Herald
+			}
+		}
+	}
+	option = {
+		name = NAME_Polaris_ship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_ancrel
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Polaris_ship
+			}
+		}
+	}
+	option = {
+		name = NAME_Abandoned_Manufactory
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Abandoned_Manufactory
+			}
+		}
+	}
+	option = {
+		name = NAME_F79
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_F79
+			}
+		}
+	}
+	option = {
+		name = NAME_R44
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_R44
+			}
+		}
+	}
+	option = {
+		name = NAME_Alien_Ship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Alien_Ship
+			}
+		}
+	}
+	option = {
+		name = NAME_Prototype
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Prototype
+			}
+		}
+	}
+	option = {
+		name = NAME_Derelict
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Derelict
+			}
+		}
+	}
+	option = {
+		name = NAME_Sword
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sword
+			}
+		}
+	}
+	option = {
+		name = NAME_Seeker
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Seeker
+			}
+		}
+	}
+	option = {
+		name = NAME_Voidstalker
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Voidstalker
+			}
+		}
+	}
+	option = {
+		name = NAME_Starfang
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Starfang
+			}
+		}
+	}
+	option = {
+		name = NAME_Persistent
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Persistent
+			}
+		}
+	}
+	option = {
+		name = NAME_Returned_Science_Ship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Returned_Science_Ship
+			}
+		}
+	}
+	option = {
+		name = NAME_mardak_vol_haters_corvette
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_mardak_vol_haters_corvette
+			}
+		}
+	}
+	option = {
+		name = NAME_mardak_vol_haters_destroyer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_mardak_vol_haters_destroyer
+			}
+		}
+	}
+	option = {
+		name = NAME_mardak_vol_haters_cruiser
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_mardak_vol_haters_cruiser
+			}
+		}
+	}
+	option = {
+		name = NAME_mardak_vol_haters_colossus
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_mardak_vol_haters_colossus
+			}
+		}
+	}
+	option = {
+		name = NAME_Hillos_ship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_anomalies
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Hillos_ship
+			}
+		}
+	}
+	option = {
+		name = NAME_Voidspawn
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Voidspawn
+			}
+		}
+	}
+	option = {
+		name = NAME_enigmatic_cache
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_enigmatic_cache
+			}
+		}
+	}
+	option = {
+		name = NAME_Nanite_Dragon
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Nanite_Dragon
+			}
+		}
+	}
+	option = {
+		name = NAME_Nanite_Factory
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Nanite_Factory
+			}
+		}
+	}
+	option = {
+		name = NAME_Nanite_Mothership
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Nanite_Mothership
+			}
+		}
+	}
+	option = {
+		name = NAME_Gray_Warship
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Gray_Warship
+			}
+		}
+	}
+	option = {
+		name = NAME_Nanite_Interdictor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Nanite_Interdictor
+			}
+		}
+	}
+	option = {
+		name = NAME_Dessanu_Mothership
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Dessanu_Mothership
+			}
+		}
+	}
+	option = {
+		name = NAME_Dessanu_Interdictor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Dessanu_Interdictor
+			}
+		}
+	}
+	option = {
+		name = NAME_Gatebuilder_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Gatebuilder_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Reclaimer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Reclaimer
+			}
+		}
+	}
+	option = {
+		name = NAME_S8751
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_S8751
+			}
+		}
+	}
+	option = {
+		name = NAME_Progenitor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Progenitor
+			}
+		}
+	}
+	option = {
+		name = NAME_AH4B
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_AH4B
+			}
+		}
+	}
+	option = {
+		name = NAME_Adopted_Amoeba_Centenarian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_distant_stars
+			}
+		}
+		allow = {
+			host_has_dlc = "Distant Stars Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Adopted_Amoeba_Centenarian
+			}
+		}
+	}
+	option = {
+		name = NAME_Lessenger
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Lessenger
+			}
+		}
+	}
+	option = {
+		name = NAME_Warder_of_the_Ruins
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Warder_of_the_Ruins
+			}
+		}
+	}
+	option = {
+		name = NAME_Gardener_Drone
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Gardener_Drone
+			}
+		}
+	}
+	option = {
+		name = NAME_Wenkwort_Enforcer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Wenkwort_Enforcer
+			}
+		}
+	}
+	option = {
+		name = NAME_Elusive_Craft
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_federations
+			}
+		}
+		allow = {
+			host_has_dlc = "Federations"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Elusive_Craft
+			}
+		}
+	}
+	option = {
+		name = NAME_Splendor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Splendor
+			}
+		}
+	}
+	option = {
+		name = NAME_C1
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_C1
+			}
+		}
+	}
+	option = {
+		name = NAME_C2
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_C2
+			}
+		}
+	}
+	option = {
+		name = NAME_Space_Station
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Space_Station
+			}
+		}
+	}
+	option = {
+		name = NAME_Citadel
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Citadel
+			}
+		}
+	}
+	option = {
+		name = NAME_Sentry
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sentry
+			}
+		}
+	}
+	option = {
+		name = NAME_Dagger
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Dagger
+			}
+		}
+	}
+	option = {
+		name = NAME_Ravager
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ravager
+			}
+		}
+	}
+	option = {
+		name = NAME_Asteroid
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Asteroid
+			}
+		}
+	}
+	option = {
+		name = NAME_DS47
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_DS47
+			}
+		}
+	}
+	option = {
+		name = NAME_Divine_Glory
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Divine_Glory
+			}
+		}
+	}
+	option = {
+		name = NAME_Righteous
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Righteous
+			}
+		}
+	}
+	option = {
+		name = NAME_Central_Crystal_Station
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_general
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Central_Crystal_Station
+			}
+		}
+	}
+	option = {
+		name = NAME_Diaspora
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Diaspora
+			}
+		}
+	}
+	option = {
+		name = NAME_Nomad_Cruiser
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Nomad_Cruiser
+			}
+		}
+	}
+	option = {
+		name = NAME_Protector
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Protector
+			}
+		}
+	}
+	option = {
+		name = NAME_Vigil
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Vigil
+			}
+		}
+	}
+	option = {
+		name = NAME_PR_417
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_PR_417
+			}
+		}
+	}
+	option = {
+		name = NAME_Spearhead
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Spearhead
+			}
+		}
+	}
+	option = {
+		name = NAME_Deaths_Head
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Deaths_Head
+			}
+		}
+	}
+	option = {
+		name = NAME_Bug_Crusher
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bug_Crusher
+			}
+		}
+	}
+	option = {
+		name = NAME_Blade
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Blade
+			}
+		}
+	}
+	option = {
+		name = NAME_Guardian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Guardian
+			}
+		}
+	}
+	option = {
+		name = NAME_Sanctuary_Core
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sanctuary_Core
+			}
+		}
+	}
+	option = {
+		name = NAME_Defensive_A_1
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Defensive_A_1
+			}
+		}
+	}
+	option = {
+		name = NAME_Defensive_A_2
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_event_ship_designs_special_systems
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Defensive_A_2
+			}
+		}
+	}
+	option = {
+		name = NAME_Revenant
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Revenant
+			}
+		}
+	}
+	option = {
+		name = NAME_Phantom
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Phantom
+			}
+		}
+	}
+	option = {
+		name = NAME_Wraith
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Wraith
+			}
+		}
+	}
+	option = {
+		name = NAME_Void_Shaper
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Void_Shaper
+			}
+		}
+	}
+	option = {
+		name = NAME_Huntress
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Huntress
+			}
+		}
+	}
+	option = {
+		name = NAME_Assassin
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Assassin
+			}
+		}
+	}
+	option = {
+		name = NAME_Predator
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Predator
+			}
+		}
+	}
+	option = {
+		name = NAME_Void_Former
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Void_Former
+			}
+		}
+	}
+	option = {
+		name = NAME_Eradicator
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Eradicator
+			}
+		}
+	}
+	option = {
+		name = NAME_Annihilator
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Annihilator
+			}
+		}
+	}
+	option = {
+		name = NAME_Obliterator
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Obliterator
+			}
+		}
+	}
+	option = {
+		name = NAME_Void_Weaver
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Void_Weaver
+			}
+		}
+	}
+	option = {
+		name = NAME_Unbidden_Portal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Unbidden_Portal
+			}
+		}
+	}
+	option = {
+		name = NAME_Vehement_Portal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Vehement_Portal
+			}
+		}
+	}
+	option = {
+		name = NAME_Aberrant_Portal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Aberrant_Portal
+			}
+		}
+	}
+	option = {
+		name = NAME_Unbidden_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Unbidden_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Unbidden_Anchor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Unbidden_Anchor
+			}
+		}
+	}
+	option = {
+		name = NAME_Vehement_Anchor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Vehement_Anchor
+			}
+		}
+	}
+	option = {
+		name = NAME_Aberrant_Anchor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_extra_dimensional_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Aberrant_Anchor
+			}
+		}
+	}
+	option = {
+		name = NAME_Omega
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Omega
+			}
+		}
+	}
+	option = {
+		name = NAME_Alpha
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Alpha
+			}
+		}
+	}
+	option = {
+		name = NAME_Beta
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Beta
+			}
+		}
+	}
+	option = {
+		name = NAME_Gamma
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Gamma
+			}
+		}
+	}
+	option = {
+		name = NAME_Sigma
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sigma
+			}
+		}
+	}
+	option = {
+		name = NAME_Theta
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Theta
+			}
+		}
+	}
+	option = {
+		name = NAME_Tau
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tau
+			}
+		}
+	}
+	option = {
+		name = NAME_Enforcer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Enforcer
+			}
+		}
+	}
+	option = {
+		name = NAME_Savant
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Savant
+			}
+		}
+	}
+	option = {
+		name = NAME_Scholar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Scholar
+			}
+		}
+	}
+	option = {
+		name = NAME_Sage
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sage
+			}
+		}
+	}
+	option = {
+		name = NAME_Cloaker
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cloaker
+			}
+		}
+	}
+	option = {
+		name = NAME_Librarian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Librarian
+			}
+		}
+	}
+	option = {
+		name = NAME_Archivist
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Archivist
+			}
+		}
+	}
+	option = {
+		name = NAME_Cleanser
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cleanser
+			}
+		}
+	}
+	option = {
+		name = NAME_Eternal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Eternal
+			}
+		}
+	}
+	option = {
+		name = NAME_Avatar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Avatar
+			}
+		}
+	}
+	option = {
+		name = NAME_Zealot
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Zealot
+			}
+		}
+	}
+	option = {
+		name = NAME_Faith
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Faith
+			}
+		}
+	}
+	option = {
+		name = NAME_Penitent
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Penitent
+			}
+		}
+	}
+	option = {
+		name = NAME_Pilgrim
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Pilgrim
+			}
+		}
+	}
+	option = {
+		name = NAME_Reaper
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Reaper
+			}
+		}
+	}
+	option = {
+		name = NAME_Imperium
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Imperium
+			}
+		}
+	}
+	option = {
+		name = NAME_Supremacy
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Supremacy
+			}
+		}
+	}
+	option = {
+		name = NAME_Glory
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Glory
+			}
+		}
+	}
+	option = {
+		name = NAME_Devastator
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Devastator
+			}
+		}
+	}
+	option = {
+		name = NAME_Servitor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Servitor
+			}
+		}
+	}
+	option = {
+		name = NAME_Destiny
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Destiny
+			}
+		}
+	}
+	option = {
+		name = NAME_Adjuster
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Adjuster
+			}
+		}
+	}
+	option = {
+		name = NAME_Keeper
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Keeper
+			}
+		}
+	}
+	option = {
+		name = NAME_Custodian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Custodian
+			}
+		}
+	}
+	option = {
+		name = NAME_Warden
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Warden
+			}
+		}
+	}
+	option = {
+		name = NAME_Watcher
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Watcher
+			}
+		}
+	}
+	option = {
+		name = NAME_Builder
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Builder
+			}
+		}
+	}
+	option = {
+		name = NAME_Seeder
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Seeder
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Beta
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Beta
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Scholar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Scholar
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Custodian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Custodian
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Gamma
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Gamma
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Sage
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Sage
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Warden
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Warden
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Avatar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Avatar
+			}
+		}
+	}
+	option = {
+		name = NAME_Surplus_Zealot
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Surplus_Zealot
+			}
+		}
+	}
+	option = {
+		name = NAME_FE_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_fallen_empire_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_FE_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Constructor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Constructor
+			}
+		}
+	}
+	option = {
+		name = NAME_Colonizer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Colonizer
+			}
+		}
+	}
+	option = {
+		name = NAME_Colonizer-lithoids
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_global_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Lithoids Species Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Colonizer-lithoids
+			}
+		}
+	}
+	option = {
+		name = NAME_Trader_Enclave_Station
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Trader_Enclave_Station
+			}
+		}
+	}
+	option = {
+		name = NAME_Artist_Enclave_Station
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Artist_Enclave_Station
+			}
+		}
+	}
+	option = {
+		name = NAME_Curator_Enclave_Station
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Curator_Enclave_Station
+			}
+		}
+	}
+	option = {
+		name = NAME_Grand_Dragon
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Grand_Dragon
+			}
+		}
+	}
+	option = {
+		name = NAME_Stellarite
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Stellarite
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Sentinel
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Sentinel
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Defender
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Defender
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Warden
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Warden
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Guardian
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Guardian
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Vault
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Vault
+			}
+		}
+	}
+	option = {
+		name = NAME_Hive_Asteroid
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Hive_Asteroid
+			}
+		}
+	}
+	option = {
+		name = NAME_Dimensional_Horror
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			always = yes
+			# always = yes # User can disable in the launcher
+			# host_has_dlc = "Horizon Signal"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Dimensional_Horror
+			}
+		}
+	}
+	option = {
+		name = NAME_Relic
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Relic
+			}
+		}
+	}
+	option = {
+		name = NAME_Type_37
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Type_37
+			}
+		}
+	}
+	option = {
+		name = NAME_Type_46
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Type_46
+			}
+		}
+	}
+	option = {
+		name = NAME_Infinity_Machine
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Infinity_Machine
+			}
+		}
+	}
+	option = {
+		name = NAME_Spectral_Wraith_650THz
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Spectral_Wraith_650THz
+			}
+		}
+	}
+	option = {
+		name = NAME_Spectral_Wraith_450THz
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Spectral_Wraith_450THz
+			}
+		}
+	}
+	option = {
+		name = NAME_Spectral_Wraith_520THz
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Spectral_Wraith_520THz
+			}
+		}
+	}
+	option = {
+		name = NAME_Dragonspawn
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Leviathans Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Dragonspawn
+			}
+		}
+	}
+	option = {
+		name = NAME_Shard_Dragon
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Shard_Dragon
+			}
+		}
+	}
+	option = {
+		name = NAME_Sky_Dragon
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Aquatics Species Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sky_Dragon
+			}
+		}
+	}
+	option = {
+		name = NAME_Sky_Dragon_Baby
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_leviathans_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Aquatics Species Pack"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Sky_Dragon_Baby
+			}
+		}
+	}
+	option = {
+		name = NAME_Warrior_Freehold
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Warrior_Freehold
+			}
+		}
+	}
+	option = {
+		name = NAME_Void_Dwelling
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Void_Dwelling
+			}
+		}
+	}
+	option = {
+		name = NAME_Outrider
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Outrider
+			}
+		}
+	}
+	option = {
+		name = NAME_Lancer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Lancer
+			}
+		}
+	}
+	option = {
+		name = NAME_Void_Champion
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Void_Champion
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancestral_Glory
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancestral_Glory
+			}
+		}
+	}
+	option = {
+		name = NAME_Clan_Builder
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Clan_Builder
+			}
+		}
+	}
+	option = {
+		name = NAME_Marauder_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_marauder_ship_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Apocalypse"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Marauder_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Caravaneer_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Caravaneer_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Tradestation_Tungle
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tradestation_Tungle
+			}
+		}
+	}
+	option = {
+		name = NAME_Gunslinger
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Gunslinger
+			}
+		}
+	}
+	option = {
+		name = NAME_Yojimbo
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Yojimbo
+			}
+		}
+	}
+	option = {
+		name = NAME_Schooner
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_megacorp_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Megacorp"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Schooner
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Mining_Drone
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Mining_Drone
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Combat_Drone
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Combat_Drone
+			}
+		}
+	}
+	option = {
+		name = NAME_Ancient_Destroyer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Ancient_Destroyer
+			}
+		}
+	}
+	option = {
+		name = NAME_Drone_Home_Base
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_mining_drone_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Drone_Home_Base
+			}
+		}
+	}
+	option = {
+		name = NAME_Pirate_Nest
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Pirate_Nest
+			}
+		}
+	}
+	option = {
+		name = NAME_Reaver
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Reaver
+			}
+		}
+	}
+	option = {
+		name = NAME_Brigand
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Brigand
+			}
+		}
+	}
+	option = {
+		name = NAME_Skull
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Skull
+			}
+		}
+	}
+	option = {
+		name = NAME_Marauder
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Marauder
+			}
+		}
+	}
+	option = {
+		name = NAME_Corsair
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Corsair
+			}
+		}
+	}
+	option = {
+		name = NAME_Black_Earl
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Black_Earl
+			}
+		}
+	}
+	option = {
+		name = NAME_Pirate_Galleon
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Pirate_Galleon
+			}
+		}
+	}
+	option = {
+		name = NAME_Pirate_Transport
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Pirate_Transport
+			}
+		}
+	}
+	option = {
+		name = NAME_Bemat_corvette_01
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bemat_corvette_01
+			}
+		}
+	}
+	option = {
+		name = NAME_Bemat_destroyer_01
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bemat_destroyer_01
+			}
+		}
+	}
+	option = {
+		name = NAME_Bemat_destroyer_02
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bemat_destroyer_02
+			}
+		}
+	}
+	option = {
+		name = NAME_Bemat_cruiser_01
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bemat_cruiser_01
+			}
+		}
+	}
+	option = {
+		name = NAME_Bemat_cruiser_02
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_pirate_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Bemat_cruiser_02
+			}
+		}
+	}
+	option = {
+		name = NAME_Cloud_Entity
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Cloud_Entity
+			}
+		}
+	}
+	option = {
+		name = NAME_Lesser_Cloud_Entity
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Lesser_Cloud_Entity
+			}
+		}
+	}
+	option = {
+		name = NAME_Great_Space_Organism
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Great_Space_Organism
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Space_Organism_Blue
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Space_Organism_Blue
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Space_Organism_Blue
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Space_Organism_Blue
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Space_Organism_Teal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Space_Organism_Teal
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Space_Organism_Teal
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Space_Organism_Teal
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Space_Organism_Orange
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Space_Organism_Orange
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Space_Organism_Orange
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Space_Organism_Orange
+			}
+		}
+	}
+	option = {
+		name = NAME_Large_Space_Organism_Zebra
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Large_Space_Organism_Zebra
+			}
+		}
+	}
+	option = {
+		name = NAME_Small_Space_Organism_Zebra
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_monster_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Small_Space_Organism_Zebra
+			}
+		}
+	}
+	option = {
+		name = NAME_Tiyanki_Cow
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tiyanki_Cow
+			}
+		}
+	}
+	option = {
+		name = NAME_Tiyanki_Bull
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tiyanki_Bull
+			}
+		}
+	}
+	option = {
+		name = NAME_Tiyanki_Hatchling
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tiyanki_Hatchling
+			}
+		}
+	}
+	option = {
+		name = NAME_Tiyanki_Calf
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_space_whale_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Tiyanki_Calf
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Large
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Large
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Carrier
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Carrier
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Small
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Small
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Starbase
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Starbase
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Queen
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Queen
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Transport
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Transport
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Colonizer
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Colonizer
+			}
+		}
+	}
+	option = {
+		name = NAME_Swarm_Constructor
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_swarm_ship_designs
+			}
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Swarm_Constructor
+			}
+		}
+	}
+	option = {
+		name = NAME_Shroud_Avatar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Shroud_Avatar
+			}
+		}
+	}
+	option = {
+		name = NAME_Corrupted_Avatar
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Corrupted_Avatar
+			}
+		}
+	}
+	option = {
+		name = NAME_Warped_Consciousness
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Warped_Consciousness
+			}
+		}
+	}
+	option = {
+		name = NAME_Shroud_Manifestation
+		trigger = {
+			OR = {
+				has_global_flag = sgm_spawn_ship_all_designs
+				has_global_flag = sgm_spawn_ship_utopia_designs
+			}
+		}
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		from = {
+			sgm_create_ship_effect = {
+				SHIP_DESIGN = NAME_Shroud_Manifestation
+			}
 		}
 	}
 	option = {
 		name = CANCEL
 		hidden_effect = {
+			remove_global_flag = sgm_spawn_ship_all_designs
 			remove_global_flag = sgm_spawn_ship_sgm_ship_spawners
 			remove_global_flag = sgm_spawn_ship_ai_ship_designs
 			remove_global_flag = sgm_spawn_ship_crisis_ship_designs
