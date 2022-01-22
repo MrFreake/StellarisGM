@@ -3,8 +3,10 @@
 # Misc
 origin_game_master: "Game Master"
 origin_game_master_desc: "Become the Game Master."
-sgm_game_master_civic: "$origin_game_master$"
+origin_game_master_effects: "Unlimited resources, vision and indestructible empire with access to Game Master tools."
+sgm_game_master_civic: "Game Master"
 sgm_game_master_civic_desc: "$origin_game_master_desc$"
+sgm_game_master_civic_effects: "Standard empire with access to Game Master tools."
 sgm_start_events.11.name: "$origin_game_master$"
 sgm_start_events.11.desc: "Number of $origin_game_master$ player countries: [global_event_country.sgm_var_num_gm]."
 
@@ -124,7 +126,14 @@ MESSAGE_SGM_SYSTEM_SPAWNED_TITLE: "System Spawned"
 
 # Ship spawn
 sgm_ship_spawner.3.name: "Spawn Ship"
-sgm_ship_spawner.3.desc: "$sgm_ship_spawner.3.name$ from global ship designs file §Y[this.GetNameShipSpawnSwitch]§!.\n$TRADE_OFFER_QUANTITY$: §Y[global_event_country.sgm_spawn_ship_var_num_ships]§!\n$FLEET_VIEW_REINFORCE_HEADER$: §Y[from.GetName]§!\nOverride graphical culture to target country ([this.GetName_target_country_GetRealName]§G[target_country.GetRealName]§!): $sgm_spawn_ship_override_to_owner_graphical_culture_switch$"
+sgm_ship_spawner.3.desc: "$sgm_ship_spawner.3.name$ from global ship designs file §Y[this.GetNameShipSpawnSwitch]§!.\n$TRADE_OFFER_QUANTITY$: §Y[global_event_country.sgm_spawn_ship_var_num_ships]§!\n[from.GetName_reinforce_or_make]\nOverride graphical culture to target country ([this.GetName_target_country_GetRealName]§Y[target_country.GetRealName]§!): $sgm_spawn_ship_override_to_owner_graphical_culture_switch$"
+sgm_ship_spawner.3.desc_reinforce_or_make: "[from.GetName_reinforce_or_make]"
+sgm_ship_spawner.3.desc_reinforce_fleet: "$FLEET_VIEW_REINFORCE_HEADER$: §Y[from.GetName]§!"
+sgm_ship_spawner.3.desc_create_fleet: "$WILL_CREATE$ $FLEET$ ($TRIGGER_OWNER$: [this.GetName_target_country_GetRealName]§G[event_target:target_country.GetRealName]§!)"
 sgm_ship_spawner.3.a: "§Y[this.GetNameShipSpawnSwitch]§!"
 sgm_spawn_ship_var_num_ships_value: "[global_event_country.sgm_spawn_ship_var_num_ships]"
 sgm_spawn_ship_override_to_owner_graphical_culture_switch: "[this.Get_override_to_owner_graphical_culture]"
+
+# Fleet formation scale - Fleet Effects
+sgm_set_formation_scale: "Set fleet formation scale"
+sgm_set_formation_scale_tooltip: "set_formation_scale = modifier_var\nAccepted integers: 1-10, 10-100. Default: 1."

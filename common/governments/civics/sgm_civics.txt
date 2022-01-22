@@ -16,5 +16,5 @@ sgm_game_master_civic = {
 	modifier = {
 		country_government_civic_points_add = 1
 	}
-	description = "sgm_game_master_civic_desc"
+	description = "sgm_game_master_civic_effects"
 }

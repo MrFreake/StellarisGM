@@ -101,10 +101,15 @@ teleport_fleet = {
 	}
 }
 
+# Supported scopes by script:
+# fleet, ambient_object, planet, megastructure
 sgm_create_ship = {
 	potential = {
 		is_gm = yes
-		is_fleet = yes
+		OR = {
+			is_scope_type = planet
+			is_fleet = yes
+		}
 	}
 	allow = {
 	}
