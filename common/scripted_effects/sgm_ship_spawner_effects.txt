@@ -1740,3 +1740,158 @@ sgm_create_ship_database_effect = {
 		}
 	}
 }
+
+sgm_create_fleet_leader = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:sgm_create_fleet_leader_species
+			}
+		}
+		if = {
+			limit = {
+				exists = owner_main_species
+			}
+			owner_main_species = {
+				save_event_target_as = sgm_create_fleet_leader_species
+			}
+		}
+		else = {
+			random_galaxy_species = {
+				limit = {
+					owner = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+					}
+				}
+				save_event_target_as = sgm_create_fleet_leader_species
+			}
+		}
+	}
+	switch = {
+		trigger = is_ship_class
+		shipclass_military = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				owner = {
+					create_leader = {
+						class = admiral
+						species = event_target:sgm_create_fleet_leader_species
+						set_age = 30
+						effect = {
+							set_leader_flag = sgm_leader
+							from = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+			# else = {
+			# 	log = "[this.GetName]: Admiral already exists."
+			# }
+		}
+		shipclass_science_ship = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				owner = {
+					create_leader = {
+						class = scientist
+						species = event_target:sgm_create_fleet_leader_species
+						set_age = 30
+						effect = {
+							set_leader_flag = sgm_leader
+							from = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+			# else = {
+			# 	log = "[this.GetName]: Scientist already exists."
+			# }
+		}
+		shipclass_transport = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				set_timed_fleet_flag = {
+					flag = sgm_create_fleet_leader
+					days = 1
+				}
+				if = {
+					limit = {
+						owner = {
+							any_owned_army = {
+								fleet = {
+									has_fleet_flag = sgm_create_fleet_leader
+								}
+								NOT = {
+									exists = leader
+								}
+								NOT = {
+									prev = {
+										any_owned_army = {
+											fleet = {
+												has_fleet_flag = sgm_create_fleet_leader
+											}
+											NOT = {
+												is_same_value = prevprev
+											}
+											exists = leader
+										}
+									}
+								}
+							}
+						}
+					}
+					owner = {
+						create_leader = {
+							class = general
+							species = event_target:sgm_create_fleet_leader_species
+							set_age = 30
+							effect = {
+								set_leader_flag = sgm_leader
+								from.owner = {
+									random_owned_army = {
+										limit = {
+											NOT = {
+												exists = leader
+											}
+											fleet = {
+												has_fleet_flag = sgm_create_fleet_leader
+											}
+										}
+										assign_leader = prevprev
+									}
+								}
+							}
+						}
+					}
+					remove_fleet_flag = sgm_create_fleet_leader
+				}
+				# else = {
+				# 	log = "[this.GetName]: General already exists."
+				# }
+			}
+			# else = {
+			# 	log = "[this.GetName]: General already exists."
+			# }
+		}
+	}
+}
