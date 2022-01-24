@@ -5,3 +5,21 @@ sgm_on_system_spawned = {
 		sgm_events.4
 	}
 }
+
+# This = new spawned fleet
+# From = scope location of spawn
+sgm_on_fleet_spawned = {
+	events = {
+		sgm_ship_spawner.10
+	}
+}
+
+# Mutually exclusive with sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn (as of now same as FromFrom)
+# FromFrom = cloned fleet
+sgm_on_fleet_cloned = {
+	events = {
+		sgm_ship_spawner.11
+	}
+}

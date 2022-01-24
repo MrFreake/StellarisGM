@@ -87,6 +87,27 @@ sgm_create_ship_effect = {
 				set_fleet_flag = $SHIP_DESIGN$
 				sgm_create_ship_database_effect = yes
 				remove_fleet_flag = $SHIP_DESIGN$
+				# on_fleet_cloned fired from event sgm_ship_spawner.3
+				# if = {
+				# 	limit = {
+				# 		exists = event_target:sgm_spawner_fleet
+				# 	}
+				# 	fire_on_action = {
+				# 		on_action = sgm_on_fleet_cloned						# Mutually exclusive with sgm_on_fleet_spawned
+				# 		scopes = {
+				# 			from = prev							# scope location of spawn
+				# 			fromfrom = event_target:sgm_spawner_fleet							# cloned fleet
+				# 		}
+				# 	}
+				# }
+				# else = {
+				fire_on_action = {
+					on_action = sgm_on_fleet_spawned
+					scopes = {
+						from = prev						# scope location of spawn
+					}
+				}
+				# }
 			}
 		}
 	}
@@ -123,9 +144,23 @@ sgm_create_ship_basic_effect = {
 				is_variable_set = sgm_spawn_ship_var_num_ships
 			}
 		}
-		set_variable = {
-			which = sgm_spawn_ship_var_num_ships
-			value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+		if = {
+			limit = {
+				exists = event_target:sgm_spawner_fleet
+				event_target:sgm_spawner_fleet = {
+					has_fleet_flag = sgm_mob_spawner
+				}
+			}
+			set_variable = {
+				which = sgm_spawn_ship_var_num_ships
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				which = sgm_spawn_ship_var_num_ships
+				value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+			}
 		}
 	}
 	if = {

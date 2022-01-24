@@ -200,7 +200,7 @@ country_event = {
 				id = sgm_ship_spawner.6
 			}
 		}
-	}	
+	}
 	option = {
 		name = NAME_Euthanizer
 		trigger = {
@@ -4066,6 +4066,7 @@ fleet_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		save_event_target_as = sgm_spawner_fleet
 		create_fleet = {
 			effect = {
 				set_location = prev
@@ -4082,6 +4083,33 @@ fleet_event = {
 					}
 					sgm_var_set_formation_scale_effect = yes
 				}
+				if = {
+					limit = {
+						prev = {
+							has_fleet_flag = sgm_mob_spawner
+						}
+					}
+					set_fleet_flag = sgm_mob_spawner
+				}
+				# Moved to sgm_on_fleet_cloned event sgm_ship_spawner.11
+				# if = {
+				# 	limit = {
+				# 		prev = {
+				# 			exists = leader
+				# 		}
+				# 	}
+				# 	if = {
+				# 		limit = {
+				# 			NOT = {
+				# 				exists = event_target:sgm_create_fleet_leader_species
+				# 			}
+				# 		}
+				# 		prev.leader.species = {
+				# 			save_event_target_as = sgm_create_fleet_leader_species
+				# 		}
+				# 	}
+				# 	sgm_create_fleet_leader = yes
+				# }
 				prev = {
 					every_owned_ship = {
 						switch = {
@@ -5888,7 +5916,88 @@ fleet_event = {
 						}
 					}
 				}
+				fire_on_action = {
+					on_action = sgm_on_fleet_cloned
+					scopes = {
+						from = prev
+						fromfrom = prev
+					}
+				}
 			}
+		}
+	}
+}
+
+# sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn
+fleet_event = {
+	id = sgm_ship_spawner.10
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# print_scope_effect = yes
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = THIS
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = from
+		# }
+	}
+}
+
+# sgm_on_fleet_cloned
+# Mutually exclusive with sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn (as of now same as FromFrom)
+# FromFrom = cloned fleet
+fleet_event = {
+	id = sgm_ship_spawner.11
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# print_scope_effect = yes
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = THIS
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = from
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = fromfrom
+		# }
+		if = {
+			limit = {
+				fromfrom = {
+					exists = leader
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:sgm_create_fleet_leader_species
+					}
+				}
+				fromfrom.leader.species = {
+					save_event_target_as = sgm_create_fleet_leader_species
+				}
+			}
+			sgm_create_fleet_leader = yes
 		}
 	}
 }
