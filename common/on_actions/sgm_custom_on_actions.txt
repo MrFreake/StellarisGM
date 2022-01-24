@@ -1,5 +1,6 @@
 # This = system
 # From = scope spawn_system was fired in (check scope type first!)
+# FromFromFromFrom = SGM country calling spawner
 sgm_on_system_spawned = {
 	events = {
 		sgm_events.4
