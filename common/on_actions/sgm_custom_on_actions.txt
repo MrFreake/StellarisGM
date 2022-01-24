@@ -4,6 +4,7 @@
 sgm_on_system_spawned = {
 	events = {
 		sgm_events.4
+		sgm_system.5
 	}
 }
 
