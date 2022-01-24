@@ -549,6 +549,7 @@ sgm_initialiser_spawn_system_megacorp_initializers_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
@@ -569,6 +570,7 @@ sgm_initialiser_spawn_system_megacorp_initializers_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
@@ -589,6 +591,7 @@ sgm_initialiser_spawn_system_megacorp_initializers_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
@@ -609,6 +612,7 @@ sgm_initialiser_spawn_system_megacorp_initializers_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
@@ -629,6 +633,7 @@ sgm_initialiser_spawn_system_megacorp_initializers_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
