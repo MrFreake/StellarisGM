@@ -6001,3 +6001,16 @@ fleet_event = {
 		}
 	}
 }
+
+# sgm_on_antion_make_assign_fleet_leader
+# Creates and assigns leader to this fleet
+# This = fleet
+# From = fleet
+fleet_event = {
+	id = sgm_ship_spawner.12
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		sgm_create_fleet_leader = yes
+	}
+}
