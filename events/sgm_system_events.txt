@@ -1,7 +1,7 @@
 namespace = sgm_system
 country_event = {
-	id = sgm_system.3
-	is_triggered_only = yes
+	id = sgm_system.3						# from solar_system
+	is_triggered_only = yes					# fromfrom planet_scope
 	title = sgm_system.3.name
 	desc = sgm_system.3.desc
 	# picture = GFX_evt_binary_stars
@@ -3835,6 +3835,183 @@ country_event = {
 			remove_global_flag = sgm_spawn_system_sol_initializers
 			remove_global_flag = sgm_spawn_system_special_system_initializers
 			remove_global_flag = sgm_spawn_system_utopia_initializers
+		}
+	}
+}
+
+country_event = {
+	id = sgm_system.4
+	is_triggered_only = yes
+	title = sgm_system_4
+	desc = sgm_system_4_desc
+	custom_gui = sgm_ScalarEventWindow
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = spawning_prescripted_cluster
+					has_global_flag = spawning_empty_cluster
+					has_global_flag = spawning_chosen_cluster
+				}
+			}
+			set_global_flag = spawning_empty_cluster
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = sgm_spawn_system_hyperlane_no
+					has_global_flag = sgm_spawn_system_hyperlane_yes
+				}
+			}
+			set_global_flag = sgm_spawn_system_hyperlane_yes
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = spawning_empty_cluster
+		}
+		NAME = spawning_empty_cluster
+		set_global_flag = spawning_chosen_cluster
+		remove_global_flag = spawning_empty_cluster
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = spawning_chosen_cluster
+		}
+		NAME = spawn_chosen_cluster
+		remove_global_flag = spawning_chosen_cluster
+		set_global_flag = spawning_prescripted_cluster
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = spawning_prescripted_cluster
+		}
+		NAME = spawn_prescripted_cluster
+		remove_global_flag = spawning_prescripted_cluster
+		set_global_flag = spawning_empty_cluster
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_hyperlane_no
+		}
+		NAME = no_hyperlane_connections
+		remove_global_flag = sgm_spawn_system_hyperlane_no
+		set_global_flag = sgm_spawn_system_hyperlane_yes
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = sgm_spawn_system_hyperlane_yes
+		}
+		NAME = add_hyperlane_connections
+		remove_global_flag = sgm_spawn_system_hyperlane_yes
+		set_global_flag = sgm_spawn_system_hyperlane_no
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_global_flag = spawning_prescripted_cluster
+			}
+		}
+		NAME = basic_init_01
+		switch = {
+			trigger = has_global_flag 
+			sgm_spawn_system_hyperlane_no = {
+				spawn_chosen_cluster_effect = {
+					system_init = basic_init_01 
+					num_stars = modifier_var
+					connections = no
+				}
+			}
+			sgm_spawn_system_hyperlane_yes = {
+				spawn_chosen_cluster_effect = {
+					system_init = basic_init_01 
+					num_stars = root.fromfrom.modifier_var
+					connections = yes
+				}
+			}
+		}
+	}
+}
+
+system_event = {						# TODO this will retrigger spawn_system once  
+	id = sgm_system.5					# sgm_on_system_spawned gets the gm scope in the 
+	is_triggered_only = yes				# on_action
+	hide_window = yes
+
+	trigger = {
+		event_target:global_event_country = {
+			check_variable = {
+				which = cluster_size
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		random_system_planet = {
+			save_event_target_as = random_system_planet
+		}
+		random_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+			}
+			country_event = {
+				id = sgm_system.3
+				scopes = {
+					from = root
+					fromfrom = event_target:random_system_planet
+				}
+			}
+		}
+		event_target:global_event_country = {
+			change_variable = {
+				which = cluster_size
+				value = -1
+			}
 		}
 	}
 }

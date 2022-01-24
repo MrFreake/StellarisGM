@@ -232,6 +232,18 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		NAME = spawn_star_cluster
+		country_event = {
+			id = sgm_system.4
+			scopes = {
+				from = this
+				fromfrom = this
+				
+			}
+		}
+	}
 	
 	option = {
 		NAME = Exit
