@@ -40,16 +40,41 @@ sgm_create_ship_effect = {
 		limit = {
 			is_scope_type = fleet
 		}
-		owner = {
-			save_event_target_as = event_target:sgm_ship_spawner_country
+		if = {
+			# Spawn as new fleet
+			limit = {
+				has_fleet_flag = sgm_do_not_spawn_reinforce
+			}
+			create_fleet = {
+				# name = random
+				effect = {
+					set_location = prev
+					set_owner = prev.owner
+					prev.owner = {
+						save_event_target_as = event_target:sgm_ship_spawner_country
+					}
+					set_fleet_flag = $SHIP_DESIGN$
+					sgm_create_ship_database_effect = yes
+					remove_fleet_flag = $SHIP_DESIGN$
+				}
+			}
 		}
-		set_fleet_flag = $SHIP_DESIGN$
-		sgm_create_ship_database_effect = yes
-		remove_fleet_flag = $SHIP_DESIGN$
+		# Spawn as reinforcement for current fleet
+		else = {
+			owner = {
+				save_event_target_as = event_target:sgm_ship_spawner_country
+			}
+			set_fleet_flag = $SHIP_DESIGN$
+			sgm_create_ship_database_effect = yes
+			remove_fleet_flag = $SHIP_DESIGN$
+		}
 	}
 	else_if = {
+		# Spawn as new fleet
 		limit = {
-			exists = event_target:target_country
+			OR = {
+				exists = event_target:target_country
+			}
 		}
 		create_fleet = {
 			# name = random
@@ -62,6 +87,27 @@ sgm_create_ship_effect = {
 				set_fleet_flag = $SHIP_DESIGN$
 				sgm_create_ship_database_effect = yes
 				remove_fleet_flag = $SHIP_DESIGN$
+				# on_fleet_cloned fired from event sgm_ship_spawner.3
+				# if = {
+				# 	limit = {
+				# 		exists = event_target:sgm_spawner_fleet
+				# 	}
+				# 	fire_on_action = {
+				# 		on_action = sgm_on_fleet_cloned						# Mutually exclusive with sgm_on_fleet_spawned
+				# 		scopes = {
+				# 			from = prev							# scope location of spawn
+				# 			fromfrom = event_target:sgm_spawner_fleet							# cloned fleet
+				# 		}
+				# 	}
+				# }
+				# else = {
+				fire_on_action = {
+					on_action = sgm_on_fleet_spawned
+					scopes = {
+						from = prev						# scope location of spawn
+					}
+				}
+				# }
 			}
 		}
 	}
@@ -98,15 +144,32 @@ sgm_create_ship_basic_effect = {
 				is_variable_set = sgm_spawn_ship_var_num_ships
 			}
 		}
-		set_variable = {
-			which = sgm_spawn_ship_var_num_ships
-			value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+		if = {
+			limit = {
+				exists = event_target:sgm_spawner_fleet
+				event_target:sgm_spawner_fleet = {
+					has_fleet_flag = sgm_mob_spawner
+				}
+			}
+			set_variable = {
+				which = sgm_spawn_ship_var_num_ships
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				which = sgm_spawn_ship_var_num_ships
+				value = event_target:global_event_country.sgm_spawn_ship_var_num_ships
+			}
 		}
 	}
 	if = {
 		limit = {
 			has_global_flag = sgm_spawn_ship_override_to_owner_graphical_culture_yes
 			exists = event_target:target_country
+			NOT = {
+				has_fleet_flag = sgm_do_not_spawn_reinforce				# Let us not overdo it.
+			}
 		}
 		while = {
 			count = sgm_spawn_ship_var_num_ships
@@ -117,7 +180,18 @@ sgm_create_ship_basic_effect = {
 				design = $DESIGN$
 				# random_existing_design = <ship size key>
 				graphical_culture = event_target:target_country
+				effect = {
+					set_ship_flag = $DESIGN$
+				}
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_fleet_flag = sgm_do_not_spawn_reinforce
+				}
+			}
+			clear_variable = sgm_spawn_ship_var_num_ships
 		}
 	}
 	else = {
@@ -130,7 +204,18 @@ sgm_create_ship_basic_effect = {
 				design = $DESIGN$
 				# random_existing_design = <ship size key>
 				graphical_culture = $GRAPHICAL_CULTURE$
+				effect = {
+					set_ship_flag = $DESIGN$
+				}
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_fleet_flag = sgm_do_not_spawn_reinforce
+				}
+			}
+			clear_variable = sgm_spawn_ship_var_num_ships
 		}
 	}
 }
@@ -201,13 +286,13 @@ sgm_create_ship_database_effect = {
 		NAME_Taciturn = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Taciturn
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Reticent = {
 			sgm_create_ship_basic_effect = {
 				DESIGN = NAME_Reticent
-				GRAPHICAL_CULTURE = "ai_02"
+				GRAPHICAL_CULTURE = "ai_01"
 			}
 		}
 		NAME_Cybrex_Core = {
@@ -1687,6 +1772,161 @@ sgm_create_ship_database_effect = {
 				DESIGN = NAME_Hillos_ship
 				GRAPHICAL_CULTURE = "event_target:sgm_ship_spawner_country"
 			}
+		}
+	}
+}
+
+sgm_create_fleet_leader = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:sgm_create_fleet_leader_species
+			}
+		}
+		if = {
+			limit = {
+				exists = owner_main_species
+			}
+			owner_main_species = {
+				save_event_target_as = sgm_create_fleet_leader_species
+			}
+		}
+		else = {
+			random_galaxy_species = {
+				limit = {
+					owner = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+					}
+				}
+				save_event_target_as = sgm_create_fleet_leader_species
+			}
+		}
+	}
+	switch = {
+		trigger = is_ship_class
+		shipclass_military = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				owner = {
+					create_leader = {
+						class = admiral
+						species = event_target:sgm_create_fleet_leader_species
+						set_age = 30
+						effect = {
+							set_leader_flag = sgm_leader
+							from = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+			# else = {
+			# 	log = "[this.GetName]: Admiral already exists."
+			# }
+		}
+		shipclass_science_ship = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				owner = {
+					create_leader = {
+						class = scientist
+						species = event_target:sgm_create_fleet_leader_species
+						set_age = 30
+						effect = {
+							set_leader_flag = sgm_leader
+							from = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+			# else = {
+			# 	log = "[this.GetName]: Scientist already exists."
+			# }
+		}
+		shipclass_transport = {
+			if = {
+				limit = {
+					NOT = {
+						exists = leader
+					}
+				}
+				set_timed_fleet_flag = {
+					flag = sgm_create_fleet_leader
+					days = 1
+				}
+				if = {
+					limit = {
+						owner = {
+							any_owned_army = {
+								fleet = {
+									has_fleet_flag = sgm_create_fleet_leader
+								}
+								NOT = {
+									exists = leader
+								}
+								NOT = {
+									prev = {
+										any_owned_army = {
+											fleet = {
+												has_fleet_flag = sgm_create_fleet_leader
+											}
+											NOT = {
+												is_same_value = prevprev
+											}
+											exists = leader
+										}
+									}
+								}
+							}
+						}
+					}
+					owner = {
+						create_leader = {
+							class = general
+							species = event_target:sgm_create_fleet_leader_species
+							set_age = 30
+							effect = {
+								set_leader_flag = sgm_leader
+								from.owner = {
+									random_owned_army = {
+										limit = {
+											NOT = {
+												exists = leader
+											}
+											fleet = {
+												has_fleet_flag = sgm_create_fleet_leader
+											}
+										}
+										assign_leader = prevprev
+									}
+								}
+							}
+						}
+					}
+					remove_fleet_flag = sgm_create_fleet_leader
+				}
+				# else = {
+				# 	log = "[this.GetName]: General already exists."
+				# }
+			}
+			# else = {
+			# 	log = "[this.GetName]: General already exists."
+			# }
 		}
 	}
 }

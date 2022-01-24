@@ -190,6 +190,18 @@ country_event = {
 		}
 	}
 	option = {
+		name = sgm_clone_fleet
+		custom_tooltip = "sgm_clone_fleet_desc"
+		trigger = {
+			has_global_flag = sgm_spawn_ship_sgm_ship_spawners
+		}
+		from = {
+			fleet_event = {
+				id = sgm_ship_spawner.6
+			}
+		}
+	}
+	option = {
 		name = NAME_Euthanizer
 		trigger = {
 			OR = {
@@ -4028,6 +4040,1964 @@ country_event = {
 			remove_global_flag = sgm_spawn_ship_space_whale_designs
 			remove_global_flag = sgm_spawn_ship_swarm_ship_designs
 			remove_global_flag = sgm_spawn_ship_utopia_designs
+		}
+	}
+}
+
+country_event = {
+	id = sgm_ship_spawner.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = sgm_country_has_mob_spawner
+	}
+	immediate = {
+		every_owned_fleet = {
+			limit = {
+				has_fleet_flag = sgm_mob_spawner
+			}
+		}
+	}
+}
+
+# Clone fleet
+fleet_event = {
+	id = sgm_ship_spawner.6
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		save_event_target_as = sgm_spawner_fleet
+		create_fleet = {
+			effect = {
+				set_location = prev
+				set_owner = prev.owner
+				if = {
+					limit = {
+						prev = {
+							is_variable_set = sgm_var_set_formation_scale
+						}
+					}
+					set_variable = {
+						which = sgm_var_set_formation_scale
+						value = prev.sgm_var_set_formation_scale
+					}
+					sgm_var_set_formation_scale_effect = yes
+				}
+				if = {
+					limit = {
+						prev = {
+							has_fleet_flag = sgm_mob_spawner
+						}
+					}
+					set_fleet_flag = sgm_mob_spawner
+				}
+				# Moved to sgm_on_fleet_cloned event sgm_ship_spawner.11
+				# if = {
+				# 	limit = {
+				# 		prev = {
+				# 			exists = leader
+				# 		}
+				# 	}
+				# 	if = {
+				# 		limit = {
+				# 			NOT = {
+				# 				exists = event_target:sgm_create_fleet_leader_species
+				# 			}
+				# 		}
+				# 		prev.leader.species = {
+				# 			save_event_target_as = sgm_create_fleet_leader_species
+				# 		}
+				# 	}
+				# 	sgm_create_fleet_leader = yes
+				# }
+				prev = {
+					every_owned_ship = {
+						switch = {
+							trigger = has_ship_flag
+							NAME_Euthanizer = {
+								prevprev = {
+									set_fleet_flag = NAME_Euthanizer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Euthanizer
+								}
+							}
+							NAME_Sterilizer = {
+								prevprev = {
+									set_fleet_flag = NAME_Sterilizer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sterilizer
+								}
+							}
+							NAME_AI_STARBASE = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_STARBASE
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_STARBASE
+								}
+							}
+							NAME_AI_1 = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_1
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_1
+								}
+							}
+							NAME_AI_2 = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_2
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_2
+								}
+							}
+							NAME_AI_Core = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_Core
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_Core
+								}
+							}
+							NAME_AI_Final_Core = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_Final_Core
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_Final_Core
+								}
+							}
+							NAME_AI_Transport = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_Transport
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_Transport
+								}
+							}
+							NAME_AI_Colonizer = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_Colonizer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_Colonizer
+								}
+							}
+							NAME_AI_Constructor = {
+								prevprev = {
+									set_fleet_flag = NAME_AI_Constructor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AI_Constructor
+								}
+							}
+							NAME_Taciturn = {
+								prevprev = {
+									set_fleet_flag = NAME_Taciturn
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Taciturn
+								}
+							}
+							NAME_Reticent = {
+								prevprev = {
+									set_fleet_flag = NAME_Reticent
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Reticent
+								}
+							}
+							NAME_Cybrex_Core = {
+								prevprev = {
+									set_fleet_flag = NAME_Cybrex_Core
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cybrex_Core
+								}
+							}
+							NAME_Cybrex_Station_1 = {
+								prevprev = {
+									set_fleet_flag = NAME_Cybrex_Station_1
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cybrex_Station_1
+								}
+							}
+							NAME_Cybrex_Station_2 = {
+								prevprev = {
+									set_fleet_flag = NAME_Cybrex_Station_2
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cybrex_Station_2
+								}
+							}
+							NAME_Cybrex_Transport = {
+								prevprev = {
+									set_fleet_flag = NAME_Cybrex_Transport
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cybrex_Transport
+								}
+							}
+							NAME_Crisis_Star_Eater = {
+								prevprev = {
+									set_fleet_flag = NAME_Crisis_Star_Eater
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Crisis_Star_Eater
+								}
+							}
+							NAME_Small_Crystal_Entity_Blue = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Blue
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Blue
+								}
+							}
+							NAME_Medium_Crystal_Entity_Blue = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Blue
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Blue
+								}
+							}
+							NAME_Large_Crystal_Entity_Blue = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Blue
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Blue
+								}
+							}
+							NAME_Small_Crystal_Entity_Green = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Green
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Green
+								}
+							}
+							NAME_Medium_Crystal_Entity_Green = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Green
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Green
+								}
+							}
+							NAME_Large_Crystal_Entity_Green = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Green
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Green
+								}
+							}
+							NAME_Small_Crystal_Entity_Yellow = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Yellow
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Yellow
+								}
+							}
+							NAME_Medium_Crystal_Entity_Yellow = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Yellow
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Yellow
+								}
+							}
+							NAME_Large_Crystal_Entity_Yellow = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Yellow
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Yellow
+								}
+							}
+							NAME_Small_Crystal_Entity_Red = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Red
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Red
+								}
+							}
+							NAME_Medium_Crystal_Entity_Red = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Red
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Red
+								}
+							}
+							NAME_Large_Crystal_Entity_Red = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Red
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Red
+								}
+							}
+							NAME_Small_Crystal_Entity_Blue_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Blue_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Blue_Elite
+								}
+							}
+							NAME_Medium_Crystal_Entity_Blue_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Blue_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Blue_Elite
+								}
+							}
+							NAME_Large_Crystal_Entity_Blue_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Blue_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Blue_Elite
+								}
+							}
+							NAME_Small_Crystal_Entity_Green_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Green_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Green_Elite
+								}
+							}
+							NAME_Medium_Crystal_Entity_Green_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Green_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Green_Elite
+								}
+							}
+							NAME_Large_Crystal_Entity_Green_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Green_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Green_Elite
+								}
+							}
+							NAME_Small_Crystal_Entity_Yellow_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Yellow_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Yellow_Elite
+								}
+							}
+							NAME_Medium_Crystal_Entity_Yellow_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Yellow_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Yellow_Elite
+								}
+							}
+							NAME_Large_Crystal_Entity_Yellow_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Yellow_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Yellow_Elite
+								}
+							}
+							NAME_Small_Crystal_Entity_Red_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Crystal_Entity_Red_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Crystal_Entity_Red_Elite
+								}
+							}
+							NAME_Medium_Crystal_Entity_Red_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Medium_Crystal_Entity_Red_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Medium_Crystal_Entity_Red_Elite
+								}
+							}
+							NAME_Large_Crystal_Entity_Red_Elite = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Crystal_Entity_Red_Elite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Crystal_Entity_Red_Elite
+								}
+							}
+							NAME_Crystal_Nidus = {
+								prevprev = {
+									set_fleet_flag = NAME_Crystal_Nidus
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Crystal_Nidus
+								}
+							}
+							NAME_Ancient_Mining_Expansion_Barge = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Mining_Expansion_Barge
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Mining_Expansion_Barge
+								}
+							}
+							NAME_Ancient_Mining_Expansion_Drone = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Mining_Expansion_Drone
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Mining_Expansion_Drone
+								}
+							}
+							NAME_Cracked_Crystalline_Shard = {
+								prevprev = {
+									set_fleet_flag = NAME_Cracked_Crystalline_Shard
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cracked_Crystalline_Shard
+								}
+							}
+							NAME_Herald = {
+								prevprev = {
+									set_fleet_flag = NAME_Herald
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Herald
+								}
+							}
+							NAME_Polaris_ship = {
+								prevprev = {
+									set_fleet_flag = NAME_Polaris_ship
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Polaris_ship
+								}
+							}
+							NAME_Abandoned_Manufactory = {
+								prevprev = {
+									set_fleet_flag = NAME_Abandoned_Manufactory
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Abandoned_Manufactory
+								}
+							}
+							NAME_F79 = {
+								prevprev = {
+									set_fleet_flag = NAME_F79
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_F79
+								}
+							}
+							NAME_R44 = {
+								prevprev = {
+									set_fleet_flag = NAME_R44
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_R44
+								}
+							}
+							NAME_Alien_Ship = {
+								prevprev = {
+									set_fleet_flag = NAME_Alien_Ship
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Alien_Ship
+								}
+							}
+							NAME_Prototype = {
+								prevprev = {
+									set_fleet_flag = NAME_Prototype
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Prototype
+								}
+							}
+							NAME_Derelict = {
+								prevprev = {
+									set_fleet_flag = NAME_Derelict
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Derelict
+								}
+							}
+							NAME_Sword = {
+								prevprev = {
+									set_fleet_flag = NAME_Sword
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sword
+								}
+							}
+							NAME_Seeker = {
+								prevprev = {
+									set_fleet_flag = NAME_Seeker
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Seeker
+								}
+							}
+							NAME_Voidstalker = {
+								prevprev = {
+									set_fleet_flag = NAME_Voidstalker
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Voidstalker
+								}
+							}
+							NAME_Starfang = {
+								prevprev = {
+									set_fleet_flag = NAME_Starfang
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Starfang
+								}
+							}
+							NAME_Persistent = {
+								prevprev = {
+									set_fleet_flag = NAME_Persistent
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Persistent
+								}
+							}
+							NAME_Returned_Science_Ship = {
+								prevprev = {
+									set_fleet_flag = NAME_Returned_Science_Ship
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Returned_Science_Ship
+								}
+							}
+							NAME_mardak_vol_haters_corvette = {
+								prevprev = {
+									set_fleet_flag = NAME_mardak_vol_haters_corvette
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_mardak_vol_haters_corvette
+								}
+							}
+							NAME_mardak_vol_haters_destroyer = {
+								prevprev = {
+									set_fleet_flag = NAME_mardak_vol_haters_destroyer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_mardak_vol_haters_destroyer
+								}
+							}
+							NAME_mardak_vol_haters_cruiser = {
+								prevprev = {
+									set_fleet_flag = NAME_mardak_vol_haters_cruiser
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_mardak_vol_haters_cruiser
+								}
+							}
+							NAME_mardak_vol_haters_colossus = {
+								prevprev = {
+									set_fleet_flag = NAME_mardak_vol_haters_colossus
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_mardak_vol_haters_colossus
+								}
+							}
+							NAME_Voidspawn = {
+								prevprev = {
+									set_fleet_flag = NAME_Voidspawn
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Voidspawn
+								}
+							}
+							NAME_enigmatic_cache = {
+								prevprev = {
+									set_fleet_flag = NAME_enigmatic_cache
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_enigmatic_cache
+								}
+							}
+							NAME_Nanite_Dragon = {
+								prevprev = {
+									set_fleet_flag = NAME_Nanite_Dragon
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Nanite_Dragon
+								}
+							}
+							NAME_Nanite_Factory = {
+								prevprev = {
+									set_fleet_flag = NAME_Nanite_Factory
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Nanite_Factory
+								}
+							}
+							NAME_Nanite_Mothership = {
+								prevprev = {
+									set_fleet_flag = NAME_Nanite_Mothership
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Nanite_Mothership
+								}
+							}
+							NAME_Gray_Warship = {
+								prevprev = {
+									set_fleet_flag = NAME_Gray_Warship
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Gray_Warship
+								}
+							}
+							NAME_Nanite_Interdictor = {
+								prevprev = {
+									set_fleet_flag = NAME_Nanite_Interdictor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Nanite_Interdictor
+								}
+							}
+							NAME_Dessanu_Mothership = {
+								prevprev = {
+									set_fleet_flag = NAME_Dessanu_Mothership
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Dessanu_Mothership
+								}
+							}
+							NAME_Dessanu_Interdictor = {
+								prevprev = {
+									set_fleet_flag = NAME_Dessanu_Interdictor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Dessanu_Interdictor
+								}
+							}
+							NAME_Gatebuilder_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_Gatebuilder_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Gatebuilder_Starbase
+								}
+							}
+							NAME_Reclaimer = {
+								prevprev = {
+									set_fleet_flag = NAME_Reclaimer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Reclaimer
+								}
+							}
+							NAME_S8751 = {
+								prevprev = {
+									set_fleet_flag = NAME_S8751
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_S8751
+								}
+							}
+							NAME_Progenitor = {
+								prevprev = {
+									set_fleet_flag = NAME_Progenitor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Progenitor
+								}
+							}
+							NAME_AH4B = {
+								prevprev = {
+									set_fleet_flag = NAME_AH4B
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_AH4B
+								}
+							}
+							NAME_Adopted_Amoeba_Centenarian = {
+								prevprev = {
+									set_fleet_flag = NAME_Adopted_Amoeba_Centenarian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Adopted_Amoeba_Centenarian
+								}
+							}
+							NAME_Lessenger = {
+								prevprev = {
+									set_fleet_flag = NAME_Lessenger
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Lessenger
+								}
+							}
+							NAME_Warder_of_the_Ruins = {
+								prevprev = {
+									set_fleet_flag = NAME_Warder_of_the_Ruins
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Warder_of_the_Ruins
+								}
+							}
+							NAME_Gardener_Drone = {
+								prevprev = {
+									set_fleet_flag = NAME_Gardener_Drone
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Gardener_Drone
+								}
+							}
+							NAME_Wenkwort_Enforcer = {
+								prevprev = {
+									set_fleet_flag = NAME_Wenkwort_Enforcer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Wenkwort_Enforcer
+								}
+							}
+							NAME_Elusive_Craft = {
+								prevprev = {
+									set_fleet_flag = NAME_Elusive_Craft
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Elusive_Craft
+								}
+							}
+							NAME_Splendor = {
+								prevprev = {
+									set_fleet_flag = NAME_Splendor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Splendor
+								}
+							}
+							NAME_C1 = {
+								prevprev = {
+									set_fleet_flag = NAME_C1
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_C1
+								}
+							}
+							NAME_C2 = {
+								prevprev = {
+									set_fleet_flag = NAME_C2
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_C2
+								}
+							}
+							NAME_Space_Station = {
+								prevprev = {
+									set_fleet_flag = NAME_Space_Station
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Space_Station
+								}
+							}
+							NAME_Citadel = {
+								prevprev = {
+									set_fleet_flag = NAME_Citadel
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Citadel
+								}
+							}
+							NAME_Sentry = {
+								prevprev = {
+									set_fleet_flag = NAME_Sentry
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sentry
+								}
+							}
+							NAME_Dagger = {
+								prevprev = {
+									set_fleet_flag = NAME_Dagger
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Dagger
+								}
+							}
+							NAME_Ravager = {
+								prevprev = {
+									set_fleet_flag = NAME_Ravager
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ravager
+								}
+							}
+							NAME_Asteroid = {
+								prevprev = {
+									set_fleet_flag = NAME_Asteroid
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Asteroid
+								}
+							}
+							NAME_DS47 = {
+								prevprev = {
+									set_fleet_flag = NAME_DS47
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_DS47
+								}
+							}
+							NAME_Divine_Glory = {
+								prevprev = {
+									set_fleet_flag = NAME_Divine_Glory
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Divine_Glory
+								}
+							}
+							NAME_Righteous = {
+								prevprev = {
+									set_fleet_flag = NAME_Righteous
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Righteous
+								}
+							}
+							NAME_Central_Crystal_Station = {
+								prevprev = {
+									set_fleet_flag = NAME_Central_Crystal_Station
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Central_Crystal_Station
+								}
+							}
+							NAME_Diaspora = {
+								prevprev = {
+									set_fleet_flag = NAME_Diaspora
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Diaspora
+								}
+							}
+							NAME_Nomad_Cruiser = {
+								prevprev = {
+									set_fleet_flag = NAME_Nomad_Cruiser
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Nomad_Cruiser
+								}
+							}
+							NAME_Protector = {
+								prevprev = {
+									set_fleet_flag = NAME_Protector
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Protector
+								}
+							}
+							NAME_Vigil = {
+								prevprev = {
+									set_fleet_flag = NAME_Vigil
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Vigil
+								}
+							}
+							NAME_PR_417 = {
+								prevprev = {
+									set_fleet_flag = NAME_PR_417
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_PR_417
+								}
+							}
+							NAME_Spearhead = {
+								prevprev = {
+									set_fleet_flag = NAME_Spearhead
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Spearhead
+								}
+							}
+							NAME_Deaths_Head = {
+								prevprev = {
+									set_fleet_flag = NAME_Deaths_Head
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Deaths_Head
+								}
+							}
+							NAME_Bug_Crusher = {
+								prevprev = {
+									set_fleet_flag = NAME_Bug_Crusher
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bug_Crusher
+								}
+							}
+							NAME_Blade = {
+								prevprev = {
+									set_fleet_flag = NAME_Blade
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Blade
+								}
+							}
+							NAME_Guardian = {
+								prevprev = {
+									set_fleet_flag = NAME_Guardian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Guardian
+								}
+							}
+							NAME_Sanctuary_Core = {
+								prevprev = {
+									set_fleet_flag = NAME_Sanctuary_Core
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sanctuary_Core
+								}
+							}
+							NAME_Defensive_A_1 = {
+								prevprev = {
+									set_fleet_flag = NAME_Defensive_A_1
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Defensive_A_1
+								}
+							}
+							NAME_Defensive_A_2 = {
+								prevprev = {
+									set_fleet_flag = NAME_Defensive_A_2
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Defensive_A_2
+								}
+							}
+							NAME_Revenant = {
+								prevprev = {
+									set_fleet_flag = NAME_Revenant
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Revenant
+								}
+							}
+							NAME_Phantom = {
+								prevprev = {
+									set_fleet_flag = NAME_Phantom
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Phantom
+								}
+							}
+							NAME_Wraith = {
+								prevprev = {
+									set_fleet_flag = NAME_Wraith
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Wraith
+								}
+							}
+							NAME_Void_Shaper = {
+								prevprev = {
+									set_fleet_flag = NAME_Void_Shaper
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Void_Shaper
+								}
+							}
+							NAME_Huntress = {
+								prevprev = {
+									set_fleet_flag = NAME_Huntress
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Huntress
+								}
+							}
+							NAME_Assassin = {
+								prevprev = {
+									set_fleet_flag = NAME_Assassin
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Assassin
+								}
+							}
+							NAME_Predator = {
+								prevprev = {
+									set_fleet_flag = NAME_Predator
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Predator
+								}
+							}
+							NAME_Void_Former = {
+								prevprev = {
+									set_fleet_flag = NAME_Void_Former
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Void_Former
+								}
+							}
+							NAME_Eradicator = {
+								prevprev = {
+									set_fleet_flag = NAME_Eradicator
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Eradicator
+								}
+							}
+							NAME_Annihilator = {
+								prevprev = {
+									set_fleet_flag = NAME_Annihilator
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Annihilator
+								}
+							}
+							NAME_Obliterator = {
+								prevprev = {
+									set_fleet_flag = NAME_Obliterator
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Obliterator
+								}
+							}
+							NAME_Void_Weaver = {
+								prevprev = {
+									set_fleet_flag = NAME_Void_Weaver
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Void_Weaver
+								}
+							}
+							NAME_Unbidden_Portal = {
+								prevprev = {
+									set_fleet_flag = NAME_Unbidden_Portal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Unbidden_Portal
+								}
+							}
+							NAME_Vehement_Portal = {
+								prevprev = {
+									set_fleet_flag = NAME_Vehement_Portal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Vehement_Portal
+								}
+							}
+							NAME_Aberrant_Portal = {
+								prevprev = {
+									set_fleet_flag = NAME_Aberrant_Portal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Aberrant_Portal
+								}
+							}
+							NAME_Unbidden_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_Unbidden_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Unbidden_Starbase
+								}
+							}
+							NAME_Unbidden_Anchor = {
+								prevprev = {
+									set_fleet_flag = NAME_Unbidden_Anchor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Unbidden_Anchor
+								}
+							}
+							NAME_Vehement_Anchor = {
+								prevprev = {
+									set_fleet_flag = NAME_Vehement_Anchor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Vehement_Anchor
+								}
+							}
+							NAME_Aberrant_Anchor = {
+								prevprev = {
+									set_fleet_flag = NAME_Aberrant_Anchor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Aberrant_Anchor
+								}
+							}
+							NAME_Omega = {
+								prevprev = {
+									set_fleet_flag = NAME_Omega
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Omega
+								}
+							}
+							NAME_Alpha = {
+								prevprev = {
+									set_fleet_flag = NAME_Alpha
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Alpha
+								}
+							}
+							NAME_Beta = {
+								prevprev = {
+									set_fleet_flag = NAME_Beta
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Beta
+								}
+							}
+							NAME_Gamma = {
+								prevprev = {
+									set_fleet_flag = NAME_Gamma
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Gamma
+								}
+							}
+							NAME_Sigma = {
+								prevprev = {
+									set_fleet_flag = NAME_Sigma
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sigma
+								}
+							}
+							NAME_Theta = {
+								prevprev = {
+									set_fleet_flag = NAME_Theta
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Theta
+								}
+							}
+							NAME_Tau = {
+								prevprev = {
+									set_fleet_flag = NAME_Tau
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tau
+								}
+							}
+							NAME_Enforcer = {
+								prevprev = {
+									set_fleet_flag = NAME_Enforcer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Enforcer
+								}
+							}
+							NAME_Savant = {
+								prevprev = {
+									set_fleet_flag = NAME_Savant
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Savant
+								}
+							}
+							NAME_Scholar = {
+								prevprev = {
+									set_fleet_flag = NAME_Scholar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Scholar
+								}
+							}
+							NAME_Sage = {
+								prevprev = {
+									set_fleet_flag = NAME_Sage
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sage
+								}
+							}
+							NAME_Cloaker = {
+								prevprev = {
+									set_fleet_flag = NAME_Cloaker
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cloaker
+								}
+							}
+							NAME_Librarian = {
+								prevprev = {
+									set_fleet_flag = NAME_Librarian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Librarian
+								}
+							}
+							NAME_Archivist = {
+								prevprev = {
+									set_fleet_flag = NAME_Archivist
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Archivist
+								}
+							}
+							NAME_Cleanser = {
+								prevprev = {
+									set_fleet_flag = NAME_Cleanser
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cleanser
+								}
+							}
+							NAME_Eternal = {
+								prevprev = {
+									set_fleet_flag = NAME_Eternal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Eternal
+								}
+							}
+							NAME_Avatar = {
+								prevprev = {
+									set_fleet_flag = NAME_Avatar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Avatar
+								}
+							}
+							NAME_Zealot = {
+								prevprev = {
+									set_fleet_flag = NAME_Zealot
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Zealot
+								}
+							}
+							NAME_Faith = {
+								prevprev = {
+									set_fleet_flag = NAME_Faith
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Faith
+								}
+							}
+							NAME_Penitent = {
+								prevprev = {
+									set_fleet_flag = NAME_Penitent
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Penitent
+								}
+							}
+							NAME_Pilgrim = {
+								prevprev = {
+									set_fleet_flag = NAME_Pilgrim
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Pilgrim
+								}
+							}
+							NAME_Reaper = {
+								prevprev = {
+									set_fleet_flag = NAME_Reaper
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Reaper
+								}
+							}
+							NAME_Imperium = {
+								prevprev = {
+									set_fleet_flag = NAME_Imperium
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Imperium
+								}
+							}
+							NAME_Supremacy = {
+								prevprev = {
+									set_fleet_flag = NAME_Supremacy
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Supremacy
+								}
+							}
+							NAME_Glory = {
+								prevprev = {
+									set_fleet_flag = NAME_Glory
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Glory
+								}
+							}
+							NAME_Devastator = {
+								prevprev = {
+									set_fleet_flag = NAME_Devastator
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Devastator
+								}
+							}
+							NAME_Servitor = {
+								prevprev = {
+									set_fleet_flag = NAME_Servitor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Servitor
+								}
+							}
+							NAME_Destiny = {
+								prevprev = {
+									set_fleet_flag = NAME_Destiny
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Destiny
+								}
+							}
+							NAME_Adjuster = {
+								prevprev = {
+									set_fleet_flag = NAME_Adjuster
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Adjuster
+								}
+							}
+							NAME_Keeper = {
+								prevprev = {
+									set_fleet_flag = NAME_Keeper
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Keeper
+								}
+							}
+							NAME_Custodian = {
+								prevprev = {
+									set_fleet_flag = NAME_Custodian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Custodian
+								}
+							}
+							NAME_Warden = {
+								prevprev = {
+									set_fleet_flag = NAME_Warden
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Warden
+								}
+							}
+							NAME_Watcher = {
+								prevprev = {
+									set_fleet_flag = NAME_Watcher
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Watcher
+								}
+							}
+							NAME_Builder = {
+								prevprev = {
+									set_fleet_flag = NAME_Builder
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Builder
+								}
+							}
+							NAME_Seeder = {
+								prevprev = {
+									set_fleet_flag = NAME_Seeder
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Seeder
+								}
+							}
+							NAME_Surplus_Beta = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Beta
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Beta
+								}
+							}
+							NAME_Surplus_Scholar = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Scholar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Scholar
+								}
+							}
+							NAME_Surplus_Custodian = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Custodian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Custodian
+								}
+							}
+							NAME_Surplus_Gamma = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Gamma
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Gamma
+								}
+							}
+							NAME_Surplus_Sage = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Sage
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Sage
+								}
+							}
+							NAME_Surplus_Warden = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Warden
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Warden
+								}
+							}
+							NAME_Surplus_Avatar = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Avatar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Avatar
+								}
+							}
+							NAME_Surplus_Zealot = {
+								prevprev = {
+									set_fleet_flag = NAME_Surplus_Zealot
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Surplus_Zealot
+								}
+							}
+							NAME_FE_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_FE_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_FE_Starbase
+								}
+							}
+							NAME_Constructor = {
+								prevprev = {
+									set_fleet_flag = NAME_Constructor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Constructor
+								}
+							}
+							NAME_Colonizer = {
+								prevprev = {
+									set_fleet_flag = NAME_Colonizer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Colonizer
+								}
+							}
+							NAME_Colonizer-lithoids = {
+								prevprev = {
+									set_fleet_flag = NAME_Colonizer-lithoids
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Colonizer-lithoids
+								}
+							}
+							NAME_Trader_Enclave_Station = {
+								prevprev = {
+									set_fleet_flag = NAME_Trader_Enclave_Station
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Trader_Enclave_Station
+								}
+							}
+							NAME_Artist_Enclave_Station = {
+								prevprev = {
+									set_fleet_flag = NAME_Artist_Enclave_Station
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Artist_Enclave_Station
+								}
+							}
+							NAME_Curator_Enclave_Station = {
+								prevprev = {
+									set_fleet_flag = NAME_Curator_Enclave_Station
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Curator_Enclave_Station
+								}
+							}
+							NAME_Grand_Dragon = {
+								prevprev = {
+									set_fleet_flag = NAME_Grand_Dragon
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Grand_Dragon
+								}
+							}
+							NAME_Stellarite = {
+								prevprev = {
+									set_fleet_flag = NAME_Stellarite
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Stellarite
+								}
+							}
+							NAME_Ancient_Sentinel = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Sentinel
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Sentinel
+								}
+							}
+							NAME_Ancient_Defender = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Defender
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Defender
+								}
+							}
+							NAME_Ancient_Warden = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Warden
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Warden
+								}
+							}
+							NAME_Ancient_Guardian = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Guardian
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Guardian
+								}
+							}
+							NAME_Ancient_Vault = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Vault
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Vault
+								}
+							}
+							NAME_Hive_Asteroid = {
+								prevprev = {
+									set_fleet_flag = NAME_Hive_Asteroid
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Hive_Asteroid
+								}
+							}
+							NAME_Dimensional_Horror = {
+								prevprev = {
+									set_fleet_flag = NAME_Dimensional_Horror
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Dimensional_Horror
+								}
+							}
+							NAME_Relic = {
+								prevprev = {
+									set_fleet_flag = NAME_Relic
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Relic
+								}
+							}
+							NAME_Type_37 = {
+								prevprev = {
+									set_fleet_flag = NAME_Type_37
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Type_37
+								}
+							}
+							NAME_Type_46 = {
+								prevprev = {
+									set_fleet_flag = NAME_Type_46
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Type_46
+								}
+							}
+							NAME_Infinity_Machine = {
+								prevprev = {
+									set_fleet_flag = NAME_Infinity_Machine
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Infinity_Machine
+								}
+							}
+							NAME_Spectral_Wraith_650THz = {
+								prevprev = {
+									set_fleet_flag = NAME_Spectral_Wraith_650THz
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Spectral_Wraith_650THz
+								}
+							}
+							NAME_Spectral_Wraith_450THz = {
+								prevprev = {
+									set_fleet_flag = NAME_Spectral_Wraith_450THz
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Spectral_Wraith_450THz
+								}
+							}
+							NAME_Spectral_Wraith_520THz = {
+								prevprev = {
+									set_fleet_flag = NAME_Spectral_Wraith_520THz
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Spectral_Wraith_520THz
+								}
+							}
+							NAME_Dragonspawn = {
+								prevprev = {
+									set_fleet_flag = NAME_Dragonspawn
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Dragonspawn
+								}
+							}
+							NAME_Shard_Dragon = {
+								prevprev = {
+									set_fleet_flag = NAME_Shard_Dragon
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Shard_Dragon
+								}
+							}
+							NAME_Sky_Dragon = {
+								prevprev = {
+									set_fleet_flag = NAME_Sky_Dragon
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sky_Dragon
+								}
+							}
+							NAME_Sky_Dragon_Baby = {
+								prevprev = {
+									set_fleet_flag = NAME_Sky_Dragon_Baby
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Sky_Dragon_Baby
+								}
+							}
+							NAME_Warrior_Freehold = {
+								prevprev = {
+									set_fleet_flag = NAME_Warrior_Freehold
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Warrior_Freehold
+								}
+							}
+							NAME_Void_Dwelling = {
+								prevprev = {
+									set_fleet_flag = NAME_Void_Dwelling
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Void_Dwelling
+								}
+							}
+							NAME_Outrider = {
+								prevprev = {
+									set_fleet_flag = NAME_Outrider
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Outrider
+								}
+							}
+							NAME_Lancer = {
+								prevprev = {
+									set_fleet_flag = NAME_Lancer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Lancer
+								}
+							}
+							NAME_Void_Champion = {
+								prevprev = {
+									set_fleet_flag = NAME_Void_Champion
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Void_Champion
+								}
+							}
+							NAME_Ancestral_Glory = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancestral_Glory
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancestral_Glory
+								}
+							}
+							NAME_Clan_Builder = {
+								prevprev = {
+									set_fleet_flag = NAME_Clan_Builder
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Clan_Builder
+								}
+							}
+							NAME_Marauder_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_Marauder_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Marauder_Starbase
+								}
+							}
+							NAME_Caravaneer_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_Caravaneer_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Caravaneer_Starbase
+								}
+							}
+							NAME_Tradestation_Tungle = {
+								prevprev = {
+									set_fleet_flag = NAME_Tradestation_Tungle
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tradestation_Tungle
+								}
+							}
+							NAME_Gunslinger = {
+								prevprev = {
+									set_fleet_flag = NAME_Gunslinger
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Gunslinger
+								}
+							}
+							NAME_Yojimbo = {
+								prevprev = {
+									set_fleet_flag = NAME_Yojimbo
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Yojimbo
+								}
+							}
+							NAME_Schooner = {
+								prevprev = {
+									set_fleet_flag = NAME_Schooner
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Schooner
+								}
+							}
+							NAME_Ancient_Mining_Drone = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Mining_Drone
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Mining_Drone
+								}
+							}
+							NAME_Ancient_Combat_Drone = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Combat_Drone
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Combat_Drone
+								}
+							}
+							NAME_Ancient_Destroyer = {
+								prevprev = {
+									set_fleet_flag = NAME_Ancient_Destroyer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Ancient_Destroyer
+								}
+							}
+							NAME_Drone_Home_Base = {
+								prevprev = {
+									set_fleet_flag = NAME_Drone_Home_Base
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Drone_Home_Base
+								}
+							}
+							NAME_Pirate_Nest = {
+								prevprev = {
+									set_fleet_flag = NAME_Pirate_Nest
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Pirate_Nest
+								}
+							}
+							NAME_Reaver = {
+								prevprev = {
+									set_fleet_flag = NAME_Reaver
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Reaver
+								}
+							}
+							NAME_Brigand = {
+								prevprev = {
+									set_fleet_flag = NAME_Brigand
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Brigand
+								}
+							}
+							NAME_Skull = {
+								prevprev = {
+									set_fleet_flag = NAME_Skull
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Skull
+								}
+							}
+							NAME_Marauder = {
+								prevprev = {
+									set_fleet_flag = NAME_Marauder
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Marauder
+								}
+							}
+							NAME_Corsair = {
+								prevprev = {
+									set_fleet_flag = NAME_Corsair
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Corsair
+								}
+							}
+							NAME_Black_Earl = {
+								prevprev = {
+									set_fleet_flag = NAME_Black_Earl
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Black_Earl
+								}
+							}
+							NAME_Pirate_Galleon = {
+								prevprev = {
+									set_fleet_flag = NAME_Pirate_Galleon
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Pirate_Galleon
+								}
+							}
+							NAME_Pirate_Transport = {
+								prevprev = {
+									set_fleet_flag = NAME_Pirate_Transport
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Pirate_Transport
+								}
+							}
+							NAME_Bemat_corvette_01 = {
+								prevprev = {
+									set_fleet_flag = NAME_Bemat_corvette_01
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bemat_corvette_01
+								}
+							}
+							NAME_Bemat_destroyer_01 = {
+								prevprev = {
+									set_fleet_flag = NAME_Bemat_destroyer_01
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bemat_destroyer_01
+								}
+							}
+							NAME_Bemat_destroyer_02 = {
+								prevprev = {
+									set_fleet_flag = NAME_Bemat_destroyer_02
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bemat_destroyer_02
+								}
+							}
+							NAME_Bemat_cruiser_01 = {
+								prevprev = {
+									set_fleet_flag = NAME_Bemat_cruiser_01
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bemat_cruiser_01
+								}
+							}
+							NAME_Bemat_cruiser_02 = {
+								prevprev = {
+									set_fleet_flag = NAME_Bemat_cruiser_02
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Bemat_cruiser_02
+								}
+							}
+							NAME_Cloud_Entity = {
+								prevprev = {
+									set_fleet_flag = NAME_Cloud_Entity
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Cloud_Entity
+								}
+							}
+							NAME_Lesser_Cloud_Entity = {
+								prevprev = {
+									set_fleet_flag = NAME_Lesser_Cloud_Entity
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Lesser_Cloud_Entity
+								}
+							}
+							NAME_Great_Space_Organism = {
+								prevprev = {
+									set_fleet_flag = NAME_Great_Space_Organism
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Great_Space_Organism
+								}
+							}
+							NAME_Large_Space_Organism_Blue = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Space_Organism_Blue
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Space_Organism_Blue
+								}
+							}
+							NAME_Small_Space_Organism_Blue = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Space_Organism_Blue
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Space_Organism_Blue
+								}
+							}
+							NAME_Large_Space_Organism_Teal = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Space_Organism_Teal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Space_Organism_Teal
+								}
+							}
+							NAME_Small_Space_Organism_Teal = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Space_Organism_Teal
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Space_Organism_Teal
+								}
+							}
+							NAME_Large_Space_Organism_Orange = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Space_Organism_Orange
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Space_Organism_Orange
+								}
+							}
+							NAME_Small_Space_Organism_Orange = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Space_Organism_Orange
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Space_Organism_Orange
+								}
+							}
+							NAME_Large_Space_Organism_Zebra = {
+								prevprev = {
+									set_fleet_flag = NAME_Large_Space_Organism_Zebra
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Large_Space_Organism_Zebra
+								}
+							}
+							NAME_Small_Space_Organism_Zebra = {
+								prevprev = {
+									set_fleet_flag = NAME_Small_Space_Organism_Zebra
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Small_Space_Organism_Zebra
+								}
+							}
+							NAME_Tiyanki_Cow = {
+								prevprev = {
+									set_fleet_flag = NAME_Tiyanki_Cow
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tiyanki_Cow
+								}
+							}
+							NAME_Tiyanki_Bull = {
+								prevprev = {
+									set_fleet_flag = NAME_Tiyanki_Bull
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tiyanki_Bull
+								}
+							}
+							NAME_Tiyanki_Hatchling = {
+								prevprev = {
+									set_fleet_flag = NAME_Tiyanki_Hatchling
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tiyanki_Hatchling
+								}
+							}
+							NAME_Tiyanki_Calf = {
+								prevprev = {
+									set_fleet_flag = NAME_Tiyanki_Calf
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Tiyanki_Calf
+								}
+							}
+							NAME_Swarm_Large = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Large
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Large
+								}
+							}
+							NAME_Swarm_Carrier = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Carrier
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Carrier
+								}
+							}
+							NAME_Swarm_Small = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Small
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Small
+								}
+							}
+							NAME_Swarm_Starbase = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Starbase
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Starbase
+								}
+							}
+							NAME_Swarm_Queen = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Queen
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Queen
+								}
+							}
+							NAME_Swarm_Transport = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Transport
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Transport
+								}
+							}
+							NAME_Swarm_Colonizer = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Colonizer
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Colonizer
+								}
+							}
+							NAME_Swarm_Constructor = {
+								prevprev = {
+									set_fleet_flag = NAME_Swarm_Constructor
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Swarm_Constructor
+								}
+							}
+							NAME_Shroud_Avatar = {
+								prevprev = {
+									set_fleet_flag = NAME_Shroud_Avatar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Shroud_Avatar
+								}
+							}
+							NAME_Corrupted_Avatar = {
+								prevprev = {
+									set_fleet_flag = NAME_Corrupted_Avatar
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Corrupted_Avatar
+								}
+							}
+							NAME_Warped_Consciousness = {
+								prevprev = {
+									set_fleet_flag = NAME_Warped_Consciousness
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Warped_Consciousness
+								}
+							}
+							NAME_Shroud_Manifestation = {
+								prevprev = {
+									set_fleet_flag = NAME_Shroud_Manifestation
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Shroud_Manifestation
+								}
+							}
+							NAME_Hillos_ship = {
+								prevprev = {
+									set_fleet_flag = NAME_Hillos_ship
+									sgm_create_ship_database_effect = yes
+									remove_fleet_flag = NAME_Hillos_ship
+								}
+							}
+						}
+					}
+				}
+				fire_on_action = {
+					on_action = sgm_on_fleet_cloned
+					scopes = {
+						from = prev
+						fromfrom = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+# sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn
+fleet_event = {
+	id = sgm_ship_spawner.10
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# print_scope_effect = yes
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = THIS
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = from
+		# }
+	}
+}
+
+# sgm_on_fleet_cloned
+# Mutually exclusive with sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn (as of now same as FromFrom)
+# FromFrom = cloned fleet
+fleet_event = {
+	id = sgm_ship_spawner.11
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# print_scope_effect = yes
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = THIS
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = from
+		# }
+		# create_message = {
+		# 	type = CONSTRUCTION_MESSAGE_TYPE
+		# 	localization = OK
+		# 	days = 10
+		# 	target = fromfrom
+		# }
+		if = {
+			limit = {
+				fromfrom = {
+					exists = leader
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:sgm_create_fleet_leader_species
+					}
+				}
+				fromfrom.leader.species = {
+					save_event_target_as = sgm_create_fleet_leader_species
+				}
+			}
+			sgm_create_fleet_leader = yes
 		}
 	}
 }

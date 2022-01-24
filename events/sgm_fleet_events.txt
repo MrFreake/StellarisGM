@@ -1,6 +1,6 @@
 namespace = sgm_fleet
-
-country_event = {								# Opens fleet menu
+country_event = {
+	# Opens fleet menu
 	id = sgm_fleet.1
 	is_triggered_only = yes
 	title = sgm_fleet_1_title
@@ -11,40 +11,39 @@ country_event = {								# Opens fleet menu
 		portrait = root.owner_main_species
 		room = enclave_curator_room
 	}
-
 	trigger = {
 		exists = root
 		exists = from
-		from = { is_scope_type = fleet }
+		from = {
+			is_scope_type = fleet
+		}
 	}
-
-	immediate = { }
-
+	immediate = {
+	}
 	option = {
 		NAME = DELETE_FLEET
-		from = { delete_fleet = this }
+		from = {
+			delete_fleet = this
+		}
 	}
-
 	option = {
 		NAME = change_ownership_to_target_country
 		allow = {
 			exists = event_target:target_country
 		}
 		from = {
-			set_owner = event_target:target_country 
+			set_owner = event_target:target_country
 		}
 	}
-
 	option = {
 		NAME = set_owner_target_country
 		allow = {
 			exists = event_target:target_country
 		}
 		from = {
-			save_global_event_target_as = target_country 
+			save_global_event_target_as = target_country
 		}
 	}
-
 	option = {
 		NAME = ADD_CORVETTE
 		while = {
@@ -56,7 +55,6 @@ country_event = {								# Opens fleet menu
 			}
 		}
 	}
-
 	option = {
 		NAME = ADD_DESTROYER
 		while = {
@@ -68,7 +66,6 @@ country_event = {								# Opens fleet menu
 			}
 		}
 	}
-
 	option = {
 		NAME = ADD_CRUISER
 		while = {
@@ -80,7 +77,6 @@ country_event = {								# Opens fleet menu
 			}
 		}
 	}
-
 	option = {
 		NAME = ADD_BATTLESHIP
 		while = {
@@ -92,7 +88,6 @@ country_event = {								# Opens fleet menu
 			}
 		}
 	}
-
 	option = {
 		NAME = add_random_design_from_fleet
 		while = {
@@ -108,7 +103,6 @@ country_event = {								# Opens fleet menu
 			}
 		}
 	}
-
 	option = {
 		NAME = set_target_country_as_player
 		allow = {
@@ -116,11 +110,13 @@ country_event = {								# Opens fleet menu
 				is_ai = no
 			}
 			from = {
-				owner = { is_ai = yes }
+				owner = {
+					is_ai = yes
+				}
 			}
 		}
 		from = {
-			owner = { 
+			owner = {
 				if = {
 					limit = {
 						event_target:target_country = {
@@ -129,240 +125,36 @@ country_event = {								# Opens fleet menu
 					}
 					set_country_flag = sgm_assumed_control
 				}
-				set_player = event_target:target_country 
+				set_player = event_target:target_country
 			}
 		}
 		event_target:target_country = {
 			remove_country_flag = sgm_assumed_control
 		}
 	}
-
 	option = {
 		NAME = sgm_set_formation_scale
 		custom_tooltip = "sgm_set_formation_scale_tooltip"
 		if = {
 			limit = {
-				check_variable = {
-					which = modifier_var
-					value < 2
+				is_variable_set = modifier_var
+			}
+			from = {
+				set_variable = {
+					which = sgm_var_set_formation_scale
+					value = prev.modifier_var
 				}
-			}
-			from = {
-				set_formation_scale = 1
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 2
-				}
-			}
-			from = {
-				set_formation_scale = 2
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 3
-				}
-			}
-			from = {
-				set_formation_scale = 3
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 4
-				}
-			}
-			from = {
-				set_formation_scale = 4
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 5
-				}
-			}
-			from = {
-				set_formation_scale = 5
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 6
-				}
-			}
-			from = {
-				set_formation_scale = 6
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 7
-				}
-			}
-			from = {
-				set_formation_scale = 8
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 9
-				}
-			}
-			from = {
-				set_formation_scale = 9
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 10
-				}
-			}
-			from = {
-				set_formation_scale = 10
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 20
-				}
-			}
-			from = {
-				set_formation_scale = 20
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 30
-				}
-			}
-			from = {
-				set_formation_scale = 30
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 30
-				}
-			}
-			from = {
-				set_formation_scale = 30
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 40
-				}
-			}
-			from = {
-				set_formation_scale = 40
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 50
-				}
-			}
-			from = {
-				set_formation_scale = 50
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 60
-				}
-			}
-			from = {
-				set_formation_scale = 60
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 70
-				}
-			}
-			from = {
-				set_formation_scale = 70
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 80
-				}
-			}
-			from = {
-				set_formation_scale = 80
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 90
-				}
-			}
-			from = {
-				set_formation_scale = 90
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = modifier_var
-					value = 100
-				}
-			}
-			from = {
-				set_formation_scale = 100
-			}
-		}
-		else = {
-			from = {
-				set_formation_scale = 1
+				sgm_var_set_formation_scale_effect = yes
 			}
 		}
 	}
-	
-
 	option = {
 		NAME = Exit
 	}
 }
 
-country_event = {								# Opens teleport fleet menu
+country_event = {
+	# Opens teleport fleet menu
 	id = sgm_fleet.3
 	is_triggered_only = yes
 	title = sgm_fleet.3.name
@@ -388,7 +180,7 @@ country_event = {								# Opens teleport fleet menu
 			}
 			event_target:target_country = {
 				capital_scope = {
-					save_global_event_target_as = target_country_capital_scope 			# Also used in teleport script below.
+					save_global_event_target_as = target_country_capital_scope					# Also used in teleport script below.
 					solar_system = {
 						save_global_event_target_as = target_country_capital_scope_solar_system
 					}
@@ -454,7 +246,9 @@ country_event = {								# Opens teleport fleet menu
 			exists = event_target:target_fleet
 		}
 		fromfrom = {
-			sgm_teleport_fleet_effect = { TARGET = target_fleet }
+			sgm_teleport_fleet_effect = {
+				TARGET = target_fleet
+			}
 		}
 	}
 	option = {
@@ -463,7 +257,9 @@ country_event = {								# Opens teleport fleet menu
 			exists = event_target:target_planet
 		}
 		fromfrom = {
-			sgm_teleport_fleet_effect = { TARGET = target_planet }
+			sgm_teleport_fleet_effect = {
+				TARGET = target_planet
+			}
 		}
 	}
 	option = {
@@ -472,7 +268,9 @@ country_event = {								# Opens teleport fleet menu
 			exists = event_target:target_megastructure
 		}
 		fromfrom = {
-			sgm_teleport_fleet_effect = { TARGET = target_megastructure }
+			sgm_teleport_fleet_effect = {
+				TARGET = target_megastructure
+			}
 		}
 	}
 	option = {
@@ -481,7 +279,9 @@ country_event = {								# Opens teleport fleet menu
 			exists = event_target:target_ambient_object
 		}
 		fromfrom = {
-			sgm_teleport_fleet_effect = { TARGET = target_ambient_object }
+			sgm_teleport_fleet_effect = {
+				TARGET = target_ambient_object
+			}
 		}
 	}
 	option = {
@@ -498,7 +298,9 @@ country_event = {								# Opens teleport fleet menu
 			}
 		}
 		fromfrom = {
-			sgm_teleport_fleet_effect = { TARGET = target_system_primary_star }
+			sgm_teleport_fleet_effect = {
+				TARGET = target_system_primary_star
+			}
 		}
 	}
 	option = {
@@ -517,13 +319,15 @@ country_event = {								# Opens teleport fleet menu
 				}
 			}
 			fromfrom = {
-				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope }
+				sgm_teleport_fleet_effect = {
+					TARGET = target_country_capital_scope
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				event_target:target_country = {
-					num_owned_planets > 0 
+					num_owned_planets > 0
 				}
 			}
 			event_target:target_country = {
@@ -532,7 +336,9 @@ country_event = {								# Opens teleport fleet menu
 				}
 			}
 			fromfrom = {
-				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_planet }
+				sgm_teleport_fleet_effect = {
+					TARGET = target_country_capital_scope_random_planet
+				}
 			}
 		}
 		else_if = {
@@ -547,10 +353,11 @@ country_event = {								# Opens teleport fleet menu
 				}
 			}
 			fromfrom = {
-				sgm_teleport_fleet_effect = { TARGET = target_country_capital_scope_random_fleet }
+				sgm_teleport_fleet_effect = {
+					TARGET = target_country_capital_scope_random_fleet
+				}
 			}
 		}
-		
 	}
 	option = {
 		name = CANCEL
