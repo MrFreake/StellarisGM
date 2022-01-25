@@ -3977,9 +3977,9 @@ country_event = {
 	}
 }
 
-system_event = {						# TODO this will retrigger spawn_system once  
-	id = sgm_system.5					# sgm_on_system_spawned gets the gm scope in the 
-	is_triggered_only = yes				# on_action
+system_event = {						# trigged from sgm_system_spawned
+	id = sgm_system.5					# from = system spawned 
+	is_triggered_only = yes				# fromfrom = scope spawn system was called in
 	hide_window = yes
 
 	trigger = {
@@ -3995,10 +3995,7 @@ system_event = {						# TODO this will retrigger spawn_system once
 		random_system_planet = {
 			save_event_target_as = random_system_planet
 		}
-		random_country = {
-			limit = {
-				sgm_has_gm_permissions = yes
-			}
+		fromfromfromfrom = {
 			country_event = {
 				id = sgm_system.3
 				scopes = {
