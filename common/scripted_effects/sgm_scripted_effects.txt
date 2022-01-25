@@ -3195,3 +3195,189 @@ remove_army_flags = {
 	remove_global_flag = giant_undead_army
 	remove_global_flag = imperial_legion
 }
+
+sgm_var_set_formation_scale_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value < 2
+			}
+		}
+		set_formation_scale = 1
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 2
+			}
+		}
+		set_formation_scale = 2
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 3
+			}
+		}
+		set_formation_scale = 3
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 4
+			}
+		}
+		set_formation_scale = 4
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 5
+			}
+		}
+		set_formation_scale = 5
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 6
+			}
+		}
+		set_formation_scale = 6
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 7
+			}
+		}
+		set_formation_scale = 7
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 8
+			}
+		}
+		set_formation_scale = 8
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 9
+			}
+		}
+		set_formation_scale = 9
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 10
+			}
+		}
+		set_formation_scale = 10
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 20
+			}
+		}
+		set_formation_scale = 20
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 30
+			}
+		}
+		set_formation_scale = 30
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 30
+			}
+		}
+		set_formation_scale = 30
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 40
+			}
+		}
+		set_formation_scale = 40
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 50
+			}
+		}
+		set_formation_scale = 50
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 60
+			}
+		}
+		set_formation_scale = 60
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 70
+			}
+		}
+		set_formation_scale = 70
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 80
+			}
+		}
+		set_formation_scale = 80
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 90
+			}
+		}
+		set_formation_scale = 90
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = sgm_var_set_formation_scale
+				value = 100
+			}
+		}
+		set_formation_scale = 100
+	}
+	else = {
+		set_formation_scale = 1
+	}
+}
