@@ -1,7 +1,36 @@
 # This = system
 # From = scope spawn_system was fired in (check scope type first!)
+# FromFromFromFrom = SGM country calling spawner
 sgm_on_system_spawned = {
 	events = {
 		sgm_events.4
+		sgm_system.5
+	}
+}
+
+# This = new spawned fleet
+# From = scope location of spawn
+sgm_on_fleet_spawned = {
+	events = {
+		sgm_ship_spawner.10
+	}
+}
+
+# Mutually exclusive with sgm_on_fleet_spawned
+# This = new spawned fleet
+# From = scope location of spawn (as of now same as FromFrom)
+# FromFrom = cloned fleet
+sgm_on_fleet_cloned = {
+	events = {
+		sgm_ship_spawner.11
+	}
+}
+
+# Creates and assigns leader to this fleet
+# This = fleet
+# From = fleet
+sgm_on_antion_make_assign_fleet_leader = {
+	events = {
+		sgm_ship_spawner.12
 	}
 }

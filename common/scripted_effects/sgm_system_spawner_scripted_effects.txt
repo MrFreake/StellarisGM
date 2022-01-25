@@ -820,6 +820,7 @@ sgm_initialiser_spawn_system_effect = {
 									on_action = sgm_on_system_spawned
 									scopes = {
 										from = prev
+										fromfromfromfrom = event_target:sgm_system_country_spawner
 									}
 								}
 							}
@@ -985,6 +986,909 @@ sgm_initialiser_spawn_system_effect = {
 			}
 			default = {
 				set_global_flag = debug
+			}
+		}
+	}
+}
+
+spawn_chosen_cluster_effect = {
+	inverted_switch = {
+		trigger = has_global_flag
+		spawned_position_1 = {								# position_1
+			set_global_flag = spawned_position_1
+			#log = "Position1"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 70
+					max_orientation_angle = 80
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					##log = "[This.GetName]"
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_2 = {								# position_2
+			set_global_flag = spawned_position_2
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 90
+					max_orientation_angle = 100
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_3 = {								# position_3
+			set_global_flag = spawned_position_3
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 110
+					max_orientation_angle = 120
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_4 = {								# position_4
+			set_global_flag = spawned_position_4
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 130
+					max_orientation_angle = 140
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_5 = {								# position_5
+			set_global_flag = spawned_position_5
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 150
+					max_orientation_angle = 160
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_6 = {								# position_6
+			set_global_flag = spawned_position_6
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 170
+					max_orientation_angle = 180
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_7 = {								# position_7
+			set_global_flag = spawned_position_7
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 190
+					max_orientation_angle = 200
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_8 = {								# position_8
+			set_global_flag = spawned_position_8
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 210
+					max_orientation_angle = 220
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_9 = {								# position_9
+			set_global_flag = spawned_position_9
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 230
+					max_orientation_angle = 240
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_10 = {								# position_10
+			set_global_flag = spawned_position_10
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 250
+					max_orientation_angle = 260
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_11 = {								# position_11
+			set_global_flag = spawned_position_11
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 270
+					max_orientation_angle = 280
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_12 = {								# position_12
+			set_global_flag = spawned_position_12
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 290
+					max_orientation_angle = 300
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_13 = {								# position_13
+			set_global_flag = spawned_position_13
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 310
+					max_orientation_angle = 320
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_14 = {								# position_14
+			set_global_flag = spawned_position_14
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 330
+					max_orientation_angle = 340
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_15 = {								# position_15
+			set_global_flag = spawned_position_15
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 350
+					max_orientation_angle = 360
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
+			}
+		}
+		spawned_position_16 = {								# position_16
+			set_global_flag = spawned_position_16
+			#log = "Position2"
+			no_scope = {
+				spawn_system = {
+					min_distance >= 520
+					max_distance <= 540
+					min_orientation_angle = 10
+					max_orientation_angle = 20
+					initializer = $system_init$
+					hyperlane = no
+				}
+				last_created_system = {
+					save_event_target_as = last_created_system
+					random_system_planet = {
+						save_event_target_as = last_created_system_planet
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = spawning_empty_cluster }
+						}
+						event_target:global_event_country = {
+							set_variable = {
+								which = cluster_size
+								value = $num_stars$
+							}
+						}
+						root = {
+							country_event = {
+								id = sgm_system.3
+								scopes = {
+									from = event_target:last_created_system
+									fromfrom = event_target:last_created_system_planet
+								}
+							}
+						}
+					}
+				
+					else = {
+						set_spawn_system_batch = begin
+						while = {
+							count = $num_stars$
+							spawn_system = {
+								min_distance >= 20
+								max_distance <= 50
+								min_orientation_angle = 0
+								max_orientation_angle = 360
+								initializer = $system_init$
+								hyperlane = $connections$
+							}
+						}
+						set_spawn_system_batch = end
+					}
+				}
 			}
 		}
 	}
