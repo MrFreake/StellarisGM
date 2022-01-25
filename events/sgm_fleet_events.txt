@@ -149,6 +149,24 @@ country_event = {
 		}
 	}
 	option = {
+		NAME = RECRUIT_LEADER
+		allow = {
+			from = {
+				NOT = {
+					exists = leader
+				}
+			}
+		}
+		from = {
+			fire_on_action = {
+				on_action = sgm_on_antion_make_assign_fleet_leader
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+	option = {
 		NAME = Exit
 	}
 }
