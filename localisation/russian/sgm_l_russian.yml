@@ -137,3 +137,7 @@ sgm_spawn_ship_override_to_owner_graphical_culture_switch: "[this.Get_override_t
 # Fleet formation scale - Fleet Effects
 sgm_set_formation_scale: "Set fleet formation scale"
 sgm_set_formation_scale_tooltip: "set_formation_scale = modifier_var\nAccepted integers: 1-10, 10-100. Default: 1."
+
+# Mob spawner and fleet cloner
+sgm_clone_fleet: "Clone $FLEET$"
+sgm_clone_fleet_desc: "$fallen_empires_tasks.24.a$"
