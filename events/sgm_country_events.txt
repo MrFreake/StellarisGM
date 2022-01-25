@@ -4719,3 +4719,797 @@ country_event = {
 		NAME = Exit
 	}
 }
+
+country_event = {
+	id = sgm_country.9
+	is_triggered_only = yes
+	title = sgm_country_9
+	desc = sgm_country_9_desc
+
+	immediate = {}
+
+	option = {						# honorbound_warriors
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					AND = {
+						has_ethic = "ethic_fanatic_militarist"
+						OR = {
+							has_ethic = "ethic_spiritualist"
+							has_ethic = "ethic_egalitarian"
+							has_ethic = "ethic_xenophile"
+						}
+					}
+					AND = {
+						has_ethic = "ethic_fanatic_xenophile"
+						has_ethic = "ethic_militarist"
+					}
+				}
+			}
+		}
+		NAME = honorbound_warriors
+		from = { set_ai_personality = honorbound_warriors }
+	}
+	option = {						# evangelising_zealots
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOT = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_fanatic_militarist"
+					has_ethic = "ethic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+		}
+		NAME = evangelising_zealots
+		from = { set_ai_personality = evangelising_zealots }
+	}
+	option = {						# erudite_explorers
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+		}
+		NAME = erudite_explorers
+		from = { set_ai_personality = erudite_explorers }
+	}
+	option = {						# spiritual_seekers
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOT = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+		}
+		NAME = spiritual_seekers
+		from = { set_ai_personality = spiritual_seekers }
+	}
+	option = {						# ruthless_capitalists
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+					NOR = {
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_fanatic_xenophile"
+					}
+				}
+				OR = {
+					has_authority = auth_corporate
+					has_valid_civic = civic_corporate_dominion
+				}
+			}
+		}
+		NAME = ruthless_capitalists
+		from = { set_ai_personality = ruthless_capitalists }
+	}
+	option = {						# peaceful_traders
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					AND = {
+						NOR = {
+							has_ethic = "ethic_militarist"
+							has_ethic = "ethic_fanatic_militarist"
+						}
+						OR = {
+							has_ethic = "ethic_xenophile"
+							has_ethic = "ethic_fanatic_xenophile"
+						}
+					}
+				}
+				OR = {
+					has_authority = auth_corporate
+					has_valid_civic = civic_corporate_dominion
+				}
+			}
+		}
+		NAME = peaceful_traders
+		from = { set_ai_personality = peaceful_traders }
+	}
+	option = {						# hegemonic_imperialists
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOT = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+		}
+		NAME = hegemonic_imperialists
+		from = { set_ai_personality = hegemonic_imperialists }
+	}
+	option = {						# slaving_despots
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_valid_civic = civic_slaver_guilds
+				NOR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+		NAME = slaving_despots
+		from = { set_ai_personality = slaving_despots }
+	}
+	option = {						# decadent_hierarchy
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_valid_civic = civic_slaver_guilds
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+		NAME = decadent_hierarchy
+		from = { set_ai_personality = decadent_hierarchy }
+	}
+	option = {						# democratic_crusaders
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_egalitarian"
+				}
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+				has_election_type = democratic
+			}
+		}
+		NAME = democratic_crusaders
+		from = { set_ai_personality = democratic_crusaders }
+	}
+	option = {						# harmonious_hierarchy
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+		NAME = harmonious_hierarchy
+		from = { set_ai_personality = harmonious_hierarchy }
+	}
+	option = {						# federation_builders
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_fanatic_xenophile"
+					has_ethic = "ethic_fanatic_egalitarian"
+					AND = {
+						OR = {
+							has_ethic = "ethic_pacifist"
+							has_ethic = "ethic_fanatic_pacifist"
+						}
+						OR = {
+							has_ethic = "ethic_egalitarian"
+							has_ethic = "ethic_fanatic_egalitarian"
+						}
+					}
+					AND = {
+						OR = {
+							has_ethic = "ethic_pacifist"
+							has_ethic = "ethic_fanatic_pacifist"
+						}
+						OR = {
+							has_ethic = "ethic_materialist"
+							has_ethic = "ethic_fanatic_materialist"
+						}
+					}
+					AND = {
+						OR = {
+							has_ethic = "ethic_pacifist"
+							has_ethic = "ethic_fanatic_pacifist"
+						}
+						OR = {
+							has_ethic = "ethic_xenophile"
+							has_ethic = "ethic_fanatic_xenophile"
+						}
+					}
+					AND = {
+						OR = {
+							has_ethic = "ethic_xenophile"
+							has_ethic = "ethic_fanatic_xenophile"
+						}
+						OR = {
+							has_ethic = "ethic_egalitarian"
+							has_ethic = "ethic_fanatic_egalitarian"
+						}
+					}
+				}
+			}
+		}
+		NAME = federation_builders
+		from = { set_ai_personality = federation_builders }
+	}
+	option = {						# xenophobic_isolationists
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+		}
+		NAME = xenophobic_isolationists
+		from = { set_ai_personality = xenophobic_isolationists }
+	}
+	option = {						# fanatic_purifiers
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					AND = {
+						NOT = { host_has_dlc = "Utopia" }
+						has_ethic = "ethic_militarist"
+						has_ethic = "ethic_fanatic_xenophobe"
+					}
+					AND = {
+						host_has_dlc = "Utopia"
+						has_valid_civic = "civic_fanatic_purifiers"
+					}
+				}
+			}
+		}
+		NAME = fanatic_purifiers
+		from = { set_ai_personality = fanatic_purifiers }
+	}
+	option = {						# hive_mind
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_authority = "auth_hive_mind"
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
+			}
+		}
+		NAME = hive_mind
+		from = { set_ai_personality = hive_mind }
+	}
+	option = {						# devouring_swarm
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_authority = "auth_hive_mind"
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+		NAME = devouring_swarm
+		from = { set_ai_personality = devouring_swarm }
+	}
+	option = {						# migrating_flock
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				OR = {
+					has_trait = "trait_rapid_breeders"
+					has_trait = "trait_nomadic"
+					has_trait = "trait_fertile"
+				}
+			}
+		}
+		NAME = migrating_flock
+		from = { set_ai_personality = migrating_flock }
+	}
+	option = {						# metalhead
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_xenophobe"
+				has_trait = "trait_industrious"
+				has_trait = "trait_strong"
+			}
+		}
+		NAME = metalhead
+		from = { set_ai_personality = metalhead }
+	}
+	option = {						# machine_intelligence
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_authority = "auth_machine_intelligence"
+				NOR = {
+					has_valid_civic = "civic_machine_servitor"
+					has_valid_civic = "civic_machine_assimilator"
+					has_valid_civic = "civic_machine_terminator"
+				}
+			}
+		}
+		NAME = machine_intelligence
+		from = { set_ai_personality = machine_intelligence }
+	}
+	option = {						# assimilators
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				AND = {
+					host_has_dlc = "Synthetic Dawn Story Pack"
+					has_valid_civic = "civic_machine_assimilator"
+				}
+			}
+		}
+		NAME = assimilators
+		from = { set_ai_personality = assimilators }
+	}
+	option = {						# exterminators
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				AND = {
+					host_has_dlc = "Synthetic Dawn Story Pack"
+					has_valid_civic = "civic_machine_terminator"
+				}
+			}
+		}
+		NAME = exterminators
+		from = { set_ai_personality = exterminators }
+	}
+	option = {						# servitors
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				AND = {
+					host_has_dlc = "Synthetic Dawn Story Pack"
+					has_valid_civic = "civic_machine_servitor"
+				}
+			}
+		}
+		NAME = servitors
+		from = { set_ai_personality = servitors }
+	}
+	option = {						# fanatic_befrienders
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = default
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_trait = "trait_repugnant"
+				has_trait = "trait_solitary"
+				has_trait = "trait_venerable"
+			}
+		}
+		NAME = fanatic_befrienders
+		from = { set_ai_personality = fanatic_befrienders }
+	}
+	option = {						# became_the_crisis
+		trigger = {
+			from = {
+				is_country_type = default
+			}
+		}
+		allow = {
+			from = {
+				has_nemesis = yes
+				is_country_type = default
+				has_ascension_perk = "ap_become_the_crisis"
+			}
+		}
+		NAME = became_the_crisis
+		from = { set_ai_personality = became_the_crisis }
+	}
+	option = {						# fallen_empire_spiritualist
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		NAME = fallen_empire_spiritualist
+		from = { set_ai_personality = fallen_empire_spiritualist }
+	}
+	option = {						# fallen_empire_materialist
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		NAME = fallen_empire_materialist
+		from = { set_ai_personality = fallen_empire_materialist }
+	}
+	option = {						# fallen_empire_xenophobe
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		NAME = fallen_empire_xenophobe
+		from = { set_ai_personality = fallen_empire_xenophobe }
+	}
+	option = {						# fallen_empire_xenophile
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		NAME = fallen_empire_xenophile
+		from = { set_ai_personality = fallen_empire_xenophile }
+	}
+	option = {						# awakened_fallen_empire_spiritualist
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		NAME = awakened_fallen_empire_spiritualist
+		from = { set_ai_personality = awakened_fallen_empire_spiritualist }
+	}
+	option = {						# awakened_fallen_empire_materialist
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		NAME = awakened_fallen_empire_materialist
+		from = { set_ai_personality = awakened_fallen_empire_materialist }
+	}
+	option = {						# awakened_fallen_empire_xenophobe
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		NAME = awakened_fallen_empire_xenophobe
+		from = { set_ai_personality = awakened_fallen_empire_xenophobe }
+	}
+	option = {						# awakened_fallen_empire_xenophile
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		NAME = awakened_fallen_empire_xenophile
+		from = { set_ai_personality = awakened_fallen_empire_xenophile }
+	}
+	option = {						# fallen_empire_machine
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = fallen_empire
+				has_authority = auth_machine_intelligence
+			}
+		}
+		NAME = fallen_empire_machine
+		from = { set_ai_personality = fallen_empire_machine }
+	}
+	option = {						# awakened_fallen_empire_machine
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_authority = auth_machine_intelligence
+				has_valid_civic = civic_final_defense_protocols
+			}
+		}
+		NAME = awakened_fallen_empire_machine
+		from = { set_ai_personality = awakened_fallen_empire_machine }
+	}
+	option = {						# berserk_fallen_empire_machine
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		allow = {
+			from = {
+				is_country_type = awakened_fallen_empire
+				has_authority = auth_machine_intelligence
+				has_valid_civic = civic_malfunctioning_custodian
+			}
+		}
+		NAME = berserk_fallen_empire_machine
+		from = { set_ai_personality = berserk_fallen_empire_machine }
+	}
+	option = {
+		NAME = Exit
+	}
+}

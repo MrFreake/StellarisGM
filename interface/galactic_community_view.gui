@@ -403,7 +403,62 @@ guiTypes = {
 						effect = sgm_end_custodianship
 			#			shortCut = j
 					}
+					effectbuttonType = {					 # sgm_add_custodian_days
+						name = sgm_add_custodian_days
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 150 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_add_custodian_days
+						orientation = UPPER_LEFT
+						effect = sgm_add_custodian_days
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # sgm_reduce_custodian_days
+						name = sgm_reduce_custodian_days
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 187 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_reduce_custodian_days
+						orientation = UPPER_LEFT
+						effect = sgm_reduce_custodian_days
+			#			shortCut = j
+					}		
 
+					effectbuttonType = {					 # sgm_add_imperial_authority
+						name = sgm_add_imperial_authority
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 224 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_add_imperial_authority
+						orientation = UPPER_LEFT
+						effect = sgm_add_imperial_authority
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # sgm_reduce_imperial_authority
+						name = sgm_reduce_imperial_authority
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 261 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_reduce_imperial_authority
+						orientation = UPPER_LEFT
+						effect = sgm_reduce_imperial_authority
+			#			shortCut = j
+					}
+					effectbuttonType = {					 # sgm_form_imperium
+						name = sgm_form_imperium
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 148 y = 298 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_form_imperium
+						orientation = UPPER_LEFT
+						effect = sgm_form_imperium
+			#			shortCut = j
+					}		
 					# right column
 					instantTextBoxType = {
 						name = "2_COUNTRY_EFFECTS"
