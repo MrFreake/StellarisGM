@@ -6002,7 +6002,7 @@ fleet_event = {
 	}
 }
 
-# sgm_on_antion_make_assign_fleet_leader
+# sgm_on_make_assign_fleet_leader
 # Creates and assigns leader to this fleet
 # This = fleet
 # From = fleet

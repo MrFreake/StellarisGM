@@ -583,6 +583,8 @@ sgm_diplo_management: "Manage Diplomacy"
 show_leaderboard: "Show Leaderboard"
 show_leaderboard_rewards: "Show Rewards"
 hide_leaderboard: "Hide Leaderboard"
+manage_game: "Manage Game"
+sgm_cheats_menu: "Cheats Menu"
 
 # planet_view.gui
 
@@ -713,3 +715,4 @@ sgm_strategic_coordination_center_permanently_ruined: "Strategic Coordination Ce
 sgm_mega_art_installation_permanently_ruined: "Mega Art Installation Permanently Ruined"
 sgm_interstellar_assembly_permanently_ruined: "Interstellar Assembly Permanently Ruined"
 sgm_mega_shipyard_permanently_ruined: "Mega Shipyard Permanently Ruined"
+
