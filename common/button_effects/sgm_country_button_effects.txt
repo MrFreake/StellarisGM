@@ -468,3 +468,20 @@ sgm_join_war_with_target = {
 		join_war = event_target:target_country
 	}
 }
+
+sgm_set_ai_personality = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_country.9
+				scopes = {
+					from = prev
+				}
+			}
+		}
+	}
+}

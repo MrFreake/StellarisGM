@@ -196,6 +196,25 @@ country_event = {						# planet event menu
 	}
 
 	option = {
+		name = FINISH_CURRENT_STAGE_EFFECT
+		allow = {
+			from = {
+				exists = archaeological_site
+				exists = space_owner	
+				archaeological_site = {
+					is_site_under_excavation = yes
+					is_site_completed = no
+				}
+			}
+		}
+		from = {
+			archaeological_site = {
+				finish_current_stage = yes
+			}
+		}
+	}
+
+	option = {
 		NAME = exit
 	}
 }

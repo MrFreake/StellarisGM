@@ -130,6 +130,27 @@ country_event = {								# set planet owner confirmation
 	}
 }
 
+country_event = {
+	id = sgm_confirmation.6
+	is_triggered_only = yes
+	title = destroy_galaxy_confirmation
+	desc = destroy_galaxy_confirmation_desc
+	picture = GFX_evt_black_hole
+
+	immediate = {}
+
+	option = {
+		NAME = Yes
+		country_event = {
+			id = crisis.6050
+		}
+	}
+	option = {
+		NAME = No
+	}
+
+}
+
 
 ## AA confirmations - ids start at 1000
 country_event = {								# destroy_colony confirmation

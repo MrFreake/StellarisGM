@@ -378,6 +378,68 @@ sgm_end_custodianship = {
 	}
 }
 
+sgm_add_imperial_authority = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_galactic_emperor = yes
+	}
+	effect = {
+		add_imperial_authority = 10
+	}
+}
+sgm_reduce_imperial_authority = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_galactic_emperor = yes
+	}
+	effect = {
+		add_imperial_authority = -10
+	}
+}
+
+sgm_add_custodian_days = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_galactic_custodian = yes
+	}
+	effect = {
+		add_custodian_term_days = 360
+	}
+}
+
+sgm_reduce_custodian_days = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		has_galactic_custodian = yes
+	}
+	effect = {
+		add_custodian_term_days = -360
+	}
+}
+
+sgm_form_imperium = {
+	potential = {
+		is_gm = yes
+		has_galactic_custodian = yes
+		has_galactic_emperor = no
+	}
+	allow = {
+		host_has_dlc = "Nemesis"
+	}
+	effect = {
+		pass_resolution = resolution_custodian_form_empire
+	}
+}
+
+
 
 #sgm_form_imperium
 #resolution_custodian_form_empire
