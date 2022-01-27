@@ -5,6 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_manage_game_1
 	desc = sgm_manage_game_1_desc
+	picture = GFX_evt_decryption
 
 	immediate = {}
 

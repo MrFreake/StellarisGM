@@ -626,7 +626,7 @@ country_event = {													# Spectral Wraith
 							repeat = {
 								find_closest_system = {
 									trigger = {
-										id = wraith.1.trigger.1
+										id = sgm_wraith.1.trigger.1
 										NOR = {
 											exists = space_owner
 											any_fleet_in_system = {
@@ -639,7 +639,7 @@ country_event = {													# Spectral Wraith
 										move_to = this
 										find_closest_planet = {
 											trigger = {
-												id = wraith.1.trigger.2
+												id = sgm_wraith.1.trigger.2
 												is_star = yes
 											}
 											found_planet = {

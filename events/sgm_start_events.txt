@@ -89,7 +89,7 @@ event = {
 			save_event_target_as = gm_species
 		}
 		create_country = {
-			name = gm_country
+			name = gm_country_synced
 			type = sgm_game_master
 			species = event_target:gm_species
 			origin = origin_game_master
