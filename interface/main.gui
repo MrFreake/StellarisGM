@@ -739,25 +739,25 @@ guiTypes = {
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = sgm_bounty
+				name = manage_game
 				quadTextureSprite = "GFX_standard_button_142_34_button"
 				position = { x = -488 y = -12 }
 				scale = 1
 				buttonFont = malgun_goth_24
-				buttonText = sgm_bounty
+				buttonText = manage_game
 				orientation = UPPER_LEFT
-				effect = bounty_test
+				effect = manage_game
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = sgm_diplo_management
+				name = sgm_cheats_menu
 				quadTextureSprite = "GFX_standard_button_142_34_button"
 				position = { x = -344 y = -12 }
 				scale = 1
 				buttonFont = malgun_goth_24
-				buttonText = sgm_diplo_management
+				buttonText = sgm_cheats_menu
 				orientation = UPPER_LEFT
-				effect = sgm_diplo_management
+				effect = sgm_cheats_menu
 	#			shortCut = j
 			}
 			effectbuttonType = {					

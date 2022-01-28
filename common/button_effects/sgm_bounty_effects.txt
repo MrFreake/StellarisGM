@@ -1,17 +1,11 @@
-bounty_test = {
+manage_game = {
 	potential = {
 		is_gm = yes
 	}
 	allow = {}
 	effect = {
 		country_event = {
-			id = sgm_bounty.2
-			scopes = {
-				from = from
-			}
-		}
-		country_event = {
-			id = sgm_bounty.1
+			id = sgm_manage_game.1
 			scopes = {
 				from = from
 			}
@@ -270,20 +264,7 @@ tradition_unlocked = {
 		set_global_flag = editing_bounty_tradition_unlocked
 	}
 }
-ascension_perk_unlocked = {
-	potential = {
-		is_gm = yes
-	}
-	allow = {
-		NOT = {
-			has_global_flag = editing_bounty_ascension_perk_unlocked
-		}
-	}
-	effect = {
-		sgm_reset_bounty_flags = yes
-		set_global_flag = editing_bounty_ascension_perk_unlocked
-	}
-}
+
 ascension_perk_unlocked = {
 	potential = {
 		is_gm = yes

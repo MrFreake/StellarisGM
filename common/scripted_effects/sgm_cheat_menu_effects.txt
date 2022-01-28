@@ -1,0 +1,449 @@
+apply_infinite_resource_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				add_modifier = {
+					modifier = gm_infinite_resources
+					days = -1
+				}
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_country
+					days = -1
+				}
+				every_federation_ally = {
+					add_modifier = {
+						modifier = gm_infinite_resources
+						days = -1
+					}					
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_infinite_resources
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+remove_infinite_resource_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				remove_modifier = gm_infinite_resources
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				remove_modifier = gm_infinite_resources
+				every_federation_ally = {
+					remove_modifier = gm_infinite_resources
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				remove_modifier = gm_infinite_resources
+			}
+		}
+	}
+}
+
+add_instant_build_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				add_modifier = {
+					modifier = gm_country
+					days = -1
+				}
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_country
+					days = -1
+				}
+				every_federation_ally = {
+					add_modifier = {
+						modifier = gm_country
+						days = -1
+					}
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_country
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+remove_instant_build_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				remove_modifier = gm_country
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				remove_modifier = gm_country
+				every_federation_ally = {
+					remove_modifier = gm_country
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				remove_modifier = gm_country
+			}
+		}
+	}
+}
+
+add_instant_research_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				add_modifier = {
+					modifier = gm_instant_research
+					days = -1
+				}
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_instant_research
+					days = -1
+				}
+				every_federation_ally = {
+					add_modifier = {
+						modifier = gm_instant_research
+						days = -1
+					}
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				add_modifier = {
+					modifier = gm_instant_research
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+remove_instant_research_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				remove_modifier = gm_instant_research
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				remove_modifier = gm_instant_research
+				every_federation_ally = {
+					remove_modifier = gm_instant_research
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				remove_modifier = gm_instant_research
+			}
+		}
+	}
+}
+
+survey_systems_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				every_system = {
+					set_surveyed = {
+						surveyed = yes
+						surveyor = prev
+					}
+				}
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				every_system = {
+					set_surveyed = {
+						surveyed = yes
+						surveyor = prev
+					}
+				}
+				every_federation_ally = {
+					every_system = {
+						set_surveyed = {
+							surveyed = yes
+							surveyor = prev
+						}
+					}
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				every_system = {
+					set_surveyed = {
+						surveyed = yes
+						surveyor = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+sgm_cheat_all_technology_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				sgm_give_all_technology_effect = yes
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				sgm_give_all_technology_effect = yes
+				every_federation_ally = {
+					sgm_give_all_technology_effect = yes
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				sgm_give_all_technology_effect = yes
+			}
+		}
+	}
+}
+
+sgm_establish_communications_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					establish_communications_no_message = prev
+				}
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					establish_communications_no_message = prev
+				}
+				every_federation_ally = {
+					every_country = {
+						limit = {
+							is_country_type = default
+						}
+						establish_communications_no_message = prev
+					}
+				}
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+sgm_make_advanced_empire_effect = {
+	switch = {
+		trigger = has_global_flag
+		applying_to_all_countries = {
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				sgm_advanced_empire_events = yes
+			}
+		}
+		applying_to_target_federation = {
+			event_target:target_country = {
+					sgm_advanced_empire_events = yes
+				}
+			every_federation_ally = {
+				sgm_advanced_empire_events = yes
+			}
+		}
+		applying_to_target_country = {
+			event_target:target_country = {
+				sgm_advanced_empire_events = yes
+			}
+		}
+	}
+}
+
+sgm_advanced_empire_events = {
+	closest_system = {
+		min_steps = 0
+		max_steps = 5
+		limit = {
+			has_star_flag = neighbor_t1_first_colony
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = prev
+		}
+		create_starbase = {
+			owner = prev
+			size = starbase_outpost
+		}
+		random_system_planet = {
+			limit = {
+				has_planet_flag = prescripted_ideal
+			}
+			create_colony = {
+				owner = prevprev
+				species = prevprev.owner_main_species
+			}
+			planet_event = {
+				id = game_start.21
+			}
+			planet_event = {
+				id = game_start.22
+			}
+			planet_event = {
+				id = game_start.23
+			}
+		}
+	}
+	closest_system = {
+		min_steps = 0
+		max_steps = 5
+		limit = {
+			has_star_flag = neighbor_t2_second_colony
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = prev
+		}
+		create_starbase = {
+			owner = prev
+			size = starbase_outpost
+		}
+		random_system_planet = {
+			limit = {
+				has_planet_flag = prescripted_ideal
+			}
+			create_colony = {
+				owner = prevprev
+				species = prevprev.owner_main_species
+			}
+			planet_event = {
+				id = game_start.21
+			}
+			planet_event = {
+				id = game_start.22
+			}
+			planet_event = {
+				id = game_start.23
+			}
+		}
+	}
+	closest_system = {
+		min_steps = 0
+		max_steps = 5
+		limit = {
+			has_star_flag = neighbor_t1
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = prev
+		}
+		create_starbase = {
+			owner = prev
+			size = starbase_outpost
+		}
+	}
+	closest_system = {
+		min_steps = 0
+		max_steps = 5
+		limit = {
+			has_star_flag = neighbor_t2
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = prev
+		}
+		create_starbase = {
+			owner = prev
+			size = starbase_outpost
+		}
+	}
+	country_event = {
+		id = game_start.6
+	}
+}
