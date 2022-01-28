@@ -312,8 +312,88 @@ sgm_upgrade_starbase = {
 	}
 }
 
+sgm_fleet_orders = {
+	potential = {
+		is_gm = yes
+		is_fleet = yes
+	}
+	allow = {
+		is_in_combat = no
+		is_mobile = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				from = {
+					NOT = {
+						has_active_event = {
+							sgm_fleet_orders.3
+						}
+					}
+				}
+			}
+			from = {
+				country_event = {
+					id = sgm_fleet_orders.3
+					scopes = {
+						from = prev
+					}
+				}
+			}
+		}
+	}
+}
 
+sgm_set_fleet_order_move_to_system_point_order = {
+	potential = {
+		is_gm = yes
+		is_fleet = yes
+	}
+	allow = {
+		is_in_combat = no
+		is_mobile = yes
+		exists = event_target:target_planet
+	}
+	effect = {
+		if = {
+			limit = {
+				exists = event_target:target_planet
+			}
+			clear_orders = yes
+			clear_fleet_actions = this
+			fire_on_action = {
+				on_action = sgm_on_fleet_order_issued
+				scopes = {
+					from = event_target:target_planet
+				}
+			}
+			queue_actions = {
+				move_to = event_target:target_planet
+				wait = 1
+				orbit_planet = event_target:target_planet
+				effect = {
+					id = sgm_on_fleet_order_completed_effect
+					fire_on_action = {
+						on_action = sgm_on_fleet_order_completed
+						scopes = {
+							from = event_target:target_planet
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-
-
-
+sgm_clear_fleet_orders_and_actions = {
+	potential = {
+		is_gm = yes
+		is_fleet = yes
+	}
+	allow = {
+	}
+	effect = {
+		clear_orders = yes
+		clear_fleet_actions = this
+	}
+}

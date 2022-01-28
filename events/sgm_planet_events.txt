@@ -1,12 +1,11 @@
 namespace = sgm_planets
-
-country_event = {						# planet event menu
+country_event = {
+	# planet event menu
 	id = sgm_planets.1
 	is_triggered_only = yes
 	title = sgm_planet_1_title
 	desc = sgm_planet_1_desc
 	picture = GFX_evt_city_planet
-
 	trigger = {
 		exists = from
 		exists = root
@@ -14,8 +13,7 @@ country_event = {						# planet event menu
 			is_scope_type = planet
 		}
 	}
-
-	immediate = { 
+	immediate = {
 		if = {
 			limit = {
 				check_variable = {
@@ -29,26 +27,51 @@ country_event = {						# planet event menu
 			}
 		}
 	}
-	
 	option = {
-		allow = { always = yes }
+		allow = {
+			always = yes
+		}
 		NAME = add_mod_planet_modifier
-		country_event = { id = sgm_planet_modifiers.1 scopes = { from = from fromfrom = this }}
+		country_event = {
+			id = sgm_planet_modifiers.1
+			scopes = {
+				from = from
+				fromfrom = this
+			}
+		}
 	}
-	
 	option = {
-		allow = { always = yes }
+		allow = {
+			always = yes
+		}
 		NAME = remove_mod_planet_modifier
-		country_event = { id = sgm_planet_modifiers.2 scopes = { from = from fromfrom = this }}
+		country_event = {
+			id = sgm_planet_modifiers.2
+			scopes = {
+				from = from
+				fromfrom = this
+			}
+		}
 	}
-
 	option = {
 		allow = {
 			from = {
 				NOR = {
-					is_point_of_interest = { id = gm_poi.1 event_chain = gm_poi owner = root }
-					is_point_of_interest = { id = gm_poi.2 event_chain = gm_poi owner = root }
-					is_point_of_interest = { id = gm_poi.3 event_chain = gm_poi owner = root }
+					is_point_of_interest = {
+						id = gm_poi.1
+						event_chain = gm_poi
+						owner = root
+					}
+					is_point_of_interest = {
+						id = gm_poi.2
+						event_chain = gm_poi
+						owner = root
+					}
+					is_point_of_interest = {
+						id = gm_poi.3
+						event_chain = gm_poi
+						owner = root
+					}
 				}
 			}
 		}
@@ -57,150 +80,174 @@ country_event = {						# planet event menu
 			set_point_of_interest = yes
 		}
 	}
-
 	option = {
 		allow = {
 			from = {
 				OR = {
-					is_point_of_interest = { id = gm_poi.1 event_chain = gm_poi owner = root }
-					is_point_of_interest = { id = gm_poi.2 event_chain = gm_poi owner = root }
-					is_point_of_interest = { id = gm_poi.3 event_chain = gm_poi owner = root }
+					is_point_of_interest = {
+						id = gm_poi.1
+						event_chain = gm_poi
+						owner = root
+					}
+					is_point_of_interest = {
+						id = gm_poi.2
+						event_chain = gm_poi
+						owner = root
+					}
+					is_point_of_interest = {
+						id = gm_poi.3
+						event_chain = gm_poi
+						owner = root
+					}
 				}
 			}
 		}
-		
 		NAME = remove_point_of_interest
 		remove_point_of_interest = gm_poi.1
 		remove_point_of_interest = gm_poi.2
 		remove_point_of_interest = gm_poi.3
 	}
-
 	option = {
 		NAME = set_owner_target_country
 		allow = {
 			exists = event_target:target_country
 		}
 		from = {
-			set_owner = event_target:target_country }
+			set_owner = event_target:target_country
+		}
 	}
-
 	option = {
 		NAME = spawn_ww2_sol_III
-		from ={
-
-		change_pc = pc_continental
-		set_planet_size = 18
-		reroll_planet = yes
-		create_species = {
-			name = Human
-			plural = Humans
-			class = "HUM"
-			portrait = "human"
-			traits = {
-				trait = "trait_adaptive"
-				trait = "trait_nomadic"
-				trait = "trait_wasteful"
-			}
-			homeworld = this
-		}
-		create_country = {
-			name = random
-			authority = random
-			civics = {
-				civic = civic_increasing_urbanization
-				civic = civic_atmospheric_pollution
-			}
-			species = last_created_species
-			ethos = {
-				ethic = "ethic_materialist"
-				ethic = "ethic_fanatic_militarist"
-			}
-			origin = "origin_enlightened" # Should only be visible if they become spacefaring
-			flag = {
-				icon = {
-					category = "human"
-					file = "flag_human_7.dds"
+		from = {
+			change_pc = pc_continental
+			set_planet_size = 18
+			reroll_planet = yes
+			create_species = {
+				name = Human
+				plural = Humans
+				class = "HUM"
+				portrait = "human"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_wasteful"
 				}
-				background= {
-					category = "backgrounds"
-					file = "circle.dds"
-				}
-				colors={
-					"dark_blue"
-					"red"
-					"null"
-					"null"
-				}
+				homeworld = this
 			}
-			day_zero_contact = no
-			type = primitive
-		}
-		last_created_country = {
-			set_graphical_culture = industrial_01
-			set_country_flag = machine_age
-			set_country_flag = humans_machine_age
-			set_primitive_age = machine_age
-		}
-		set_owner = last_created_country
-
-		create_primitive_blockers = yes
-
-		while = {
-			count = 24
-			create_pop = {
+			create_country = {
+				name = random
+				authority = random
+				civics = {
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
+				}
 				species = last_created_species
+				ethos = {
+					ethic = "ethic_materialist"
+					ethic = "ethic_fanatic_militarist"
+				}
+				origin = "origin_enlightened"				# Should only be visible if they become spacefaring
+				flag = {
+					icon = {
+						category = "human"
+						file = "flag_human_7.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "circle.dds"
+					}
+					colors = {
+						"dark_blue"
+						"red"
+						"null"
+						"null"
+					}
+				}
+				day_zero_contact = no
+				type = primitive
+			}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = machine_age
+				set_country_flag = humans_machine_age
+				set_primitive_age = machine_age
+			}
+			set_owner = last_created_country
+			create_primitive_blockers = yes
+			while = {
+				count = 24
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			add_building = building_primitive_farm
+			add_building = building_primitive_factory
+			add_building = building_primitive_mine
+			add_building = building_primitive_power_plant
+			add_building = building_primitive_capital
+			add_building = building_urban_dwellings
+			create_army = {
+				name = "NAME_German_Wehrmacht"
+				owner = last_created_country
+				species = last_created_species
+				type = "industrial_army"
+			}
+			create_army = {
+				name = "NAME_Soviet_Red_Army"
+				owner = last_created_country
+				species = last_created_species
+				type = "industrial_army"
+			}
+			create_army = {
+				name = "NAME_US_Armed_Forces"
+				owner = last_created_country
+				species = last_created_species
+				type = "industrial_army"
+			}
+			create_army = {
+				name = "NAME_British_Armed_Forces"
+				owner = last_created_country
+				species = last_created_species
+				type = "industrial_army"
+			}
+			create_army = {
+				name = "NAME_Imperial_Japanese_Forces"
+				owner = last_created_country
+				species = last_created_species
+				type = "industrial_army"
+			}
+			last_created_country = {
+				capital_scope = {
+					set_name = "NAME_Sol_III"
+				}
 			}
 		}
-		add_building = building_primitive_farm
-		add_building = building_primitive_factory
-		add_building = building_primitive_mine
-		add_building = building_primitive_power_plant
-		add_building = building_primitive_capital
-		add_building = building_urban_dwellings
-
-		create_army = {
-			name = "NAME_German_Wehrmacht"
-			owner = last_created_country
-			species = last_created_species
-			type = "industrial_army"
+	}
+	option = {
+		name = FINISH_CURRENT_STAGE_EFFECT
+		allow = {
+			from = {
+				exists = archaeological_site
+				exists = space_owner
+				archaeological_site = {
+					is_site_under_excavation = yes
+					is_site_completed = no
+				}
+			}
 		}
-		create_army = {
-			name = "NAME_Soviet_Red_Army"
-			owner = last_created_country
-			species = last_created_species
-			type = "industrial_army"
-		}
-		create_army = {
-			name = "NAME_US_Armed_Forces"
-			owner = last_created_country
-			species = last_created_species
-			type = "industrial_army"
-		}
-		create_army = {
-			name = "NAME_British_Armed_Forces"
-			owner = last_created_country
-			species = last_created_species
-			type = "industrial_army"
-		}
-		create_army = {
-			name = "NAME_Imperial_Japanese_Forces"
-			owner = last_created_country
-			species = last_created_species
-			type = "industrial_army"
-		}
-
-		last_created_country = {
-			capital_scope = { set_name = "NAME_Sol_III" }
+		from = {
+			archaeological_site = {
+				finish_current_stage = yes
+			}
 		}
 	}
-	}
-
 	option = {
 		NAME = exit
 	}
 }
 
-country_event = {							# add districts menu
+country_event = {
+	# add districts menu
 	id = sgm_planets.50
 	is_triggered_only = yes
 	title = sgm_planets_50_title
@@ -213,18 +260,17 @@ country_event = {							# add districts menu
 		room = enclave_curator_room
 	}
 	trigger = {
-#		exists = from
-#		exists = root
+		#		exists = from
+		#		exists = root
 		from = {
 			is_scope_type = planet
 		}
 	}
-
 	immediate = {
 		log = "sgm_planets.50 firing"
 	}
-
-	option = {								# add city districts
+	option = {
+		# add city districts
 		NAME = district_city
 		allow = {
 			from = {
@@ -238,19 +284,35 @@ country_event = {							# add districts menu
 		while = {
 			count = modifier_var
 			from = {
-				if = { limit = { from.owner = { is_regular_empire = yes } }
+				if = {
+					limit = {
+						from.owner = {
+							is_regular_empire = yes
+						}
+					}
 					add_district = district_city
 				}
-				if = { limit = { from.owner = { is_hive_empire = yes } }
-					add_district = district_hive 
+				if = {
+					limit = {
+						from.owner = {
+							is_hive_empire = yes
+						}
+					}
+					add_district = district_hive
 				}
-				if = { limit = { from.owner = { is_machine_empire = yes } }
-					add_district = district_nexus 
+				if = {
+					limit = {
+						from.owner = {
+							is_machine_empire = yes
+						}
+					}
+					add_district = district_nexus
 				}
 			}
 		}
-	}	
-	option = {								# add industrial districts
+	}
+	option = {
+		# add industrial districts
 		NAME = district_industrial
 		allow = {
 			from = {
@@ -260,13 +322,13 @@ country_event = {							# add districts menu
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_industrial 
+				add_district = district_industrial
 			}
 		}
 	}
-
-	option = {								# add generator districts
-		NAME = district_generator 
+	option = {
+		# add generator districts
+		NAME = district_generator
 		allow = {
 			from = {
 				OR = {
@@ -287,14 +349,14 @@ country_event = {							# add districts menu
 					add_district = district_generator_uncapped
 				}
 				else = {
-					add_district = district_generator  
+					add_district = district_generator
 				}
 			}
 		}
 	}
-
-	option = {								# add mining districts
-		NAME = district_mining 
+	option = {
+		# add mining districts
+		NAME = district_mining
 		allow = {
 			from = {
 				OR = {
@@ -303,7 +365,7 @@ country_event = {							# add districts menu
 					uses_district_set = machine_world
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
@@ -315,14 +377,14 @@ country_event = {							# add districts menu
 					add_district = district_mining_uncapped
 				}
 				else = {
-					add_district = district_mining  
-				} 
+					add_district = district_mining
+				}
 			}
 		}
 	}
-
-	option = {								# add farming districts
-		NAME = district_farming  
+	option = {
+		# add farming districts
+		NAME = district_farming
 		allow = {
 			from = {
 				OR = {
@@ -330,7 +392,7 @@ country_event = {							# add districts menu
 					uses_district_set = hive_world
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
@@ -341,28 +403,14 @@ country_event = {							# add districts menu
 					add_district = district_farming_uncapped
 				}
 				else = {
-					add_district = district_farming  
-				}   
+					add_district = district_farming
+				}
 			}
 		}
 	}
-	option = {								# add district_arcology_housing 
-		NAME = district_arcology_housing   
-		allow = {
-			from = {
-				uses_district_set = city_world
-			}
-		} 
-		while = {
-			count = modifier_var
-			from = {
-				add_district = district_arcology_housing  
-			}
-		}   
-	}
-
-	option = {								# add district_arcology_arms_industry  
-		NAME = district_arcology_arms_industry    
+	option = {
+		# add district_arcology_housing 
+		NAME = district_arcology_housing
 		allow = {
 			from = {
 				uses_district_set = city_world
@@ -371,13 +419,28 @@ country_event = {							# add districts menu
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_arcology_arms_industry   
-			}   
+				add_district = district_arcology_housing
+			}
 		}
 	}
-
-	option = {								# add district_arcology_civilian_industry   
-		NAME = district_arcology_civilian_industry     
+	option = {
+		# add district_arcology_arms_industry  
+		NAME = district_arcology_arms_industry
+		allow = {
+			from = {
+				uses_district_set = city_world
+			}
+		}
+		while = {
+			count = modifier_var
+			from = {
+				add_district = district_arcology_arms_industry
+			}
+		}
+	}
+	option = {
+		# add district_arcology_civilian_industry   
+		NAME = district_arcology_civilian_industry
 		allow = {
 			from = {
 				uses_district_set = city_world
@@ -388,17 +451,17 @@ country_event = {							# add districts menu
 					}
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_arcology_civilian_industry    
-			} 
-		}  
+				add_district = district_arcology_civilian_industry
+			}
+		}
 	}
-
-	option = {								# add district_arcology_leisure   
-		NAME = district_arcology_leisure     
+	option = {
+		# add district_arcology_leisure   
+		NAME = district_arcology_leisure
 		allow = {
 			from = {
 				uses_district_set = city_world
@@ -406,82 +469,84 @@ country_event = {							# add districts menu
 					is_regular_empire = yes
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_arcology_leisure    
+				add_district = district_arcology_leisure
 			}
-		}  
+		}
 	}
-
-	option = {								# add district_hab_housing    
-		NAME = district_hab_housing     
+	option = {
+		# add district_hab_housing    
+		NAME = district_hab_housing
 		allow = {
 			from = {
 				uses_district_set = habitat
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_housing     
+				add_district = district_hab_housing
 			}
-		}   
+		}
 	}
-
-	option = {								# add district_hab_energy     
-		NAME = district_hab_energy      
+	option = {
+		# add district_hab_energy     
+		NAME = district_hab_energy
 		allow = {
 			from = {
 				uses_district_set = habitat
 				OR = {
 					has_planet_flag = energy_habitat
-					owner = { is_gestalt = yes }
+					owner = {
+						is_gestalt = yes
+					}
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_energy      
-			}   
+				add_district = district_hab_energy
+			}
 		}
 	}
-	
-	option = {								# add district_hab_industrial     
-		NAME = district_hab_industrial      
+	option = {
+		# add district_hab_industrial     
+		NAME = district_hab_industrial
 		allow = {
 			from = {
 				uses_district_set = habitat
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_industrial      
-			}   
+				add_district = district_hab_industrial
+			}
 		}
 	}
-	
-	option = {								# add district_hab_science     
-		NAME = district_hab_science      
+	option = {
+		# add district_hab_science     
+		NAME = district_hab_science
 		allow = {
 			from = {
 				uses_district_set = habitat
 				has_planet_flag = research_habitat
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_science      
+				add_district = district_hab_science
 			}
-		}   
+		}
 	}
-
-	option = {								# add district_hab_commercial      
-		NAME = district_hab_commercial       
+	option = {
+		# add district_hab_commercial      
+		NAME = district_hab_commercial
 		allow = {
 			from = {
 				uses_district_set = habitat
@@ -493,13 +558,13 @@ country_event = {							# add districts menu
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_commercial       
+				add_district = district_hab_commercial
 			}
-		}   
+		}
 	}
-	
-	option = {								# add district_hab_mining      
-		NAME = district_hab_mining       
+	option = {
+		# add district_hab_mining      
+		NAME = district_hab_mining
 		allow = {
 			from = {
 				uses_district_set = habitat
@@ -509,13 +574,13 @@ country_event = {							# add districts menu
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_mining       
-			}   
+				add_district = district_hab_mining
+			}
 		}
 	}
-
-	option = {								# add district_hab_cultural       
-		NAME = district_hab_cultural        
+	option = {
+		# add district_hab_cultural       
+		NAME = district_hab_cultural
 		allow = {
 			exists = owner
 			from = {
@@ -527,38 +592,38 @@ country_event = {							# add districts menu
 					}
 				}
 			}
-		} 
+		}
 		while = {
 			count = modifier_var
 			from = {
-				add_district = district_hab_cultural       
-			}   
+				add_district = district_hab_cultural
+			}
 		}
 	}
-
 	option = {
 		NAME = Exit
 	}
 }
 
-country_event = {								# change planet class menu
+country_event = {
+	# change planet class menu
 	id = sgm_planets.51
 	is_triggered_only = yes
 	title = sgm_planets_51_title
 	desc = sgm_planets_51_desc
 	picture = GFX_evt_gaia
-
 	trigger = {
 		from = {
 			is_scope_type = planet
 		}
 	}
-
-	immediate = { }
-
+	immediate = {
+	}
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_gaia
 		from = {
@@ -567,10 +632,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_city
 		from = {
@@ -579,10 +645,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_relic
 		from = {
@@ -591,10 +658,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_frozen
 		from = {
@@ -603,10 +671,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_alpine
 		from = {
@@ -615,10 +684,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_tundra
 		from = {
@@ -627,10 +697,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_continental
 		from = {
@@ -639,10 +710,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_ocean
 		from = {
@@ -651,10 +723,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_tropical
 		from = {
@@ -663,10 +736,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_desert
 		from = {
@@ -675,10 +749,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_arid
 		from = {
@@ -687,10 +762,11 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = no }
+			from = {
+				is_star = no
+			}
 		}
 		NAME = pc_savannah
 		from = {
@@ -699,109 +775,132 @@ country_event = {								# change planet class menu
 			reroll_deposits = yes
 		}
 	}
-
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_b_star 
+		NAME = pc_b_star
 		from = {
-			change_pc = pc_b_star 
+			change_pc = pc_b_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_a_star 
+		NAME = pc_a_star
 		from = {
-			change_pc = pc_a_star 
+			change_pc = pc_a_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_f_star 
+		NAME = pc_f_star
 		from = {
-			change_pc = pc_f_star 
+			change_pc = pc_f_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_g_star 
+		NAME = pc_g_star
 		from = {
-			change_pc = pc_g_star 
+			change_pc = pc_g_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_k_star 
+		NAME = pc_k_star
 		from = {
-			change_pc = pc_k_star 
+			change_pc = pc_k_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_m_star 
+		NAME = pc_m_star
 		from = {
-			change_pc = pc_m_star 
+			change_pc = pc_m_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_m_giant_star 
+		NAME = pc_m_giant_star
 		from = {
-			change_pc = pc_m_giant_star 
+			change_pc = pc_m_giant_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_t_star 
+		NAME = pc_t_star
 		from = {
-			change_pc = pc_t_star 
+			change_pc = pc_t_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_black_hole 
+		NAME = pc_black_hole
 		from = {
-			change_pc = pc_black_hole 
+			change_pc = pc_black_hole
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_neutron_star 
+		NAME = pc_neutron_star
 		from = {
-			change_pc = pc_neutron_star 
+			change_pc = pc_neutron_star
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes}
+			from = {
+				is_star = yes
+			}
 		}
-		NAME = pc_pulsar 
+		NAME = pc_pulsar
 		from = {
-			change_pc = pc_pulsar 
+			change_pc = pc_pulsar
 		}
 	}
 	option = {
 		trigger = {
-			from = { is_star = yes }
+			from = {
+				is_star = yes
+			}
 		}
 		NAME = trigger_supernova
 		from = {
@@ -815,7 +914,8 @@ country_event = {								# change planet class menu
 	}
 }
 
-country_event = {								# spawn hostiles menu
+country_event = {
+	# spawn hostiles menu
 	id = sgm_planets.52
 	is_triggered_only = yes
 	title = sgm_planets_52_title
@@ -826,15 +926,13 @@ country_event = {								# spawn hostiles menu
 		portrait = root.owner_main_species
 		room = enclave_curator_room
 	}
-
-	trigger = {}
-
+	trigger = {
+	}
 	immediate = {
 		log = "sgm_planets.52 scope: [This.GetName]"
 	}
-
-	
-	option = {						# large crystals
+	option = {
+		# large crystals
 		NAME = sgm_large_crystals
 		while = {
 			count = modifier_var
@@ -878,8 +976,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# medium crystals
+	option = {
+		# medium crystals
 		NAME = sgm_med_crystals
 		while = {
 			count = modifier_var
@@ -923,8 +1021,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# small crystals
+	option = {
+		# small crystals
 		NAME = sgm_small_crystals
 		while = {
 			count = modifier_var
@@ -968,8 +1066,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# crystals base
+	option = {
+		# crystals base
 		NAME = sgm_base_crystals
 		while = {
 			count = modifier_var
@@ -996,8 +1094,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_large_ameobas
+	option = {
+		# sgm_large_ameobas
 		NAME = sgm_large_ameobas
 		while = {
 			count = modifier_var
@@ -1007,7 +1105,7 @@ country_event = {								# spawn hostiles menu
 					name = "NAME_Space_Amoeba"
 					settings = {
 						garrison = yes
-					}					
+					}
 					effect = {
 						set_owner = event_target:amoeba_country
 						while = {
@@ -1024,7 +1122,7 @@ country_event = {								# spawn hostiles menu
 								design = "NAME_Large_Space_Organism_Zebra"
 							}
 						}
-						set_formation_scale = 3.0
+						set_formation_scale = 3
 						set_location = {
 							target = from
 							distance = 40
@@ -1038,8 +1136,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_med_ameobas
+	option = {
+		# sgm_med_ameobas
 		NAME = sgm_med_ameobas
 		while = {
 			count = modifier_var
@@ -1049,7 +1147,7 @@ country_event = {								# spawn hostiles menu
 					name = "NAME_Space_Amoeba"
 					settings = {
 						garrison = yes
-					}					
+					}
 					effect = {
 						set_owner = event_target:amoeba_country
 						while = {
@@ -1066,7 +1164,7 @@ country_event = {								# spawn hostiles menu
 								design = "NAME_Large_Space_Organism_Zebra"
 							}
 						}
-						set_formation_scale = 3.0
+						set_formation_scale = 3
 						set_location = {
 							target = from
 							distance = 40
@@ -1079,9 +1177,9 @@ country_event = {								# spawn hostiles menu
 				}
 			}
 		}
-	}	
-
-	option = {					# sgm_small_ameobas
+	}
+	option = {
+		# sgm_small_ameobas
 		NAME = sgm_small_ameobas
 		while = {
 			count = modifier_var
@@ -1091,7 +1189,7 @@ country_event = {								# spawn hostiles menu
 					name = "NAME_Space_Amoeba"
 					settings = {
 						garrison = yes
-					}					
+					}
 					effect = {
 						set_owner = event_target:amoeba_country
 						while = {
@@ -1108,7 +1206,7 @@ country_event = {								# spawn hostiles menu
 								design = "NAME_Large_Space_Organism_Zebra"
 							}
 						}
-						set_formation_scale = 3.0
+						set_formation_scale = 3
 						set_location = {
 							target = from
 							distance = 40
@@ -1122,8 +1220,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_roamer_ameobas
+	option = {
+		# sgm_roamer_ameobas
 		NAME = sgm_small_ameobas
 		while = {
 			count = modifier_var
@@ -1164,12 +1262,14 @@ country_event = {								# spawn hostiles menu
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 20
-
 						if = {
-							limit = { has_fleet_flag = tiyanki_hunter }
+							limit = {
+								has_fleet_flag = tiyanki_hunter
+							}
 							save_event_target_as = hunting_amoeba
 							queue_actions = {
-								wait = { # Cooldown until they start moving
+								wait = {
+									# Cooldown until they start moving
 									duration = 5000
 									random = 1000
 								}
@@ -1177,7 +1277,8 @@ country_event = {								# spawn hostiles menu
 						}
 						else = {
 							queue_actions = {
-								wait = { # Cooldown until they start moving
+								wait = {
+									# Cooldown until they start moving
 									duration = 5000
 									random = 1000
 								}
@@ -1188,43 +1289,40 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_mother_ameoba
+	option = {
+		# sgm_mother_ameoba
 		NAME = sgm_mother_ameoba
 		while = {
 			count = modifier_var
-				create_amoeba_country = yes
-				event_target:amoeba_country = {
-					create_fleet = {
-						name = "NAME_Space_Amoeba"
-						settings = {
-							spawn_debris = no
-							is_boss = yes
+			create_amoeba_country = yes
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					settings = {
+						spawn_debris = no
+						is_boss = yes
+					}
+					effect = {
+						set_owner = event_target:amoeba_country
+						create_ship = {
+							name = "NAME_Ortus"
+							design = "NAME_Great_Space_Organism"
 						}
-						effect = {
-							set_owner = event_target:amoeba_country
-							create_ship = {
-								name = "NAME_Ortus"
-								design = "NAME_Great_Space_Organism"
-							}
-							set_location = {
-								target = from
-								distance = 40
-								angle = random
-							}
-							set_fleet_stance = aggressive
-							set_aggro_range_measure_from = self
-							set_aggro_range = 50
+						set_location = {
+							target = from
+							distance = 40
+							angle = random
 						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 50
 					}
 				}
-				
-
 			}
+		}
 	}
-	
-	
-	option = {					# sgm_large_tiyanki
+	option = {
+		# sgm_large_tiyanki
 		NAME = sgm_large_tiyanki
 		while = {
 			count = modifier_var
@@ -1271,8 +1369,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_med_tiyanki
+	option = {
+		# sgm_med_tiyanki
 		NAME = sgm_med_tiyanki
 		while = {
 			count = modifier_var
@@ -1319,8 +1417,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_small_tiyanki
+	option = {
+		# sgm_small_tiyanki
 		NAME = sgm_small_tiyanki
 		while = {
 			count = modifier_var
@@ -1367,8 +1465,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
-	option = {					# sgm_roamer_tiyanki
+	option = {
+		# sgm_roamer_tiyanki
 		NAME = sgm_small_tiyanki
 		while = {
 			count = modifier_var
@@ -1401,7 +1499,8 @@ country_event = {								# spawn hostiles menu
 						set_aggro_range_measure_from = return_point
 						set_aggro_range = 0
 						queue_actions = {
-							wait = { # Cooldown until they start moving
+							wait = {
+								# Cooldown until they start moving
 								duration = 320
 								random = 80
 							}
@@ -1411,8 +1510,8 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-	
-	option = {					# sgm_matriarch_tiyanki
+	option = {
+		# sgm_matriarch_tiyanki
 		NAME = sgm_matriarch_tiyanki
 		while = {
 			count = modifier_var
@@ -1448,291 +1547,323 @@ country_event = {								# spawn hostiles menu
 			}
 		}
 	}
-
 }
 
-country_event = {					# create archaeology site
+country_event = {
+	# create archaeology site
 	id = sgm_planets.53
 	is_triggered_only = yes
 	title = sgm_planets_53_title
 	desc = sgm_planets_53_desc
 	picture = GFX_evt_archaeological_dig
-
-	immediate = {}
-
+	immediate = {
+	}
 	option = {
-		NAME = site_lost_moments 
+		NAME = site_lost_moments
 		custom_tooltip = site_lost_moments_intro
 		allow = {
 			has_ancrel = yes
-			NOT = {
-				exists = archaeological_site
+			from = {
+				NOT = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_lost_moments
-		} 
+		}
 	}
-
 	option = {
-		NAME = site_lesser_messenger 
+		NAME = site_lesser_messenger
 		custom_tooltip = site_site_lesser_messenger_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_lesser_messenger
-		} 
+		}
 	}
-
 	option = {
-		NAME = omnirelic_site 
+		NAME = omnirelic_site
 		custom_tooltip = omnirelic_site_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = omnirelic_site
-		} 
+		}
 	}
-
 	option = {
-		NAME = asteroid_vault_1 
+		NAME = asteroid_vault_1
 		custom_tooltip = asteroid_vault_1_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = asteroid_vault_1
-		} 
+		}
 	}
-
 	option = {
-		NAME = it_was_aliens_site 
-		custom_tooltip = it_was_aliens_site_intro	
+		NAME = it_was_aliens_site
+		custom_tooltip = it_was_aliens_site_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = it_was_aliens_site
-		} 
+		}
 	}
-
 	option = {
-		NAME = ancient_battle_site 
+		NAME = ancient_battle_site
 		custom_tooltip = ancient_battle_site_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = ancient_battle_site
-		} 
+		}
 	}
-
 	option = {
-		NAME = city_of_bones 
+		NAME = city_of_bones
 		custom_tooltip = city_of_bones_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = city_of_bones
-		} 
+		}
 	}
-
 	option = {
-		NAME = mutation_vats 
+		NAME = mutation_vats
 		custom_tooltip = mutation_vats_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = mutation_vats
-		} 
+		}
 	}
-
 	option = {
-		NAME = planetary_mechanocalibrator 
+		NAME = planetary_mechanocalibrator
 		custom_tooltip = planetary_mechanocalibrator_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = planetary_mechanocalibrator
-		} 
+		}
 	}
 	option = {
-		NAME = the_host 
+		NAME = the_host
 		custom_tooltip = the_host_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = the_host
-		} 
+		}
 	}
 	option = {
-		NAME = site_command_center 
+		NAME = site_command_center
 		custom_tooltip = site_command_center_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_command_center
-		} 
+		}
 	}
 	option = {
-		NAME = site_hunting_ground 
+		NAME = site_hunting_ground
 		custom_tooltip = site_hunting_ground_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_hunting_ground
-		} 
+		}
 	}
 	option = {
-		NAME = site_zarqlan 
+		NAME = site_zarqlan
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_zarqlan
-		} 
+		}
 	}
 	option = {
-		NAME = site_minigalaxy_1 
+		NAME = site_minigalaxy_1
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_minigalaxy_1
-		} 
+		}
 	}
 	option = {
-		NAME = site_minigalaxy_2 
+		NAME = site_minigalaxy_2
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_minigalaxy_2
-		} 
+		}
 	}
 	option = {
-		NAME = site_star_petal 
+		NAME = site_star_petal
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_star_petal
-		} 
+		}
 	}
 	option = {
-		NAME = site_robot_debris 
+		NAME = site_robot_debris
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_robot_debris
-		} 
+		}
 	}
 	option = {
-		NAME = site_freighter_crash 
+		NAME = site_freighter_crash
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_freighter_crash
-		} 
+		}
 	}
 	option = {
-		NAME = site_hidden_lab_a 
+		NAME = site_hidden_lab_a
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_hidden_lab_a
-		} 
+		}
 	}
 	option = {
-		NAME = site_moon_bump 
+		NAME = site_moon_bump
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_moon_bump
-		} 
+		}
 	}
 	option = {
-		NAME = site_echoes_inside 
+		NAME = site_echoes_inside
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_echoes_inside
-		} 
+		}
 	}
-
 	option = {
 		NAME = Next
 		country_event = {
@@ -1742,296 +1873,341 @@ country_event = {					# create archaeology site
 			}
 		}
 	}
-
 	option = {
 		NAME = Exit
 	}
 }
 
-country_event = {					# archaeology sites #2
+country_event = {
+	# archaeology sites #2
 	id = sgm_planets.54
 	is_triggered_only = yes
 	title = sgm_planets_54_title
 	desc = sgm_planets_54_desc
 	picture = GFX_evt_archaeological_dig
-
-	immediate = { }
-
+	immediate = {
+	}
 	option = {
-		NAME = site_target_from_orbit 
+		NAME = site_target_from_orbit
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_target_from_orbit
-		} 
+		}
 	}
 	option = {
-		NAME = site_shot_into_the_ground 
+		NAME = site_shot_into_the_ground
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_shot_into_the_ground
-		} 
+		}
 	}
 	option = {
-		NAME = site_cut_to_fit 
+		NAME = site_cut_to_fit
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_cut_to_fit
-		} 
+		}
 	}
 	option = {
-		NAME = site_deja_vu_dig 
+		NAME = site_deja_vu_dig
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_deja_vu_dig
-		} 
+		}
 	}
 	option = {
-		NAME = site_trench_world 
+		NAME = site_trench_world
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_trench_world
-		} 
+		}
 	}
 	option = {
-		NAME = site_ebb_and_flow 
+		NAME = site_ebb_and_flow
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_ebb_and_flow
-		} 
+		}
 	}
 	option = {
-		NAME = site_sky_glow_hymn 
+		NAME = site_sky_glow_hymn
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_sky_glow_hymn
-		} 
+		}
 	}
 	option = {
-		NAME = site_warmer_climates 
+		NAME = site_warmer_climates
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_warmer_climates
-		} 
+		}
 	}
 	option = {
-		NAME = site_phoenix_collective 
+		NAME = site_phoenix_collective
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_phoenix_collective
-		} 
+		}
 	}
 	option = {
-		NAME = site_grand_herald 
+		NAME = site_grand_herald
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_grand_herald
-		} 
+		}
 	}
 	option = {
-		NAME = site_hive_coral 
+		NAME = site_hive_coral
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_hive_coral
-		} 
+		}
 	}
 	option = {
-		NAME = site_orbital_rain 
+		NAME = site_orbital_rain
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_orbital_rain
-		} 
+		}
 	}
 	option = {
-		NAME = site_fossilized_jellyfish 
+		NAME = site_fossilized_jellyfish
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_fossilized_jellyfish
-		} 
+		}
 	}
 	option = {
-		NAME = site_popular_rock 
+		NAME = site_popular_rock
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_popular_rock
-		} 
+		}
 	}
 	option = {
-		NAME = site_strange_flows 
+		NAME = site_strange_flows
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_strange_flows
-		} 
+		}
 	}
 	option = {
-		NAME = site_ruins_of_shallash 
+		NAME = site_ruins_of_shallash
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = site_ruins_of_shallash
-		} 
+		}
 	}
 	option = {
-		NAME = relicrails_digsite 
+		NAME = relicrails_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = relicrails_digsite
-		} 
+		}
 	}
 	option = {
-		NAME = lithoids_digsite 
+		NAME = lithoids_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = lithoids_digsite
-		} 
+		}
 	}
 	option = {
-		NAME = rubricator_digsite 
+		NAME = rubricator_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = rubricator_digsite
-		} 
+		}
 	}
 	option = {
-		NAME = oracle_digsite 
+		NAME = oracle_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = oracle_digsite
-		} 
+		}
 	}
 	option = {
-		NAME = endless_expanse_digsite 
+		NAME = endless_expanse_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = endless_expanse_digsite
-		} 
+		}
 	}
 	option = {
-		NAME = endless_expanse_digsite_2 
+		NAME = endless_expanse_digsite_2
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = endless_expanse_digsite_2
-		} 
+		}
 	}
 	option = {
-		NAME = sentinels_digsite 
+		NAME = sentinels_digsite
 		allow = {
 			has_ancrel = yes
 			NOT = {
-				exists = archaeological_site
+				from = {
+					exists = archaeological_site
+				}
 			}
 		}
 		from = {
 			create_archaeological_site = sentinels_digsite
-		} 
+		}
 	}
 	option = {
 		NAME = Previous
@@ -2047,18 +2223,18 @@ country_event = {					# archaeology sites #2
 	}
 }
 
-country_event = {						# anomalies menu
+country_event = {
+	# anomalies menu
 	id = sgm_planets.55
 	is_triggered_only = yes
 	title = sgm_planets_55_title
 	desc = sgm_planets_55_desc
 	picture = GFX_evt_analyzing_artifacts
-
-	immediate = {}
-
+	immediate = {
+	}
 	# asteroid anomalies
-
-	option = { 					# crashed_ship_asteroid_category
+	option = {
+		# crashed_ship_asteroid_category
 		NAME = crashed_ship_asteroid_category
 		trigger = {
 			from = {
@@ -2069,14 +2245,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = crashed_ship_asteroid_category 
-			target = event_target:target_country }
+			add_anomaly = {
+				category = crashed_ship_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# origin_asteroid_category 
-		NAME = origin_asteroid_category 
+	option = {
+		# origin_asteroid_category 
+		NAME = origin_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2086,14 +2263,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = origin_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = origin_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# debris_asteroid_category 
-		NAME = debris_asteroid_category 
+	option = {
+		# debris_asteroid_category 
+		NAME = debris_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2103,14 +2281,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = debris_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = debris_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# emissions_asteroid_category 
-		NAME = emissions_asteroid_category 
+	option = {
+		# emissions_asteroid_category 
+		NAME = emissions_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2120,14 +2299,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = emissions_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = emissions_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# hatch_asteroid_category 
-		NAME = hatch_asteroid_category 
+	option = {
+		# hatch_asteroid_category 
+		NAME = hatch_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2137,14 +2317,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = hatch_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = hatch_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# collision_asteroid_category 
-		NAME = collision_asteroid_category 
+	option = {
+		# collision_asteroid_category 
+		NAME = collision_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2152,36 +2333,20 @@ country_event = {						# anomalies menu
 		}
 		allow = {
 			exists = event_target:target_country
-			from = { has_any_strategic_resource = no }
-		}
-		from = {
-		add_anomaly = {
-			category = collision_asteroid_category  
-			target = event_target:target_country }
-		}
-	}
-
-	option = { 					# station_asteroid_category 
-		NAME = station_asteroid_category 
-		trigger = {
 			from = {
-				is_asteroid = yes
-
+				has_any_strategic_resource = no
 			}
 		}
-		allow = {
-			exists = event_target:target_country
-			from = { num_minerals > 0 }
-		}
 		from = {
-		add_anomaly = {
-			category = station_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = collision_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# life_asteroid_category 
-		NAME = life_asteroid_category 
+	option = {
+		# station_asteroid_category 
+		NAME = station_asteroid_category
 		trigger = {
 			from = {
 				is_asteroid = yes
@@ -2189,18 +2354,39 @@ country_event = {						# anomalies menu
 		}
 		allow = {
 			exists = event_target:target_country
+			from = {
+				num_minerals > 0
+			}
 		}
 		from = {
-		add_anomaly = {
-			category = life_asteroid_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = station_asteroid_category
+				target = event_target:target_country
+			}
 		}
 	}
-
+	option = {
+		# life_asteroid_category 
+		NAME = life_asteroid_category
+		trigger = {
+			from = {
+				is_asteroid = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+			add_anomaly = {
+				category = life_asteroid_category
+				target = event_target:target_country
+			}
+		}
+	}
 	# gas giant anomalies
-
-	option = { 					# object_gasgiant_category 
-		NAME = object_gasgiant_category 
+	option = {
+		# object_gasgiant_category 
+		NAME = object_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2210,14 +2396,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = object_gasgiant_category  
-			target = event_target:target_country }
+			add_anomaly = {
+				category = object_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# moon_gasgiant_category  
-		NAME = moon_gasgiant_category  
+	option = {
+		# moon_gasgiant_category  
+		NAME = moon_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2225,34 +2412,20 @@ country_event = {						# anomalies menu
 		}
 		allow = {
 			exists = event_target:target_country
-			from = { has_strategic_resource = no }
-		}
-		from = {
-		add_anomaly = {
-			category = moon_gasgiant_category   
-			target = event_target:target_country }
-		}
-	}
-
-	option = { 					# life_gasgiant_category  
-		NAME = life_gasgiant_category  
-		trigger = {
 			from = {
-				is_planet_class = pc_gas_giant
+				has_strategic_resource = no
 			}
 		}
-		allow = {
-			exists = event_target:target_country
-		}
 		from = {
-		add_anomaly = {
-			category = life_gasgiant_category   
-			target = event_target:target_country }
+			add_anomaly = {
+				category = moon_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# storms_gasgiant_category  
-		NAME = storms_gasgiant_category  
+	option = {
+		# life_gasgiant_category  
+		NAME = life_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2262,14 +2435,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = storms_gasgiant_category   
-			target = event_target:target_country }
+			add_anomaly = {
+				category = life_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# aerostat_gasgiant_category  
-		NAME = aerostat_gasgiant_category  
+	option = {
+		# storms_gasgiant_category  
+		NAME = storms_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2279,14 +2453,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = aerostat_gasgiant_category   
-			target = event_target:target_country }
+			add_anomaly = {
+				category = storms_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# cargo_gasgiant_category  
-		NAME = cargo_gasgiant_category  
+	option = {
+		# aerostat_gasgiant_category  
+		NAME = aerostat_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2296,14 +2471,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = cargo_gasgiant_category   
-			target = event_target:target_country }
+			add_anomaly = {
+				category = aerostat_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# debris_gasgiant_category  
-		NAME = debris_gasgiant_category  
+	option = {
+		# cargo_gasgiant_category  
+		NAME = cargo_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2313,15 +2489,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = debris_gasgiant_category   
-			target = event_target:target_country }
+			add_anomaly = {
+				category = cargo_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-
-	option = { 					# signal_gasgiant_category   
-		NAME = signal_gasgiant_category   
+	option = {
+		# debris_gasgiant_category  
+		NAME = debris_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2331,14 +2507,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = signal_gasgiant_category    
-			target = event_target:target_country }
+			add_anomaly = {
+				category = debris_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# ship_gasgiant_category   
-		NAME = ship_gasgiant_category   
+	option = {
+		# signal_gasgiant_category   
+		NAME = signal_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2348,14 +2525,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = ship_gasgiant_category    
-			target = event_target:target_country }
+			add_anomaly = {
+				category = signal_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# terminal_gasgiant_category   
-		NAME = terminal_gasgiant_category   
+	option = {
+		# ship_gasgiant_category   
+		NAME = ship_gasgiant_category
 		trigger = {
 			from = {
 				is_planet_class = pc_gas_giant
@@ -2363,18 +2541,39 @@ country_event = {						# anomalies menu
 		}
 		allow = {
 			exists = event_target:target_country
-			from = { is_moon = no }
 		}
 		from = {
-		add_anomaly = {
-			category = terminal_gasgiant_category    
-			target = event_target:target_country }
+			add_anomaly = {
+				category = ship_gasgiant_category
+				target = event_target:target_country
+			}
 		}
 	}
-
+	option = {
+		# terminal_gasgiant_category   
+		NAME = terminal_gasgiant_category
+		trigger = {
+			from = {
+				is_planet_class = pc_gas_giant
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = {
+				is_moon = no
+			}
+		}
+		from = {
+			add_anomaly = {
+				category = terminal_gasgiant_category
+				target = event_target:target_country
+			}
+		}
+	}
 	# uninhabitable planet anomalies
-	option = { 					# impact_uninhabitable_category   
-		NAME = impact_uninhabitable_category   
+	option = {
+		# impact_uninhabitable_category   
+		NAME = impact_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2384,14 +2583,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = impact_uninhabitable_category    
-			target = event_target:target_country }
+			add_anomaly = {
+				category = impact_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# energy_uninhabitable_category    
-		NAME = energy_uninhabitable_category    
+	option = {
+		# energy_uninhabitable_category    
+		NAME = energy_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2401,14 +2601,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = energy_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = energy_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# signal_uninhabitable_category    
-		NAME = signal_uninhabitable_category    
+	option = {
+		# signal_uninhabitable_category    
+		NAME = signal_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2418,14 +2619,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = signal_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = signal_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# asteroid_uninhabitable_category    
-		NAME = asteroid_uninhabitable_category    
+	option = {
+		# asteroid_uninhabitable_category    
+		NAME = asteroid_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2435,14 +2637,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = asteroid_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = asteroid_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# solar_uninhabitable_category    
-		NAME = solar_uninhabitable_category    
+	option = {
+		# solar_uninhabitable_category    
+		NAME = solar_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2452,14 +2655,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = solar_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = solar_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# life_toxic_category    
-		NAME = life_toxic_category    
+	option = {
+		# life_toxic_category    
+		NAME = life_toxic_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2469,14 +2673,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = life_toxic_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = life_toxic_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# life_frozen_category    
-		NAME = life_frozen_category    
+	option = {
+		# life_frozen_category    
+		NAME = life_frozen_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2486,14 +2691,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = life_frozen_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = life_frozen_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# life_barren_category    
-		NAME = life_barren_category    
+	option = {
+		# life_barren_category    
+		NAME = life_barren_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2503,14 +2709,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = life_barren_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = life_barren_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# battle_uninhabitable_category    
-		NAME = battle_uninhabitable_category    
+	option = {
+		# battle_uninhabitable_category    
+		NAME = battle_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2520,14 +2727,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = battle_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = battle_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# shipyard_uninhabitable_category    
-		NAME = shipyard_uninhabitable_category    
+	option = {
+		# shipyard_uninhabitable_category    
+		NAME = shipyard_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2537,14 +2745,15 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = shipyard_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = shipyard_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# inhabited_toxic_category    
-		NAME = inhabited_toxic_category    
+	option = {
+		# inhabited_toxic_category    
+		NAME = inhabited_toxic_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2552,50 +2761,20 @@ country_event = {						# anomalies menu
 		}
 		allow = {
 			exists = event_target:target_country
-			from = { is_planet_class = pc_toxic }
-		}
-		from = {
-		add_anomaly = {
-			category = inhabited_toxic_category     
-			target = event_target:target_country }
-		}
-	}
-
-	option = { 					# writing_uninhabitable_category    
-		NAME = writing_uninhabitable_category    
-		trigger = {
 			from = {
-				uninhabitable_regular_planet = yes
+				is_planet_class = pc_toxic
 			}
 		}
-		allow = {
-			exists = event_target:target_country
-		}
 		from = {
-		add_anomaly = {
-			category = writing_uninhabitable_category     
-			target = event_target:target_country }
-		}
-	}
-	option = { 					# beacon_uninhabitable_category    
-		NAME = beacon_uninhabitable_category    
-		trigger = {
-			from = {
-				uninhabitable_regular_planet = yes
+			add_anomaly = {
+				category = inhabited_toxic_category
+				target = event_target:target_country
 			}
 		}
-		allow = {
-			exists = event_target:target_country
-			from = { has_any_strategic_resource = no }
-		}
-		from = {
-		add_anomaly = {
-			category = beacon_uninhabitable_category     
-			target = event_target:target_country }
-		}
 	}
-	option = { 					# mountain_uninhabitable_category    
-		NAME = mountain_uninhabitable_category    
+	option = {
+		# writing_uninhabitable_category    
+		NAME = writing_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2605,13 +2784,36 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = mountain_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = writing_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-	option = { 					# object_uninhabitable_category    
-		NAME = object_uninhabitable_category    
+	option = {
+		# beacon_uninhabitable_category    
+		NAME = beacon_uninhabitable_category
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+			from = {
+				has_any_strategic_resource = no
+			}
+		}
+		from = {
+			add_anomaly = {
+				category = beacon_uninhabitable_category
+				target = event_target:target_country
+			}
+		}
+	}
+	option = {
+		# mountain_uninhabitable_category    
+		NAME = mountain_uninhabitable_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2621,16 +2823,34 @@ country_event = {						# anomalies menu
 			exists = event_target:target_country
 		}
 		from = {
-		add_anomaly = {
-			category = object_uninhabitable_category     
-			target = event_target:target_country }
+			add_anomaly = {
+				category = mountain_uninhabitable_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-			# terraforming candidate anomalies
-
-	option = { 					# terraforming_candidate_category     
-		NAME = terraforming_candidate_category     
+	option = {
+		# object_uninhabitable_category    
+		NAME = object_uninhabitable_category
+		trigger = {
+			from = {
+				uninhabitable_regular_planet = yes
+			}
+		}
+		allow = {
+			exists = event_target:target_country
+		}
+		from = {
+			add_anomaly = {
+				category = object_uninhabitable_category
+				target = event_target:target_country
+			}
+		}
+	}
+	# terraforming candidate anomalies
+	option = {
+		# terraforming_candidate_category     
+		NAME = terraforming_candidate_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2639,13 +2859,15 @@ country_event = {						# anomalies menu
 		allow = {
 			exists = event_target:target_country
 			from = {
-				NOT = { has_modifier = terraforming_candidate }
+				NOT = {
+					has_modifier = terraforming_candidate
+				}
 				OR = {
 					is_planet_class = pc_barren
 					is_planet_class = pc_barren_cold
-				}	
+				}
 				planet_size > 9
-				planet_size < 26	
+				planet_size < 26
 				solar_system = {
 					NOR = {
 						is_star_class = sc_black_hole
@@ -2656,14 +2878,15 @@ country_event = {						# anomalies menu
 			}
 		}
 		from = {
-		add_anomaly = {
-			category = terraforming_candidate_category      
-			target = event_target:target_country }
+			add_anomaly = {
+				category = terraforming_candidate_category
+				target = event_target:target_country
+			}
 		}
 	}
-
-	option = { 					# living_metal_category     
-		NAME = living_metal_category     
+	option = {
+		# living_metal_category     
+		NAME = living_metal_category
 		trigger = {
 			from = {
 				uninhabitable_regular_planet = yes
@@ -2685,19 +2908,19 @@ country_event = {						# anomalies menu
 			}
 		}
 		from = {
-		add_anomaly = {
-			category = living_metal_category      
-			target = event_target:target_country }
+			add_anomaly = {
+				category = living_metal_category
+				target = event_target:target_country
+			}
 		}
 	}
-	
-
 	option = {
 		NAME = Exit
 	}
 }
 
-country_event = {							# spawn armies menu
+country_event = {
+	# spawn armies menu
 	id = sgm_planets.56
 	is_triggered_only = yes
 	title = sgm_planets_56
@@ -2709,7 +2932,6 @@ country_event = {							# spawn armies menu
 		portrait = event_target:target_country.owner_main_species
 		room = enclave_curator_room
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -2721,7 +2943,6 @@ country_event = {							# spawn armies menu
 			set_global_flag = creating_army_flag
 		}
 	}
-
 	option = {
 		NAME = creating_army
 		trigger = {
@@ -2737,7 +2958,6 @@ country_event = {							# spawn armies menu
 			}
 		}
 	}
-
 	option = {
 		NAME = creating_army_transport
 		trigger = {
@@ -2753,10 +2973,11 @@ country_event = {							# spawn armies menu
 			}
 		}
 	}
-
 	option = {
 		NAME = spawn_armies
-		from = { sgm_spawn_army_type_check = yes }
+		from = {
+			sgm_spawn_army_type_check = yes
+		}
 		country_event = {
 			id = sgm_planets.56
 			scopes = {
@@ -2765,7 +2986,6 @@ country_event = {							# spawn armies menu
 			}
 		}
 	}
-
 	option = {
 		allow = {
 			NOT = {
@@ -3302,12 +3522,10 @@ country_event = {							# spawn armies menu
 	}
 }
 
-
 country_event = {
 	id = sgm_planets.4199
 	is_triggered_only = yes
 	hide_window = yes
-
 	immediate = {
 		from = {
 			planet_event = {
@@ -3318,7 +3536,6 @@ country_event = {
 }
 
 # this is a modified version of unrest.4200, check to be sure it hasn't been updated
-
 planet_event = {
 	id = sgm_planets.4200
 	title = unrest.4200.name
@@ -3326,40 +3543,50 @@ planet_event = {
 	desc = {
 		trigger = {
 			has_planet_flag = nationalist_revolt
-			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
 		}
 		text = unrest.4200.desc.returner
 	}
 	desc = {
 		trigger = {
 			has_planet_flag = secessionist_revolt
-			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
 		}
 		text = unrest.4200.desc.secession
 	}
 	desc = {
 		trigger = {
 			has_planet_flag = nationalist_revolt
-			owner = { has_ethic = ethic_gestalt_consciousness }
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 		text = unrest.4200.desc.returner.gesta
 	}
 	desc = {
 		trigger = {
 			has_planet_flag = secessionist_revolt
-			owner = { has_ethic = ethic_gestalt_consciousness }
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 		text = unrest.4200.desc.secession.gesta
 	}
 	picture = GFX_evt_surrender
 	show_sound = event_ground_battle
 	location = root
-
 	#mean_time_to_happen = { months = 600 }
 	pre_triggers = {
 		has_ground_combat = no
 	}
-
 	trigger = {
 		#planet_stability < @stabilitylevel1
 		#check_variable = {
@@ -3390,7 +3617,6 @@ planet_event = {
 		#	}
 		#}
 	}
-
 	immediate = {
 		set_planet_flag = revolt_in_progress
 		set_variable = {
@@ -3414,12 +3640,17 @@ planet_event = {
 			value = 0.67
 		}
 		if = {
-			limit = { # has original owner
+			limit = {
+				# has original owner
 				original_owner = no
 				any_country = {
-					NOT = { is_same_value = root.owner }
+					NOT = {
+						is_same_value = root.owner
+					}
 					is_subject = no
-					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
 					root = {
 						is_original_owner = prev
 						any_owned_pop = {
@@ -3430,9 +3661,13 @@ planet_event = {
 			}
 			random_country = {
 				limit = {
-					NOT = { is_same_value = root.owner }
+					NOT = {
+						is_same_value = root.owner
+					}
 					is_subject = no
-					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
 					root = {
 						is_original_owner = prev
 						any_owned_pop = {
@@ -3443,7 +3678,9 @@ planet_event = {
 				save_event_target_as = fatherland
 			}
 			random_owned_pop = {
-				limit = { is_same_species = event_target:fatherland }
+				limit = {
+					is_same_species = event_target:fatherland
+				}
 				save_event_target_as = nationalist_pop
 			}
 			create_rebels = {
@@ -3489,7 +3726,8 @@ planet_event = {
 				days = 720
 			}
 		}
-		else = { # no original owner
+		else = {
+			# no original owner
 			random_owned_pop = {
 				limit = {
 					is_sapient = yes
@@ -3499,7 +3737,9 @@ planet_event = {
 			}
 			if = {
 				limit = {
-					NOT = { exists = event_target:rebel_pop }
+					NOT = {
+						exists = event_target:rebel_pop
+					}
 				}
 				random_owned_pop = {
 					limit = {
@@ -3510,7 +3750,9 @@ planet_event = {
 			}
 			if = {
 				limit = {
-					NOT = { exists = event_target:rebel_pop }
+					NOT = {
+						exists = event_target:rebel_pop
+					}
 				}
 				random_owned_pop = {
 					save_event_target_as = rebel_pop
@@ -3558,7 +3800,6 @@ planet_event = {
 		}
 		clear_variable = rebel_armies_var
 	}
-
 	option = {
 		name = UNFORTUNATE
 	}
@@ -3570,20 +3811,50 @@ country_event = {
 	title = sgm_planets_57
 	desc = sgm_planets_57_desc
 	picture = GFX_evt_alien_city
-
-	immediate = {}
-
-	option = {							
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					exists = event_target:sgm_spawn_megastructure_target_planet
+				}
+			}
+			from = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_primary_star = yes
+						}
+						save_event_target_as = sgm_spawn_megastructure_target_planet
+					}
+				}
+			}
+		}
+	}
+	option = {
 		allow = {
 			host_has_dlc = "Utopia"
 		}
 		NAME = dyson_sphere_0
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = dyson_sphere_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3594,11 +3865,25 @@ country_event = {
 		}
 		NAME = sgm_dyson_sphere_permanently_ruined
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = dyson_sphere_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3609,11 +3894,25 @@ country_event = {
 		}
 		NAME = dyson_sphere_ruined
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = dyson_sphere_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3621,14 +3920,28 @@ country_event = {
 	option = {
 		allow = {
 			host_has_dlc = "Utopia"
-		}							
+		}
 		NAME = spy_orb_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = spy_orb_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3639,11 +3952,25 @@ country_event = {
 		}
 		NAME = spy_orb_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = spy_orb_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3654,27 +3981,54 @@ country_event = {
 		}
 		NAME = spy_orb_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = spy_orb_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Utopia"
-		}					
+		}
 		NAME = think_tank_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = think_tank_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3685,11 +4039,25 @@ country_event = {
 		}
 		NAME = sgm_think_tank_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = think_tank_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3700,24 +4068,51 @@ country_event = {
 		}
 		NAME = think_tank_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = think_tank_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-
-	option = {							
+	option = {
 		NAME = gateway_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = gateway_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3725,27 +4120,54 @@ country_event = {
 	option = {
 		NAME = gateway_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = gateway_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Megacorp"
-		}					
+		}
 		NAME = matter_decompressor_0
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = matter_decompressor_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3756,11 +4178,25 @@ country_event = {
 		}
 		NAME = sgm_matter_decompressor_permanently_ruined
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = matter_decompressor_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3771,11 +4207,25 @@ country_event = {
 		}
 		NAME = matter_decompressor_ruined
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = matter_decompressor_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3786,11 +4236,25 @@ country_event = {
 		}
 		NAME = sgm_strategic_coordination_center_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = strategic_coordination_center_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3801,26 +4265,54 @@ country_event = {
 		}
 		NAME = strategic_coordination_center_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = strategic_coordination_center_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Federations"
-		}					
+		}
 		NAME = mega_art_installation_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_art_installation_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3831,11 +4323,25 @@ country_event = {
 		}
 		NAME = sgm_mega_art_installation_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_art_installation_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3846,26 +4352,54 @@ country_event = {
 		}
 		NAME = mega_art_installation_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_art_installation_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Megacorp"
-		}					
+		}
 		NAME = interstellar_assembly_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = interstellar_assembly_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3876,11 +4410,25 @@ country_event = {
 		}
 		NAME = sgm_interstellar_assembly_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = interstellar_assembly_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3891,26 +4439,54 @@ country_event = {
 		}
 		NAME = interstellar_assembly_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = interstellar_assembly_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Federations"
-		}					
+		}
 		NAME = mega_shipyard_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_shipyard_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3921,11 +4497,25 @@ country_event = {
 		}
 		NAME = sgm_mega_shipyard_permanently_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_shipyard_permanently_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3936,11 +4526,25 @@ country_event = {
 		}
 		NAME = mega_shipyard_ruined
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = mega_shipyard_ruined
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
@@ -3949,31 +4553,57 @@ country_event = {
 		allow = {
 			host_has_dlc = "Utopia"
 		}
-		NAME = habitat_0 
+		NAME = habitat_0
 		from = {
+			save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
-				spawn_megastructure = {
-					type = habitat_0 
-					planet = this
-					graphical_culture = mammalian_01
+				if = {
+					limit = {
+						exists = owner
+					}
+					spawn_megastructure = {
+						type = habitat_0
+						planet = event_target:sgm_spawn_megastructure_target_planet
+						graphical_culture = space_owner
+					}
+				}
+				else = {
+					spawn_megastructure = {
+						type = habitat_0
+						planet = event_target:sgm_spawn_megastructure_target_planet
+						graphical_culture = mammalian_01
+					}
 				}
 			}
 		}
 	}
-	option = {		
+	option = {
 		allow = {
 			host_has_dlc = "Nemesis"
-		}					
+		}
 		NAME = crisis_sphere_0
 		from = {
+			# save_event_target_as = sgm_spawn_megastructure_target_planet
 			solar_system = {
 				spawn_megastructure = {
 					type = crisis_sphere_0
-					planet = this
+					planet = event_target:sgm_spawn_megastructure_target_planet
 					graphical_culture = mammalian_01
+					init_effect = {
+						if = {
+							limit = {
+								NOT = {
+									exists = owner
+								}
+								solar_system = {
+									exists = owner
+								}
+							}
+							set_owner = solar_system.owner
+						}
+					}
 				}
 			}
 		}
 	}
 }
-
