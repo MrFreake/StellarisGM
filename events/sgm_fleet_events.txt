@@ -159,7 +159,7 @@ country_event = {
 		}
 		from = {
 			fire_on_action = {
-				on_action = sgm_on_antion_make_assign_fleet_leader
+				on_action = sgm_on_make_assign_fleet_leader
 				scopes = {
 					from = from
 				}

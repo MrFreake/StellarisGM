@@ -268,7 +268,7 @@ country_event = {
 						queue_actions = {
 							move_to = from
 							effect = {
-								id = "colony.180.effect.1"
+								id = "sgm_colony.180.effect.1"
 								from = {
 									planet_event = { id = colony.183 }
 								}

@@ -2,7 +2,7 @@ guiTypes = {
 	### modifier_var event window
 
 	containerWindowType = {
-		name = "sgm_ScalarEventWindow"
+		name = "sgm_FleetOrdersEventWindow"
 		orientation = center
 		origo = center
 		moveable = yes
@@ -302,104 +302,29 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 			effectbuttonType = {					
-				name = modifier_var_minus_thousand
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 92 y = -85 }
+				name = sgm_clear_fleet_orders_and_actions
+				quadTextureSprite = "GFX_sgm_button_wide"
+				position = { x = 60 y = -85 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-1000"
+				buttonText = sgm_clear_fleet_orders_and_actions
 				orientation = CENTER_LEFT
-				effect = modifier_var_minus_thousand
+				effect = sgm_clear_fleet_orders_and_actions
+				# pdx_tooltip = sgm_clear_fleet_orders_and_actions	# custom_tooltip
+				# pdx_tooltip_delayed = sgm_clear_fleet_orders_and_actions_tooltip	# custom_tooltip
 	#			shortCut = j
 			}
 			effectbuttonType = {					
-				name = modifier_var_minus_hundred
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 124 y = -85 }
+				name = sgm_set_fleet_order_move_to_system_point_order
+				quadTextureSprite = "GFX_sgm_button_wide"
+				position = { x = 292 y = -85 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-100"
+				buttonText = sgm_set_fleet_order_move_to_system_point_order
 				orientation = CENTER_LEFT
-				effect = modifier_var_minus_hundred
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_minus_ten
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 156 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-10"
-				orientation = CENTER_LEFT
-				effect = modifier_var_minus_ten
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_minus_one
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 188 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1"
-				orientation = CENTER_LEFT
-				effect = modifier_var_minus_one
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_value
-				#quadTextureSprite = "GFX_bounty_square"
-				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 218 y = -82 }
-				size = { x = 40 y = 32 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = modifier_var_value
-				orientation = CENTER_LEFT
-				effect = modifier_var_value
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_add_one
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 252 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1"
-				orientation = CENTER_LEFT
-				effect = modifier_var_add_one
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_add_ten
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 284 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+10"
-				orientation = CENTER_LEFT
-				effect = modifier_var_add_ten
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_add_hundred
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 316 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+100"
-				orientation = CENTER_LEFT
-				effect = modifier_var_add_hundred
-	#			shortCut = j
-			}
-			effectbuttonType = {					
-				name = modifier_var_add_thousand
-				quadTextureSprite = "GFX_bounty_square"
-				position = { x = 348 y = -85 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1000"
-				orientation = CENTER_LEFT
-				effect = modifier_var_add_thousand
+				effect = sgm_set_fleet_order_move_to_system_point_order
+				# pdx_tooltip = sgm_set_fleet_order_move_to_system_point_order	# custom_tooltip
+				# pdx_tooltip_delayed = sgm_set_fleet_order_move_to_system_point_order_tooltip	# custom_tooltip
 	#			shortCut = j
 			}
 			instantTextBoxType={

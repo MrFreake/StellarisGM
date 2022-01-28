@@ -1,0 +1,62 @@
+namespace = sgm_fleet_orders
+country_event = {
+	id = sgm_fleet_orders.3
+	is_triggered_only = yes
+	title = sgm_fleet_orders.3.name
+	desc = sgm_fleet_orders.3.desc
+	# picture = GFX_evt_binary_stars
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_FleetOrdersEventWindow
+	option = {
+		name = EXIT
+	}
+}
+
+fleet_event = {
+	id = sgm_fleet_orders.4
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# set_fleet_flag = debug_order_issued
+		fleet_event = {
+			id = sgm_fleet_orders.5			# Check if fleet moved.
+			days = 1
+			scopes = {
+				from = from
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = sgm_fleet_orders.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_fleet_idle = yes		# Clear order queue if issue failed.
+	}
+	immediate = {
+		# set_fleet_flag = debug_order_failed
+		clear_orders = yes
+		clear_fleet_actions = this
+		fire_on_action = {
+			on_action = sgm_on_fleet_order_failed
+			scopes = {
+				from = from
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = sgm_fleet_orders.6
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# set_fleet_flag = debug_order_completed
+	}
+}
