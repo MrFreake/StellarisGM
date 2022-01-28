@@ -10,7 +10,6 @@ event = {
 	is_triggered_only = yes
 
 	trigger = {
-		AND = {
 		NOR = {
 			event_target:global_event_country = { has_country_flag = galcom_formation_blocked }
 			has_global_flag = galactic_community_founded
@@ -30,7 +29,6 @@ event = {
 			is_homicidal = no
 			is_gestalt = no
 		}
-	}
 }
 
 	immediate = {

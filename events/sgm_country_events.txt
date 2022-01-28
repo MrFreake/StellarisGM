@@ -3642,6 +3642,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_country_7
 	desc = sgm_country_7_desc
+	picture = GFX_evt_announcement
 
 	immediate = {}
 
@@ -4507,7 +4508,7 @@ country_event = {
 					has_trait = trait_machine_unit 
 				}
 			}
-			has_synthetic_dawn = yes
+			has_synthethic_dawn = yes
 		}
 		from = {
 			modify_species = {
@@ -4534,7 +4535,7 @@ country_event = {
 					has_trait = trait_mechanical 
 				}
 			}
-			has_synthetic_dawn = yes
+			has_synthethic_dawn = yes
 		}
 		from = {
 			modify_species = {
@@ -4725,6 +4726,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_country_9
 	desc = sgm_country_9_desc
+	picture = GFX_evt_arguing_senate
 
 	immediate = {}
 

@@ -5,6 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = sgm_cheats_1
 	desc = sgm_cheats_1_desc
+	picture = GFX_evt_synth_sabotage
 
 	immediate = {
 		if = {

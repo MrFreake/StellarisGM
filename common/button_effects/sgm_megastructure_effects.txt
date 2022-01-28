@@ -56,6 +56,17 @@ sgm_finish_megastructure_stage = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				NOT = {
+					exists = owner
+				}
+				solar_system = {
+					exists = owner
+				}
+			}
+			set_owner = solar_system.owner
+		}
 		finish_upgrade = yes
 	}	
 }
@@ -69,6 +80,17 @@ sgm_begin_next_stage = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				NOT = {
+					exists = owner
+				}
+				solar_system = {
+					exists = owner
+				}
+			}
+			set_owner = solar_system.owner
+		}
 		sgm_begin_next_megastructure_stage = yes
 		set_graphical_culture = mammalian_01
 	}
@@ -81,6 +103,17 @@ sgm_finish_megastructure = {
 	allow = { }
 
 	effect = {
+		if = {
+			limit = {
+				NOT = {
+					exists = owner
+				}
+				solar_system = {
+					exists = owner
+				}
+			}
+			set_owner = solar_system.owner
+		}
 		while = {
 			count = 5
 			sgm_begin_next_megastructure_stage = yes
@@ -107,6 +140,17 @@ sgm_activate_gateway = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				NOT = {
+					exists = owner
+				}
+				solar_system = {
+					exists = owner
+				}
+			}
+			set_owner = solar_system.owner
+		}
 		activate_gateway = this
 	}	
 }

@@ -141,3 +141,11 @@ sgm_set_formation_scale_tooltip: "set_formation_scale = modifier_var\nAccepted i
 # Mob spawner and fleet cloner
 sgm_clone_fleet: "Clone $FLEET$"
 sgm_clone_fleet_desc: "$fallen_empires_tasks.24.a$"
+
+# Fleet Order
+sgm_fleet_orders.3.name: "$buildable_fleet$ $ORDERS$"
+sgm_fleet_orders.3.desc: "$buildable_fleet$ $ORDERS$"
+sgm_set_fleet_order_move_to_system_point_order: "$MOVE_ORDER$"
+sgm_set_fleet_order_move_to_system_point_order_tooltip: "$MOVE_ORDER_DESC$"
+sgm_clear_fleet_orders_and_actions: "$CANCEL$"
+sgm_clear_fleet_orders_and_actions_tooltip: "$CANCEL$ $buildable_fleet$ $ORDERS$"
