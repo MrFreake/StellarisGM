@@ -1,0 +1,18 @@
+namespace = sgm_notify
+
+country_event = {
+	id = sgm_notify.1
+	is_triggered_only = yes
+	title = sgm_notify_1
+	desc = sgm_notify_1_desc
+	picture = GFX_evt_ancient_artifact
+
+	immediate = {
+		remove_global_flag = roll_in_progress
+	}
+
+	option = {
+		NAME = final_roll_result
+	}
+
+}
