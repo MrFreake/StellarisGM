@@ -29,8 +29,31 @@ sgm_on_fleet_cloned = {
 # Creates and assigns leader to this fleet
 # This = fleet
 # From = fleet
-sgm_on_antion_make_assign_fleet_leader = {
+sgm_on_make_assign_fleet_leader = {
 	events = {
 		sgm_ship_spawner.12
+	}
+}
+
+# This = fleet
+# From = target
+sgm_on_fleet_order_issued = {
+	events = {
+		sgm_fleet_orders.4
+	}
+}
+
+# This = fleet
+# From = target
+sgm_on_fleet_order_failed = {
+	events = {
+	}
+}
+
+# This = fleet
+# From = target
+sgm_on_fleet_order_completed = {
+	events = {
+		sgm_fleet_orders.6
 	}
 }

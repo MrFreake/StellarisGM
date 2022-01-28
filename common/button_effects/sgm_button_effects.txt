@@ -161,3 +161,20 @@ modifier_var_value = {
 	}
 	effect = { }
 }
+
+sgm_cheats_menu = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_cheats.1
+				scopes = {
+					from = this
+				}
+			}
+		}
+	}
+}

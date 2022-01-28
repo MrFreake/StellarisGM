@@ -1,0 +1,171 @@
+namespace = sgm_cheats
+
+country_event = {
+	id = sgm_cheats.1
+	is_triggered_only = yes
+	title = sgm_cheats_1
+	desc = sgm_cheats_1_desc
+	picture = GFX_evt_synth_sabotage
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = applying_to_target_country
+					has_global_flag = applying_to_target_federation
+					has_global_flag = applying_to_all_countries
+				}
+			}
+			set_global_flag = applying_to_target_country
+		}
+	}
+
+	option = {
+		NAME = applying_to_target_country
+		trigger = {
+			has_global_flag = applying_to_target_country
+		}
+		remove_global_flag = applying_to_target_country
+		set_global_flag = applying_to_target_federation
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = applying_to_target_federation
+		trigger = {
+			has_global_flag = applying_to_target_federation
+		}
+		remove_global_flag = applying_to_target_federation
+		set_global_flag = applying_to_all_countries
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = applying_to_all_countries
+		trigger = {
+			has_global_flag = applying_to_all_countries
+		}
+		remove_global_flag = applying_to_all_countries
+		set_global_flag = applying_to_target_country
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = apply_infinite_resource_effect
+		apply_infinite_resource_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = remove_infinite_resource_effect
+		remove_infinite_resource_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = add_instant_build_effect
+		add_instant_build_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = remove_instant_build_effect
+		remove_instant_build_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = add_instant_research_effect
+		add_instant_research_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = remove_instant_research_effect
+		remove_instant_research_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = survey_systems_effect
+		survey_systems_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = give_all_technology
+		sgm_cheat_all_technology_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+
+	option = {
+		NAME = establish_all_communications
+		sgm_establish_communications_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+
+	option = {
+		NAME = make_advanced_empire
+		sgm_make_advanced_empire_effect = yes
+		country_event = {
+			id = sgm_cheats.1
+			scopes = {
+				from = this
+			}
+		}
+	}
+	option = {
+		NAME = Exit
+	}
+
+}

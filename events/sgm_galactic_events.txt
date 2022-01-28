@@ -234,6 +234,59 @@ country_event = {
 	}
 
 	option = {
+		NAME = start_space_storm
+		country_event = {
+			id = galactic_features.401
+		}
+	}
+
+	option = {
+		NAME = destroy_galaxy
+		allow = {
+			host_has_dlc = "Nemesis"
+		}
+		country_event = {
+			id = sgm_confirmation.6
+		}
+	}
+
+	option = {
+		NAME = increase_end_of_cycle_odds
+		allow = {
+			NOT = {
+				has_global_flag = impending_doom
+			}
+			host_has_dlc = "Utopia"
+		}
+		set_global_flag = impending_doom
+	}
+
+	option = {
+		NAME = begin_end_of_cycle
+		allow = {
+			exists = event_target:target_country
+			host_has_dlc = "Utopia"
+		}
+		event_target:target_country = {
+			country_event = {
+				id = utopia.3306
+			}
+		}
+	}
+
+	option = {
+		NAME = end_the_cycle
+		allow = {
+			host_has_dlc = "Utopia"
+		}
+		event_target:target_country = {
+			country_event = {
+				id = utopia.3320
+			}
+		}
+	}
+
+	option = {
 		NAME = spawn_star_cluster
 		country_event = {
 			id = sgm_system.4
@@ -573,7 +626,7 @@ country_event = {													# Spectral Wraith
 							repeat = {
 								find_closest_system = {
 									trigger = {
-										id = wraith.1.trigger.1
+										id = sgm_wraith.1.trigger.1
 										NOR = {
 											exists = space_owner
 											any_fleet_in_system = {
@@ -586,7 +639,7 @@ country_event = {													# Spectral Wraith
 										move_to = this
 										find_closest_planet = {
 											trigger = {
-												id = wraith.1.trigger.2
+												id = sgm_wraith.1.trigger.2
 												is_star = yes
 											}
 											found_planet = {

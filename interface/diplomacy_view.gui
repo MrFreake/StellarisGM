@@ -1484,6 +1484,17 @@ guiTypes = {
 						effect = sgm_modify_main_species
 			#			shortCut = j
 					}
+					effectbuttonType = {					
+						name = sgm_set_ai_personality
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						position = { x = 2 y = 409 }
+						scale = 1
+						buttonFont = malgun_goth_24
+						buttonText = sgm_set_ai_personality
+						orientation = UPPER_LEFT
+						effect = sgm_set_ai_personality
+			#			shortCut = j
+					}
 					
 					
 					# middle column
