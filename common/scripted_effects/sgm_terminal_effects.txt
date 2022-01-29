@@ -1,0 +1,1570 @@
+# Set up SGM Global Event Country.
+sgm_terminal_create_global_country_if_needed = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:sgm_global_country
+			}
+		}
+		create_species = {
+			class = MOL
+			portrait = mol17
+			effect = {
+				save_global_event_target_as = sgm_global_species
+			}
+		}
+		create_country = {
+			type = sgm_global_country
+			name = gm_global_country
+			species = event_target:sgm_global_species
+			effect = {
+				save_global_event_target_as = sgm_global_country
+			}
+		}
+		last_created_country = {
+			create_leader = {
+				class = general
+				name = gm_global_country
+				species = event_target:sgm_global_species
+				immortal = yes
+			}
+			last_created_leader = {
+				set_leader_flag = sgm_name_register
+				save_global_event_target_as = sgm_event_target_mod_name_register
+			}
+			sgm_terminal_register_sgm_global_country_leaders = yes
+		}
+	}
+}
+
+# has to be event_target:sgm_global_country scope
+sgm_terminal_register_sgm_global_country_leaders = {
+	# scopes
+	sgm_terminal_register_name = {
+		FLAG = sgm_terminal_event_target_1
+	}
+	sgm_terminal_register_name = {
+		FLAG = sgm_terminal_event_target_2
+	}
+	sgm_terminal_register_name = {
+		FLAG = sgm_terminal_event_target_3
+	}
+	sgm_terminal_register_name = {
+		FLAG = sgm_terminal_event_target_4
+	}
+	sgm_terminal_register_name = {
+		FLAG = sgm_terminal_event_target_5
+	}
+	sgm_terminal_register_name = {
+		FLAG = target
+	}
+	sgm_terminal_register_name = {
+		FLAG = orbit
+	}
+	sgm_terminal_register_name = {
+		FLAG = planet
+	}
+	sgm_terminal_register_name = {
+		FLAG = star
+	}
+	sgm_terminal_register_name = {
+		FLAG = branch_office_owner
+	}
+	sgm_terminal_register_name = {
+		FLAG = pop
+	}
+	sgm_terminal_register_name = {
+		FLAG = species
+	}
+	sgm_terminal_register_name = {
+		FLAG = assembling_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = built_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = declining_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = fleet
+	}
+	sgm_terminal_register_name = {
+		FLAG = from
+	}
+	sgm_terminal_register_name = {
+		FLAG = this
+	}
+	sgm_terminal_register_name = {
+		FLAG = root
+	}
+	sgm_terminal_register_name = {
+		FLAG = prev
+	}
+	sgm_terminal_register_name = {
+		FLAG = capital_scope
+	}
+	sgm_terminal_register_name = {
+		FLAG = owner
+	}
+	sgm_terminal_register_name = {
+		FLAG = controller
+	}
+	sgm_terminal_register_name = {
+		FLAG = fromfrom
+	}
+	sgm_terminal_register_name = {
+		FLAG = prevprev
+	}
+	sgm_terminal_register_name = {
+		FLAG = prevprevprev
+	}
+	sgm_terminal_register_name = {
+		FLAG = prevprevprevprev
+	}
+	sgm_terminal_register_name = {
+		FLAG = home_planet
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_fleet
+	}
+	sgm_terminal_register_name = {
+		FLAG = owner_main_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_country
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = alliance
+	}
+	sgm_terminal_register_name = {
+		FLAG = overlord
+	}
+	sgm_terminal_register_name = {
+		FLAG = federation
+	}
+	sgm_terminal_register_name = {
+		FLAG = research_station
+	}
+	sgm_terminal_register_name = {
+		FLAG = mining_station
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_pop
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_system
+	}
+	sgm_terminal_register_name = {
+		FLAG = planet_owner
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_ambient_object
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_ship
+	}
+	sgm_terminal_register_name = {
+		FLAG = orbital_station
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_leader
+	}
+	sgm_terminal_register_name = {
+		FLAG = owner_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = fromfromfrom
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_army
+	}
+	sgm_terminal_register_name = {
+		FLAG = envoy_location_country
+	}
+	sgm_terminal_register_name = {
+		FLAG = contact_country
+	}
+	sgm_terminal_register_name = {
+		FLAG = sector_capital
+	}
+	sgm_terminal_register_name = {
+		FLAG = observation_outpost_owner
+	}
+	sgm_terminal_register_name = {
+		FLAG = observation_outpost
+	}
+	sgm_terminal_register_name = {
+		FLAG = federation_leader
+	}
+	sgm_terminal_register_name = {
+		FLAG = associated_federation
+	}
+	sgm_terminal_register_name = {
+		FLAG = sector
+	}
+	sgm_terminal_register_name = {
+		FLAG = pop_faction
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_created_pop_faction
+	}
+	sgm_terminal_register_name = {
+		FLAG = unhappiest_pop
+	}
+	sgm_terminal_register_name = {
+		FLAG = heir
+	}
+	sgm_terminal_register_name = {
+		FLAG = fromfromfromfrom
+	}
+	sgm_terminal_register_name = {
+		FLAG = last_refugee_country
+	}
+	sgm_terminal_register_name = {
+		FLAG = starbase
+	}
+	sgm_terminal_register_name = {
+		FLAG = capital_star
+	}
+	sgm_terminal_register_name = {
+		FLAG = system_star
+	}
+	sgm_terminal_register_name = {
+		FLAG = no_scope
+	}
+	sgm_terminal_register_name = {
+		FLAG = archaeological_site
+	}
+	sgm_terminal_register_name = {
+		FLAG = excavator_fleet
+	}
+	sgm_terminal_register_name = {
+		FLAG = reverse_first_contact
+	}
+	sgm_terminal_register_name = {
+		FLAG = spynetwork
+	}
+	sgm_terminal_register_name = {
+		FLAG = growing_species
+	}
+	sgm_terminal_register_name = {
+		FLAG = galactic_emperor
+	}
+	sgm_terminal_register_name = {
+		FLAG = galactic_custodian
+	}
+	sgm_terminal_register_name = {
+		FLAG = attacker
+	}
+	sgm_terminal_register_name = {
+		FLAG = defender
+	}
+	sgm_terminal_register_name = {
+		FLAG = leader
+	}
+	sgm_terminal_register_name = {
+		FLAG = solar_system
+	}
+	sgm_terminal_register_name = {
+		FLAG = space_owner
+	}
+	sgm_terminal_register_name = {
+		FLAG = ruler
+	}
+}
+
+# has to be event_target:sgm_global_country scope
+sgm_terminal_register_name = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:sgm_leader_$FLAG$
+			}
+		}
+		create_leader = {
+			class = general
+			name = $FLAG$
+			species = event_target:sgm_global_species
+			set_age = 0
+			immortal = yes
+		}
+		last_created_leader = {
+			set_leader_flag = $FLAG$
+			save_global_event_target_as = sgm_leader_$FLAG$
+		}
+	}
+}
+
+sgm_terminal_deregister_name = {
+	event_target:sgm_global_country = {
+		every_owned_leader = {
+			limit = {
+				has_leader_flag = $FLAG$
+			}
+			kill_leader = {
+				type = general
+			}
+		}
+		clear_global_event_target = sgm_leader_$FLAG$
+	}
+}
+
+sgm_terminal_core_effect = {
+	switch = {
+		trigger = has_leader_flag
+		# Supported Scopes: megastructure planet fleet leader army starbase
+		sgm_terminal_event_target_1 = {
+			prev = {
+				event_target:sgm_terminal_event_target_1 = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sgm_terminal_event_target_2 = {
+			prev = {
+				event_target:sgm_terminal_event_target_2 = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sgm_terminal_event_target_3 = {
+			prev = {
+				event_target:sgm_terminal_event_target_3 = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sgm_terminal_event_target_4 = {
+			prev = {
+				event_target:sgm_terminal_event_target_4 = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sgm_terminal_event_target_5 = {
+			prev = {
+				event_target:sgm_terminal_event_target_5 = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		target = {
+			prev = {
+				target = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		orbit = {
+			prev = {
+				orbit = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		planet = {
+			prev = {
+				planet = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		star = {
+			prev = {
+				star = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		branch_office_owner = {
+			prev = {
+				branch_office_owner = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		pop = {
+			prev = {
+				pop = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		species = {
+			prev = {
+				species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		assembling_species = {
+			prev = {
+				assembling_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		built_species = {
+			prev = {
+				built_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		declining_species = {
+			prev = {
+				declining_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		fleet = {
+			prev = {
+				fleet = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		from = {
+			prev = {
+				from = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		this = {
+			prev = {
+				this = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		root = {
+			prev = {
+				root = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		prev = {
+			prev = {
+				prev = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		capital_scope = {
+			prev = {
+				capital_scope = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						event_target:sgm_global_country = {
+							fire_on_action = {
+								on_action = sgm_terminal_action
+								scopes = {
+									from = event_target:sgm_terminal_from
+									fromfrom = root.fromfrom
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		owner = {
+			prev = {
+				owner = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		controller = {
+			prev = {
+				controller = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		fromfrom = {
+			prev = {
+				fromfrom = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		prevprev = {
+			prev = {
+				prevprev = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		prevprevprev = {
+			prev = {
+				prevprevprev = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		prevprevprevprev = {
+			prev = {
+				prevprevprevprev = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		home_planet = {
+			prev = {
+				home_planet = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_fleet = {
+			prev = {
+				last_created_fleet = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		owner_main_species = {
+			prev = {
+				owner_main_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_country = {
+			prev = {
+				last_created_country = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_species = {
+			prev = {
+				last_created_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		alliance = {
+			prev = {
+				alliance = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		overlord = {
+			prev = {
+				overlord = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		federation = {
+			prev = {
+				federation = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		research_station = {
+			prev = {
+				research_station = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		mining_station = {
+			prev = {
+				mining_station = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_pop = {
+			prev = {
+				last_created_pop = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_system = {
+			prev = {
+				last_created_system = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		planet_owner = {
+			prev = {
+				planet_owner = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_ambient_object = {
+			prev = {
+				last_created_ambient_object = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_ship = {
+			prev = {
+				last_created_ship = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		orbital_station = {
+			prev = {
+				orbital_station = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_leader = {
+			prev = {
+				last_created_leader = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		owner_species = {
+			prev = {
+				owner_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		fromfromfrom = {
+			prev = {
+				fromfromfrom = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_army = {
+			prev = {
+				last_created_army = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		envoy_location_country = {
+			prev = {
+				envoy_location_country = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		contact_country = {
+			prev = {
+				contact_country = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sector_capital = {
+			prev = {
+				sector_capital = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		observation_outpost_owner = {
+			prev = {
+				observation_outpost_owner = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		observation_outpost = {
+			prev = {
+				observation_outpost = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		federation_leader = {
+			prev = {
+				federation_leader = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		associated_federation = {
+			prev = {
+				associated_federation = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		sector = {
+			prev = {
+				sector = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		pop_faction = {
+			prev = {
+				pop_faction = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_created_pop_faction = {
+			prev = {
+				last_created_pop_faction = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		unhappiest_pop = {
+			prev = {
+				unhappiest_pop = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		heir = {
+			prev = {
+				heir = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		fromfromfromfrom = {
+			prev = {
+				fromfromfromfrom = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		last_refugee_country = {
+			prev = {
+				last_refugee_country = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		starbase = {
+			prev = {
+				starbase = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		capital_star = {
+			prev = {
+				capital_star = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		system_star = {
+			prev = {
+				system_star = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		no_scope = {
+			prev = {
+				no_scope = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		archaeological_site = {
+			prev = {
+				archaeological_site = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		excavator_fleet = {
+			prev = {
+				excavator_fleet = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		reverse_first_contact = {
+			prev = {
+				reverse_first_contact = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		spynetwork = {
+			prev = {
+				spynetwork = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		growing_species = {
+			prev = {
+				growing_species = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		galactic_emperor = {
+			prev = {
+				galactic_emperor = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		galactic_custodian = {
+			prev = {
+				galactic_custodian = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		attacker = {
+			prev = {
+				attacker = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		defender = {
+			prev = {
+				defender = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		leader = {
+			prev = {
+				leader = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		solar_system = {
+			prev = {
+				solar_system = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		space_owner = {
+			prev = {
+				space_owner = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+		ruler = {
+			prev = {
+				ruler = {
+					save_event_target_as = sgm_terminal_from
+					event_target:sgm_global_country = {
+						fire_on_action = {
+							on_action = sgm_terminal_action
+							scopes = {
+								from = event_target:sgm_terminal_from
+								fromfrom = root.fromfrom
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

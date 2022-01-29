@@ -34,30 +34,17 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		NAME = Exit
-	}
-}
-namespace = sgm_manage_game
-
-country_event = {
-	id = sgm_manage_game.1
-	is_triggered_only = yes
-	title = sgm_manage_game_1
-	desc = sgm_manage_game_1_desc
-
-	immediate = {}
 
 	option = {
-		NAME = manage_bounty
-		country_event = {
-			id = sgm_bounty.2
-			scopes = {
-				from = from
+		NAME = rolls_disallowed
+		trigger = {
+			NOT = {
+				has_global_flag = roll_allowed
 			}
 		}
+		set_global_flag = roll_allowed
 		country_event = {
-			id = sgm_bounty.1
+			id = sgm_manage_game.1
 			scopes = {
 				from = from
 			}
@@ -65,14 +52,29 @@ country_event = {
 	}
 
 	option = {
-		NAME = manage_diplomacy
+		NAME = rolls_allowed
+		trigger = {
+			has_global_flag = roll_allowed
+		}
+		remove_global_flag = roll_allowed
 		country_event = {
-			id = sgm_diplomanagement.1
+			id = sgm_manage_game.1
 			scopes = {
 				from = from
 			}
 		}
 	}
+
+	option = {
+		NAME = sgm_terminal.1.name
+		country_event = {
+			id = sgm_terminal.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
 	option = {
 		NAME = Exit
 	}

@@ -128,6 +128,18 @@ guiTypes = {
 			#	spriteType = "GFX_tiles_frame"
 			#	alwaysTransparent = yes
 			#}
+			effectbuttonType = {					# roll 
+				name = sgm_roll
+				quadTextureSprite = "GFX_target_country"
+				position = { x = -99 y = 4 }
+				scale = 1
+				#buttonFont = malgun_goth_24
+				#buttonText = sgm_target_planet
+				orientation = UPPER_LEFT
+				effect = sgm_roll
+	#			shortCut = j
+				pdx_tooltip = "Roll D20"
+			}
 			effectbuttonType = {					# target 
 				name = sgm_target_planet
 				quadTextureSprite = "GFX_target_country"

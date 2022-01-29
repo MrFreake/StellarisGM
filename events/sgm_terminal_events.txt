@@ -1,0 +1,200 @@
+namespace = sgm_terminal
+country_event = {
+	id = sgm_terminal.1
+	is_triggered_only = yes
+	title = sgm_terminal.1.name
+	desc = sgm_terminal.1.desc
+	# picture = GFX_evt_binary_stars
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.owner_main_species
+		room = enclave_curator_room
+	}
+	custom_gui = sgm_TerminalEventWindow
+	immediate = {
+		# Immediate sets up test script (sub for selected options).
+		random_galaxy_planet = {
+			limit = {
+				exists = owner
+				is_colony = yes
+			}
+			random_owned_pop = {
+				save_global_event_target_as = sgm_terminal_event_target_1
+			}
+		}
+		random_country = {
+			limit = {
+				is_country_type = sgm_global_country				# There should be always only one.
+			}
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = owner
+				}
+				save_global_event_target_as = sgm_terminal_command_1
+			}
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = capital_scope
+				}
+				save_global_event_target_as = sgm_terminal_command_2
+			}
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = solar_system
+				}
+				save_global_event_target_as = sgm_terminal_command_3
+			}
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = prev
+				}
+				save_global_event_target_as = sgm_terminal_command_4
+			}
+		}
+	}
+	option = {
+		name = OK
+		allow = {
+			exists = event_target:sgm_terminal_event_target_1
+			exists = event_target:sgm_terminal_command_1
+		}
+		event_target:sgm_global_country = {
+			country_event = {
+				id = sgm_terminal.2
+				scopes = {
+					from = event_target:sgm_terminal_event_target_1
+					fromfrom = from					# GM country
+				}
+			}
+		}
+	}
+	# option = {
+	# 	name = OK
+	# 	event_target:target_country = {
+	# 		sgm_terminal_core_effect = yes
+	# 	}
+	# }
+	option = {
+		name = EXIT
+	}
+}
+
+# Execute terminal script
+country_event = {
+	id = sgm_terminal.2
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# from = {
+		# 	log = "Terminal scope: //[this.GetName]"
+		# }
+		fromfrom = {
+			log = "GM Country: //[this.GetRealName]"			# GM Country
+		}
+		if = {
+			limit = {
+				exists = event_target:sgm_terminal_event_target_1
+			}
+			if = {
+				limit = {
+					exists = event_target:sgm_terminal_command_1
+					NOT = {
+						has_country_flag = sg_terminal_command_1_executed
+					}
+				}
+				set_timed_country_flag = {
+					flag = sg_terminal_command_1_executed
+					days = 1
+				}
+				from = {
+					log = "Terminal command 1 scope: //[this.GetName]"
+					event_target:sgm_terminal_command_1 = {
+						sgm_terminal_core_effect = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = sg_terminal_command_1_executed
+					exists = event_target:sgm_terminal_command_2
+					NOT = {
+						has_country_flag = sg_terminal_command_2_executed
+					}
+				}
+				set_timed_country_flag = {
+					flag = sg_terminal_command_2_executed
+					days = 1
+				}
+				from = {
+					log = "Terminal command 2 scope: //[this.GetName]"
+					event_target:sgm_terminal_command_2 = {
+						sgm_terminal_core_effect = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = sg_terminal_command_2_executed
+					exists = event_target:sgm_terminal_command_3
+					NOT = {
+						has_country_flag = sg_terminal_command_3_executed
+					}
+				}
+				set_timed_country_flag = {
+					flag = sg_terminal_command_3_executed
+					days = 1
+				}
+				from = {
+					log = "Terminal command 3 scope: //[this.GetName]"
+					event_target:sgm_terminal_command_3 = {
+						sgm_terminal_core_effect = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = sg_terminal_command_3_executed
+					exists = event_target:sgm_terminal_command_4
+					NOT = {
+						has_country_flag = sg_terminal_command_4_executed
+					}
+				}
+				set_timed_country_flag = {
+					flag = sg_terminal_command_4_executed
+					days = 1
+				}
+				from = {
+					log = "Terminal command 4 scope: //[this.GetName]"
+					event_target:sgm_terminal_command_4 = {
+						sgm_terminal_core_effect = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = sg_terminal_command_4_executed
+					exists = event_target:sgm_terminal_command_5
+					NOT = {
+						has_country_flag = sg_terminal_command_5_executed
+					}
+				}
+				set_timed_country_flag = {
+					flag = sg_terminal_command_5_executed
+					days = 1
+				}
+				from = {
+					log = "Terminal command 5 scope: //[this.GetName]"
+					event_target:sgm_terminal_command_5 = {
+						sgm_terminal_core_effect = yes
+					}
+				}
+			}
+			else = {
+				log = "End of terminal script."
+			}
+		}
+		else = {
+			log = "event_target:sgm_terminal_event_target_1 does not exist"
+		}
+	}
+}
