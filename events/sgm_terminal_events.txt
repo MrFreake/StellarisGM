@@ -13,13 +13,20 @@ country_event = {
 	custom_gui = sgm_TerminalEventWindow
 	immediate = {
 		# Immediate sets up test script (sub for selected options).
-		random_galaxy_planet = {
+		if = {
 			limit = {
-				exists = owner
-				is_colony = yes
+				NOT = {
+					exists = event_target:sgm_terminal_event_target_1
+				}
 			}
-			random_owned_pop = {
-				save_global_event_target_as = sgm_terminal_event_target_1
+			random_galaxy_planet = {
+				limit = {
+					exists = owner
+					is_colony = yes
+				}
+				random_owned_pop = {
+					save_global_event_target_as = sgm_terminal_event_target_1
+				}
 			}
 		}
 		random_country = {
@@ -34,21 +41,9 @@ country_event = {
 			}
 			random_owned_leader = {
 				limit = {
-					has_leader_flag = capital_scope
+					has_leader_flag = win
 				}
 				save_global_event_target_as = sgm_terminal_command_2
-			}
-			random_owned_leader = {
-				limit = {
-					has_leader_flag = solar_system
-				}
-				save_global_event_target_as = sgm_terminal_command_3
-			}
-			random_owned_leader = {
-				limit = {
-					has_leader_flag = prev
-				}
-				save_global_event_target_as = sgm_terminal_command_4
 			}
 		}
 	}

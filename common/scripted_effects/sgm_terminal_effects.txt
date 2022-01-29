@@ -32,6 +32,13 @@ sgm_terminal_create_global_country_if_needed = {
 				set_leader_flag = sgm_name_register
 				save_global_event_target_as = sgm_event_target_mod_name_register
 			}
+		}
+	}
+	if = {
+		limit = {
+			exists = event_target:sgm_global_country
+		}
+		event_target:sgm_global_country = {
 			sgm_terminal_register_sgm_global_country_leaders = yes
 		}
 	}
@@ -273,6 +280,10 @@ sgm_terminal_register_sgm_global_country_leaders = {
 	}
 	sgm_terminal_register_name = {
 		FLAG = ruler
+	}
+	# effects
+	sgm_terminal_register_name = {
+		FLAG = win
 	}
 }
 
@@ -1564,6 +1575,20 @@ sgm_terminal_core_effect = {
 						}
 					}
 				}
+			}
+		}
+		# effects
+		win = {
+			prev = {
+				if = {
+					limit = {
+						is_scope_type = country
+					}
+					win = yes
+				}
+				# else = {
+				# 	log = "//[this.GetName] is not a valid scope type for win effect"
+				# }
 			}
 		}
 	}
