@@ -6,6 +6,7 @@ country_event = {
 	title = sgm_notify_1
 	desc = sgm_notify_1_desc
 	picture = GFX_evt_ancient_artifact
+	location = from
 
 	immediate = {
 		remove_global_flag = roll_in_progress
@@ -15,4 +16,16 @@ country_event = {
 		NAME = final_roll_result
 	}
 
+}
+
+country_event = {
+	id = sgm_notify.2
+	is_triggered_only = yes
+	title = sgm_notify_2
+	desc = special_project_list
+	picture = GFX_evt_ruined_system
+	immediate = {}
+	option = {
+		NAME = OK
+	}
 }
