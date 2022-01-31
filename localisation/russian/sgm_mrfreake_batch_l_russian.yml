@@ -490,3 +490,10 @@ sgm_mega_art_installation_permanently_ruined: "Mega Art Installation Permanently
 sgm_interstellar_assembly_permanently_ruined: "Interstellar Assembly Permanently Ruined"
 sgm_mega_shipyard_permanently_ruined: "Mega Shipyard Permanently Ruined"
 
+# rolls
+
+sgm_events_5_desc: ""
+final_roll_result: "Final Roll: [fromfrom.roll_result]"
+sgm_notify_1_desc: "[fromfrom.GetName] rolled for [from.GetName].\n\nFinal Roll: [fromfrom.roll_result]"
+rolls_disallowed: "Player Rolling: §RBlocked"
+rolls_allowed: "Player Rolling: §GAllowed"

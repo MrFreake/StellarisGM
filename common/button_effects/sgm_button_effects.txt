@@ -178,3 +178,27 @@ sgm_cheats_menu = {
 		}
 	}
 }
+
+sgm_roll = {
+	potential = {
+		NOT = { has_global_flag = roll_in_progress } 
+		has_global_flag = roll_allowed
+	}
+	allow = {
+		NOT = {
+			has_global_flag = roll_in_progress
+		}
+	}
+	effect = {
+		set_global_flag = roll_in_progress
+		from = {
+			country_event = {
+				id = sgm_events.5
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}

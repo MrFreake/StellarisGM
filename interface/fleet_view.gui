@@ -59,10 +59,10 @@ guiTypes = {
 					format = "UPPER_LEFT"
 				}
 			}
-			effectbuttonType = {					# target 
+			effectbuttonType = {					# fleet orders 
 				name = sgm_fleet_orders
 				quadTextureSprite = "GFX_sgm_fleet_orders"
-				position = { x = 338 y = 3 }
+				position = { x = 307 y = 3 }
 				scale = 1
 				#buttonFont = malgun_goth_24
 				#buttonText = sgm_fleet_orders.3.name
@@ -71,10 +71,19 @@ guiTypes = {
 	#			shortCut = j
 				pdx_tooltip = "Fleet Orders"
 			}
+			effectbuttonType = {					# roll 
+				name = sgm_roll
+				quadTextureSprite = "GFX_button_roll"
+				position = { x = 333 y = -1 }
+				scale = 1.55
+				orientation = UPPER_LEFT
+				effect = sgm_roll
+				pdx_tooltip = "Roll D20"
+			}
 			effectbuttonType = {					# target 
 				name = sgm_set_target
 				quadTextureSprite = "GFX_target_country"
-				position = { x = 370 y = 3 }
+				position = { x = 369 y = 3 }
 				scale = 1
 				#buttonFont = malgun_goth_24
 				#buttonText = sgm_target_planet
@@ -86,7 +95,7 @@ guiTypes = {
 			effectbuttonType = {					# remove target 
 				name = sgm_unset_target
 				quadTextureSprite = "GFX_untarget_country"
-				position = { x = 370 y = 3 }
+				position = { x = 369 y = 3 }
 				scale = 1
 				#buttonFont = malgun_goth_24
 				#buttonText = sgm_target_planet

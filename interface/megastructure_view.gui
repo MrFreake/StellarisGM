@@ -85,10 +85,19 @@ guiTypes = {
 			pdx_tooltip = "TOOLTIP_AMBIENT_OBJECT_FOCUS"
 			clicksound = "back_click"
 		}
+	effectbuttonType = {					# roll 
+		name = sgm_roll
+		quadTextureSprite = "GFX_button_roll"
+		position = { x = -180 y = 12 }
+		scale = 1.55
+		orientation = upper_right
+		effect = sgm_roll
+		pdx_tooltip = "Roll D20"
+	}
 	effectbuttonType = {					# target 
 		name = sgm_target_planet
 		quadTextureSprite = "GFX_target_country"
-		position = { x = -150 y = 16 }
+		position = { x = -144 y = 16 }
 		scale = 1
 		#buttonFont = malgun_goth_24
 		#buttonText = sgm_target_planet
@@ -100,7 +109,7 @@ guiTypes = {
 	effectbuttonType = {					# remove target 
 		name = sgm_unset_target
 		quadTextureSprite = "GFX_untarget_country"
-		position = { x = -150 y = 16 }
+		position = { x = -144 y = 16 }
 		scale = 1
 		#buttonFont = malgun_goth_24
 		#buttonText = sgm_target_planet

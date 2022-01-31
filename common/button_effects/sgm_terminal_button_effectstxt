@@ -1,0 +1,9 @@
+sgm_terminal_output = {
+	potential = {
+		always = yes
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
