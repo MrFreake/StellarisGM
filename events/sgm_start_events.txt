@@ -85,6 +85,7 @@ event = {
 		}
 	}
 	immediate = {
+		sgm_terminal_create_global_country_if_needed = yes
 		random_galaxy_species = {
 			save_event_target_as = gm_species
 		}
@@ -290,6 +291,7 @@ event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		sgm_terminal_create_global_country_if_needed = yes
 		event_target:global_event_country = {
 			country_event = {
 				id = sgm_start_events.10
