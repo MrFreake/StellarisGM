@@ -66,6 +66,16 @@ country_event = {
 	}
 
 	option = {
+		NAME = sgm_terminal.1.name
+		country_event = {
+			id = sgm_terminal.1
+			scopes = {
+				from = from
+			}
+		}
+	}
+
+	option = {
 		NAME = Exit
 	}
 }

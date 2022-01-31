@@ -149,3 +149,9 @@ sgm_set_fleet_order_move_to_system_point_order: "$MOVE_ORDER$"
 sgm_set_fleet_order_move_to_system_point_order_tooltip: "$MOVE_ORDER_DESC$"
 sgm_clear_fleet_orders_and_actions: "$CANCEL$"
 sgm_clear_fleet_orders_and_actions_tooltip: "$CANCEL$ $buildable_fleet$ $ORDERS$"
+
+# Terminal
+sgm_terminal.1.name: "Terminal"
+sgm_terminal.1.desc: "$sgm_terminal.1.name$"
+sgm_terminal_output: "[event_target:sgm_terminal_event_target_1.GetName]:  [event_target:sgm_terminal_command_1.GetName] [event_target:sgm_terminal_command_2.GetName] [event_target:sgm_terminal_command_3.GetName] [event_target:sgm_terminal_command_4.GetName] [event_target:sgm_terminal_command_5.GetName]"
+# do a check script loc is scope type country or not getrealname

@@ -355,6 +355,19 @@ sgm_add_l_gate = {
 				type = lgate_base
 				orbit_angle = 225
 				orbit_distance = 30
+				init_effect = {
+					if = {
+						limit = {
+							NOT = {
+								exists = owner
+							}
+							solar_system = {
+								exists = owner
+							}
+						}
+						set_owner = solar_system.owner
+					}
+				}
 			}
 			set_star_flag = lgate
 			if = {
