@@ -57,3 +57,9 @@ sgm_on_fleet_order_completed = {
 		sgm_fleet_orders.6
 	}
 }
+
+sgm_terminal_action = {
+	events = {
+		sgm_terminal.2
+	}
+}
