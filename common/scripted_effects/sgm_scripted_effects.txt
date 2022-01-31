@@ -3388,3 +3388,23 @@ sgm_error_log_cleaner = {
 	set_country_flag = galcom_formation_blocked
 	set_country_flag = sgm_federations_blocked
 }
+
+roll_result_effect = {
+	set_variable = {
+		which = roll_result
+		value = $roll_result$
+	}
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		country_event = {
+			id = sgm_notify.1
+			scopes = {
+				from = prevprev.from
+				fromfrom = prev
+			}
+		}
+	}
+
+}

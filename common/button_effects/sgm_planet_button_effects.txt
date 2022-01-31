@@ -422,6 +422,8 @@ sgm_begin_event_chain = {
 				id = sgm_event_chains.1
 				scopes = {
 					from = prev
+					fromfrom = event_target:target_country
+					fromfromfrom = this
 				}
 			}
 		}
