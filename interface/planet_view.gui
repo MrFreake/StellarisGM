@@ -130,9 +130,9 @@ guiTypes = {
 			#}
 			effectbuttonType = {					# roll 
 				name = sgm_roll
-				quadTextureSprite = "GFX_target_country"
-				position = { x = -99 y = 4 }
-				scale = 1
+				quadTextureSprite = "GFX_button_roll"
+				position = { x = -104 y = 0 }
+				scale = 1.55
 				#buttonFont = malgun_goth_24
 				#buttonText = sgm_target_planet
 				orientation = UPPER_LEFT

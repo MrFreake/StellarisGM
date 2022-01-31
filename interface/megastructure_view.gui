@@ -87,9 +87,9 @@ guiTypes = {
 		}
 	effectbuttonType = {					# roll 
 		name = sgm_roll
-		quadTextureSprite = "GFX_target_country"
-		position = { x = -175 y = 16 }
-		scale = 1
+		quadTextureSprite = "GFX_button_roll"
+		position = { x = -180 y = 12 }
+		scale = 1.55
 		orientation = upper_right
 		effect = sgm_roll
 		pdx_tooltip = "Roll D20"
