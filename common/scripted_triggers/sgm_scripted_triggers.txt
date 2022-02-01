@@ -86,3 +86,19 @@ has_army_flags = {
 	has_global_flag = giant_undead_army
 	has_global_flag = imperial_legion
 }
+
+has_planet_notification = {
+	OR = {
+		has_planet_flag = gm_notification_planet_uplift
+		has_planet_flag = gm_notification_planet_conquered
+		has_planet_flag = gm_notification_branch_office
+		has_planet_flag = gm_notification_planet_new_owner
+		has_planet_flag = gm_notification_planet_occupied
+		has_planet_flag = gm_notification_planet_bombarded
+		has_planet_flag = gm_notification_terraforming_begin
+		has_planet_flag = gm_notification_pop_purged
+		has_planet_flag = gm_notification_surveyed
+		has_planet_flag = gm_notification_groundcombat
+		has_planet_flag = gm_notification_colonized
+	}
+}

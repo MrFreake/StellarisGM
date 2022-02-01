@@ -29,3 +29,504 @@ country_event = {
 		NAME = OK
 	}
 }
+
+
+
+
+
+
+
+# GM configurable notifications - setting notifications
+# from = target (fleet, country, planet, megastructure)
+# fromfrom = gm country
+
+country_event = {
+	id = sgm_notify.50
+	is_triggered_only = yes
+	title = sgm_notify_50
+	desc = sgm_notify_50_desc
+	picture = GFX_evt_ancient_artifact
+
+	immediate = {}
+
+	# planet notifications
+
+	option = {									## colonized
+		NAME = on_colonized
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_colonized
+		}
+	}
+
+	option = {									## ground invasion started
+		NAME = on_ground_combat_started
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_groundcombat
+		}
+	}
+	option = {									## planet is surveyed
+		NAME = on_surveyed
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_surveyed
+		}
+	}
+	option = {									## builds mining/research/observation outpost/starbase 
+		NAME = on_orbital_construction
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_orbital_construction
+		}
+	}
+	option = {									## purging begins
+		NAME = on_pop_purged
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_pop_purged
+		}
+	}
+	option = {									## terraforming begins
+		NAME = on_terraforming_begin
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_terraforming_begin
+		}
+	}
+	option = {									## planet has taken damage from bombardment
+		NAME = on_planet_bombarded
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_planet_bombarded
+		}
+	}
+	option = {									## planet has become occupied
+		NAME = on_planet_occupied
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_planet_occupied
+		}
+	}
+	option = {									## planet has transfered ownership
+		NAME = on_planet_new_owner
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_planet_new_owner
+		}
+	}
+	option = {									## planet has branch office
+		NAME = on_planet_branch_office
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_branch_office
+		}
+	}
+	option = {									## planet has been conquered
+		NAME = on_planet_conquered
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_planet_conquered
+		}
+	}
+	option = {									## planet has completed uplift
+		NAME = on_planet_uplift
+		trigger = {
+			from = { is_scope_type = planet }
+		}
+		from = {
+			set_planet_flag = gm_notification_planet_uplift
+		}
+	}
+
+	# country notifications
+
+	# fleet notifications
+
+	# megastructure notifications
+}
+
+# 100+ planet notification events
+
+planet_event = {
+	id = sgm_notify.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_groundcombat
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_surveyed
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.102
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_colonized
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.103
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_planet_uplift
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.104
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_pop_purged
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.105
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_terraforming_begin
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.106
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_planet_bombarded
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.107
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_planet_new_owner
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.108
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_planet_occupied
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.109
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_branch_office
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = sgm_notify.110
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = gm_notification_planet_conquered
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				is_ai = no
+			}
+			country_event = {
+				id = sgm_notify.200
+				scopes = {
+					from = root
+				}
+			}
+		}
+	}
+}
+
+# 200+ actual notifications
+country_event = {
+	id = sgm_notify.200
+	is_triggered_only = yes
+	title = sgm_notify_101
+	location = from
+	picture = GFX_evt_alien_planet
+
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_colonized
+			}
+		}
+		text = gm_notification_colonized
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_groundcombat
+			}
+		}
+		text = gm_notification_groundcombat
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_surveyed
+			}
+		}
+		text = gm_notification_surveyed
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_pop_purged
+			}
+		}
+		text = gm_notification_pop_purged
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_terraforming_begin
+			}
+		}
+		text = gm_notification_terraforming_begin
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_planet_bombarded
+			}
+		}
+		text = gm_notification_planet_bombarded
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_planet_occupied
+			}
+		}
+		text = gm_notification_planet_occupied
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_planet_new_owner
+			}
+		}
+		text = gm_notification_planet_new_owner
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_branch_office
+			}
+		}
+		text = gm_notification_branch_office
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_planet_conquered
+			}
+		}
+		text = gm_notification_planet_conquered
+	}
+	desc = {
+		trigger = { 
+			from = { 
+				has_planet_flag = gm_notification_planet_uplift
+			}
+		}
+		text = gm_notification_planet_uplift
+	}
+	immediate = {}
+
+	option = {
+		NAME = OK
+	}
+	option = {
+		NAME = remove_notification
+		from = { remove_planet_notification_flags = yes }
+	}
+}
