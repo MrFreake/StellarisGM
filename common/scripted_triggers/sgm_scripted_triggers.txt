@@ -102,3 +102,23 @@ has_planet_notification = {
 		has_planet_flag = gm_notification_colonized
 	}
 }
+
+has_country_notification = {
+	OR = {
+		has_country_flag = gm_notification_attackers_win
+		has_country_flag = gm_notification_attackers_win
+		has_country_flag = gm_notification_defenders_win
+		has_country_flag = gm_notification_entering_war
+		has_country_flag = gm_notification_communications_established
+		has_country_flag = gm_notification_modification_complete
+		has_country_flag = gm_notification_federation_new_leader
+		has_country_flag = gm_notification_pirate_spawn
+		has_country_flag = gm_notification_system_lost
+		has_country_flag = gm_notification_system_gained
+		has_country_flag = gm_notification_relic_activated
+		has_country_flag = gm_notification_government_changed
+		has_country_flag = gm_notification_ascension_perk_picked
+		has_country_flag = gm_notification_ascension_perk_picked
+		has_country_flag = gm_notification_megastructure_built	
+	}
+}

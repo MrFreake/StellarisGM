@@ -49,6 +49,10 @@ country_event = {
 
 	immediate = {}
 
+	option = {
+		NAME = Exit
+	}
+
 	# planet notifications
 
 	option = {									## colonized
@@ -163,12 +167,138 @@ country_event = {
 
 	# country notifications
 
+	option = {									# on_planet_attackers_win
+		NAME = on_planet_attackers_win
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_attackers_win
+		}
+	}
+	option = {									# on_planet_defenders_win
+		NAME = on_planet_defenders_win
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_defenders_win
+		}
+	}
+	option = {									# on_entering_war
+		NAME = on_entering_war
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_entering_war
+		}
+	}
+	option = {									# on_post_communications_established
+		NAME = on_post_communications_established
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_communications_established
+		}
+	}
+	option = {									# on_modification_complete
+		NAME = on_modification_complete
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_modification_complete
+		}
+	}
+	option = {									# on_federation_new_leader
+		NAME = on_federation_new_leader
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_federation_new_leader
+		}
+	}
+	option = {									# on_pirate_spawn
+		NAME = on_pirate_spawn
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_pirate_spawn
+		}
+	}
+	option = {									# on_system_lost
+		NAME = on_system_lost
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_system_lost
+		}
+	}
+	option = {									# on_system_gained
+		NAME = on_system_gained
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_system_gained
+		}
+	}
+	option = {									# on_relic_activated
+		NAME = on_relic_activated
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_relic_activated
+		}
+	}
+	option = {									# on_post_government_changed
+		NAME = on_post_government_changed
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_government_changed
+		}
+	}
+	option = {									# on_ascension_perk_picked
+		NAME = on_ascension_perk_picked
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_ascension_perk_picked
+		}
+	}
+	option = {									# on_ascension_perk_picked
+		NAME = on_ascension_perk_picked
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_ascension_perk_picked
+		}
+	}
+	option = {									# on_megastructure_built
+		NAME = on_megastructure_built
+		trigger = {
+			from = { is_scope_type = country }
+		}
+		from = {
+			set_country_flag = gm_notification_megastructure_built
+		}
+	}
 	# fleet notifications
 
 	# megastructure notifications
 }
 
-# 100+ planet notification events
+# 100-120 planet notification events
 
 planet_event = {
 	id = sgm_notify.100
@@ -423,6 +553,10 @@ planet_event = {
 		}
 	}
 }
+
+# 121-140 country notifications
+
+
 
 # 200+ actual notifications
 country_event = {

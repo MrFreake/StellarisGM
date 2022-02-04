@@ -1,3 +1,5 @@
+# PLANET NOTIFICATIONS
+
 # Triggers when ground combat starts
 # This = planet
 # From = country attacking
@@ -101,5 +103,114 @@ on_branch_office_established = {
 on_planet_conquer = {
 	events = {
 		sgm_notify.110 # notification for planet events
+	}
+}
+
+# COUNTRY NOTIFICATIONS
+
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+	}
+}
+
+# Triggers country_event for the defender upon victory
+# Root = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+	events = {
+	}
+}
+
+# This = country
+# From = opponent war leader
+on_entering_war = {
+	events = {
+	}
+}
+
+# Executed right after country has established communications with another country
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+	}
+}
+
+#This = Country scope, new federation leader
+#From = Previous leader (if still existing)
+on_federation_new_leader = {
+	events = {
+	}
+}
+
+# this = country
+on_pirate_spawn = {
+	events = {
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+on_system_lost = {
+	events = {
+	}
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+on_system_gained = {
+	events = {
+	}
+}
+
+# This = Country
+on_relic_activated = {
+	events = {
+	}
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+on_post_government_changed = {
+	events = {
+	}
+}
+
+# Executed when a country picks an ascension perk
+# THIS = country
+on_ascension_perk_picked = {
+	events = {
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
 	}
 }
