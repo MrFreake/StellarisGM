@@ -202,3 +202,25 @@ sgm_roll = {
 		}
 	}
 }
+
+sgm_set_notification = {
+	potential = {
+		is_gm = yes
+	}
+	allow = {
+		NOT = {
+			has_planet_notification = yes
+		}
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_notify.50
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}

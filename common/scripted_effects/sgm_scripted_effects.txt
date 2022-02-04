@@ -3407,5 +3407,18 @@ roll_result_effect = {
 			}
 		}
 	}
+}
 
+remove_planet_notification_flags = {
+	remove_planet_flag = gm_notification_planet_uplift
+	remove_planet_flag = gm_notification_planet_conquered
+	remove_planet_flag = gm_notification_branch_office
+	remove_planet_flag = gm_notification_planet_new_owner
+	remove_planet_flag = gm_notification_planet_occupied
+	remove_planet_flag = gm_notification_planet_bombarded
+	remove_planet_flag = gm_notification_terraforming_begin
+	remove_planet_flag = gm_notification_pop_purged
+	remove_planet_flag = gm_notification_surveyed
+	remove_planet_flag = gm_notification_groundcombat
+	remove_planet_flag = gm_notification_colonized
 }
