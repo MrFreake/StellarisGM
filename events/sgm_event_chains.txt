@@ -529,102 +529,6 @@ country_event = {
 			}
 	}
 	option = { 
-		name = "MUTANT_SURVIVORS_PROJECT"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "MUTANT_SURVIVORS_PROJECT"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
-	option = { 
-		name = "UNDERGROUND_FACILITY_PROJECT"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "UNDERGROUND_FACILITY_PROJECT"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
-	option = { 
-		name = "GHOSTLY_SIGHTINGS_PROJECT"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "GHOSTLY_SIGHTINGS_PROJECT"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
-	option = { 
 		name = "AUTOMATED_SHIPYARD_PROJECT"             
 		allow = {
 					 
@@ -3472,38 +3376,7 @@ country_event = {
 					}
 			}
 	}
-	option = { 
-		name = "TEST_PROJECT"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "TEST_PROJECT"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
+
 	option = { 
 		name = "ESTABLISH_COMMUNICATIONS"             
 		allow = {
@@ -5137,38 +5010,6 @@ country_event = {
 			}
 	}
 	option = { 
-		name = "TESTING_PROJECT"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "TESTING_PROJECT"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
-	option = { 
 		name = "ODD_STAR_PROJECT"             
 		allow = {
 					 
@@ -5688,38 +5529,6 @@ country_event = {
 			from = {
 					enable_special_project = {
 							name = "hallucinogen_removal"
-							location = this
-							owner = prev.fromfrom
-					}
-			}
-			fromfromfrom = {
-					country_event = {
-							id = sgm_event_chains.1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-					country_event = {
-							id = sgm_notify.2
-							days = 1
-							scopes = {
-									from = prev.from
-									fromfrom = prev.fromfrom
-									fromfromfrom = this
-							}
-					}
-			}
-	}
-	option = { 
-		name = "impact_defence_system"             
-		allow = {
-					 
-			}
-			from = {
-					enable_special_project = {
-							name = "impact_defence_system"
 							location = this
 							owner = prev.fromfrom
 					}
