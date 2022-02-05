@@ -556,10 +556,376 @@ planet_event = {
 
 # 121-140 country notifications
 
+country_event = {				# gm_notification_attackers_win
+	id = sgm_notify.121
+	is_triggered_only = yes
+	hide_window = yes
 
+	trigger = {
+		has_country_flag = gm_notification_attackers_win
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_attackers_win
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_defenders_win
+	id = sgm_notify.122
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_defenders_win
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_defenders_win
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_entering_war
+	id = sgm_notify.123
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_entering_war
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_entering_war
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_communications_established
+	id = sgm_notify.124
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_communications_established
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_communications_established
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_modification_complete
+	id = sgm_notify.125
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_modification_complete
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_modification_complete
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_federation_new_leader
+	id = sgm_notify.126
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_federation_new_leader
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_federation_new_leader
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_pirate_spawn
+	id = sgm_notify.127
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_pirate_spawn
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_pirate_spawn
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_system_lost
+	id = sgm_notify.128
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_system_lost
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_system_lost
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_system_gained
+	id = sgm_notify.129
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_system_gained
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_system_gained
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_relic_activated
+	id = sgm_notify.130
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_relic_activated
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_relic_activated
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_government_changed
+	id = sgm_notify.131
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_government_changed
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_government_changed
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+country_event = {				# gm_notification_ascension_perk_picked
+	id = sgm_notify.133
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_ascension_perk_picked
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_ascension_perk_picked
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+
+country_event = {				# gm_notification_megastructure_built
+	id = sgm_notify.134
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gm_notification_megastructure_built
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = notification_megastructure_built
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.201
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
 
 # 200+ actual notifications
-country_event = {
+
+country_event = {					# planet notifications
 	id = sgm_notify.200
 	is_triggered_only = yes
 	title = sgm_notify_101
@@ -662,5 +1028,121 @@ country_event = {
 	option = {
 		NAME = remove_notification
 		from = { remove_planet_notification_flags = yes }
+	}
+}
+
+country_event = {				# country notifications
+	id = sgm_notify.201
+	is_triggered_only = yes
+	title = sgm_notify_201
+	location = from 
+
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_attackers_win
+			}
+		}
+		text = notification_attackers_win
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_defenders_win
+			}
+		}
+		text = notification_defenders_win
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_entering_war
+			}
+		}
+		text = notification_entering_war
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_communications_established
+			}
+		}
+		text = gm_notification_attackers_win
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_communications_established
+			}
+		}
+		text = gm_notification_attackers_win
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_modification_complete
+			}
+		}
+		text = notification_modification_complete
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_federation_new_leader
+			}
+		}
+		text = notification_federation_new_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_pirate_spawn
+			}
+		}
+		text = notification_pirate_spawn
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_system_lost
+			}
+		}
+		text = notification_system_lost
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_system_gained
+			}
+		}
+		text = notification_system_gained
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_relic_activated
+			}
+		}
+		text = notification_relic_activated
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_government_changed
+			}
+		}
+		text = notification_government_changed
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = notification_ascension_perk_picked
+			}
+		}
+		text = notification_ascension_perk_picked
+	}
+	immediate = {}
+	option = {
+		NAME = OK
 	}
 }
