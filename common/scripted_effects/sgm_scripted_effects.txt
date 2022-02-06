@@ -2,30 +2,45 @@
 delete_point_of_interest = {
 	if = {
 		limit = {
-			has_point_of_interest = { poi = gm_poi.1 }
+			has_point_of_interest = {
+				poi = gm_poi.1
+			}
 		}
-			root = { remove_point_of_interest = gm_poi.1 }
+		root = {
+			remove_point_of_interest = gm_poi.1
 		}
+	}
 	else_if = {
 		limit = {
-			has_point_of_interest = { poi = gm_poi.2 }
+			has_point_of_interest = {
+				poi = gm_poi.2
+			}
 		}
-		root = { remove_point_of_interest = gm_poi.2 }
+		root = {
+			remove_point_of_interest = gm_poi.2
 		}
+	}
 	else_if = {
 		limit = {
-			has_point_of_interest = { poi = gm_poi.3 }
+			has_point_of_interest = {
+				poi = gm_poi.3
+			}
 		}
-		root = { remove_point_of_interest = gm_poi.3 }
+		root = {
+			remove_point_of_interest = gm_poi.3
+		}
 	}
 }
-
 
 set_point_of_interest = {
 	root = {
 		if = {
 			limit = {
-				NOT = { has_point_of_interest = { poi = gm_poi.1 } }  
+				NOT = {
+					has_point_of_interest = {
+						poi = gm_poi.1
+					}
+				}
 			}
 			create_point_of_interest = {
 				id = gm_poi.1
@@ -37,7 +52,11 @@ set_point_of_interest = {
 		}
 		else_if = {
 			limit = {
-				NOT = { has_point_of_interest = { poi = gm_poi.2 } } 
+				NOT = {
+					has_point_of_interest = {
+						poi = gm_poi.2
+					}
+				}
 			}
 			create_point_of_interest = {
 				id = gm_poi.2
@@ -49,7 +68,11 @@ set_point_of_interest = {
 		}
 		else_if = {
 			limit = {
-				NOT = { has_point_of_interest = { poi = gm_poi.3 } } 
+				NOT = {
+					has_point_of_interest = {
+						poi = gm_poi.3
+					}
+				}
 			}
 			create_point_of_interest = {
 				id = gm_poi.3
@@ -59,290 +82,290 @@ set_point_of_interest = {
 				location = prev
 			}
 		}
-	}	
+	}
 }
 
 sgm_begin_next_megastructure_stage = {
-			# dyson sphere
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_0
-				}
-				upgrade_megastructure_to = dyson_sphere_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_1
-				}
-				upgrade_megastructure_to = dyson_sphere_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_2
-				}
-				upgrade_megastructure_to = dyson_sphere_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_3
-				}
-				upgrade_megastructure_to = dyson_sphere_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_4
-				}
-				upgrade_megastructure_to = dyson_sphere_5
-			}
-			if = {
-				limit = {
-					is_megastructure_type = dyson_sphere_ruined
-				}
-				upgrade_megastructure_to = dyson_sphere_restored
-			}
-			# spy orb
-			if = {
-				limit = {
-					is_megastructure_type = spy_orb_0
-				}
-				upgrade_megastructure_to = spy_orb_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = spy_orb_1
-				}
-				upgrade_megastructure_to = spy_orb_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = spy_orb_2
-				}
-				upgrade_megastructure_to = spy_orb_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = spy_orb_3
-				}
-				upgrade_megastructure_to = spy_orb_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = spy_orb_ruined
-				}
-				upgrade_megastructure_to = spy_orb_restored
-			}
-			#think tank
-			if = {
-				limit = {
-					is_megastructure_type = think_tank_0
-				}
-				upgrade_megastructure_to = think_tank_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = think_tank_1
-				}
-				upgrade_megastructure_to = think_tank_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = think_tank_2
-				}
-				upgrade_megastructure_to = think_tank_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = think_tank_3
-				}
-				upgrade_megastructure_to = think_tank_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = think_tank_ruined
-				}
-				upgrade_megastructure_to = think_tank_restored
-			}
-			# gateways
-			if = {
-				limit = {
-					is_megastructure_type = gateway_0
-				}
-				upgrade_megastructure_to = gateway_final
-			}
-			if = {
-				limit = {
-					is_megastructure_type = gateway_ruined
-				}
-				upgrade_megastructure_to = gateway_restored
-			}
-			# matter decompressor
-			if = {
-				limit = {
-					is_megastructure_type = matter_decompressor_0
-				}
-				upgrade_megastructure_to = matter_decompressor_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = matter_decompressor_1
-				}
-				upgrade_megastructure_to = matter_decompressor_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = matter_decompressor_2
-				}
-				upgrade_megastructure_to = matter_decompressor_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = matter_decompressor_3
-				}
-				upgrade_megastructure_to = matter_decompressor_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = matter_decompressor_ruined
-				}
-				upgrade_megastructure_to = matter_decompressor_restored
-			}
-			# strategic coordination center
-			if = {
-				limit = {
-					is_megastructure_type = strategic_coordination_center_0
-				}
-				upgrade_megastructure_to = strategic_coordination_center_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = strategic_coordination_center_1
-				}
-				upgrade_megastructure_to = strategic_coordination_center_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = strategic_coordination_center_2
-				}
-				upgrade_megastructure_to = strategic_coordination_center_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = strategic_coordination_center_ruined
-				}
-				upgrade_megastructure_to = strategic_coordination_center_restored
-			}
-			# mega art installation
-			if = {
-				limit = {
-					is_megastructure_type = mega_art_installation_0
-				}
-				upgrade_megastructure_to = mega_art_installation_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_art_installation_1
-				}
-				upgrade_megastructure_to = mega_art_installation_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_art_installation_2
-				}
-				upgrade_megastructure_to = mega_art_installation_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_art_installation_3
-				}
-				upgrade_megastructure_to = mega_art_installation_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_art_installation_ruined
-				}
-				upgrade_megastructure_to = mega_art_installation_restored
-			}
-			# interstellar assembly
-			if = {
-				limit = {
-					is_megastructure_type = interstellar_assembly_0
-				}
-				upgrade_megastructure_to = interstellar_assembly_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = interstellar_assembly_1
-				}
-				upgrade_megastructure_to = interstellar_assembly_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = interstellar_assembly_2
-				}
-				upgrade_megastructure_to = interstellar_assembly_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = interstellar_assembly_3
-				}
-				upgrade_megastructure_to = interstellar_assembly_4
-			}
-			if = {
-				limit = {
-					is_megastructure_type = interstellar_assembly_ruined
-				}
-				upgrade_megastructure_to = interstellar_assembly_restored
-			}
-			# mega shipyard
-			if = {
-				limit = {
-					is_megastructure_type = mega_shipyard_0
-				}
-				upgrade_megastructure_to = mega_shipyard_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_shipyard_1
-				}
-				upgrade_megastructure_to = mega_shipyard_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_shipyard_2
-				}
-				upgrade_megastructure_to = mega_shipyard_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = mega_shipyard_ruined
-				}
-				upgrade_megastructure_to = mega_shipyard_restored
-			}
-			#crisis sphere
-			if = {
-				limit = {
-					is_megastructure_type = crisis_sphere_0
-				}
-				upgrade_megastructure_to = crisis_sphere_1
-			}
-			if = {
-				limit = {
-					is_megastructure_type = crisis_sphere_1
-				}
-				upgrade_megastructure_to = crisis_sphere_2
-			}
-			if = {
-				limit = {
-					is_megastructure_type = crisis_sphere_2
-				}
-				upgrade_megastructure_to = crisis_sphere_3
-			}
-			if = {
-				limit = {
-					is_megastructure_type = crisis_sphere_3
-				}
-				upgrade_megastructure_to = crisis_sphere_4
-			}
+	# dyson sphere
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_0
+		}
+		upgrade_megastructure_to = dyson_sphere_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_1
+		}
+		upgrade_megastructure_to = dyson_sphere_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_2
+		}
+		upgrade_megastructure_to = dyson_sphere_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_3
+		}
+		upgrade_megastructure_to = dyson_sphere_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_4
+		}
+		upgrade_megastructure_to = dyson_sphere_5
+	}
+	if = {
+		limit = {
+			is_megastructure_type = dyson_sphere_ruined
+		}
+		upgrade_megastructure_to = dyson_sphere_restored
+	}
+	# spy orb
+	if = {
+		limit = {
+			is_megastructure_type = spy_orb_0
+		}
+		upgrade_megastructure_to = spy_orb_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = spy_orb_1
+		}
+		upgrade_megastructure_to = spy_orb_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = spy_orb_2
+		}
+		upgrade_megastructure_to = spy_orb_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = spy_orb_3
+		}
+		upgrade_megastructure_to = spy_orb_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = spy_orb_ruined
+		}
+		upgrade_megastructure_to = spy_orb_restored
+	}
+	#think tank
+	if = {
+		limit = {
+			is_megastructure_type = think_tank_0
+		}
+		upgrade_megastructure_to = think_tank_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = think_tank_1
+		}
+		upgrade_megastructure_to = think_tank_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = think_tank_2
+		}
+		upgrade_megastructure_to = think_tank_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = think_tank_3
+		}
+		upgrade_megastructure_to = think_tank_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = think_tank_ruined
+		}
+		upgrade_megastructure_to = think_tank_restored
+	}
+	# gateways
+	if = {
+		limit = {
+			is_megastructure_type = gateway_0
+		}
+		upgrade_megastructure_to = gateway_final
+	}
+	if = {
+		limit = {
+			is_megastructure_type = gateway_ruined
+		}
+		upgrade_megastructure_to = gateway_restored
+	}
+	# matter decompressor
+	if = {
+		limit = {
+			is_megastructure_type = matter_decompressor_0
+		}
+		upgrade_megastructure_to = matter_decompressor_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = matter_decompressor_1
+		}
+		upgrade_megastructure_to = matter_decompressor_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = matter_decompressor_2
+		}
+		upgrade_megastructure_to = matter_decompressor_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = matter_decompressor_3
+		}
+		upgrade_megastructure_to = matter_decompressor_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = matter_decompressor_ruined
+		}
+		upgrade_megastructure_to = matter_decompressor_restored
+	}
+	# strategic coordination center
+	if = {
+		limit = {
+			is_megastructure_type = strategic_coordination_center_0
+		}
+		upgrade_megastructure_to = strategic_coordination_center_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = strategic_coordination_center_1
+		}
+		upgrade_megastructure_to = strategic_coordination_center_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = strategic_coordination_center_2
+		}
+		upgrade_megastructure_to = strategic_coordination_center_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = strategic_coordination_center_ruined
+		}
+		upgrade_megastructure_to = strategic_coordination_center_restored
+	}
+	# mega art installation
+	if = {
+		limit = {
+			is_megastructure_type = mega_art_installation_0
+		}
+		upgrade_megastructure_to = mega_art_installation_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_art_installation_1
+		}
+		upgrade_megastructure_to = mega_art_installation_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_art_installation_2
+		}
+		upgrade_megastructure_to = mega_art_installation_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_art_installation_3
+		}
+		upgrade_megastructure_to = mega_art_installation_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_art_installation_ruined
+		}
+		upgrade_megastructure_to = mega_art_installation_restored
+	}
+	# interstellar assembly
+	if = {
+		limit = {
+			is_megastructure_type = interstellar_assembly_0
+		}
+		upgrade_megastructure_to = interstellar_assembly_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = interstellar_assembly_1
+		}
+		upgrade_megastructure_to = interstellar_assembly_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = interstellar_assembly_2
+		}
+		upgrade_megastructure_to = interstellar_assembly_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = interstellar_assembly_3
+		}
+		upgrade_megastructure_to = interstellar_assembly_4
+	}
+	if = {
+		limit = {
+			is_megastructure_type = interstellar_assembly_ruined
+		}
+		upgrade_megastructure_to = interstellar_assembly_restored
+	}
+	# mega shipyard
+	if = {
+		limit = {
+			is_megastructure_type = mega_shipyard_0
+		}
+		upgrade_megastructure_to = mega_shipyard_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_shipyard_1
+		}
+		upgrade_megastructure_to = mega_shipyard_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_shipyard_2
+		}
+		upgrade_megastructure_to = mega_shipyard_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = mega_shipyard_ruined
+		}
+		upgrade_megastructure_to = mega_shipyard_restored
+	}
+	#crisis sphere
+	if = {
+		limit = {
+			is_megastructure_type = crisis_sphere_0
+		}
+		upgrade_megastructure_to = crisis_sphere_1
+	}
+	if = {
+		limit = {
+			is_megastructure_type = crisis_sphere_1
+		}
+		upgrade_megastructure_to = crisis_sphere_2
+	}
+	if = {
+		limit = {
+			is_megastructure_type = crisis_sphere_2
+		}
+		upgrade_megastructure_to = crisis_sphere_3
+	}
+	if = {
+		limit = {
+			is_megastructure_type = crisis_sphere_3
+		}
+		upgrade_megastructure_to = crisis_sphere_4
+	}
 }
 
 sgm_teleport_fleet_effect = {
@@ -465,7 +488,7 @@ sgm_teleport_fleet_effect_cleanup = {
 sgm_give_technology_effect = {
 	switch = {
 		trigger = has_global_flag
-		sgm_give_technology_option ={
+		sgm_give_technology_option = {
 			add_research_option = $TECH$
 		}
 		default = {
@@ -2997,7 +3020,8 @@ sgm_spawn_army_effect = {
 				}
 			}
 		}
-		default = {}
+		default = {
+		}
 	}
 }
 
@@ -3421,4 +3445,219 @@ remove_planet_notification_flags = {
 	remove_planet_flag = gm_notification_surveyed
 	remove_planet_flag = gm_notification_groundcombat
 	remove_planet_flag = gm_notification_colonized
+}
+
+sgm_export_sr_stockpile_and_income_to_variable = {
+	sgm_export_sr_stockpile_and_income_to_variable_database_effect = {
+		SR1 = time
+		SR2 = energy
+		SR3 = minerals
+		SR4 = food
+		SR5 = physics_research
+		SR6 = society_research
+		SR7 = engineering_research
+		SR8 = influence
+		SR9 = unity
+		SR10 = consumer_goods
+		SR11 = alloys
+		SR12 = volatile_motes
+		SR13 = exotic_gases
+		SR14 = rare_crystals
+		SR15 = sr_living_metal
+		SR16 = sr_zro
+		SR17 = sr_dark_matter
+		SR18 = nanites
+		SR19 = minor_artifacts
+		SR20 = menace
+	}
+}
+
+sgm_export_sr_stockpile_and_income_to_variable_database_effect = {
+	export_resource_stockpile_to_variable = {
+		resource = $SR1$
+		variable = sgm_stockpile_$SR1$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR1$
+		variable = sgm_income_$SR1$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR2$
+		variable = sgm_stockpile_$SR2$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR2$
+		variable = sgm_income_$SR2$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR3$
+		variable = sgm_stockpile_$SR3$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR3$
+		variable = sgm_income_$SR3$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR4$
+		variable = sgm_stockpile_$SR4$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR4$
+		variable = sgm_income_$SR4$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR5$
+		variable = sgm_stockpile_$SR5$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR5$
+		variable = sgm_income_$SR5$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR6$
+		variable = sgm_stockpile_$SR6$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR6$
+		variable = sgm_income_$SR6$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR7$
+		variable = sgm_stockpile_$SR7$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR7$
+		variable = sgm_income_$SR7$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR8$
+		variable = sgm_stockpile_$SR8$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR8$
+		variable = sgm_income_$SR8$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR9$
+		variable = sgm_stockpile_$SR9$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR9$
+		variable = sgm_income_$SR9$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR10$
+		variable = sgm_stockpile_$SR10$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR10$
+		variable = sgm_income_$SR10$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR11$
+		variable = sgm_stockpile_$SR11$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR11$
+		variable = sgm_income_$SR11$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR12$
+		variable = sgm_stockpile_$SR12$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR12$
+		variable = sgm_income_$SR12$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR13$
+		variable = sgm_stockpile_$SR13$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR13$
+		variable = sgm_income_$SR13$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR14$
+		variable = sgm_stockpile_$SR14$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR14$
+		variable = sgm_income_$SR14$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR15$
+		variable = sgm_stockpile_$SR15$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR15$
+		variable = sgm_income_$SR15$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR16$
+		variable = sgm_stockpile_$SR16$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR16$
+		variable = sgm_income_$SR16$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR17$
+		variable = sgm_stockpile_$SR17$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR17$
+		variable = sgm_income_$SR17$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR18$
+		variable = sgm_stockpile_$SR18$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR18$
+		variable = sgm_income_$SR18$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR19$
+		variable = sgm_stockpile_$SR19$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR19$
+		variable = sgm_income_$SR19$
+	}
+	export_resource_stockpile_to_variable = {
+		resource = $SR20$
+		variable = sgm_stockpile_$SR20$
+	}
+	export_resource_income_to_variable = {
+		resource = $SR20$
+		variable = sgm_income_$SR20$
+	}
+}
+
+sgm_export_empire_stats_to_variable = {
+	export_trigger_value_to_variable = {
+		trigger = num_pops
+		variable = sgm_stat_num_pops
+	}
+	export_trigger_value_to_variable = {
+		trigger = num_owned_planets
+		variable = sgm_stat_num_owned_planets
+	}
+	export_trigger_value_to_variable = {
+		trigger = fleet_power
+		variable = sgm_stat_fleet_power
+	}
+	export_trigger_value_to_variable = {
+		trigger = trade_income
+		variable = sgm_stat_trade_income
+	}
+	export_trigger_value_to_variable = {
+		trigger = empire_sprawl
+		variable = sgm_stat_empire_sprawl
+	}
+	export_trigger_value_to_variable = {
+		trigger = empire_sprawl_over_cap
+		variable = sgm_stat_empire_sprawl_over_cap
+	}
 }
