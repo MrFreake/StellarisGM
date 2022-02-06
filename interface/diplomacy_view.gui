@@ -1312,6 +1312,18 @@ guiTypes = {
 			effect = sgm_roll
 			pdx_tooltip = "Roll D20"
 		}
+		effectbuttonType = {					# set notification 
+			name = sgm_set_notification
+			quadTextureSprite = "GFX_target_country"
+			position = { x = 722 y = 12 }
+			scale = 1
+			#buttonFont = malgun_goth_24
+			#buttonText = sgm_target_planet
+			orientation = UPPER_LEFT
+			effect = sgm_set_notification
+	#			shortCut = j
+			pdx_tooltip = "Set notification on country"
+		}
 		effectbuttonType = {					# target 
 			name = sgm_set_target
 			quadTextureSprite = "GFX_target_country"

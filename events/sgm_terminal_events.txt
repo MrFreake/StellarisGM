@@ -19,13 +19,35 @@ country_event = {
 					exists = event_target:sgm_terminal_event_target_1
 				}
 			}
-			random_galaxy_planet = {
+			if = {
 				limit = {
-					exists = owner
-					is_colony = yes
+					exists = event_target:target_country
+					event_target:target_country = {
+						any_owned_planet = {
+							is_colony = yes
+							num_pops > 0
+						}
+					}
 				}
-				random_owned_pop = {
-					save_global_event_target_as = sgm_terminal_event_target_1
+				random_owned_planet = {
+					limit = {
+						is_colony = yes
+						num_pops > 0
+					}
+					random_owned_pop = {
+						save_global_event_target_as = sgm_terminal_event_target_1
+					}
+				}
+			}
+			else = {
+				random_galaxy_planet = {
+					limit = {
+						exists = owner
+						is_colony = yes
+					}
+					random_owned_pop = {
+						save_global_event_target_as = sgm_terminal_event_target_1
+					}
 				}
 			}
 		}
