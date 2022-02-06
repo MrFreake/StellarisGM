@@ -293,9 +293,139 @@ country_event = {
 			set_country_flag = gm_notification_megastructure_built
 		}
 	}
+
 	# fleet notifications
+	
+	option = {									# on_entering_gateway
+		NAME = on_entering_gateway
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_entering_gateway
+		}
+	}
+	option = {									# on_entering_wormhole
+		NAME = on_entering_wormhole
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_entering_wormhole
+		}
+	}
+	option = {									# on_jump_drive
+		NAME = on_jump_drive
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_jump_drive
+		}
+	}
+	option = {									# on_arch_stage_finished
+		NAME = on_arch_stage_finished
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_arch_stage_finished
+		}
+	}
+	option = {									# on_crossing_border
+		NAME = on_crossing_border
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_crossing_border
+		}
+	}
+	option = {									# on_entering_system_fleet
+		NAME = on_entering_system_fleet
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_entering_system_fleet
+		}
+	}
+	option = {									# on_emergency_ftl
+		NAME = on_emergency_ftl
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_emergency_ftl
+		}
+	}
+	option = {									# on_system_survey 
+		NAME = on_system_survey 
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_system_survey 
+		}
+	}
+	option = {									# on_entering_battle 
+		NAME = on_entering_battle 
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_entering_battle 
+		}
+	}
+	option = {									# on_starbase_destroyed 
+		NAME = on_starbase_destroyed 
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_starbase_destroyed 
+		}
+	}
+	option = {									# on_space_battle_won 
+		NAME = on_space_battle_won 
+		trigger = {
+			from = { is_scope_type = fleet }
+		}
+		from = {
+			set_fleet_flag = gm_notification_space_battle_won 
+		}
+	}
 
 	# megastructure notifications
+
+	option = {									# on_fleet_enter_orbit 
+		NAME = on_fleet_enter_orbit 
+		trigger = {
+			from = { is_scope_type = megastructure }
+		}
+		from = {
+			set_fleet_flag = gm_notification_fleet_enter_orbit 
+		}
+	}
+	option = {									# on_megastructure_upgraded 
+		NAME = on_megastructure_upgraded 
+		trigger = {
+			from = { is_scope_type = megastructure }
+		}
+		from = {
+			set_megastructure_flag = gm_notification_megastructure_upgraded 
+		}
+	}
+	option = {									# on_megastructure_change_owner 
+		NAME = on_megastructure_change_owner 
+		trigger = {
+			from = { is_scope_type = megastructure }
+		}
+		from = {
+			set_fleet_flag = gm_notification_megastructure_change_owner 
+		}
+	}
+
 }
 
 # 100-120 planet notification events
@@ -923,6 +1053,299 @@ country_event = {				# gm_notification_megastructure_built
 	}
 }
 
+# 141-160 fleet notifications
+
+fleet_event = {				# gm_notification_entering_gateway
+	id = sgm_notify.141
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_entering_gateway
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_entering_gateway
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_entering_wormhole
+	id = sgm_notify.142
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_entering_wormhole
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_entering_wormhole
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_jump_drive
+	id = sgm_notify.143
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_jump_drive
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_jump_drive
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_arch_stage_finished
+	id = sgm_notify.144
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_arch_stage_finished
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_arch_stage_finished
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_crossing_border
+	id = sgm_notify.145
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_crossing_border
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_crossing_border
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_entering_system_fleet
+	id = sgm_notify.146
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_entering_system_fleet
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_entering_system_fleet
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+fleet_event = {				# gm_notification_emergency_ftl
+	id = sgm_notify.147
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_fleet_flag = gm_notification_emergency_ftl
+	}
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = notification_emergency_ftl
+			days = 1
+		}
+		every_country = {
+			limit = {
+				sgm_has_gm_permissions = yes
+				#sgm_notifications_on = yes
+			}
+			country_event = {
+				id = sgm_notify.202
+				scopes = {
+					from = prev
+					fromfrom = this
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_system_survey - fleet is fromfrom
+	id = sgm_notify.148
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		fromfrom = { has_fleet_flag = gm_notification_system_survey }
+	}
+	immediate = {
+		fromfrom = {
+			set_timed_fleet_flag = {
+				flag = notification_system_survey 
+				days = 1
+			}
+			every_country = {
+				limit = {
+					sgm_has_gm_permissions = yes
+					#sgm_notifications_on = yes
+				}
+				country_event = {
+					id = sgm_notify.202
+					scopes = {
+						from = prev
+						fromfrom = this
+					}
+				}
+			}
+		}
+	}
+}
+starbase_event = {				# gm_notification_starbase_destroyed - fleet is from
+	id = sgm_notify.149
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = { has_fleet_flag = gm_notification_starbase_destroyed } 
+	}
+	immediate = {
+		from = {
+			set_timed_fleet_flag = {
+				flag = notification_entering_gateway
+				days = 1
+			}
+			every_country = {
+				limit = {
+					sgm_has_gm_permissions = yes
+					#sgm_notifications_on = yes
+				}
+				country_event = {
+					id = sgm_notify.202
+					scopes = {
+						from = prev
+						fromfrom = this
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {				# gm_notification_space_battle_won - fleet is fromfrom
+	id = sgm_notify.150
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		fromfrom = { has_fleet_flag = gm_notification_space_battle_won } 
+	}
+	immediate = {
+		fromfrom = {
+			set_timed_fleet_flag = {
+				flag = notification_space_battle_won 
+				days = 1
+			}
+			every_country = {
+				limit = {
+					sgm_has_gm_permissions = yes
+					#sgm_notifications_on = yes
+				}
+				country_event = {
+					id = sgm_notify.202
+					scopes = {
+						from = prev
+						fromfrom = this
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
 # 200+ actual notifications
 
 country_event = {					# planet notifications
@@ -1140,6 +1563,142 @@ country_event = {				# country notifications
 			}
 		}
 		text = notification_ascension_perk_picked
+	}
+	immediate = {}
+	option = {
+		NAME = OK
+	}
+}
+
+country_event = {				# fleet notifications
+	id = sgm_notify.202
+	is_triggered_only = yes
+	title = sgm_notify_201
+	location = from 
+
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_entering_gateway
+			}
+		}
+		text = notification_entering_gateway
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_entering_wormhole
+			}
+		}
+		text = notification_entering_wormhole
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_jump_drive
+			}
+		}
+		text = notification_jump_drive
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_arch_stage_finished
+			}
+		}
+		text = notification_arch_stage_finished
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_crossing_border
+			}
+		}
+		text = notification_crossing_border
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_entering_system_fleet
+			}
+		}
+		text = notification_entering_system_fleet
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_emergency_ftl
+			}
+		}
+		text = notification_emergency_ftl
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_system_survey 
+			}
+		}
+		text = notification_system_survey 
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_entering_battle 
+			}
+		}
+		text = notification_entering_battle 
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_starbase_destroyed 
+			}
+		}
+		text = notification_starbase_destroyed 
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_fleet_flag = notification_space_battle_won 
+			}
+		}
+		text = notification_space_battle_won 
+	}
+	immediate = {}
+	option = {
+		NAME = OK
+	}
+}
+
+country_event = {				# megastructure notifications
+	id = sgm_notify.203
+	is_triggered_only = yes
+	title = sgm_notify_201
+	location = from 
+
+	desc = {
+		trigger = {
+			from = {
+				has_megastructure_flag = notification_fleet_enter_orbit
+			}
+		}
+		text = notification_fleet_enter_orbit
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_megastructure_flag = notification_megastructure_upgraded
+			}
+		}
+		text = notification_megastructure_upgraded
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_megastructure_flag = notification_megastructure_change_owner
+			}
+		}
+		text = notification_megastructure_change_owner
 	}
 	immediate = {}
 	option = {
