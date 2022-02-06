@@ -106,7 +106,6 @@ has_planet_notification = {
 has_country_notification = {
 	OR = {
 		has_country_flag = gm_notification_attackers_win
-		has_country_flag = gm_notification_attackers_win
 		has_country_flag = gm_notification_defenders_win
 		has_country_flag = gm_notification_entering_war
 		has_country_flag = gm_notification_communications_established
@@ -118,7 +117,23 @@ has_country_notification = {
 		has_country_flag = gm_notification_relic_activated
 		has_country_flag = gm_notification_government_changed
 		has_country_flag = gm_notification_ascension_perk_picked
-		has_country_flag = gm_notification_ascension_perk_picked
 		has_country_flag = gm_notification_megastructure_built	
 	}
 }
+
+has_timed_country_notification_flag = {
+	has_country_flag = notification_attackers_win
+	has_country_flag = notification_defenders_win
+	has_country_flag = notification_entering_war
+	has_country_flag = notification_communications_established
+	has_country_flag = notification_modification_complete
+	has_country_flag = notification_federation_new_leader
+	has_country_flag = notification_pirate_spawn
+	has_country_flag = notification_system_lost
+	has_country_flag = notification_system_gained
+	has_country_flag = notification_relic_activated
+	has_country_flag = notification_government_changed
+	has_country_flag = notification_ascension_perk_picked
+}
+
+

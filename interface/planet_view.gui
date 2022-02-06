@@ -576,7 +576,18 @@ guiTypes = {
 							orientation = UPPER_LEFT
 							effect = sgm_trigger_revolt
 				#			shortCut = j
-						}													
+						}	
+						effectbuttonType = {					
+							name = sgm_generate_homeworld
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 148 y = 483 }
+							scale = 1
+							buttonFont = malgun_goth_24
+							buttonText = sgm_generate_homeworld
+							orientation = UPPER_LEFT
+							effect = sgm_generate_homeworld
+				#			shortCut = j
+						}												
 						# right column
 						instantTextBoxType = {
 							name = "SYSTEM_EFFECTS"
