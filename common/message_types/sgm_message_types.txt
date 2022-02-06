@@ -21,3 +21,14 @@ message_type = {
 	auto_opens = none
 	ping = "ping_notification_green"
 }
+
+message_type = {
+	key = "SGM_PING"
+	icon = "GFX_message_system_survey_complete"
+	icon_frame = 1
+
+	sound = "event_sensor_ping"
+	sound_is_advisor = yes
+	auto_opens = none
+	ping = "ping_notification_green"
+}
