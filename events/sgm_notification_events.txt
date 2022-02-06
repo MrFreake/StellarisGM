@@ -395,37 +395,6 @@ country_event = {
 			set_fleet_flag = gm_notification_space_battle_won 
 		}
 	}
-
-	# megastructure notifications
-
-	option = {									# on_fleet_enter_orbit 
-		NAME = on_fleet_enter_orbit 
-		trigger = {
-			from = { is_scope_type = megastructure }
-		}
-		from = {
-			set_fleet_flag = gm_notification_fleet_enter_orbit 
-		}
-	}
-	option = {									# on_megastructure_upgraded 
-		NAME = on_megastructure_upgraded 
-		trigger = {
-			from = { is_scope_type = megastructure }
-		}
-		from = {
-			set_megastructure_flag = gm_notification_megastructure_upgraded 
-		}
-	}
-	option = {									# on_megastructure_change_owner 
-		NAME = on_megastructure_change_owner 
-		trigger = {
-			from = { is_scope_type = megastructure }
-		}
-		from = {
-			set_fleet_flag = gm_notification_megastructure_change_owner 
-		}
-	}
-
 }
 
 # 100-120 planet notification events
@@ -1323,6 +1292,37 @@ country_event = {				# gm_notification_space_battle_won - fleet is fromfrom
 		fromfrom = {
 			set_timed_fleet_flag = {
 				flag = notification_space_battle_won 
+				days = 1
+			}
+			every_country = {
+				limit = {
+					sgm_has_gm_permissions = yes
+					#sgm_notifications_on = yes
+				}
+				country_event = {
+					id = sgm_notify.202
+					scopes = {
+						from = prev
+						fromfrom = this
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {				# on_entering_battle - fleet is fromfrom
+	id = sgm_notify.151
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		fromfrom = { has_fleet_flag = gm_notification_entering_battle } 
+	}
+	immediate = {
+		fromfrom = {
+			set_timed_fleet_flag = {
+				flag = notification_entering_battle 
 				days = 1
 			}
 			every_country = {
