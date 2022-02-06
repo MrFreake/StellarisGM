@@ -155,3 +155,7 @@ sgm_terminal.1.name: "Terminal"
 sgm_terminal.1.desc: "$sgm_terminal.1.name$"
 sgm_terminal_output: "[event_target:sgm_terminal_event_target_1.GetName]:  [event_target:sgm_terminal_command_1.GetName] [event_target:sgm_terminal_command_2.GetName] [event_target:sgm_terminal_command_3.GetName] [event_target:sgm_terminal_command_4.GetName] [event_target:sgm_terminal_command_5.GetName]"
 # do a check script loc is scope type country or not getrealname
+
+# Ping
+MESSAGE_SGM_PING_TITLE: "$MATCHMAKING_SERVER_PING$"
+MESSAGE_SGM_PING_DESC: "[event_target:target_ping.GetName]"
