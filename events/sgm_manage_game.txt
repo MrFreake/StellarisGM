@@ -75,6 +75,17 @@ country_event = {
 		}
 	}
 
+	# Country stats
+	option = {
+		NAME = sgm_events.7.title
+		country_event = {
+			id = sgm_events.7
+			scopes = {
+				from = from
+			}
+		}
+	}
+
 	option = {
 		NAME = sgm_terminal.1.name
 		country_event = {
