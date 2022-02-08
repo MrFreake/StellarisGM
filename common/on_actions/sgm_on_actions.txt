@@ -48,6 +48,7 @@ on_single_player_save_game_load = {
 on_monthly_pulse_country = {
 	events = {
 		sgm_start_events.4
+		sgm_events.8
 	}
 }
 
