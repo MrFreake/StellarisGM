@@ -482,3 +482,18 @@ country_event = {
 		name = CANCEL
 	}
 }
+
+country_event = {
+	id = sgm_events.8
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+	}
+
+	immediate = {
+		sgm_export_empire_stats_to_variable = yes
+		sgm_export_sr_stockpile_and_income_to_variable = yes
+	}
+}
