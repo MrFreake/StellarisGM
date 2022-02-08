@@ -4346,3 +4346,57 @@ defined_text = {
 	 }
 	 default = "sgm_blank_key"
  }
+
+ defined_text = {
+	 name = "DIPLOMATIC_STATUS"
+	 text = {
+		 trigger = {
+			has_active_first_contact_with = from 
+		 }
+		 localization_key = "has_first_contact"
+	 }
+	 text = {
+		trigger = {
+			has_communications = from
+			NOR = {
+				has_defensive_pact = from
+				is_in_federation_with = from
+				is_guaranteeing = from 
+				has_non_aggression_pact = from
+				is_at_war_with = from 
+			}
+		}
+		localization_key = "has_established_communications"
+	}
+	text = {
+		trigger = {
+			has_defensive_pact = from 
+		}
+		localization_key = "has_defensive_pact"
+	}
+	text = {
+		trigger = {
+			is_in_federation_with = from 
+		}
+		localization_key = "has_federation"
+	}
+	text = {
+		trigger = {
+			is_guaranteeing = from 
+		}
+		localization_key = "is_guaranteeing"
+	}
+	text = {
+		trigger = {
+			has_non_aggression_pact = from 
+		}
+		localization_key = "has_non_aggression"
+	}
+	text = {
+		trigger = {
+			is_at_war_with = from 
+		}
+		localization_key = "is_at_war"
+	}
+	default = "no_contact"
+ }
