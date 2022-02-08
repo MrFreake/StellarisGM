@@ -104,7 +104,6 @@ system_event = {
 # this = country
 # from = planet/fleet/country/megastructure
 # fromfrom = button pressing country
-
 country_event = {
 	id = sgm_events.5
 	is_triggered_only = yes
@@ -112,30 +111,109 @@ country_event = {
 	#desc = sgm_events_5_desc
 	#picture = GFX_evt_alien_city
 	hide_window = yes
-
 	immediate = {
 		fromfrom = {
 			random_list = {
-				5 = { roll_result_effect = { roll_result = 1 } }
-				5 = { roll_result_effect = { roll_result = 2 } }
-				5 = { roll_result_effect = { roll_result = 3 } }
-				5 = { roll_result_effect = { roll_result = 4 } }
-				5 = { roll_result_effect = { roll_result = 5 } }
-				5 = { roll_result_effect = { roll_result = 6 } }
-				5 = { roll_result_effect = { roll_result = 7 } }
-				5 = { roll_result_effect = { roll_result = 8 } }
-				5 = { roll_result_effect = { roll_result = 9 } }
-				5 = { roll_result_effect = { roll_result = 10 } }
-				5 = { roll_result_effect = { roll_result = 11 } }
-				5 = { roll_result_effect = { roll_result = 12 } }
-				5 = { roll_result_effect = { roll_result = 13 } }
-				5 = { roll_result_effect = { roll_result = 14 } }
-				5 = { roll_result_effect = { roll_result = 15 } }
-				5 = { roll_result_effect = { roll_result = 16 } }
-				5 = { roll_result_effect = { roll_result = 17 } }
-				5 = { roll_result_effect = { roll_result = 18 } }
-				5 = { roll_result_effect = { roll_result = 19 } }
-				5 = { roll_result_effect = { roll_result = 20 } }
+				5 = {
+					roll_result_effect = {
+						roll_result = 1
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 2
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 3
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 4
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 5
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 6
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 7
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 8
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 9
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 10
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 11
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 12
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 13
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 14
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 15
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 16
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 17
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 18
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 19
+					}
+				}
+				5 = {
+					roll_result_effect = {
+						roll_result = 20
+					}
+				}
 			}
 		}
 	}
@@ -370,5 +448,52 @@ country_event = {
 	}
 	option = {
 		name = CANCEL
+	}
+}
+
+country_event = {
+	# Empire stats menu
+	id = sgm_events.7
+	is_triggered_only = yes
+	title = sgm_events.7.title
+	desc = sgm_events.7.desc
+	picture = GFX_evt_acquire_asset
+	immediate = {
+		if = {
+			limit = {
+				exists = event_target:target_country
+			}
+			event_target:target_country = {
+				sgm_export_empire_stats_to_variable = yes
+				sgm_export_sr_stockpile_and_income_to_variable = yes
+			}
+		}
+	}
+	option = {
+		name = RELOAD
+		country_event = {
+			id = sgm_events.7
+			scopes = {
+				from = from
+			}
+		}
+	}
+	option = {
+		name = CANCEL
+	}
+}
+
+country_event = {
+	id = sgm_events.8
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+	}
+
+	immediate = {
+		sgm_export_empire_stats_to_variable = yes
+		sgm_export_sr_stockpile_and_income_to_variable = yes
 	}
 }
