@@ -338,7 +338,7 @@ sgm_increase_neighbor_opinion = {
 	effect = {
 		every_neighbor_country = {
 			limit = {
-				is_country_type = default
+				is_regular_empire = yes
 			}
 			add_opinion_modifier = {
 				who = prev

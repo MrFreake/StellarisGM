@@ -677,7 +677,7 @@ defined_text = {
 		trigger = {
 			has_global_flag = sgm_spawn_system_utopia_initializers
 		}
-		localization_key =  UTOPIA_TITLE
+		localization_key = UTOPIA_TITLE
 	}
 	default = SOLAR_SYSTEM
 }
@@ -817,13 +817,13 @@ defined_text = {
 		trigger = {
 			has_global_flag = sgm_spawn_ship_event_ship_designs_nomad
 		}
-		localization_key =  first_contact_critters.95.name
+		localization_key = first_contact_critters.95.name
 	}
 	text = {
 		trigger = {
 			has_global_flag = sgm_spawn_ship_event_ship_designs_sentinels
 		}
-		localization_key =  crisis.51.2.name
+		localization_key = crisis.51.2.name
 	}
 	text = {
 		trigger = {
@@ -903,3500 +903,4735 @@ defined_text = {
 		}
 		localization_key = UTOPIA_TITLE
 	}
-	default =  SHIPDESIGNER
-
+	default = SHIPDESIGNER
 }
+
 defined_text = {
 	name = "GAS_GIANT_BODIES_PROJECT"
 	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_BODIES_PROJECT }
-		 }
-		 localization_key = "sgm_GAS_GIANT_BODIES_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SEA_EXPEDITION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SEA_EXPEDITION_PROJECT }
-		 }
-		 localization_key = "sgm_SEA_EXPEDITION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GIGANTIC_SKELETON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GIGANTIC_SKELETON_PROJECT }
-		 }
-		 localization_key = "sgm_GIGANTIC_SKELETON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BATTLE_WRECKAGE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BATTLE_WRECKAGE_PROJECT }
-		 }
-		 localization_key = "sgm_BATTLE_WRECKAGE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ABANDONED_TERRAFORMING_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ABANDONED_TERRAFORMING_1_PROJECT }
-		 }
-		 localization_key = "sgm_ABANDONED_TERRAFORMING_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ABANDONED_TERRAFORMING_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ABANDONED_TERRAFORMING_2_PROJECT }
-		 }
-		 localization_key = "sgm_ABANDONED_TERRAFORMING_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MUTANT_STALKER_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MUTANT_STALKER_PROJECT }
-		 }
-		 localization_key = "sgm_MUTANT_STALKER_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TRANSLATE_MURAL_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TRANSLATE_MURAL_PROJECT }
-		 }
-		 localization_key = "sgm_TRANSLATE_MURAL_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "NUCLEAR_BOMB_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = NUCLEAR_BOMB_PROJECT }
-		 }
-		 localization_key = "sgm_NUCLEAR_BOMB_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MIGRATING_FORESTS_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MIGRATING_FORESTS_1_PROJECT }
-		 }
-		 localization_key = "sgm_MIGRATING_FORESTS_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MIGRATING_FORESTS_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MIGRATING_FORESTS_2_PROJECT }
-		 }
-		 localization_key = "sgm_MIGRATING_FORESTS_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SEISMIC_DISTURBANCE_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SEISMIC_DISTURBANCE_1_PROJECT }
-		 }
-		 localization_key = "sgm_SEISMIC_DISTURBANCE_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SEISMIC_DISTURBANCE_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SEISMIC_DISTURBANCE_2_PROJECT }
-		 }
-		 localization_key = "sgm_SEISMIC_DISTURBANCE_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SEISMIC_DISTURBANCE_3_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SEISMIC_DISTURBANCE_3_PROJECT }
-		 }
-		 localization_key = "sgm_SEISMIC_DISTURBANCE_3_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UNDERGROUND_VAULT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UNDERGROUND_VAULT_PROJECT }
-		 }
-		 localization_key = "sgm_UNDERGROUND_VAULT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ORBITAL_DEBRIS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ORBITAL_DEBRIS_PROJECT }
-		 }
-		 localization_key = "sgm_ORBITAL_DEBRIS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MUTANT_SURVIVORS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MUTANT_SURVIVORS_PROJECT }
-		 }
-		 localization_key = "sgm_MUTANT_SURVIVORS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UNDERGROUND_FACILITY_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UNDERGROUND_FACILITY_PROJECT }
-		 }
-		 localization_key = "sgm_UNDERGROUND_FACILITY_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GHOSTLY_SIGHTINGS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GHOSTLY_SIGHTINGS_PROJECT }
-		 }
-		 localization_key = "sgm_GHOSTLY_SIGHTINGS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AUTOMATED_SHIPYARD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AUTOMATED_SHIPYARD_PROJECT }
-		 }
-		 localization_key = "sgm_AUTOMATED_SHIPYARD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_SHIP_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_SHIP_PROJECT }
-		 }
-		 localization_key = "sgm_GAS_GIANT_SHIP_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TERMINAL_ORBIT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TERMINAL_ORBIT_PROJECT }
-		 }
-		 localization_key = "sgm_TERMINAL_ORBIT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_SIGNAL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_SIGNAL }
-		 }
-		 localization_key = "sgm_GAS_GIANT_SIGNAL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_RELOCATION"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_RELOCATION }
-		 }
-		 localization_key = "sgm_GAS_GIANT_RELOCATION"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_COLONY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_COLONY }
-		 }
-		 localization_key = "sgm_GAS_GIANT_COLONY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_LOST_CONTACT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_LOST_CONTACT }
-		 }
-		 localization_key = "sgm_GAS_GIANT_LOST_CONTACT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_REVOLT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_REVOLT }
-		 }
-		 localization_key = "sgm_GAS_GIANT_REVOLT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_OCCUPATION"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_OCCUPATION }
-		 }
-		 localization_key = "sgm_GAS_GIANT_OCCUPATION"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_GIANT_LOST_CHABKY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_GIANT_LOST_CHABKY }
-		 }
-		 localization_key = "sgm_GAS_GIANT_LOST_CHABKY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PRIMITIVE_SHUTTLE_CRASH"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PRIMITIVE_SHUTTLE_CRASH }
-		 }
-		 localization_key = "sgm_PRIMITIVE_SHUTTLE_CRASH"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "EXTRACT_ROGUE_SCIENTIST"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = EXTRACT_ROGUE_SCIENTIST }
-		 }
-		 localization_key = "sgm_EXTRACT_ROGUE_SCIENTIST"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PROBE_ALIENS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PROBE_ALIENS }
-		 }
-		 localization_key = "sgm_PROBE_ALIENS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_1 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_2 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_3 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_4 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_5 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_6 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_7"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_7 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_7"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_8"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_8 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_8"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_9"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_9 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_9"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_10"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_10 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_10"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARCHEOLOGY_11"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARCHEOLOGY_11 }
-		 }
-		 localization_key = "sgm_VULTAUM_ARCHEOLOGY_11"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_HOMEWORLD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_HOMEWORLD_PROJECT }
-		 }
-		 localization_key = "sgm_VULTAUM_HOMEWORLD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_1 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_2 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_3 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_4 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_5 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_6 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_7"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_7 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_7"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_8"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_8 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_8"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARCHEOLOGY_9"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARCHEOLOGY_9 }
-		 }
-		 localization_key = "sgm_YUHT_ARCHEOLOGY_9"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_HOMEWORLD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_HOMEWORLD_PROJECT }
-		 }
-		 localization_key = "sgm_YUHT_HOMEWORLD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_1 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_2 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_3 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_4 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_5 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_6 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_7"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_7 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_7"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_8"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_8 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_8"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_9"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_9 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_9"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_10"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_10 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_10"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_11"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_11 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_11"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_12"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_12 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_12"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_13"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_13 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_13"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_ARCHEOLOGY_14"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_ARCHEOLOGY_14 }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_14"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FIRST_LEAGUE_HOMEWORLD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FIRST_LEAGUE_HOMEWORLD_PROJECT }
-		 }
-		 localization_key = "sgm_FIRST_LEAGUE_HOMEWORLD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_1 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_2 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_3 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_4 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_5 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_6 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_7"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_7 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_7"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_8"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_8 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_8"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_9"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_9 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_9"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_10"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_10 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_10"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARCHEOLOGY_11"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARCHEOLOGY_11 }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARCHEOLOGY_11"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_HOMEWORLD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_HOMEWORLD_PROJECT }
-		 }
-		 localization_key = "sgm_IRASSIAN_HOMEWORLD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_1 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_2 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_3 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_4 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_5 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_6 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_7"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_7 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_7"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_8"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_8 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_8"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_9"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_9 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_9"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_10"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_10 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_10"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARCHEOLOGY_11"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARCHEOLOGY_11 }
-		 }
-		 localization_key = "sgm_CYBREX_ARCHEOLOGY_11"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_HOMEWORLD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_HOMEWORLD_PROJECT }
-		 }
-		 localization_key = "sgm_CYBREX_HOMEWORLD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TARBLAC_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TARBLAC_PROCUREMENT }
-		 }
-		 localization_key = "sgm_TARBLAC_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TASSARGOID_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TASSARGOID_PROCUREMENT }
-		 }
-		 localization_key = "sgm_TASSARGOID_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ORINTHI_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ORINTHI_PROCUREMENT }
-		 }
-		 localization_key = "sgm_ORINTHI_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SNIRAN_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SNIRAN_PROCUREMENT }
-		 }
-		 localization_key = "sgm_SNIRAN_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GOOLANTHA_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GOOLANTHA_PROCUREMENT }
-		 }
-		 localization_key = "sgm_GOOLANTHA_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UDDLORAN_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UDDLORAN_PROCUREMENT }
-		 }
-		 localization_key = "sgm_UDDLORAN_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ZULCOR_PROCUREMENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ZULCOR_PROCUREMENT }
-		 }
-		 localization_key = "sgm_ZULCOR_PROCUREMENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SUBLIGHT_PROBE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SUBLIGHT_PROBE_PROJECT }
-		 }
-		 localization_key = "sgm_SUBLIGHT_PROBE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BOARD_CULT_SHIP_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BOARD_CULT_SHIP_1 }
-		 }
-		 localization_key = "sgm_BOARD_CULT_SHIP_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BOARD_CULT_SHIP_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BOARD_CULT_SHIP_2 }
-		 }
-		 localization_key = "sgm_BOARD_CULT_SHIP_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CULTIST_DEBRIS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CULTIST_DEBRIS }
-		 }
-		 localization_key = "sgm_CULTIST_DEBRIS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SMUGGLER_RAID_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SMUGGLER_RAID_PROJECT }
-		 }
-		 localization_key = "sgm_SMUGGLER_RAID_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ROGUE_BOMBARDMENT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ROGUE_BOMBARDMENT_PROJECT }
-		 }
-		 localization_key = "sgm_ROGUE_BOMBARDMENT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AVERT_PRIMITIVE_WAR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AVERT_PRIMITIVE_WAR_PROJECT }
-		 }
-		 localization_key = "sgm_AVERT_PRIMITIVE_WAR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FALLEN_SHIELD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FALLEN_SHIELD_PROJECT }
-		 }
-		 localization_key = "sgm_FALLEN_SHIELD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TEST_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TEST_PROJECT }
-		 }
-		 localization_key = "sgm_TEST_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ESTABLISH_COMMUNICATIONS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ESTABLISH_COMMUNICATIONS }
-		 }
-		 localization_key = "sgm_ESTABLISH_COMMUNICATIONS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BOARD_HYACINTH"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BOARD_HYACINTH }
-		 }
-		 localization_key = "sgm_BOARD_HYACINTH"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ABDUCT_SCIENTIST_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ABDUCT_SCIENTIST_PROJECT }
-		 }
-		 localization_key = "sgm_ABDUCT_SCIENTIST_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IMPLANT_MALFUNCTIONS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IMPLANT_MALFUNCTIONS_PROJECT }
-		 }
-		 localization_key = "sgm_IMPLANT_MALFUNCTIONS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DEFENSE_FORCE_STRIKE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DEFENSE_FORCE_STRIKE_PROJECT }
-		 }
-		 localization_key = "sgm_DEFENSE_FORCE_STRIKE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SYNTH_INFILTRATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SYNTH_INFILTRATION_PROJECT }
-		 }
-		 localization_key = "sgm_SYNTH_INFILTRATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CAPTURE_QUEEN"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CAPTURE_QUEEN }
-		 }
-		 localization_key = "sgm_CAPTURE_QUEEN"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FLEET_MANEUVERS_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FLEET_MANEUVERS_1_PROJECT }
-		 }
-		 localization_key = "sgm_FLEET_MANEUVERS_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FLEET_MANEUVERS_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FLEET_MANEUVERS_2_PROJECT }
-		 }
-		 localization_key = "sgm_FLEET_MANEUVERS_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FLEET_MANEUVERS_3_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FLEET_MANEUVERS_3_PROJECT }
-		 }
-		 localization_key = "sgm_FLEET_MANEUVERS_3_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AI_CRISIS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AI_CRISIS_PROJECT }
-		 }
-		 localization_key = "sgm_AI_CRISIS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_ARTIFACT_FOUND"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_ARTIFACT_FOUND }
-		 }
-		 localization_key = "sgm_VULTAUM_ARTIFACT_FOUND"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_ARTIFACT_FOUND"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_ARTIFACT_FOUND }
-		 }
-		 localization_key = "sgm_YUHT_ARTIFACT_FOUND"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LEAGUE_ARTIFACT_FOUND"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LEAGUE_ARTIFACT_FOUND }
-		 }
-		 localization_key = "sgm_LEAGUE_ARTIFACT_FOUND"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_ARTIFACT_FOUND"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_ARTIFACT_FOUND }
-		 }
-		 localization_key = "sgm_IRASSIAN_ARTIFACT_FOUND"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_ARTIFACT_FOUND"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_ARTIFACT_FOUND }
-		 }
-		 localization_key = "sgm_CYBREX_ARTIFACT_FOUND"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DEAL_WITH_FLORA"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DEAL_WITH_FLORA }
-		 }
-		 localization_key = "sgm_DEAL_WITH_FLORA"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "HELPFUL_DRONES_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = HELPFUL_DRONES_1_PROJECT }
-		 }
-		 localization_key = "sgm_HELPFUL_DRONES_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "POLLEN_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = POLLEN_1_PROJECT }
-		 }
-		 localization_key = "sgm_POLLEN_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "POLLEN_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = POLLEN_2_PROJECT }
-		 }
-		 localization_key = "sgm_POLLEN_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "POLLEN_3_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = POLLEN_3_PROJECT }
-		 }
-		 localization_key = "sgm_POLLEN_3_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OLD_GODS_BENEFACTRESS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OLD_GODS_BENEFACTRESS_PROJECT }
-		 }
-		 localization_key = "sgm_OLD_GODS_BENEFACTRESS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OLD_GODS_UNDAUNTED_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OLD_GODS_UNDAUNTED_PROJECT }
-		 }
-		 localization_key = "sgm_OLD_GODS_UNDAUNTED_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OLD_GODS_PERCIPIENT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OLD_GODS_PERCIPIENT_PROJECT }
-		 }
-		 localization_key = "sgm_OLD_GODS_PERCIPIENT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ROGUE_SCIENTIST_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ROGUE_SCIENTIST_1_PROJECT }
-		 }
-		 localization_key = "sgm_ROGUE_SCIENTIST_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASSEX_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASSEX_1_PROJECT }
-		 }
-		 localization_key = "sgm_MASSEX_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASSEX_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASSEX_2_PROJECT }
-		 }
-		 localization_key = "sgm_MASSEX_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASSEX_3_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASSEX_3_PROJECT }
-		 }
-		 localization_key = "sgm_MASSEX_3_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASSEX_4_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASSEX_4_PROJECT }
-		 }
-		 localization_key = "sgm_MASSEX_4_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASSEX_5_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASSEX_5_PROJECT }
-		 }
-		 localization_key = "sgm_MASSEX_5_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LIMBO_1_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LIMBO_1_PROJECT }
-		 }
-		 localization_key = "sgm_LIMBO_1_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PROJECTING_MOON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PROJECTING_MOON_PROJECT }
-		 }
-		 localization_key = "sgm_PROJECTING_MOON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GRIMACING_PLANET_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GRIMACING_PLANET_PROJECT }
-		 }
-		 localization_key = "sgm_GRIMACING_PLANET_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OLFACTORY_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OLFACTORY_PROJECT }
-		 }
-		 localization_key = "sgm_OLFACTORY_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ULTIMATE_WEAPON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ULTIMATE_WEAPON_PROJECT }
-		 }
-		 localization_key = "sgm_ULTIMATE_WEAPON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REFINE_ROCK_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REFINE_ROCK_PROJECT }
-		 }
-		 localization_key = "sgm_REFINE_ROCK_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ALIEN_BARRACKS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ALIEN_BARRACKS_PROJECT }
-		 }
-		 localization_key = "sgm_ALIEN_BARRACKS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYSTAL_CODEX_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYSTAL_CODEX_PROJECT }
-		 }
-		 localization_key = "sgm_CRYSTAL_CODEX_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ROBOT_MINERALS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ROBOT_MINERALS_PROJECT }
-		 }
-		 localization_key = "sgm_ROBOT_MINERALS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AMOEBAS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AMOEBAS_PROJECT }
-		 }
-		 localization_key = "sgm_AMOEBAS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AMOEBAS_PACIFICATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AMOEBAS_PACIFICATION_PROJECT }
-		 }
-		 localization_key = "sgm_AMOEBAS_PACIFICATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYSTALS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYSTALS_PROJECT }
-		 }
-		 localization_key = "sgm_CRYSTALS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYSTALS_PACIFICATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYSTALS_PACIFICATION_PROJECT }
-		 }
-		 localization_key = "sgm_CRYSTALS_PACIFICATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DRONES_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DRONES_PROJECT }
-		 }
-		 localization_key = "sgm_DRONES_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CLOUDS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CLOUDS_PROJECT }
-		 }
-		 localization_key = "sgm_CLOUDS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BALANCE_ECOSYSTEM_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BALANCE_ECOSYSTEM_PROJECT }
-		 }
-		 localization_key = "sgm_BALANCE_ECOSYSTEM_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "HEAD_IN_SAND_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = HEAD_IN_SAND_PROJECT }
-		 }
-		 localization_key = "sgm_HEAD_IN_SAND_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "THE_PRINCE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = THE_PRINCE_PROJECT }
-		 }
-		 localization_key = "sgm_THE_PRINCE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "EMERGENCY_BUOY_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = EMERGENCY_BUOY_PROJECT }
-		 }
-		 localization_key = "sgm_EMERGENCY_BUOY_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DERELICT_SHIP_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DERELICT_SHIP_PROJECT }
-		 }
-		 localization_key = "sgm_DERELICT_SHIP_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "AI_ADMIRAL_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = AI_ADMIRAL_PROJECT }
-		 }
-		 localization_key = "sgm_AI_ADMIRAL_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TESTING_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TESTING_PROJECT }
-		 }
-		 localization_key = "sgm_TESTING_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ODD_STAR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ODD_STAR_PROJECT }
-		 }
-		 localization_key = "sgm_ODD_STAR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IMPROBABLE_TEAPOT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IMPROBABLE_TEAPOT_PROJECT }
-		 }
-		 localization_key = "sgm_IMPROBABLE_TEAPOT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MINING_GEAR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MINING_GEAR_PROJECT }
-		 }
-		 localization_key = "sgm_MINING_GEAR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ABANDONED_ARRAY_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ABANDONED_ARRAY_PROJECT }
-		 }
-		 localization_key = "sgm_ABANDONED_ARRAY_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ALIEN_RACER_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ALIEN_RACER_PROJECT }
-		 }
-		 localization_key = "sgm_ALIEN_RACER_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PSIONIC_HORSES_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PSIONIC_HORSES_PROJECT }
-		 }
-		 localization_key = "sgm_PSIONIC_HORSES_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ROBOT_CLEANERS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ROBOT_CLEANERS_PROJECT }
-		 }
-		 localization_key = "sgm_ROBOT_CLEANERS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ALIEN_MONSTER_ON_SHIP"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ALIEN_MONSTER_ON_SHIP }
-		 }
-		 localization_key = "sgm_ALIEN_MONSTER_ON_SHIP"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TREE_OF_LIFE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TREE_OF_LIFE }
-		 }
-		 localization_key = "sgm_TREE_OF_LIFE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASTERS_WRITINGS_POLITICS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASTERS_WRITINGS_POLITICS }
-		 }
-		 localization_key = "sgm_MASTERS_WRITINGS_POLITICS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASTERS_WRITINGS_PHILOSOPHY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASTERS_WRITINGS_PHILOSOPHY }
-		 }
-		 localization_key = "sgm_MASTERS_WRITINGS_PHILOSOPHY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASTERS_WRITINGS_DIPLOMACY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASTERS_WRITINGS_DIPLOMACY }
-		 }
-		 localization_key = "sgm_MASTERS_WRITINGS_DIPLOMACY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MASTERS_WRITINGS_WAR"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MASTERS_WRITINGS_WAR }
-		 }
-		 localization_key = "sgm_MASTERS_WRITINGS_WAR"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYOPOD_FOUND_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYOPOD_FOUND_PROJECT }
-		 }
-		 localization_key = "sgm_CRYOPOD_FOUND_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYOPOD_OPENING_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYOPOD_OPENING_PROJECT }
-		 }
-		 localization_key = "sgm_CRYOPOD_OPENING_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ANCIENT_OCEAN_SHIP"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ANCIENT_OCEAN_SHIP }
-		 }
-		 localization_key = "sgm_ANCIENT_OCEAN_SHIP"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "hallucinogen_removal"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = hallucinogen_removal }
-		 }
-		 localization_key = "sgm_hallucinogen_removal"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "impact_defence_system"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = impact_defence_system }
-		 }
-		 localization_key = "sgm_impact_defence_system"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "titanic_life_study_normal"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = titanic_life_study_normal }
-		 }
-		 localization_key = "sgm_titanic_life_study_normal"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "titanic_life_study_mean"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = titanic_life_study_mean }
-		 }
-		 localization_key = "sgm_titanic_life_study_mean"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "titanic_life_study_nice"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = titanic_life_study_nice }
-		 }
-		 localization_key = "sgm_titanic_life_study_nice"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MAGNETIC_PLANET_RESEARCH_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MAGNETIC_PLANET_RESEARCH_PROJECT }
-		 }
-		 localization_key = "sgm_MAGNETIC_PLANET_RESEARCH_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "retaliatory_genome_mapping"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = retaliatory_genome_mapping }
-		 }
-		 localization_key = "sgm_retaliatory_genome_mapping"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "woodwind_instrument_investigation"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = woodwind_instrument_investigation }
-		 }
-		 localization_key = "sgm_woodwind_instrument_investigation"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "disappearing_pops_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = disappearing_pops_project }
-		 }
-		 localization_key = "sgm_disappearing_pops_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "mystery_cream_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = mystery_cream_project }
-		 }
-		 localization_key = "sgm_mystery_cream_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "cream_origin_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = cream_origin_project }
-		 }
-		 localization_key = "sgm_cream_origin_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ROGUEMOON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ROGUEMOON_PROJECT }
-		 }
-		 localization_key = "sgm_ROGUEMOON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT_SCIENCE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT_SCIENCE }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT_SCIENCE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT_PRAYER"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT_PRAYER }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT_PRAYER"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT_PSI_PRAYER"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT_PSI_PRAYER }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT_PSI_PRAYER"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DPORTAL_PROJECT_ROCKS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DPORTAL_PROJECT_ROCKS }
-		 }
-		 localization_key = "sgm_DPORTAL_PROJECT_ROCKS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MEGACORPSE_ORIGINS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MEGACORPSE_ORIGINS }
-		 }
-		 localization_key = "sgm_MEGACORPSE_ORIGINS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "NULLVOID_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = NULLVOID_PROJECT }
-		 }
-		 localization_key = "sgm_NULLVOID_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LIMBO_2_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LIMBO_2_PROJECT }
-		 }
-		 localization_key = "sgm_LIMBO_2_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CLONE_SOLDIER_FERTILITY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CLONE_SOLDIER_FERTILITY }
-		 }
-		 localization_key = "sgm_CLONE_SOLDIER_FERTILITY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_ROCK_BRAIN"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_ROCK_BRAIN }
-		 }
-		 localization_key = "sgm_REANIMATE_ROCK_BRAIN"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "breed_turtle_world_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = breed_turtle_world_project }
-		 }
-		 localization_key = "sgm_breed_turtle_world_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "enslave_turtle_world_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = enslave_turtle_world_project }
-		 }
-		 localization_key = "sgm_enslave_turtle_world_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "mine_turtle_world_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = mine_turtle_world_project }
-		 }
-		 localization_key = "sgm_mine_turtle_world_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "kill_turtle_world_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = kill_turtle_world_project }
-		 }
-		 localization_key = "sgm_kill_turtle_world_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "study_turtle_world_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = study_turtle_world_project }
-		 }
-		 localization_key = "sgm_study_turtle_world_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "STUDY_NANITE_SWARM"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = STUDY_NANITE_SWARM }
-		 }
-		 localization_key = "sgm_STUDY_NANITE_SWARM"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DESTROY_SWARM"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DESTROY_SWARM }
-		 }
-		 localization_key = "sgm_DESTROY_SWARM"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TAME_THE_SWARM"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TAME_THE_SWARM }
-		 }
-		 localization_key = "sgm_TAME_THE_SWARM"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CLONE_SOLDIER_UNLOCK_FERTILITY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CLONE_SOLDIER_UNLOCK_FERTILITY }
-		 }
-		 localization_key = "sgm_CLONE_SOLDIER_UNLOCK_FERTILITY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CLONE_SOLDIER_UNLOCK_POTENTIAL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CLONE_SOLDIER_UNLOCK_POTENTIAL }
-		 }
-		 localization_key = "sgm_CLONE_SOLDIER_UNLOCK_POTENTIAL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FOLLOWING_FUNGI_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FOLLOWING_FUNGI_PROJECT }
-		 }
-		 localization_key = "sgm_FOLLOWING_FUNGI_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MUSHROOMING_NETWORK_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MUSHROOMING_NETWORK_PROJECT }
-		 }
-		 localization_key = "sgm_MUSHROOMING_NETWORK_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DRAGON_MATERIAL_STUDY"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DRAGON_MATERIAL_STUDY }
-		 }
-		 localization_key = "sgm_DRAGON_MATERIAL_STUDY"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DRAGON_REMOTE_SCANS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DRAGON_REMOTE_SCANS }
-		 }
-		 localization_key = "sgm_DRAGON_REMOTE_SCANS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENLIGHTEN_RADIO"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENLIGHTEN_RADIO }
-		 }
-		 localization_key = "sgm_ENLIGHTEN_RADIO"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GAS_RESTORATION"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GAS_RESTORATION }
-		 }
-		 localization_key = "sgm_GAS_RESTORATION"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "RESCUE_STORM"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = RESCUE_STORM }
-		 }
-		 localization_key = "sgm_RESCUE_STORM"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "STUDY_SLEEPING_CRYSTAL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = STUDY_SLEEPING_CRYSTAL }
-		 }
-		 localization_key = "sgm_STUDY_SLEEPING_CRYSTAL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GIGANTIC_SKELETON_RESURRECTION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GIGANTIC_SKELETON_RESURRECTION_PROJECT }
-		 }
-		 localization_key = "sgm_GIGANTIC_SKELETON_RESURRECTION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRACK_THE_EGG"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRACK_THE_EGG }
-		 }
-		 localization_key = "sgm_CRACK_THE_EGG"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GHOST_SHIP_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GHOST_SHIP_PROJECT }
-		 }
-		 localization_key = "sgm_GHOST_SHIP_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BAOL_COLONY_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BAOL_COLONY_1 }
-		 }
-		 localization_key = "sgm_BAOL_COLONY_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BAOL_COLONY_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BAOL_COLONY_2 }
-		 }
-		 localization_key = "sgm_BAOL_COLONY_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BAOL_COLONY_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BAOL_COLONY_3 }
-		 }
-		 localization_key = "sgm_BAOL_COLONY_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "THE_LAST_BAOL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = THE_LAST_BAOL }
-		 }
-		 localization_key = "sgm_THE_LAST_BAOL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FERROPHAGE_CURE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FERROPHAGE_CURE }
-		 }
-		 localization_key = "sgm_FERROPHAGE_CURE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "IRASSIAN_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = IRASSIAN_SECRETS }
-		 }
-		 localization_key = "sgm_IRASSIAN_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "YUHT_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = YUHT_SECRETS }
-		 }
-		 localization_key = "sgm_YUHT_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_SECRETS }
-		 }
-		 localization_key = "sgm_VULTAUM_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "VULTAUM_SECRETS_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = VULTAUM_SECRETS_2 }
-		 }
-		 localization_key = "sgm_VULTAUM_SECRETS_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LEAGUE_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LEAGUE_SECRETS }
-		 }
-		 localization_key = "sgm_LEAGUE_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CYBREX_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CYBREX_SECRETS }
-		 }
-		 localization_key = "sgm_CYBREX_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BAOL_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BAOL_SECRETS }
-		 }
-		 localization_key = "sgm_BAOL_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ZRONI_SECRETS"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ZRONI_SECRETS }
-		 }
-		 localization_key = "sgm_ZRONI_SECRETS"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "Herald_repair"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = Herald_repair }
-		 }
-		 localization_key = "sgm_Herald_repair"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_SHARD_DRAGON"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_SHARD_DRAGON }
-		 }
-		 localization_key = "sgm_REANIMATE_SHARD_DRAGON"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE }
-		 }
-		 localization_key = "sgm_SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "COLOSSUS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = COLOSSUS_PROJECT }
-		 }
-		 localization_key = "sgm_COLOSSUS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SUPERFLARE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SUPERFLARE_PROJECT }
-		 }
-		 localization_key = "sgm_SUPERFLARE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PRIMITIVE_ROBOT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PRIMITIVE_ROBOT_PROJECT }
-		 }
-		 localization_key = "sgm_PRIMITIVE_ROBOT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "RETROVIRUS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = RETROVIRUS_PROJECT }
-		 }
-		 localization_key = "sgm_RETROVIRUS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DARK_FLOW_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DARK_FLOW_PROJECT }
-		 }
-		 localization_key = "sgm_DARK_FLOW_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DISSECTION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DISSECTION_PROJECT }
-		 }
-		 localization_key = "sgm_DISSECTION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRYO_CLONES_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRYO_CLONES_PROJECT }
-		 }
-		 localization_key = "sgm_CRYO_CLONES_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "RECOVER_WARFORM_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = RECOVER_WARFORM_PROJECT }
-		 }
-		 localization_key = "sgm_RECOVER_WARFORM_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BRAINSLUG_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BRAINSLUG_PROJECT }
-		 }
-		 localization_key = "sgm_BRAINSLUG_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_1 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_2 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_3 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_4 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_5"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_5 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_5"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "KETLING_PROJECT_6"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = KETLING_PROJECT_6 }
-		 }
-		 localization_key = "sgm_KETLING_PROJECT_6"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PHASESHIFT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PHASESHIFT_PROJECT }
-		 }
-		 localization_key = "sgm_PHASESHIFT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "trojan_asteroid_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = trojan_asteroid_project }
-		 }
-		 localization_key = "sgm_trojan_asteroid_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "impossible_organism_project_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = impossible_organism_project_1 }
-		 }
-		 localization_key = "sgm_impossible_organism_project_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "impossible_organism_project_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = impossible_organism_project_2 }
-		 }
-		 localization_key = "sgm_impossible_organism_project_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "molluscoid_miners_project_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = molluscoid_miners_project_1 }
-		 }
-		 localization_key = "sgm_molluscoid_miners_project_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "molluscoid_miners_project_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = molluscoid_miners_project_2 }
-		 }
-		 localization_key = "sgm_molluscoid_miners_project_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "molluscoid_miners_project_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = molluscoid_miners_project_3 }
-		 }
-		 localization_key = "sgm_molluscoid_miners_project_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "speed_demon_open_box_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = speed_demon_open_box_project }
-		 }
-		 localization_key = "sgm_speed_demon_open_box_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "speed_demon_learn_more_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = speed_demon_learn_more_project }
-		 }
-		 localization_key = "sgm_speed_demon_learn_more_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "breathing_rift_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = breathing_rift_project }
-		 }
-		 localization_key = "sgm_breathing_rift_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_TIYANKI_MATRIARCH"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_TIYANKI_MATRIARCH }
-		 }
-		 localization_key = "sgm_REANIMATE_TIYANKI_MATRIARCH"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_VOIDSPAWN"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_VOIDSPAWN }
-		 }
-		 localization_key = "sgm_REANIMATE_VOIDSPAWN"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_LOST_AMOEBA"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_LOST_AMOEBA }
-		 }
-		 localization_key = "sgm_REANIMATE_LOST_AMOEBA"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "STUDY_LIVING_SEA"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = STUDY_LIVING_SEA }
-		 }
-		 localization_key = "sgm_STUDY_LIVING_SEA"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "INVESTIGATE_CAVE_SHROOM_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = INVESTIGATE_CAVE_SHROOM_PROJECT }
-		 }
-		 localization_key = "sgm_INVESTIGATE_CAVE_SHROOM_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UTILIZE_CAVE_SHROOM_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UTILIZE_CAVE_SHROOM_PROJECT }
-		 }
-		 localization_key = "sgm_UTILIZE_CAVE_SHROOM_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "EXTERMINATE_CAVE_SHROOM_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = EXTERMINATE_CAVE_SHROOM_PROJECT }
-		 }
-		 localization_key = "sgm_EXTERMINATE_CAVE_SHROOM_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LESSENGER_REMODEL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LESSENGER_REMODEL }
-		 }
-		 localization_key = "sgm_LESSENGER_REMODEL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "A_CLOSER_LOOK_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = A_CLOSER_LOOK_PROJECT }
-		 }
-		 localization_key = "sgm_A_CLOSER_LOOK_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "THE_GATEWAY_CANNON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = THE_GATEWAY_CANNON_PROJECT }
-		 }
-		 localization_key = "sgm_THE_GATEWAY_CANNON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PATHFINDING_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PATHFINDING_PROJECT }
-		 }
-		 localization_key = "sgm_PATHFINDING_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "INVESTIGATE_THE_DEAD_STATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = INVESTIGATE_THE_DEAD_STATION_PROJECT }
-		 }
-		 localization_key = "sgm_INVESTIGATE_THE_DEAD_STATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "PROJECT_OUROBOROS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = PROJECT_OUROBOROS_PROJECT }
-		 }
-		 localization_key = "sgm_PROJECT_OUROBOROS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TRACKING_THE_PREDATOR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TRACKING_THE_PREDATOR_PROJECT }
-		 }
-		 localization_key = "sgm_TRACKING_THE_PREDATOR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "INVESTIGATE_SILENT_FREIGHTER_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = INVESTIGATE_SILENT_FREIGHTER_PROJECT }
-		 }
-		 localization_key = "sgm_INVESTIGATE_SILENT_FREIGHTER_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OLD_BEACON_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OLD_BEACON_PROJECT }
-		 }
-		 localization_key = "sgm_OLD_BEACON_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DANCING_PLAGUE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DANCING_PLAGUE_PROJECT }
-		 }
-		 localization_key = "sgm_DANCING_PLAGUE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DANCING_PLAGUE_PROJECT2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DANCING_PLAGUE_PROJECT2 }
-		 }
-		 localization_key = "sgm_DANCING_PLAGUE_PROJECT2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BLUELOTUS_SCALE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BLUELOTUS_SCALE_PROJECT }
-		 }
-		 localization_key = "sgm_BLUELOTUS_SCALE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "WENKWORT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = WENKWORT_PROJECT }
-		 }
-		 localization_key = "sgm_WENKWORT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DISMEMBERED_CLOUD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DISMEMBERED_CLOUD_PROJECT }
-		 }
-		 localization_key = "sgm_DISMEMBERED_CLOUD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "hegemony_joint_project_leader"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = hegemony_joint_project_leader }
-		 }
-		 localization_key = "sgm_hegemony_joint_project_leader"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "hegemony_joint_project_member"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = hegemony_joint_project_member }
-		 }
-		 localization_key = "sgm_hegemony_joint_project_member"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "military_joint_project"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = military_joint_project }
-		 }
-		 localization_key = "sgm_military_joint_project"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LEYLINES_ACOUSTIC_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LEYLINES_ACOUSTIC_PROJECT }
-		 }
-		 localization_key = "sgm_LEYLINES_ACOUSTIC_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LEYLINES_ANALYSIS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LEYLINES_ANALYSIS_PROJECT }
-		 }
-		 localization_key = "sgm_LEYLINES_ANALYSIS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LOGISTIC_REMODEL"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LOGISTIC_REMODEL }
-		 }
-		 localization_key = "sgm_LOGISTIC_REMODEL"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LOGISTIC_REMODEL_OFFWORLD"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LOGISTIC_REMODEL_OFFWORLD }
-		 }
-		 localization_key = "sgm_LOGISTIC_REMODEL_OFFWORLD"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "HORIZON_SIGNAL_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = HORIZON_SIGNAL_PROJECT }
-		 }
-		 localization_key = "sgm_HORIZON_SIGNAL_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LOOP_TEMPLE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LOOP_TEMPLE_PROJECT }
-		 }
-		 localization_key = "sgm_LOOP_TEMPLE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MESSENGER_POD_PROJECT_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MESSENGER_POD_PROJECT_1 }
-		 }
-		 localization_key = "sgm_MESSENGER_POD_PROJECT_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MESSENGER_POD_PROJECT_2_UNLEASHED"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MESSENGER_POD_PROJECT_2_UNLEASHED }
-		 }
-		 localization_key = "sgm_MESSENGER_POD_PROJECT_2_UNLEASHED"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "MESSENGER_POD_PROJECT_2_LEASHED"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MESSENGER_POD_PROJECT_2_LEASHED }
-		 }
-		 localization_key = "sgm_MESSENGER_POD_PROJECT_2_LEASHED"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "COILS_GOD_PROJECT_DISRUPT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = COILS_GOD_PROJECT_DISRUPT }
-		 }
-		 localization_key = "sgm_COILS_GOD_PROJECT_DISRUPT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "COILS_GOD_PROJECT_PREVENT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = COILS_GOD_PROJECT_PREVENT }
-		 }
-		 localization_key = "sgm_COILS_GOD_PROJECT_PREVENT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "COILS_GOD_PROJECT_PARTICIPATE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = COILS_GOD_PROJECT_PARTICIPATE }
-		 }
-		 localization_key = "sgm_COILS_GOD_PROJECT_PARTICIPATE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "WAITING_WORLD_DISAPPEARANCE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = WAITING_WORLD_DISAPPEARANCE }
-		 }
-		 localization_key = "sgm_WAITING_WORLD_DISAPPEARANCE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "WAITING_WORLD_HYPERAPPEARANCE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = WAITING_WORLD_HYPERAPPEARANCE }
-		 }
-		 localization_key = "sgm_WAITING_WORLD_HYPERAPPEARANCE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "WAITING_WORLD_PURGE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = WAITING_WORLD_PURGE }
-		 }
-		 localization_key = "sgm_WAITING_WORLD_PURGE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "WORM_ENTRY_POINT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = WORM_ENTRY_POINT }
-		 }
-		 localization_key = "sgm_WORM_ENTRY_POINT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "HORIZON_DEBRIS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = HORIZON_DEBRIS_PROJECT }
-		 }
-		 localization_key = "sgm_HORIZON_DEBRIS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SYZYGY_DEBRIS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SYZYGY_DEBRIS_PROJECT }
-		 }
-		 localization_key = "sgm_SYZYGY_DEBRIS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "STELLARITE_DEAD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = STELLARITE_DEAD_PROJECT }
-		 }
-		 localization_key = "sgm_STELLARITE_DEAD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "STELLARITE_STAR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = STELLARITE_STAR_PROJECT }
-		 }
-		 localization_key = "sgm_STELLARITE_STAR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DIMENSIONAL_HORROR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DIMENSIONAL_HORROR_PROJECT }
-		 }
-		 localization_key = "sgm_DIMENSIONAL_HORROR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DISABLED_DREADNOUGHT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DISABLED_DREADNOUGHT_PROJECT }
-		 }
-		 localization_key = "sgm_DISABLED_DREADNOUGHT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "HIVE_ASTEROID_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = HIVE_ASTEROID_PROJECT }
-		 }
-		 localization_key = "sgm_HIVE_ASTEROID_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_1A"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_1A }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_1A"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_1B"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_1B }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_1B"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_5A"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_5A }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_5A"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_5B"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_5B }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_5B"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_5C"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_5C }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_5C"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "ENIGMATIC_FORTRESS_5D"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = ENIGMATIC_FORTRESS_5D }
-		 }
-		 localization_key = "sgm_ENIGMATIC_FORTRESS_5D"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TECHNOSPHERE_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TECHNOSPHERE_PROJECT }
-		 }
-		 localization_key = "sgm_TECHNOSPHERE_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TECHNOSPHERE_BLACKHOLE"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TECHNOSPHERE_BLACKHOLE }
-		 }
-		 localization_key = "sgm_TECHNOSPHERE_BLACKHOLE"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TECHNOSPHERE_HACKING"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TECHNOSPHERE_HACKING }
-		 }
-		 localization_key = "sgm_TECHNOSPHERE_HACKING"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TECHNOSPHERE_DESTRUCTION"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TECHNOSPHERE_DESTRUCTION }
-		 }
-		 localization_key = "sgm_TECHNOSPHERE_DESTRUCTION"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "DRAGON_INCUBATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = DRAGON_INCUBATION_PROJECT }
-		 }
-		 localization_key = "sgm_DRAGON_INCUBATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_GUARDIAN_DRAGON"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_GUARDIAN_DRAGON }
-		 }
-		 localization_key = "sgm_REANIMATE_GUARDIAN_DRAGON"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "REANIMATE_ORIGIN_DRAGON"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = REANIMATE_ORIGIN_DRAGON }
-		 }
-		 localization_key = "sgm_REANIMATE_ORIGIN_DRAGON"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CARAVAN_HULK_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CARAVAN_HULK_PROJECT }
-		 }
-		 localization_key = "sgm_CARAVAN_HULK_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "TOXIC_OPERATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TOXIC_OPERATION_PROJECT }
-		 }
-		 localization_key = "sgm_TOXIC_OPERATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "NOISE_OPERATION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = NOISE_OPERATION_PROJECT }
-		 }
-		 localization_key = "sgm_NOISE_OPERATION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UNIVERSAL_TRANSLATOR_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UNIVERSAL_TRANSLATOR_PROJECT }
-		 }
-		 localization_key = "sgm_UNIVERSAL_TRANSLATOR_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "OCTOPODES_LIGHT_PATTERNS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = OCTOPODES_LIGHT_PATTERNS_PROJECT }
-		 }
-		 localization_key = "sgm_OCTOPODES_LIGHT_PATTERNS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_1 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_MACH_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_MACH_1 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_HIVE_1"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_1 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_1"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_2 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_MACH_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_MACH_2 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_HIVE_2"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_2 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_2"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_3 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_MACH_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_MACH_3 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_HIVE_3"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_3 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_3"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_4 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_MACH_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_MACH_4 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "CRISIS_SPECIAL_PROJECT_HIVE_4"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_4 }
-		 }
-		 localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_4"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LONELY_BOT_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LONELY_BOT_PROJECT }
-		 }
-		 localization_key = "sgm_LONELY_BOT_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "LONELY_BOT_MISSING_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = LONELY_BOT_MISSING_PROJECT }
-		 }
-		 localization_key = "sgm_LONELY_BOT_MISSING_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "FLESH_IS_WEAK_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = FLESH_IS_WEAK_PROJECT }
-		 }
-		 localization_key = "sgm_FLESH_IS_WEAK_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "SYNTHETIC_EVOLUTION_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = SYNTHETIC_EVOLUTION_PROJECT }
-		 }
-		 localization_key = "sgm_SYNTHETIC_EVOLUTION_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "BREACHING_SHROUD_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = BREACHING_SHROUD_PROJECT }
-		 }
-		 localization_key = "sgm_BREACHING_SHROUD_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
-
- defined_text = {
-	 name = "DIPLOMATIC_STATUS"
-	 text = {
-		 trigger = {
-			has_active_first_contact_with = from 
-		 }
-		 localization_key = "has_first_contact"
-	 }
-	 text = {
 		trigger = {
-			has_communications = from
-			NOR = {
-				has_defensive_pact = from
-				is_in_federation_with = from
-				is_guaranteeing = from 
-				has_non_aggression_pact = from
-				is_at_war_with = from 
+			fromfrom = {
+				has_special_project = GAS_GIANT_BODIES_PROJECT
 			}
 		}
-		localization_key = "has_established_communications"
+		localization_key = "sgm_GAS_GIANT_BODIES_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SEA_EXPEDITION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SEA_EXPEDITION_PROJECT
+			}
+		}
+		localization_key = "sgm_SEA_EXPEDITION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GIGANTIC_SKELETON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GIGANTIC_SKELETON_PROJECT
+			}
+		}
+		localization_key = "sgm_GIGANTIC_SKELETON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BATTLE_WRECKAGE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BATTLE_WRECKAGE_PROJECT
+			}
+		}
+		localization_key = "sgm_BATTLE_WRECKAGE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ABANDONED_TERRAFORMING_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ABANDONED_TERRAFORMING_1_PROJECT
+			}
+		}
+		localization_key = "sgm_ABANDONED_TERRAFORMING_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ABANDONED_TERRAFORMING_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ABANDONED_TERRAFORMING_2_PROJECT
+			}
+		}
+		localization_key = "sgm_ABANDONED_TERRAFORMING_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MUTANT_STALKER_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MUTANT_STALKER_PROJECT
+			}
+		}
+		localization_key = "sgm_MUTANT_STALKER_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TRANSLATE_MURAL_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TRANSLATE_MURAL_PROJECT
+			}
+		}
+		localization_key = "sgm_TRANSLATE_MURAL_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "NUCLEAR_BOMB_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = NUCLEAR_BOMB_PROJECT
+			}
+		}
+		localization_key = "sgm_NUCLEAR_BOMB_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MIGRATING_FORESTS_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MIGRATING_FORESTS_1_PROJECT
+			}
+		}
+		localization_key = "sgm_MIGRATING_FORESTS_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MIGRATING_FORESTS_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MIGRATING_FORESTS_2_PROJECT
+			}
+		}
+		localization_key = "sgm_MIGRATING_FORESTS_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SEISMIC_DISTURBANCE_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SEISMIC_DISTURBANCE_1_PROJECT
+			}
+		}
+		localization_key = "sgm_SEISMIC_DISTURBANCE_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SEISMIC_DISTURBANCE_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SEISMIC_DISTURBANCE_2_PROJECT
+			}
+		}
+		localization_key = "sgm_SEISMIC_DISTURBANCE_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SEISMIC_DISTURBANCE_3_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SEISMIC_DISTURBANCE_3_PROJECT
+			}
+		}
+		localization_key = "sgm_SEISMIC_DISTURBANCE_3_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "UNDERGROUND_VAULT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = UNDERGROUND_VAULT_PROJECT
+			}
+		}
+		localization_key = "sgm_UNDERGROUND_VAULT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ORBITAL_DEBRIS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ORBITAL_DEBRIS_PROJECT
+			}
+		}
+		localization_key = "sgm_ORBITAL_DEBRIS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MUTANT_SURVIVORS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MUTANT_SURVIVORS_PROJECT
+			}
+		}
+		localization_key = "sgm_MUTANT_SURVIVORS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "UNDERGROUND_FACILITY_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = UNDERGROUND_FACILITY_PROJECT
+			}
+		}
+		localization_key = "sgm_UNDERGROUND_FACILITY_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GHOSTLY_SIGHTINGS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GHOSTLY_SIGHTINGS_PROJECT
+			}
+		}
+		localization_key = "sgm_GHOSTLY_SIGHTINGS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AUTOMATED_SHIPYARD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AUTOMATED_SHIPYARD_PROJECT
+			}
+		}
+		localization_key = "sgm_AUTOMATED_SHIPYARD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_SHIP_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_SHIP_PROJECT
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_SHIP_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TERMINAL_ORBIT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TERMINAL_ORBIT_PROJECT
+			}
+		}
+		localization_key = "sgm_TERMINAL_ORBIT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_SIGNAL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_SIGNAL
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_SIGNAL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_RELOCATION"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_RELOCATION
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_RELOCATION"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_COLONY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_COLONY
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_COLONY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_LOST_CONTACT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_LOST_CONTACT
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_LOST_CONTACT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_REVOLT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_REVOLT
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_REVOLT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_OCCUPATION"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_OCCUPATION
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_OCCUPATION"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_GIANT_LOST_CHABKY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_GIANT_LOST_CHABKY
+			}
+		}
+		localization_key = "sgm_GAS_GIANT_LOST_CHABKY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PRIMITIVE_SHUTTLE_CRASH"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PRIMITIVE_SHUTTLE_CRASH
+			}
+		}
+		localization_key = "sgm_PRIMITIVE_SHUTTLE_CRASH"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "EXTRACT_ROGUE_SCIENTIST"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = EXTRACT_ROGUE_SCIENTIST
+			}
+		}
+		localization_key = "sgm_EXTRACT_ROGUE_SCIENTIST"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PROBE_ALIENS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PROBE_ALIENS
+			}
+		}
+		localization_key = "sgm_PROBE_ALIENS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_1
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_2
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_3
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_4
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_5
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_6
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_7"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_7
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_7"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_8"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_8
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_8"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_9"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_9
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_9"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_10"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_10
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_10"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARCHEOLOGY_11"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARCHEOLOGY_11
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARCHEOLOGY_11"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_HOMEWORLD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_HOMEWORLD_PROJECT
+			}
+		}
+		localization_key = "sgm_VULTAUM_HOMEWORLD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_1
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_2
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_3
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_4
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_5
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_6
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_7"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_7
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_7"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_8"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_8
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_8"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARCHEOLOGY_9"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARCHEOLOGY_9
+			}
+		}
+		localization_key = "sgm_YUHT_ARCHEOLOGY_9"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_HOMEWORLD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_HOMEWORLD_PROJECT
+			}
+		}
+		localization_key = "sgm_YUHT_HOMEWORLD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_1
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_2
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_3
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_4
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_5
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_6
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_7"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_7
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_7"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_8"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_8
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_8"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_9"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_9
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_9"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_10"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_10
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_10"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_11"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_11
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_11"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_12"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_12
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_12"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_13"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_13
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_13"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_ARCHEOLOGY_14"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_ARCHEOLOGY_14
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_ARCHEOLOGY_14"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FIRST_LEAGUE_HOMEWORLD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FIRST_LEAGUE_HOMEWORLD_PROJECT
+			}
+		}
+		localization_key = "sgm_FIRST_LEAGUE_HOMEWORLD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_1
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_2
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_3
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_4
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_5
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_6
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_7"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_7
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_7"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_8"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_8
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_8"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_9"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_9
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_9"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_10"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_10
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_10"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARCHEOLOGY_11"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARCHEOLOGY_11
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARCHEOLOGY_11"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_HOMEWORLD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_HOMEWORLD_PROJECT
+			}
+		}
+		localization_key = "sgm_IRASSIAN_HOMEWORLD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_1
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_2
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_3
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_4
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_5
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_6
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_7"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_7
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_7"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_8"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_8
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_8"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_9"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_9
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_9"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_10"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_10
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_10"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARCHEOLOGY_11"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARCHEOLOGY_11
+			}
+		}
+		localization_key = "sgm_CYBREX_ARCHEOLOGY_11"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_HOMEWORLD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_HOMEWORLD_PROJECT
+			}
+		}
+		localization_key = "sgm_CYBREX_HOMEWORLD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TARBLAC_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TARBLAC_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_TARBLAC_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TASSARGOID_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TASSARGOID_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_TASSARGOID_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ORINTHI_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ORINTHI_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_ORINTHI_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SNIRAN_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SNIRAN_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_SNIRAN_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GOOLANTHA_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GOOLANTHA_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_GOOLANTHA_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "UDDLORAN_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = UDDLORAN_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_UDDLORAN_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ZULCOR_PROCUREMENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ZULCOR_PROCUREMENT
+			}
+		}
+		localization_key = "sgm_ZULCOR_PROCUREMENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SUBLIGHT_PROBE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SUBLIGHT_PROBE_PROJECT
+			}
+		}
+		localization_key = "sgm_SUBLIGHT_PROBE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BOARD_CULT_SHIP_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BOARD_CULT_SHIP_1
+			}
+		}
+		localization_key = "sgm_BOARD_CULT_SHIP_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BOARD_CULT_SHIP_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BOARD_CULT_SHIP_2
+			}
+		}
+		localization_key = "sgm_BOARD_CULT_SHIP_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CULTIST_DEBRIS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CULTIST_DEBRIS
+			}
+		}
+		localization_key = "sgm_CULTIST_DEBRIS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SMUGGLER_RAID_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SMUGGLER_RAID_PROJECT
+			}
+		}
+		localization_key = "sgm_SMUGGLER_RAID_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ROGUE_BOMBARDMENT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ROGUE_BOMBARDMENT_PROJECT
+			}
+		}
+		localization_key = "sgm_ROGUE_BOMBARDMENT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AVERT_PRIMITIVE_WAR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AVERT_PRIMITIVE_WAR_PROJECT
+			}
+		}
+		localization_key = "sgm_AVERT_PRIMITIVE_WAR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FALLEN_SHIELD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FALLEN_SHIELD_PROJECT
+			}
+		}
+		localization_key = "sgm_FALLEN_SHIELD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TEST_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TEST_PROJECT
+			}
+		}
+		localization_key = "sgm_TEST_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ESTABLISH_COMMUNICATIONS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ESTABLISH_COMMUNICATIONS
+			}
+		}
+		localization_key = "sgm_ESTABLISH_COMMUNICATIONS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BOARD_HYACINTH"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BOARD_HYACINTH
+			}
+		}
+		localization_key = "sgm_BOARD_HYACINTH"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ABDUCT_SCIENTIST_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ABDUCT_SCIENTIST_PROJECT
+			}
+		}
+		localization_key = "sgm_ABDUCT_SCIENTIST_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IMPLANT_MALFUNCTIONS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IMPLANT_MALFUNCTIONS_PROJECT
+			}
+		}
+		localization_key = "sgm_IMPLANT_MALFUNCTIONS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DEFENSE_FORCE_STRIKE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DEFENSE_FORCE_STRIKE_PROJECT
+			}
+		}
+		localization_key = "sgm_DEFENSE_FORCE_STRIKE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SYNTH_INFILTRATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SYNTH_INFILTRATION_PROJECT
+			}
+		}
+		localization_key = "sgm_SYNTH_INFILTRATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CAPTURE_QUEEN"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CAPTURE_QUEEN
+			}
+		}
+		localization_key = "sgm_CAPTURE_QUEEN"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FLEET_MANEUVERS_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FLEET_MANEUVERS_1_PROJECT
+			}
+		}
+		localization_key = "sgm_FLEET_MANEUVERS_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FLEET_MANEUVERS_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FLEET_MANEUVERS_2_PROJECT
+			}
+		}
+		localization_key = "sgm_FLEET_MANEUVERS_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FLEET_MANEUVERS_3_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FLEET_MANEUVERS_3_PROJECT
+			}
+		}
+		localization_key = "sgm_FLEET_MANEUVERS_3_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AI_CRISIS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AI_CRISIS_PROJECT
+			}
+		}
+		localization_key = "sgm_AI_CRISIS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_ARTIFACT_FOUND"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_ARTIFACT_FOUND
+			}
+		}
+		localization_key = "sgm_VULTAUM_ARTIFACT_FOUND"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_ARTIFACT_FOUND"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_ARTIFACT_FOUND
+			}
+		}
+		localization_key = "sgm_YUHT_ARTIFACT_FOUND"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LEAGUE_ARTIFACT_FOUND"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LEAGUE_ARTIFACT_FOUND
+			}
+		}
+		localization_key = "sgm_LEAGUE_ARTIFACT_FOUND"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_ARTIFACT_FOUND"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_ARTIFACT_FOUND
+			}
+		}
+		localization_key = "sgm_IRASSIAN_ARTIFACT_FOUND"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_ARTIFACT_FOUND"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_ARTIFACT_FOUND
+			}
+		}
+		localization_key = "sgm_CYBREX_ARTIFACT_FOUND"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DEAL_WITH_FLORA"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DEAL_WITH_FLORA
+			}
+		}
+		localization_key = "sgm_DEAL_WITH_FLORA"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "HELPFUL_DRONES_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = HELPFUL_DRONES_1_PROJECT
+			}
+		}
+		localization_key = "sgm_HELPFUL_DRONES_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "POLLEN_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = POLLEN_1_PROJECT
+			}
+		}
+		localization_key = "sgm_POLLEN_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "POLLEN_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = POLLEN_2_PROJECT
+			}
+		}
+		localization_key = "sgm_POLLEN_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "POLLEN_3_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = POLLEN_3_PROJECT
+			}
+		}
+		localization_key = "sgm_POLLEN_3_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OLD_GODS_BENEFACTRESS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OLD_GODS_BENEFACTRESS_PROJECT
+			}
+		}
+		localization_key = "sgm_OLD_GODS_BENEFACTRESS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OLD_GODS_UNDAUNTED_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OLD_GODS_UNDAUNTED_PROJECT
+			}
+		}
+		localization_key = "sgm_OLD_GODS_UNDAUNTED_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OLD_GODS_PERCIPIENT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OLD_GODS_PERCIPIENT_PROJECT
+			}
+		}
+		localization_key = "sgm_OLD_GODS_PERCIPIENT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ROGUE_SCIENTIST_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ROGUE_SCIENTIST_1_PROJECT
+			}
+		}
+		localization_key = "sgm_ROGUE_SCIENTIST_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASSEX_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASSEX_1_PROJECT
+			}
+		}
+		localization_key = "sgm_MASSEX_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASSEX_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASSEX_2_PROJECT
+			}
+		}
+		localization_key = "sgm_MASSEX_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASSEX_3_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASSEX_3_PROJECT
+			}
+		}
+		localization_key = "sgm_MASSEX_3_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASSEX_4_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASSEX_4_PROJECT
+			}
+		}
+		localization_key = "sgm_MASSEX_4_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASSEX_5_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASSEX_5_PROJECT
+			}
+		}
+		localization_key = "sgm_MASSEX_5_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LIMBO_1_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LIMBO_1_PROJECT
+			}
+		}
+		localization_key = "sgm_LIMBO_1_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PROJECTING_MOON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PROJECTING_MOON_PROJECT
+			}
+		}
+		localization_key = "sgm_PROJECTING_MOON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GRIMACING_PLANET_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GRIMACING_PLANET_PROJECT
+			}
+		}
+		localization_key = "sgm_GRIMACING_PLANET_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OLFACTORY_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OLFACTORY_PROJECT
+			}
+		}
+		localization_key = "sgm_OLFACTORY_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ULTIMATE_WEAPON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ULTIMATE_WEAPON_PROJECT
+			}
+		}
+		localization_key = "sgm_ULTIMATE_WEAPON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REFINE_ROCK_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REFINE_ROCK_PROJECT
+			}
+		}
+		localization_key = "sgm_REFINE_ROCK_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ALIEN_BARRACKS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ALIEN_BARRACKS_PROJECT
+			}
+		}
+		localization_key = "sgm_ALIEN_BARRACKS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYSTAL_CODEX_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYSTAL_CODEX_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYSTAL_CODEX_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ROBOT_MINERALS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ROBOT_MINERALS_PROJECT
+			}
+		}
+		localization_key = "sgm_ROBOT_MINERALS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AMOEBAS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AMOEBAS_PROJECT
+			}
+		}
+		localization_key = "sgm_AMOEBAS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AMOEBAS_PACIFICATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AMOEBAS_PACIFICATION_PROJECT
+			}
+		}
+		localization_key = "sgm_AMOEBAS_PACIFICATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYSTALS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYSTALS_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYSTALS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYSTALS_PACIFICATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYSTALS_PACIFICATION_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYSTALS_PACIFICATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DRONES_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DRONES_PROJECT
+			}
+		}
+		localization_key = "sgm_DRONES_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CLOUDS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CLOUDS_PROJECT
+			}
+		}
+		localization_key = "sgm_CLOUDS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BALANCE_ECOSYSTEM_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BALANCE_ECOSYSTEM_PROJECT
+			}
+		}
+		localization_key = "sgm_BALANCE_ECOSYSTEM_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "HEAD_IN_SAND_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = HEAD_IN_SAND_PROJECT
+			}
+		}
+		localization_key = "sgm_HEAD_IN_SAND_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "THE_PRINCE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = THE_PRINCE_PROJECT
+			}
+		}
+		localization_key = "sgm_THE_PRINCE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "EMERGENCY_BUOY_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = EMERGENCY_BUOY_PROJECT
+			}
+		}
+		localization_key = "sgm_EMERGENCY_BUOY_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DERELICT_SHIP_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DERELICT_SHIP_PROJECT
+			}
+		}
+		localization_key = "sgm_DERELICT_SHIP_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "AI_ADMIRAL_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = AI_ADMIRAL_PROJECT
+			}
+		}
+		localization_key = "sgm_AI_ADMIRAL_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TESTING_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TESTING_PROJECT
+			}
+		}
+		localization_key = "sgm_TESTING_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ODD_STAR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ODD_STAR_PROJECT
+			}
+		}
+		localization_key = "sgm_ODD_STAR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IMPROBABLE_TEAPOT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IMPROBABLE_TEAPOT_PROJECT
+			}
+		}
+		localization_key = "sgm_IMPROBABLE_TEAPOT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MINING_GEAR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MINING_GEAR_PROJECT
+			}
+		}
+		localization_key = "sgm_MINING_GEAR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ABANDONED_ARRAY_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ABANDONED_ARRAY_PROJECT
+			}
+		}
+		localization_key = "sgm_ABANDONED_ARRAY_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ALIEN_RACER_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ALIEN_RACER_PROJECT
+			}
+		}
+		localization_key = "sgm_ALIEN_RACER_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PSIONIC_HORSES_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PSIONIC_HORSES_PROJECT
+			}
+		}
+		localization_key = "sgm_PSIONIC_HORSES_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ROBOT_CLEANERS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ROBOT_CLEANERS_PROJECT
+			}
+		}
+		localization_key = "sgm_ROBOT_CLEANERS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ALIEN_MONSTER_ON_SHIP"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ALIEN_MONSTER_ON_SHIP
+			}
+		}
+		localization_key = "sgm_ALIEN_MONSTER_ON_SHIP"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TREE_OF_LIFE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TREE_OF_LIFE
+			}
+		}
+		localization_key = "sgm_TREE_OF_LIFE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASTERS_WRITINGS_POLITICS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASTERS_WRITINGS_POLITICS
+			}
+		}
+		localization_key = "sgm_MASTERS_WRITINGS_POLITICS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASTERS_WRITINGS_PHILOSOPHY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASTERS_WRITINGS_PHILOSOPHY
+			}
+		}
+		localization_key = "sgm_MASTERS_WRITINGS_PHILOSOPHY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASTERS_WRITINGS_DIPLOMACY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASTERS_WRITINGS_DIPLOMACY
+			}
+		}
+		localization_key = "sgm_MASTERS_WRITINGS_DIPLOMACY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MASTERS_WRITINGS_WAR"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MASTERS_WRITINGS_WAR
+			}
+		}
+		localization_key = "sgm_MASTERS_WRITINGS_WAR"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYOPOD_FOUND_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYOPOD_FOUND_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYOPOD_FOUND_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYOPOD_OPENING_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYOPOD_OPENING_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYOPOD_OPENING_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ANCIENT_OCEAN_SHIP"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ANCIENT_OCEAN_SHIP
+			}
+		}
+		localization_key = "sgm_ANCIENT_OCEAN_SHIP"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "hallucinogen_removal"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = hallucinogen_removal
+			}
+		}
+		localization_key = "sgm_hallucinogen_removal"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "impact_defence_system"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = impact_defence_system
+			}
+		}
+		localization_key = "sgm_impact_defence_system"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "titanic_life_study_normal"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = titanic_life_study_normal
+			}
+		}
+		localization_key = "sgm_titanic_life_study_normal"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "titanic_life_study_mean"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = titanic_life_study_mean
+			}
+		}
+		localization_key = "sgm_titanic_life_study_mean"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "titanic_life_study_nice"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = titanic_life_study_nice
+			}
+		}
+		localization_key = "sgm_titanic_life_study_nice"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MAGNETIC_PLANET_RESEARCH_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MAGNETIC_PLANET_RESEARCH_PROJECT
+			}
+		}
+		localization_key = "sgm_MAGNETIC_PLANET_RESEARCH_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "retaliatory_genome_mapping"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = retaliatory_genome_mapping
+			}
+		}
+		localization_key = "sgm_retaliatory_genome_mapping"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "woodwind_instrument_investigation"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = woodwind_instrument_investigation
+			}
+		}
+		localization_key = "sgm_woodwind_instrument_investigation"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "disappearing_pops_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = disappearing_pops_project
+			}
+		}
+		localization_key = "sgm_disappearing_pops_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "mystery_cream_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = mystery_cream_project
+			}
+		}
+		localization_key = "sgm_mystery_cream_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "cream_origin_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = cream_origin_project
+			}
+		}
+		localization_key = "sgm_cream_origin_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ROGUEMOON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ROGUEMOON_PROJECT
+			}
+		}
+		localization_key = "sgm_ROGUEMOON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT_SCIENCE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT_SCIENCE
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT_SCIENCE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT_PRAYER"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT_PRAYER
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT_PRAYER"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT_PSI_PRAYER"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT_PSI_PRAYER
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT_PSI_PRAYER"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DPORTAL_PROJECT_ROCKS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DPORTAL_PROJECT_ROCKS
+			}
+		}
+		localization_key = "sgm_DPORTAL_PROJECT_ROCKS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MEGACORPSE_ORIGINS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MEGACORPSE_ORIGINS
+			}
+		}
+		localization_key = "sgm_MEGACORPSE_ORIGINS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "NULLVOID_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = NULLVOID_PROJECT
+			}
+		}
+		localization_key = "sgm_NULLVOID_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LIMBO_2_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LIMBO_2_PROJECT
+			}
+		}
+		localization_key = "sgm_LIMBO_2_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CLONE_SOLDIER_FERTILITY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CLONE_SOLDIER_FERTILITY
+			}
+		}
+		localization_key = "sgm_CLONE_SOLDIER_FERTILITY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_ROCK_BRAIN"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_ROCK_BRAIN
+			}
+		}
+		localization_key = "sgm_REANIMATE_ROCK_BRAIN"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "breed_turtle_world_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = breed_turtle_world_project
+			}
+		}
+		localization_key = "sgm_breed_turtle_world_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "enslave_turtle_world_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = enslave_turtle_world_project
+			}
+		}
+		localization_key = "sgm_enslave_turtle_world_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "mine_turtle_world_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = mine_turtle_world_project
+			}
+		}
+		localization_key = "sgm_mine_turtle_world_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "kill_turtle_world_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = kill_turtle_world_project
+			}
+		}
+		localization_key = "sgm_kill_turtle_world_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "study_turtle_world_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = study_turtle_world_project
+			}
+		}
+		localization_key = "sgm_study_turtle_world_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "STUDY_NANITE_SWARM"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = STUDY_NANITE_SWARM
+			}
+		}
+		localization_key = "sgm_STUDY_NANITE_SWARM"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DESTROY_SWARM"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DESTROY_SWARM
+			}
+		}
+		localization_key = "sgm_DESTROY_SWARM"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TAME_THE_SWARM"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TAME_THE_SWARM
+			}
+		}
+		localization_key = "sgm_TAME_THE_SWARM"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CLONE_SOLDIER_UNLOCK_FERTILITY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CLONE_SOLDIER_UNLOCK_FERTILITY
+			}
+		}
+		localization_key = "sgm_CLONE_SOLDIER_UNLOCK_FERTILITY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CLONE_SOLDIER_UNLOCK_POTENTIAL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CLONE_SOLDIER_UNLOCK_POTENTIAL
+			}
+		}
+		localization_key = "sgm_CLONE_SOLDIER_UNLOCK_POTENTIAL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FOLLOWING_FUNGI_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FOLLOWING_FUNGI_PROJECT
+			}
+		}
+		localization_key = "sgm_FOLLOWING_FUNGI_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MUSHROOMING_NETWORK_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MUSHROOMING_NETWORK_PROJECT
+			}
+		}
+		localization_key = "sgm_MUSHROOMING_NETWORK_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DRAGON_MATERIAL_STUDY"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DRAGON_MATERIAL_STUDY
+			}
+		}
+		localization_key = "sgm_DRAGON_MATERIAL_STUDY"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DRAGON_REMOTE_SCANS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DRAGON_REMOTE_SCANS
+			}
+		}
+		localization_key = "sgm_DRAGON_REMOTE_SCANS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENLIGHTEN_RADIO"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENLIGHTEN_RADIO
+			}
+		}
+		localization_key = "sgm_ENLIGHTEN_RADIO"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GAS_RESTORATION"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GAS_RESTORATION
+			}
+		}
+		localization_key = "sgm_GAS_RESTORATION"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "RESCUE_STORM"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = RESCUE_STORM
+			}
+		}
+		localization_key = "sgm_RESCUE_STORM"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "STUDY_SLEEPING_CRYSTAL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = STUDY_SLEEPING_CRYSTAL
+			}
+		}
+		localization_key = "sgm_STUDY_SLEEPING_CRYSTAL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GIGANTIC_SKELETON_RESURRECTION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GIGANTIC_SKELETON_RESURRECTION_PROJECT
+			}
+		}
+		localization_key = "sgm_GIGANTIC_SKELETON_RESURRECTION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRACK_THE_EGG"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRACK_THE_EGG
+			}
+		}
+		localization_key = "sgm_CRACK_THE_EGG"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GHOST_SHIP_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = GHOST_SHIP_PROJECT
+			}
+		}
+		localization_key = "sgm_GHOST_SHIP_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BAOL_COLONY_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BAOL_COLONY_1
+			}
+		}
+		localization_key = "sgm_BAOL_COLONY_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BAOL_COLONY_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BAOL_COLONY_2
+			}
+		}
+		localization_key = "sgm_BAOL_COLONY_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BAOL_COLONY_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BAOL_COLONY_3
+			}
+		}
+		localization_key = "sgm_BAOL_COLONY_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "THE_LAST_BAOL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = THE_LAST_BAOL
+			}
+		}
+		localization_key = "sgm_THE_LAST_BAOL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FERROPHAGE_CURE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FERROPHAGE_CURE
+			}
+		}
+		localization_key = "sgm_FERROPHAGE_CURE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "IRASSIAN_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = IRASSIAN_SECRETS
+			}
+		}
+		localization_key = "sgm_IRASSIAN_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "YUHT_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = YUHT_SECRETS
+			}
+		}
+		localization_key = "sgm_YUHT_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_SECRETS
+			}
+		}
+		localization_key = "sgm_VULTAUM_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "VULTAUM_SECRETS_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = VULTAUM_SECRETS_2
+			}
+		}
+		localization_key = "sgm_VULTAUM_SECRETS_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LEAGUE_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LEAGUE_SECRETS
+			}
+		}
+		localization_key = "sgm_LEAGUE_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CYBREX_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CYBREX_SECRETS
+			}
+		}
+		localization_key = "sgm_CYBREX_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BAOL_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BAOL_SECRETS
+			}
+		}
+		localization_key = "sgm_BAOL_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ZRONI_SECRETS"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ZRONI_SECRETS
+			}
+		}
+		localization_key = "sgm_ZRONI_SECRETS"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "Herald_repair"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = Herald_repair
+			}
+		}
+		localization_key = "sgm_Herald_repair"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_SHARD_DRAGON"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_SHARD_DRAGON
+			}
+		}
+		localization_key = "sgm_REANIMATE_SHARD_DRAGON"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE
+			}
+		}
+		localization_key = "sgm_SHARD_DESTROYED_BY_NON_DEFAULT_EMPIRE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "COLOSSUS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = COLOSSUS_PROJECT
+			}
+		}
+		localization_key = "sgm_COLOSSUS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SUPERFLARE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SUPERFLARE_PROJECT
+			}
+		}
+		localization_key = "sgm_SUPERFLARE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PRIMITIVE_ROBOT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PRIMITIVE_ROBOT_PROJECT
+			}
+		}
+		localization_key = "sgm_PRIMITIVE_ROBOT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "RETROVIRUS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = RETROVIRUS_PROJECT
+			}
+		}
+		localization_key = "sgm_RETROVIRUS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DARK_FLOW_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DARK_FLOW_PROJECT
+			}
+		}
+		localization_key = "sgm_DARK_FLOW_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DISSECTION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DISSECTION_PROJECT
+			}
+		}
+		localization_key = "sgm_DISSECTION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRYO_CLONES_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRYO_CLONES_PROJECT
+			}
+		}
+		localization_key = "sgm_CRYO_CLONES_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "RECOVER_WARFORM_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = RECOVER_WARFORM_PROJECT
+			}
+		}
+		localization_key = "sgm_RECOVER_WARFORM_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BRAINSLUG_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BRAINSLUG_PROJECT
+			}
+		}
+		localization_key = "sgm_BRAINSLUG_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_1
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_2
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_3
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_4
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_5"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_5
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_5"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "KETLING_PROJECT_6"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = KETLING_PROJECT_6
+			}
+		}
+		localization_key = "sgm_KETLING_PROJECT_6"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PHASESHIFT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PHASESHIFT_PROJECT
+			}
+		}
+		localization_key = "sgm_PHASESHIFT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "trojan_asteroid_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = trojan_asteroid_project
+			}
+		}
+		localization_key = "sgm_trojan_asteroid_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "impossible_organism_project_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = impossible_organism_project_1
+			}
+		}
+		localization_key = "sgm_impossible_organism_project_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "impossible_organism_project_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = impossible_organism_project_2
+			}
+		}
+		localization_key = "sgm_impossible_organism_project_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "molluscoid_miners_project_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = molluscoid_miners_project_1
+			}
+		}
+		localization_key = "sgm_molluscoid_miners_project_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "molluscoid_miners_project_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = molluscoid_miners_project_2
+			}
+		}
+		localization_key = "sgm_molluscoid_miners_project_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "molluscoid_miners_project_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = molluscoid_miners_project_3
+			}
+		}
+		localization_key = "sgm_molluscoid_miners_project_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "speed_demon_open_box_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = speed_demon_open_box_project
+			}
+		}
+		localization_key = "sgm_speed_demon_open_box_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "speed_demon_learn_more_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = speed_demon_learn_more_project
+			}
+		}
+		localization_key = "sgm_speed_demon_learn_more_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "breathing_rift_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = breathing_rift_project
+			}
+		}
+		localization_key = "sgm_breathing_rift_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_TIYANKI_MATRIARCH"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_TIYANKI_MATRIARCH
+			}
+		}
+		localization_key = "sgm_REANIMATE_TIYANKI_MATRIARCH"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_VOIDSPAWN"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_VOIDSPAWN
+			}
+		}
+		localization_key = "sgm_REANIMATE_VOIDSPAWN"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_LOST_AMOEBA"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_LOST_AMOEBA
+			}
+		}
+		localization_key = "sgm_REANIMATE_LOST_AMOEBA"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "STUDY_LIVING_SEA"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = STUDY_LIVING_SEA
+			}
+		}
+		localization_key = "sgm_STUDY_LIVING_SEA"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "INVESTIGATE_CAVE_SHROOM_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = INVESTIGATE_CAVE_SHROOM_PROJECT
+			}
+		}
+		localization_key = "sgm_INVESTIGATE_CAVE_SHROOM_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "UTILIZE_CAVE_SHROOM_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = UTILIZE_CAVE_SHROOM_PROJECT
+			}
+		}
+		localization_key = "sgm_UTILIZE_CAVE_SHROOM_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "EXTERMINATE_CAVE_SHROOM_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = EXTERMINATE_CAVE_SHROOM_PROJECT
+			}
+		}
+		localization_key = "sgm_EXTERMINATE_CAVE_SHROOM_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LESSENGER_REMODEL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LESSENGER_REMODEL
+			}
+		}
+		localization_key = "sgm_LESSENGER_REMODEL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "A_CLOSER_LOOK_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = A_CLOSER_LOOK_PROJECT
+			}
+		}
+		localization_key = "sgm_A_CLOSER_LOOK_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "THE_GATEWAY_CANNON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = THE_GATEWAY_CANNON_PROJECT
+			}
+		}
+		localization_key = "sgm_THE_GATEWAY_CANNON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PATHFINDING_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PATHFINDING_PROJECT
+			}
+		}
+		localization_key = "sgm_PATHFINDING_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "INVESTIGATE_THE_DEAD_STATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = INVESTIGATE_THE_DEAD_STATION_PROJECT
+			}
+		}
+		localization_key = "sgm_INVESTIGATE_THE_DEAD_STATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "PROJECT_OUROBOROS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = PROJECT_OUROBOROS_PROJECT
+			}
+		}
+		localization_key = "sgm_PROJECT_OUROBOROS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TRACKING_THE_PREDATOR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TRACKING_THE_PREDATOR_PROJECT
+			}
+		}
+		localization_key = "sgm_TRACKING_THE_PREDATOR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "INVESTIGATE_SILENT_FREIGHTER_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = INVESTIGATE_SILENT_FREIGHTER_PROJECT
+			}
+		}
+		localization_key = "sgm_INVESTIGATE_SILENT_FREIGHTER_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OLD_BEACON_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OLD_BEACON_PROJECT
+			}
+		}
+		localization_key = "sgm_OLD_BEACON_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DANCING_PLAGUE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DANCING_PLAGUE_PROJECT
+			}
+		}
+		localization_key = "sgm_DANCING_PLAGUE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DANCING_PLAGUE_PROJECT2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DANCING_PLAGUE_PROJECT2
+			}
+		}
+		localization_key = "sgm_DANCING_PLAGUE_PROJECT2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BLUELOTUS_SCALE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BLUELOTUS_SCALE_PROJECT
+			}
+		}
+		localization_key = "sgm_BLUELOTUS_SCALE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "WENKWORT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = WENKWORT_PROJECT
+			}
+		}
+		localization_key = "sgm_WENKWORT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DISMEMBERED_CLOUD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DISMEMBERED_CLOUD_PROJECT
+			}
+		}
+		localization_key = "sgm_DISMEMBERED_CLOUD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "hegemony_joint_project_leader"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = hegemony_joint_project_leader
+			}
+		}
+		localization_key = "sgm_hegemony_joint_project_leader"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "hegemony_joint_project_member"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = hegemony_joint_project_member
+			}
+		}
+		localization_key = "sgm_hegemony_joint_project_member"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "military_joint_project"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = military_joint_project
+			}
+		}
+		localization_key = "sgm_military_joint_project"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LEYLINES_ACOUSTIC_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LEYLINES_ACOUSTIC_PROJECT
+			}
+		}
+		localization_key = "sgm_LEYLINES_ACOUSTIC_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LEYLINES_ANALYSIS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LEYLINES_ANALYSIS_PROJECT
+			}
+		}
+		localization_key = "sgm_LEYLINES_ANALYSIS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LOGISTIC_REMODEL"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LOGISTIC_REMODEL
+			}
+		}
+		localization_key = "sgm_LOGISTIC_REMODEL"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LOGISTIC_REMODEL_OFFWORLD"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LOGISTIC_REMODEL_OFFWORLD
+			}
+		}
+		localization_key = "sgm_LOGISTIC_REMODEL_OFFWORLD"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "HORIZON_SIGNAL_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = HORIZON_SIGNAL_PROJECT
+			}
+		}
+		localization_key = "sgm_HORIZON_SIGNAL_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LOOP_TEMPLE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LOOP_TEMPLE_PROJECT
+			}
+		}
+		localization_key = "sgm_LOOP_TEMPLE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MESSENGER_POD_PROJECT_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MESSENGER_POD_PROJECT_1
+			}
+		}
+		localization_key = "sgm_MESSENGER_POD_PROJECT_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MESSENGER_POD_PROJECT_2_UNLEASHED"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MESSENGER_POD_PROJECT_2_UNLEASHED
+			}
+		}
+		localization_key = "sgm_MESSENGER_POD_PROJECT_2_UNLEASHED"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "MESSENGER_POD_PROJECT_2_LEASHED"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = MESSENGER_POD_PROJECT_2_LEASHED
+			}
+		}
+		localization_key = "sgm_MESSENGER_POD_PROJECT_2_LEASHED"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "COILS_GOD_PROJECT_DISRUPT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = COILS_GOD_PROJECT_DISRUPT
+			}
+		}
+		localization_key = "sgm_COILS_GOD_PROJECT_DISRUPT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "COILS_GOD_PROJECT_PREVENT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = COILS_GOD_PROJECT_PREVENT
+			}
+		}
+		localization_key = "sgm_COILS_GOD_PROJECT_PREVENT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "COILS_GOD_PROJECT_PARTICIPATE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = COILS_GOD_PROJECT_PARTICIPATE
+			}
+		}
+		localization_key = "sgm_COILS_GOD_PROJECT_PARTICIPATE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "WAITING_WORLD_DISAPPEARANCE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = WAITING_WORLD_DISAPPEARANCE
+			}
+		}
+		localization_key = "sgm_WAITING_WORLD_DISAPPEARANCE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "WAITING_WORLD_HYPERAPPEARANCE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = WAITING_WORLD_HYPERAPPEARANCE
+			}
+		}
+		localization_key = "sgm_WAITING_WORLD_HYPERAPPEARANCE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "WAITING_WORLD_PURGE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = WAITING_WORLD_PURGE
+			}
+		}
+		localization_key = "sgm_WAITING_WORLD_PURGE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "WORM_ENTRY_POINT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = WORM_ENTRY_POINT
+			}
+		}
+		localization_key = "sgm_WORM_ENTRY_POINT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "HORIZON_DEBRIS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = HORIZON_DEBRIS_PROJECT
+			}
+		}
+		localization_key = "sgm_HORIZON_DEBRIS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SYZYGY_DEBRIS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SYZYGY_DEBRIS_PROJECT
+			}
+		}
+		localization_key = "sgm_SYZYGY_DEBRIS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "STELLARITE_DEAD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = STELLARITE_DEAD_PROJECT
+			}
+		}
+		localization_key = "sgm_STELLARITE_DEAD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "STELLARITE_STAR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = STELLARITE_STAR_PROJECT
+			}
+		}
+		localization_key = "sgm_STELLARITE_STAR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DIMENSIONAL_HORROR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DIMENSIONAL_HORROR_PROJECT
+			}
+		}
+		localization_key = "sgm_DIMENSIONAL_HORROR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DISABLED_DREADNOUGHT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DISABLED_DREADNOUGHT_PROJECT
+			}
+		}
+		localization_key = "sgm_DISABLED_DREADNOUGHT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "HIVE_ASTEROID_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = HIVE_ASTEROID_PROJECT
+			}
+		}
+		localization_key = "sgm_HIVE_ASTEROID_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_1A"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_1A
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_1A"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_1B"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_1B
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_1B"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_5A"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_5A
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_5A"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_5B"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_5B
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_5B"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_5C"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_5C
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_5C"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "ENIGMATIC_FORTRESS_5D"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = ENIGMATIC_FORTRESS_5D
+			}
+		}
+		localization_key = "sgm_ENIGMATIC_FORTRESS_5D"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TECHNOSPHERE_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TECHNOSPHERE_PROJECT
+			}
+		}
+		localization_key = "sgm_TECHNOSPHERE_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TECHNOSPHERE_BLACKHOLE"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TECHNOSPHERE_BLACKHOLE
+			}
+		}
+		localization_key = "sgm_TECHNOSPHERE_BLACKHOLE"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TECHNOSPHERE_HACKING"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TECHNOSPHERE_HACKING
+			}
+		}
+		localization_key = "sgm_TECHNOSPHERE_HACKING"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TECHNOSPHERE_DESTRUCTION"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TECHNOSPHERE_DESTRUCTION
+			}
+		}
+		localization_key = "sgm_TECHNOSPHERE_DESTRUCTION"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "DRAGON_INCUBATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = DRAGON_INCUBATION_PROJECT
+			}
+		}
+		localization_key = "sgm_DRAGON_INCUBATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_GUARDIAN_DRAGON"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_GUARDIAN_DRAGON
+			}
+		}
+		localization_key = "sgm_REANIMATE_GUARDIAN_DRAGON"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "REANIMATE_ORIGIN_DRAGON"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = REANIMATE_ORIGIN_DRAGON
+			}
+		}
+		localization_key = "sgm_REANIMATE_ORIGIN_DRAGON"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CARAVAN_HULK_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CARAVAN_HULK_PROJECT
+			}
+		}
+		localization_key = "sgm_CARAVAN_HULK_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "TOXIC_OPERATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = TOXIC_OPERATION_PROJECT
+			}
+		}
+		localization_key = "sgm_TOXIC_OPERATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "NOISE_OPERATION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = NOISE_OPERATION_PROJECT
+			}
+		}
+		localization_key = "sgm_NOISE_OPERATION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "UNIVERSAL_TRANSLATOR_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = UNIVERSAL_TRANSLATOR_PROJECT
+			}
+		}
+		localization_key = "sgm_UNIVERSAL_TRANSLATOR_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "OCTOPODES_LIGHT_PATTERNS_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = OCTOPODES_LIGHT_PATTERNS_PROJECT
+			}
+		}
+		localization_key = "sgm_OCTOPODES_LIGHT_PATTERNS_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_1
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_MACH_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_MACH_1
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_HIVE_1"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_1
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_1"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_2
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_MACH_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_MACH_2
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_HIVE_2"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_2
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_2"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_3
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_MACH_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_MACH_3
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_HIVE_3"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_3
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_3"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_4
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_MACH_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_MACH_4
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_MACH_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "CRISIS_SPECIAL_PROJECT_HIVE_4"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = CRISIS_SPECIAL_PROJECT_HIVE_4
+			}
+		}
+		localization_key = "sgm_CRISIS_SPECIAL_PROJECT_HIVE_4"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LONELY_BOT_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LONELY_BOT_PROJECT
+			}
+		}
+		localization_key = "sgm_LONELY_BOT_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "LONELY_BOT_MISSING_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = LONELY_BOT_MISSING_PROJECT
+			}
+		}
+		localization_key = "sgm_LONELY_BOT_MISSING_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "FLESH_IS_WEAK_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = FLESH_IS_WEAK_PROJECT
+			}
+		}
+		localization_key = "sgm_FLESH_IS_WEAK_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "SYNTHETIC_EVOLUTION_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = SYNTHETIC_EVOLUTION_PROJECT
+			}
+		}
+		localization_key = "sgm_SYNTHETIC_EVOLUTION_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "BREACHING_SHROUD_PROJECT"
+	text = {
+		trigger = {
+			fromfrom = {
+				has_special_project = BREACHING_SHROUD_PROJECT
+			}
+		}
+		localization_key = "sgm_BREACHING_SHROUD_PROJECT"
+	}
+	default = "sgm_blank_key"
+}
+
+defined_text = {
+	name = "GetName_has_gm_permissions"
+	text = {
+		trigger = {
+			fromfrom = {
+				sgm_has_gm_permissions = yes
+			}
+		}
+		localization_key = "resource_map_mode_tooltip_has_gm_permissions"
+	}
+	default = "resource_map_mode_tooltip_does_no_gm_permissions"
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_active_first_contact_with"
+	text = {
+		trigger = {
+			has_active_first_contact_with = from
+			NOT = {
+				has_communications = from
+			}
+		}
+		localization_key = "tutorial.2000.name"
 	}
 	text = {
 		trigger = {
-			has_defensive_pact = from 
+			NOT = {
+				has_active_first_contact_with = from
+				NOT = {
+					has_communications = from
+				}
+			}
 		}
-		localization_key = "has_defensive_pact"
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_established_contact"
+	text = {
+		trigger = {
+			has_established_contact = from
+			NOT = {
+				has_communications = from
+			}
+		}
+		localization_key = "tutorial.2006.name"
 	}
 	text = {
 		trigger = {
-			is_in_federation_with = from 
+			NOT = {
+				has_established_contact = from
+				NOT = {
+					has_communications = from
+				}
+			}
 		}
-		localization_key = "has_federation"
+		localization_key = "BLANK_STRING"
+	}
+	default = CANCEL
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_established_communications"
+	text = {
+		trigger = {
+			print_scope_trigger = yes
+			has_communications = from
+		}
+		localization_key = "action.11.name"
 	}
 	text = {
 		trigger = {
-			is_guaranteeing = from 
+			NOT = {
+				has_communications = from
+			}
 		}
-		localization_key = "is_guaranteeing"
+		localization_key = "COMMUNICATIONS_REQUIRED"
+	}
+	# default = COMMUNICATIONS_REQUIRED
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_commercial_pact"
+	text = {
+		trigger = {
+			has_commercial_pact = from
+		}
+		localization_key = "DIPLOMACY_STATUS_TRADE"
 	}
 	text = {
 		trigger = {
-			has_non_aggression_pact = from 
+			NOT = {
+				has_commercial_pact = from
+			}
 		}
-		localization_key = "has_non_aggression"
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_commercial_pact"
+	text = {
+		trigger = {
+			has_research_agreement = from
+		}
+		localization_key = "DIPLOMACY_STATUS_RESEARCH_AGREEMENT"
 	}
 	text = {
 		trigger = {
-			is_at_war_with = from 
+			NOT = {
+				has_research_agreement = from
+			}
 		}
-		localization_key = "is_at_war"
+		localization_key = "BLANK_STRING"
 	}
-	default = "no_contact"
- }
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_defensive_pact"
+	text = {
+		trigger = {
+			has_defensive_pact = from
+		}
+		localization_key = "DIPLOMACY_STATUS_DEFENSIVE_PACT"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_defensive_pact = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_defensive_pact"
+	text = {
+		trigger = {
+			has_defensive_pact = from
+		}
+		localization_key = "DIPLOMACY_STATUS_DEFENSIVE_PACT"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_defensive_pact = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_is_in_federation_with"
+	text = {
+		trigger = {
+			is_in_federation_with = from
+		}
+		localization_key = "DIPLOMACY_IN_ALLIANCE_WITH"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				is_in_federation_with = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_is_guaranteeing"
+	text = {
+		trigger = {
+			is_guaranteeing = from
+		}
+		localization_key = "DIPLOMACY_STATUS_GUARANTEEING"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				is_guaranteeing = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_we_have_guarantee"
+	text = {
+		trigger = {
+			from = {
+				is_guaranteeing = prev
+			}
+		}
+		localization_key = "DIPLOMACY_STATUS_GUARANTEEING"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				from = {
+					is_guaranteeing = prev
+				}
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_has_non_aggression"
+	text = {
+		trigger = {
+			has_non_aggression_pact = from
+		}
+		localization_key = "DIPLOMACY_STATUS_NAP"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_non_aggression_pact = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
+
+defined_text = {
+	name = "GetName_sgm_DIPLOMATIC_STATUS_is_at_war"
+	text = {
+		trigger = {
+			is_at_war_with = from
+		}
+		localization_key = "DIPLOMACY_STATUS_WAR"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				is_at_war_with = from
+			}
+		}
+		localization_key = "BLANK_STRING"
+	}
+	# default = BLANK_STRING
+}
