@@ -1,5 +1,6 @@
 sgm_megastructure_effects = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -13,6 +14,7 @@ sgm_megastructure_effects = {
 
 sgm_delete_megastructure = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = { }
@@ -31,6 +33,7 @@ sgm_delete_megastructure = {
 
 sgm_destroy_megastructure = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = { }
@@ -49,6 +52,7 @@ sgm_destroy_megastructure = {
 
 sgm_finish_megastructure_stage = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -73,6 +77,7 @@ sgm_finish_megastructure_stage = {
 
 sgm_begin_next_stage = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -98,6 +103,7 @@ sgm_begin_next_stage = {
 
 sgm_finish_megastructure = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = { }
@@ -130,6 +136,7 @@ sgm_finish_megastructure = {
 
 sgm_activate_gateway = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 	}
 	allow = { 
@@ -157,6 +164,7 @@ sgm_activate_gateway = {
 
 sgm_halt_construction = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 		NOT = {
 			has_megastructure_flag = construction_halted
@@ -172,6 +180,7 @@ sgm_halt_construction = {
 
 sgm_resume_construction = {
 	potential = {
+		is_megastructure_scope = yes
 		is_gm = yes
 		has_megastructure_flag = construction_halted
 	}
