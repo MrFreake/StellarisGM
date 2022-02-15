@@ -255,7 +255,7 @@ guiTypes = {
 			orientation = UPPER_LEFT
 			effect = target_planet
 #			shortCut = j
-			alwaysTransparent = yes
+			#alwaysTransparent = yes
 		}
 		effectbuttonType = {					
 			name = target_planet_not_set
@@ -268,7 +268,7 @@ guiTypes = {
 			orientation = UPPER_LEFT
 			effect = target_planet_not_set
 #			shortCut = j
-			alwaysTransparent = yes
+			#alwaysTransparent = yes
 		}
 		effectbuttonType = {					
 			name = target_country

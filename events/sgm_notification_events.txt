@@ -1680,7 +1680,8 @@ country_event = {				# megastructure notifications
 	id = sgm_notify.203
 	is_triggered_only = yes
 	title = sgm_notify_201
-	location = from 
+	location = from
+	picture = GFX_evt_megastructure_construction 
 
 	desc = {
 		trigger = {

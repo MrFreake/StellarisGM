@@ -35,7 +35,7 @@ gm_map_mode = {
 
 	#color = { value = hsv { 0.300 1.0 0.9 1.0 } condition = { intel = { who = this value > 85 } }   }
 	color = { value = rgb { 255 0 0 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_at_war_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 0 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_in_federation_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 0 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_in_federation_with = from NOT = { is_same_empire = from } } custom_tooltip = "resource_map_mode_tooltip" }		
 	color = { value = rgb { 0 255 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_defensive_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		
 	color = { value = rgb { 0 255 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_guaranteeing = from } custom_tooltip = "resource_map_mode_tooltip" }		
 	color = { value = rgb { 0 255 154 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_non_aggression_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		

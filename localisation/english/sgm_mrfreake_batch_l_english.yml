@@ -63,11 +63,13 @@ remove_mod_planet_modifier: "Remove GM Planet Modifier"
 create_point_of_interest: "Create Point of Interest"
 remove_point_of_interest: "Remove Point of Interest"
 spawn_ww2_sol_III: "Spawn WW2 SOL III"
- sgm_manage_game_1:0 "Manage Game"
- sgm_manage_game_1_desc:0 "Change Game Settings"
- manage_bounty:0 "Manage Bounties"
- manage_diplomacy:0 "Manage Diplomacy"
-
+sgm_manage_game_1:0 "Manage Game"
+sgm_manage_game_1_desc:0 "Change Game Settings"
+manage_bounty:0 "Manage Bounties"
+manage_diplomacy:0 "Manage Diplomacy"
+gm_poi: "GM Point of Interest"
+gm_poi_title: "GM Point of Interest"
+gm_poi_desc: "The GM has set this object as a point of interest."
 DELETE_FLEET: "Delete Fleet"
 change_ownership_to_target_country: "Set owner: [target_country.GetName]"
 set_owner_target_country: "Target Country: [from.owner.GetName]"
@@ -80,6 +82,17 @@ set_target_country_as_player: "[target_country.GetName] plays as [from.owner.Get
 Exit: "Exit"
 Next: "Next"
 Previous: "Previous"
+go_to_planet_desc: "Press Q to focus [fromfrom.GetName]"
+go_to_planet: "Go to [fromfrom.GetName]"
+
+is_at_war: "§H[this.GetName]\n§!Is at War with"
+has_non_aggression: "§H[this.GetName]§!\Has Non-Aggression Pact with"
+is_guaranteeing: "§H[this.GetName]§!\nIs at Guaranteeing the Independence of"
+has_federation: "§H[this.GetName]§!\nIs in Federation with"
+has_defensive_pact: "§H[this.GetName]§!\nHas Defensive Pact with"
+has_established_communications: "§H[this.GetName]§!\nHas established Communications with"
+has_first_contact: "§H[this.GetName]§!\nHas First Contact with"
+no_contact: "§H[this.GetName]§!\nHas No Contact with"
 
  sgm_country_1_title:0 "Perform Event Actions"
  sgm_country_2_title:0 "Declare War Options"
@@ -588,6 +601,8 @@ survey_systems_effect:0 "§GGive Survey of all systems §R(permanent)"
 give_all_technology:0 "§GGive All Technology §R(permanent)"
 establish_all_communications:0 "§GGive All Communications §R(permanent)"
 make_advanced_empire:0 "§BMake Advanced Empire §R(permanent)"
+gm_infinite_resources: "Infinite Resources"
+gm_instant_research: "Instant Research"
 
 # gm notifications
 
@@ -671,6 +686,7 @@ make_advanced_empire:0 "§BMake Advanced Empire §R(permanent)"
  notification_fleet_enter_orbit:0 "[from.GetName] just had a fleet enter orbit."
  notification_megastructure_upgraded:0 "[from.GetName] just upgraded!"
  notification_megastructure_change_owner:0 "[from.GetName]'s ownership just changed!"
+ notification_communications_established: "[from.GetName] has established communications with a new empire."
 
 
 
