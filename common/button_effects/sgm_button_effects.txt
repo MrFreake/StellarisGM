@@ -208,9 +208,27 @@ sgm_set_notification = {
 		is_gm = yes
 	}
 	allow = {
-		NOT = {
-			has_planet_notification = yes
+		OR = {
+			AND = {
+				is_planet_scope = yes
+				NOT = {
+					has_planet_notification = yes
+				}
+			}
+			AND = {
+				is_country_scope = yes
+				NOT = {
+					has_country_notification = yes
+				}
+			}
+			AND = {
+				is_fleet_scope = yes
+				NOT = {
+					has_fleet_notification = yes
+				}
+			}
 		}
+
 	}
 	effect = {
 		from = {
