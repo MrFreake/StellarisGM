@@ -1226,30 +1226,33 @@ country_event = {				# gm_notification_system_survey - fleet is fromfrom
 	hide_window = yes
 
 	trigger = {
-		fromfrom = { has_fleet_flag = gm_notification_system_survey }
+		fromfrom = { fleet = { has_fleet_flag = gm_notification_system_survey } }
 	}
 	immediate = {
-		fromfrom = {
-			set_timed_fleet_flag = {
-				flag = notification_system_survey 
-				days = 1
-			}
-			every_country = {
-				limit = {
-					sgm_has_gm_permissions = yes
-					#sgm_notifications_on = yes
+			fromfrom = {
+				fleet = {
+				set_timed_fleet_flag = {
+					flag = notification_system_survey 
+					days = 1
 				}
-				country_event = {
-					id = sgm_notify.202
-					scopes = {
-						from = prev
-						fromfrom = this
+				every_country = {
+					limit = {
+						sgm_has_gm_permissions = yes
+						#sgm_notifications_on = yes
+					}
+					country_event = {
+						id = sgm_notify.202
+						scopes = {
+							from = prev
+							fromfrom = this
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
 starbase_event = {				# gm_notification_starbase_destroyed - fleet is from
 	id = sgm_notify.149
 	is_triggered_only = yes
@@ -1459,6 +1462,7 @@ country_event = {				# country notifications
 	is_triggered_only = yes
 	title = sgm_notify_201
 	location = from 
+	picture = GFX_evt_galactic_empire
 
 	desc = {
 		trigger = {
@@ -1490,15 +1494,7 @@ country_event = {				# country notifications
 				has_country_flag = notification_communications_established
 			}
 		}
-		text = gm_notification_attackers_win
-	}
-	desc = {
-		trigger = {
-			from = {
-				has_country_flag = notification_communications_established
-			}
-		}
-		text = gm_notification_attackers_win
+		text = notification_communications_established
 	}
 	desc = {
 		trigger = {
@@ -1568,6 +1564,11 @@ country_event = {				# country notifications
 	option = {
 		NAME = OK
 	}
+
+	option = {
+		NAME = remove_notification
+		from = { remove_country_notification_flags = yes }
+	}
 }
 
 country_event = {				# fleet notifications
@@ -1575,6 +1576,7 @@ country_event = {				# fleet notifications
 	is_triggered_only = yes
 	title = sgm_notify_201
 	location = from 
+	picture = GFX_evt_fleet_evil
 
 	desc = {
 		trigger = {
@@ -1667,6 +1669,10 @@ country_event = {				# fleet notifications
 	immediate = {}
 	option = {
 		NAME = OK
+	}
+	option = {
+		NAME = remove_notification
+		from = { remove_fleet_notification_flags = yes }
 	}
 }
 

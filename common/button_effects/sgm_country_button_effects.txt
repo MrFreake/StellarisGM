@@ -1,5 +1,6 @@
 sgm_country_effects = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -20,6 +21,7 @@ sgm_country_effects = {
 
 sgm_positive_relations_with_target = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -43,6 +45,7 @@ sgm_positive_relations_with_target = {
 
 sgm_negative_relations_with_target = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -64,6 +67,7 @@ sgm_negative_relations_with_target = {
 
 sgm_improve_target_opinion = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -87,6 +91,7 @@ sgm_improve_target_opinion = {
 
 sgm_hurt_target_opinion = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -110,6 +115,7 @@ sgm_hurt_target_opinion = {
 
 sgm_declare_war_with_target = {
 	potential = {
+		is_country_scope = yes
 		exists = event_target:target_country
 		is_gm = yes
 		NOT = {
@@ -140,6 +146,7 @@ sgm_declare_war_with_target = {
 
 sgm_force_peace_with_target = {
 	potential = {
+		is_country_scope = yes
 		exists = event_target:target_country
 		is_gm = yes
 		root = {
@@ -170,6 +177,7 @@ sgm_force_peace_with_target = {
 
 sgm_switch_player_to_country = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -192,6 +200,7 @@ sgm_switch_player_to_country = {
 
 sgm_change_civics = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -210,6 +219,7 @@ sgm_change_civics = {
 
 sgm_shift_ethics = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -227,6 +237,7 @@ sgm_shift_ethics = {
 
 sgm_give_technology = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -245,6 +256,7 @@ sgm_give_technology = {
 
 sgm_give_relic = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -262,6 +274,7 @@ sgm_give_relic = {
 
 sgm_remove_relic_cooldown = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -274,6 +287,7 @@ sgm_remove_relic_cooldown = {
 
 sgm_give_special_resources = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -292,6 +306,7 @@ sgm_give_special_resources = {
 
 sgm_give_FE_buildings = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -312,6 +327,7 @@ sgm_give_FE_buildings = {
 
 sgm_change_authority = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {
@@ -332,6 +348,7 @@ sgm_change_authority = {
 
 sgm_increase_neighbor_opinion = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -349,6 +366,7 @@ sgm_increase_neighbor_opinion = {
 }
 sgm_hurt_neighbor_opinion = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -367,6 +385,7 @@ sgm_hurt_neighbor_opinion = {
 
 sgm_modify_main_species = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
@@ -385,6 +404,7 @@ sgm_modify_main_species = {
 
 sgm_join_federation = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 		has_federation = no
@@ -397,6 +417,7 @@ sgm_join_federation = {
 
 sgm_leave_federation = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		#exists = event_target:target_country
 		has_federation = yes
@@ -409,6 +430,7 @@ sgm_leave_federation = {
 
 sgm_begin_truce = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 		NOT = {
@@ -423,6 +445,7 @@ sgm_begin_truce = {
 
 sgm_end_truce = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 		has_truce = event_target:target_country
@@ -435,6 +458,7 @@ sgm_end_truce = {
 
 sgm_end_all_treaties = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -446,6 +470,7 @@ sgm_end_all_treaties = {
 
 sgm_establish_communications = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 	}
@@ -457,6 +482,7 @@ sgm_establish_communications = {
 
 sgm_join_war_with_target = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 		exists = event_target:target_country
 		event_target:target_country = {
@@ -471,6 +497,7 @@ sgm_join_war_with_target = {
 
 sgm_set_ai_personality = {
 	potential = {
+		is_country_scope = yes
 		is_gm = yes
 	}
 	allow = {}
