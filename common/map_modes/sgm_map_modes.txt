@@ -31,15 +31,16 @@ gm_map_mode = {
 	display_claims = yes
 
 	#color = { value = hsv { 0.0 0.0 0.8 0.7 } condition = { NOT = { from = { has_gm_permissions = yes 	} } } custom_tooltip = "MAP_MODE_OBSERVER" }
-	color = { value = rgb { 155 155 155 255 } condition = { is_same_empire = from } tooltip = "resource_map_mode_tooltip" }
+	color = { value = rgb { 155 155 155 255 } condition = { is_same_empire = from } custom_tooltip = "resource_map_mode_tooltip" }
 
 	#color = { value = hsv { 0.300 1.0 0.9 1.0 } condition = { intel = { who = this value > 85 } }   }
-	color = { value = rgb { 255 0 0 255 } condition = { is_at_war_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 0 255 255 } condition = { is_in_federation_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 255 255 255 } condition = { has_defensive_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 255 255 255 } condition = { is_guaranteeing = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 255 154 255 } condition = { has_non_aggression_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		
-	color = { value = rgb { 0 255 0 255 } condition = { has_communications = from } custom_tooltip = "resource_map_mode_tooltip" }	
-	color = { value = rgb { 255 154 0 255 } condition = { has_active_first_contact_with = from } custom_tooltip = "resource_map_mode_tooltip" }
-	color = { value = rgb { 0 0 0 0 } condition = { always = yes } custom_tooltip = "resource_map_mode_tooltip" }
+	color = { value = rgb { 255 0 0 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_at_war_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 0 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_in_federation_with = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 255 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_defensive_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 255 255 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } is_guaranteeing = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 255 154 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_non_aggression_pact = from } custom_tooltip = "resource_map_mode_tooltip" }		
+	color = { value = rgb { 0 255 0 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_communications = from } custom_tooltip = "resource_map_mode_tooltip" }	
+	color = { value = rgb { 255 154 0 255 } condition = { fromfrom = { sgm_has_gm_permissions = yes } has_active_first_contact_with = from } custom_tooltip = "resource_map_mode_tooltip" }
+	color = { value = rgb { 0 0 0 0 } condition = { fromfrom = { sgm_has_gm_permissions = yes NOR = { has_active_first_contact_with = from has_communications = from } } } custom_tooltip = "resource_map_mode_tooltip" }
+	color = { value = rgb { 0 0 0 0 } condition = { NOT = { fromfrom = { sgm_has_gm_permissions = yes } } } }
 }
