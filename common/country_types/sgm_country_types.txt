@@ -39,7 +39,7 @@ sgm_game_master = {
 	modules = {
 		standard_event_module = {}
 		standard_economy_module = {}
-		standard_leader_module = {}
+		#standard_leader_module = {}
 		exclusive_diplomacy_module = {
 			contact_rule = on_action_only
 			can_receive = {}
@@ -49,10 +49,10 @@ sgm_game_master = {
 			}
 		}
 		all_technology_module = {}
-		standard_trade_routes_module = {}
-		standard_pop_factions_module = {}
-		standard_expansion_module = {}
-		standard_species_rights_module = {}
+		#standard_trade_routes_module = {}
+		#standard_pop_factions_module = {}
+		#standard_expansion_module = {}
+		#standard_species_rights_module = {}
 	}
 
 	resources = {

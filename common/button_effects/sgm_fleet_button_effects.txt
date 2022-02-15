@@ -128,6 +128,7 @@ sgm_create_ship = {
 
 sgm_assume_fleet_control = {
 	potential = {
+		is_fleet_scope = yes
 		is_gm = yes
 		NOR = { 
 			owner = {
@@ -151,6 +152,7 @@ sgm_assume_fleet_control = {
 
 sgm_return_fleet_control = {
 	potential = {
+		is_fleet_scope = yes
 		is_gm = yes
 		has_fleet_flag = sgm_assumed_control
 	}
@@ -276,6 +278,7 @@ sgm_set_owner_target_country = {
 
 sgm_upgrade_starbase = {
 	potential = {
+		is_fleet_scope = yes
 		is_gm = yes
 		is_fleet = no
 	}

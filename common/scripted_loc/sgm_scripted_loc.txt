@@ -4351,6 +4351,15 @@ defined_text = {
 	 name = "DIPLOMATIC_STATUS"
 	 text = {
 		 trigger = {
+			 NOR = {
+				 has_active_first_contact_with = from
+				 has_communications = from
+			 }
+		 }
+		 localization_key = "no_contact"
+	 }
+	 text = {
+		 trigger = {
 			has_active_first_contact_with = from 
 		 }
 		 localization_key = "has_first_contact"

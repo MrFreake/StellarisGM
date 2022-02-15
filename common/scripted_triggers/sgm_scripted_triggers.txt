@@ -102,6 +102,21 @@ has_planet_notification = {
 		has_planet_flag = gm_notification_colonized
 	}
 }
+has_fleet_notification = {
+	OR = {
+		has_fleet_flag = notification_entering_gateway
+		has_fleet_flag = notification_entering_wormhole
+		has_fleet_flag = notification_jump_drive
+		has_fleet_flag = notification_arch_stage_finished
+		has_fleet_flag = notification_crossing_border
+		has_fleet_flag = notification_entering_system_fleet
+		has_fleet_flag = notification_emergency_ftl
+		has_fleet_flag = notification_system_survey
+		has_fleet_flag = notification_entering_battle
+		has_fleet_flag = notification_starbase_destroyed
+		has_fleet_flag = notification_space_battle_won
+	}
+}
 
 has_country_notification = {
 	OR = {

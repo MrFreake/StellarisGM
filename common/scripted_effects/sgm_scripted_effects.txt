@@ -3447,6 +3447,36 @@ remove_planet_notification_flags = {
 	remove_planet_flag = gm_notification_colonized
 }
 
+remove_country_notification_flags = {
+	remove_country_flag = gm_notification_attackers_win
+	remove_country_flag = gm_notification_defenders_win
+	remove_country_flag = gm_notification_entering_war
+	remove_country_flag = gm_notification_communications_established
+	remove_country_flag = gm_notification_modification_complete
+	remove_country_flag = gm_notification_federation_new_leader
+	remove_country_flag = gm_notification_pirate_spawn
+	remove_country_flag = gm_notification_system_lost
+	remove_country_flag = gm_notification_system_gained
+	remove_country_flag = gm_notification_relic_activated
+	remove_country_flag = gm_notification_government_changed
+	remove_country_flag = gm_notification_ascension_perk_picked
+	remove_country_flag = gm_notification_megastructure_built
+}
+
+remove_fleet_notification_flags = {
+	remove_fleet_flag = notification_entering_gateway
+	remove_fleet_flag = notification_entering_wormhole
+	remove_fleet_flag = notification_jump_drive
+	remove_fleet_flag = notification_arch_stage_finished
+	remove_fleet_flag = notification_crossing_border
+	remove_fleet_flag = notification_entering_system_fleet
+	remove_fleet_flag = notification_emergency_ftl
+	remove_fleet_flag = notification_system_survey
+	remove_fleet_flag = notification_entering_battle
+	remove_fleet_flag = notification_starbase_destroyed
+	remove_fleet_flag = notification_space_battle_won
+}
+
 sgm_export_sr_stockpile_and_income_to_variable = {
 	sgm_export_sr_stockpile_and_income_to_variable_database_effect = {
 		SR1 = time
