@@ -1066,36 +1066,7 @@ defined_text = {
 	 }
 	 default = "sgm_blank_key"
  }
- defined_text = {
-	name = "MUTANT_SURVIVORS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = MUTANT_SURVIVORS_PROJECT }
-		 }
-		 localization_key = "sgm_MUTANT_SURVIVORS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "UNDERGROUND_FACILITY_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = UNDERGROUND_FACILITY_PROJECT }
-		 }
-		 localization_key = "sgm_UNDERGROUND_FACILITY_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
- defined_text = {
-	name = "GHOSTLY_SIGHTINGS_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = GHOSTLY_SIGHTINGS_PROJECT }
-		 }
-		 localization_key = "sgm_GHOSTLY_SIGHTINGS_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
+
  defined_text = {
 	name = "AUTOMATED_SHIPYARD_PROJECT"
 	text = {
@@ -1986,16 +1957,7 @@ defined_text = {
 	 }
 	 default = "sgm_blank_key"
  }
- defined_text = {
-	name = "TEST_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TEST_PROJECT }
-		 }
-		 localization_key = "sgm_TEST_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
+
  defined_text = {
 	name = "ESTABLISH_COMMUNICATIONS"
 	text = {
@@ -2506,16 +2468,7 @@ defined_text = {
 	 }
 	 default = "sgm_blank_key"
  }
- defined_text = {
-	name = "TESTING_PROJECT"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = TESTING_PROJECT }
-		 }
-		 localization_key = "sgm_TESTING_PROJECT"
-	 }
-	 default = "sgm_blank_key"
- }
+
  defined_text = {
 	name = "ODD_STAR_PROJECT"
 	text = {
@@ -2686,16 +2639,7 @@ defined_text = {
 	 }
 	 default = "sgm_blank_key"
  }
- defined_text = {
-	name = "impact_defence_system"
-	text = {
-		 trigger = {
-			 fromfrom = { has_special_project = impact_defence_system }
-		 }
-		 localization_key = "sgm_impact_defence_system"
-	 }
-	 default = "sgm_blank_key"
- }
+
  defined_text = {
 	name = "titanic_life_study_normal"
 	text = {
@@ -4351,12 +4295,19 @@ defined_text = {
 	 name = "DIPLOMATIC_STATUS"
 	 text = {
 		 trigger = {
-			 NOR = {
-				 has_active_first_contact_with = from
-				 has_communications = from
-			 }
+			is_same_empire = from
 		 }
-		 localization_key = "no_contact"
+		 localization_key = is_source_empire
+	}
+	text = {
+		 trigger = {
+			NOR = {
+				has_active_first_contact_with = from
+				has_communications = from
+				is_same_empire = from
+		 	}
+		}
+		localization_key = "no_contact"
 	 }
 	 text = {
 		 trigger = {
@@ -4373,6 +4324,7 @@ defined_text = {
 				is_guaranteeing = from 
 				has_non_aggression_pact = from
 				is_at_war_with = from 
+				is_same_empire = from
 			}
 		}
 		localization_key = "has_established_communications"
@@ -4385,7 +4337,10 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			is_in_federation_with = from 
+			is_in_federation_with = from
+			NOT = {
+				is_same_empire = from
+			} 
 		}
 		localization_key = "has_federation"
 	}
