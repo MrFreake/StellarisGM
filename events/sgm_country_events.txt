@@ -10,7 +10,7 @@ country_event = {
 
 	option = {
 		NAME = TECHNOLOGY
-		custom_tooltip = "Grants technologies."
+		#custom_tooltip = "Grants technologies."
 		country_event = {
 			id = sgm_technologies.1
 			scopes = {
@@ -21,7 +21,7 @@ country_event = {
 
 	option = {
 		NAME = RELICS
-		custom_tooltip = "Grants or removes relics."
+		#custom_tooltip = "Grants or removes relics."
 		country_event = {
 			id = sgm_relics.1
 			scopes = {
@@ -1231,7 +1231,7 @@ country_event = {
 			}
 		}
 		}
-		custom_tooltip = "civic_tooltip_citizen_service_effects"
+		custom_tooltip = "civic_citizen_service_desc"
 		from = { force_add_civic = civic_citizen_service }
 	}
 	option = {									# remove civic_citizen_service
@@ -1312,7 +1312,7 @@ country_event = {
 			}
 		}
 		}
-		custom_tooltip = "civic_tooltip_police_state_effects"
+		custom_tooltip = "civic_police_state_desc"
 		from = { force_add_civic = civic_police_state }
 	}
 	option = {									# remove civic_police_state
@@ -5514,4 +5514,20 @@ country_event = {
 	option = {
 		NAME = Exit
 	}
+}
+
+country_event = {
+	id = sgm_country.10
+	is_triggered_only = yes
+	title = go_to_planet
+	desc = go_to_planet_desc
+	picture = GFX_evt_galactic_community
+	location = fromfrom
+
+	immediate = {}
+
+	option = {
+		NAME = Ok
+	}
+
 }

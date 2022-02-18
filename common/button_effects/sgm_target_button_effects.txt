@@ -102,9 +102,19 @@ target_planet = {
 		exists = event_target:target_planet
 	}
 	allow = {
-		always = no
+		
 	}
-	effect = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.58
+				scopes = {
+					from = this
+					fromfrom = event_target:target_planet  
+				}
+			}
+		}
+	}
 }
 
 target_planet_not_set = {
@@ -123,10 +133,18 @@ target_fleet = {
 		is_gm = yes
 		exists = event_target:target_fleet
 	}
-	allow = {
-		always = no
+	allow = {}
+	effect = {
+		from = {
+			country_event = {
+				id = sgm_planets.58
+				scopes = {
+					from = this
+					fromfrom = event_target:target_fleet
+				}
+			}
+		}
 	}
-	effect = {}
 }
 
 target_fleet_not_set = {
@@ -145,11 +163,17 @@ target_country = {
 		is_gm = yes
 		exists = event_target:target_country
 	}
-	allow = {
-		always = no
-	}
+	allow = {}
 	effect = {
-
+		from = {
+			country_event = {
+				id = sgm_country.10
+				scopes = {
+					from = this
+					fromfrom = event_target:target_country
+				}
+			}
+		}
 	}
 }
 
@@ -171,11 +195,17 @@ target_megastructure = {
 		is_gm = yes
 		exists = event_target:target_megastructure
 	}
-	allow = {
-		always = no
-	}
+	allow = {}
 	effect = {
-
+		from = {
+			country_event = {
+				id = sgm_planets.58
+				scopes = {
+					from = this
+					fromfrom = event_target:target_megastructure
+				}
+			}
+		}
 	}
 }
 

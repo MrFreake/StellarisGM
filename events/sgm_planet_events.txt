@@ -1575,7 +1575,7 @@ country_event = {
 	}
 	option = {
 		NAME = site_lesser_messenger
-		custom_tooltip = site_site_lesser_messenger_intro
+		custom_tooltip = site_lesser_messenger_intro
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1590,7 +1590,7 @@ country_event = {
 	}
 	option = {
 		NAME = omnirelic_site
-		custom_tooltip = omnirelic_site_intro
+		custom_tooltip = "ancrel.21.desc"
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1605,7 +1605,7 @@ country_event = {
 	}
 	option = {
 		NAME = asteroid_vault_1
-		custom_tooltip = asteroid_vault_1_intro
+		custom_tooltip = asteroid_vault_1_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1620,7 +1620,7 @@ country_event = {
 	}
 	option = {
 		NAME = it_was_aliens_site
-		custom_tooltip = it_was_aliens_site_intro
+		custom_tooltip = it_was_aliens_site_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1635,7 +1635,7 @@ country_event = {
 	}
 	option = {
 		NAME = ancient_battle_site
-		custom_tooltip = ancient_battle_site_intro
+		custom_tooltip = ancient_battle_site_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1650,7 +1650,7 @@ country_event = {
 	}
 	option = {
 		NAME = city_of_bones
-		custom_tooltip = city_of_bones_intro
+		custom_tooltip = city_of_bones_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1665,7 +1665,7 @@ country_event = {
 	}
 	option = {
 		NAME = mutation_vats
-		custom_tooltip = mutation_vats_intro
+		custom_tooltip = mutation_vats_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1680,7 +1680,7 @@ country_event = {
 	}
 	option = {
 		NAME = planetary_mechanocalibrator
-		custom_tooltip = planetary_mechanocalibrator_intro
+		custom_tooltip = planetary_mechanocalibrator_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -1695,7 +1695,7 @@ country_event = {
 	}
 	option = {
 		NAME = the_host
-		custom_tooltip = the_host_intro
+		custom_tooltip = the_host_desc
 		allow = {
 			has_ancrel = yes
 			NOT = {
@@ -4605,5 +4605,20 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+country_event = {							# called from target_planet button effect
+	id = sgm_planets.58
+	is_triggered_only = yes
+	#hide_window = yes
+	location = fromfrom
+	title = go_to_planet
+	desc = go_to_planet_desc
+	picture = GFX_evt_ruined_system
+	
+	immediate = {}
+	option = {
+		NAME = Ok
 	}
 }
