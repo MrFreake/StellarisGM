@@ -1559,6 +1559,15 @@ country_event = {
 	immediate = {
 	}
 	option = {
+		NAME = remove_dig_site
+		allow = {
+			from = {
+				exists = archaeological_site
+			}
+		}
+		destroy_archaeological_site = from
+	}
+	option = {
 		NAME = site_lost_moments
 		custom_tooltip = site_lost_moments_intro
 		allow = {
@@ -1886,6 +1895,20 @@ country_event = {
 	desc = sgm_planets_54_desc
 	picture = GFX_evt_archaeological_dig
 	immediate = {
+	}
+	option = {
+		NAME = remove_dig_site
+		allow = {
+			from = {
+				exists = archaeological_site
+			}
+		}
+		from = {
+			archaeological_site = {
+				save_event_target_as = target_archaeological_site
+			}
+			destroy_archaeological_site = event_target:target_archaeological_site
+		}
 	}
 	option = {
 		NAME = site_target_from_orbit
