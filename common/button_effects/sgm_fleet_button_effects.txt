@@ -103,28 +103,28 @@ teleport_fleet = {
 
 # Supported scopes by script:
 # fleet, ambient_object, planet, megastructure
-sgm_create_ship = {
-	potential = {
-		is_gm = yes
-		OR = {
-			is_scope_type = planet
-			is_fleet = yes
-		}
-	}
-	allow = {
-	}
-	
-	effect = {	
-		from = {
-			country_event = {
-				id = sgm_ship_spawner.3
-				scopes = {
-					from = prev
-				}
-			}
-		}
-	}
-}
+#sgm_create_ship = {
+#	potential = {
+#		is_gm = yes
+#		OR = {
+#			is_scope_type = planet
+#			is_fleet = yes
+#		}
+#	}
+#	allow = {
+#	}
+#	
+#	effect = {	
+#		from = {
+#			country_event = {
+#				id = sgm_ship_spawner.3
+#				scopes = {
+#					from = prev
+#				}
+#			}
+#		}
+#	}
+#}
 
 sgm_assume_fleet_control = {
 	potential = {

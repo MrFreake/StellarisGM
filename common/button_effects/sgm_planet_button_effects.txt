@@ -654,25 +654,25 @@ sgm_add_deposit = {
 	}
 }
 
-sgm_spawn_system = {
-	potential = {
-		is_planet_scope = yes
-		is_gm = yes
-	}
-	allow = {
-	}
-	effect = {
-		from = {
-			country_event = {
-				id = sgm_system.3
-				scopes = {
-					from = prev.solar_system	# solar_system
-					fromfrom = prev 	# Planet scope
-				}
-			}
-		}
-	}
-}
+#sgm_spawn_system = {
+#	potential = {
+#		is_planet_scope = yes
+#		is_gm = yes
+#	}
+#	allow = {
+#	}
+#	effect = {
+#		from = {
+#			country_event = {
+#				id = sgm_system.3
+#				scopes = {
+#					from = prev.solar_system	# solar_system
+#					fromfrom = prev 	# Planet scope
+#				}
+#			}
+#		}
+#	}
+#}
 
 sgm_create_army_for_target = {
 	potential = {
