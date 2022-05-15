@@ -369,17 +369,17 @@ guiTypes = {
 							effect = teleport_fleet
 				#			shortCut = j
 						}
-						effectbuttonType = {					
-							name = sgm_create_ship
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 294 y = 150 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_ship_spawner.3.name
-							orientation = UPPER_LEFT
-							effect = sgm_create_ship
-				#			shortCut = j
-						}
+						#effectbuttonType = {					
+						#	name = sgm_create_ship
+						#	quadTextureSprite = "GFX_standard_button_142_34_button"
+						#	position = { x = 294 y = 150 }
+						#	scale = 1
+						#	buttonFont = malgun_goth_24
+						#	buttonText = sgm_ship_spawner.3.name
+						#	orientation = UPPER_LEFT
+						#	effect = sgm_create_ship
+				#		#	shortCut = j
+						#}
 						effectbuttonType = {					
 							name = sgm_fleet_orders
 							quadTextureSprite = "GFX_standard_button_142_34_button"
