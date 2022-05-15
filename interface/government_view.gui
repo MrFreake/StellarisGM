@@ -1867,6 +1867,7 @@ guiTypes = {
 			fixedSize = yes
 			format = right
 			text = ""
+			fixedsize = yes
 			Orientation = "UPPER_RIGHT"
 			text_color_code = "G"
 		}
@@ -1905,6 +1906,7 @@ guiTypes = {
 			fixedSize = yes
 			format = right
 			text = ""
+			fixedsize = yes
 			Orientation = "UPPER_RIGHT"
 			text_color_code = "G"
 		}

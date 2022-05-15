@@ -3,7 +3,7 @@
 @tabs_pos_y = 230
 @tabs_size_h = -50
 @side_view_panel_width = 334
-@side_view_entry_width = 304
+@side_view_entry_width = 340
 
 guiTypes = {
 	containerWindowType = {
@@ -12,25 +12,25 @@ guiTypes = {
 		origo = lower_left
 		moveable = no
 		clipping = yes
-		
+
 		if_resolution = {
-		max_height = 800		
+		max_height = 800
 		size = { width = @view_w height = 611 }
 		}
-		
+
 		if_resolution = {
 		min_height = 801
-		size = { width = @view_w height = @view_h }		
+		size = { width = @view_w height = @view_h }
 		}
-		
+
 		show_position = { x = 35 y = -35 }
 		hide_position = { x = -563 y = -32 }
 		animation_time = 200
 		animation_type = decelerated
 		show_sound = "select_starbase"
-		
-	
-	#Same as planet view	
+
+
+	#Same as planet view
 		iconType = {
 			name = "planet_bg_top"
 			spriteType = "GFX_planet_bg_top"
@@ -40,10 +40,10 @@ guiTypes = {
 
 
 		if_resolution = {
-		max_height = 800		
+		max_height = 800
 		#No Middle Background Tile
 		}
-		
+
 		if_resolution = {
 		min_height = 801
 
@@ -52,16 +52,16 @@ guiTypes = {
 				name = "background_window"
 				size = { width = 562 height = 194 }
 				position = { x = 0 y = 272 }		# Y Controlls upper part of steaching middle
-		
+
 				background = {
 					name = "planet_view_bg"
 					quadTextureSprite = "GFX_planet_bg_tile"
 				}
-			}	
+			}
 		}
-		
-		
-		
+
+
+
 	#Same as planet view
 		iconType = {
 			name = "planet_bg_bottom"
@@ -69,12 +69,12 @@ guiTypes = {
 			position = { x = 0 y = -339 }
 			orientation = lower_left
 		}
-		
+
 		if_resolution = {
 		max_height = 800
 		#NO SPACEPORT IMAGE
 		}
-		
+
 		if_resolution = {
 		min_height = 801
 			containerWindowType = {
@@ -82,20 +82,20 @@ guiTypes = {
 				size = { width = 660 height = 188 }
 				position = { x = 10 y = 43 }
 				clipping = yes
-		
+
 				iconType = {
 					name = "spaceport_portrait_portrait"
 					spriteType = "GFX_starbase_background"
 					position = { x = 1 y = 12 }
 					scale = 1.0
 				}
-		
+
 				iconType = {
 					name = "black_frame"
 					spriteType = "GFX_planetview_black_frame"
 					position = { x = 1 y = 13 }
 				}
-		
+
 				iconType = {
 					name = "stripes_1"
 					spriteType = "GFX_planetview_stripes_1"
@@ -103,7 +103,7 @@ guiTypes = {
 					orientation = upper_left
 					alwaysTransparent = yes
 				}
-		
+
 				iconType = {
 					name = "city_frame"
 					spriteType = "GFX_city_frame"
@@ -111,14 +111,14 @@ guiTypes = {
 				}
 			}
 		}
-		
+
 
 	#	background = {
 	#		name = "fleet_view_ship_details_view_background"
 	#		spriteType = "GFX_tile_outliner_bg"
 	#	}
-	
-	
+
+
 
 		iconType = {
 			name = "empire_header_line"
@@ -126,7 +126,7 @@ guiTypes = {
 			position = { x = 6 y = 22 }
 			alwaysTransparent = yes
 		}
-		
+
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
@@ -145,7 +145,7 @@ guiTypes = {
 			format = left
 			alwaysTransparent = yes
 		}
-	
+
 		buttonType = {
 			name = "starbase_rename_button"
 			quadTextureSprite = "gfx_transparency_button"
@@ -155,19 +155,19 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "starbase_tab"
-			
+
 			if_resolution = {
-			max_height = 800		
+			max_height = 800
 			position = { x = 0 y = 36 }
 			size = { width = 100% height = 525 }
 			}
-			
+
 			if_resolution = {
 			min_height = 801
 			position = { x = 0 y = 230 }
 			size = { width = 100% height = -50 }
-			}			
-			
+			}
+
 
 
 
@@ -213,7 +213,7 @@ guiTypes = {
 					Orientation = "LOWER_RIGHT"
 					buttonFont = "cg_16b"
 					text = "STARBASE_DISMANTLE_LABEL"
-					font = "cg_16b"					
+					font = "cg_16b"
 					shortcut = "del"
 				}
 			}
@@ -394,24 +394,25 @@ guiTypes = {
 					scrollbartype = "standardlistbox_slider"
 					autohide_scrollbar = no
 					spacing = 3
+					spacing = 3
 				}
 			}
 		}
 
 		containerWindowType = {
 			name = "defenses_tab"
-			
+
 			if_resolution = {
-			max_height = 800		
+			max_height = 800
 			position = { x = 0 y = 36 }
 			size = { width = 100% height = 525 }
 			}
-			
+
 			if_resolution = {
 			min_height = 801
 			position = { x = 0 y = 230 }
 			size = { width = 100% height = -50 }
-			}	
+			}
 
 			containerWindowType = {
 				name = "capacity_info"
@@ -504,14 +505,14 @@ guiTypes = {
 					scrollbartype = "standardlistbox_slider"
 					autohide_scrollbar = yes
 					spacing = 3
-					
+
 				}
 			}
 
 			containerWindowType = {
 				name = "build_queue_info"
 				position = { x = 290 y = 110 }
-				size = { width = 260 height = -1 }				
+				size = { width = 260 height = -1 }
 #				position = { x = 10 y = 60 }
 #				size = { width = 250 height = -10 }
 #				orientation = center_up
@@ -545,7 +546,7 @@ guiTypes = {
 					spacing = 3
 				}
 
-				buttonType = {				
+				buttonType = {
 					name = "open_catalog"
 					size = { x = 265 y = 35 }
 					position = { x = -2 y = -58 }
@@ -563,18 +564,18 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "shipyard_tab"
-			
+
 			if_resolution = {
-			max_height = 800		
+			max_height = 800
 			position = { x = 0 y = 36 }
 			size = { width = 100% height = 525 }
 			}
-			
+
 			if_resolution = {
 			min_height = 801
 			position = { x = 0 y = 230 }
 			size = { width = 100% height = -50 }
-			}			
+			}
 
 			containerWindowType = {
 				name = "capacity_info"
@@ -588,13 +589,13 @@ guiTypes = {
 					name = "orbitals_background"
 					spriteType = "GFX_tiles_frame"
 				}
-				
+
 				iconType = {
 					name = "shipyard_icon"
 					spriteType = "GFX_starbase_shipyard"
 					position = { x = 8 y = -65 }
 					orientation = LOWER_LEFT
-				}				
+				}
 
 				instantTextBoxType = {
 					name = "shipyard_capacity"
@@ -680,7 +681,7 @@ guiTypes = {
 					max_slots_horizontal = 3
 					orientation = LOWER_LEFT
 				}
-				
+
 				instantTextBoxType = {
 					name = "title"
 					font = "cg_16b"
@@ -748,8 +749,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "window_controls"
-			
+			name = "header_actions"
+
 			if_resolution = {
 			max_height = 800
 			position = { x = 396 y = 15 }
@@ -762,6 +763,14 @@ guiTypes = {
 #			origo = UPPER_RIGHT
 #			orientation = UPPER_RIGHT
 #			size = { width = 150 height = 40 }
+
+			buttonType = {
+				name = "open_planet"
+				quadTextureSprite = "GFX_button_planet"
+				position = { x = 25 y = 0 }
+				pdx_tooltip = "OPEN_PLANET_VIEW"
+				#shortcut = "TODO"
+			}
 
 			buttonType = {
 				name = "goto"
@@ -928,7 +937,7 @@ guiTypes = {
 			size = { width = 100% height = 50 }
 			orientation = lower_left
 			origo = lower_left
-			
+
 			buttonType = {
 				name = "starbase_tab"
 				quadTextureSprite = "GFX_tab_1_inactive"
@@ -948,7 +957,7 @@ guiTypes = {
 				clicksound = "tab_click"
 				shortcut = "z"
 			}
-			
+
 			buttonType = {
 				name = "defenses_tab"
 				quadTextureSprite = "GFX_tab_2_inactive"
@@ -993,34 +1002,34 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "starbase_side_view"
-		
-		
+
+
 		if_resolution = {
-		max_height = 800	
+		max_height = 800
 
 		position = { x = 565 y = 9 }
-		size = { width = 338 height = 559 }
-	#Saved for the future	
+		size = { width = 360 height = 559 }
+	#Saved for the future
 	#	origo = lower_left
 	#	orientation = lower_left
 	#	show_position = { x = 565 y = -100 }
 	#	hide_position = { x = 565 y = -100 }
 	#	animation_time = 200
-	#	animation_type = decelerated	
+	#	animation_type = decelerated
 		}
-		
+
 		if_resolution = {
-		min_height = 801		
+		min_height = 801
 		position = { x = 565 y = 9 }
-		size = { width = 338 height = 753 }
-	#Saved for the future	
+		size = { width = 360 height = 753 }
+	#Saved for the future
 	#	origo = lower_left
 	#	orientation = lower_left
 	#	show_position = { x = 565 y = -100 }
 	#	hide_position = { x = 565 y = -100 }
 	#	animation_time = 200
-	#	animation_type = decelerated	
-		}		
+	#	animation_type = decelerated
+		}
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -1044,7 +1053,7 @@ guiTypes = {
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
-			position = { x = -46 y = 7 }
+			position = { x = -40 y = 3 }
 			orientation = "UPPER_RIGHT"
 			shortcut = "ESCAPE"
 			clicksound = "back_click"
@@ -1053,19 +1062,19 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "entries_list"
-			position = { x = 12 y = 53 }
+			position = { x = 5 y = 53 }
+			background = "GFX_tiles_dark_area_cut_8"
+
 			if_resolution = {
 			max_height = 800
-			size = { x = 304 y = 498 }
+			size = { x = 340 y = 498 }
 			}
 			if_resolution = {
-			min_height = 801		
-			size = { x = 304 y = 692 }
-			}			
-			
+			min_height = 801
+			size = { x = 340 y = 692 }
+			}
+
 			scrollbarType = "standardlistbox_slider"
-			borderSize = { x = 0 y = 0 }
-			orientation = "UPPER_LEFT"
 			spacing = 3
 		}
 	}
@@ -1087,20 +1096,20 @@ guiTypes = {
 			scrollbartype = "standardlistbox_slider"
 			autohide_scrollbar = no
 			spacing = 5
-			
+
 			position = { x = 0 y = 10 }
-			size = { x = 304 y = 91 }
-			
+			size = { x = 340 y = 91 }
+
 #			if_resolution = {
 #			max_height = 800
 #			size = { x = 304 y = 498 }
 #			}
 #			if_resolution = {
-#			min_height = 801		
+#			min_height = 801
 #			size = { x = 304 y = 692 }
-#			}			
-#			
-			
+#			}
+#
+
 		}
 	}
 
@@ -1172,11 +1181,11 @@ guiTypes = {
 			text_color_code = "H"
 			position = { x = 60 y = 5 }
 			orientation = upper_left
-			maxWidth = 240
+			maxWidth = 275
 			maxHeight = 20
 			fixedSize = yes
 			format = centre
-			alwaysTransparent = yes
+			#alwaysTransparent = yes
 		}
 
 		instantTextBoxType={
@@ -1185,11 +1194,11 @@ guiTypes = {
 			text = "COST"
 			position = { x = 60 y = 28 }
 			orientation = upper_left
-			maxWidth = 240
-			maxHeight = 80
+			maxWidth = 275
+			maxHeight = 20
 			fixedSize = yes
 			format = centre
-			alwaysTransparent = yes
+			#alwaysTransparent = yes
 			text_color_code = "Y"
 		}
 	}
@@ -1197,7 +1206,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "starbase_view_buildable_ship_list_entry"
 		size = { width = @side_view_entry_width height = 48 }
-		
+
 		background = {
 			name = "orbitals_background"
 			spriteType = "GFX_interface_list_light"
@@ -1216,20 +1225,19 @@ guiTypes = {
 			font = "cg_16b"
 			text = "NAME"
 			position = { x = 40 y = 6 }
-			maxWidth = @side_view_entry_width
+			maxWidth = 160
 			maxHeight = 20
 			fixedSize = yes
 			format = left
-			orientation = upper_left
-			alwaysTransparent = yes
+			#alwaysTransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "cost"
 			font = "cg_16b"
 			text = "COST"
-			position = { x = -210 y = 6 }
-			maxWidth = 200
+			position = { x = -180 y = 6 }
+			maxWidth = 170
 			maxHeight = 20
 			fixedSize = yes
 			format = right
@@ -1242,27 +1250,27 @@ guiTypes = {
 			font = "cg_16b"
 			text = "TYPE"
 			position = { x = 40 y = 24 }
-			maxWidth = 230
+			maxWidth = 150
 			maxHeight = 20
 			fixedSize = yes
 			format = left
 			orientation = upper_left
-			alwaysTransparent = yes
 			text_color_code = "E"
+			#alwaysTransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "auto_gen"
 			font = "cg_16b"
 			text = "AUTO_GENERATED_BEST"
-			position = { x = -265 y = 24 }
-			maxWidth = 200
+			position = { x = -160 y = 24 }
+			maxWidth = 95
 			maxHeight = 20
 			fixedSize = yes
 			format = right
 			orientation = upper_right
-#			alwaystransparent = yes
 			text_color_code = "E"
+			#alwaysTransparent = yes
 		}
 
 		instantTextBoxType = {
@@ -1372,7 +1380,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "starbase_view_current_component_grid_entry"
 		size = { width = 58 height = 58 }
-		
+
 
 		background = {
 			name = "planet_view_module_spaceport_buildqueue_entry_background"
