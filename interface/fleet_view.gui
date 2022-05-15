@@ -26,7 +26,7 @@ guiTypes = {
 		# Selected Fleets
 		smoothListboxType = {
 			name = "fleets"
-			position = { x = 0 y = 39 }
+			position = { x = 0 y = 23 }
 			size = { x = 475 y = 0 }
 			scrollbarType = "standardlistbox_slider"
 			borderSize = { x = 0 y = 0 }
@@ -39,7 +39,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "header"
 			size = { width = 475 height = 50 }
-			position = { x = 0 y = -4 }
+			position = { x = 0 y = -20 }
 
 			iconType = {
 				name = "fleet_view_entry_bg"
@@ -478,7 +478,7 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			buttonFont = "cg_16b"
 		}
-		
+
 		buttonType = {
 			name = "inspect_army"
 			quadTextureSprite = "GFX_fleetview_inspect_army"
@@ -486,7 +486,7 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			buttonFont = "cg_16b"
 			clicksound = click_army_select
-		}	
+		}
 	}
 
 
@@ -516,7 +516,7 @@ guiTypes = {
 			spriteType = "GFX_fleet_view_shields_2"
 			alwaysTransparent = yes
 		}
-		
+
 		iconType = {
 			name = "icon"
 			position = { x = 15 y = 1 }
@@ -583,7 +583,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "fleet_view_entry"
-		size = { width = 475 height = 214 }    # SET DISTANCE BETWEEN ENTRIES
+		size = { width = 475 height = 234 }    # SET DISTANCE BETWEEN ENTRIES
 		position = { x = 0 y = 0 }
 
 		#Ship name and type section
@@ -731,8 +731,8 @@ guiTypes = {
 				text = "Human Civilization (Steam Age)"
 				text_color_code = "H"
 				alwaysTransparent = yes
-			}			
-			
+			}
+
 			instantTextBoxType = {
 				name = "name"
 				font = "malgun_goth_24"
@@ -1072,10 +1072,11 @@ guiTypes = {
 				name = "orders"
 				orientation = LOWER_LEFT
 				position = { x = 10 y = -37 }
+				#size = { x = 240 y = 40 }
 				font = "cg_16b"
 				text = "ORDERS"
-				maxWidth = 280
-				maxHeight = 40
+				maxWidth = 470
+				maxHeight = 18
 				fixedSize = yes
 				format = left
 			}
@@ -1086,8 +1087,8 @@ guiTypes = {
 				position = { x = 10 y = -20 }
 				font = "cg_16b"
 				text = "ACTIVITY"
-				maxWidth = 320
-				maxHeight = 20
+				maxWidth = 280
+				maxHeight = 18
 				fixedSize = yes
 				format = left
 			}
@@ -1095,7 +1096,7 @@ guiTypes = {
 			@status_y = -117
 			@status_text_width_large = 110
 			@status_text_width_medium = 100
-			@status_text_width_small = 60
+			@status_text_width_small = 65
 			@status_text_height = 15
 
 			instantTextBoxType = {
@@ -1130,7 +1131,7 @@ guiTypes = {
 				fixedSize = yes
 				format = left
 			}
-			
+
 			instantTextBoxType = {
 				name = "piracy_suppression"
 				position = { x = 200 y = @status_y }
@@ -1144,7 +1145,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "size_limit"
-				position = { x = 290 y = @status_y }
+				position = { x = 280 y = @status_y }
 				font = "cg_16b"
 				text = "10/10"
 				maxWidth = @status_text_width_large
@@ -1156,16 +1157,16 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "fleet_power"
-				position = { x = 366 y = @status_y }
+				position = { x = 390 y = @status_y }
 				font = "cg_16b"
 				text = "10000"
-				maxWidth = @status_text_width_medium
+				maxWidth = @status_text_width_small
 				maxHeight = @status_text_height
 				fixedSize = yes
 				format = right
 				text_color_code = "Y"
 			}
-			
+
 			gridBoxType = {
 				name = "actions"
 				position = { x = 464 y = 2 }
@@ -1178,7 +1179,7 @@ guiTypes = {
 		# List of ships. space between enties
 		smoothListboxType = {
 			name = "ships"
-			position = { x = 0 y = 214 }
+			position = { x = 0 y = 232 }
 			size = { x = 475 y = 0 }
 			borderSize = { x = 0 y = 0 }
 			orientation = "UPPER_LEFT"
@@ -1200,7 +1201,7 @@ guiTypes = {
 	# Shipyard
 	containerWindowType = {
 		name = "fleet_view_shipyard_entry"
-		size = { width = 475 height = 414 }    # SET DISTANCE BETWEEN ENTRIES
+		size = { width = 475 height = 430 }    # SET DISTANCE BETWEEN ENTRIES
 		position = { x = 0 y = 0 }
 
 		#Ship name and type section
@@ -1217,11 +1218,11 @@ guiTypes = {
 				clicksound = click
 				alwaysTransparent = yes
 			}
-			
+
 			containerWindowType = {
 				name = "temp_bg_padding"
 				size = { width = 100%% height = 100%% }
-				position = { x = 0 y = 211 }
+				position = { x = 0 y = 226 }
 				background = {
 					name = "padding_bg"
 					quadTextureSprite = "GFX_fleet_view_main_shipyard_padding_bg"
@@ -1354,8 +1355,8 @@ guiTypes = {
 				text = "Human Civilization (Steam Age)"
 				text_color_code = "H"
 				alwaysTransparent = yes
-			}			
-			
+			}
+
 			instantTextBoxType = {
 				name = "name"
 				font = "malgun_goth_24"
@@ -1747,7 +1748,7 @@ guiTypes = {
 				fixedSize = yes
 				format = left
 			}
-			
+
 			instantTextBoxType = {
 				name = "piracy_suppression"
 				position = { x = 200 y = @status_y }
@@ -1782,7 +1783,7 @@ guiTypes = {
 				format = right
 				text_color_code = "Y"
 			}
-			
+
 			gridBoxType = {
 				name = "actions"
 				position = { x = 464 y = 202 }
@@ -1794,7 +1795,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "build_queue_info"
 			position = { x = 209 y = 127 }
-			size = { width = 260 height = -80 }
+			size = { width = 260 height = -100 }
 
 			background = {
 				name = "build_queue_background"
@@ -1843,7 +1844,7 @@ guiTypes = {
 		# List of ships. space between enties
 		smoothListboxType = {
 			name = "ships"
-			position = { x = 0 y = 414 }
+			position = { x = 0 y = 430 }
 			size = { x = 475 y = 0 }
 			borderSize = { x = 0 y = 0 }
 			orientation = "UPPER_LEFT"
@@ -1918,6 +1919,22 @@ guiTypes = {
 			spriteType = "GFX_fleet_order_button_ground_support_selective"
 		}
 	}
+	containerWindowType = {
+		name = "fleet_view_order_button2"
+		size = { width = 38 height = 38 }
+		position = { x = 23 y = 4 }
+
+		buttonType = {
+			name = "button_animation"
+			spriteType = "GFX_fleet_order_button_ground_support_selective"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			spriteType = "GFX_fleet_order_button_ground_support_selective"
+		}
+	}
 
 
 	# New Fleet View
@@ -1925,7 +1942,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "fleet_view_action_button"
 		size = { width = 38 height = 38 }
-		position = { x = 3 y = 3 }
+		position = { x = 3 y = 16 }
 
 		buttonType = {
 			name = "button"
@@ -2087,12 +2104,12 @@ guiTypes = {
 			spacing = 5
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "fleet_view_shipyard_side_view"
 		position = { x = 484 y = 0 }
 		size = { width = 338 height = 470 }
-	
+
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -2126,7 +2143,7 @@ guiTypes = {
 		smoothListboxType = {
 			name = "entries_list"
 			position = { x = 12 y = 53 }
-			size = { x = 304 y = 402 }			
+			size = { x = 304 y = 402 }
 			scrollbarType = "standardlistbox_slider"
 			borderSize = { x = 0 y = 0 }
 			orientation = "UPPER_LEFT"

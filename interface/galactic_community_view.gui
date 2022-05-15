@@ -91,6 +91,7 @@ guiTypes = {
 			position = { x= 17 y = 61 }
 		}	
 	}
+	
 
 	containerWindowType = {
 		name = "galactic_community_view"
@@ -113,10 +114,13 @@ guiTypes = {
 
 		instantTextBoxType={
 			name = "header"
+			position = { x = 35 y = 6 }
 			font = "malgun_goth_24"
-			position = { x = 40 y = 4 }
 			text = "GALACTIC_COMMUNITY"
 			format = left
+			maxwidth = 260
+			maxheight = 20
+			fixedSize = yes
 		}
 
 		iconType = {
@@ -1036,47 +1040,48 @@ guiTypes = {
 				# Galactic Focus - Emperor
 				containerWindowType = {
 					name = "focus_container"
-					size = { width = 224 height = 70 }
-					position = { x = -15 y = 130 }
+					position = { x = -40 y = 130 }
+					size = { width = 250 height = 70 }
+					
 
 					background = {
-						name ="focus_frame"
+						name = "focus_frame"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
 
 					iconType ={
-						name ="focus_icon"
+						name = "focus_icon"
 						quadTextureSprite = "GFX_tile_production_error" # TODO!
 						position = { x = 4 y = 10 }
 					}
 
 					instantTextBoxType={
 						name = "focus_title"
+						position = { x = 57 y = 8 }
 						font = "cg_16b"
-						position = { x = 52 y = 10}
-						maxWidth = 130
-						maxHeight = 20
 						text = "GALACTIC_FOCUS"
-						text_color_code = "H"
 						format = left
+						maxWidth = 145
+						maxHeight = 20
+						fixedSize = yes
+						text_color_code = "H"
 					}
 
 					instantTextBoxType={
 						name = "focus_text"
+						position = { x = 57 y = 26 }
 						font = "cg_16b"
-						position = { x = 52 y = 28 }
-						maxWidth = 130
-						maxHeight = 50
 						text = "STOPPA DUVAN, STOPPA DUVAN!"
 						format = left
-						vertical_alignment = top
+						maxWidth = 145
+						maxHeight = 35
+						fixedSize = yes
 					}
 
 					buttonType = {
 						name = "change_focus_button"
-						# quadTextureSprite = "GFX_change_galactic_focus"
+						position = { x = 210 y = 18 }
 						spriteType = "GFX_change_galactic_focus"
-						position = { x = 182 y = 15 }
 						pdx_tooltip = "CHANGE_GALACTIC_FOCUS"
 					}
 				}
@@ -1280,28 +1285,28 @@ guiTypes = {
 				buttonType = {
 					name = "leader_flag"
 					quadTextureSprite = "GFX_empire_flag_48"
-					position = { x = 6 y = 15  }
+					position = { x = 6 y = 7  }
 				}
 
 				iconType ={
 					name ="custodian_frame"
 					quadTextureSprite = "GFX_custodian_frame_48"
-					position = { x = 1 y = 10 }
+					position = { x = 1 y = 2 }
 					alwaysTransparent = yes
 				}
 
 				iconType ={
 					name ="emperor_frame"
 					quadTextureSprite = "GFX_emperor_frame_48"
-					position = { x = 1 y = 10 }
+					position = { x = 1 y = 2 }
 					alwaysTransparent = yes
 				}
 
 				instantTextBoxType={
 					name = "leader_weight"
 					font = "cg_16b"
-					position = { x = 7 y = 52 }
-					maxWidth = 50
+					position = { x = 0 y = 56 }
+					maxWidth = 60
 					maxHeight = 20
 					text = "2000"
 					format = center
@@ -2153,6 +2158,7 @@ guiTypes = {
 				spriteType = "GFX_hex_bg"
 				position = { x = -10 y = -10 }
 				alwaysTransparent = yes
+				alwaystransparent = yes
 			}
 
 			iconType = {
@@ -2167,9 +2173,11 @@ guiTypes = {
 				font = "malgun_goth_24"
 				text = "SET_GALACTIC_FOCUS"
 				position = { x = 15 y = 7 }
+				maxWidth = 290
+				maxHeight = 25
 				fixedSize = yes
 				format = left
-				alwaystransparent = yes
+				#alwaystransparent = yes
 			}
 
 			buttonType = {
@@ -2259,8 +2267,10 @@ guiTypes = {
 		# Galactic Focus - no custodian / emperor
 		containerWindowType = {
 			name = "focus_container"
-			size = { width = 224 height = 74 }
-			position = { x = 1010 y = 65 }
+			orientation = upper_right
+			origo = upper_right
+			position = { x = -35 y = 70 }
+			size = { width = 260 height = 74 }
 
 			background = {
 				name = "focus_frame"
@@ -2275,24 +2285,25 @@ guiTypes = {
 
 			instantTextBoxType={
 				name = "focus_title"
-				font = "cg_16b"
 				position = { x = 52 y = 10}
-				maxWidth = 130
-				maxHeight = 20
+				font = "cg_16b"
 				text = "GALACTIC_FOCUS"
-				text_color_code = "H"
 				format = left
+				maxWidth = 190
+				maxHeight = 20
+				fixedSize = yes
+				text_color_code = "H"
 			}
 
 			instantTextBoxType={
 				name = "focus_text"
-				font = "cg_16b"
 				position = { x = 52 y = 28 }
-				maxWidth = 130
-				maxHeight = 50
+				font = "cg_16b"
 				text = "STOPPA DUVAN, STOPPA DUVAN!"
 				format = left
-				vertical_alignment = top
+				maxWidth = 190
+				maxHeight = 40
+				fixedSize = yes
 			}
 		}
 
