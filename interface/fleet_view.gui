@@ -1072,10 +1072,9 @@ guiTypes = {
 				name = "orders"
 				orientation = LOWER_LEFT
 				position = { x = 10 y = -37 }
-				#size = { x = 240 y = 40 }
 				font = "cg_16b"
 				text = "ORDERS"
-				maxWidth = 470
+				maxWidth = 460
 				maxHeight = 18
 				fixedSize = yes
 				format = left
@@ -1087,8 +1086,8 @@ guiTypes = {
 				position = { x = 10 y = -20 }
 				font = "cg_16b"
 				text = "ACTIVITY"
-				maxWidth = 280
-				maxHeight = 18
+				maxWidth = 250
+				maxHeight = 34
 				fixedSize = yes
 				format = left
 			}

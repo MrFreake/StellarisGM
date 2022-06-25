@@ -119,7 +119,7 @@ guiTypes = {
 		# Header Buttons
 		containerWindowType = {
 			name = "header_actions"
-			position = { x = 565 y = 12 }
+			position = { x = 658 y = 12 }
 			size = { width = 283 height = 40 }
 
 			#background = {
@@ -267,17 +267,17 @@ guiTypes = {
 				#			shortCut = j
 						}
 						
-						effectbuttonType = {					
-							name = sgm_change_planet_class
-							quadTextureSprite = "GFX_standard_button_142_34_button"
-							position = { x = 2 y = 187 }
-							scale = 1
-							buttonFont = malgun_goth_24
-							buttonText = sgm_change_planet_class
+			buttonType = {
+				name = "open_orbital_ring"
+				quadTextureSprite = "GFX_button_orbital_ring"
+				position = { x = 0 y = 4 }
+				#shortcut = "TODO"
+				clicksound = "click"
+				pdx_tooltip = "OPEN_ORBITAL_RING"
 							orientation = UPPER_LEFT
 							effect = sgm_change_planet_class
 				#			shortCut = j
-						}
+			}
 						effectbuttonType = {					
 							name = sgm_increase_planet_size
 							quadTextureSprite = "GFX_standard_button_142_34_button"
