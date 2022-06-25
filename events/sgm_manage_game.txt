@@ -36,6 +36,25 @@ country_event = {
 	}
 
 	option = {
+		NAME = show_diplomacy_restrictions
+		trigger = {
+			NOT = {
+				has_global_flag = show_diplo_restrictions
+			}
+		}
+		set_global_flag = show_diplo_restrictions
+	}
+
+	option = {
+		NAME = hide_diplomacy_restrictions
+		trigger = {
+			has_global_flag = show_diplo_restrictions
+		}
+		remove_global_flag = show_diplo_restrictions
+	}
+
+
+	option = {
 		NAME = rolls_disallowed
 		trigger = {
 			NOT = {

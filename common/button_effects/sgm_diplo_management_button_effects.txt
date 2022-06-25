@@ -713,7 +713,9 @@ ai_join_galcom = {
 }
 
 war_status = {
-	potential = {}
+	potential = {
+		has_global_flag = show_diplo_restrictions
+	}
 	allow = { 
 		custom_tooltip = {
 			fail_text = "preventing_ai_wars_tooltip"
@@ -735,7 +737,9 @@ war_status = {
 }
 
 federation_status = {
-	potential = {}
+	potential = {
+		has_global_flag = show_diplo_restrictions
+	}
 	allow = { 
 		always = no
 	}
@@ -743,19 +747,25 @@ federation_status = {
 }
 
 subjugation_status = {
-	potential = {}
+	potential = {
+		has_global_flag = show_diplo_restrictions
+	}
 	allow = { always = no }
 	effect = {}
 }
 
 galactic_community_status = {
-	potential = {}
+	potential = {
+		has_global_flag = show_diplo_restrictions
+	}
 	allow = { always = no }
 	effect = {}
 }
 
 diplomatic_restrictions = {
-	potential = {}
+	potential = {
+		has_global_flag = show_diplo_restrictions
+	}
 	allow = { always = no }
 	effect = {}
 }
